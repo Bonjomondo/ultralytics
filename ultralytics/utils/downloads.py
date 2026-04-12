@@ -10,7 +10,7 @@ from multiprocessing.pool import ThreadPool
 from pathlib import Path
 from urllib import parse, request
 
-from ultralytics.utils import ASSETS_URL, LOGGER, TQDM, checks, clean_url, emojis, is_online, url2file
+from ultralytics.utils import ASSETS_URL, LOGGER, TQDM, WINDOWS, checks, clean_url, emojis, is_online, url2file
 
 # Define Ultralytics GitHub assets maintained at https://github.com/ultralytics/assets
 GITHUB_ASSETS_REPO = "ultralytics/assets"
@@ -329,9 +329,14 @@ def safe_download(
         curl_installed = shutil.which("curl")
         for i in range(retry + 1):
             try:
-                if (curl or i > 0) and curl_installed:  # curl download with retry, continue
+                # Retry with urllib on Windows to avoid common schannel revocation failures.
+                use_curl = (curl or (i > 0 and not WINDOWS)) and curl_installed
+                if use_curl:  # curl download with retry, continue
                     s = "sS" * (not progress)  # silent
-                    r = subprocess.run(["curl", "-#", f"-{s}L", url, "-o", f, "--retry", "3", "-C", "-"]).returncode
+                    curl_cmd = ["curl", "-#", f"-{s}L", url, "-o", f, "--retry", "3", "--retry-all-errors", "-C", "-"]
+                    if WINDOWS:
+                        curl_cmd.append("--ssl-no-revoke")
+                    r = subprocess.run(curl_cmd).returncode
                     assert r == 0, f"Curl return value {r}"
                     expected_size = None  # Can't get size with curl
                 else:  # urllib download

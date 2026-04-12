@@ -106,13 +106,32 @@ class DFLoss(nn.Module):
         ).mean(-1, keepdim=True)
 
 
+def bbox_nwd_similarity(
+    pred_bboxes: torch.Tensor, target_bboxes: torch.Tensor, tau: float = 12.8, eps: float = 1e-9
+) -> torch.Tensor:
+    """Return normalized Wasserstein similarity for axis-aligned xyxy boxes.
+
+    The bbox is modeled as a 2D Gaussian and converted into a similarity score in [0, 1]:
+    sim = exp(-W2 / tau).
+    """
+    pred_xywh = xyxy2xywh(pred_bboxes)
+    target_xywh = xyxy2xywh(target_bboxes)
+
+    center_dist = (pred_xywh[..., :2] - target_xywh[..., :2]).pow(2).sum(-1)
+    size_dist = (pred_xywh[..., 2:] - target_xywh[..., 2:]).pow(2).sum(-1) / 4.0
+    wasserstein = (center_dist + size_dist + eps).sqrt()
+    return torch.exp(-wasserstein / tau)
+
+
 class BboxLoss(nn.Module):
     """Criterion class for computing training losses for bounding boxes."""
 
-    def __init__(self, reg_max: int = 16):
+    def __init__(self, reg_max: int = 16, nwd_ratio: float = 0.0, nwd_tau: float = 12.8):
         """Initialize the BboxLoss module with regularization maximum and DFL settings."""
         super().__init__()
         self.dfl_loss = DFLoss(reg_max) if reg_max > 1 else None
+        self.nwd_ratio = float(max(0.0, min(1.0, nwd_ratio)))
+        self.nwd_tau = max(float(nwd_tau), 1e-3)
 
     def forward(
         self,
@@ -129,7 +148,16 @@ class BboxLoss(nn.Module):
         """Compute IoU and DFL losses for bounding boxes."""
         weight = target_scores.sum(-1)[fg_mask].unsqueeze(-1)
         iou = bbox_iou(pred_bboxes[fg_mask], target_bboxes[fg_mask], xywh=False, CIoU=True)
-        loss_iou = ((1.0 - iou) * weight).sum() / target_scores_sum
+        if self.nwd_ratio > 0:
+            nwd = bbox_nwd_similarity(pred_bboxes[fg_mask], target_bboxes[fg_mask], tau=self.nwd_tau)
+            iou_term = 1.0 - iou
+            nwd_term = 1.0 - nwd
+            if nwd_term.ndim < iou_term.ndim:
+                nwd_term = nwd_term.unsqueeze(-1)
+            loss_box = (1.0 - self.nwd_ratio) * iou_term + self.nwd_ratio * nwd_term
+            loss_iou = (loss_box * weight).sum() / target_scores_sum
+        else:
+            loss_iou = ((1.0 - iou) * weight).sum() / target_scores_sum
 
         # DFL loss
         if self.dfl_loss:
@@ -357,7 +385,9 @@ class v8DetectionLoss:
             stride=self.stride.tolist(),
             topk2=tal_topk2,
         )
-        self.bbox_loss = BboxLoss(m.reg_max).to(device)
+        nwd_ratio = float(getattr(self.hyp, "nwd", 0.0) or 0.0)
+        nwd_tau = float(getattr(self.hyp, "nwd_tau", 12.8) or 12.8)
+        self.bbox_loss = BboxLoss(m.reg_max, nwd_ratio=nwd_ratio, nwd_tau=nwd_tau).to(device)
         self.proj = torch.arange(m.reg_max, dtype=torch.float, device=device)
 
     def preprocess(self, targets: torch.Tensor, batch_size: int, scale_tensor: torch.Tensor) -> torch.Tensor:
