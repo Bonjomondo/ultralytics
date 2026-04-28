@@ -5,8 +5,10 @@ set -euo pipefail
 # Usage:
 #   bash run_5090_experiments.sh
 #   RUN_AGGRESSIVE_BS12=0 bash run_5090_experiments.sh
+#   RUN_AEROTINY=0 bash run_5090_experiments.sh
+#   FORCE_FRESH=1 bash run_5090_experiments.sh
 
-PROJECT="runs/das_yolo"
+PROJECT="${PROJECT:-runs/das_yolo}"
 # Ultralytics detect training saves under runs/detect/<project>/<name>
 SAVE_ROOT="runs/detect/${PROJECT}"
 LOG_DIR="${PROJECT}/_batch_logs"
@@ -15,12 +17,26 @@ LOG_FILE="${LOG_DIR}/train_batch_${TIMESTAMP}.log"
 
 # 1 = run optional 1280_bs12 experiment, 0 = skip
 RUN_AGGRESSIVE_BS12="${RUN_AGGRESSIVE_BS12:-1}"
+# 1 = include AeroTiny-ONX experiments, 0 = skip
+RUN_AEROTINY="${RUN_AEROTINY:-1}"
+# 1 = ignore DONE markers and resume checkpoints, force fresh runs
+FORCE_FRESH="${FORCE_FRESH:-0}"
+
+# Shared training knobs
+DATA_CFG="${DATA_CFG:-VisDrone.yaml}"
+EPOCHS="${EPOCHS:-150}"
+WORKERS="${WORKERS:-8}"
+DEVICE="${DEVICE:-0}"
+AEROTINY_MODEL="${AEROTINY_MODEL:-yolo11s-aerotiny-onx.yaml}"
 
 # Batch size knobs (override with env vars if needed)
 BASELINE_BATCH="${BASELINE_BATCH:-16}"
 THRF_1024_BATCH="${THRF_1024_BATCH:-4}"
 THRF_1280_BATCH="${THRF_1280_BATCH:-8}"
 THRF_1280_BS12_BATCH="${THRF_1280_BS12_BATCH:-12}"
+AEROTINY_1024_BATCH="${AEROTINY_1024_BATCH:-6}"
+AEROTINY_1280_BATCH="${AEROTINY_1280_BATCH:-4}"
+AEROTINY_1280_BS6_BATCH="${AEROTINY_1280_BS6_BATCH:-6}"
 
 mkdir -p "${LOG_DIR}"
 
@@ -85,8 +101,59 @@ find_resume_checkpoint() {
     fi
 }
 
+resume_checkpoint_loadable() {
+    local ckpt="$1"
+    CKPT_PATH="${ckpt}" python - <<'PY' >/dev/null 2>&1
+import os
+import torch
+
+ckpt = os.environ["CKPT_PATH"]
+torch.load(ckpt, map_location="cpu")
+PY
+}
+
+check_torch_cuda_compat() {
+    DEVICE_ARG="${DEVICE}" python - <<'PY'
+import os
+import sys
+import torch
+
+device = os.environ["DEVICE_ARG"].strip().lower()
+if device in {"cpu", "mps"}:
+    sys.exit(0)
+
+if not torch.cuda.is_available():
+    print("CUDA is not available in current PyTorch runtime.")
+    sys.exit(2)
+
+props = torch.cuda.get_device_properties(0)
+arch = f"sm_{props.major}{props.minor}"
+arch_list = set(torch.cuda.get_arch_list())
+
+if arch not in arch_list:
+    print(
+        f"Incompatible PyTorch CUDA build for current GPU: need {arch}, "
+        f"but torch supports {sorted(arch_list)}. "
+        f"torch={torch.__version__}, cuda={torch.version.cuda}."
+    )
+    sys.exit(3)
+PY
+}
+
 if ! command -v yolo >/dev/null 2>&1; then
     log_line "[ERROR] 'yolo' command not found. Activate your environment first."
+    exit 1
+fi
+
+if ! check_torch_cuda_compat; then
+    log_line "[ERROR] PyTorch/CUDA runtime is incompatible with configured device=${DEVICE}."
+    log_line "[ERROR] Please upgrade to a GPU-compatible PyTorch build before running batch training."
+    exit 1
+fi
+
+if [[ "${RUN_AEROTINY}" == "1" && ! -f "ultralytics/cfg/models/11/yolo11-aerotiny-onx.yaml" ]]; then
+    log_line "[ERROR] Missing ultralytics/cfg/models/11/yolo11-aerotiny-onx.yaml"
+    log_line "[ERROR] Please ensure AeroTiny-ONX YAML exists before running batch experiments."
     exit 1
 fi
 
@@ -95,18 +162,34 @@ log_line "Project: ${PROJECT}"
 log_line "Save root: ${SAVE_ROOT}"
 log_line "Log: ${LOG_FILE}"
 log_line "RUN_AGGRESSIVE_BS12=${RUN_AGGRESSIVE_BS12}"
+log_line "RUN_AEROTINY=${RUN_AEROTINY}, AEROTINY_MODEL=${AEROTINY_MODEL}"
+log_line "FORCE_FRESH=${FORCE_FRESH}"
+log_line "DATA_CFG=${DATA_CFG}, EPOCHS=${EPOCHS}, WORKERS=${WORKERS}, DEVICE=${DEVICE}"
 log_line "BASELINE_BATCH=${BASELINE_BATCH}, THRF_1024_BATCH=${THRF_1024_BATCH}, THRF_1280_BATCH=${THRF_1280_BATCH}, THRF_1280_BS12_BATCH=${THRF_1280_BS12_BATCH}"
+log_line "AEROTINY_1024_BATCH=${AEROTINY_1024_BATCH}, AEROTINY_1280_BATCH=${AEROTINY_1280_BATCH}, AEROTINY_1280_BS6_BATCH=${AEROTINY_1280_BS6_BATCH}"
 
 declare -a EXPERIMENTS=(
-"final_baseline_1024|yolo train model=yolo11s.yaml pretrained=yolo11s.pt data=VisDrone.yaml imgsz=1024 epochs=150 batch=${BASELINE_BATCH} optimizer=AdamW lr0=0.001 lrf=0.01 weight_decay=0.0005 close_mosaic=15 cos_lr=True amp=True workers=8 device=0 exist_ok=True project=runs/das_yolo name=final_baseline_1024"
-"final_thrf_nwd_1024|yolo train model=yolo11s-thrf-p2.yaml pretrained=yolo11s.pt data=VisDrone.yaml imgsz=1024 epochs=150 batch=${THRF_1024_BATCH} optimizer=AdamW lr0=0.001 lrf=0.01 weight_decay=0.0005 close_mosaic=15 cos_lr=True amp=True workers=8 nwd=0.3 nwd_tau=12.8 device=0 exist_ok=True project=runs/das_yolo name=final_thrf_nwd_1024"
-"final_thrf_nwd_1280|yolo train model=yolo11s-thrf-p2.yaml pretrained=yolo11s.pt data=VisDrone.yaml imgsz=1280 epochs=150 batch=${THRF_1280_BATCH} optimizer=AdamW lr0=0.001 lrf=0.01 weight_decay=0.0005 close_mosaic=15 cos_lr=True amp=True workers=8 nwd=0.3 nwd_tau=12.8 device=0 exist_ok=True project=runs/das_yolo name=final_thrf_nwd_1280"
+"final_baseline_1024|yolo train model=yolo11s.yaml pretrained=yolo11s.pt data=${DATA_CFG} imgsz=1024 epochs=${EPOCHS} batch=${BASELINE_BATCH} optimizer=AdamW lr0=0.001 lrf=0.01 weight_decay=0.0005 close_mosaic=15 cos_lr=True amp=True workers=${WORKERS} device=${DEVICE} exist_ok=True project=${PROJECT} name=final_baseline_1024"
+"final_thrf_nwd_1024|yolo train model=yolo11s-thrf-p2.yaml pretrained=yolo11s.pt data=${DATA_CFG} imgsz=1024 epochs=${EPOCHS} batch=${THRF_1024_BATCH} optimizer=AdamW lr0=0.001 lrf=0.01 weight_decay=0.0005 close_mosaic=15 cos_lr=True amp=True workers=${WORKERS} nwd=0.3 nwd_tau=12.8 device=${DEVICE} exist_ok=True project=${PROJECT} name=final_thrf_nwd_1024"
+# "final_thrf_nwd_1280|yolo train model=yolo11s-thrf-p2.yaml pretrained=yolo11s.pt data=${DATA_CFG} imgsz=1280 epochs=${EPOCHS} batch=${THRF_1280_BATCH} optimizer=AdamW lr0=0.001 lrf=0.01 weight_decay=0.0005 close_mosaic=15 cos_lr=True amp=True workers=${WORKERS} nwd=0.3 nwd_tau=12.8 device=${DEVICE} exist_ok=True project=${PROJECT} name=final_thrf_nwd_1280"
 )
+
+if [[ "${RUN_AEROTINY}" == "1" ]]; then
+    EXPERIMENTS+=(
+"final_aerotiny_onx_nwd_1024|yolo train model=${AEROTINY_MODEL} pretrained=yolo11s.pt data=${DATA_CFG} imgsz=1024 epochs=${EPOCHS} batch=${AEROTINY_1024_BATCH} optimizer=AdamW lr0=0.001 lrf=0.01 weight_decay=0.0005 close_mosaic=15 cos_lr=True amp=True workers=${WORKERS} nwd=0.3 nwd_tau=12.8 device=${DEVICE} exist_ok=True project=${PROJECT} name=final_aerotiny_onx_nwd_1024"
+"final_aerotiny_onx_nwd_1280|yolo train model=${AEROTINY_MODEL} pretrained=yolo11s.pt data=${DATA_CFG} imgsz=1280 epochs=${EPOCHS} batch=${AEROTINY_1280_BATCH} optimizer=AdamW lr0=0.001 lrf=0.01 weight_decay=0.0005 close_mosaic=15 cos_lr=True amp=True workers=${WORKERS} nwd=0.3 nwd_tau=12.8 device=${DEVICE} exist_ok=True project=${PROJECT} name=final_aerotiny_onx_nwd_1280"
+)
+fi
 
 if [[ "${RUN_AGGRESSIVE_BS12}" == "1" ]]; then
     EXPERIMENTS+=(
-"final_thrf_nwd_1280_bs12|yolo train model=yolo11s-thrf-p2.yaml pretrained=yolo11s.pt data=VisDrone.yaml imgsz=1280 epochs=150 batch=${THRF_1280_BS12_BATCH} optimizer=AdamW lr0=0.001 lrf=0.01 weight_decay=0.0005 close_mosaic=15 cos_lr=True amp=True workers=8 nwd=0.3 nwd_tau=12.8 device=0 exist_ok=True project=runs/das_yolo name=final_thrf_nwd_1280_bs12"
+"final_thrf_nwd_1280_bs12|yolo train model=yolo11s-thrf-p2.yaml pretrained=yolo11s.pt data=${DATA_CFG} imgsz=1280 epochs=${EPOCHS} batch=${THRF_1280_BS12_BATCH} optimizer=AdamW lr0=0.001 lrf=0.01 weight_decay=0.0005 close_mosaic=15 cos_lr=True amp=True workers=${WORKERS} nwd=0.3 nwd_tau=12.8 device=${DEVICE} exist_ok=True project=${PROJECT} name=final_thrf_nwd_1280_bs12"
 )
+    if [[ "${RUN_AEROTINY}" == "1" ]]; then
+        EXPERIMENTS+=(
+"final_aerotiny_onx_nwd_1280_bs6|yolo train model=${AEROTINY_MODEL} pretrained=yolo11s.pt data=${DATA_CFG} imgsz=1280 epochs=${EPOCHS} batch=${AEROTINY_1280_BS6_BATCH} optimizer=AdamW lr0=0.001 lrf=0.01 weight_decay=0.0005 close_mosaic=15 cos_lr=True amp=True workers=${WORKERS} nwd=0.3 nwd_tau=12.8 device=${DEVICE} exist_ok=True project=${PROJECT} name=final_aerotiny_onx_nwd_1280_bs6"
+)
+    fi
 fi
 
 TOTAL="${#EXPERIMENTS[@]}"
@@ -118,17 +201,28 @@ for item in "${EXPERIMENTS[@]}"; do
 
     EXP_DIR="${SAVE_ROOT}/${NAME}"
 
-    if is_completed_experiment "${NAME}"; then
+    if [[ "${FORCE_FRESH}" != "1" ]] && is_completed_experiment "${NAME}"; then
         log_line "[$IDX/$TOTAL] [SKIP] ${NAME} completed (checkpoint + DONE marker found across ${EXP_DIR}*)"
         continue
     fi
 
-    RUN_CMD="${CMD}"
-    RESUME_CKPT="$(find_resume_checkpoint "${NAME}" || true)"
+    ORIGINAL_CMD="${CMD}"
+    RUN_CMD="${ORIGINAL_CMD}"
+    RESUME_CKPT=""
+    if [[ "${FORCE_FRESH}" != "1" ]]; then
+        RESUME_CKPT="$(find_resume_checkpoint "${NAME}" || true)"
+    fi
     if [[ -n "${RESUME_CKPT}" ]]; then
-        # Resume interrupted run from checkpoint instead of creating a new indexed folder.
-        RUN_CMD="yolo train resume model=${RESUME_CKPT}"
-        log_line "[$IDX/$TOTAL] [RESUME] ${NAME} from ${RESUME_CKPT}"
+        if resume_checkpoint_loadable "${RESUME_CKPT}"; then
+            # Resume interrupted run from checkpoint instead of creating a new indexed folder.
+            RUN_CMD="yolo train resume model=${RESUME_CKPT}"
+            log_line "[$IDX/$TOTAL] [RESUME] ${NAME} from ${RESUME_CKPT}"
+        else
+            log_line "[$IDX/$TOTAL] [WARN] resume checkpoint is not loadable, fallback to fresh train command"
+            RUN_CMD="${ORIGINAL_CMD}"
+        fi
+    elif [[ "${FORCE_FRESH}" == "1" ]]; then
+        log_line "[$IDX/$TOTAL] [FRESH] ${NAME} forced fresh run (skip/resume disabled)"
     fi
 
     log_line "[$IDX/$TOTAL] [START] ${NAME} at $(date '+%F %T')"

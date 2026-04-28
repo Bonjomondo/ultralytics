@@ -20,6 +20,7 @@ __all__ = (
     "C3TR",
     "CIB",
     "DFL",
+    "DetailEnhanceBlock",
     "ELAN1",
     "PSA",
     "SPP",
@@ -386,6 +387,39 @@ class RepC3(nn.Module):
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         """Forward pass of RepC3 module."""
         return self.cv3(self.m(self.cv1(x)) + self.cv2(x))
+
+
+class DetailEnhanceBlock(nn.Module):
+    """Detail enhancement block for high-resolution small-object features.
+
+    This block combines a re-parameterizable local branch and a depthwise context branch,
+    then merges them with a residual connection when channel dimensions match.
+    """
+
+    def __init__(self, c1: int, c2: int, e: float = 1.0, shortcut: bool = True):
+        """Initialize DetailEnhanceBlock.
+
+        Args:
+            c1 (int): Input channels.
+            c2 (int): Output channels.
+            e (float): Hidden channel expansion ratio based on c2.
+            shortcut (bool): Whether to apply shortcut when c1 equals c2.
+        """
+        super().__init__()
+        c_ = max(int(c2 * e), 8)
+        self.cv1 = Conv(c1, c_, 1, 1)
+        self.rep = RepConv(c_, c_, 3, 1)
+        self.dw = DWConv(c_, c_, 5, 1)
+        self.pw = Conv(c_, c_, 1, 1, act=False)
+        self.cv2 = Conv(c_, c2, 1, 1, act=False)
+        self.add = shortcut and c1 == c2
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        """Forward pass of DetailEnhanceBlock."""
+        y = self.cv1(x)
+        y = self.rep(y) + self.pw(self.dw(y))
+        y = self.cv2(y)
+        return x + y if self.add else y
 
 
 class C3TR(C3):
