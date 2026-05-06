@@ -16,6 +16,7 @@ __all__ = (
     "C1",
     "C2",
     "C2PSA",
+    "CED",
     "C3",
     "C3TR",
     "CIB",
@@ -32,6 +33,7 @@ __all__ = (
     "BNContrastiveHead",
     "Bottleneck",
     "BottleneckCSP",
+    "ChannelC2f",
     "C2f",
     "C2fAttn",
     "C2fCIB",
@@ -46,7 +48,10 @@ __all__ = (
     "HGBlock",
     "HGStem",
     "ImagePoolingAttn",
+    "GatedFFN",
+    "MECA",
     "Proto",
+    "RemRepDWConv",
     "RepC3",
     "RepNCSPELAN4",
     "RepVGGDW",
@@ -318,6 +323,168 @@ class C2f(nn.Module):
         y = [y[0], y[1]]
         y.extend(m(y[-1]) for m in self.m)
         return self.cv2(torch.cat(y, 1))
+
+
+class ChannelC2f(nn.Module):
+    """RemDet ChannelC2f neck block with wider intermediate channels."""
+
+    def __init__(self, c1: int, c2: int, n: int = 1, shortcut: bool = True, g: int = 1, e: float = 1.0):
+        """Initialize a ChannelC2f block.
+
+        Args:
+            c1 (int): Input channels.
+            c2 (int): Output channels.
+            n (int): Number of bottleneck blocks.
+            shortcut (bool): Whether to use shortcut connections.
+            g (int): Groups for bottleneck convolutions.
+            e (float): Expansion ratio.
+        """
+        super().__init__()
+        self.c = int(c2 * e)
+        self.cv1 = Conv(c1, 2 * self.c, 1, 1)
+        self.cv2 = Conv((2 + n) * self.c, c2, 1, 1)
+        self.m = nn.ModuleList(
+            Bottleneck(self.c, self.c, shortcut, g, k=((3, 3), (3, 3)), e=0.25) for _ in range(n)
+        )
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        """Forward pass through ChannelC2f."""
+        y = list(self.cv1(x).split((self.c, self.c), 1))
+        y.extend(m(y[-1]) for m in self.m)
+        return self.cv2(torch.cat(y, 1))
+
+
+class RemRepDWConv(nn.Module):
+    """Re-parameterizable depthwise convolution used by RemDet GatedFFN."""
+
+    def __init__(self, c1: int, c2: int, act: nn.Module | bool = True):
+        """Initialize a RepDWConv-style block.
+
+        Args:
+            c1 (int): Input channels.
+            c2 (int): Output channels.
+            act (nn.Module | bool): Activation function.
+        """
+        super().__init__()
+        if c1 != c2:
+            raise ValueError("RemRepDWConv expects matching input and output channels.")
+        self.bn = nn.BatchNorm2d(c1)
+        self.conv3 = Conv(c1, c2, 3, 1, p=1, g=c1, act=False)
+        self.conv1 = Conv(c1, c2, 1, 1, p=0, g=c1, act=False)
+        self.act = Conv.default_act if act is True else act if isinstance(act, nn.Module) else nn.Identity()
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        """Forward pass through pre-BN and two depthwise branches."""
+        x = self.bn(x)
+        return self.act(self.conv3(x) + self.conv1(x))
+
+
+class GatedFFN(nn.Module):
+    """RemDet GatedFFN block with multiplicative gating."""
+
+    def __init__(self, c1: int, c2: int, n: int = 1, shortcut: bool = False, g: int = 1, e: float = 3.0):
+        """Initialize GatedFFN.
+
+        Args:
+            c1 (int): Input channels.
+            c2 (int): Output channels.
+            n (int): Number of depthwise refinement layers.
+            shortcut (bool): Whether to add input as residual when channels match.
+            g (int): Unused compatibility argument.
+            e (float): Hidden channel expansion ratio.
+        """
+        super().__init__()
+        _ = g
+        self.n = n
+        self.c = int(c2 * e)
+        self.proj = Conv(c1, 2 * self.c, 1, 1)
+        self.rep = RemRepDWConv(self.c, self.c)
+        self.m = nn.ModuleList(Conv(self.c, self.c, 3, 1, g=self.c, act=False) for _ in range(max(n - 1, 0)))
+        self.act = nn.GELU()
+        self.cv2 = Conv(self.c, c2, 1, 1, act=False)
+        self.add = shortcut and c1 == c2
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        """Forward pass through gated feed-forward block."""
+        shortcut = x
+        x, z = self.proj(x).split((self.c, self.c), 1)
+        x = self.rep(x)
+        for m in self.m:
+            x = m(x)
+        x = x * self.act(z)
+        x = self.cv2(x)
+        return x + shortcut if self.add else x
+
+
+class CED(nn.Module):
+    """RemDet-like context enhanced downsampling block."""
+
+    def __init__(self, c1: int, c2: int, e: float = 0.5):
+        """Initialize CED.
+
+        Args:
+            c1 (int): Input channels.
+            c2 (int): Output channels.
+            e (float): Hidden channel expansion ratio based on c2.
+        """
+        super().__init__()
+        self.c = max(int(c2 * e), 8)
+        self.cv1 = Conv(c1, self.c, 1, 1)
+        self.dwconv = Conv(self.c, self.c, 3, 1, g=self.c)
+        self.cv2 = Conv(self.c * 4, c2, 1, 1, act=False)
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        """Forward pass with depthwise context and four-way spatial rearrangement."""
+        x = self.dwconv(self.cv1(x))
+        h, w = x.shape[-2:]
+        if h % 2 or w % 2:
+            x = F.pad(x, (0, w % 2, 0, h % 2))
+        x = torch.cat(
+            (x[..., ::2, ::2], x[..., 1::2, ::2], x[..., ::2, 1::2], x[..., 1::2, 1::2]),
+            dim=1,
+        )
+        return self.cv2(x)
+
+
+class MECA(nn.Module):
+    """Multi-branch enhanced coordinate attention block for neck features."""
+
+    def __init__(
+        self, c1: int, c2: int, reduction: int = 32, kernels: tuple[int, ...] | list[int] = (3, 5), shortcut: bool = True
+    ):
+        """Initialize MECA.
+
+        Args:
+            c1 (int): Input channels.
+            c2 (int): Output channels.
+            reduction (int): Channel reduction ratio for coordinate attention.
+            kernels (tuple[int, ...] | list[int]): Depthwise branch kernel sizes.
+            shortcut (bool): Whether to add a residual connection.
+        """
+        super().__init__()
+        self.proj = Conv(c1, c2, 1, 1) if c1 != c2 else nn.Identity()
+        self.branches = nn.ModuleList(DWConv(c2, c2, k, 1) for k in kernels)
+        self.fuse = Conv(c2 * (len(kernels) + 1), c2, 1, 1)
+        c_ = max(8, c2 // reduction)
+        self.reduce = Conv(c2, c_, 1, 1)
+        self.conv_h = nn.Conv2d(c_, c2, 1, 1, 0)
+        self.conv_w = nn.Conv2d(c_, c2, 1, 1, 0)
+        self.out = Conv(c2, c2, 1, 1, act=False)
+        self.add = shortcut and c1 == c2
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        """Forward pass through multi-branch coordinate attention."""
+        x = self.proj(x)
+        y = self.fuse(torch.cat([x, *(branch(x) for branch in self.branches)], 1))
+        h, w = y.shape[-2:]
+        y_h = y.mean(dim=3, keepdim=True)
+        y_w = y.mean(dim=2, keepdim=True).transpose(2, 3)
+        y = self.reduce(torch.cat((y_h, y_w), dim=2))
+        a_h, a_w = torch.split(y, (h, w), dim=2)
+        a_w = a_w.transpose(2, 3)
+        y = x * self.conv_h(a_h).sigmoid() * self.conv_w(a_w).sigmoid()
+        y = self.out(y)
+        return x + y if self.add else y
 
 
 class C3(nn.Module):
