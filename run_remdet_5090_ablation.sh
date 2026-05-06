@@ -448,6 +448,7 @@ for seed in "${SEED_ARRAY[@]}"; do
                 "train"
                 "resume=True"
                 "model=${last}"
+                "epochs=${EPOCHS}"
                 "imgsz=${IMGSZ}"
                 "batch=${BATCH}"
                 "workers=${WORKERS}"
