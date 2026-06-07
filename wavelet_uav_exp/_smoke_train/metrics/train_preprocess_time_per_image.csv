@@ -1,0 +1,3 @@
+method,split,image,preprocess_time_ms
+dwt_mask_k1_0_b0_5,train,bus.jpg,48.6391
+dwt_mask_k1_0_b0_5,val,zidane.jpg,20.1526

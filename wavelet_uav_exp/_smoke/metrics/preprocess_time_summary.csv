@@ -1,0 +1,6 @@
+method,display,images,mean_preprocess_time_ms,copied_labels
+original,Original,2,0.4819,0
+clahe,CLAHE,2,16.2722,0
+sharpen,Sharpen,2,7.1308,0
+dwt_global_a1_5,DWT-Global a=1.5,2,21.6515,0
+dwt_mask_k1_0_b0_5,DWT-Mask k=1.0 b=0.5,2,27.8052,0

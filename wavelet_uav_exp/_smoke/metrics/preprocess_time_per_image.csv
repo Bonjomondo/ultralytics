@@ -1,0 +1,11 @@
+method,display,image,preprocess_time_ms
+original,Original,bus.jpg,0.3677
+clahe,CLAHE,bus.jpg,27.5996
+sharpen,Sharpen,bus.jpg,10.6407
+dwt_global_a1_5,DWT-Global a=1.5,bus.jpg,21.2558
+dwt_mask_k1_0_b0_5,DWT-Mask k=1.0 b=0.5,bus.jpg,28.5146
+original,Original,zidane.jpg,0.5961
+clahe,CLAHE,zidane.jpg,4.9449
+sharpen,Sharpen,zidane.jpg,3.6208
+dwt_global_a1_5,DWT-Global a=1.5,zidane.jpg,22.0472
+dwt_mask_k1_0_b0_5,DWT-Mask k=1.0 b=0.5,zidane.jpg,27.0958

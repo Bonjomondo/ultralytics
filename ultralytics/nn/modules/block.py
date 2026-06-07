@@ -380,9 +380,19 @@ class RemRepDWConv(nn.Module):
 
 
 class GatedFFN(nn.Module):
-    """RemDet GatedFFN block with multiplicative gating."""
+    """RemDet GatedFFN block with bounded multiplicative gating."""
 
-    def __init__(self, c1: int, c2: int, n: int = 1, shortcut: bool = False, g: int = 1, e: float = 3.0):
+    def __init__(
+        self,
+        c1: int,
+        c2: int,
+        n: int = 1,
+        shortcut: bool = False,
+        g: int = 1,
+        e: float = 3.0,
+        gate_scale: float = 2.0,
+        residual_scale: float | None = 0.1,
+    ):
         """Initialize GatedFFN.
 
         Args:
@@ -392,6 +402,8 @@ class GatedFFN(nn.Module):
             shortcut (bool): Whether to add input as residual when channels match.
             g (int): Unused compatibility argument.
             e (float): Hidden channel expansion ratio.
+            gate_scale (float): Scale applied after the bounded sigmoid gate.
+            residual_scale (float | None): Initial residual branch scale for shortcut blocks.
         """
         super().__init__()
         _ = g
@@ -400,9 +412,14 @@ class GatedFFN(nn.Module):
         self.proj = Conv(c1, 2 * self.c, 1, 1)
         self.rep = RemRepDWConv(self.c, self.c)
         self.m = nn.ModuleList(Conv(self.c, self.c, 3, 1, g=self.c, act=False) for _ in range(max(n - 1, 0)))
-        self.act = nn.GELU()
+        self.gate = nn.Sigmoid()
+        self.gate_scale = float(gate_scale)
         self.cv2 = Conv(self.c, c2, 1, 1, act=False)
         self.add = shortcut and c1 == c2
+        if self.add and residual_scale is not None:
+            self.gamma = nn.Parameter(torch.full((c2,), float(residual_scale)))
+        else:
+            self.gamma = None
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         """Forward pass through gated feed-forward block."""
@@ -411,9 +428,13 @@ class GatedFFN(nn.Module):
         x = self.rep(x)
         for m in self.m:
             x = m(x)
-        x = x * self.act(z)
+        x = x * (self.gate(z) * self.gate_scale)
         x = self.cv2(x)
-        return x + shortcut if self.add else x
+        if self.add:
+            if self.gamma is not None:
+                return shortcut + self.gamma.view(1, -1, 1, 1) * x
+            return shortcut + x
+        return x
 
 
 class CED(nn.Module):
