@@ -1,4 +1,4 @@
-path: datasets/VisDrone
+path: VisDrone
 train: images/train
 val: images/val
 test: images/test
