@@ -15,12 +15,34 @@ from ultralytics.utils import NOT_MACOS14
 from ultralytics.utils.tal import dist2bbox, dist2rbox, make_anchors
 from ultralytics.utils.torch_utils import TORCH_1_11, fuse_conv_and_bn, smart_inference_mode
 
-from .block import DFL, SAVPE, BNContrastiveHead, ContrastiveHead, Proto, Proto26, RealNVP, Residual, SwiGLUFFN
+from .block import (
+    DFL,
+    SAVPE,
+    BNContrastiveHead,
+    ContrastiveHead,
+    Proto,
+    Proto26,
+    RealNVP,
+    Residual,
+    SemanticAlignmentCalibration,
+    SwiGLUFFN,
+)
 from .conv import Conv, DWConv
 from .transformer import MLP, DeformableTransformerDecoder, DeformableTransformerDecoderLayer
 from .utils import bias_init_with_prob, linear_init
 
-__all__ = "OBB", "Classify", "Detect", "Pose", "RTDETRDecoder", "Segment", "YOLOEDetect", "YOLOESegment", "v10Detect"
+__all__ = (
+    "OBB",
+    "Classify",
+    "Detect",
+    "SACDetect",
+    "Pose",
+    "RTDETRDecoder",
+    "Segment",
+    "YOLOEDetect",
+    "YOLOESegment",
+    "v10Detect",
+)
 
 
 class Detect(nn.Module):
@@ -249,6 +271,27 @@ class Detect(nn.Module):
     def fuse(self) -> None:
         """Remove the one2many head for inference optimization."""
         self.cv2 = self.cv3 = None
+
+
+class SACDetect(Detect):
+    """YOLO Detect head with UAV-DETR semantic alignment on the P3 feature."""
+
+    def __init__(self, nc: int = 80, reg_max=16, end2end=False, ch: tuple = ()):
+        """Initialize a standard Detect head and a P3/P5 semantic calibration path."""
+        super().__init__(nc, reg_max, end2end, ch)
+        if len(ch) < 2:
+            raise ValueError("SACDetect requires at least two detection feature levels.")
+        self.sac = SemanticAlignmentCalibration((ch[0], ch[-1]))
+        self.sac_scale = nn.Parameter(torch.zeros(1))
+
+    def forward(
+        self, x: list[torch.Tensor]
+    ) -> dict[str, torch.Tensor] | torch.Tensor | tuple[torch.Tensor, dict[str, torch.Tensor]]:
+        """Calibrate P3 with P5 semantics, then run the standard detection head."""
+        x = list(x)
+        calibrated = self.sac((x[0], x[-1]))
+        x[0] = x[0] + self.sac_scale * (calibrated - x[0])
+        return super().forward(x)
 
 
 class Segment(Detect):

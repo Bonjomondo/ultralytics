@@ -51,6 +51,8 @@ __all__ = (
     "RepVGGDW",
     "ResNetLayer",
     "SCDown",
+    "FFM",
+    "SemanticAlignmentCalibration",
     "TorchVision",
 )
 
@@ -78,6 +80,99 @@ class DFL(nn.Module):
         b, _, a = x.shape  # batch, channels, anchors
         return self.conv(x.view(b, 4, self.c1, a).transpose(2, 1).softmax(1)).view(b, 4, a)
         # return self.conv(x.view(b, self.c1, 4, a).softmax(1)).view(b, 4, a)
+
+
+class FFM(nn.Module):
+    """Frequency-focused modulation block from UAV-DETR."""
+
+    def __init__(self, channels: int):
+        """Initialize spatial and frequency projections with learnable residual mixing."""
+        super().__init__()
+        self.spatial_proj = nn.Conv2d(channels, channels, 1)
+        self.frequency_proj = nn.Conv2d(channels, channels, 1)
+        self.alpha = nn.Parameter(torch.zeros(channels, 1, 1))
+        self.beta = nn.Parameter(torch.ones(channels, 1, 1))
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        """Enhance frequency responses while preserving an identity path."""
+        spatial = self.spatial_proj(x)
+        frequency = torch.fft.fft2(self.frequency_proj(x).float(), norm="backward")
+        enhanced = torch.fft.ifft2(spatial.float() * frequency, dim=(-2, -1), norm="backward").abs()
+        return enhanced.to(x.dtype) * self.alpha + x * self.beta
+
+
+class SemanticAlignmentCalibration(nn.Module):
+    """Align and fuse high-resolution spatial features with low-resolution semantic features."""
+
+    def __init__(self, channels: tuple[int, int] | list[int], groups: int = 2):
+        """Initialize the UAV-DETR SAC module."""
+        super().__init__()
+        spatial_channels, semantic_channels = channels
+        if spatial_channels % groups:
+            raise ValueError(f"SAC spatial channels ({spatial_channels}) must be divisible by groups ({groups}).")
+
+        self.groups = groups
+        self.spatial_conv = Conv(spatial_channels, spatial_channels, 3)
+        self.semantic_conv = Conv(semantic_channels, spatial_channels, 3)
+        self.frequency_enhancer = FFM(spatial_channels)
+        self.gating_conv = nn.Conv2d(spatial_channels, spatial_channels, 1)
+        self.offset_conv = nn.Sequential(
+            Conv(spatial_channels * 2, 64),
+            nn.Conv2d(64, groups * 4 + 2, 3, padding=1, bias=False),
+        )
+        nn.init.zeros_(self.offset_conv[-1].weight)
+
+    @staticmethod
+    def _base_grid(
+        height: int, width: int, batch_groups: int, device: torch.device, dtype: torch.dtype
+    ) -> torch.Tensor:
+        """Create an identity sampling grid for ``align_corners=False``."""
+        y, x = torch.meshgrid(
+            torch.arange(height, device=device, dtype=dtype),
+            torch.arange(width, device=device, dtype=dtype),
+            indexing="ij",
+        )
+        grid = torch.stack(((x + 0.5) * (2.0 / width) - 1.0, (y + 0.5) * (2.0 / height) - 1.0), dim=-1)
+        return grid.unsqueeze(0).expand(batch_groups, -1, -1, -1)
+
+    def forward(self, x: list[torch.Tensor] | tuple[torch.Tensor, torch.Tensor]) -> torch.Tensor:
+        """Calibrate a spatial feature map using a deeper semantic feature map."""
+        spatial_input, semantic_input = x
+        batch_size, _, out_h, out_w = spatial_input.shape
+
+        semantic = self.semantic_conv(semantic_input)
+        semantic = F.interpolate(semantic, (out_h, out_w), mode="bilinear", align_corners=False)
+        frequency = self.frequency_enhancer(semantic)
+        gate = self.gating_conv(semantic).sigmoid()
+        semantic = semantic * (1.0 - gate) + frequency * gate
+        spatial = self.spatial_conv(spatial_input)
+
+        calibration = self.offset_conv(torch.cat((spatial, semantic), dim=1))
+        spatial = spatial.reshape(batch_size * self.groups, -1, out_h, out_w)
+        semantic = semantic.reshape(batch_size * self.groups, -1, out_h, out_w)
+
+        spatial_offset = calibration[:, : self.groups * 2].reshape(
+            batch_size * self.groups, 2, out_h, out_w
+        )
+        semantic_offset = calibration[:, self.groups * 2 : self.groups * 4].reshape(
+            batch_size * self.groups, 2, out_h, out_w
+        )
+        base_grid = self._base_grid(out_h, out_w, batch_size * self.groups, spatial.device, spatial.dtype)
+        offset_scale = spatial.new_tensor((2.0 / out_w, 2.0 / out_h)).view(1, 1, 1, 2)
+
+        spatial_grid = base_grid + spatial_offset.permute(0, 2, 3, 1) * offset_scale
+        semantic_grid = base_grid + semantic_offset.permute(0, 2, 3, 1) * offset_scale
+        spatial = F.grid_sample(
+            spatial, spatial_grid, mode="bilinear", padding_mode="border", align_corners=False
+        )
+        semantic = F.grid_sample(
+            semantic, semantic_grid, mode="bilinear", padding_mode="border", align_corners=False
+        )
+        spatial = spatial.reshape(batch_size, -1, out_h, out_w)
+        semantic = semantic.reshape(batch_size, -1, out_h, out_w)
+
+        weights = 1.0 + calibration[:, self.groups * 4 :].tanh()
+        return semantic * weights[:, :1] + spatial * weights[:, 1:2]
 
 
 class Proto(nn.Module):
