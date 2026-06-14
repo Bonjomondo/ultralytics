@@ -25,6 +25,8 @@ __all__ = (
     "SPP",
     "SPPELAN",
     "SPPF",
+    "FrequencyEnhancedFusion",
+    "FrequencyFocusedDownsample",
     "AConv",
     "ADown",
     "Attention",
@@ -52,6 +54,7 @@ __all__ = (
     "ResNetLayer",
     "SCDown",
     "FFM",
+    "LightweightAlignedConcat",
     "SemanticAlignmentCalibration",
     "TorchVision",
 )
@@ -99,6 +102,123 @@ class FFM(nn.Module):
         frequency = torch.fft.fft2(self.frequency_proj(x).float(), norm="backward")
         enhanced = torch.fft.ifft2(spatial.float() * frequency, dim=(-2, -1), norm="backward").abs()
         return enhanced.to(x.dtype) * self.alpha + x * self.beta
+
+
+class FrequencyFocusedDownsample(nn.Module):
+    """Downsample with convolution, pooling, and learnable high-frequency branches."""
+
+    def __init__(self, c1: int, c2: int):
+        """Initialize a three-branch frequency-focused downsampling block."""
+        super().__init__()
+        pool_channels = c2 // 4
+        frequency_channels = c2 // 4
+        self.conv = nn.Conv2d(c1, c2, 3, 2, autopad(3), bias=False)
+        self.bn = nn.BatchNorm2d(c2)
+        self.act = Conv.default_act
+        self.pool_branch = Conv(c1, pool_channels, 1)
+        self.frequency_proj = Conv(c1, frequency_channels, 1)
+        self.frequency_refine = Conv(frequency_channels, frequency_channels, 3)
+        self.frequency_scale = nn.Parameter(torch.zeros(1))
+        self.fuse = Conv(c2 + pool_channels + frequency_channels, c2, 1)
+
+    @staticmethod
+    def _high_pass(x: torch.Tensor) -> torch.Tensor:
+        """Return a radial high-pass response while keeping FFT math in FP32."""
+        height, width = x.shape[-2:]
+        spectrum = torch.fft.fft2(x.float(), norm="ortho")
+        fy = torch.fft.fftfreq(height, device=x.device)
+        fx = torch.fft.fftfreq(width, device=x.device)
+        radius = torch.sqrt(fy[:, None].square() + fx[None, :].square())
+        mask = (radius / radius.max().clamp_min(1e-6)).view(1, 1, height, width)
+        return torch.fft.ifft2(spectrum * mask, norm="ortho").real.to(x.dtype)
+
+    def _forward_branches(self, x: torch.Tensor, convolution: torch.Tensor) -> torch.Tensor:
+        """Fuse the shared convolution result with pooling and frequency branches."""
+        output_size = convolution.shape[-2:]
+        pooled = self.pool_branch(F.adaptive_max_pool2d(x, output_size))
+        frequency = self.frequency_proj(x)
+        frequency = frequency + self.frequency_scale * self._high_pass(frequency)
+        frequency = F.adaptive_avg_pool2d(frequency, output_size)
+        frequency = self.frequency_refine(frequency)
+        return self.fuse(torch.cat((convolution, pooled, frequency), dim=1))
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        """Downsample and fuse local, salient, and high-frequency responses."""
+        return self._forward_branches(x, self.act(self.bn(self.conv(x))))
+
+    def forward_fuse(self, x: torch.Tensor) -> torch.Tensor:
+        """Run the block after its pretrained-compatible main convolution is fused."""
+        return self._forward_branches(x, self.act(self.conv(x)))
+
+
+class FrequencyEnhancedFusion(nn.Module):
+    """Residual spatial-frequency enhancement for fused neck features."""
+
+    def __init__(self, c1: int, c2: int):
+        """Initialize a frequency-enhanced fusion block with identity-start behavior."""
+        super().__init__()
+        frequency_channels = max(c2 // 4, 16)
+        self.input_proj = Conv(c1, c2, 1) if c1 != c2 else nn.Identity()
+        self.local = DWConv(c2, c2, 3)
+        self.frequency_reduce = Conv(c2, frequency_channels, 1)
+        self.frequency_expand = Conv(frequency_channels, c2, 1)
+        self.scale = nn.Parameter(torch.zeros(1))
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        """Enhance a fused feature while initially preserving its projected input."""
+        x = self.input_proj(x)
+        frequency = FrequencyFocusedDownsample._high_pass(self.frequency_reduce(x))
+        enhanced = self.local(x) + self.frequency_expand(frequency)
+        return x + self.scale * enhanced
+
+
+class LightweightAlignedConcat(nn.Module):
+    """Align a top-down feature to a lateral feature before channel concatenation."""
+
+    def __init__(self, channels: tuple[int, int] | list[int]):
+        """Initialize lightweight offset and semantic correction paths."""
+        super().__init__()
+        if len(channels) != 2:
+            raise ValueError(f"LightweightAlignedConcat expects two inputs, received {len(channels)}.")
+        topdown_channels, lateral_channels = channels
+        hidden_channels = max(min(topdown_channels, lateral_channels) // 4, 16)
+        self.topdown_reduce = Conv(topdown_channels, hidden_channels, 1)
+        self.lateral_reduce = Conv(lateral_channels, hidden_channels, 1)
+        self.lateral_proj = Conv(lateral_channels, topdown_channels, 1)
+        self.offset = nn.Conv2d(hidden_channels * 2, 2, 3, padding=1, bias=False)
+        self.gate = nn.Conv2d(hidden_channels * 2, 1, 1)
+        self.align_scale = nn.Parameter(torch.zeros(1))
+        nn.init.zeros_(self.offset.weight)
+
+    @staticmethod
+    def _base_grid(height: int, width: int, batch: int, x: torch.Tensor) -> torch.Tensor:
+        """Create an identity grid for align_corners=False sampling."""
+        y, x_coord = torch.meshgrid(
+            torch.arange(height, device=x.device, dtype=x.dtype),
+            torch.arange(width, device=x.device, dtype=x.dtype),
+            indexing="ij",
+        )
+        grid = torch.stack(
+            ((x_coord + 0.5) * (2.0 / width) - 1.0, (y + 0.5) * (2.0 / height) - 1.0),
+            dim=-1,
+        )
+        return grid.unsqueeze(0).expand(batch, -1, -1, -1)
+
+    def forward(self, x: list[torch.Tensor] | tuple[torch.Tensor, torch.Tensor]) -> torch.Tensor:
+        """Align the first input to the second input and concatenate them."""
+        topdown, lateral = x
+        if topdown.shape[-2:] != lateral.shape[-2:]:
+            topdown = F.interpolate(topdown, lateral.shape[-2:], mode="bilinear", align_corners=False)
+        context = torch.cat((self.topdown_reduce(topdown), self.lateral_reduce(lateral)), dim=1)
+        offset = self.offset(context).permute(0, 2, 3, 1)
+        height, width = lateral.shape[-2:]
+        offset_scale = lateral.new_tensor((2.0 / width, 2.0 / height)).view(1, 1, 1, 2)
+        grid = self._base_grid(height, width, topdown.shape[0], topdown) + offset * offset_scale
+        warped = F.grid_sample(topdown, grid, mode="bilinear", padding_mode="border", align_corners=False)
+        gate = self.gate(context).sigmoid()
+        calibrated = warped * (1.0 - gate) + self.lateral_proj(lateral) * gate
+        aligned = topdown + self.align_scale * (calibrated - topdown)
+        return torch.cat((aligned, lateral), dim=1)
 
 
 class SemanticAlignmentCalibration(nn.Module):

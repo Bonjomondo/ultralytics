@@ -153,6 +153,113 @@ class BboxLoss(nn.Module):
         return loss_iou, loss_dfl
 
 
+class SmallObjectBboxLoss(BboxLoss):
+    """Inner-SIoU regression loss with continuous emphasis on small target boxes."""
+
+    def __init__(
+        self,
+        reg_max: int = 16,
+        inner_ratio: float = 0.7,
+        small_box_gain: float = 0.5,
+        small_box_scale: float = 32.0,
+    ):
+        """Initialize Inner-SIoU and small-object weighting parameters."""
+        super().__init__(reg_max)
+        if not 0.0 < inner_ratio <= 1.0:
+            raise ValueError(f"inner_ratio must be in (0, 1], received {inner_ratio}.")
+        if small_box_gain < 0.0:
+            raise ValueError(f"small_box_gain must be non-negative, received {small_box_gain}.")
+        if small_box_scale <= 0.0:
+            raise ValueError(f"small_box_scale must be positive, received {small_box_scale}.")
+        self.inner_ratio = inner_ratio
+        self.small_box_gain = small_box_gain
+        self.small_box_scale = small_box_scale
+
+    @staticmethod
+    def _scaled_xyxy(boxes: torch.Tensor, ratio: float) -> torch.Tensor:
+        """Scale xyxy boxes around their centers."""
+        center = (boxes[..., :2] + boxes[..., 2:]) * 0.5
+        half_size = (boxes[..., 2:] - boxes[..., :2]).clamp_min(1e-7) * (0.5 * ratio)
+        return torch.cat((center - half_size, center + half_size), dim=-1)
+
+    def _inner_siou(self, pred_bboxes: torch.Tensor, target_bboxes: torch.Tensor) -> torch.Tensor:
+        """Calculate Inner-SIoU similarity for aligned xyxy box pairs."""
+        eps = 1e-7
+        inner_iou = bbox_iou(
+            self._scaled_xyxy(pred_bboxes, self.inner_ratio),
+            self._scaled_xyxy(target_bboxes, self.inner_ratio),
+            xywh=False,
+        )
+        pred_center = (pred_bboxes[..., :2] + pred_bboxes[..., 2:]) * 0.5
+        target_center = (target_bboxes[..., :2] + target_bboxes[..., 2:]) * 0.5
+        center_delta = (target_center - pred_center).abs()
+        sigma = torch.sqrt(center_delta[..., :1].square() + center_delta[..., 1:].square() + eps)
+        sin_x = center_delta[..., :1] / sigma
+        sin_y = center_delta[..., 1:] / sigma
+        sin_alpha = torch.where(sin_x > math.sqrt(0.5), sin_y, sin_x).clamp(0, 1 - eps)
+        angle_cost = torch.cos(torch.asin(sin_alpha) * 2 - math.pi / 2)
+
+        enclosing_lt = torch.minimum(pred_bboxes[..., :2], target_bboxes[..., :2])
+        enclosing_rb = torch.maximum(pred_bboxes[..., 2:], target_bboxes[..., 2:])
+        enclosing_size = (enclosing_rb - enclosing_lt).clamp_min(eps)
+        rho_x = (center_delta[..., :1] / enclosing_size[..., :1]).square()
+        rho_y = (center_delta[..., 1:] / enclosing_size[..., 1:]).square()
+        gamma = angle_cost - 2
+        distance_cost = 2 - torch.exp(gamma * rho_x) - torch.exp(gamma * rho_y)
+
+        pred_size = (pred_bboxes[..., 2:] - pred_bboxes[..., :2]).clamp_min(eps)
+        target_size = (target_bboxes[..., 2:] - target_bboxes[..., :2]).clamp_min(eps)
+        size_delta = (pred_size - target_size).abs() / torch.maximum(pred_size, target_size)
+        shape_cost = (1 - torch.exp(-size_delta)).pow(4).sum(-1, keepdim=True)
+        return inner_iou - 0.5 * (distance_cost + shape_cost)
+
+    def forward(
+        self,
+        pred_dist: torch.Tensor,
+        pred_bboxes: torch.Tensor,
+        anchor_points: torch.Tensor,
+        target_bboxes: torch.Tensor,
+        target_scores: torch.Tensor,
+        target_scores_sum: torch.Tensor,
+        fg_mask: torch.Tensor,
+        imgsz: torch.Tensor,
+        stride: torch.Tensor,
+    ) -> tuple[torch.Tensor, torch.Tensor]:
+        """Compute small-object weighted Inner-SIoU and DFL losses."""
+        score_weight = target_scores.sum(-1)[fg_mask].unsqueeze(-1)
+        expanded_stride = stride.unsqueeze(0).expand(target_bboxes.shape[0], -1, -1)[fg_mask]
+        pixel_boxes = target_bboxes[fg_mask] * expanded_stride
+        pixel_size = (pixel_boxes[..., 2:] - pixel_boxes[..., :2]).clamp_min(0)
+        geometric_size = torch.sqrt(pixel_size[..., :1] * pixel_size[..., 1:] + 1e-7)
+        small_weight = 1.0 + self.small_box_gain * torch.exp(-geometric_size / self.small_box_scale)
+        weight = score_weight * small_weight
+
+        siou = self._inner_siou(pred_bboxes[fg_mask], target_bboxes[fg_mask])
+        loss_iou = ((1.0 - siou) * weight).sum() / target_scores_sum
+
+        if self.dfl_loss:
+            target_ltrb = bbox2dist(anchor_points, target_bboxes, self.dfl_loss.reg_max - 1)
+            loss_dfl = (
+                self.dfl_loss(pred_dist[fg_mask].view(-1, self.dfl_loss.reg_max), target_ltrb[fg_mask])
+                * weight
+            )
+            loss_dfl = loss_dfl.sum() / target_scores_sum
+        else:
+            target_ltrb = bbox2dist(anchor_points, target_bboxes) * stride
+            target_ltrb[..., 0::2] /= imgsz[1]
+            target_ltrb[..., 1::2] /= imgsz[0]
+            normalized_pred = pred_dist * stride
+            normalized_pred[..., 0::2] /= imgsz[1]
+            normalized_pred[..., 1::2] /= imgsz[0]
+            loss_dfl = (
+                F.l1_loss(normalized_pred[fg_mask], target_ltrb[fg_mask], reduction="none").mean(-1, keepdim=True)
+                * weight
+            )
+            loss_dfl = loss_dfl.sum() / target_scores_sum
+
+        return loss_iou, loss_dfl
+
+
 class RLELoss(nn.Module):
     """Residual Log-Likelihood Estimation Loss.
 
@@ -467,6 +574,21 @@ class v8DetectionLoss:
         batch_size = preds["boxes"].shape[0]
         loss, loss_detach = self.get_assigned_targets_and_loss(preds, batch)[1:]
         return loss * batch_size, loss_detach
+
+
+class UAVDetectionLoss(v8DetectionLoss):
+    """Detection criterion using small-object weighted Inner-SIoU regression."""
+
+    def __init__(self, model, tal_topk: int = 10, tal_topk2: int | None = None):
+        """Initialize the standard assigner and replace only its box regression criterion."""
+        super().__init__(model, tal_topk, tal_topk2)
+        m = model.model[-1]
+        self.bbox_loss = SmallObjectBboxLoss(
+            m.reg_max,
+            inner_ratio=float(model.yaml.get("inner_iou_ratio", 0.7)),
+            small_box_gain=float(model.yaml.get("small_box_gain", 0.5)),
+            small_box_scale=float(model.yaml.get("small_box_scale", 32.0)),
+        ).to(self.device)
 
 
 class v8SegmentationLoss(v8DetectionLoss):

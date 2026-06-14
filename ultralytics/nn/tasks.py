@@ -45,6 +45,8 @@ from ultralytics.nn.modules import (
     Conv2,
     ConvTranspose,
     Detect,
+    FrequencyEnhancedFusion,
+    FrequencyFocusedDownsample,
     SACDetect,
     DWConv,
     DWConvTranspose2d,
@@ -55,6 +57,7 @@ from ultralytics.nn.modules import (
     HGStem,
     ImagePoolingAttn,
     Index,
+    LightweightAlignedConcat,
     LRPCHead,
     Pose,
     Pose26,
@@ -68,6 +71,7 @@ from ultralytics.nn.modules import (
     Segment,
     Segment26,
     TorchVision,
+    UAVDetect,
     WorldDetect,
     YOLOEDetect,
     YOLOESegment,
@@ -79,6 +83,7 @@ from ultralytics.utils.checks import check_requirements, check_suffix, check_yam
 from ultralytics.utils.loss import (
     E2ELoss,
     PoseLoss26,
+    UAVDetectionLoss,
     v8ClassificationLoss,
     v8DetectionLoss,
     v8OBBLoss,
@@ -233,7 +238,11 @@ class BaseModel(torch.nn.Module):
         """
         if not self.is_fused():
             for m in self.model.modules():
-                if isinstance(m, (Conv, Conv2, DWConv)) and hasattr(m, "bn"):
+                if isinstance(m, FrequencyFocusedDownsample) and hasattr(m, "bn"):
+                    m.conv = fuse_conv_and_bn(m.conv, m.bn)
+                    delattr(m, "bn")
+                    m.forward = m.forward_fuse
+                elif isinstance(m, (Conv, Conv2, DWConv)) and hasattr(m, "bn"):
                     if isinstance(m, Conv2):
                         m.fuse_convs()
                     m.conv = fuse_conv_and_bn(m.conv, m.bn)  # update conv
@@ -512,7 +521,9 @@ class DetectionModel(BaseModel):
 
     def init_criterion(self):
         """Initialize the loss criterion for the DetectionModel."""
-        return E2ELoss(self) if getattr(self, "end2end", False) else v8DetectionLoss(self)
+        if getattr(self, "end2end", False):
+            return E2ELoss(self)
+        return UAVDetectionLoss(self) if isinstance(self.model[-1], UAVDetect) else v8DetectionLoss(self)
 
 
 class OBBModel(DetectionModel):
@@ -1609,6 +1620,8 @@ def parse_model(d, ch, verbose=True):
             SCDown,
             C2fCIB,
             A2C2f,
+            FrequencyEnhancedFusion,
+            FrequencyFocusedDownsample,
         }
     )
     repeat_modules = frozenset(  # modules with 'repeat' arguments
@@ -1679,10 +1692,16 @@ def parse_model(d, ch, verbose=True):
             args = [ch[f]]
         elif m is Concat:
             c2 = sum(ch[x] for x in f)
+        elif m is LightweightAlignedConcat:
+            if len(f) != 2:
+                raise ValueError("LightweightAlignedConcat requires exactly two input layers.")
+            args = [[ch[x] for x in f], *args]
+            c2 = sum(ch[x] for x in f)
         elif m in frozenset(
             {
                 Detect,
                 SACDetect,
+                UAVDetect,
                 WorldDetect,
                 YOLOEDetect,
                 Segment,
@@ -1701,6 +1720,7 @@ def parse_model(d, ch, verbose=True):
             if m in {
                 Detect,
                 SACDetect,
+                UAVDetect,
                 YOLOEDetect,
                 Segment,
                 Segment26,

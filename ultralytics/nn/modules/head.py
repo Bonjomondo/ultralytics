@@ -294,6 +294,12 @@ class SACDetect(Detect):
         return super().forward(x)
 
 
+class UAVDetect(Detect):
+    """Detection head marker for the UAV small-object regression criterion."""
+
+    pass
+
+
 class Segment(Detect):
     """YOLO Segment head for segmentation models.
 
