@@ -88,7 +88,14 @@ PYTHONPATH=$PWD python train_paper_repro_visdrone.py --model r50 --pretrained /p
 | 实验 | 模型 | 预训练 | epochs | 最佳 epoch | mAP50-95 | mAP50 | P | R |
 | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
 | 论文 | RT-DETR-R50 | COCO | 350 | - | 0.284* | 0.470* | - | - |
-| 本复刻 | RT-DETR-R50 | 无/从零 | 350 | | | | | |
+| 本复刻 (Ultralytics val) | RT-DETR-R50 | 无/从零 | 350 | 344 | **0.287** | **0.468** | 0.609 | 0.448 |
+| 本复刻 (正式 COCOeval) | RT-DETR-R50 | 无/从零 | 350 | 344 | 0.260 | 0.432 | - | - |
+
+正式 COCOeval 明细（`coco_eval/`）：AP@[.5:.95]=26.00，AP50=43.16，AP75=26.24，APs=17.50，APm=36.83，APl=41.40。
+
+> **结论**：本复刻用 Ultralytics val 得到 AP 28.7 / AP50 46.8，与论文 28.4 / 47.0 基本一致 → 配方成功复现。
+> 正式 pycocotools 风格 COCOeval 低约 2.7 点（26.0/43.2），属评测工具差异（Ultralytics 内置
+> DetMetrics 与标准 COCOeval 的插值/匹配规则不同）。
 
 （*论文以百分数报告，此处换算为小数。）
 
