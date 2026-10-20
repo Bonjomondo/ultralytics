@@ -80,6 +80,15 @@ PAPER_RECIPE = dict(
 )
 
 
+def parse_bool(value: str) -> bool:
+    """Parse explicit boolean CLI values without treating the string 'False' as true."""
+    if value.lower() in {"true", "1", "yes"}:
+        return True
+    if value.lower() in {"false", "0", "no"}:
+        return False
+    raise argparse.ArgumentTypeError("expected true/false, yes/no, or 1/0")
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
@@ -103,7 +112,10 @@ def parse_args() -> argparse.Namespace:
 
     # Allow overriding the strict recipe knobs when needed (defaults = paper).
     for key, value in PAPER_RECIPE.items():
-        parser.add_argument(f"--{key.replace('_', '-')}", dest=key, type=type(value), default=value)
+        parser.add_argument(
+            f"--{key.replace('_', '-')}", dest=key,
+            type=parse_bool if isinstance(value, bool) else type(value), default=value,
+        )
     return parser.parse_args()
 
 
@@ -115,7 +127,6 @@ def main() -> None:
         raise FileNotFoundError(f"Model config not found: {model_cfg}")
 
     name = args.name or f"rtdetr-{args.model}-paper-350e-s{args.seed}"
-    model_source = args.pretrained if args.pretrained else str(model_cfg)
 
     print("=" * 72)
     print("Strict paper-recipe replication (SO-DETR paper RT-DETR baseline)")
@@ -125,7 +136,9 @@ def main() -> None:
     print(f"  recipe     : {PAPER_RECIPE}")
     print("=" * 72)
 
-    model = RTDETR(model_source)
+    model = RTDETR(str(model_cfg))
+    if args.pretrained:
+        model.load(args.pretrained)  # load weights into the requested architecture
 
     train_args = {k: getattr(args, k) for k in PAPER_RECIPE}
     train_args.update(

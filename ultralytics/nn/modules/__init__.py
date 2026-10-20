@@ -93,6 +93,7 @@ from .head import (
     YOLOESegment26,
     v10Detect,
 )
+from .rtdetr_na import NeighborhoodAttention2d, ResNet18Stage, ResNet18Stem, ResidualLocalRefine
 from .transformer import (
     AIFI,
     MLP,
@@ -173,6 +174,10 @@ __all__ = (
     "RepConv",
     "RepNCSPELAN4",
     "RepVGGDW",
+    "NeighborhoodAttention2d",
+    "ResNet18Stage",
+    "ResNet18Stem",
+    "ResidualLocalRefine",
     "ResNetLayer",
     "SCDown",
     "Segment",

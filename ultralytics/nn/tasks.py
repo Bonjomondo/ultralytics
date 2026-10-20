@@ -61,6 +61,9 @@ from ultralytics.nn.modules import (
     RepConv,
     RepNCSPELAN4,
     RepVGGDW,
+    ResNet18Stage,
+    ResNet18Stem,
+    ResidualLocalRefine,
     ResNetLayer,
     RTDETRDecoder,
     SCDown,
@@ -1664,8 +1667,12 @@ def parse_model(d, ch, verbose=True):
                     args.extend((True, 1.2))
             if m is C2fCIB:
                 legacy = False
-        elif m is AIFI:
+        elif m in {ResNet18Stem, ResNet18Stage}:
+            c2 = args[0]
             args = [ch[f], *args]
+        elif m in {AIFI, ResidualLocalRefine}:
+            c2 = ch[f]
+            args = [c2, *args]
         elif m in frozenset({HGStem, HGBlock}):
             c1, cm, c2 = ch[f], args[0], args[1]
             args = [c1, cm, c2, *args[2:]]
