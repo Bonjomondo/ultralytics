@@ -99,3 +99,7 @@ PYTHONPATH="$PWD" python -m unittest discover -s tests -p test_rtdetr_r18_na.py 
 正式 COCOeval AP/AP50/APs = **18.702% / 32.431% / 12.610%**。原生 Validator 内部 mAP=20.699%，而将其自身预测交给 COCOeval 得到 AP=18.705%；内部指标与正式 AP 应分别记录，差异尚未完全拆解。全量 3 层回归 delta 均有 Query 变化；8 图 D3 隐藏激活非全零，不能套用其他模型的 bias-only 结论。
 
 验收时 R0 仍在训练，未用其未完成 checkpoint 对照 R1，也未据此宣称 NA 有稳定结构收益。共有初始化 SHA 已核对。详细结论、边界、失败进程记录与后续假设集中在 [实验报告](r18_na_ablation/detrscope_20261021/REPORT.md)；网页端协同从 [ChatGPT 上下文](r18_na_ablation/detrscope_20261021/CHATGPT_CONTEXT.md) 开始。大文件仍保留在原 run 目录，轻量证据和复现源码纳入 Git。
+
+## R0 完成后的同协议正式对照
+
+R0 已完成 150 轮，最后 checkpoint 在 2026-10-21 18:53:59 保存，训练进程正常结束。训练 CSV 的内部 mAP50-95：R0 20.593%、R1 20.695%（+0.102pp）；同原生 JSON 导出、同 GT 和 COCOeval 正式协议下，R0/R1 AP=18.650%/18.705%（+0.055pp），APs=12.219%/12.616%（+0.397pp）。APm −0.217pp、ARs −0.034pp，不能概括为全面改善。共有初始化和关键配方已核对，单 seed 的整体差异很小，尚不能认定 NA 有稳定收益。此前 R0 未完成的表述保留为当时快照，最新结论见[完成版对照](r18_na_ablation/completed_pair/REPORT.md)。

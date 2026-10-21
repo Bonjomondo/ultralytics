@@ -1,0 +1,14 @@
+{
+  "batch": 2,
+  "checkpoint_sha256": "b33e471cb8d429c4f799353f0349a588c22f87e4aea2452544acd1d5ba5616ee",
+  "half": false,
+  "imgsz": 640,
+  "metrics": {
+    "fitness": 0.20600859959040743,
+    "metrics/mAP50(B)": 0.3502218279067461,
+    "metrics/mAP50-95(B)": 0.20600859959040743,
+    "metrics/precision(B)": 0.482094983559944,
+    "metrics/recall(B)": 0.36112188379295435
+  },
+  "save_dir": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/completed_pair_r0_native"
+}

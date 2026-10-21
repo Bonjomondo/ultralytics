@@ -1,0 +1,75 @@
+{
+  "comparison": "R1 relative to R0",
+  "thresholds": [
+    {
+      "gained": 2227,
+      "iou": 0.5,
+      "lost": 2380,
+      "stable_fn": 10720,
+      "stable_tp": 23432
+    },
+    {
+      "gained": 2288,
+      "iou": 0.55,
+      "lost": 2431,
+      "stable_fn": 11937,
+      "stable_tp": 22103
+    },
+    {
+      "gained": 2322,
+      "iou": 0.6,
+      "lost": 2531,
+      "stable_fn": 13469,
+      "stable_tp": 20437
+    },
+    {
+      "gained": 2456,
+      "iou": 0.65,
+      "lost": 2592,
+      "stable_fn": 15302,
+      "stable_tp": 18409
+    },
+    {
+      "gained": 2542,
+      "iou": 0.7,
+      "lost": 2622,
+      "stable_fn": 17670,
+      "stable_tp": 15925
+    },
+    {
+      "gained": 2369,
+      "iou": 0.75,
+      "lost": 2457,
+      "stable_fn": 20776,
+      "stable_tp": 13157
+    },
+    {
+      "gained": 2145,
+      "iou": 0.8,
+      "lost": 2188,
+      "stable_fn": 24226,
+      "stable_tp": 10200
+    },
+    {
+      "gained": 1742,
+      "iou": 0.85,
+      "lost": 1792,
+      "stable_fn": 28230,
+      "stable_tp": 6995
+    },
+    {
+      "gained": 1223,
+      "iou": 0.8999999999999999,
+      "lost": 1216,
+      "stable_fn": 32582,
+      "stable_tp": 3738
+    },
+    {
+      "gained": 505,
+      "iou": 0.95,
+      "lost": 495,
+      "stable_fn": 36976,
+      "stable_tp": 783
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "files": {
+    "verification.json": "f0043fbc0a3adc8a65cf1912468b58e0979e23ddd1aa432909f661dff5e056ca",
+    "r0_formal_metrics.json": "d7b4416996dd904bb416c6d81b2c0f7fddb42d8394d2e80299a2d80a4745b3c3",
+    "r0_training_health.jsonl": "986b51d96e44c2f5e35f4a4450cff75e8d1fb95137ad02300b3dd75ee21f75eb",
+    "formal_metrics_comparison.csv": "25c961260361aa8cdc9cb859e29e8946795c006d54491a717b050a4afd128c52",
+    "formal_gt_changes_summary.json": "7cbf98ffd5e362763010d419e00289e338a4138fedc363548ea0645c8f1aef3e",
+    "r0_training_args.yaml": "bc3dff12cdbfb1556de029964de09e92b6f1d5a86616417314309cdaa28d032e",
+    "REPORT.md": "4a7e0e75ef9272ec525040235eb72b8659c6c3b9d94f0614deab80b3e3994427",
+    "r0_training_metrics.csv": "d8d974a2ebedc0dfe17f5993188af8c45add27190f8a8859d4daf08390456165",
+    "evaluate_pair.py": "3c7ba0105f513efab2cfe25480c36baa606edeb0696fb83e56c74251e946376f",
+    "r1_formal_metrics.json": "9724225c8c48377e6afc4fdf0d4cf84dd4ac621e971426d599bd691b9cc3dc0c",
+    "r0_native_internal.json": "a83e32b64481d99a7ea65c3e284e1f28390e15b79da4ee906d481e0c776842e9"
+  }
+}
