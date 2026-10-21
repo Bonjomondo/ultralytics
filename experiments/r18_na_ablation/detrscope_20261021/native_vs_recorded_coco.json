@@ -1,0 +1,18 @@
+{
+  "native_minus_recorded_pp": {
+    "AP": 0.0028949774437431186,
+    "AP50": -0.004449725555238926,
+    "AP75": -0.0008766042790903095,
+    "APl": -0.000700232359523989,
+    "APm": 0.004844114829211099,
+    "APs": 0.00526798876782919,
+    "AR1": -0.017152966193199892,
+    "AR10": -0.004161572835328919,
+    "AR100": -0.004851266396560527,
+    "ARl": -0.01021055582606789,
+    "ARm": -0.005237762919485522,
+    "ARs": -0.011021915534870086
+  },
+  "native_prediction_file": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/detrscope_native_val_202610212/predictions.json",
+  "scope": "Same checkpoint/images/GT. Native fused Validator JSON rounds boxes to 3 decimals and scores to 5 decimals; recorded unfused Predictor export retains FP32 precision."
+}

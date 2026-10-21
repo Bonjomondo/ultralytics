@@ -1,0 +1,9 @@
+{
+  "seed": 0,
+  "shared_state_sha256": "7655b18e79a9f24a67d4bb5acb6ef50a67b5f2bcf1f9a7ca493e623d0d3a4bd1",
+  "shared_state_items": 533,
+  "source": "checkpoint",
+  "model_config": "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r1-150e-s0/weights/last.pt",
+  "amp": false,
+  "gradient_sampling": "first three training batches per epoch; scaled if AMP is enabled"
+}

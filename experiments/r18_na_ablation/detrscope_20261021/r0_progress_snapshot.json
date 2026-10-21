@@ -1,0 +1,31 @@
+{
+  "initialization": {
+    "amp": false,
+    "gradient_sampling": "first three training batches per epoch; scaled if AMP is enabled",
+    "model_config": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/ultralytics/cfg/models/rt-detr/rtdetr-resnet18.yaml",
+    "seed": 0,
+    "shared_state_items": 533,
+    "shared_state_sha256": "e1c9a8c9f9bb55b33b22a6ddf20386256b675014c21ff419e263405324432d08",
+    "source": "seeded R0 from scratch"
+  },
+  "last_logged_metrics": {
+    "epoch": "57",
+    "lr/pg0": "0.0001",
+    "lr/pg1": "0.0001",
+    "lr/pg2": "0.0001",
+    "metrics/mAP50(B)": "0.22668",
+    "metrics/mAP50-95(B)": "0.12666",
+    "metrics/precision(B)": "0.34117",
+    "metrics/recall(B)": "0.25322",
+    "time": "8843.09",
+    "train/cls_loss": "0.43591",
+    "train/giou_loss": "1.30465",
+    "train/l1_loss": "0.22976",
+    "val/cls_loss": "0.53349",
+    "val/giou_loss": "0.877",
+    "val/l1_loss": "0.10531"
+  },
+  "not_used_as_completed_comparator": true,
+  "observed_utc": "2026-10-21T06:56:54.147195+00:00",
+  "training_not_complete": true
+}

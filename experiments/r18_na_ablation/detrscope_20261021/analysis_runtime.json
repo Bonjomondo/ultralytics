@@ -1,0 +1,23 @@
+{
+  "all_model_source_sha256_unchanged": true,
+  "analysis_cpu_affinity": [
+    24,
+    25,
+    26,
+    27
+  ],
+  "failure_logs": [
+    "logs/detrscope_r18_full_20261021.log",
+    "logs/detrscope_r18_offline_20261021.log",
+    "logs/detrscope_r18_debug_20261021.log"
+  ],
+  "native_validator_log": "logs/detrscope_r18_native_formal_20261021.log",
+  "python_allocator": "debug",
+  "python_executable": "/home/zjnu/anaconda3/envs/UAV_CV/bin/python",
+  "python_flags": "-X dev",
+  "raw_path": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r1-150e-s0/detrscope_20261021",
+  "runtime_issue_root_cause": "Not established. Two unbound attempts raised TypeError; debug/dev unbound attempt segfaulted. Affinity-limited full analysis and replay completed with exact SHA/statistics/COCO equality.",
+  "successful_analysis_log": "logs/detrscope_r18_affinity_20261021.log",
+  "successful_full_analysis_and_replay": true,
+  "weights_unchanged": true
+}

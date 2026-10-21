@@ -1,0 +1,9 @@
+{
+  "device": "NVIDIA GeForce RTX 4090",
+  "intervention_exception_cleanup_exact": true,
+  "modified_source_pin_rejected": "Ultralytics source tree differs from the frozen experiment pin",
+  "observation_exception_cleanup_exact": true,
+  "torch": "2.1.2+cu121",
+  "unsupported_reference_intervention_error": "PinnedR18NAAdapter does not support: reference_intervention: PinnedR18NAAdapter does not implement reference_intervention",
+  "wheel_adapter_rejects_local_fork": "Install the optional upstream dependency: pip install 'detrscope[ultralytics]'"
+}

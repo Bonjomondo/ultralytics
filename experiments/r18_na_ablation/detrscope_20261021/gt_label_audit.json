@@ -1,0 +1,8 @@
+{
+  "count_discrepancies": [],
+  "formal_annotation_count": 38759,
+  "images": 548,
+  "max_sorted_normalized_field_difference": 5.000000000143778e-07,
+  "native_label_count": 38759,
+  "sorting": "lexicographic class,cx,cy,w,h; this is a coordinate sanity check, not formal annotation-ID pairing"
+}

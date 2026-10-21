@@ -1,0 +1,16 @@
+{
+  "batch": 2,
+  "checkpoint_sha256": "bd3e84698c32771ff49ee9e2d3c02feb968ec4c7aada5e993416a5e12f5b16a9",
+  "half": false,
+  "imgsz": 640,
+  "metrics": {
+    "fitness": 0.20698605736283288,
+    "metrics/mAP50(B)": 0.3518536445277778,
+    "metrics/mAP50-95(B)": 0.20698605736283288,
+    "metrics/precision(B)": 0.479618773649929,
+    "metrics/recall(B)": 0.3631956879713896
+  },
+  "note": "Unmodified native Ultralytics Validator internal metrics, distinct from pycocotools COCOeval",
+  "save_dir": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/detrscope_native_val_202610212",
+  "torch": "2.1.2+cu121"
+}

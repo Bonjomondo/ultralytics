@@ -1,0 +1,30 @@
+{
+  "baseline": {
+    "boundary_check": "Native Dataset/Predictor exact preprocessing and native Predictor postprocessing, first 2 real images; final record/native eager output exact on every collected image",
+    "coco_canonical_predictions_sha256": "6071ca8e6541bbcd1c4d3e35fc09ef4ead53da69bd0522e339ef302019121e76",
+    "conversion": "Recorded final-stage query boxes/probabilities -> native Predictor-compatible argmax/conf>0.001/sort/top300/pixel xywh",
+    "predictions_file_sha256": "ddf6fd0598c880251deb26d4bdf655dfa6ed8d5b2476ae8c593c1b19e231774a",
+    "record_manifest_sha256": "7bfe115967130c87ae90c2e555382be0acd1fc52066cacca3e33f33060c8d44f"
+  },
+  "identity_sample": {
+    "boundary_check": "Native Dataset/Predictor exact preprocessing and native Predictor postprocessing, first 2 real images; final record/native eager output exact on every collected image",
+    "coco_canonical_predictions_sha256": "788b81d83e3317b0875c6abf47111d01f2c2448269db78795c00a021a414498b",
+    "conversion": "Recorded final-stage query boxes/probabilities -> native Predictor-compatible argmax/conf>0.001/sort/top300/pixel xywh",
+    "predictions_file_sha256": "975d78110fe7ede243b5ae2fe96b7ddf95a0286d1773cee392aa183f37a917ff",
+    "record_manifest_sha256": "03c9099bfbf7abe19a962658bc19c272a0171f10d20802369b0b828ef5cc1877"
+  },
+  "probe_sample": {
+    "boundary_check": "Native Dataset/Predictor exact preprocessing and native Predictor postprocessing, first 2 real images; final record/native eager output exact on every collected image",
+    "coco_canonical_predictions_sha256": "788b81d83e3317b0875c6abf47111d01f2c2448269db78795c00a021a414498b",
+    "conversion": "Recorded final-stage query boxes/probabilities -> native Predictor-compatible argmax/conf>0.001/sort/top300/pixel xywh",
+    "predictions_file_sha256": "975d78110fe7ede243b5ae2fe96b7ddf95a0286d1773cee392aa183f37a917ff",
+    "record_manifest_sha256": "57d4319f0f79dc04e47bb57898e55c39a115c2d892348bed5ff8a1372eab48fb"
+  },
+  "zero_d3_sample": {
+    "boundary_check": "Native Dataset/Predictor exact preprocessing and native Predictor postprocessing, first 2 real images; final record/native eager output exact on every collected image",
+    "coco_canonical_predictions_sha256": "b80acff89d7c1bae2e7a3b7a1fe6994403a80475c34ee9fc9053978f1246eb5e",
+    "conversion": "Recorded final-stage query boxes/probabilities -> native Predictor-compatible argmax/conf>0.001/sort/top300/pixel xywh",
+    "predictions_file_sha256": "e3e654e73bfb81bfad3969e3e4148aa8500ea3a9cc23352a459409d1df137f67",
+    "record_manifest_sha256": "30d22843ce49d5624e4aa5a22680a60cc4268d755287641826070a9babc07f93"
+  }
+}

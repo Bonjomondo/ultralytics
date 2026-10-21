@@ -1,0 +1,149 @@
+{
+  "adapter_capabilities": {
+    "attention": {
+      "reason": "Declared by adapter",
+      "supported": true
+    },
+    "bbox_intervention": {
+      "reason": "Declared by adapter",
+      "supported": true
+    },
+    "deformable_sampling": {
+      "reason": "Declared by adapter",
+      "supported": true
+    },
+    "features": {
+      "reason": "Declared by adapter",
+      "supported": true
+    },
+    "gradient_intervention": {
+      "reason": "PinnedR18NAAdapter does not implement gradient_intervention",
+      "supported": false
+    },
+    "gradients": {
+      "reason": "PinnedR18NAAdapter does not implement gradients",
+      "supported": false
+    },
+    "query_trajectory": {
+      "reason": "Declared by adapter",
+      "supported": true
+    },
+    "reference_intervention": {
+      "reason": "PinnedR18NAAdapter does not implement reference_intervention",
+      "supported": false
+    },
+    "references": {
+      "reason": "Declared by adapter",
+      "supported": true
+    }
+  },
+  "boundary_checks": {
+    "checked_images": 2,
+    "dtype": "float32",
+    "fusion": false,
+    "native_predictor_postprocessing_exact": true,
+    "native_predictor_preprocessing_exact": true,
+    "native_validation_preprocessing_exact": true
+  },
+  "checkpoint_gamma": {
+    "model.23.gamma": -0.010528564453125
+  },
+  "checkpoint_metadata": {
+    "date": "2026-10-21T00:16:04.502682",
+    "epoch": -1,
+    "version": "8.4.30"
+  },
+  "checkpoint_selection": "best.pt and last.pt are byte-identical; training-stripped EMA model, not raw final optimizer weights",
+  "conditions": {
+    "baseline": {
+      "batches": 274,
+      "identity_intervention_passed_all": null,
+      "identity_passed_all": true,
+      "identity_verification": "exact_native_observed_restored",
+      "images": 548,
+      "manifest_sha256": "7bfe115967130c87ae90c2e555382be0acd1fc52066cacca3e33f33060c8d44f",
+      "status": "completed"
+    },
+    "identity_sample": {
+      "batches": 4,
+      "identity_intervention_passed_all": true,
+      "identity_passed_all": true,
+      "identity_verification": "exact_condition_observation_identity_intervention_and_restoration",
+      "images": 8,
+      "manifest_sha256": "03c9099bfbf7abe19a962658bc19c272a0171f10d20802369b0b828ef5cc1877",
+      "status": "completed"
+    },
+    "probe_sample": {
+      "batches": 4,
+      "identity_intervention_passed_all": null,
+      "identity_passed_all": true,
+      "identity_verification": "exact_native_observed_restored",
+      "images": 8,
+      "manifest_sha256": "57d4319f0f79dc04e47bb57898e55c39a115c2d892348bed5ff8a1372eab48fb",
+      "status": "completed"
+    },
+    "zero_d3_sample": {
+      "batches": 4,
+      "identity_intervention_passed_all": true,
+      "identity_passed_all": true,
+      "identity_verification": "exact_condition_observation_identity_intervention_and_restoration",
+      "images": 8,
+      "manifest_sha256": "30d22843ce49d5624e4aa5a22680a60cc4268d755287641826070a9babc07f93",
+      "status": "completed"
+    }
+  },
+  "created_utc": "2026-10-21T06:40:42.695097+00:00",
+  "gt_count": 38759,
+  "hook_inventory_restored": true,
+  "image_count": 548,
+  "initialization": {
+    "amp": false,
+    "gradient_sampling": "first three training batches per epoch; scaled if AMP is enabled",
+    "model_config": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/ultralytics/cfg/models/rt-detr/rtdetr-resnet18-p4-na5.yaml",
+    "seed": 0,
+    "shared_state_items": 533,
+    "shared_state_sha256": "e1c9a8c9f9bb55b33b22a6ddf20386256b675014c21ff419e263405324432d08",
+    "source": "seeded R0 from scratch"
+  },
+  "model_state_sha256": "26e2cf78623420a8ea441eafc1daffeba952a015a783787d002e6727e2c98848",
+  "model_state_unchanged": true,
+  "peak_cuda_allocated_mib": 306.28955078125,
+  "provenance": {
+    "boundary_checks": {
+      "checked_images": 2,
+      "dtype": "float32",
+      "fusion": false,
+      "native_predictor_postprocessing_exact": true,
+      "native_predictor_preprocessing_exact": true,
+      "native_validation_preprocessing_exact": true
+    },
+    "checkpoint": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r1-150e-s0/weights/best.pt",
+    "checkpoint_sha256": "bd3e84698c32771ff49ee9e2d3c02feb968ec4c7aada5e993416a5e12f5b16a9",
+    "gt_sha256": "6f57aa4b42d64ee7b99b8a6a5b159ad19cba2eacf00bd86f23314966614bf4d8",
+    "runtime_scope": "Existing UAV_CV torch 2.1.2; source execution below SDK declared torch>=2.6 packaging target",
+    "sdk_commit": "0c8624a32bde8fbac5cd6a59e6f2a544225b5051",
+    "sdk_dirty": false,
+    "source_commit": "10ce3bdab8030e73561d1ec2315e519289f1c002",
+    "training_epochs_completed": 150
+  },
+  "raw_output": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r1-150e-s0/detrscope_20261021",
+  "runtime": {
+    "conda_prefix": "/home/zjnu/anaconda3/envs/UAV_CV",
+    "cuda": "12.1",
+    "device": "NVIDIA GeForce RTX 4090",
+    "python": "3.11.17 (main, Oct  1 2026, 20:17:42) [GCC 14.3.0]",
+    "python_executable": "/home/zjnu/anaconda3/envs/UAV_CV/bin/python",
+    "torch": "2.1.2+cu121"
+  },
+  "training_last_health": {
+    "epoch": 150,
+    "gamma": -0.011852980591356754,
+    "gamma_grad_abs": 0.01738518290221691,
+    "last_bbox_delta_logit_abs": 0.045935675501823425,
+    "last_bbox_relu_active_ratio": 0.200583815574646,
+    "last_bbox_step_abs": 0.0046195778995752335,
+    "na_qkv_grad_abs": 1.6438186776213115e-06,
+    "train_peak_allocated_mib": 9933.791015625,
+    "train_seconds": 152.86386977601796
+  }
+}

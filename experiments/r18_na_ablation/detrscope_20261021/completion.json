@@ -1,0 +1,13 @@
+{
+  "finished_utc": "2026-10-21T07:01:00.271936+00:00",
+  "offline_replay": {
+    "all_analysis_sha256_equal": true,
+    "analysis_artifacts_compared": 557,
+    "coco_result_exactly_equal": true,
+    "full_dataset_images": 548,
+    "predictions_json_sha256_equal": true,
+    "report.html_sha256_equal": true,
+    "report.md_sha256_equal": true
+  },
+  "status": "completed"
+}

@@ -1,0 +1,73 @@
+image_id,kind,layer_id,query_count,tensor_shapes,l2_norm,mean_attention_entropy,sampling_outside_fraction,measurement
+1,features,,,"{""values"": [256, 40, 40]}",121.3528277042009,,,native_module_output
+1,features,,,"{""values"": [256, 40, 40]}",122.00380384199323,,,native_module_output
+1,attention,1,300,"{""weights"": [300, 8, 3, 4]}",,1.7739860107768073,,reconstructed_from_native_projection_outputs
+1,deformable_sampling,1,300,"{""locations"": [300, 8, 3, 4, 2], ""offsets"": [300, 8, 3, 4, 2], ""reference"": [300, 1, 4], ""spatial_shapes"": [3, 2], ""weights"": [300, 8, 3, 4]}",,1.7739860107768073,0.0009375,reconstructed_from_native_projection_outputs
+1,attention,2,300,"{""weights"": [300, 8, 3, 4]}",,1.8829537239486027,,reconstructed_from_native_projection_outputs
+1,deformable_sampling,2,300,"{""locations"": [300, 8, 3, 4, 2], ""offsets"": [300, 8, 3, 4, 2], ""reference"": [300, 1, 4], ""spatial_shapes"": [3, 2], ""weights"": [300, 8, 3, 4]}",,1.8829537239486027,0.0018055555555555555,reconstructed_from_native_projection_outputs
+1,attention,3,300,"{""weights"": [300, 8, 3, 4]}",,1.9373026927449284,,reconstructed_from_native_projection_outputs
+1,deformable_sampling,3,300,"{""locations"": [300, 8, 3, 4, 2], ""offsets"": [300, 8, 3, 4, 2], ""reference"": [300, 1, 4], ""spatial_shapes"": [3, 2], ""weights"": [300, 8, 3, 4]}",,1.9373026927449284,0.0016319444444444445,reconstructed_from_native_projection_outputs
+1,features,,,"{""values"": [300, 256]}",171.93980747923143,,,native_module_output
+2,features,,,"{""values"": [256, 40, 40]}",144.03625895232756,,,native_module_output
+2,features,,,"{""values"": [256, 40, 40]}",144.54119270629937,,,native_module_output
+2,attention,1,300,"{""weights"": [300, 8, 3, 4]}",,1.7774416595325828,,reconstructed_from_native_projection_outputs
+2,deformable_sampling,1,300,"{""locations"": [300, 8, 3, 4, 2], ""offsets"": [300, 8, 3, 4, 2], ""reference"": [300, 1, 4], ""spatial_shapes"": [3, 2], ""weights"": [300, 8, 3, 4]}",,1.7774416595325828,0.004965277777777778,reconstructed_from_native_projection_outputs
+2,attention,2,300,"{""weights"": [300, 8, 3, 4]}",,1.8851288670640456,,reconstructed_from_native_projection_outputs
+2,deformable_sampling,2,300,"{""locations"": [300, 8, 3, 4, 2], ""offsets"": [300, 8, 3, 4, 2], ""reference"": [300, 1, 4], ""spatial_shapes"": [3, 2], ""weights"": [300, 8, 3, 4]}",,1.8851288670640456,0.007743055555555556,reconstructed_from_native_projection_outputs
+2,attention,3,300,"{""weights"": [300, 8, 3, 4]}",,1.9229452158163303,,reconstructed_from_native_projection_outputs
+2,deformable_sampling,3,300,"{""locations"": [300, 8, 3, 4, 2], ""offsets"": [300, 8, 3, 4, 2], ""reference"": [300, 1, 4], ""spatial_shapes"": [3, 2], ""weights"": [300, 8, 3, 4]}",,1.9229452158163303,0.0067708333333333336,reconstructed_from_native_projection_outputs
+2,features,,,"{""values"": [300, 256]}",171.95806053002337,,,native_module_output
+3,features,,,"{""values"": [256, 40, 40]}",129.6392312592731,,,native_module_output
+3,features,,,"{""values"": [256, 40, 40]}",130.17132508207547,,,native_module_output
+3,attention,1,300,"{""weights"": [300, 8, 3, 4]}",,1.7617209070295992,,reconstructed_from_native_projection_outputs
+3,deformable_sampling,1,300,"{""locations"": [300, 8, 3, 4, 2], ""offsets"": [300, 8, 3, 4, 2], ""reference"": [300, 1, 4], ""spatial_shapes"": [3, 2], ""weights"": [300, 8, 3, 4]}",,1.7617209070295992,0.0004861111111111111,reconstructed_from_native_projection_outputs
+3,attention,2,300,"{""weights"": [300, 8, 3, 4]}",,1.8688247232831559,,reconstructed_from_native_projection_outputs
+3,deformable_sampling,2,300,"{""locations"": [300, 8, 3, 4, 2], ""offsets"": [300, 8, 3, 4, 2], ""reference"": [300, 1, 4], ""spatial_shapes"": [3, 2], ""weights"": [300, 8, 3, 4]}",,1.8688247232831559,0.0008680555555555555,reconstructed_from_native_projection_outputs
+3,attention,3,300,"{""weights"": [300, 8, 3, 4]}",,1.9206239581853553,,reconstructed_from_native_projection_outputs
+3,deformable_sampling,3,300,"{""locations"": [300, 8, 3, 4, 2], ""offsets"": [300, 8, 3, 4, 2], ""reference"": [300, 1, 4], ""spatial_shapes"": [3, 2], ""weights"": [300, 8, 3, 4]}",,1.9206239581853553,0.000625,reconstructed_from_native_projection_outputs
+3,features,,,"{""values"": [300, 256]}",174.5514005708619,,,native_module_output
+4,features,,,"{""values"": [256, 40, 40]}",127.37495127549789,,,native_module_output
+4,features,,,"{""values"": [256, 40, 40]}",127.69498589232695,,,native_module_output
+4,attention,1,300,"{""weights"": [300, 8, 3, 4]}",,1.7745069223485295,,reconstructed_from_native_projection_outputs
+4,deformable_sampling,1,300,"{""locations"": [300, 8, 3, 4, 2], ""offsets"": [300, 8, 3, 4, 2], ""reference"": [300, 1, 4], ""spatial_shapes"": [3, 2], ""weights"": [300, 8, 3, 4]}",,1.7745069223485295,0.0040625,reconstructed_from_native_projection_outputs
+4,attention,2,300,"{""weights"": [300, 8, 3, 4]}",,1.9093105073215555,,reconstructed_from_native_projection_outputs
+4,deformable_sampling,2,300,"{""locations"": [300, 8, 3, 4, 2], ""offsets"": [300, 8, 3, 4, 2], ""reference"": [300, 1, 4], ""spatial_shapes"": [3, 2], ""weights"": [300, 8, 3, 4]}",,1.9093105073215555,0.005069444444444444,reconstructed_from_native_projection_outputs
+4,attention,3,300,"{""weights"": [300, 8, 3, 4]}",,1.9274242024066182,,reconstructed_from_native_projection_outputs
+4,deformable_sampling,3,300,"{""locations"": [300, 8, 3, 4, 2], ""offsets"": [300, 8, 3, 4, 2], ""reference"": [300, 1, 4], ""spatial_shapes"": [3, 2], ""weights"": [300, 8, 3, 4]}",,1.9274242024066182,0.004583333333333333,reconstructed_from_native_projection_outputs
+4,features,,,"{""values"": [300, 256]}",173.0497522394562,,,native_module_output
+5,features,,,"{""values"": [256, 40, 40]}",143.260624599335,,,native_module_output
+5,features,,,"{""values"": [256, 40, 40]}",143.7298139120109,,,native_module_output
+5,attention,1,300,"{""weights"": [300, 8, 3, 4]}",,1.8023596948121334,,reconstructed_from_native_projection_outputs
+5,deformable_sampling,1,300,"{""locations"": [300, 8, 3, 4, 2], ""offsets"": [300, 8, 3, 4, 2], ""reference"": [300, 1, 4], ""spatial_shapes"": [3, 2], ""weights"": [300, 8, 3, 4]}",,1.8023596948121334,0.0027083333333333334,reconstructed_from_native_projection_outputs
+5,attention,2,300,"{""weights"": [300, 8, 3, 4]}",,1.8945537806358326,,reconstructed_from_native_projection_outputs
+5,deformable_sampling,2,300,"{""locations"": [300, 8, 3, 4, 2], ""offsets"": [300, 8, 3, 4, 2], ""reference"": [300, 1, 4], ""spatial_shapes"": [3, 2], ""weights"": [300, 8, 3, 4]}",,1.8945537806358326,0.004895833333333334,reconstructed_from_native_projection_outputs
+5,attention,3,300,"{""weights"": [300, 8, 3, 4]}",,1.8980416109149079,,reconstructed_from_native_projection_outputs
+5,deformable_sampling,3,300,"{""locations"": [300, 8, 3, 4, 2], ""offsets"": [300, 8, 3, 4, 2], ""reference"": [300, 1, 4], ""spatial_shapes"": [3, 2], ""weights"": [300, 8, 3, 4]}",,1.8980416109149079,0.004166666666666667,reconstructed_from_native_projection_outputs
+5,features,,,"{""values"": [300, 256]}",176.5552458096077,,,native_module_output
+6,features,,,"{""values"": [256, 40, 40]}",161.02735653913734,,,native_module_output
+6,features,,,"{""values"": [256, 40, 40]}",161.557956764949,,,native_module_output
+6,attention,1,300,"{""weights"": [300, 8, 3, 4]}",,1.824922895405284,,reconstructed_from_native_projection_outputs
+6,deformable_sampling,1,300,"{""locations"": [300, 8, 3, 4, 2], ""offsets"": [300, 8, 3, 4, 2], ""reference"": [300, 1, 4], ""spatial_shapes"": [3, 2], ""weights"": [300, 8, 3, 4]}",,1.824922895405284,0.0008680555555555555,reconstructed_from_native_projection_outputs
+6,attention,2,300,"{""weights"": [300, 8, 3, 4]}",,1.9213703044756782,,reconstructed_from_native_projection_outputs
+6,deformable_sampling,2,300,"{""locations"": [300, 8, 3, 4, 2], ""offsets"": [300, 8, 3, 4, 2], ""reference"": [300, 1, 4], ""spatial_shapes"": [3, 2], ""weights"": [300, 8, 3, 4]}",,1.9213703044756782,0.0007986111111111112,reconstructed_from_native_projection_outputs
+6,attention,3,300,"{""weights"": [300, 8, 3, 4]}",,1.905279940946238,,reconstructed_from_native_projection_outputs
+6,deformable_sampling,3,300,"{""locations"": [300, 8, 3, 4, 2], ""offsets"": [300, 8, 3, 4, 2], ""reference"": [300, 1, 4], ""spatial_shapes"": [3, 2], ""weights"": [300, 8, 3, 4]}",,1.905279940946238,0.0009375,reconstructed_from_native_projection_outputs
+6,features,,,"{""values"": [300, 256]}",178.46959602456795,,,native_module_output
+7,features,,,"{""values"": [256, 40, 40]}",139.4017694679996,,,native_module_output
+7,features,,,"{""values"": [256, 40, 40]}",139.9615987138076,,,native_module_output
+7,attention,1,300,"{""weights"": [300, 8, 3, 4]}",,1.7623008886074087,,reconstructed_from_native_projection_outputs
+7,deformable_sampling,1,300,"{""locations"": [300, 8, 3, 4, 2], ""offsets"": [300, 8, 3, 4, 2], ""reference"": [300, 1, 4], ""spatial_shapes"": [3, 2], ""weights"": [300, 8, 3, 4]}",,1.7623008886074087,0.0027430555555555554,reconstructed_from_native_projection_outputs
+7,attention,2,300,"{""weights"": [300, 8, 3, 4]}",,1.846216483769376,,reconstructed_from_native_projection_outputs
+7,deformable_sampling,2,300,"{""locations"": [300, 8, 3, 4, 2], ""offsets"": [300, 8, 3, 4, 2], ""reference"": [300, 1, 4], ""spatial_shapes"": [3, 2], ""weights"": [300, 8, 3, 4]}",,1.846216483769376,0.0036458333333333334,reconstructed_from_native_projection_outputs
+7,attention,3,300,"{""weights"": [300, 8, 3, 4]}",,1.8963753365232265,,reconstructed_from_native_projection_outputs
+7,deformable_sampling,3,300,"{""locations"": [300, 8, 3, 4, 2], ""offsets"": [300, 8, 3, 4, 2], ""reference"": [300, 1, 4], ""spatial_shapes"": [3, 2], ""weights"": [300, 8, 3, 4]}",,1.8963753365232265,0.003715277777777778,reconstructed_from_native_projection_outputs
+7,features,,,"{""values"": [300, 256]}",173.43118746683405,,,native_module_output
+8,features,,,"{""values"": [256, 40, 40]}",127.34064893930739,,,native_module_output
+8,features,,,"{""values"": [256, 40, 40]}",127.62684803525825,,,native_module_output
+8,attention,1,300,"{""weights"": [300, 8, 3, 4]}",,1.7594817861916487,,reconstructed_from_native_projection_outputs
+8,deformable_sampling,1,300,"{""locations"": [300, 8, 3, 4, 2], ""offsets"": [300, 8, 3, 4, 2], ""reference"": [300, 1, 4], ""spatial_shapes"": [3, 2], ""weights"": [300, 8, 3, 4]}",,1.7594817861916487,0.002013888888888889,reconstructed_from_native_projection_outputs
+8,attention,2,300,"{""weights"": [300, 8, 3, 4]}",,1.8714831684071684,,reconstructed_from_native_projection_outputs
+8,deformable_sampling,2,300,"{""locations"": [300, 8, 3, 4, 2], ""offsets"": [300, 8, 3, 4, 2], ""reference"": [300, 1, 4], ""spatial_shapes"": [3, 2], ""weights"": [300, 8, 3, 4]}",,1.8714831684071684,0.0030555555555555557,reconstructed_from_native_projection_outputs
+8,attention,3,300,"{""weights"": [300, 8, 3, 4]}",,1.916702302848645,,reconstructed_from_native_projection_outputs
+8,deformable_sampling,3,300,"{""locations"": [300, 8, 3, 4, 2], ""offsets"": [300, 8, 3, 4, 2], ""reference"": [300, 1, 4], ""spatial_shapes"": [3, 2], ""weights"": [300, 8, 3, 4]}",,1.916702302848645,0.0033333333333333335,reconstructed_from_native_projection_outputs
+8,features,,,"{""values"": [300, 256]}",168.4236143953327,,,native_module_output

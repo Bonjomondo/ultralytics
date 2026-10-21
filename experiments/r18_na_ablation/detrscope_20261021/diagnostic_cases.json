@@ -1,0 +1,1745 @@
+{
+  "cases": [
+    {
+      "event": {
+        "class_id": 9,
+        "classification_drop": true,
+        "classification_gain": false,
+        "delta_iou": -0.0057021023616177224,
+        "delta_score": -0.0387689471244812,
+        "family": "gt_object",
+        "gt_id": 6,
+        "image_id": 1,
+        "joint_drop": false,
+        "joint_gain": false,
+        "layer_from": 2,
+        "layer_to": 3,
+        "localization_drop": false,
+        "localization_gain": false,
+        "object_size": "medium",
+        "persistent_degradation": true,
+        "query_id": null,
+        "query_id_from": 54,
+        "query_id_to": 54,
+        "query_switch": false,
+        "recovery": {
+          "classification": {
+            "baseline_layer": 2,
+            "final_layer": 3,
+            "recovered_at_layer": null,
+            "recovered_then_relapsed": false,
+            "status": "persistent_degradation"
+          }
+        },
+        "temporary_degradation": false,
+        "transition": "D2->D3"
+      },
+      "trajectory": {
+        "class_id": 9,
+        "first_classification_drop": "D2->D3",
+        "first_localization_drop": null,
+        "gt_bbox": [
+          0.228125,
+          0.8740740740740741,
+          0.025,
+          0.04259259259259259
+        ],
+        "gt_id": 6,
+        "image_id": 1,
+        "object_area": 2208.0,
+        "object_size": "medium",
+        "points": [
+          {
+            "bbox": [
+              0.22923220694065094,
+              0.8781519532203674,
+              0.027110151946544647,
+              0.03885112330317497
+            ],
+            "gt_class_score": 0.4728672206401825,
+            "gt_id": 6,
+            "iou": 0.7593655658597902,
+            "layer_id": 1,
+            "naturally_matched": true,
+            "predicted_class": 9,
+            "predicted_class_score": 0.4728672206401825,
+            "query_id": 54,
+            "query_switch": false,
+            "reason": null,
+            "reference_in": [
+              0.22918586432933807,
+              0.8795057535171509,
+              0.02616204507648945,
+              0.03799169883131981
+            ],
+            "reference_out": [
+              0.22923220694065094,
+              0.8781519532203674,
+              0.027110151946544647,
+              0.03885112330317497
+            ],
+            "valid": true
+          },
+          {
+            "bbox": [
+              0.2290763109922409,
+              0.8786908984184265,
+              0.02695833332836628,
+              0.03701876848936081
+            ],
+            "gt_class_score": 0.5186125636100769,
+            "gt_id": 6,
+            "iou": 0.7435997393029855,
+            "layer_id": 2,
+            "naturally_matched": true,
+            "predicted_class": 9,
+            "predicted_class_score": 0.5186125636100769,
+            "query_id": 54,
+            "query_switch": false,
+            "reason": null,
+            "reference_in": [
+              0.22923220694065094,
+              0.8781519532203674,
+              0.027110151946544647,
+              0.03885112330317497
+            ],
+            "reference_out": [
+              0.2290763109922409,
+              0.8786908984184265,
+              0.02695833332836628,
+              0.03701876848936081
+            ],
+            "valid": true
+          },
+          {
+            "bbox": [
+              0.22932475805282593,
+              0.8785386085510254,
+              0.02686913125216961,
+              0.03731203451752663
+            ],
+            "gt_class_score": 0.4798436164855957,
+            "gt_id": 6,
+            "iou": 0.7378976369413678,
+            "layer_id": 3,
+            "naturally_matched": true,
+            "predicted_class": 9,
+            "predicted_class_score": 0.4798436164855957,
+            "query_id": 54,
+            "query_switch": false,
+            "reason": null,
+            "reference_in": [
+              0.2290763109922409,
+              0.8786908984184265,
+              0.02695833332836628,
+              0.03701876848936081
+            ],
+            "reference_out": [
+              0.22932475805282593,
+              0.8785386085510254,
+              0.02686913125216961,
+              0.03731203451752663
+            ],
+            "valid": true
+          }
+        ]
+      }
+    },
+    {
+      "event": {
+        "class_id": 3,
+        "classification_drop": false,
+        "classification_gain": false,
+        "delta_iou": -0.02061387371807999,
+        "delta_score": 0.001045525074005127,
+        "family": "gt_object",
+        "gt_id": 128,
+        "image_id": 2,
+        "joint_drop": false,
+        "joint_gain": false,
+        "layer_from": 2,
+        "layer_to": 3,
+        "localization_drop": true,
+        "localization_gain": false,
+        "object_size": "medium",
+        "persistent_degradation": true,
+        "query_id": null,
+        "query_id_from": 5,
+        "query_id_to": 5,
+        "query_switch": false,
+        "recovery": {
+          "localization": {
+            "baseline_layer": 2,
+            "final_layer": 3,
+            "recovered_at_layer": null,
+            "recovered_then_relapsed": false,
+            "status": "persistent_degradation"
+          }
+        },
+        "temporary_degradation": false,
+        "transition": "D2->D3"
+      },
+      "trajectory": {
+        "class_id": 3,
+        "first_classification_drop": null,
+        "first_localization_drop": "D2->D3",
+        "gt_bbox": [
+          0.50390625,
+          0.35833333333333334,
+          0.0234375,
+          0.06296296296296296
+        ],
+        "gt_id": 128,
+        "image_id": 2,
+        "object_area": 3060.0,
+        "object_size": "medium",
+        "points": [
+          {
+            "bbox": [
+              0.5047585368156433,
+              0.3584217131137848,
+              0.023222124204039574,
+              0.06060178577899933
+            ],
+            "gt_class_score": 0.8536617755889893,
+            "gt_id": 128,
+            "iou": 0.8956875527367861,
+            "layer_id": 1,
+            "naturally_matched": true,
+            "predicted_class": 3,
+            "predicted_class_score": 0.8536617755889893,
+            "query_id": 5,
+            "query_switch": false,
+            "reason": null,
+            "reference_in": [
+              0.5049669146537781,
+              0.35746556520462036,
+              0.023188957944512367,
+              0.06133876368403435
+            ],
+            "reference_out": [
+              0.5047585368156433,
+              0.3584217131137848,
+              0.023222124204039574,
+              0.06060178577899933
+            ],
+            "valid": true
+          },
+          {
+            "bbox": [
+              0.5047795176506042,
+              0.35869094729423523,
+              0.02306077443063259,
+              0.059860121458768845
+            ],
+            "gt_class_score": 0.8724834322929382,
+            "gt_id": 128,
+            "iou": 0.8831202683345742,
+            "layer_id": 2,
+            "naturally_matched": true,
+            "predicted_class": 3,
+            "predicted_class_score": 0.8724834322929382,
+            "query_id": 5,
+            "query_switch": false,
+            "reason": null,
+            "reference_in": [
+              0.5047585368156433,
+              0.3584217131137848,
+              0.023222124204039574,
+              0.06060178577899933
+            ],
+            "reference_out": [
+              0.5047795176506042,
+              0.35869094729423523,
+              0.02306077443063259,
+              0.059860121458768845
+            ],
+            "valid": true
+          },
+          {
+            "bbox": [
+              0.5049871206283569,
+              0.3588099181652069,
+              0.022902922704815865,
+              0.05951086804270744
+            ],
+            "gt_class_score": 0.8735289573669434,
+            "gt_id": 128,
+            "iou": 0.8625063946164943,
+            "layer_id": 3,
+            "naturally_matched": true,
+            "predicted_class": 3,
+            "predicted_class_score": 0.8735289573669434,
+            "query_id": 5,
+            "query_switch": false,
+            "reason": null,
+            "reference_in": [
+              0.5047795176506042,
+              0.35869094729423523,
+              0.02306077443063259,
+              0.059860121458768845
+            ],
+            "reference_out": [
+              0.5049871206283569,
+              0.3588099181652069,
+              0.022902922704815865,
+              0.05951086804270744
+            ],
+            "valid": true
+          }
+        ]
+      }
+    },
+    {
+      "event": {
+        "class_id": 0,
+        "classification_drop": false,
+        "classification_gain": true,
+        "delta_iou": -0.02044696328584117,
+        "delta_score": 0.10171407461166382,
+        "family": "gt_object",
+        "gt_id": 208,
+        "image_id": 3,
+        "joint_drop": false,
+        "joint_gain": false,
+        "layer_from": 2,
+        "layer_to": 3,
+        "localization_drop": true,
+        "localization_gain": false,
+        "object_size": "medium",
+        "persistent_degradation": true,
+        "query_id": null,
+        "query_id_from": 107,
+        "query_id_to": 107,
+        "query_switch": false,
+        "recovery": {
+          "localization": {
+            "baseline_layer": 2,
+            "final_layer": 3,
+            "recovered_at_layer": null,
+            "recovered_then_relapsed": false,
+            "status": "persistent_degradation"
+          }
+        },
+        "temporary_degradation": false,
+        "transition": "D2->D3"
+      },
+      "trajectory": {
+        "class_id": 0,
+        "first_classification_drop": null,
+        "first_localization_drop": "D2->D3",
+        "gt_bbox": [
+          0.534375,
+          0.8101851851851852,
+          0.014583333333333334,
+          0.04814814814814815
+        ],
+        "gt_id": 208,
+        "image_id": 3,
+        "object_area": 1456.0,
+        "object_size": "medium",
+        "points": [
+          {
+            "bbox": [
+              0.5339861512184143,
+              0.8107627630233765,
+              0.012731844559311867,
+              0.05125539377331734
+            ],
+            "gt_class_score": 0.5160903930664062,
+            "gt_id": 208,
+            "iou": 0.8264756641622517,
+            "layer_id": 1,
+            "naturally_matched": true,
+            "predicted_class": 0,
+            "predicted_class_score": 0.5160903930664062,
+            "query_id": 107,
+            "query_switch": false,
+            "reason": null,
+            "reference_in": [
+              0.5341431498527527,
+              0.8145009279251099,
+              0.01302778534591198,
+              0.04605608060956001
+            ],
+            "reference_out": [
+              0.5339861512184143,
+              0.8107627630233765,
+              0.012731844559311867,
+              0.05125539377331734
+            ],
+            "valid": true
+          },
+          {
+            "bbox": [
+              0.5337093472480774,
+              0.8107574582099915,
+              0.012129450216889381,
+              0.049931611865758896
+            ],
+            "gt_class_score": 0.587873637676239,
+            "gt_id": 208,
+            "iou": 0.8068752031715569,
+            "layer_id": 2,
+            "naturally_matched": true,
+            "predicted_class": 0,
+            "predicted_class_score": 0.587873637676239,
+            "query_id": 107,
+            "query_switch": false,
+            "reason": null,
+            "reference_in": [
+              0.5339861512184143,
+              0.8107627630233765,
+              0.012731844559311867,
+              0.05125539377331734
+            ],
+            "reference_out": [
+              0.5337093472480774,
+              0.8107574582099915,
+              0.012129450216889381,
+              0.049931611865758896
+            ],
+            "valid": true
+          },
+          {
+            "bbox": [
+              0.533628523349762,
+              0.810969352722168,
+              0.01181741338223219,
+              0.04995453357696533
+            ],
+            "gt_class_score": 0.6895877122879028,
+            "gt_id": 208,
+            "iou": 0.7864282398857158,
+            "layer_id": 3,
+            "naturally_matched": true,
+            "predicted_class": 0,
+            "predicted_class_score": 0.6895877122879028,
+            "query_id": 107,
+            "query_switch": false,
+            "reason": null,
+            "reference_in": [
+              0.5337093472480774,
+              0.8107574582099915,
+              0.012129450216889381,
+              0.049931611865758896
+            ],
+            "reference_out": [
+              0.533628523349762,
+              0.810969352722168,
+              0.01181741338223219,
+              0.04995453357696533
+            ],
+            "valid": true
+          }
+        ]
+      }
+    },
+    {
+      "event": {
+        "class_id": 9,
+        "classification_drop": false,
+        "classification_gain": true,
+        "delta_iou": -0.038363464373729395,
+        "delta_score": 0.058713674545288086,
+        "family": "gt_object",
+        "gt_id": 258,
+        "image_id": 4,
+        "joint_drop": false,
+        "joint_gain": false,
+        "layer_from": 2,
+        "layer_to": 3,
+        "localization_drop": true,
+        "localization_gain": false,
+        "object_size": "medium",
+        "persistent_degradation": true,
+        "query_id": null,
+        "query_id_from": 72,
+        "query_id_to": 84,
+        "query_switch": true,
+        "recovery": {
+          "localization": {
+            "baseline_layer": 2,
+            "final_layer": 3,
+            "recovered_at_layer": null,
+            "recovered_then_relapsed": false,
+            "status": "persistent_degradation"
+          }
+        },
+        "temporary_degradation": false,
+        "transition": "D2->D3"
+      },
+      "trajectory": {
+        "class_id": 9,
+        "first_classification_drop": null,
+        "first_localization_drop": "D2->D3",
+        "gt_bbox": [
+          0.44869791666666664,
+          0.8708333333333333,
+          0.011979166666666667,
+          0.058333333333333334
+        ],
+        "gt_id": 258,
+        "image_id": 4,
+        "object_area": 1449.0,
+        "object_size": "medium",
+        "points": [
+          {
+            "bbox": [
+              0.44930899143218994,
+              0.8716490864753723,
+              0.013564369641244411,
+              0.05927153304219246
+            ],
+            "gt_class_score": 0.6090889573097229,
+            "gt_id": 258,
+            "iou": 0.8595510741600154,
+            "layer_id": 1,
+            "naturally_matched": true,
+            "predicted_class": 9,
+            "predicted_class_score": 0.6090889573097229,
+            "query_id": 84,
+            "query_switch": false,
+            "reason": null,
+            "reference_in": [
+              0.45011502504348755,
+              0.8746999502182007,
+              0.01232208963483572,
+              0.05548453703522682
+            ],
+            "reference_out": [
+              0.44930899143218994,
+              0.8716490864753723,
+              0.013564369641244411,
+              0.05927153304219246
+            ],
+            "valid": true
+          },
+          {
+            "bbox": [
+              0.4489821493625641,
+              0.8712642788887024,
+              0.013332026079297066,
+              0.06006959080696106
+            ],
+            "gt_class_score": 0.6164442300796509,
+            "gt_id": 258,
+            "iou": 0.8725545212285727,
+            "layer_id": 2,
+            "naturally_matched": true,
+            "predicted_class": 9,
+            "predicted_class_score": 0.6164442300796509,
+            "query_id": 72,
+            "query_switch": true,
+            "reason": null,
+            "reference_in": [
+              0.44925549626350403,
+              0.8721393942832947,
+              0.013630730099976063,
+              0.06054187938570976
+            ],
+            "reference_out": [
+              0.4489821493625641,
+              0.8712642788887024,
+              0.013332026079297066,
+              0.06006959080696106
+            ],
+            "valid": true
+          },
+          {
+            "bbox": [
+              0.4487749934196472,
+              0.870453953742981,
+              0.013893229886889458,
+              0.060294076800346375
+            ],
+            "gt_class_score": 0.675157904624939,
+            "gt_id": 258,
+            "iou": 0.8341910568548433,
+            "layer_id": 3,
+            "naturally_matched": true,
+            "predicted_class": 9,
+            "predicted_class_score": 0.675157904624939,
+            "query_id": 84,
+            "query_switch": true,
+            "reason": null,
+            "reference_in": [
+              0.44907790422439575,
+              0.871842086315155,
+              0.01346647646278143,
+              0.05902164801955223
+            ],
+            "reference_out": [
+              0.4487749934196472,
+              0.870453953742981,
+              0.013893229886889458,
+              0.060294076800346375
+            ],
+            "valid": true
+          }
+        ]
+      }
+    },
+    {
+      "event": {
+        "class_id": 3,
+        "classification_drop": true,
+        "classification_gain": false,
+        "delta_iou": -0.007643018571790394,
+        "delta_score": -0.028231322765350342,
+        "family": "gt_object",
+        "gt_id": 392,
+        "image_id": 5,
+        "joint_drop": false,
+        "joint_gain": false,
+        "layer_from": 2,
+        "layer_to": 3,
+        "localization_drop": false,
+        "localization_gain": false,
+        "object_size": "medium",
+        "persistent_degradation": true,
+        "query_id": null,
+        "query_id_from": 34,
+        "query_id_to": 34,
+        "query_switch": false,
+        "recovery": {
+          "classification": {
+            "baseline_layer": 2,
+            "final_layer": 3,
+            "recovered_at_layer": null,
+            "recovered_then_relapsed": false,
+            "status": "persistent_degradation"
+          }
+        },
+        "temporary_degradation": false,
+        "transition": "D2->D3"
+      },
+      "trajectory": {
+        "class_id": 3,
+        "first_classification_drop": "D2->D3",
+        "first_localization_drop": null,
+        "gt_bbox": [
+          0.5393229166666667,
+          0.21296296296296297,
+          0.027604166666666666,
+          0.037037037037037035
+        ],
+        "gt_id": 392,
+        "image_id": 5,
+        "object_area": 2120.0,
+        "object_size": "medium",
+        "points": [
+          {
+            "bbox": [
+              0.5386261343955994,
+              0.21065230667591095,
+              0.02771236188709736,
+              0.03965986147522926
+            ],
+            "gt_class_score": 0.8447982668876648,
+            "gt_id": 392,
+            "iou": 0.8450353104459921,
+            "layer_id": 1,
+            "naturally_matched": true,
+            "predicted_class": 3,
+            "predicted_class_score": 0.8447982668876648,
+            "query_id": 34,
+            "query_switch": false,
+            "reason": null,
+            "reference_in": [
+              0.538985550403595,
+              0.21057920157909393,
+              0.028093693777918816,
+              0.040654826909303665
+            ],
+            "reference_out": [
+              0.5386261343955994,
+              0.21065230667591095,
+              0.02771236188709736,
+              0.03965986147522926
+            ],
+            "valid": true
+          },
+          {
+            "bbox": [
+              0.5384983420372009,
+              0.21078188717365265,
+              0.027502166107296944,
+              0.03852331265807152
+            ],
+            "gt_class_score": 0.8660412430763245,
+            "gt_id": 392,
+            "iou": 0.8417963245060982,
+            "layer_id": 2,
+            "naturally_matched": true,
+            "predicted_class": 3,
+            "predicted_class_score": 0.8660412430763245,
+            "query_id": 34,
+            "query_switch": false,
+            "reason": null,
+            "reference_in": [
+              0.5386261343955994,
+              0.21065230667591095,
+              0.02771236188709736,
+              0.03965986147522926
+            ],
+            "reference_out": [
+              0.5384983420372009,
+              0.21078188717365265,
+              0.027502166107296944,
+              0.03852331265807152
+            ],
+            "valid": true
+          },
+          {
+            "bbox": [
+              0.5383440256118774,
+              0.21081627905368805,
+              0.027547132223844528,
+              0.03833644092082977
+            ],
+            "gt_class_score": 0.8378099203109741,
+            "gt_id": 392,
+            "iou": 0.8341533059343078,
+            "layer_id": 3,
+            "naturally_matched": true,
+            "predicted_class": 3,
+            "predicted_class_score": 0.8378099203109741,
+            "query_id": 34,
+            "query_switch": false,
+            "reason": null,
+            "reference_in": [
+              0.5384983420372009,
+              0.21078188717365265,
+              0.027502166107296944,
+              0.03852331265807152
+            ],
+            "reference_out": [
+              0.5383440256118774,
+              0.21081627905368805,
+              0.027547132223844528,
+              0.03833644092082977
+            ],
+            "valid": true
+          }
+        ]
+      }
+    },
+    {
+      "event": {
+        "class_id": 3,
+        "classification_drop": false,
+        "classification_gain": false,
+        "delta_iou": -0.039064572256686136,
+        "delta_score": 0.004037201404571533,
+        "family": "gt_object",
+        "gt_id": 481,
+        "image_id": 6,
+        "joint_drop": false,
+        "joint_gain": false,
+        "layer_from": 2,
+        "layer_to": 3,
+        "localization_drop": true,
+        "localization_gain": false,
+        "object_size": "large",
+        "persistent_degradation": true,
+        "query_id": null,
+        "query_id_from": 128,
+        "query_id_to": 128,
+        "query_switch": false,
+        "recovery": {
+          "localization": {
+            "baseline_layer": 2,
+            "final_layer": 3,
+            "recovered_at_layer": null,
+            "recovered_then_relapsed": false,
+            "status": "persistent_degradation"
+          }
+        },
+        "temporary_degradation": false,
+        "transition": "D2->D3"
+      },
+      "trajectory": {
+        "class_id": 3,
+        "first_classification_drop": null,
+        "first_localization_drop": "D2->D3",
+        "gt_bbox": [
+          0.19609375,
+          0.9490740740740741,
+          0.0765625,
+          0.10185185185185185
+        ],
+        "gt_id": 481,
+        "image_id": 6,
+        "object_area": 16170.0,
+        "object_size": "large",
+        "points": [
+          {
+            "bbox": [
+              0.1964251846075058,
+              0.9494123458862305,
+              0.08239995688199997,
+              0.10241308063268661
+            ],
+            "gt_class_score": 0.10593722015619278,
+            "gt_id": 481,
+            "iou": 0.9230592507675928,
+            "layer_id": 1,
+            "naturally_matched": true,
+            "predicted_class": 4,
+            "predicted_class_score": 0.6229608058929443,
+            "query_id": 128,
+            "query_switch": false,
+            "reason": null,
+            "reference_in": [
+              0.1982700079679489,
+              0.9529362320899963,
+              0.08201222121715546,
+              0.10187830775976181
+            ],
+            "reference_out": [
+              0.1964251846075058,
+              0.9494123458862305,
+              0.08239995688199997,
+              0.10241308063268661
+            ],
+            "valid": true
+          },
+          {
+            "bbox": [
+              0.1959163397550583,
+              0.9496955871582031,
+              0.08225338906049728,
+              0.10072152316570282
+            ],
+            "gt_class_score": 0.30382397770881653,
+            "gt_id": 481,
+            "iou": 0.9202004795041234,
+            "layer_id": 2,
+            "naturally_matched": true,
+            "predicted_class": 4,
+            "predicted_class_score": 0.6911200284957886,
+            "query_id": 128,
+            "query_switch": false,
+            "reason": null,
+            "reference_in": [
+              0.1964251846075058,
+              0.9494123458862305,
+              0.08239995688199997,
+              0.10241308063268661
+            ],
+            "reference_out": [
+              0.1959163397550583,
+              0.9496955871582031,
+              0.08225338906049728,
+              0.10072152316570282
+            ],
+            "valid": true
+          },
+          {
+            "bbox": [
+              0.19425465166568756,
+              0.9497308731079102,
+              0.08585327863693237,
+              0.10144124925136566
+            ],
+            "gt_class_score": 0.30786117911338806,
+            "gt_id": 481,
+            "iou": 0.8811359072474373,
+            "layer_id": 3,
+            "naturally_matched": true,
+            "predicted_class": 4,
+            "predicted_class_score": 0.8102529048919678,
+            "query_id": 128,
+            "query_switch": false,
+            "reason": null,
+            "reference_in": [
+              0.1959163397550583,
+              0.9496955871582031,
+              0.08225338906049728,
+              0.10072152316570282
+            ],
+            "reference_out": [
+              0.19425465166568756,
+              0.9497308731079102,
+              0.08585327863693237,
+              0.10144124925136566
+            ],
+            "valid": true
+          }
+        ]
+      }
+    },
+    {
+      "event": {
+        "class_id": 0,
+        "classification_drop": true,
+        "classification_gain": false,
+        "delta_iou": 0.0,
+        "delta_score": -0.04345345497131348,
+        "family": "gt_object",
+        "gt_id": 623,
+        "image_id": 7,
+        "joint_drop": false,
+        "joint_gain": false,
+        "layer_from": 2,
+        "layer_to": 3,
+        "localization_drop": false,
+        "localization_gain": false,
+        "object_size": "small",
+        "persistent_degradation": true,
+        "query_id": null,
+        "query_id_from": 130,
+        "query_id_to": 51,
+        "query_switch": true,
+        "recovery": {
+          "classification": {
+            "baseline_layer": 2,
+            "final_layer": 3,
+            "recovered_at_layer": null,
+            "recovered_then_relapsed": false,
+            "status": "persistent_degradation"
+          }
+        },
+        "temporary_degradation": false,
+        "transition": "D2->D3"
+      },
+      "trajectory": {
+        "class_id": 0,
+        "first_classification_drop": "D2->D3",
+        "first_localization_drop": null,
+        "gt_bbox": [
+          0.5010416666666667,
+          0.03796296296296296,
+          0.005208333333333333,
+          0.020370370370370372
+        ],
+        "gt_id": 623,
+        "image_id": 7,
+        "object_area": 220.0,
+        "object_size": "small",
+        "points": [
+          {
+            "bbox": [
+              0.30695757269859314,
+              0.16861094534397125,
+              0.006618777755647898,
+              0.0254190843552351
+            ],
+            "gt_class_score": 0.5958899259567261,
+            "gt_id": 623,
+            "iou": 0.0,
+            "layer_id": 1,
+            "naturally_matched": true,
+            "predicted_class": 0,
+            "predicted_class_score": 0.5958899259567261,
+            "query_id": 51,
+            "query_switch": false,
+            "reason": null,
+            "reference_in": [
+              0.30696550011634827,
+              0.16866502165794373,
+              0.006514177657663822,
+              0.025184499099850655
+            ],
+            "reference_out": [
+              0.30695757269859314,
+              0.16861094534397125,
+              0.006618777755647898,
+              0.0254190843552351
+            ],
+            "valid": true
+          },
+          {
+            "bbox": [
+              0.4364452064037323,
+              0.5787506103515625,
+              0.01113612949848175,
+              0.03802957013249397
+            ],
+            "gt_class_score": 0.6886585354804993,
+            "gt_id": 623,
+            "iou": 0.0,
+            "layer_id": 2,
+            "naturally_matched": true,
+            "predicted_class": 0,
+            "predicted_class_score": 0.6886585354804993,
+            "query_id": 130,
+            "query_switch": true,
+            "reason": null,
+            "reference_in": [
+              0.4366165101528168,
+              0.5787738561630249,
+              0.01080089807510376,
+              0.037403762340545654
+            ],
+            "reference_out": [
+              0.4364452064037323,
+              0.5787506103515625,
+              0.01113612949848175,
+              0.03802957013249397
+            ],
+            "valid": true
+          },
+          {
+            "bbox": [
+              0.3069402873516083,
+              0.16850093007087708,
+              0.0064698318019509315,
+              0.02644990012049675
+            ],
+            "gt_class_score": 0.6452050805091858,
+            "gt_id": 623,
+            "iou": 0.0,
+            "layer_id": 3,
+            "naturally_matched": true,
+            "predicted_class": 0,
+            "predicted_class_score": 0.6452050805091858,
+            "query_id": 51,
+            "query_switch": true,
+            "reason": null,
+            "reference_in": [
+              0.3069491982460022,
+              0.16883236169815063,
+              0.006475093308836222,
+              0.025699591264128685
+            ],
+            "reference_out": [
+              0.3069402873516083,
+              0.16850093007087708,
+              0.0064698318019509315,
+              0.02644990012049675
+            ],
+            "valid": true
+          }
+        ]
+      }
+    },
+    {
+      "event": {
+        "class_id": 0,
+        "classification_drop": true,
+        "classification_gain": false,
+        "delta_iou": 0.04273015536657532,
+        "delta_score": -0.034608036279678345,
+        "family": "gt_object",
+        "gt_id": 736,
+        "image_id": 8,
+        "joint_drop": false,
+        "joint_gain": false,
+        "layer_from": 2,
+        "layer_to": 3,
+        "localization_drop": false,
+        "localization_gain": true,
+        "object_size": "small",
+        "persistent_degradation": true,
+        "query_id": null,
+        "query_id_from": 265,
+        "query_id_to": 265,
+        "query_switch": false,
+        "recovery": {
+          "classification": {
+            "baseline_layer": 2,
+            "final_layer": 3,
+            "recovered_at_layer": null,
+            "recovered_then_relapsed": false,
+            "status": "persistent_degradation"
+          }
+        },
+        "temporary_degradation": false,
+        "transition": "D2->D3"
+      },
+      "trajectory": {
+        "class_id": 0,
+        "first_classification_drop": "D2->D3",
+        "first_localization_drop": "D1->D2",
+        "gt_bbox": [
+          0.06848958333333334,
+          0.5111111111111111,
+          0.008854166666666666,
+          0.040740740740740744
+        ],
+        "gt_id": 736,
+        "image_id": 8,
+        "object_area": 748.0,
+        "object_size": "small",
+        "points": [
+          {
+            "bbox": [
+              0.06890260428190231,
+              0.5126748085021973,
+              0.01052800752222538,
+              0.04006919637322426
+            ],
+            "gt_class_score": 0.3170071244239807,
+            "gt_id": 736,
+            "iou": 0.7839820911263806,
+            "layer_id": 1,
+            "naturally_matched": true,
+            "predicted_class": 0,
+            "predicted_class_score": 0.3170071244239807,
+            "query_id": 265,
+            "query_switch": false,
+            "reason": null,
+            "reference_in": [
+              0.06872270256280899,
+              0.5140836834907532,
+              0.00988795142620802,
+              0.03537587821483612
+            ],
+            "reference_out": [
+              0.06890260428190231,
+              0.5126748085021973,
+              0.01052800752222538,
+              0.04006919637322426
+            ],
+            "valid": true
+          },
+          {
+            "bbox": [
+              0.06873315572738647,
+              0.5134540796279907,
+              0.010950391180813313,
+              0.04085594415664673
+            ],
+            "gt_class_score": 0.4049973487854004,
+            "gt_id": 736,
+            "iou": 0.7281289864047066,
+            "layer_id": 2,
+            "naturally_matched": true,
+            "predicted_class": 0,
+            "predicted_class_score": 0.4049973487854004,
+            "query_id": 265,
+            "query_switch": false,
+            "reason": null,
+            "reference_in": [
+              0.06890260428190231,
+              0.5126748085021973,
+              0.01052800752222538,
+              0.04006919637322426
+            ],
+            "reference_out": [
+              0.06873315572738647,
+              0.5134540796279907,
+              0.010950391180813313,
+              0.04085594415664673
+            ],
+            "valid": true
+          },
+          {
+            "bbox": [
+              0.06868413835763931,
+              0.5123145580291748,
+              0.010875011794269085,
+              0.04133351147174835
+            ],
+            "gt_class_score": 0.37038931250572205,
+            "gt_id": 736,
+            "iou": 0.7708591417712819,
+            "layer_id": 3,
+            "naturally_matched": true,
+            "predicted_class": 0,
+            "predicted_class_score": 0.37038931250572205,
+            "query_id": 265,
+            "query_switch": false,
+            "reason": null,
+            "reference_in": [
+              0.06873315572738647,
+              0.5134540796279907,
+              0.010950391180813313,
+              0.04085594415664673
+            ],
+            "reference_out": [
+              0.06868413835763931,
+              0.5123145580291748,
+              0.010875011794269085,
+              0.04133351147174835
+            ],
+            "valid": true
+          }
+        ]
+      }
+    },
+    {
+      "event": {
+        "class_id": 0,
+        "classification_drop": true,
+        "classification_gain": false,
+        "delta_iou": 0.007335533101457514,
+        "delta_score": -0.03195001184940338,
+        "family": "gt_object",
+        "gt_id": 873,
+        "image_id": 9,
+        "joint_drop": false,
+        "joint_gain": false,
+        "layer_from": 2,
+        "layer_to": 3,
+        "localization_drop": false,
+        "localization_gain": false,
+        "object_size": "medium",
+        "persistent_degradation": true,
+        "query_id": null,
+        "query_id_from": 101,
+        "query_id_to": 101,
+        "query_switch": false,
+        "recovery": {
+          "classification": {
+            "baseline_layer": 2,
+            "final_layer": 3,
+            "recovered_at_layer": null,
+            "recovered_then_relapsed": false,
+            "status": "persistent_degradation"
+          }
+        },
+        "temporary_degradation": false,
+        "transition": "D2->D3"
+      },
+      "trajectory": {
+        "class_id": 0,
+        "first_classification_drop": "D2->D3",
+        "first_localization_drop": "D1->D2",
+        "gt_bbox": [
+          0.10416666666666667,
+          0.937037037037037,
+          0.026041666666666668,
+          0.044444444444444446
+        ],
+        "gt_id": 873,
+        "image_id": 9,
+        "object_area": 2400.0,
+        "object_size": "medium",
+        "points": [
+          {
+            "bbox": [
+              0.10426094383001328,
+              0.9329751133918762,
+              0.024139659479260445,
+              0.051044028252363205
+            ],
+            "gt_class_score": 0.17937946319580078,
+            "gt_id": 873,
+            "iou": 0.7898007289610167,
+            "layer_id": 1,
+            "naturally_matched": true,
+            "predicted_class": 9,
+            "predicted_class_score": 0.4067173898220062,
+            "query_id": 101,
+            "query_switch": false,
+            "reason": null,
+            "reference_in": [
+              0.10422473400831223,
+              0.934388279914856,
+              0.023067424073815346,
+              0.04950306564569473
+            ],
+            "reference_out": [
+              0.10426094383001328,
+              0.9329751133918762,
+              0.024139659479260445,
+              0.051044028252363205
+            ],
+            "valid": true
+          },
+          {
+            "bbox": [
+              0.10469450801610947,
+              0.9313374161720276,
+              0.02448485977947712,
+              0.052838847041130066
+            ],
+            "gt_class_score": 0.16653381288051605,
+            "gt_id": 873,
+            "iou": 0.7511660644283831,
+            "layer_id": 2,
+            "naturally_matched": true,
+            "predicted_class": 9,
+            "predicted_class_score": 0.4290142357349396,
+            "query_id": 101,
+            "query_switch": false,
+            "reason": null,
+            "reference_in": [
+              0.10426094383001328,
+              0.9329751133918762,
+              0.024139659479260445,
+              0.051044028252363205
+            ],
+            "reference_out": [
+              0.10469450801610947,
+              0.9313374161720276,
+              0.02448485977947712,
+              0.052838847041130066
+            ],
+            "valid": true
+          },
+          {
+            "bbox": [
+              0.10511273145675659,
+              0.9319702982902527,
+              0.024087687954306602,
+              0.051990967243909836
+            ],
+            "gt_class_score": 0.13458380103111267,
+            "gt_id": 873,
+            "iou": 0.7585015975298406,
+            "layer_id": 3,
+            "naturally_matched": true,
+            "predicted_class": 9,
+            "predicted_class_score": 0.48018065094947815,
+            "query_id": 101,
+            "query_switch": false,
+            "reason": null,
+            "reference_in": [
+              0.10469450801610947,
+              0.9313374161720276,
+              0.02448485977947712,
+              0.052838847041130066
+            ],
+            "reference_out": [
+              0.10511273145675659,
+              0.9319702982902527,
+              0.024087687954306602,
+              0.051990967243909836
+            ],
+            "valid": true
+          }
+        ]
+      }
+    },
+    {
+      "event": {
+        "class_id": 0,
+        "classification_drop": true,
+        "classification_gain": false,
+        "delta_iou": 0.0,
+        "delta_score": -0.025796175003051758,
+        "family": "gt_object",
+        "gt_id": 1036,
+        "image_id": 10,
+        "joint_drop": false,
+        "joint_gain": false,
+        "layer_from": 2,
+        "layer_to": 3,
+        "localization_drop": false,
+        "localization_gain": false,
+        "object_size": "small",
+        "persistent_degradation": true,
+        "query_id": null,
+        "query_id_from": 3,
+        "query_id_to": 3,
+        "query_switch": false,
+        "recovery": {
+          "classification": {
+            "baseline_layer": 2,
+            "final_layer": 3,
+            "recovered_at_layer": null,
+            "recovered_then_relapsed": false,
+            "status": "persistent_degradation"
+          }
+        },
+        "temporary_degradation": false,
+        "transition": "D2->D3"
+      },
+      "trajectory": {
+        "class_id": 0,
+        "first_classification_drop": "D2->D3",
+        "first_localization_drop": null,
+        "gt_bbox": [
+          0.7390625,
+          0.33796296296296297,
+          0.005208333333333333,
+          0.020370370370370372
+        ],
+        "gt_id": 1036,
+        "image_id": 10,
+        "object_area": 55.0,
+        "object_size": "small",
+        "points": [
+          {
+            "bbox": [
+              0.7864810824394226,
+              0.6829726099967957,
+              0.031187759712338448,
+              0.07562371343374252
+            ],
+            "gt_class_score": 0.7093459963798523,
+            "gt_id": 1036,
+            "iou": 0.0,
+            "layer_id": 1,
+            "naturally_matched": true,
+            "predicted_class": 0,
+            "predicted_class_score": 0.7093459963798523,
+            "query_id": 3,
+            "query_switch": false,
+            "reason": null,
+            "reference_in": [
+              0.7859429717063904,
+              0.6839627623558044,
+              0.03389205411076546,
+              0.08030850440263748
+            ],
+            "reference_out": [
+              0.7864810824394226,
+              0.6829726099967957,
+              0.031187759712338448,
+              0.07562371343374252
+            ],
+            "valid": true
+          },
+          {
+            "bbox": [
+              0.7869108319282532,
+              0.6828511953353882,
+              0.030839143320918083,
+              0.07563738524913788
+            ],
+            "gt_class_score": 0.7122116684913635,
+            "gt_id": 1036,
+            "iou": 0.0,
+            "layer_id": 2,
+            "naturally_matched": true,
+            "predicted_class": 0,
+            "predicted_class_score": 0.7122116684913635,
+            "query_id": 3,
+            "query_switch": false,
+            "reason": null,
+            "reference_in": [
+              0.7864810824394226,
+              0.6829726099967957,
+              0.031187759712338448,
+              0.07562371343374252
+            ],
+            "reference_out": [
+              0.7869108319282532,
+              0.6828511953353882,
+              0.030839143320918083,
+              0.07563738524913788
+            ],
+            "valid": true
+          },
+          {
+            "bbox": [
+              0.7869910001754761,
+              0.6827180981636047,
+              0.03203197196125984,
+              0.07553296536207199
+            ],
+            "gt_class_score": 0.6864154934883118,
+            "gt_id": 1036,
+            "iou": 0.0,
+            "layer_id": 3,
+            "naturally_matched": true,
+            "predicted_class": 0,
+            "predicted_class_score": 0.6864154934883118,
+            "query_id": 3,
+            "query_switch": false,
+            "reason": null,
+            "reference_in": [
+              0.7869108319282532,
+              0.6828511953353882,
+              0.030839143320918083,
+              0.07563738524913788
+            ],
+            "reference_out": [
+              0.7869910001754761,
+              0.6827180981636047,
+              0.03203197196125984,
+              0.07553296536207199
+            ],
+            "valid": true
+          }
+        ]
+      }
+    },
+    {
+      "event": {
+        "class_id": 9,
+        "classification_drop": true,
+        "classification_gain": false,
+        "delta_iou": 0.06486550749036285,
+        "delta_score": -0.021095730364322662,
+        "family": "gt_object",
+        "gt_id": 1068,
+        "image_id": 11,
+        "joint_drop": false,
+        "joint_gain": false,
+        "layer_from": 2,
+        "layer_to": 3,
+        "localization_drop": false,
+        "localization_gain": true,
+        "object_size": "medium",
+        "persistent_degradation": true,
+        "query_id": null,
+        "query_id_from": 79,
+        "query_id_to": 79,
+        "query_switch": false,
+        "recovery": {
+          "classification": {
+            "baseline_layer": 2,
+            "final_layer": 3,
+            "recovered_at_layer": null,
+            "recovered_then_relapsed": false,
+            "status": "persistent_degradation"
+          }
+        },
+        "temporary_degradation": false,
+        "transition": "D2->D3"
+      },
+      "trajectory": {
+        "class_id": 9,
+        "first_classification_drop": "D1->D2",
+        "first_localization_drop": null,
+        "gt_bbox": [
+          0.3619791666666667,
+          0.7314814814814815,
+          0.08020833333333334,
+          0.11481481481481481
+        ],
+        "gt_id": 1068,
+        "image_id": 11,
+        "object_area": 4774.0,
+        "object_size": "medium",
+        "points": [
+          {
+            "bbox": [
+              0.3432830274105072,
+              0.7463974952697754,
+              0.03987512364983559,
+              0.08085194230079651
+            ],
+            "gt_class_score": 0.3485180139541626,
+            "gt_id": 1068,
+            "iou": 0.3500862698583515,
+            "layer_id": 1,
+            "naturally_matched": true,
+            "predicted_class": 9,
+            "predicted_class_score": 0.3485180139541626,
+            "query_id": 12,
+            "query_switch": false,
+            "reason": null,
+            "reference_in": [
+              0.34474700689315796,
+              0.7410357594490051,
+              0.04070889949798584,
+              0.08389987051486969
+            ],
+            "reference_out": [
+              0.3432830274105072,
+              0.7463974952697754,
+              0.03987512364983559,
+              0.08085194230079651
+            ],
+            "valid": true
+          },
+          {
+            "bbox": [
+              0.3567819595336914,
+              0.7552239298820496,
+              0.06258388608694077,
+              0.06899826228618622
+            ],
+            "gt_class_score": 0.06217078119516373,
+            "gt_id": 1068,
+            "iou": 0.4606231022956277,
+            "layer_id": 2,
+            "naturally_matched": true,
+            "predicted_class": 2,
+            "predicted_class_score": 0.11516401916742325,
+            "query_id": 79,
+            "query_switch": true,
+            "reason": null,
+            "reference_in": [
+              0.35776570439338684,
+              0.7547681331634521,
+              0.05510127171874046,
+              0.06466466188430786
+            ],
+            "reference_out": [
+              0.3567819595336914,
+              0.7552239298820496,
+              0.06258388608694077,
+              0.06899826228618622
+            ],
+            "valid": true
+          },
+          {
+            "bbox": [
+              0.35919448733329773,
+              0.7526521682739258,
+              0.07066168636083603,
+              0.06848520040512085
+            ],
+            "gt_class_score": 0.041075050830841064,
+            "gt_id": 1068,
+            "iou": 0.5254886097859905,
+            "layer_id": 3,
+            "naturally_matched": true,
+            "predicted_class": 2,
+            "predicted_class_score": 0.08611828088760376,
+            "query_id": 79,
+            "query_switch": false,
+            "reason": null,
+            "reference_in": [
+              0.3567819595336914,
+              0.7552239298820496,
+              0.06258388608694077,
+              0.06899826228618622
+            ],
+            "reference_out": [
+              0.35919448733329773,
+              0.7526521682739258,
+              0.07066168636083603,
+              0.06848520040512085
+            ],
+            "valid": true
+          }
+        ]
+      }
+    },
+    {
+      "event": {
+        "class_id": 0,
+        "classification_drop": true,
+        "classification_gain": false,
+        "delta_iou": 0.15476505864015405,
+        "delta_score": -0.6492832750082016,
+        "family": "gt_object",
+        "gt_id": 1084,
+        "image_id": 12,
+        "joint_drop": false,
+        "joint_gain": false,
+        "layer_from": 2,
+        "layer_to": 3,
+        "localization_drop": false,
+        "localization_gain": true,
+        "object_size": "small",
+        "persistent_degradation": true,
+        "query_id": null,
+        "query_id_from": 0,
+        "query_id_to": 14,
+        "query_switch": true,
+        "recovery": {
+          "classification": {
+            "baseline_layer": 2,
+            "final_layer": 3,
+            "recovered_at_layer": null,
+            "recovered_then_relapsed": false,
+            "status": "persistent_degradation"
+          }
+        },
+        "temporary_degradation": false,
+        "transition": "D2->D3"
+      },
+      "trajectory": {
+        "class_id": 0,
+        "first_classification_drop": "D2->D3",
+        "first_localization_drop": null,
+        "gt_bbox": [
+          0.45416666666666666,
+          0.49166666666666664,
+          0.0125,
+          0.09074074074074075
+        ],
+        "gt_id": 1084,
+        "image_id": 12,
+        "object_area": 588.0,
+        "object_size": "small",
+        "points": [
+          {
+            "bbox": [
+              0.45868393778800964,
+              0.4961693286895752,
+              0.023281099274754524,
+              0.09487597644329071
+            ],
+            "gt_class_score": 0.7373387217521667,
+            "gt_id": 1084,
+            "iou": 0.4929412543067015,
+            "layer_id": 1,
+            "naturally_matched": true,
+            "predicted_class": 0,
+            "predicted_class_score": 0.7373387217521667,
+            "query_id": 0,
+            "query_switch": false,
+            "reason": null,
+            "reference_in": [
+              0.45855826139450073,
+              0.4978257119655609,
+              0.021717753261327744,
+              0.09325581043958664
+            ],
+            "reference_out": [
+              0.45868393778800964,
+              0.4961693286895752,
+              0.023281099274754524,
+              0.09487597644329071
+            ],
+            "valid": true
+          },
+          {
+            "bbox": [
+              0.45877373218536377,
+              0.49544984102249146,
+              0.02356630377471447,
+              0.09643455594778061
+            ],
+            "gt_class_score": 0.8080047369003296,
+            "gt_id": 1084,
+            "iou": 0.49142026798561217,
+            "layer_id": 2,
+            "naturally_matched": true,
+            "predicted_class": 0,
+            "predicted_class_score": 0.8080047369003296,
+            "query_id": 0,
+            "query_switch": false,
+            "reason": null,
+            "reference_in": [
+              0.45868393778800964,
+              0.4961693286895752,
+              0.023281099274754524,
+              0.09487597644329071
+            ],
+            "reference_out": [
+              0.45877373218536377,
+              0.49544984102249146,
+              0.02356630377471447,
+              0.09643455594778061
+            ],
+            "valid": true
+          },
+          {
+            "bbox": [
+              0.45406001806259155,
+              0.4807177186012268,
+              0.015372664667665958,
+              0.06939850747585297
+            ],
+            "gt_class_score": 0.158721461892128,
+            "gt_id": 1084,
+            "iou": 0.6461853266257662,
+            "layer_id": 3,
+            "naturally_matched": true,
+            "predicted_class": 0,
+            "predicted_class_score": 0.158721461892128,
+            "query_id": 14,
+            "query_switch": true,
+            "reason": null,
+            "reference_in": [
+              0.4543863534927368,
+              0.48067694902420044,
+              0.015828751027584076,
+              0.07058108597993851
+            ],
+            "reference_out": [
+              0.45406001806259155,
+              0.4807177186012268,
+              0.015372664667665958,
+              0.06939850747585297
+            ],
+            "valid": true
+          }
+        ]
+      }
+    }
+  ],
+  "selection": "First 12 image-id ordered GT-object D2->D3 degradations; illustrative, not random sample"
+}
