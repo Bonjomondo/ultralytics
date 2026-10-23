@@ -99,7 +99,12 @@ class ModelIntegrationTests(unittest.TestCase):
         other = self.r1.state_dict()
         for name, value in self.r0.state_dict().items():
             torch.testing.assert_close(value, other[name], rtol=0, atol=0)
-        self.assertEqual(self.r0.ablation_initialization, self.r1.ablation_initialization)
+        self.assertEqual(
+            {k: v for k, v in self.r0.ablation_initialization.items() if k != "new_variant_state"},
+            {k: v for k, v in self.r1.ablation_initialization.items() if k != "new_variant_state"},
+        )
+        self.assertEqual(self.r0.ablation_initialization["new_variant_state"], [])
+        self.assertTrue(self.r1.ablation_initialization["new_variant_state"])
         self.assertEqual(self.r1.model[-1].num_decoder_layers, 3)
         self.assertEqual(self.r1.model[-1].f, [16, 23, 22])
 
@@ -166,7 +171,7 @@ class ModelIntegrationTests(unittest.TestCase):
         trainer.data = {"nc": 10, "channels": 3}
         trainer.args = SimpleNamespace(seed=0)
         model = trainer.get_model(str(MODEL_CONFIGS["r1"]), verbose=False)
-        self.assertEqual(model.ablation_initialization, self.r0.ablation_initialization)
+        self.assertEqual(model.ablation_initialization, self.r1.ablation_initialization)
 
 
 class ArgumentTests(unittest.TestCase):

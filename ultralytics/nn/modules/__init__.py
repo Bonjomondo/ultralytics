@@ -93,6 +93,7 @@ from .head import (
     YOLOESegment26,
     v10Detect,
 )
+from .p2_sfi import SPDConv, SPDLite, SpaceToDepth2
 from .rtdetr_na import NAIFI, NeighborhoodAttention2d, ResNet18Stage, ResNet18Stem, ResidualLocalRefine
 from .transformer import (
     AIFI,
@@ -181,6 +182,9 @@ __all__ = (
     "NAIFI",
     "ResNetLayer",
     "SCDown",
+    "SPDConv",
+    "SPDLite",
+    "SpaceToDepth2",
     "Segment",
     "Segment26",
     "SpatialAttention",
