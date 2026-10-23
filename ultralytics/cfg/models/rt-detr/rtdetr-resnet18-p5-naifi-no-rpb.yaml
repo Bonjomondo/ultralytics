@@ -1,0 +1,35 @@
+# Ultralytics 🚀 AGPL-3.0 License - https://ultralytics.com/license
+# R2: P5 NAIFI k=7, RPB=false; remaining R0 layers unchanged.
+# RT-DETR R18 reference: https://github.com/lyuwenyu/RT-DETR/tree/main/rtdetr_pytorch
+nc: 80
+scales:
+  l: [1.0, 1.0, 1024]
+
+backbone:
+  - [-1, 1, ResNet18Stem, [64]] # 0, stride 4
+  - [-1, 1, ResNet18Stage, [64, 1, 2]] # 1, stride 4
+  - [-1, 1, ResNet18Stage, [128, 2, 2]] # 2, P3/8
+  - [-1, 1, ResNet18Stage, [256, 2, 2]] # 3, P4/16
+  - [-1, 1, ResNet18Stage, [512, 2, 2]] # 4, P5/32
+
+head:
+  - [-1, 1, Conv, [256, 1, 1, null, 1, 1, false]] # 5
+  - [-1, 1, NAIFI, [1024, 8, 7, false]] # 6, replace P5 AIFI
+  - [-1, 1, Conv, [256, 1, 1]] # 7
+  - [-1, 1, nn.Upsample, [null, 2, nearest]] # 8
+  - [3, 1, Conv, [256, 1, 1, null, 1, 1, false]] # 9
+  - [[-2, -1], 1, Concat, [1]] # 10
+  - [-1, 3, RepC3, [256, 0.5]] # 11
+  - [-1, 1, Conv, [256, 1, 1]] # 12
+  - [-1, 1, nn.Upsample, [null, 2, nearest]] # 13
+  - [2, 1, Conv, [256, 1, 1, null, 1, 1, false]] # 14
+  - [[-2, -1], 1, Concat, [1]] # 15
+  - [-1, 3, RepC3, [256, 0.5]] # 16, fused P3
+  - [-1, 1, Conv, [256, 3, 2]] # 17
+  - [[-1, 12], 1, Concat, [1]] # 18
+  - [-1, 3, RepC3, [256, 0.5]] # 19, fused P4
+  - [-1, 1, Conv, [256, 3, 2]] # 20, uses original P4
+  - [[-1, 7], 1, Concat, [1]] # 21
+  - [-1, 3, RepC3, [256, 0.5]] # 22, fused P5
+  - [19, 1, nn.Identity, []] # 23, parameter-free slot keeps R0/R1 decoder keys identical
+  - [[16, 23, 22], 1, RTDETRDecoder, [nc, 256, 300, 4, 8, 3]] # 24

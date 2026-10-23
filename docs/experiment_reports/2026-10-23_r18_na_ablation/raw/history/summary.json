@@ -1,0 +1,642 @@
+[
+  {
+    "label": "2026-10-22 历史测量",
+    "server_only_source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/docs/experiment_reports/2026-10-23_r18_na_ablation/raw/history/benchmark_20261022.json",
+    "source_bytes": 235979,
+    "source_sha256": "a8633dafdf21263f521e0079169945697c78b8361d2ef585544cd6c5a54674f3",
+    "environment": {
+      "torch": "2.1.2+cu121",
+      "cuda_runtime": "12.1",
+      "cudnn": 8902,
+      "ultralytics": "8.4.30",
+      "gpu": "NVIDIA GeForce RTX 4090, 535.183.01, 0 %, 6968 MiB, 24564 MiB, 52, 81.41 W",
+      "cpu_affinity": [
+        24,
+        25,
+        26,
+        27
+      ],
+      "torch_threads": 4,
+      "tf32": false,
+      "cudnn_benchmark": true
+    },
+    "records": [
+      {
+        "variant": "r1",
+        "precision": "fp32",
+        "checkpoint": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r1-150e-s0/weights/best.pt",
+        "checkpoint_sha256": "bd3e84698c32771ff49ee9e2d3c02feb968ec4c7aada5e993416a5e12f5b16a9",
+        "parameters_before_fusion": 20226425,
+        "parameters_fused": 20016441,
+        "forward_wall": {
+          "mean_ms": 13.122142504435033,
+          "median_ms": 13.108291022945195,
+          "p95_ms": 13.233618444064632,
+          "std_ms": 0.08112596256877773,
+          "fps": 76.20706753199939,
+          "samples": 450
+        },
+        "forward_gpu": {
+          "mean_ms": 13.097990525563558,
+          "median_ms": 13.084847927093506,
+          "p95_ms": 13.209841442108154,
+          "std_ms": 0.07436711301011881,
+          "fps": 76.34758920067044,
+          "samples": 450
+        },
+        "pipeline_wall": {
+          "mean_ms": 15.238115419075863,
+          "median_ms": 15.228932024911046,
+          "p95_ms": 15.439177909865975,
+          "std_ms": 0.10750562471720132,
+          "fps": 65.6249130878841,
+          "samples": 192
+        },
+        "forward_peak_allocated_mib": 199.423828125,
+        "forward_peak_reserved_mib": 238.0,
+        "pipeline_peak_allocated_mib": 204.642578125,
+        "pipeline_peak_reserved_mib": 238.0,
+        "gpu_after_configuration": "NVIDIA GeForce RTX 4090, 535.183.01, 27 %, 7725 MiB, 24564 MiB, 52, 148.46 W"
+      },
+      {
+        "variant": "r0",
+        "precision": "fp16",
+        "checkpoint": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r0-150e-s0/weights/best.pt",
+        "checkpoint_sha256": "b33e471cb8d429c4f799353f0349a588c22f87e4aea2452544acd1d5ba5616ee",
+        "parameters_before_fusion": 20094328,
+        "parameters_fused": 19884344,
+        "forward_wall": {
+          "mean_ms": 12.821587525929013,
+          "median_ms": 12.760279001668096,
+          "p95_ms": 13.00312199164182,
+          "std_ms": 0.5299968339185861,
+          "fps": 77.99346204030557,
+          "samples": 450
+        },
+        "forward_gpu": {
+          "mean_ms": 12.797767376369901,
+          "median_ms": 12.736527919769287,
+          "p95_ms": 12.979521703720092,
+          "std_ms": 0.5294203994714672,
+          "fps": 78.13862923047215,
+          "samples": 450
+        },
+        "pipeline_wall": {
+          "mean_ms": 14.880724027534598,
+          "median_ms": 14.861330564599484,
+          "p95_ms": 15.075164526933804,
+          "std_ms": 0.1255135306795859,
+          "fps": 67.20103122332264,
+          "samples": 192
+        },
+        "forward_peak_allocated_mib": 220.27587890625,
+        "forward_peak_reserved_mib": 248.0,
+        "pipeline_peak_allocated_mib": 222.61962890625,
+        "pipeline_peak_reserved_mib": 248.0,
+        "gpu_after_configuration": "NVIDIA GeForce RTX 4090, 535.183.01, 17 %, 7745 MiB, 24564 MiB, 50, 106.85 W"
+      },
+      {
+        "variant": "r0",
+        "precision": "fp32",
+        "checkpoint": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r0-150e-s0/weights/best.pt",
+        "checkpoint_sha256": "b33e471cb8d429c4f799353f0349a588c22f87e4aea2452544acd1d5ba5616ee",
+        "parameters_before_fusion": 20094328,
+        "parameters_fused": 19884344,
+        "forward_wall": {
+          "mean_ms": 12.468349333179908,
+          "median_ms": 12.451993476133794,
+          "p95_ms": 12.651342112803832,
+          "std_ms": 0.0821383034559333,
+          "fps": 80.203078473176,
+          "samples": 450
+        },
+        "forward_gpu": {
+          "mean_ms": 12.44473633872138,
+          "median_ms": 12.428143978118896,
+          "p95_ms": 12.627692604064942,
+          "std_ms": 0.08196926149333789,
+          "fps": 80.35525806107546,
+          "samples": 450
+        },
+        "pipeline_wall": {
+          "mean_ms": 14.59237983423615,
+          "median_ms": 14.55524901393801,
+          "p95_ms": 14.831407723249868,
+          "std_ms": 0.24277170161103995,
+          "fps": 68.52891792563086,
+          "samples": 192
+        },
+        "forward_peak_allocated_mib": 168.662109375,
+        "forward_peak_reserved_mib": 206.0,
+        "pipeline_peak_allocated_mib": 173.412109375,
+        "pipeline_peak_reserved_mib": 206.0,
+        "gpu_after_configuration": "NVIDIA GeForce RTX 4090, 535.183.01, 30 %, 7703 MiB, 24564 MiB, 50, 142.54 W"
+      },
+      {
+        "variant": "r1",
+        "precision": "fp16",
+        "checkpoint": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r1-150e-s0/weights/best.pt",
+        "checkpoint_sha256": "bd3e84698c32771ff49ee9e2d3c02feb968ec4c7aada5e993416a5e12f5b16a9",
+        "parameters_before_fusion": 20226425,
+        "parameters_fused": 20016441,
+        "forward_wall": {
+          "mean_ms": 13.609733984857384,
+          "median_ms": 13.595746480859816,
+          "p95_ms": 13.755887653678656,
+          "std_ms": 0.07963687932844558,
+          "fps": 73.47682189178946,
+          "samples": 450
+        },
+        "forward_gpu": {
+          "mean_ms": 13.585737467871771,
+          "median_ms": 13.570895671844482,
+          "p95_ms": 13.732360124588013,
+          "std_ms": 0.07947199561064652,
+          "fps": 73.60660415857805,
+          "samples": 450
+        },
+        "pipeline_wall": {
+          "mean_ms": 15.756092296214774,
+          "median_ms": 15.757655026391149,
+          "p95_ms": 15.97959726350382,
+          "std_ms": 0.1090816562715878,
+          "fps": 63.467513467170974,
+          "samples": 192
+        },
+        "forward_peak_allocated_mib": 220.52880859375,
+        "forward_peak_reserved_mib": 246.0,
+        "pipeline_peak_allocated_mib": 222.87255859375,
+        "pipeline_peak_reserved_mib": 246.0,
+        "gpu_after_configuration": "NVIDIA GeForce RTX 4090, 535.183.01, 17 %, 7743 MiB, 24564 MiB, 49, 107.87 W"
+      },
+      {
+        "variant": "r2a",
+        "precision": "fp32",
+        "checkpoint": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r2a-150e-s0-20261021/weights/best.pt",
+        "checkpoint_sha256": "760723fe77e786316ab56cfcba0dd31970bb6dd0167e49a5bca3fb994dcda02d",
+        "parameters_before_fusion": 20094328,
+        "parameters_fused": 19884344,
+        "forward_wall": {
+          "mean_ms": 11.987982680244992,
+          "median_ms": 11.985321994870901,
+          "p95_ms": 12.06563588930294,
+          "std_ms": 0.043075507123976155,
+          "fps": 83.41687060058078,
+          "samples": 450
+        },
+        "forward_gpu": {
+          "mean_ms": 11.964426737891303,
+          "median_ms": 11.961343765258789,
+          "p95_ms": 12.040913391113282,
+          "std_ms": 0.0430193917923059,
+          "fps": 83.58110437778043,
+          "samples": 450
+        },
+        "pipeline_wall": {
+          "mean_ms": 14.065897395388069,
+          "median_ms": 14.0774289611727,
+          "p95_ms": 14.164234639611095,
+          "std_ms": 0.08934016051708006,
+          "fps": 71.09393534520451,
+          "samples": 192
+        },
+        "forward_peak_allocated_mib": 178.90673828125,
+        "forward_peak_reserved_mib": 232.0,
+        "pipeline_peak_allocated_mib": 183.59423828125,
+        "pipeline_peak_reserved_mib": 232.0,
+        "gpu_after_configuration": "NVIDIA GeForce RTX 4090, 535.183.01, 33 %, 7729 MiB, 24564 MiB, 50, 144.79 W"
+      },
+      {
+        "variant": "r2a",
+        "precision": "fp16",
+        "checkpoint": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r2a-150e-s0-20261021/weights/best.pt",
+        "checkpoint_sha256": "760723fe77e786316ab56cfcba0dd31970bb6dd0167e49a5bca3fb994dcda02d",
+        "parameters_before_fusion": 20094328,
+        "parameters_fused": 19884344,
+        "forward_wall": {
+          "mean_ms": 12.320694291912433,
+          "median_ms": 12.31705502141267,
+          "p95_ms": 12.40259459009394,
+          "std_ms": 0.04721726798559812,
+          "fps": 81.16425716823616,
+          "samples": 450
+        },
+        "forward_gpu": {
+          "mean_ms": 12.297005023956299,
+          "median_ms": 12.29366397857666,
+          "p95_ms": 12.378060817718506,
+          "std_ms": 0.04711570937526833,
+          "fps": 81.32061408870364,
+          "samples": 450
+        },
+        "pipeline_wall": {
+          "mean_ms": 14.491800886996012,
+          "median_ms": 14.492592017631978,
+          "p95_ms": 14.666838070843369,
+          "std_ms": 0.09913950509499898,
+          "fps": 69.00453627522127,
+          "samples": 192
+        },
+        "forward_peak_allocated_mib": 220.27587890625,
+        "forward_peak_reserved_mib": 248.0,
+        "pipeline_peak_allocated_mib": 222.61962890625,
+        "pipeline_peak_reserved_mib": 248.0,
+        "gpu_after_configuration": "NVIDIA GeForce RTX 4090, 535.183.01, 18 %, 7745 MiB, 24564 MiB, 48, 108.14 W"
+      }
+    ]
+  },
+  {
+    "label": "2026-10-23 09:47 既有记录",
+    "server_only_source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/docs/experiment_reports/2026-10-23_r18_na_ablation/raw/history/benchmark_existing_20261023.json",
+    "source_bytes": 386554,
+    "source_sha256": "3d6febedb60d1fa90645aea676ef08fc3d6964a095331bf1bdccb4d14ccc5cda",
+    "environment": {
+      "torch": "2.1.2+cu121",
+      "cuda_runtime": "12.1",
+      "cudnn": 8902,
+      "ultralytics": "8.4.30",
+      "gpu": "NVIDIA GeForce RTX 4090, 535.183.01, 0 %, 337 MiB, 24564 MiB, 40, 75.58 W",
+      "cpu_affinity": [
+        24,
+        25,
+        26,
+        27
+      ],
+      "torch_threads": 4,
+      "tf32": false,
+      "cudnn_benchmark": true
+    },
+    "records": [
+      {
+        "variant": "r2b",
+        "precision": "fp32",
+        "checkpoint": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r2b-150e-s0-20261021/weights/best.pt",
+        "checkpoint_sha256": "761d23cb00fe58668a6979b0fba4378c57a9c5b58200bb56662535e174f6cb28",
+        "parameters_before_fusion": 20094720,
+        "parameters_fused": 19884736,
+        "forward_wall": {
+          "mean_ms": 12.113584386081332,
+          "median_ms": 12.107952497899532,
+          "p95_ms": 12.186056445352733,
+          "std_ms": 0.05681355671043894,
+          "fps": 82.55194896310073,
+          "samples": 450
+        },
+        "forward_gpu": {
+          "mean_ms": 12.088752418094211,
+          "median_ms": 12.084224224090576,
+          "p95_ms": 12.162171602249146,
+          "std_ms": 0.048458179557652616,
+          "fps": 82.72152207395854,
+          "samples": 450
+        },
+        "pipeline_wall": {
+          "mean_ms": 14.283530554772975,
+          "median_ms": 14.291714294813573,
+          "p95_ms": 14.439480449073017,
+          "std_ms": 0.10603345664210106,
+          "fps": 70.01070191752001,
+          "samples": 192
+        },
+        "forward_peak_allocated_mib": 179.76806640625,
+        "forward_peak_reserved_mib": 218.0,
+        "pipeline_peak_allocated_mib": 183.59619140625,
+        "pipeline_peak_reserved_mib": 218.0,
+        "gpu_after_configuration": "NVIDIA GeForce RTX 4090, 535.183.01, 32 %, 1074 MiB, 24564 MiB, 42, 140.81 W"
+      },
+      {
+        "variant": "r2a",
+        "precision": "fp16",
+        "checkpoint": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r2a-150e-s0-20261021/weights/best.pt",
+        "checkpoint_sha256": "760723fe77e786316ab56cfcba0dd31970bb6dd0167e49a5bca3fb994dcda02d",
+        "parameters_before_fusion": 20094328,
+        "parameters_fused": 19884344,
+        "forward_wall": {
+          "mean_ms": 12.61426434593482,
+          "median_ms": 12.613428989425302,
+          "p95_ms": 12.701907195150852,
+          "std_ms": 0.05059061109105371,
+          "fps": 79.27533247884317,
+          "samples": 450
+        },
+        "forward_gpu": {
+          "mean_ms": 12.589776988559299,
+          "median_ms": 12.588703632354736,
+          "p95_ms": 12.677612495422363,
+          "std_ms": 0.05037183019569854,
+          "fps": 79.42952451887984,
+          "samples": 450
+        },
+        "pipeline_wall": {
+          "mean_ms": 14.741513705909407,
+          "median_ms": 14.747860957868397,
+          "p95_ms": 14.894131396431476,
+          "std_ms": 0.12245390880277957,
+          "fps": 67.8356388597415,
+          "samples": 192
+        },
+        "forward_peak_allocated_mib": 215.05712890625,
+        "forward_peak_reserved_mib": 268.0,
+        "pipeline_peak_allocated_mib": 217.15087890625,
+        "pipeline_peak_reserved_mib": 268.0,
+        "gpu_after_configuration": "NVIDIA GeForce RTX 4090, 535.183.01, 18 %, 1134 MiB, 24564 MiB, 42, 105.19 W"
+      },
+      {
+        "variant": "r1",
+        "precision": "fp16",
+        "checkpoint": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r1-150e-s0/weights/best.pt",
+        "checkpoint_sha256": "bd3e84698c32771ff49ee9e2d3c02feb968ec4c7aada5e993416a5e12f5b16a9",
+        "parameters_before_fusion": 20226425,
+        "parameters_fused": 20016441,
+        "forward_wall": {
+          "mean_ms": 14.101309870990614,
+          "median_ms": 14.095245045609772,
+          "p95_ms": 14.215317368507385,
+          "std_ms": 0.0647609951451328,
+          "fps": 70.91539787074761,
+          "samples": 450
+        },
+        "forward_gpu": {
+          "mean_ms": 14.076600259145101,
+          "median_ms": 14.071631908416748,
+          "p95_ms": 14.190820550918579,
+          "std_ms": 0.06484529136682989,
+          "fps": 71.03988048181827,
+          "samples": 450
+        },
+        "pipeline_wall": {
+          "mean_ms": 16.264148982979048,
+          "median_ms": 16.27113192807883,
+          "p95_ms": 16.445792629383504,
+          "std_ms": 0.11260617442484842,
+          "fps": 61.48492620465614,
+          "samples": 192
+        },
+        "forward_peak_allocated_mib": 215.31005859375,
+        "forward_peak_reserved_mib": 266.0,
+        "pipeline_peak_allocated_mib": 217.40380859375,
+        "pipeline_peak_reserved_mib": 266.0,
+        "gpu_after_configuration": "NVIDIA GeForce RTX 4090, 535.183.01, 17 %, 1132 MiB, 24564 MiB, 42, 104.15 W"
+      },
+      {
+        "variant": "r2b",
+        "precision": "fp16",
+        "checkpoint": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r2b-150e-s0-20261021/weights/best.pt",
+        "checkpoint_sha256": "761d23cb00fe58668a6979b0fba4378c57a9c5b58200bb56662535e174f6cb28",
+        "parameters_before_fusion": 20094720,
+        "parameters_fused": 19884736,
+        "forward_wall": {
+          "mean_ms": 12.671519884736174,
+          "median_ms": 12.66806700732559,
+          "p95_ms": 12.751728354487568,
+          "std_ms": 0.04484393843207113,
+          "fps": 78.91713141724833,
+          "samples": 450
+        },
+        "forward_gpu": {
+          "mean_ms": 12.647358705732557,
+          "median_ms": 12.643903732299805,
+          "p95_ms": 12.727830457687379,
+          "std_ms": 0.044713748478898474,
+          "fps": 79.06789261434791,
+          "samples": 450
+        },
+        "pipeline_wall": {
+          "mean_ms": 14.91981684860851,
+          "median_ms": 14.925538096576929,
+          "p95_ms": 15.078659413848072,
+          "std_ms": 0.10017502425114597,
+          "fps": 67.02495145530318,
+          "samples": 192
+        },
+        "forward_peak_allocated_mib": 215.05810546875,
+        "forward_peak_reserved_mib": 274.0,
+        "pipeline_peak_allocated_mib": 217.15185546875,
+        "pipeline_peak_reserved_mib": 274.0,
+        "gpu_after_configuration": "NVIDIA GeForce RTX 4090, 535.183.01, 18 %, 1140 MiB, 24564 MiB, 42, 104.63 W"
+      },
+      {
+        "variant": "r2c",
+        "precision": "fp16",
+        "checkpoint": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r2c-150e-s0-20261021/weights/best.pt",
+        "checkpoint_sha256": "deadfb5b84e1a827375601f83f386661a6d72fd83d369a4545b660574f52ccd5",
+        "parameters_before_fusion": 20095296,
+        "parameters_fused": 19885312,
+        "forward_wall": {
+          "mean_ms": 12.72467892151326,
+          "median_ms": 12.720069964416325,
+          "p95_ms": 12.81500362092629,
+          "std_ms": 0.05091996744581248,
+          "fps": 78.58744461593666,
+          "samples": 450
+        },
+        "forward_gpu": {
+          "mean_ms": 12.700238505469429,
+          "median_ms": 12.696080207824707,
+          "p95_ms": 12.79083685874939,
+          "std_ms": 0.05075579765988143,
+          "fps": 78.73867877121712,
+          "samples": 450
+        },
+        "pipeline_wall": {
+          "mean_ms": 14.903156068612589,
+          "median_ms": 14.896986889652908,
+          "p95_ms": 15.106084861326963,
+          "std_ms": 0.11573624551833833,
+          "fps": 67.09988108532873,
+          "samples": 192
+        },
+        "forward_peak_allocated_mib": 215.05908203125,
+        "forward_peak_reserved_mib": 346.0,
+        "pipeline_peak_allocated_mib": 217.15283203125,
+        "pipeline_peak_reserved_mib": 346.0,
+        "gpu_after_configuration": "NVIDIA GeForce RTX 4090, 535.183.01, 20 %, 1212 MiB, 24564 MiB, 42, 109.23 W"
+      },
+      {
+        "variant": "r1",
+        "precision": "fp32",
+        "checkpoint": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r1-150e-s0/weights/best.pt",
+        "checkpoint_sha256": "bd3e84698c32771ff49ee9e2d3c02feb968ec4c7aada5e993416a5e12f5b16a9",
+        "parameters_before_fusion": 20226425,
+        "parameters_fused": 20016441,
+        "forward_wall": {
+          "mean_ms": 13.580941894195146,
+          "median_ms": 13.58037197496742,
+          "p95_ms": 13.699208339676261,
+          "std_ms": 0.06629409369095694,
+          "fps": 73.63259542605263,
+          "samples": 450
+        },
+        "forward_gpu": {
+          "mean_ms": 13.556142985026042,
+          "median_ms": 13.55574369430542,
+          "p95_ms": 13.675203275680541,
+          "std_ms": 0.06627819500949061,
+          "fps": 73.76729510042705,
+          "samples": 450
+        },
+        "pipeline_wall": {
+          "mean_ms": 15.740634481820356,
+          "median_ms": 15.733897453173995,
+          "p95_ms": 15.958038542885333,
+          "std_ms": 0.12366957895747746,
+          "fps": 63.529840627132906,
+          "samples": 192
+        },
+        "forward_peak_allocated_mib": 199.048828125,
+        "forward_peak_reserved_mib": 232.0,
+        "pipeline_peak_allocated_mib": 204.173828125,
+        "pipeline_peak_reserved_mib": 232.0,
+        "gpu_after_configuration": "NVIDIA GeForce RTX 4090, 535.183.01, 27 %, 1098 MiB, 24564 MiB, 44, 136.75 W"
+      },
+      {
+        "variant": "r0",
+        "precision": "fp32",
+        "checkpoint": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r0-150e-s0/weights/best.pt",
+        "checkpoint_sha256": "b33e471cb8d429c4f799353f0349a588c22f87e4aea2452544acd1d5ba5616ee",
+        "parameters_before_fusion": 20094328,
+        "parameters_fused": 19884344,
+        "forward_wall": {
+          "mean_ms": 12.819804336565236,
+          "median_ms": 12.802266981452703,
+          "p95_ms": 12.925411248579621,
+          "std_ms": 0.22661250824575244,
+          "fps": 78.00431065455142,
+          "samples": 450
+        },
+        "forward_gpu": {
+          "mean_ms": 12.795481029086643,
+          "median_ms": 12.77836799621582,
+          "p95_ms": 12.901071882247924,
+          "std_ms": 0.2265748210474416,
+          "fps": 78.152591350556,
+          "samples": 450
+        },
+        "pipeline_wall": {
+          "mean_ms": 15.04721670789877,
+          "median_ms": 14.994760975241661,
+          "p95_ms": 15.83319093333557,
+          "std_ms": 0.29867599899507563,
+          "fps": 66.45747312691175,
+          "samples": 192
+        },
+        "forward_peak_allocated_mib": 168.662109375,
+        "forward_peak_reserved_mib": 206.0,
+        "pipeline_peak_allocated_mib": 173.412109375,
+        "pipeline_peak_reserved_mib": 206.0,
+        "gpu_after_configuration": "NVIDIA GeForce RTX 4090, 535.183.01, 28 %, 1072 MiB, 24564 MiB, 44, 132.73 W"
+      },
+      {
+        "variant": "r2a",
+        "precision": "fp32",
+        "checkpoint": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r2a-150e-s0-20261021/weights/best.pt",
+        "checkpoint_sha256": "760723fe77e786316ab56cfcba0dd31970bb6dd0167e49a5bca3fb994dcda02d",
+        "parameters_before_fusion": 20094328,
+        "parameters_fused": 19884344,
+        "forward_wall": {
+          "mean_ms": 12.183883163767556,
+          "median_ms": 12.181653524748981,
+          "p95_ms": 12.263564392924309,
+          "std_ms": 0.04865074281372589,
+          "fps": 82.07563931454965,
+          "samples": 450
+        },
+        "forward_gpu": {
+          "mean_ms": 12.159791350894505,
+          "median_ms": 12.157488346099854,
+          "p95_ms": 12.239508628845215,
+          "std_ms": 0.04855412248399115,
+          "fps": 82.23825320213554,
+          "samples": 450
+        },
+        "pipeline_wall": {
+          "mean_ms": 14.414296738929503,
+          "median_ms": 14.382361434400082,
+          "p95_ms": 14.614452898968011,
+          "std_ms": 0.24540382568389713,
+          "fps": 69.37556636386176,
+          "samples": 192
+        },
+        "forward_peak_allocated_mib": 178.90673828125,
+        "forward_peak_reserved_mib": 226.0,
+        "pipeline_peak_allocated_mib": 183.59423828125,
+        "pipeline_peak_reserved_mib": 226.0,
+        "gpu_after_configuration": "NVIDIA GeForce RTX 4090, 535.183.01, 31 %, 1092 MiB, 24564 MiB, 45, 138.87 W"
+      },
+      {
+        "variant": "r2c",
+        "precision": "fp32",
+        "checkpoint": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r2c-150e-s0-20261021/weights/best.pt",
+        "checkpoint_sha256": "deadfb5b84e1a827375601f83f386661a6d72fd83d369a4545b660574f52ccd5",
+        "parameters_before_fusion": 20095296,
+        "parameters_fused": 19885312,
+        "forward_wall": {
+          "mean_ms": 12.16436343991922,
+          "median_ms": 12.15838547796011,
+          "p95_ms": 12.250020855572075,
+          "std_ms": 0.047008601611184676,
+          "fps": 82.20734319054846,
+          "samples": 450
+        },
+        "forward_gpu": {
+          "mean_ms": 12.14044712278578,
+          "median_ms": 12.134400367736816,
+          "p95_ms": 12.226295852661133,
+          "std_ms": 0.04680436371817337,
+          "fps": 82.36928919390057,
+          "samples": 450
+        },
+        "pipeline_wall": {
+          "mean_ms": 14.333733967456888,
+          "median_ms": 14.342978945933282,
+          "p95_ms": 14.457027905154973,
+          "std_ms": 0.09417572404773186,
+          "fps": 69.7654918299995,
+          "samples": 192
+        },
+        "forward_peak_allocated_mib": 266.16357421875,
+        "forward_peak_reserved_mib": 330.0,
+        "pipeline_peak_allocated_mib": 270.47607421875,
+        "pipeline_peak_reserved_mib": 330.0,
+        "gpu_after_configuration": "NVIDIA GeForce RTX 4090, 535.183.01, 35 %, 1196 MiB, 24564 MiB, 46, 146.75 W"
+      },
+      {
+        "variant": "r0",
+        "precision": "fp16",
+        "checkpoint": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r0-150e-s0/weights/best.pt",
+        "checkpoint_sha256": "b33e471cb8d429c4f799353f0349a588c22f87e4aea2452544acd1d5ba5616ee",
+        "parameters_before_fusion": 20094328,
+        "parameters_fused": 19884344,
+        "forward_wall": {
+          "mean_ms": 13.19662456969834,
+          "median_ms": 13.188634417019784,
+          "p95_ms": 13.326018583029509,
+          "std_ms": 0.0716950017314582,
+          "fps": 75.77695301692279,
+          "samples": 450
+        },
+        "forward_gpu": {
+          "mean_ms": 13.172130184173584,
+          "median_ms": 13.164495944976807,
+          "p95_ms": 13.301745271682739,
+          "std_ms": 0.07152280003465841,
+          "fps": 75.91786491766591,
+          "samples": 450
+        },
+        "pipeline_wall": {
+          "mean_ms": 15.332884383193838,
+          "median_ms": 15.32968448009342,
+          "p95_ms": 15.519317251164466,
+          "std_ms": 0.11350093372773884,
+          "fps": 65.2193008835367,
+          "samples": 192
+        },
+        "forward_peak_allocated_mib": 215.05712890625,
+        "forward_peak_reserved_mib": 274.0,
+        "pipeline_peak_allocated_mib": 217.15087890625,
+        "pipeline_peak_reserved_mib": 274.0,
+        "gpu_after_configuration": "NVIDIA GeForce RTX 4090, 535.183.01, 16 %, 1140 MiB, 24564 MiB, 44, 101.31 W"
+      }
+    ]
+  }
+]

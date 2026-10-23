@@ -1,0 +1,232 @@
+[
+  {
+    "source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/experiments/r18_na_ablation/r2_naifi_20261021/queue_status.json",
+    "snapshot": "raw/queue_status.json",
+    "sha256": "65153319a77bec5de1535eb4193645a172d9715518040fb5c4ab0d76a21f624f",
+    "storage": "tracked_in_git"
+  },
+  {
+    "source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/experiments/r18_na_ablation/r2_naifi_20261021/source_sha256.json",
+    "snapshot": "provenance/original_training_source_sha256.json",
+    "sha256": "fae9a69652d61c5cc12a6d82f3c7f41ded319e6457e819cd8081676154b6f3bf",
+    "storage": "tracked_in_git"
+  },
+  {
+    "source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/experiments/r18_na_ablation/r2_naifi_20261021/EXPERIMENT.md",
+    "snapshot": "sources/EXPERIMENT.md",
+    "sha256": "5ce5ef9fbfa6379b8e4b32c260fa48a9df2882803a6e2e44be502a6a1290280e",
+    "storage": "tracked_in_git"
+  },
+  {
+    "source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/experiments/r18_na_ablation/r2_naifi_20261021/repair_20261022.json",
+    "snapshot": "provenance/serialization_repair.json",
+    "sha256": "29d97e6690358a458165ec08ddd14f414b9a20dd01089668924ccf738d8c45fa",
+    "storage": "tracked_in_git"
+  },
+  {
+    "source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/experiments/r18_na_ablation/r2_naifi_20261021/inference_benchmark_20261022/benchmark.json",
+    "snapshot": "raw/history/benchmark_20261022.json",
+    "sha256": "a8633dafdf21263f521e0079169945697c78b8361d2ef585544cd6c5a54674f3",
+    "storage": "server_only_not_in_git",
+    "cloud_summary": "raw/history/summary.json"
+  },
+  {
+    "source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/experiments/r18_na_ablation/r2_naifi_20261021/inference_benchmark_20261023/benchmark.json",
+    "snapshot": "raw/history/benchmark_existing_20261023.json",
+    "sha256": "3d6febedb60d1fa90645aea676ef08fc3d6964a095331bf1bdccb4d14ccc5cda",
+    "storage": "server_only_not_in_git",
+    "cloud_summary": "raw/history/summary.json"
+  },
+  {
+    "source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/experiments/r18_na_ablation/completed_pair/verification.json",
+    "snapshot": "provenance/r0_r1_verification.json",
+    "sha256": "f0043fbc0a3adc8a65cf1912468b58e0979e23ddd1aa432909f661dff5e056ca",
+    "storage": "tracked_in_git"
+  },
+  {
+    "source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/experiments/r18_na_ablation/completed_pair/r0_formal_metrics.json",
+    "snapshot": "raw/accuracy/r0_formal_metrics.json",
+    "sha256": "d7b4416996dd904bb416c6d81b2c0f7fddb42d8394d2e80299a2d80a4745b3c3",
+    "storage": "tracked_in_git"
+  },
+  {
+    "source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r0-150e-s0/results.csv",
+    "snapshot": "raw/training/r0_results.csv",
+    "sha256": "d8d974a2ebedc0dfe17f5993188af8c45add27190f8a8859d4daf08390456165",
+    "storage": "tracked_in_git"
+  },
+  {
+    "source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r0-150e-s0/args.yaml",
+    "snapshot": "raw/training/r0_args.yaml",
+    "sha256": "bc3dff12cdbfb1556de029964de09e92b6f1d5a86616417314309cdaa28d032e",
+    "storage": "tracked_in_git"
+  },
+  {
+    "source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r0-150e-s0/initialization.json",
+    "snapshot": "raw/training/r0_initialization.json",
+    "sha256": "64549c2d9c00eb7f363d65ba93ef842a8c28edb3e715b11fbcde05399a6d6595",
+    "storage": "tracked_in_git"
+  },
+  {
+    "source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/ultralytics/cfg/models/rt-detr/rtdetr-resnet18.yaml",
+    "snapshot": "sources/rtdetr-resnet18.yaml",
+    "sha256": "c18c87a7bcb2904834ae3b42d68ed6d9c19e62b271e98d1f132c516c13d1c98b",
+    "storage": "tracked_in_git"
+  },
+  {
+    "source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/experiments/r18_na_ablation/completed_pair/r1_formal_metrics.json",
+    "snapshot": "raw/accuracy/r1_formal_metrics.json",
+    "sha256": "9724225c8c48377e6afc4fdf0d4cf84dd4ac621e971426d599bd691b9cc3dc0c",
+    "storage": "tracked_in_git"
+  },
+  {
+    "source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r1-150e-s0/results.csv",
+    "snapshot": "raw/training/r1_results.csv",
+    "sha256": "3872b70f8bdb3b0cad6e4bfbd1984f804056d83d044ab82b1bc1e4598f2ba5e4",
+    "storage": "tracked_in_git"
+  },
+  {
+    "source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r1-150e-s0/args.yaml",
+    "snapshot": "raw/training/r1_args.yaml",
+    "sha256": "ea3a584c208f36a37673e47832c55a91a645b97aa2977c479378f15d9d4df429",
+    "storage": "tracked_in_git"
+  },
+  {
+    "source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r1-150e-s0/initialization.json",
+    "snapshot": "raw/training/r1_initialization.json",
+    "sha256": "efc927e909483070ffe0e97554be70c14b255e8fa72b032446d5210c2aee028b",
+    "storage": "tracked_in_git"
+  },
+  {
+    "source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/ultralytics/cfg/models/rt-detr/rtdetr-resnet18-p4-na5.yaml",
+    "snapshot": "sources/rtdetr-resnet18-p4-na5.yaml",
+    "sha256": "74ad031713e57c44e721ec1b3d673f9489731a53da8a196f6207c04f37e70939",
+    "storage": "tracked_in_git"
+  },
+  {
+    "source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/experiments/r18_na_ablation/r2_naifi_20261021/r2a_formal_metrics.json",
+    "snapshot": "raw/accuracy/r2a_formal_metrics.json",
+    "sha256": "e96712190c27852d8b94d7d3dfbf33ef0468f45ad5ff8384deef60d333728b7d",
+    "storage": "tracked_in_git"
+  },
+  {
+    "source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r2a-150e-s0-20261021/results.csv",
+    "snapshot": "raw/training/r2a_results.csv",
+    "sha256": "a073a110a7224c3d3c85b1958227d24c7e3f737ea3a7ecc0a9ccf6cb5f9a8344",
+    "storage": "tracked_in_git"
+  },
+  {
+    "source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r2a-150e-s0-20261021/args.yaml",
+    "snapshot": "raw/training/r2a_args.yaml",
+    "sha256": "1ce1a5bb5d3e99e77c2bfaff4091bf750cc6b9d8674c0be93e2cccdc78dd2fd3",
+    "storage": "tracked_in_git"
+  },
+  {
+    "source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r2a-150e-s0-20261021/initialization.json",
+    "snapshot": "raw/training/r2a_initialization.json",
+    "sha256": "512c1ae5e434875889c1214437ae75c9b62847bbb352e96ad7d33f96e542c491",
+    "storage": "tracked_in_git"
+  },
+  {
+    "source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/ultralytics/cfg/models/rt-detr/rtdetr-resnet18-p5-naifi-no-rpb.yaml",
+    "snapshot": "sources/rtdetr-resnet18-p5-naifi-no-rpb.yaml",
+    "sha256": "51fd9d3bd81d4a11ffaa28ecdad10bf7fdbcc8d07b8eafe3b6c04a33fb5f79d7",
+    "storage": "tracked_in_git"
+  },
+  {
+    "source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/experiments/r18_na_ablation/r2_naifi_20261021/r2b_formal_metrics.json",
+    "snapshot": "raw/accuracy/r2b_formal_metrics.json",
+    "sha256": "2eef35cf95e30d130c938b6728d6fb87c90c5477babef494b41972aa0d628cf7",
+    "storage": "tracked_in_git"
+  },
+  {
+    "source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r2b-150e-s0-20261021/results.csv",
+    "snapshot": "raw/training/r2b_results.csv",
+    "sha256": "46fb9f79ed43046b6c965416eb90f7f8cc6c3e624b1a1e7678e49e94041dbcce",
+    "storage": "tracked_in_git"
+  },
+  {
+    "source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r2b-150e-s0-20261021/args.yaml",
+    "snapshot": "raw/training/r2b_args.yaml",
+    "sha256": "545ab5f2b4b130889f695470a7f713e8cbc633dfe113916f6cefd7d7c8192241",
+    "storage": "tracked_in_git"
+  },
+  {
+    "source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r2b-150e-s0-20261021/initialization.json",
+    "snapshot": "raw/training/r2b_initialization.json",
+    "sha256": "60e6dc60a9d248ecd2f09701ba34bcabd17586644fcc381ca9e2965bbb899aa3",
+    "storage": "tracked_in_git"
+  },
+  {
+    "source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/ultralytics/cfg/models/rt-detr/rtdetr-resnet18-p5-naifi.yaml",
+    "snapshot": "sources/rtdetr-resnet18-p5-naifi.yaml",
+    "sha256": "b27d0fe3acf54ff726063c1363491bcd4a01d2dd1af35b23b74e7ab6d6ed2cc9",
+    "storage": "tracked_in_git"
+  },
+  {
+    "source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/experiments/r18_na_ablation/r2_naifi_20261021/r2c_formal_metrics.json",
+    "snapshot": "raw/accuracy/r2c_formal_metrics.json",
+    "sha256": "7df3bd25213709cd6552de1f81f8e8240e56523d4b54293e4d2163105fe59d51",
+    "storage": "tracked_in_git"
+  },
+  {
+    "source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r2c-150e-s0-20261021/results.csv",
+    "snapshot": "raw/training/r2c_results.csv",
+    "sha256": "c20cb82cbd0379beaeb19a68870a046397af0a4918b8c460b882e562fc26db9e",
+    "storage": "tracked_in_git"
+  },
+  {
+    "source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r2c-150e-s0-20261021/args.yaml",
+    "snapshot": "raw/training/r2c_args.yaml",
+    "sha256": "8e3efbb01f5f70f2ed982ec2c34f2f8649fc7e19c4d2ec2a23ea018010e672b0",
+    "storage": "tracked_in_git"
+  },
+  {
+    "source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r2c-150e-s0-20261021/initialization.json",
+    "snapshot": "raw/training/r2c_initialization.json",
+    "sha256": "7ce5952064fea2ebe2c4f9ce50a2a1bc8b56f7074ea7fe33b89564d3404814a3",
+    "storage": "tracked_in_git"
+  },
+  {
+    "source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/ultralytics/cfg/models/rt-detr/rtdetr-resnet18-p5-naifi-k11.yaml",
+    "snapshot": "sources/rtdetr-resnet18-p5-naifi-k11.yaml",
+    "sha256": "a27e9db1536fcd2da5efae757c8abd1b0583f16c64c0f8c0ebb2f65f69814fc8",
+    "storage": "tracked_in_git"
+  },
+  {
+    "source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/ultralytics/nn/modules/rtdetr_na.py",
+    "snapshot": "sources/rtdetr_na.py",
+    "sha256": "40864c2cad00596329f923c655dcb84c2a135e890e87cb5ba0f8df2fcd82d95e",
+    "storage": "tracked_in_git"
+  },
+  {
+    "source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/ultralytics/nn/modules/transformer.py",
+    "snapshot": "sources/transformer.py",
+    "sha256": "8986f3f58a5e30a42545f544f1a35f5e5861b13ee5d4507d8b2afab1c41df782",
+    "storage": "tracked_in_git"
+  },
+  {
+    "source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/train_rtdetr_r18_na.py",
+    "snapshot": "sources/train_rtdetr_r18_na.py",
+    "sha256": "fe6d643d1a4c4348b28cdf800adc2ffd0ddc8acdcfcbdb8fbf04cc5c0f29d2f8",
+    "storage": "tracked_in_git"
+  },
+  {
+    "source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/experiments/r18_na_ablation/r2_naifi_20261021/evaluate_r2.py",
+    "snapshot": "sources/evaluate_r2.py",
+    "sha256": "446fc5558c6ac5f30d8c3f8f8550a0238934f78b240703f13e6dd46e8db04c02",
+    "storage": "tracked_in_git"
+  },
+  {
+    "source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/experiments/r18_na_ablation/r2_naifi_20261021/run_queue.py",
+    "snapshot": "sources/run_queue.py",
+    "sha256": "e818526fb8fdc864cde3e8d69c19d7bb2a7aaf720bccc34717de982a0f12dd35",
+    "storage": "tracked_in_git"
+  },
+  {
+    "source": "derived from retained historical benchmark records",
+    "snapshot": "raw/history/summary.json",
+    "sha256": "19fb2e5685a47c4a57b897db70313c2fad2add56d4c3592aa2f6dc21e5b995ec",
+    "storage": "tracked_in_git"
+  }
+]

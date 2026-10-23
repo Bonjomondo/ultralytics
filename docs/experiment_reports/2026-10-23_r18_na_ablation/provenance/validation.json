@@ -1,0 +1,64 @@
+{
+  "verified_utc": "2026-10-23T02:26:02.448395+00:00",
+  "all_training_complete": true,
+  "all_accuracy_protocols_match": true,
+  "variants": {
+    "r0": {
+      "checkpoint": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r0-150e-s0/weights/best.pt",
+      "checkpoint_sha256": "b33e471cb8d429c4f799353f0349a588c22f87e4aea2452544acd1d5ba5616ee",
+      "training_epochs": 150,
+      "last_epoch": 150,
+      "best_epoch_by_training_csv": 150,
+      "recorded_training_wall_seconds": 23097.5,
+      "formal_protocol_matches_r0": true
+    },
+    "r1": {
+      "checkpoint": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r1-150e-s0/weights/best.pt",
+      "checkpoint_sha256": "bd3e84698c32771ff49ee9e2d3c02feb968ec4c7aada5e993416a5e12f5b16a9",
+      "training_epochs": 150,
+      "last_epoch": 150,
+      "best_epoch_by_training_csv": 150,
+      "recorded_training_wall_seconds": 17942.9,
+      "formal_protocol_matches_r0": true
+    },
+    "r2a": {
+      "checkpoint": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r2a-150e-s0-20261021/weights/best.pt",
+      "checkpoint_sha256": "760723fe77e786316ab56cfcba0dd31970bb6dd0167e49a5bca3fb994dcda02d",
+      "training_epochs": 150,
+      "last_epoch": 150,
+      "best_epoch_by_training_csv": 150,
+      "recorded_training_wall_seconds": 38250.3,
+      "formal_protocol_matches_r0": true
+    },
+    "r2b": {
+      "checkpoint": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r2b-150e-s0-20261021/weights/best.pt",
+      "checkpoint_sha256": "761d23cb00fe58668a6979b0fba4378c57a9c5b58200bb56662535e174f6cb28",
+      "training_epochs": 150,
+      "last_epoch": 150,
+      "best_epoch_by_training_csv": 150,
+      "recorded_training_wall_seconds": 23415.1,
+      "formal_protocol_matches_r0": true
+    },
+    "r2c": {
+      "checkpoint": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r2c-150e-s0-20261021/weights/best.pt",
+      "checkpoint_sha256": "deadfb5b84e1a827375601f83f386661a6d72fd83d369a4545b660574f52ccd5",
+      "training_epochs": 150,
+      "last_epoch": 150,
+      "best_epoch_by_training_csv": 149,
+      "recorded_training_wall_seconds": 24136.8,
+      "formal_protocol_matches_r0": true
+    }
+  },
+  "training_sources_match_original_manifest": true,
+  "training_source_sha256": {
+    "train_rtdetr_r18_na.py": "fe6d643d1a4c4348b28cdf800adc2ffd0ddc8acdcfcbdb8fbf04cc5c0f29d2f8",
+    "ultralytics/nn/modules/rtdetr_na.py": "40864c2cad00596329f923c655dcb84c2a135e890e87cb5ba0f8df2fcd82d95e",
+    "ultralytics/nn/modules/__init__.py": "f9ebe4b88f33b459889b4e94c2c6b68fa712f041e694d5af78477a6ea04e4768",
+    "ultralytics/nn/tasks.py": "657a8ac6d55d44e2627885650675ab092116142b1f8cc006100c220a56154096",
+    "ultralytics/cfg/models/rt-detr/rtdetr-resnet18-p4-na5.yaml": "74ad031713e57c44e721ec1b3d673f9489731a53da8a196f6207c04f37e70939",
+    "ultralytics/cfg/models/rt-detr/rtdetr-resnet18-p5-naifi-k11.yaml": "a27e9db1536fcd2da5efae757c8abd1b0583f16c64c0f8c0ebb2f65f69814fc8",
+    "ultralytics/cfg/models/rt-detr/rtdetr-resnet18-p5-naifi-no-rpb.yaml": "51fd9d3bd81d4a11ffaa28ecdad10bf7fdbcc8d07b8eafe3b6c04a33fb5f79d7",
+    "ultralytics/cfg/models/rt-detr/rtdetr-resnet18-p5-naifi.yaml": "b27d0fe3acf54ff726063c1363491bcd4a01d2dd1af35b23b74e7ab6d6ed2cc9",
+    "ultralytics/cfg/models/rt-detr/rtdetr-resnet18.yaml": "c18c87a7bcb2904834ae3b42d68ed6d9c19e62b271e98d1f132c516c13d1c98b"
+  }
+}

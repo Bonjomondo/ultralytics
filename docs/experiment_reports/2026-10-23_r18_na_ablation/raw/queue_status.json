@@ -1,0 +1,43 @@
+{
+  "status": "completed",
+  "started_utc": "2026-10-21T15:29:20.311691+00:00",
+  "pid": 328538,
+  "order": [
+    "r2a",
+    "r2b",
+    "r2c"
+  ],
+  "completed_training": [
+    "r2a",
+    "r2b",
+    "r2c"
+  ],
+  "completed_evaluation": [
+    "r2a",
+    "r2b",
+    "r2c"
+  ],
+  "updated_utc": "2026-10-22T19:15:41.777813+00:00",
+  "variant": "r2c",
+  "phase": "done",
+  "run": "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r2c-150e-s0-20261021",
+  "log": "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/ultralytics/logs/rtdetr-r18-r2c-150e-s0-20261021-evaluation.log",
+  "command": [
+    "/home/zjnu/anaconda3/envs/UAV_CV/bin/python",
+    "-u",
+    "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/ultralytics/experiments/r18_na_ablation/r2_naifi_20261021/evaluate_r2.py",
+    "--variant",
+    "r2c",
+    "--run",
+    "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/ultralytics/runs/detect/r18_na_ablation/rtdetr-r18-r2c-150e-s0-20261021"
+  ],
+  "child_pid": null,
+  "resume_history": [
+    {
+      "resumed_utc": "2026-10-22T06:01:13.315391+00:00",
+      "previous_pid": 284710,
+      "previous_error": "RuntimeError: r2a evaluation exited 1; inspect /home/zjnu/\u6587\u6863/ZHJ_WorkSpace/ultralytics/logs/rtdetr-r18-r2a-150e-s0-20261021-evaluation.log"
+    }
+  ],
+  "finished_utc": "2026-10-22T19:15:41.777809+00:00"
+}

@@ -1,0 +1,155 @@
+{
+  "environment": {
+    "torch": "2.1.2+cu121",
+    "cuda_runtime": "12.1",
+    "cudnn": 8902,
+    "ultralytics": "8.4.30",
+    "gpu": "NVIDIA GeForce RTX 4090, 535.183.01, 0 %, 337 MiB, 24564 MiB, 29, 13.31 W",
+    "gpu_compute_processes_before_start": "",
+    "cpu_affinity": [
+      24,
+      25,
+      26,
+      27
+    ],
+    "torch_threads": 4,
+    "tf32": false,
+    "cudnn_benchmark": true
+  },
+  "protocol": {
+    "batch": 1,
+    "input_shape": [
+      1,
+      3,
+      640,
+      640
+    ],
+    "backend": "PyTorch eager, fused, eval, inference_mode",
+    "warmup_forwards": 50,
+    "rounds": 3,
+    "forward_iterations_per_round": 150,
+    "pipeline_images_per_round": 64,
+    "pipeline_confidence": 0.25,
+    "max_det": 300,
+    "pipeline": "cached decoded BGR -> native RTDETR square scale-fill preprocessing -> H2D -> forward -> native postprocess -> boxes CPU -> CUDA synchronize",
+    "excluded": [
+      "disk/JPEG decoding",
+      "model loading",
+      "rendering",
+      "TensorRT/torch.compile",
+      "batched throughput"
+    ],
+    "forward_wall": "perf_counter with CUDA synchronization, input already resident on GPU",
+    "forward_gpu": "CUDA events, same forwards",
+    "fps": "1000 / arithmetic mean latency in milliseconds, sequential batch=1",
+    "memory": "peak torch allocator allocated/reserved MiB in benchmark process; other processes and CUDA context memory are excluded",
+    "configuration_order": [
+      [
+        "r2b",
+        "fp32"
+      ],
+      [
+        "r2a",
+        "fp16"
+      ],
+      [
+        "r1",
+        "fp16"
+      ],
+      [
+        "r2b",
+        "fp16"
+      ],
+      [
+        "r2c",
+        "fp16"
+      ],
+      [
+        "r1",
+        "fp32"
+      ],
+      [
+        "r0",
+        "fp32"
+      ],
+      [
+        "r2a",
+        "fp32"
+      ],
+      [
+        "r2c",
+        "fp32"
+      ],
+      [
+        "r0",
+        "fp16"
+      ]
+    ],
+    "images": [
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000001_02999_d_0000005.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000001_08414_d_0000013.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000023_00300_d_0000009.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000026_01000_d_0000026.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000026_04978_d_0000034.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000069_02480_d_0000007.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000103_00180_d_0000026.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000103_04513_d_0000034.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000117_00112_d_0000087.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000153_01201_d_0000001.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000154_02001_d_0000001.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000162_00801_d_0000001.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000193_01876_d_0000113.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000194_00399_d_0000121.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000213_03478_d_0000242.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000215_01395_d_0000259.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000223_01802_d_0000005.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000242_01912_d_0000008.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000242_06010_d_0000017.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000244_03000_d_0000007.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000249_00235_d_0000002.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000249_03900_d_0000011.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000271_00201_d_0000375.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000271_02601_d_0000386.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000271_05801_d_0000401.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000273_05601_d_0000466.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000276_02001_d_0000517.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000276_03801_d_0000526.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000276_05801_d_0000536.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000277_02001_d_0000549.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000277_04401_d_0000560.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000280_01201_d_0000618.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000280_02801_d_0000626.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000287_00201_d_0000760.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000287_02001_d_0000769.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000287_04801_d_0000781.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000289_01401_d_0000818.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000289_03601_d_0000829.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000289_05201_d_0000837.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000289_07001_d_0000846.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000291_01401_d_0000875.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000291_03601_d_0000886.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000295_00200_d_0000022.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000295_02200_d_0000032.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000301_01201_d_0000162.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000312_02201_d_0000425.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000316_00401_d_0000521.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000316_02201_d_0000530.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000327_01201_d_0000717.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000327_03801_d_0000730.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000330_01201_d_0000806.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000330_03201_d_0000816.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000333_02353_d_0000013.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000335_00197_d_0000044.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000335_02549_d_0000056.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000335_05685_d_0000072.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000346_03921_d_0000366.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000356_01961_d_0000639.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000356_04117_d_0000650.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000359_00981_d_0000704.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000360_00001_d_0000713.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000360_03137_d_0000729.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000360_06665_d_0000747.jpg",
+      "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-val/images/0000364_01765_d_0000782.jpg"
+    ]
+  }
+}

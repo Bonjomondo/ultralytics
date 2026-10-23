@@ -203,3 +203,18 @@ calibration_*.npy
 # Training logs
 args.yaml
 results.csv
+
+# Compact, web-readable experiment archives (see AGENTS.md)
+/experiments/**/source_before.tar.gz
+/experiments/**/source_snapshot.tar.gz
+/experiments/**/repair_backups/
+/experiments/**/queue.lock
+/experiments/**/resume_launch_*.json
+/experiments/r18_na_ablation/r2_naifi_20261021/inference_benchmark_*/
+/docs/experiment_reports/**/raw/history/benchmark*.json
+/docs/experiment_reports/**/MANIFEST.server.sha256
+
+# Keep short benchmark evidence and deliberate report artifacts.
+!/docs/experiment_reports/**/raw/benchmark_*.log
+!/docs/experiment_reports/**/raw/inference_*/results.csv
+!/docs/experiment_reports/**/figures/*.svg

@@ -1,0 +1,18 @@
+{
+  "validated_at": "2026-10-23T10:53:27.036056+08:00",
+  "training_and_accuracy_variants": [
+    "r0",
+    "r1",
+    "r2a",
+    "r2b",
+    "r2c"
+  ],
+  "benchmark_configurations": 10,
+  "forward_samples_total": 4500,
+  "pipeline_samples_total": 1920,
+  "all_checkpoint_hashes_match": true,
+  "all_accuracy_protocols_match": true,
+  "all_runtime_dtypes_match": true,
+  "all_timing_summaries_match_raw_samples": true,
+  "training_recipe_differences": []
+}

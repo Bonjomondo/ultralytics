@@ -1,0 +1,13 @@
+{
+  "fixed_utc": "2026-10-22T06:00:45.666094+00:00",
+  "backup": "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/ultralytics/experiments/r18_na_ablation/r2_naifi_20261021/repair_backups/20261022T060045Z",
+  "r2a_checkpoint_sha256": {
+    "best.pt": "760723fe77e786316ab56cfcba0dd31970bb6dd0167e49a5bca3fb994dcda02d",
+    "last.pt": "760723fe77e786316ab56cfcba0dd31970bb6dd0167e49a5bca3fb994dcda02d"
+  },
+  "changed_files": {
+    "evaluate_r2.py": "446fc5558c6ac5f30d8c3f8f8550a0238934f78b240703f13e6dd46e8db04c02",
+    "run_queue.py": "e818526fb8fdc864cde3e8d69c19d7bb2a7aaf720bccc34717de982a0f12dd35"
+  },
+  "training_source_manifest_preserved": true
+}

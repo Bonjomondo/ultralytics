@@ -1,0 +1,7 @@
+{
+  "created_utc": "2026-10-23T02:26:02.269875+00:00",
+  "project": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics",
+  "report_directory": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/docs/experiment_reports/2026-10-23_r18_na_ablation",
+  "purpose": "汇总五组已完成 R18 消融实验，补齐 R2b/R2c 并在空闲 GPU 上统一重测五组 FP32/FP16 推理性能；不新增训练、不修改训练源码、配置或权重。",
+  "report_flavor": null
+}

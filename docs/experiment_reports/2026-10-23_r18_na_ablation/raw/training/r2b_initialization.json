@@ -1,0 +1,34 @@
+{
+  "seed": 0,
+  "shared_state_sha256": "1539bc4de7f6bf17b75bd06b32a78d0b71b8ed52927bfd37dd5422de601abb5d",
+  "reference_shared_state_sha256": "1539bc4de7f6bf17b75bd06b32a78d0b71b8ed52927bfd37dd5422de601abb5d",
+  "r0_full_state_sha256": "e1c9a8c9f9bb55b33b22a6ddf20386256b675014c21ff419e263405324432d08",
+  "shared_state_items": 525,
+  "shared_state_verified": true,
+  "removed_r0_state": [
+    "model.6.fc1.bias",
+    "model.6.fc1.weight",
+    "model.6.fc2.bias",
+    "model.6.fc2.weight",
+    "model.6.ma.in_proj_bias",
+    "model.6.ma.in_proj_weight",
+    "model.6.ma.out_proj.bias",
+    "model.6.ma.out_proj.weight"
+  ],
+  "new_variant_state": [
+    "model.6.attn.proj.bias",
+    "model.6.attn.proj.weight",
+    "model.6.attn.qkv.bias",
+    "model.6.attn.qkv.weight",
+    "model.6.attn.relative_position_bias",
+    "model.6.ffn.0.bias",
+    "model.6.ffn.0.weight",
+    "model.6.ffn.2.bias",
+    "model.6.ffn.2.weight"
+  ],
+  "shape_mismatches": {},
+  "source": "seeded R0 from scratch",
+  "model_config": "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/ultralytics/ultralytics/cfg/models/rt-detr/rtdetr-resnet18-p5-naifi.yaml",
+  "amp": false,
+  "gradient_sampling": "first three training batches per epoch; scaled if AMP is enabled"
+}

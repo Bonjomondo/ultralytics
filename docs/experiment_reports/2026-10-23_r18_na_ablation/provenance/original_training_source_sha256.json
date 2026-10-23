@@ -1,0 +1,11 @@
+{
+  "train_rtdetr_r18_na.py": "fe6d643d1a4c4348b28cdf800adc2ffd0ddc8acdcfcbdb8fbf04cc5c0f29d2f8",
+  "ultralytics/nn/modules/rtdetr_na.py": "40864c2cad00596329f923c655dcb84c2a135e890e87cb5ba0f8df2fcd82d95e",
+  "ultralytics/nn/modules/__init__.py": "f9ebe4b88f33b459889b4e94c2c6b68fa712f041e694d5af78477a6ea04e4768",
+  "ultralytics/nn/tasks.py": "657a8ac6d55d44e2627885650675ab092116142b1f8cc006100c220a56154096",
+  "ultralytics/cfg/models/rt-detr/rtdetr-resnet18-p4-na5.yaml": "74ad031713e57c44e721ec1b3d673f9489731a53da8a196f6207c04f37e70939",
+  "ultralytics/cfg/models/rt-detr/rtdetr-resnet18-p5-naifi-k11.yaml": "a27e9db1536fcd2da5efae757c8abd1b0583f16c64c0f8c0ebb2f65f69814fc8",
+  "ultralytics/cfg/models/rt-detr/rtdetr-resnet18-p5-naifi-no-rpb.yaml": "51fd9d3bd81d4a11ffaa28ecdad10bf7fdbcc8d07b8eafe3b6c04a33fb5f79d7",
+  "ultralytics/cfg/models/rt-detr/rtdetr-resnet18-p5-naifi.yaml": "b27d0fe3acf54ff726063c1363491bcd4a01d2dd1af35b23b74e7ab6d6ed2cc9",
+  "ultralytics/cfg/models/rt-detr/rtdetr-resnet18.yaml": "c18c87a7bcb2904834ae3b42d68ed6d9c19e62b271e98d1f132c516c13d1c98b"
+}

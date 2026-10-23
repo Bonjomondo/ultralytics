@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run R1 (default) or its paired R0 baseline on VisDrone, with training health logs.
+"""Run R0/R1 or P5-NAIFI R2 ablations on VisDrone, with training health logs.
 
     python train_rtdetr_r18_na.py --variant r1 --device 0
     python train_rtdetr_r18_na.py --variant r0 --device 0
@@ -32,6 +32,10 @@ CONFIG_DIR = ROOT / "ultralytics/cfg/models/rt-detr"
 MODEL_CONFIGS = {
     "r0": CONFIG_DIR / "rtdetr-resnet18.yaml",
     "r1": CONFIG_DIR / "rtdetr-resnet18-p4-na5.yaml",
+    "r2": CONFIG_DIR / "rtdetr-resnet18-p5-naifi.yaml",
+    "r2a": CONFIG_DIR / "rtdetr-resnet18-p5-naifi-no-rpb.yaml",
+    "r2b": CONFIG_DIR / "rtdetr-resnet18-p5-naifi.yaml",
+    "r2c": CONFIG_DIR / "rtdetr-resnet18-p5-naifi-k11.yaml",
 }
 RECIPE = {
     **PAPER_RECIPE,
@@ -51,21 +55,43 @@ def build_ablation_model(cfg, nc=10, ch=3, seed=0, weights=None, verbose=False):
         torch.manual_seed(seed)
         baseline = RTDETRDetectionModel(str(MODEL_CONFIGS["r0"]), nc=nc, ch=ch, verbose=False)
         model = RTDETRDetectionModel(cfg, nc=nc, ch=ch, verbose=verbose)
-        common = baseline.state_dict()
-        model.load_state_dict(common, strict=False)
         if weights is not None:
             if weights.yaml["backbone"] != baseline.yaml["backbone"]:
                 raise ValueError("Initialization checkpoint must use this experiment's ResNet18-vd backbone")
+            baseline.load(weights, verbose=False)
+        reference = baseline.state_dict()
+        initial = model.state_dict()
+        common = {name: value for name, value in reference.items()
+                  if name in initial and initial[name].shape == value.shape}
+        model.load_state_dict(common, strict=False)
+        if weights is not None:
             model.load(weights, verbose=verbose)
-        digest = hashlib.sha256()
         state = model.state_dict()
+        digest = hashlib.sha256()
+        reference_digest = hashlib.sha256()
+        baseline_digest = hashlib.sha256()
+        for name in sorted(reference):
+            baseline_digest.update(name.encode())
+            baseline_digest.update(reference[name].detach().cpu().contiguous().numpy().tobytes())
         for name in sorted(common):
+            if not torch.equal(state[name], reference[name]):
+                raise RuntimeError(f"Shared initialization mismatch: {name}")
             digest.update(name.encode())
             digest.update(state[name].detach().cpu().contiguous().numpy().tobytes())
+            reference_digest.update(name.encode())
+            reference_digest.update(reference[name].detach().cpu().contiguous().numpy().tobytes())
         model.ablation_initialization = {
             "seed": seed,
             "shared_state_sha256": digest.hexdigest(),
+            "reference_shared_state_sha256": reference_digest.hexdigest(),
+            "r0_full_state_sha256": baseline_digest.hexdigest(),
             "shared_state_items": len(common),
+            "shared_state_verified": True,
+            "removed_r0_state": sorted(set(reference) - set(common)),
+            "new_variant_state": sorted(set(state) - set(common)),
+            "shape_mismatches": {name: [list(reference[name].shape), list(state[name].shape)]
+                                 for name in set(reference) & set(state)
+                                 if reference[name].shape != state[name].shape},
             "source": "checkpoint" if weights is not None else "seeded R0 from scratch",
         }
     return model
@@ -245,9 +271,10 @@ def main():
     cfg = MODEL_CONFIGS[args.variant]
     model = RTDETR(str(args.resume or cfg))
     if args.resume:
-        has_na = any(isinstance(m, ResidualLocalRefine) for m in model.model.modules())
-        if has_na != (args.variant == "r1") or model.model.yaml["backbone"] != RTDETR(str(cfg)).model.yaml["backbone"]:
-            raise ValueError("Resume checkpoint does not match the selected R18 variant")
+        expected = RTDETR(str(cfg)).model.yaml
+        actual = model.model.yaml
+        if any(actual[key] != expected[key] for key in ("backbone", "head")):
+            raise ValueError("Resume checkpoint does not match the selected R18 architecture/window/RPB")
     elif args.pretrained:
         model.load(str(args.pretrained))
     TrainingHealth().attach(model)

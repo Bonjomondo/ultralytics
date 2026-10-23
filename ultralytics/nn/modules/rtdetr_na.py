@@ -10,7 +10,7 @@ import torch.nn.functional as F
 from .conv import Conv
 from .transformer import LayerNorm2d
 
-__all__ = ("NeighborhoodAttention2d", "ResNet18Stem", "ResNet18Stage", "ResidualLocalRefine")
+__all__ = ("NeighborhoodAttention2d", "ResNet18Stem", "ResNet18Stage", "ResidualLocalRefine", "NAIFI")
 
 
 class ResNet18Stem(nn.Module):
@@ -145,3 +145,24 @@ class ResidualLocalRefine(nn.Module):
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         """Apply the gated refinement without modifying the input tensor in place."""
         return x + self.gamma * self.project(self.attn(self.reduce(self.norm(x))))
+
+
+class NAIFI(nn.Module):
+    """AIFI-compatible P5 encoder using masked neighborhood attention and a pointwise FFN."""
+
+    def __init__(self, c1: int, cm: int = 1024, num_heads: int = 8,
+                 kernel_size: int = 7, use_rpb: bool = True):
+        """Keep all non-RPB initial weights identical across the R2 window/RPB ablations."""
+        super().__init__()
+        self.attn = NeighborhoodAttention2d(c1, num_heads, kernel_size, use_rpb=False)
+        self.norm1 = LayerNorm2d(c1)
+        self.ffn = nn.Sequential(nn.Conv2d(c1, cm, 1), nn.GELU(), nn.Conv2d(cm, c1, 1))
+        self.norm2 = LayerNorm2d(c1)
+        if use_rpb:
+            self.attn.relative_position_bias = nn.Parameter(torch.zeros(num_heads, kernel_size * kernel_size))
+            nn.init.trunc_normal_(self.attn.relative_position_bias, std=0.02)
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        """Return P5 features with unchanged channels and spatial resolution."""
+        x = self.norm1(x + self.attn(x))
+        return self.norm2(x + self.ffn(x))
