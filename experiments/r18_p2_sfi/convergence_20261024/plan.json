@@ -1,0 +1,23 @@
+{
+  "order": [
+    "c2",
+    "c0"
+  ],
+  "seed": 0,
+  "source_epochs": 150,
+  "minimum_additional_epochs": 150,
+  "maximum_additional_epochs": 350,
+  "optimizer_restart": true,
+  "lr0": 0.0001,
+  "lrf": 1.0,
+  "warmup_epochs": 3,
+  "batch": 8,
+  "nbs": 64,
+  "amp": false,
+  "plateau": "50-epoch best gain<=0.1pp and abs(mean20-prev20)<=0.1pp after >=150 additional epochs",
+  "base_commit": "a3568d92ae8bd9b96b6637394bab617e3dd24c4c",
+  "source_last_sha256": {
+    "c0": "06094202dcacc0db8fbba45a41c40de98ebbc82aae26901f9f15f0296cbf055f",
+    "c2": "bc2e85bcc183a6a094f4e345b4d4f8f4dfc965fc5c652f17b80cf9ad7f201504"
+  }
+}
