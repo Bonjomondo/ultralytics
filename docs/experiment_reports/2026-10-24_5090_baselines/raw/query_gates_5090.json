@@ -1,0 +1,642 @@
+{
+  "c0": {
+    "conditions": [
+      {
+        "coverage_all_gt": [
+          {
+            "budget": 300,
+            "class_correct_coverage": 0.002296211251435132,
+            "class_correct_covered": 2,
+            "coverage": 0.018369690011481057,
+            "covered": 16,
+            "denominator": 871,
+            "group": "all",
+            "iou_threshold": 0.3,
+            "newly_class_correct_covered": 0,
+            "newly_covered": 8
+          },
+          {
+            "budget": 300,
+            "class_correct_coverage": 0.0,
+            "class_correct_covered": 0,
+            "coverage": 0.002296211251435132,
+            "covered": 2,
+            "denominator": 871,
+            "group": "all",
+            "iou_threshold": 0.5,
+            "newly_class_correct_covered": 0,
+            "newly_covered": 1
+          },
+          {
+            "budget": 300,
+            "class_correct_coverage": 0.0,
+            "class_correct_covered": 0,
+            "coverage": 0.0,
+            "covered": 0,
+            "denominator": 871,
+            "group": "all",
+            "iou_threshold": 0.75,
+            "newly_class_correct_covered": 0,
+            "newly_covered": 0
+          }
+        ],
+        "coverage_summary_sha256": "6426fad53dd3c80ca1ff7de22006f7ab9544715568fed8775aab2044d19f4c34",
+        "delta_pp": {
+          "AP": 0.0,
+          "AP50": 0.0,
+          "AP75": 0.0,
+          "APl": 0.0,
+          "APm": 0.0,
+          "APs": 0.0,
+          "AR1": 0.0,
+          "AR10": 0.0,
+          "AR100": 0.0,
+          "ARl": 0.0,
+          "ARm": 0.0,
+          "ARs": 0.0
+        },
+        "images": 8,
+        "input_gt_identity_sha256": "bca5276c981967b11a98041d6ce99e153e0900304d0a1553354ac19e04b21e9f",
+        "manifest_sha256": "db7218d4528ab2a4ee7e4d6a44de36f0b31229eb90d8c42e60f23fcfcec81a6c",
+        "metrics": {
+          "AP": 0.0,
+          "AP50": 0.0,
+          "AP75": 0.0,
+          "APl": 0.0,
+          "APm": 0.0,
+          "APs": 0.0,
+          "AR1": 0.0,
+          "AR10": 0.0,
+          "AR100": 0.0,
+          "ARl": 0.0,
+          "ARm": 0.0,
+          "ARs": 0.0
+        },
+        "predictions_file_sha256": "1f172ab9f0b42f138e9b74319fbd9c68803974920a185cec7bb4391d048efc21",
+        "queries": 300
+      },
+      {
+        "coverage_all_gt": [
+          {
+            "budget": 250,
+            "class_correct_coverage": 0.002296211251435132,
+            "class_correct_covered": 2,
+            "coverage": 0.009184845005740528,
+            "covered": 8,
+            "denominator": 871,
+            "group": "all",
+            "iou_threshold": 0.3,
+            "newly_class_correct_covered": 0,
+            "newly_covered": 3
+          },
+          {
+            "budget": 250,
+            "class_correct_coverage": 0.0,
+            "class_correct_covered": 0,
+            "coverage": 0.001148105625717566,
+            "covered": 1,
+            "denominator": 871,
+            "group": "all",
+            "iou_threshold": 0.5,
+            "newly_class_correct_covered": 0,
+            "newly_covered": 0
+          },
+          {
+            "budget": 250,
+            "class_correct_coverage": 0.0,
+            "class_correct_covered": 0,
+            "coverage": 0.0,
+            "covered": 0,
+            "denominator": 871,
+            "group": "all",
+            "iou_threshold": 0.75,
+            "newly_class_correct_covered": 0,
+            "newly_covered": 0
+          }
+        ],
+        "coverage_summary_sha256": "24fdf74346f89fb08cbf5036203cd04194202bc37c2dc7e941df72709ca1dfa2",
+        "delta_pp": {
+          "AP": 0.0,
+          "AP50": 0.0,
+          "AP75": 0.0,
+          "APl": 0.0,
+          "APm": 0.0,
+          "APs": 0.0,
+          "AR1": 0.0,
+          "AR10": 0.0,
+          "AR100": 0.0,
+          "ARl": 0.0,
+          "ARm": 0.0,
+          "ARs": 0.0
+        },
+        "images": 8,
+        "input_gt_identity_sha256": "bca5276c981967b11a98041d6ce99e153e0900304d0a1553354ac19e04b21e9f",
+        "manifest_sha256": "bc0902b93eabcc16283481153b0c5c6b9f4c42ebce8a27680497b060ea755ba8",
+        "metrics": {
+          "AP": 0.0,
+          "AP50": 0.0,
+          "AP75": 0.0,
+          "APl": 0.0,
+          "APm": 0.0,
+          "APs": 0.0,
+          "AR1": 0.0,
+          "AR10": 0.0,
+          "AR100": 0.0,
+          "ARl": 0.0,
+          "ARm": 0.0,
+          "ARs": 0.0
+        },
+        "predictions_file_sha256": "40a0511d8d391759859bcbf08c4606292bec3c8dea6ab00d69575a168ff27f68",
+        "queries": 250
+      },
+      {
+        "coverage_all_gt": [
+          {
+            "budget": 200,
+            "class_correct_coverage": 0.002296211251435132,
+            "class_correct_covered": 2,
+            "coverage": 0.0057405281285878304,
+            "covered": 5,
+            "denominator": 871,
+            "group": "all",
+            "iou_threshold": 0.3,
+            "newly_class_correct_covered": 2,
+            "newly_covered": 2
+          },
+          {
+            "budget": 200,
+            "class_correct_coverage": 0.0,
+            "class_correct_covered": 0,
+            "coverage": 0.001148105625717566,
+            "covered": 1,
+            "denominator": 871,
+            "group": "all",
+            "iou_threshold": 0.5,
+            "newly_class_correct_covered": 0,
+            "newly_covered": 0
+          },
+          {
+            "budget": 200,
+            "class_correct_coverage": 0.0,
+            "class_correct_covered": 0,
+            "coverage": 0.0,
+            "covered": 0,
+            "denominator": 871,
+            "group": "all",
+            "iou_threshold": 0.75,
+            "newly_class_correct_covered": 0,
+            "newly_covered": 0
+          }
+        ],
+        "coverage_summary_sha256": "fa1a4f7dc5a849f1edf1bcbb7d38f573b1ac3ae399818805a22ea3e3a88474e1",
+        "delta_pp": {
+          "AP": 0.0,
+          "AP50": 0.0,
+          "AP75": 0.0,
+          "APl": 0.0,
+          "APm": 0.0,
+          "APs": 0.0,
+          "AR1": 0.0,
+          "AR10": 0.0,
+          "AR100": 0.0,
+          "ARl": 0.0,
+          "ARm": 0.0,
+          "ARs": 0.0
+        },
+        "images": 8,
+        "input_gt_identity_sha256": "bca5276c981967b11a98041d6ce99e153e0900304d0a1553354ac19e04b21e9f",
+        "manifest_sha256": "ebe1c547644de1d109bffd844b5c4f674373eabcd89b25fb06942f18fb68c723",
+        "metrics": {
+          "AP": 0.0,
+          "AP50": 0.0,
+          "AP75": 0.0,
+          "APl": 0.0,
+          "APm": 0.0,
+          "APs": 0.0,
+          "AR1": 0.0,
+          "AR10": 0.0,
+          "AR100": 0.0,
+          "ARl": 0.0,
+          "ARm": 0.0,
+          "ARs": 0.0
+        },
+        "predictions_file_sha256": "65d69300924109109ee7ed1881230064be04efd58ac4a5978a88de490e74a228",
+        "queries": 200
+      },
+      {
+        "coverage_all_gt": [
+          {
+            "budget": 150,
+            "class_correct_coverage": 0.0,
+            "class_correct_covered": 0,
+            "coverage": 0.003444316877152698,
+            "covered": 3,
+            "denominator": 871,
+            "group": "all",
+            "iou_threshold": 0.3,
+            "newly_class_correct_covered": 0,
+            "newly_covered": 3
+          },
+          {
+            "budget": 150,
+            "class_correct_coverage": 0.0,
+            "class_correct_covered": 0,
+            "coverage": 0.001148105625717566,
+            "covered": 1,
+            "denominator": 871,
+            "group": "all",
+            "iou_threshold": 0.5,
+            "newly_class_correct_covered": 0,
+            "newly_covered": 1
+          },
+          {
+            "budget": 150,
+            "class_correct_coverage": 0.0,
+            "class_correct_covered": 0,
+            "coverage": 0.0,
+            "covered": 0,
+            "denominator": 871,
+            "group": "all",
+            "iou_threshold": 0.75,
+            "newly_class_correct_covered": 0,
+            "newly_covered": 0
+          }
+        ],
+        "coverage_summary_sha256": "335aa4be1d251fe9afb859b9d8e8b5f0cc7c7324e57b00acf5d1c7a8c03de6ba",
+        "delta_pp": {
+          "AP": 0.0,
+          "AP50": 0.0,
+          "AP75": 0.0,
+          "APl": 0.0,
+          "APm": 0.0,
+          "APs": 0.0,
+          "AR1": 0.0,
+          "AR10": 0.0,
+          "AR100": 0.0,
+          "ARl": 0.0,
+          "ARm": 0.0,
+          "ARs": 0.0
+        },
+        "images": 8,
+        "input_gt_identity_sha256": "bca5276c981967b11a98041d6ce99e153e0900304d0a1553354ac19e04b21e9f",
+        "manifest_sha256": "ccbc30175922ef2f972d93778da37fd69ef236c650958343f24092add08ecbb2",
+        "metrics": {
+          "AP": 0.0,
+          "AP50": 0.0,
+          "AP75": 0.0,
+          "APl": 0.0,
+          "APm": 0.0,
+          "APs": 0.0,
+          "AR1": 0.0,
+          "AR10": 0.0,
+          "AR100": 0.0,
+          "ARl": 0.0,
+          "ARm": 0.0,
+          "ARs": 0.0
+        },
+        "predictions_file_sha256": "319231374f8ebbeb353c868e7634ba73b2b36b29198555f963940668b21095ea",
+        "queries": 150
+      }
+    ],
+    "native_observation_checks": {
+      "q150": {
+        "all_batches_passed": true,
+        "identity_verification": "exact_native_observed_restored"
+      },
+      "q200": {
+        "all_batches_passed": true,
+        "identity_verification": "exact_native_observed_restored"
+      },
+      "q250": {
+        "all_batches_passed": true,
+        "identity_verification": "exact_native_observed_restored"
+      },
+      "q300": {
+        "all_batches_passed": true,
+        "identity_verification": "exact_native_observed_restored"
+      }
+    },
+    "run": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_budget_5090/5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c0-1e-gate-s0-query-gate",
+    "scope": "8-real-image engineering gate; one-epoch model is not an architecture/compression comparison"
+  },
+  "c2": {
+    "conditions": [
+      {
+        "coverage_all_gt": [
+          {
+            "budget": 300,
+            "class_correct_coverage": 0.003444316877152698,
+            "class_correct_covered": 3,
+            "coverage": 0.01722158438576349,
+            "covered": 15,
+            "denominator": 871,
+            "group": "all",
+            "iou_threshold": 0.3,
+            "newly_class_correct_covered": 0,
+            "newly_covered": 4
+          },
+          {
+            "budget": 300,
+            "class_correct_coverage": 0.001148105625717566,
+            "class_correct_covered": 1,
+            "coverage": 0.003444316877152698,
+            "covered": 3,
+            "denominator": 871,
+            "group": "all",
+            "iou_threshold": 0.5,
+            "newly_class_correct_covered": 0,
+            "newly_covered": 0
+          },
+          {
+            "budget": 300,
+            "class_correct_coverage": 0.0,
+            "class_correct_covered": 0,
+            "coverage": 0.001148105625717566,
+            "covered": 1,
+            "denominator": 871,
+            "group": "all",
+            "iou_threshold": 0.75,
+            "newly_class_correct_covered": 0,
+            "newly_covered": 0
+          }
+        ],
+        "coverage_summary_sha256": "8f558d54b18616f64766d8ef8009a06ac6102b2fd4701b7eb2c473e751d57f9f",
+        "delta_pp": {
+          "AP": 0.0,
+          "AP50": 0.0,
+          "AP75": 0.0,
+          "APl": 0.0,
+          "APm": 0.0,
+          "APs": 0.0,
+          "AR1": 0.0,
+          "AR10": 0.0,
+          "AR100": 0.0,
+          "ARl": 0.0,
+          "ARm": 0.0,
+          "ARs": 0.0
+        },
+        "images": 8,
+        "input_gt_identity_sha256": "bca5276c981967b11a98041d6ce99e153e0900304d0a1553354ac19e04b21e9f",
+        "manifest_sha256": "6a435e3787679353e714a11413d0fa7c7c7da0e04538450d43b0d8b5a9a3fd3d",
+        "metrics": {
+          "AP": 0.0,
+          "AP50": 0.0,
+          "AP75": 0.0,
+          "APl": 0.0,
+          "APm": 0.0,
+          "APs": 0.0,
+          "AR1": 0.0,
+          "AR10": 0.0,
+          "AR100": 0.0,
+          "ARl": 0.0,
+          "ARm": 0.0,
+          "ARs": 0.0
+        },
+        "predictions_file_sha256": "5535df7621d583de3a9940c715bf11c2ff51f1b7d91a832224d31f88a6bc57f1",
+        "queries": 300
+      },
+      {
+        "coverage_all_gt": [
+          {
+            "budget": 250,
+            "class_correct_coverage": 0.003444316877152698,
+            "class_correct_covered": 3,
+            "coverage": 0.012629161882893225,
+            "covered": 11,
+            "denominator": 871,
+            "group": "all",
+            "iou_threshold": 0.3,
+            "newly_class_correct_covered": 1,
+            "newly_covered": 1
+          },
+          {
+            "budget": 250,
+            "class_correct_coverage": 0.001148105625717566,
+            "class_correct_covered": 1,
+            "coverage": 0.003444316877152698,
+            "covered": 3,
+            "denominator": 871,
+            "group": "all",
+            "iou_threshold": 0.5,
+            "newly_class_correct_covered": 0,
+            "newly_covered": 0
+          },
+          {
+            "budget": 250,
+            "class_correct_coverage": 0.0,
+            "class_correct_covered": 0,
+            "coverage": 0.001148105625717566,
+            "covered": 1,
+            "denominator": 871,
+            "group": "all",
+            "iou_threshold": 0.75,
+            "newly_class_correct_covered": 0,
+            "newly_covered": 0
+          }
+        ],
+        "coverage_summary_sha256": "80e5802806d4f8b7ba33a37f51f6c6897d2b74f9fae155c8833412f0570baef0",
+        "delta_pp": {
+          "AP": 0.0,
+          "AP50": 0.0,
+          "AP75": 0.0,
+          "APl": 0.0,
+          "APm": 0.0,
+          "APs": 0.0,
+          "AR1": 0.0,
+          "AR10": 0.0,
+          "AR100": 0.0,
+          "ARl": 0.0,
+          "ARm": 0.0,
+          "ARs": 0.0
+        },
+        "images": 8,
+        "input_gt_identity_sha256": "bca5276c981967b11a98041d6ce99e153e0900304d0a1553354ac19e04b21e9f",
+        "manifest_sha256": "c01061cfc84be992e681b9113a323918f3743d217e5c1551239f5cc07b20b845",
+        "metrics": {
+          "AP": 0.0,
+          "AP50": 0.0,
+          "AP75": 0.0,
+          "APl": 0.0,
+          "APm": 0.0,
+          "APs": 0.0,
+          "AR1": 0.0,
+          "AR10": 0.0,
+          "AR100": 0.0,
+          "ARl": 0.0,
+          "ARm": 0.0,
+          "ARs": 0.0
+        },
+        "predictions_file_sha256": "10d43349e75586ab44dbfd9eb25e5ad9bf0b78c2e7c492ae5c04b29928b44312",
+        "queries": 250
+      },
+      {
+        "coverage_all_gt": [
+          {
+            "budget": 200,
+            "class_correct_coverage": 0.002296211251435132,
+            "class_correct_covered": 2,
+            "coverage": 0.011481056257175661,
+            "covered": 10,
+            "denominator": 871,
+            "group": "all",
+            "iou_threshold": 0.3,
+            "newly_class_correct_covered": 0,
+            "newly_covered": 2
+          },
+          {
+            "budget": 200,
+            "class_correct_coverage": 0.001148105625717566,
+            "class_correct_covered": 1,
+            "coverage": 0.003444316877152698,
+            "covered": 3,
+            "denominator": 871,
+            "group": "all",
+            "iou_threshold": 0.5,
+            "newly_class_correct_covered": 0,
+            "newly_covered": 0
+          },
+          {
+            "budget": 200,
+            "class_correct_coverage": 0.0,
+            "class_correct_covered": 0,
+            "coverage": 0.001148105625717566,
+            "covered": 1,
+            "denominator": 871,
+            "group": "all",
+            "iou_threshold": 0.75,
+            "newly_class_correct_covered": 0,
+            "newly_covered": 0
+          }
+        ],
+        "coverage_summary_sha256": "f9b0345ce311980b5eb04f8633dd96cd791e7b27a678db8fe7b5bba51e1e0e27",
+        "delta_pp": {
+          "AP": 0.0,
+          "AP50": 0.0,
+          "AP75": 0.0,
+          "APl": 0.0,
+          "APm": 0.0,
+          "APs": 0.0,
+          "AR1": 0.0,
+          "AR10": 0.0,
+          "AR100": 0.0,
+          "ARl": 0.0,
+          "ARm": 0.0,
+          "ARs": 0.0
+        },
+        "images": 8,
+        "input_gt_identity_sha256": "bca5276c981967b11a98041d6ce99e153e0900304d0a1553354ac19e04b21e9f",
+        "manifest_sha256": "7bfcae833d92504712d2d4a6c334a0cb46b71d8595d3788ccdb553e0e0324196",
+        "metrics": {
+          "AP": 0.0,
+          "AP50": 0.0,
+          "AP75": 0.0,
+          "APl": 0.0,
+          "APm": 0.0,
+          "APs": 0.0,
+          "AR1": 0.0,
+          "AR10": 0.0,
+          "AR100": 0.0,
+          "ARl": 0.0,
+          "ARm": 0.0,
+          "ARs": 0.0
+        },
+        "predictions_file_sha256": "ccc89f021e53235f936e2f32990d42e9ed1a07e0a2e5f4cce67124a9e5683830",
+        "queries": 200
+      },
+      {
+        "coverage_all_gt": [
+          {
+            "budget": 150,
+            "class_correct_coverage": 0.002296211251435132,
+            "class_correct_covered": 2,
+            "coverage": 0.009184845005740528,
+            "covered": 8,
+            "denominator": 871,
+            "group": "all",
+            "iou_threshold": 0.3,
+            "newly_class_correct_covered": 2,
+            "newly_covered": 8
+          },
+          {
+            "budget": 150,
+            "class_correct_coverage": 0.001148105625717566,
+            "class_correct_covered": 1,
+            "coverage": 0.003444316877152698,
+            "covered": 3,
+            "denominator": 871,
+            "group": "all",
+            "iou_threshold": 0.5,
+            "newly_class_correct_covered": 1,
+            "newly_covered": 3
+          },
+          {
+            "budget": 150,
+            "class_correct_coverage": 0.0,
+            "class_correct_covered": 0,
+            "coverage": 0.001148105625717566,
+            "covered": 1,
+            "denominator": 871,
+            "group": "all",
+            "iou_threshold": 0.75,
+            "newly_class_correct_covered": 0,
+            "newly_covered": 1
+          }
+        ],
+        "coverage_summary_sha256": "1b7bbdf182852fcfd092375f62fb749d20071e039ec2471f4083c283563cc3e0",
+        "delta_pp": {
+          "AP": 0.0,
+          "AP50": 0.0,
+          "AP75": 0.0,
+          "APl": 0.0,
+          "APm": 0.0,
+          "APs": 0.0,
+          "AR1": 0.0,
+          "AR10": 0.0,
+          "AR100": 0.0,
+          "ARl": 0.0,
+          "ARm": 0.0,
+          "ARs": 0.0
+        },
+        "images": 8,
+        "input_gt_identity_sha256": "bca5276c981967b11a98041d6ce99e153e0900304d0a1553354ac19e04b21e9f",
+        "manifest_sha256": "38b898ffb8cf2692cedb7ffadbb7dcf42cd5e41880f3ad80af80fb85d994745f",
+        "metrics": {
+          "AP": 0.0,
+          "AP50": 0.0,
+          "AP75": 0.0,
+          "APl": 0.0,
+          "APm": 0.0,
+          "APs": 0.0,
+          "AR1": 0.0,
+          "AR10": 0.0,
+          "AR100": 0.0,
+          "ARl": 0.0,
+          "ARm": 0.0,
+          "ARs": 0.0
+        },
+        "predictions_file_sha256": "7d2baffcfe0f566a34baf202f9b69e54f2623f27f2c80a5b0a25f85c5de38a69",
+        "queries": 150
+      }
+    ],
+    "native_observation_checks": {
+      "q150": {
+        "all_batches_passed": true,
+        "identity_verification": "exact_native_observed_restored"
+      },
+      "q200": {
+        "all_batches_passed": true,
+        "identity_verification": "exact_native_observed_restored"
+      },
+      "q250": {
+        "all_batches_passed": true,
+        "identity_verification": "exact_native_observed_restored"
+      },
+      "q300": {
+        "all_batches_passed": true,
+        "identity_verification": "exact_native_observed_restored"
+      }
+    },
+    "run": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_budget_5090/5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c2-1e-gate-s0-query-gate",
+    "scope": "8-real-image engineering gate; one-epoch model is not an architecture/compression comparison"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "amp": false,
+  "capability": [
+    12,
+    0
+  ],
+  "cuda_available": true,
+  "cuda_visible_devices": "0",
+  "cudnn": 92400,
+  "cudnn_benchmark": false,
+  "cudnn_deterministic": false,
+  "cudnn_tf32": false,
+  "deterministic_algorithms": false,
+  "dtype": "float32",
+  "gpu": "NVIDIA GeForce RTX 5090 D v2",
+  "matmul_tf32": false,
+  "nvidia_smi": {
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "0, NVIDIA GeForce RTX 5090 D v2, 580.178.04"
+  },
+  "packages": {
+    "numpy": "1.26.4",
+    "opencv-python": "4.11.0.86",
+    "polars": "2.0.0",
+    "pycocotools": "2.0.11",
+    "scipy": "1.17.1",
+    "torchvision": "0.29.0",
+    "ultralytics-thop": null
+  },
+  "python": "3.11.16",
+  "python_executable": "/tmp/zhj-uav-5090-venv/bin/python",
+  "torch": "2.14.0+cu130",
+  "torch_cuda": "13.0",
+  "total_memory_bytes": 25138495488
+}

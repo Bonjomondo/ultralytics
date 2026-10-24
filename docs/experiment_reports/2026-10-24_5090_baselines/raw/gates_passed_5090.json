@@ -1,0 +1,42 @@
+{
+  "finished_utc": "2026-10-24T14:05:28.491988+00:00",
+  "scope": "engineering gate; one epoch is not an AP comparison",
+  "source_pin_sha256": "a11d34b8bc7794b9898f79e3d445f52859dfd137e0da25a39592c7444a11b8a3",
+  "status": "passed",
+  "sweeps": {
+    "c0": {
+      "images": 8,
+      "run": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_budget_5090/5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c0-1e-gate-s0-query-gate",
+      "summary_sha256": "8cc29dc03018206e3bc6a38b33bdfafd9ed5a451e8a65bc4f993ac5518ca4131"
+    },
+    "c2": {
+      "images": 8,
+      "run": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_budget_5090/5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c2-1e-gate-s0-query-gate",
+      "summary_sha256": "0fe1624b28e4459ea722a7eafff75e5b756a536d4a541d932f628e21f5ced908"
+    }
+  },
+  "training": {
+    "c0": {
+      "checkpoint_sha256": {
+        "best.pt": "331f1b25b4408e7dd67e83782f4d59ca10e5e542ed8bd3ed69057a8890a651bb",
+        "last.pt": "331f1b25b4408e7dd67e83782f4d59ca10e5e542ed8bd3ed69057a8890a651bb",
+        "resume.pt": "53819a0364d24442d52d7eca39addb8ca2004642bcfc1adbc0346e452ca190d8"
+      },
+      "epochs": 1,
+      "run": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_budget_5090/5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c0-1e-gate-s0",
+      "shared_state_sha256": "1d9a8e81f45383d572f319a2039a24338a82f7847a9708e98ab4c0fed07b871e",
+      "status_sha256": "f0a292244d41b1809572a906b3f284d370d12e7acd409c31ba1ae517cc04e63b"
+    },
+    "c2": {
+      "checkpoint_sha256": {
+        "best.pt": "4ca42ed5a7f2ce5754bdd61cb34773a16f6329d321209b232a55b981da7eeac8",
+        "last.pt": "4ca42ed5a7f2ce5754bdd61cb34773a16f6329d321209b232a55b981da7eeac8",
+        "resume.pt": "3a7c3e9c70c05b1dbfae1da2af960c28dc5d2fd8e16f2996ef8e7ca0532b69ca"
+      },
+      "epochs": 1,
+      "run": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_budget_5090/5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c2-1e-gate-s0",
+      "shared_state_sha256": "1d9a8e81f45383d572f319a2039a24338a82f7847a9708e98ab4c0fed07b871e",
+      "status_sha256": "1a48f51f14fc91658c7bdfdfa428881f3342a1fd270c62632c69dd7c3f2be998"
+    }
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "c0": {
+    "checkpoint_sha256": {
+      "best": "331f1b25b4408e7dd67e83782f4d59ca10e5e542ed8bd3ed69057a8890a651bb",
+      "last": "331f1b25b4408e7dd67e83782f4d59ca10e5e542ed8bd3ed69057a8890a651bb",
+      "resume": "53819a0364d24442d52d7eca39addb8ca2004642bcfc1adbc0346e452ca190d8"
+    },
+    "checkpoint_storage_semantics": "Native trainer stores FP16 EMA and FP16 optimizer tensors; best/last are stripped at completion. resume.pt preserves the unstripped checkpoint. Reloaded evaluation models are converted to FP32; this does not recover discarded storage precision.",
+    "checkpoints": {
+      "best": {
+        "bytes": 40579343,
+        "path": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_budget_5090/5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c0-1e-gate-s0/weights/best.pt",
+        "sha256": "331f1b25b4408e7dd67e83782f4d59ca10e5e542ed8bd3ed69057a8890a651bb"
+      },
+      "last": {
+        "bytes": 40579343,
+        "path": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_budget_5090/5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c0-1e-gate-s0/weights/last.pt",
+        "sha256": "331f1b25b4408e7dd67e83782f4d59ca10e5e542ed8bd3ed69057a8890a651bb"
+      },
+      "resume": {
+        "bytes": 121242156,
+        "path": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_budget_5090/5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c0-1e-gate-s0/weights/resume.pt",
+        "sha256": "53819a0364d24442d52d7eca39addb8ca2004642bcfc1adbc0346e452ca190d8"
+      }
+    },
+    "completed_epochs": 1,
+    "environment": {
+      "amp": false,
+      "capability": [
+        12,
+        0
+      ],
+      "cuda_available": true,
+      "cuda_visible_devices": "0",
+      "cudnn": 92400,
+      "cudnn_benchmark": false,
+      "cudnn_deterministic": false,
+      "cudnn_tf32": false,
+      "deterministic_algorithms": false,
+      "dtype": "float32",
+      "gpu": "NVIDIA GeForce RTX 5090 D v2",
+      "matmul_tf32": false,
+      "nvidia_smi": {
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "0, NVIDIA GeForce RTX 5090 D v2, 580.178.04"
+      },
+      "packages": {
+        "numpy": "1.26.4",
+        "opencv-python": "4.11.0.86",
+        "polars": "2.0.0",
+        "pycocotools": "2.0.11",
+        "scipy": "1.17.1",
+        "torchvision": "0.29.0",
+        "ultralytics-thop": null
+      },
+      "python": "3.11.16",
+      "python_executable": "/tmp/zhj-uav-5090-venv/bin/python",
+      "torch": "2.14.0+cu130",
+      "torch_cuda": "13.0",
+      "total_memory_bytes": 25138495488
+    },
+    "expected_shared_state_sha256": "1d9a8e81f45383d572f319a2039a24338a82f7847a9708e98ab4c0fed07b871e",
+    "experiment_name": "5090-rtdetr-r18-c0-1e-gate-s0",
+    "fraction": 0.01,
+    "initialization": {
+      "excluded_slot": "model.14: baseline P3 projection versus candidate P2 downsampling",
+      "new_branch_seed": 1000,
+      "r0_full_state_sha256": "e1c9a8c9f9bb55b33b22a6ddf20386256b675014c21ff419e263405324432d08",
+      "seed": 0,
+      "shared_state_items": 527,
+      "shared_state_sha256": "1d9a8e81f45383d572f319a2039a24338a82f7847a9708e98ab4c0fed07b871e",
+      "shared_state_verified": true,
+      "source": "seeded R0 from scratch; no checkpoint or backbone pretrained weights"
+    },
+    "latest_epoch_health": {
+      "d1_delta_abs": 6.315208338492084e-06,
+      "d1_delta_finite": 1.0,
+      "d1_delta_query_variance": 1.4251416886879031e-12,
+      "d1_hidden_active_ratio": 0.5328440070152283,
+      "d1_hidden_query_variance": 0.013797583058476448,
+      "d2_delta_abs": 5.456809049064759e-06,
+      "d2_delta_finite": 1.0,
+      "d2_delta_query_variance": 1.196841887748934e-12,
+      "d2_hidden_active_ratio": 0.511044442653656,
+      "d2_hidden_query_variance": 0.012235834263265133,
+      "d3_delta_abs": 5.394049367168918e-06,
+      "d3_delta_finite": 1.0,
+      "d3_delta_query_variance": 1.2075800429056649e-12,
+      "d3_hidden_active_ratio": 0.5138607025146484,
+      "d3_hidden_query_variance": 0.01062810979783535,
+      "encoder_delta_abs": 6.157521056593396e-06,
+      "encoder_delta_finite": 1.0,
+      "encoder_delta_query_variance": 1.4550173132316102e-12,
+      "encoder_hidden_active_ratio": 0.4854535758495331,
+      "encoder_hidden_query_variance": 0.011941931210458279,
+      "epoch": 1,
+      "gamma": null,
+      "last_bbox_delta_logit_abs": 5.3220164772938006e-06,
+      "last_bbox_relu_active_ratio": 0.5111600160598755,
+      "last_bbox_step_abs": 6.510153980343603e-07,
+      "train_peak_allocated_mib": 6051.4013671875,
+      "train_seconds": 2.2203432419337332
+    },
+    "requested_epochs": 1,
+    "status": "completed"
+  },
+  "c2": {
+    "checkpoint_sha256": {
+      "best": "4ca42ed5a7f2ce5754bdd61cb34773a16f6329d321209b232a55b981da7eeac8",
+      "last": "4ca42ed5a7f2ce5754bdd61cb34773a16f6329d321209b232a55b981da7eeac8",
+      "resume": "3a7c3e9c70c05b1dbfae1da2af960c28dc5d2fd8e16f2996ef8e7ca0532b69ca"
+    },
+    "checkpoint_storage_semantics": "Native trainer stores FP16 EMA and FP16 optimizer tensors; best/last are stripped at completion. resume.pt preserves the unstripped checkpoint. Reloaded evaluation models are converted to FP32; this does not recover discarded storage precision.",
+    "checkpoints": {
+      "best": {
+        "bytes": 40660047,
+        "path": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_budget_5090/5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c2-1e-gate-s0/weights/best.pt",
+        "sha256": "4ca42ed5a7f2ce5754bdd61cb34773a16f6329d321209b232a55b981da7eeac8"
+      },
+      "last": {
+        "bytes": 40660047,
+        "path": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_budget_5090/5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c2-1e-gate-s0/weights/last.pt",
+        "sha256": "4ca42ed5a7f2ce5754bdd61cb34773a16f6329d321209b232a55b981da7eeac8"
+      },
+      "resume": {
+        "bytes": 121485676,
+        "path": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_budget_5090/5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c2-1e-gate-s0/weights/resume.pt",
+        "sha256": "3a7c3e9c70c05b1dbfae1da2af960c28dc5d2fd8e16f2996ef8e7ca0532b69ca"
+      }
+    },
+    "completed_epochs": 1,
+    "environment": {
+      "amp": false,
+      "capability": [
+        12,
+        0
+      ],
+      "cuda_available": true,
+      "cuda_visible_devices": "0",
+      "cudnn": 92400,
+      "cudnn_benchmark": false,
+      "cudnn_deterministic": false,
+      "cudnn_tf32": false,
+      "deterministic_algorithms": false,
+      "dtype": "float32",
+      "gpu": "NVIDIA GeForce RTX 5090 D v2",
+      "matmul_tf32": false,
+      "nvidia_smi": {
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "0, NVIDIA GeForce RTX 5090 D v2, 580.178.04"
+      },
+      "packages": {
+        "numpy": "1.26.4",
+        "opencv-python": "4.11.0.86",
+        "polars": "2.0.0",
+        "pycocotools": "2.0.11",
+        "scipy": "1.17.1",
+        "torchvision": "0.29.0",
+        "ultralytics-thop": null
+      },
+      "python": "3.11.16",
+      "python_executable": "/tmp/zhj-uav-5090-venv/bin/python",
+      "torch": "2.14.0+cu130",
+      "torch_cuda": "13.0",
+      "total_memory_bytes": 25138495488
+    },
+    "expected_shared_state_sha256": "1d9a8e81f45383d572f319a2039a24338a82f7847a9708e98ab4c0fed07b871e",
+    "experiment_name": "5090-rtdetr-r18-c2-1e-gate-s0",
+    "fraction": 0.01,
+    "initialization": {
+      "excluded_slot": "model.14: baseline P3 projection versus candidate P2 downsampling",
+      "new_branch_seed": 1000,
+      "r0_full_state_sha256": "e1c9a8c9f9bb55b33b22a6ddf20386256b675014c21ff419e263405324432d08",
+      "seed": 0,
+      "shared_state_items": 527,
+      "shared_state_sha256": "1d9a8e81f45383d572f319a2039a24338a82f7847a9708e98ab4c0fed07b871e",
+      "shared_state_verified": true,
+      "source": "seeded R0 from scratch; no checkpoint or backbone pretrained weights"
+    },
+    "latest_epoch_health": {
+      "d1_delta_abs": 7.151584213715978e-06,
+      "d1_delta_finite": 1.0,
+      "d1_delta_query_variance": 1.5826657475889738e-12,
+      "d1_hidden_active_ratio": 0.5340614318847656,
+      "d1_hidden_query_variance": 0.014049023389816284,
+      "d2_delta_abs": 6.226347522897413e-06,
+      "d2_delta_finite": 1.0,
+      "d2_delta_query_variance": 1.2899224874005077e-12,
+      "d2_hidden_active_ratio": 0.5154313445091248,
+      "d2_hidden_query_variance": 0.012763778679072857,
+      "d3_delta_abs": 5.817880719405366e-06,
+      "d3_delta_finite": 1.0,
+      "d3_delta_query_variance": 1.1048712942815508e-12,
+      "d3_hidden_active_ratio": 0.506089448928833,
+      "d3_hidden_query_variance": 0.010980332270264626,
+      "encoder_delta_abs": 6.898928404552862e-06,
+      "encoder_delta_finite": 1.0,
+      "encoder_delta_query_variance": 1.627822334392126e-12,
+      "encoder_hidden_active_ratio": 0.4846978187561035,
+      "encoder_hidden_query_variance": 0.012322647497057915,
+      "epoch": 1,
+      "gamma": null,
+      "last_bbox_delta_logit_abs": 5.789001988887321e-06,
+      "last_bbox_relu_active_ratio": 0.5107183456420898,
+      "last_bbox_step_abs": 7.349548241109005e-07,
+      "p2_first_weight_grad_abs": 0.006291808094829321,
+      "train_peak_allocated_mib": 6056.02099609375,
+      "train_seconds": 2.177829768974334
+    },
+    "requested_epochs": 1,
+    "status": "completed"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "error": "ModuleNotFoundError: No module named 'polars'",
+  "experiment": "5090-rtdetr-r18-c0-1e-gate-s0",
+  "resolution": "Installed polars==2.0.0 in /tmp/zhj-uav-5090-venv only, added startup dependency gate, kept failed directory unchanged, retried under -r1",
+  "scope": "9 training batches and 548-image validation ran; checkpoint save failed before gate completion",
+  "server_run": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_budget_5090/5090-c0c2-baselines-20261024-s0",
+  "status": "failed"
+}
