@@ -1,5 +1,7 @@
 # 实验结果与报告
 
+- [P2-SFI：原始 results.csv、PR/P/R/F1、训练曲线与混淆矩阵](2026-10-24_r18_p2_sfi_curves/README.md)
+
 - [2026-10-24：C2/C0 seed0 分阶段收敛训练](2026-10-24_r18_p2_sfi_convergence/README.md)
 
 - [2026-10-24：P2-SFI 后处理核查、完整150轮证据与收敛续训](2026-10-24_r18_p2_sfi_audit/README.md)

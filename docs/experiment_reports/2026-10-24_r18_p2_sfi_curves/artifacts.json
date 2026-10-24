@@ -1,0 +1,199 @@
+{
+  "queue_status": "running",
+  "runs": [
+    {
+      "run": "c0",
+      "server_source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_p2_sfi_20261023/rtdetr-r18-c0-150e-s0",
+      "epochs": 150,
+      "cumulative_epochs": 150,
+      "csv": "../2026-10-24_r18_p2_sfi_audit/raw/c0_training_curve.csv",
+      "csv_sha256": "2d04a3eb1328dff6dcc7b4c0879b1e1fa07cdd3d79c6c9d6730181a36ab112a5",
+      "snapshot": false,
+      "plots": [
+        {
+          "path": "figures/c0/BoxPR_curve.png",
+          "sha256": "e6e80a16cea0a54088f8083c95aba57865072b01ea6b9d58620efd052080e580",
+          "bytes": 354761
+        },
+        {
+          "path": "figures/c0/BoxP_curve.png",
+          "sha256": "d2e7688f505be72c6900be62765b0a49692b64133704440183d491ae935bddb2",
+          "bytes": 376759
+        },
+        {
+          "path": "figures/c0/BoxR_curve.png",
+          "sha256": "bacf61bd959ac05385fa2d963979f7a7e26b84787e8f5807a4631c415294b4e5",
+          "bytes": 274259
+        },
+        {
+          "path": "figures/c0/BoxF1_curve.png",
+          "sha256": "dad75becfb7db8a44ee8c245c3e71f5e7fee9510ae9243e4a5114b96f7f66892",
+          "bytes": 315432
+        },
+        {
+          "path": "figures/c0/results.png",
+          "sha256": "4694e674b7575681c555c9e508b787605231eefdb43dfbe15ce9be88a840ca01",
+          "bytes": 273665
+        },
+        {
+          "path": "figures/c0/confusion_matrix.png",
+          "sha256": "2e35e8c2c311a02a40a7cbc60782f2024826295c383c19412dc6d29096298ee4",
+          "bytes": 287366
+        },
+        {
+          "path": "figures/c0/confusion_matrix_normalized.png",
+          "sha256": "386a9565f47eb75a088794c468ad6afd72c78b719db54995eb73e6aa886a3566",
+          "bytes": 284838
+        }
+      ]
+    },
+    {
+      "run": "c1",
+      "server_source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_p2_sfi_20261023/rtdetr-r18-c1-150e-s0",
+      "epochs": 150,
+      "cumulative_epochs": 150,
+      "csv": "../2026-10-24_r18_p2_sfi_audit/raw/c1_training_curve.csv",
+      "csv_sha256": "903ce144951781178ac87c1a270f3b2a90f46d1c3ee4dacc59234004e570493b",
+      "snapshot": false,
+      "plots": [
+        {
+          "path": "figures/c1/BoxPR_curve.png",
+          "sha256": "36bc2ec6202aa2e446eccbdc2c2379f12cc13a5a4cccb73405336eafb2d70b64",
+          "bytes": 354582
+        },
+        {
+          "path": "figures/c1/BoxP_curve.png",
+          "sha256": "023a8be734d20f892b4c710be3f4bd0ac2e255b2f2bd7daaf876cd2a5eaadd43",
+          "bytes": 361828
+        },
+        {
+          "path": "figures/c1/BoxR_curve.png",
+          "sha256": "833d62bada29446976fb13e700c7d87b6d5422d49ab340d550e77c6af760b89a",
+          "bytes": 274539
+        },
+        {
+          "path": "figures/c1/BoxF1_curve.png",
+          "sha256": "f5b014a51c4f36ad3efd85d4da632f1a101aa08bad8c1acfec322777e9aaab3f",
+          "bytes": 312304
+        },
+        {
+          "path": "figures/c1/results.png",
+          "sha256": "8b4defe0957b1cd0635182b419e0759c55969469b6655f97f1b3a9f99e7af9da",
+          "bytes": 272362
+        },
+        {
+          "path": "figures/c1/confusion_matrix.png",
+          "sha256": "6b74a511b7d540f132ff52bd981a2b9663dea2de781a3867444be913f723dd22",
+          "bytes": 291584
+        },
+        {
+          "path": "figures/c1/confusion_matrix_normalized.png",
+          "sha256": "bbea7e9048f4df588ca02d8f17ec9d3465adc141a19a45d5dc84da201f690e28",
+          "bytes": 284802
+        }
+      ]
+    },
+    {
+      "run": "c2",
+      "server_source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_p2_sfi_20261023/rtdetr-r18-c2-150e-s0",
+      "epochs": 150,
+      "cumulative_epochs": 150,
+      "csv": "../2026-10-24_r18_p2_sfi_audit/raw/c2_training_curve.csv",
+      "csv_sha256": "00a6e2153fab3cd3ca97dabe7c4bd77b288334f94c73dcf1e6258f7366cb2a6c",
+      "snapshot": false,
+      "plots": [
+        {
+          "path": "figures/c2/BoxPR_curve.png",
+          "sha256": "863793397075f5af11d38fae3591d51a34a6cc15dd1b5db6d0632b0cb17f8749",
+          "bytes": 356830
+        },
+        {
+          "path": "figures/c2/BoxP_curve.png",
+          "sha256": "b0c19317083f5c77654dc7d556492c044407483d32b9c31568b8b63285304912",
+          "bytes": 371657
+        },
+        {
+          "path": "figures/c2/BoxR_curve.png",
+          "sha256": "8e1ac5e2ba6592aabb6c70ec4b4524b7eb7c0eea0644d822ce2075b7f49a4882",
+          "bytes": 279326
+        },
+        {
+          "path": "figures/c2/BoxF1_curve.png",
+          "sha256": "c2aaec546587c3adf3531f8742cd3f00d006b06b208e7fa451cf2f82eecbdf11",
+          "bytes": 315750
+        },
+        {
+          "path": "figures/c2/results.png",
+          "sha256": "b2ce2a797440696c0698551cf00f9fc6c3d52372201e78a65350c759b877c786",
+          "bytes": 273100
+        },
+        {
+          "path": "figures/c2/confusion_matrix.png",
+          "sha256": "87941664173c13704cc70e461a9f78413e442f88386cd0b2185b89fe5e7769af",
+          "bytes": 285879
+        },
+        {
+          "path": "figures/c2/confusion_matrix_normalized.png",
+          "sha256": "52edc077508adfe77222c3803ce3b15c84089d2996e302b9c23cf70a7e72a27b",
+          "bytes": 286684
+        }
+      ]
+    },
+    {
+      "run": "c3",
+      "server_source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_p2_sfi_20261023/rtdetr-r18-c3-150e-s0",
+      "epochs": 150,
+      "cumulative_epochs": 150,
+      "csv": "../2026-10-24_r18_p2_sfi_audit/raw/c3_training_curve.csv",
+      "csv_sha256": "374868e5bfa4ef004d3c57d07635f23c4a233fc0bca362de50169c2da041a9e8",
+      "snapshot": false,
+      "plots": [
+        {
+          "path": "figures/c3/BoxPR_curve.png",
+          "sha256": "94a109586b32f25cc111d64e1011adc3485577ae7fb0583e91fb09b0926a20b0",
+          "bytes": 354491
+        },
+        {
+          "path": "figures/c3/BoxP_curve.png",
+          "sha256": "c4095831aa5ddf78be1229b91b586071bc80a3aea02494af17b7f5c29314b81d",
+          "bytes": 381040
+        },
+        {
+          "path": "figures/c3/BoxR_curve.png",
+          "sha256": "0e5e2e32fa85a9bf87eede01987906905b9807bd178df32df5a7db0dc907bbd2",
+          "bytes": 273846
+        },
+        {
+          "path": "figures/c3/BoxF1_curve.png",
+          "sha256": "ae7835c067a8e42c24a6b4d67aa0abb1a0a6409664e8a36274ba3a9257bb4f12",
+          "bytes": 313710
+        },
+        {
+          "path": "figures/c3/results.png",
+          "sha256": "31bd56b0c58536cd287d7573159833712f40b33574103c404ff6d1ca45c28d76",
+          "bytes": 280475
+        },
+        {
+          "path": "figures/c3/confusion_matrix.png",
+          "sha256": "02a9c160e887dad770b5861df0cc2dc1e55f228856e54a29efc859fe8fe7194e",
+          "bytes": 289278
+        },
+        {
+          "path": "figures/c3/confusion_matrix_normalized.png",
+          "sha256": "780923eccdbe4a571d0995e729c7ce652e5dbe8c1f4481d140e3096afb557b88",
+          "bytes": 290468
+        }
+      ]
+    },
+    {
+      "run": "c2_continuation",
+      "server_source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_p2_sfi_convergence_20261024/rtdetr-r18-c2-seed0-cont",
+      "epochs": 97,
+      "cumulative_epochs": 247,
+      "csv": "raw/c2_continuation/results.csv",
+      "csv_sha256": "b8d1d2c1735b17fc85d9a2085181c185444e916bcdf48e0bcc618c3bf7d0d0cd",
+      "snapshot": true,
+      "plots": []
+    }
+  ]
+}

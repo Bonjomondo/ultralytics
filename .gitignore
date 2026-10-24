@@ -230,3 +230,7 @@ results.csv
 /experiments/r18_p2_sfi/convergence_20261024/status.json
 
 !/docs/experiment_reports/2026-10-24_r18_p2_sfi_audit/raw/test_summary.log
+
+# Deliberate experiment curve archives; keep run directories ignored.
+!/docs/experiment_reports/**/figures/**/*.png
+!/docs/experiment_reports/**/raw/**/results.csv
