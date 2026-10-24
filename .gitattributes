@@ -1,2 +1,5 @@
 # Preserve CSV evidence bytes; accept standard CRLF while checking real whitespace errors.
 *.csv whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+# Preserve the original plan's intentional Markdown hard breaks byte for byte.
+docs/experiment_reports/2026-10-24_5090_detrscope/RESEARCH_PLAN.md whitespace=-blank-at-eol

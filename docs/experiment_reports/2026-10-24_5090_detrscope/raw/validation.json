@@ -1,0 +1,21 @@
+{
+  "schema": "decoder-budget.validation.v1",
+  "status": "passed",
+  "scope": "synthetic engineering checks only; no trained-model AP or speedup result",
+  "cpu_tests": {
+    "passed": 43,
+    "command": "PYTHONPATH=\"$PWD:../detrscope/src\" YOLO_CONFIG_DIR=/tmp/zhj-uav-5090-config /tmp/zhj-uav-5090-venv/bin/python -m pytest -q -o addopts='' experiments/decoder_budget_5090/tests"
+  },
+  "cuda_tests": {
+    "passed": 5,
+    "command": "PYTHONPATH=\"$PWD:../detrscope/src\" YOLO_CONFIG_DIR=/tmp/zhj-uav-5090-config DECODER_BUDGET_TEST_DEVICE=cuda:0 /tmp/zhj-uav-5090-venv/bin/python -m pytest -q -o addopts='' experiments/decoder_budget_5090/tests/test_run.py"
+  },
+  "cuda_scope": "real 5090: native model inference, native preprocessing/postprocessing, COCOeval and unobserved CUDA timing on synthetic checkpoint/images",
+  "environment_setup": "/home/ubuntu/miniconda3/envs/UAV_CV/bin/python -m venv --system-site-packages /tmp/zhj-uav-5090-venv; install pytest in this temporary venv only",
+  "raw_server_paths": {
+    "cpu": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_budget_5090/acceptance-cpu",
+    "gpu": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_budget_5090/acceptance-gpu"
+  },
+  "smoke_command_template": "/tmp/zhj-uav-5090-venv/bin/python experiments/decoder_budget_5090/run.py smoke --pin runs/decoder_budget_5090/source_pin.json --device {cpu|cuda:0} --output {new_run_directory}",
+  "source_pin_command": "/tmp/zhj-uav-5090-venv/bin/python experiments/decoder_budget_5090/run.py pin --expected-commit 6d1d4d1badbecf47970243685a1d712ad3e31559 --output runs/decoder_budget_5090/source_pin.json"
+}

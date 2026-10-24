@@ -1,0 +1,8 @@
+{
+  "experiments/decoder_budget_5090/coverage.py": "6c20acdbab632d15e495e3fbbcf391f962da3ddc43826efbbbd11d0e9ef3982b",
+  "experiments/decoder_budget_5090/run.py": "02c354aa158bd91f5d2ea360a7063fc7191bbc92266bf124e7af533e433d88c5",
+  "experiments/decoder_budget_5090/source_adapter.py": "c04b024b33f4675cb4aa702958075b88f8ab0db18f748210b08a1a3be80fe332",
+  "experiments/decoder_budget_5090/tests/test_coverage.py": "0c3a8550f5efc129149dc4106ab2cf234a365abda6008a6c99e540d79909c025",
+  "experiments/decoder_budget_5090/tests/test_run.py": "48b724d8753039b76f0d4aea47716a86254b7e4b19fbf9ff68837d8245ca2b04",
+  "experiments/decoder_budget_5090/tests/test_source_adapter.py": "4787c457be4956294c4dbf4a667f42d7ff9825d38d49246c08db426a2b8d6d4c"
+}

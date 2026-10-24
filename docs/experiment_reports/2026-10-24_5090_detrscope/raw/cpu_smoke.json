@@ -1,0 +1,97 @@
+{
+  "conditions": [
+    {
+      "executed_layers": [
+        1,
+        2,
+        3
+      ],
+      "identity_passed_all": true,
+      "images": 2,
+      "manifest_sha256": "995f7ebb9a656c3e965d90f148bdd9a62cbc972fa0b8725ed760baa98ebbe127",
+      "queries": 300
+    },
+    {
+      "executed_layers": [
+        1,
+        2,
+        3
+      ],
+      "identity_passed_all": true,
+      "images": 2,
+      "manifest_sha256": "e295347775f696695eef7cf820fcc5c55425a7e97d2a3788cb30f9037d40f4ee",
+      "queries": 250
+    },
+    {
+      "executed_layers": [
+        1,
+        2,
+        3
+      ],
+      "identity_passed_all": true,
+      "images": 2,
+      "manifest_sha256": "a1b67a64573d486ad4acc1d2e570580a745523ef4d3a7fb1e7e49ac133018041",
+      "queries": 200
+    },
+    {
+      "executed_layers": [
+        1,
+        2,
+        3
+      ],
+      "identity_passed_all": true,
+      "images": 2,
+      "manifest_sha256": "9a6f469f2b8e040e5cb4fdce313428f4335b0eacbc1cbf58953b9913b94f65b3",
+      "queries": 150
+    }
+  ],
+  "environment": {
+    "autocast": false,
+    "cuda_available": false,
+    "cudnn": 92400,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": false,
+    "cudnn_tf32": false,
+    "deterministic_algorithms": false,
+    "device_requested": "cpu",
+    "dtype": "float32",
+    "executable": "/tmp/zhj-uav-5090-venv/bin/python",
+    "matmul_tf32": false,
+    "nvidia_smi": {
+      "returncode": 9,
+      "stderr": "",
+      "stdout": "NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running."
+    },
+    "python": "3.11.16",
+    "torch": "2.14.0+cu130",
+    "torch_cuda": "13.0"
+  },
+  "experiment_sources": {
+    "coverage.py": "6c20acdbab632d15e495e3fbbcf391f962da3ddc43826efbbbd11d0e9ef3982b",
+    "run.py": "02c354aa158bd91f5d2ea360a7063fc7191bbc92266bf124e7af533e433d88c5",
+    "source_adapter.py": "c04b024b33f4675cb4aa702958075b88f8ab0db18f748210b08a1a3be80fe332"
+  },
+  "hooks_remaining": 0,
+  "model_state_unchanged": true,
+  "query_budget_restored": true,
+  "schema": "decoder-budget.smoke.v1",
+  "scope": "synthetic engineering validation; no trained checkpoint, dataset AP or speed conclusion",
+  "sdk": {
+    "branch": "main",
+    "commit": "0c8624a32bde8fbac5cd6a59e6f2a544225b5051",
+    "dirty_paths": [],
+    "root": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/detrscope"
+  },
+  "source": {
+    "branch": "5090-detrscope-query-budget",
+    "commit": "6d1d4d1badbecf47970243685a1d712ad3e31559",
+    "dirty_paths": [
+      "M docs/experiment_reports/README.md",
+      "?? docs/experiment_reports/2026-10-24_5090_detrscope/",
+      "?? experiments/decoder_budget_5090/"
+    ],
+    "root": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics"
+  },
+  "source_pin_sha256": "48a9de137f2e13da751a6e0e6978f1b71b72d83a13ef47ef45c7fbb7d07c6a97",
+  "status": "passed"
+}

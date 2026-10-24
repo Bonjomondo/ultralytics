@@ -1,0 +1,12 @@
+{
+  "annotation_path": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/SO_DETR/datasets/VisDrone2019-DET-YOLO/annotations/VisDrone2019-DET_val_coco.json",
+  "annotation_sha256": "6f8b8686864f1485ab172de9339f7049593f74766f6654c6e980a6c00d810371",
+  "image_directory": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/SO_DETR/datasets/VisDrone2019-DET-YOLO/images/val",
+  "annotation_images": 548,
+  "annotations": 38759,
+  "images_present": 548,
+  "matches_historical_r0_annotation_sha256": false,
+  "c0_c2_checkpoint_status": "not present in this clone; historical runs were excluded from Git",
+  "original_research_plan_sha256": "1aef088960dd898bcfd4c7664c5ad667fd6d2f102c2039db104168438ff536ad",
+  "annotation_identity_limitation": "Local annotation SHA differs from historical RT-DETR R0; formatting/semantic equivalence is not verified. Do not silently substitute it when reproducing historical AP."
+}
