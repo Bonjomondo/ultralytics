@@ -1,6 +1,6 @@
 # 实验结果与报告
 
-- [2026-10-24：C2/C0 seed0 分阶段收敛训练（运行中）](2026-10-24_r18_p2_sfi_convergence/README.md)
+- [2026-10-24：C2/C0 seed0 分阶段收敛训练](2026-10-24_r18_p2_sfi_convergence/README.md)
 
 - [2026-10-24：P2-SFI 后处理核查、完整150轮证据与收敛续训](2026-10-24_r18_p2_sfi_audit/README.md)
 
