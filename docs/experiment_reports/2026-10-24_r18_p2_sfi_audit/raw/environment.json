@@ -1,0 +1,10 @@
+{
+  "python": "3.11.17",
+  "torch": "2.1.2+cu121",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "GT_sha256": "6f57aa4b42d64ee7b99b8a6a5b159ad19cba2eacf00bd86f23314966614bf4d8",
+  "base_commit": "38e574cc1ff112be35a6aca6516b5d7fecc25149",
+  "branch": "feat/r18-p2-sfi",
+  "generated_utc": "2026-10-24T10:06:40.169974+00:00",
+  "cuda": "12.1"
+}

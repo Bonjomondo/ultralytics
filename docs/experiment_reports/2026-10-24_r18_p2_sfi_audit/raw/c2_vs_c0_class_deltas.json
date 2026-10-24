@@ -1,0 +1,72 @@
+[
+  {
+    "category": "pedestrian",
+    "delta_AP_pp": 0.37715731775571637,
+    "delta_APs_pp": 0.4712622921977022,
+    "delta_APm_pp": -0.5866472717455218,
+    "delta_APl_pp": -3.379361830977862
+  },
+  {
+    "category": "people",
+    "delta_AP_pp": 0.47373374744817953,
+    "delta_APs_pp": 0.33431948333932926,
+    "delta_APm_pp": 1.2269378909156776,
+    "delta_APl_pp": 0.0
+  },
+  {
+    "category": "bicycle",
+    "delta_AP_pp": 0.5259123957192666,
+    "delta_APs_pp": 0.6514503600197924,
+    "delta_APm_pp": -0.4245071662696158,
+    "delta_APl_pp": -4.712871287128713
+  },
+  {
+    "category": "car",
+    "delta_AP_pp": 0.1624454567189293,
+    "delta_APs_pp": 0.42547436816012807,
+    "delta_APm_pp": -0.14642771145690903,
+    "delta_APl_pp": 0.016674081517620287
+  },
+  {
+    "category": "van",
+    "delta_AP_pp": 1.935154529984176,
+    "delta_APs_pp": 2.037973252688384,
+    "delta_APm_pp": 2.027141622562767,
+    "delta_APl_pp": 3.5722989816599995
+  },
+  {
+    "category": "truck",
+    "delta_AP_pp": 0.9699979717140705,
+    "delta_APs_pp": -0.26509685360832025,
+    "delta_APm_pp": 1.4504954650570863,
+    "delta_APl_pp": 1.6978888274502724
+  },
+  {
+    "category": "tricycle",
+    "delta_AP_pp": -0.33507631009605937,
+    "delta_APs_pp": -1.1205169556295678,
+    "delta_APm_pp": 0.7272177802349705,
+    "delta_APl_pp": 1.567205337691474
+  },
+  {
+    "category": "awning-tricycle",
+    "delta_AP_pp": 0.8540677494196562,
+    "delta_APs_pp": 0.5545506843805657,
+    "delta_APm_pp": 1.4708027783530642,
+    "delta_APl_pp": 19.62196219621963
+  },
+  {
+    "category": "bus",
+    "delta_AP_pp": 1.7835996325450354,
+    "delta_APs_pp": 4.904331686856405,
+    "delta_APm_pp": -0.6691708183606593,
+    "delta_APl_pp": 0.4479381382306524
+  },
+  {
+    "category": "motor",
+    "delta_AP_pp": 0.28985768398855916,
+    "delta_APs_pp": 0.3006669659946115,
+    "delta_APm_pp": 0.7469183119482581,
+    "delta_APl_pp": -3.2628512851285105
+  }
+]

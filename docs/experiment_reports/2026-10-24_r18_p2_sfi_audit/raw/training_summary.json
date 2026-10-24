@@ -1,0 +1,46 @@
+[
+  {
+    "variant": "c0",
+    "epochs": 150,
+    "best_internal_epoch": 150,
+    "best_internal_mAP_pct": 20.699,
+    "mean_internal_mAP_epochs131_140_pct": 20.1732,
+    "mean_internal_mAP_epochs141_150_pct": 20.534300000000005,
+    "run_path": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_p2_sfi_20261023/rtdetr-r18-c0-150e-s0",
+    "last_checkpoint_sha256": "06094202dcacc0db8fbba45a41c40de98ebbc82aae26901f9f15f0296cbf055f",
+    "best_checkpoint_sha256": "06094202dcacc0db8fbba45a41c40de98ebbc82aae26901f9f15f0296cbf055f"
+  },
+  {
+    "variant": "c1",
+    "epochs": 150,
+    "best_internal_epoch": 149,
+    "best_internal_mAP_pct": 20.918,
+    "mean_internal_mAP_epochs131_140_pct": 20.545,
+    "mean_internal_mAP_epochs141_150_pct": 20.8146,
+    "run_path": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_p2_sfi_20261023/rtdetr-r18-c1-150e-s0",
+    "last_checkpoint_sha256": "a6d978f4c8e056d644160a80f66cc43efeba9c5a0ef998113c875deee24b26c2",
+    "best_checkpoint_sha256": "a35013c66f75f291a04f6de1f76690a32f81f433633c6e680b2e04abf5f7bd7b"
+  },
+  {
+    "variant": "c2",
+    "epochs": 150,
+    "best_internal_epoch": 150,
+    "best_internal_mAP_pct": 21.375,
+    "mean_internal_mAP_epochs131_140_pct": 20.770699999999998,
+    "mean_internal_mAP_epochs141_150_pct": 21.2252,
+    "run_path": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_p2_sfi_20261023/rtdetr-r18-c2-150e-s0",
+    "last_checkpoint_sha256": "bc2e85bcc183a6a094f4e345b4d4f8f4dfc965fc5c652f17b80cf9ad7f201504",
+    "best_checkpoint_sha256": "bc2e85bcc183a6a094f4e345b4d4f8f4dfc965fc5c652f17b80cf9ad7f201504"
+  },
+  {
+    "variant": "c3",
+    "epochs": 150,
+    "best_internal_epoch": 150,
+    "best_internal_mAP_pct": 20.394000000000002,
+    "mean_internal_mAP_epochs131_140_pct": 19.7883,
+    "mean_internal_mAP_epochs141_150_pct": 20.231399999999997,
+    "run_path": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_p2_sfi_20261023/rtdetr-r18-c3-150e-s0",
+    "last_checkpoint_sha256": "02a1e8c834ab14f9456121f8ea23e59ab0d5f97dbb35fb7bed8a1e8402b8b7b8",
+    "best_checkpoint_sha256": "02a1e8c834ab14f9456121f8ea23e59ab0d5f97dbb35fb7bed8a1e8402b8b7b8"
+  }
+]

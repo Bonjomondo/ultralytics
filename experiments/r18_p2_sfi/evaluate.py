@@ -14,11 +14,44 @@ from pycocotools.coco import COCO
 from pycocotools.cocoeval import COCOeval
 
 from ultralytics import RTDETR
+from ultralytics.models.rtdetr.val import RTDETRValidator
 from ultralytics.utils.torch_utils import get_flops
 
 ROOT = Path(__file__).resolve().parents[2]
 OUTPUT = Path(__file__).resolve().parent
 METRICS = ("AP", "AP50", "AP75", "APs", "APm", "APl", "AR1", "AR10", "AR100", "ARs", "ARm", "ARl")
+
+
+class ConfidenceAuditValidator(RTDETRValidator):
+    """Compare legacy and fixed masks using query identities on every validation image."""
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.filter_audit = []
+        self.pending_audit = []
+
+    def postprocess(self, preds):
+        raw = preds[0] if isinstance(preds, (list, tuple)) else preds
+        self.pending_audit = []
+        for scores in raw[..., 4:].amax(-1):
+            order = scores.argsort(descending=True)
+            old_mask = scores > self.args.conf
+            fixed_mask = scores[order] > self.args.conf
+            self.pending_audit.append({
+                "queries": scores.numel(), "filtered_queries": int((~fixed_mask).sum()),
+                "changed": bool((old_mask != fixed_mask).any()),
+                "wrongly_removed_above_threshold": int((fixed_mask & ~old_mask).sum()),
+                "wrongly_retained_below_threshold": int((old_mask & ~fixed_mask).sum()),
+                "min_score": float(scores.min()), "max_score": float(scores.max()),
+            })
+        return super().postprocess(preds)
+
+    def update_metrics(self, preds, batch):
+        if len(self.pending_audit) != len(batch["im_file"]):
+            raise RuntimeError("Confidence audit batch coverage mismatch")
+        for record, path in zip(self.pending_audit, batch["im_file"]):
+            self.filter_audit.append({"file_name": Path(path).name, **record})
+        return super().update_metrics(preds, batch)
 
 
 def digest(path):
@@ -103,22 +136,29 @@ def main():
     parser.add_argument("--run", type=Path, required=True)
     parser.add_argument("--expected-epochs", type=int, default=150)
     parser.add_argument("--output-dir", type=Path, default=OUTPUT)
+    parser.add_argument("--checkpoint", type=Path, help="Override best.pt, e.g. compare last.pt")
+    parser.add_argument("--allow-partial", action="store_true", help="Evaluate an early-stopped run with <= expected epochs")
     args = parser.parse_args()
     OUTPUT = args.output_dir.resolve()
     OUTPUT.mkdir(parents=True, exist_ok=True)
     torch.set_num_threads(4)
     with (args.run / "results.csv").open() as file:
         rows = list(csv.DictReader(file))
-    if len(rows) != args.expected_epochs or int(rows[-1]["epoch"]) != args.expected_epochs:
+    actual_epochs = int(rows[-1]["epoch"])
+    if len(rows) != actual_epochs or (actual_epochs != args.expected_epochs and not (
+            args.allow_partial and 0 < actual_epochs <= args.expected_epochs)):
         raise RuntimeError("Evaluation requires the requested complete training budget")
-    weight = args.run / "weights/best.pt"
+    weight = args.checkpoint or args.run / "weights/best.pt"
     annotation = ROOT.parent / "datasets/VisDrone2019-DET-YOLO/annotations/VisDrone2019-DET_val_coco.json"
     historical = json.loads((ROOT / "experiments/r18_na_ablation/completed_pair/r0_formal_metrics.json").read_text())
     if digest(annotation) != historical["protocol"]["annotation_sha256"]:
         raise RuntimeError("GT differs from the audited R0 baseline")
     model = RTDETR(str(weight))
     health = ValidationHealth(model)
-    result = model.val(data=str(ROOT / "configs/visdrone-local.yaml"), device="0", imgsz=640,
+    audit = []
+    model.add_callback("on_val_end", lambda validator: audit.extend(validator.filter_audit))
+    result = model.val(validator=ConfidenceAuditValidator, conf=0.001,
+                       data=str(ROOT / "configs/visdrone-local.yaml"), device="0", imgsz=640,
                        batch=2, workers=0, half=False, plots=False, verbose=False, save_json=True,
                        max_det=300, project=str(args.run), name="formal_native", exist_ok=False)
     validation_health = health.finish()
@@ -126,6 +166,10 @@ def main():
         raise RuntimeError("Full-val regression health observation missed images or decoder stages")
     prediction_path = Path(result.save_dir) / "predictions.json"
     predictions = json.loads(prediction_path.read_text())
+    if len(audit) != 548 or len({row["file_name"] for row in audit}) != 548:
+        raise RuntimeError("Confidence audit did not cover 548 unique validation images")
+    audit_path = Path(result.save_dir) / "confidence_filter_audit.json"
+    write(audit_path, audit)
     gt = COCO(str(annotation))
     images = {Path(image["file_name"]).name: image["id"] for image in gt.dataset["images"]}
     for prediction in predictions:
@@ -151,13 +195,23 @@ def main():
             values = evaluator.eval["precision"][:, :, index, area, -1]
             values = values[values > -1]
             per_class[gt.cats[category]["name"]][label] = float(values.mean()) if values.size else None
-    record = {"variant": args.variant, "training_epochs": args.expected_epochs,
+    record = {"variant": args.variant, "training_epochs": actual_epochs,
               "finished_utc": datetime.now(timezone.utc).isoformat(),
               "checkpoint": str(weight), "checkpoint_sha256": digest(weight), "protocol": protocol,
               "native_internal_metrics": {key: float(value) for key, value in result.results_dict.items()},
               "predictions_path": str(prediction_path), "predictions_file_sha256": digest(prediction_path),
               "metrics": metrics, "per_class": per_class, "benchmark": benchmark(weight)}
     record["validation_regression_health"] = validation_health
+    record["confidence_filter_audit"] = {
+        "conf": 0.001, "images": len(audit),
+        **{key: sum(row[key] for row in audit) for key in (
+            "queries", "filtered_queries", "changed", "wrongly_removed_above_threshold",
+            "wrongly_retained_below_threshold")},
+        "min_score": min(row["min_score"] for row in audit),
+        "per_image_path": str(audit_path), "per_image_sha256": digest(audit_path),
+        "scope": "raw best-checkpoint fused FP32 validation queries; legacy mask versus fixed sorted mask",
+    }
+    record["postprocess"] = "sorted confidence mask fixed; val.py SHA256=" + digest(ROOT / "ultralytics/models/rtdetr/val.py")
     write(OUTPUT / f"{args.variant}_formal_metrics.json", record)
     summarize()
 

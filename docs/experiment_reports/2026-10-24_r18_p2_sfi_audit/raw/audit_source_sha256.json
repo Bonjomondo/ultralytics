@@ -1,0 +1,10 @@
+{
+  "ultralytics/models/rtdetr/val.py": "8d3e814d4cafef2b04e5337d16ec76d7c9a700503eed996f0f1cb9a0cab1c76f",
+  "experiments/r18_p2_sfi/run_queue.py": "362e7ae63ef8a2dbbee3172ca99773247681971e00d6939b843488f0e0ef1f1f",
+  "experiments/r18_p2_sfi/evaluate.py": "b668ec12776113d1fcabcc32764b25f9a762dd7cdc13cbaf9553facd1c29d1a2",
+  "experiments/r18_p2_sfi/continue_train.py": "1f26a85d2b051e6747831e7126df0aa27741096b86c9e73948945ce2ede3c4d4",
+  "experiments/r18_p2_sfi/convergence_queue.py": "225e2729484814b768ff8aa58508eff3486d3e69fe8702f1539d015fdcf788b4",
+  "experiments/r18_p2_sfi/archive_audit.py": "4295574c7658ece878e6778ce92c9c16d769c74354516d0f2f57a27660dc9bb2",
+  "experiments/r18_p2_sfi/train.py": "43ee1f1a67c28db73cf9c62ba6687ff06f7df652ed37724edc0819c3fd3f84ae",
+  "experiments/r18_p2_sfi/reevaluate.py": "fa41b81be5ab924e56d26a4ba3bbd307a9c829bd5c8240f1f56764f7af615f22"
+}

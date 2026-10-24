@@ -224,3 +224,9 @@ results.csv
 /experiments/r18_p2_sfi/queue_status.tmp
 
 /logs/p2-sfi-*
+
+# Postprocess audit and continuation controller runtime state remain server-only.
+/experiments/r18_p2_sfi/corrected_20261024/status.json
+/experiments/r18_p2_sfi/convergence_20261024/status.json
+
+!/docs/experiment_reports/2026-10-24_r18_p2_sfi_audit/raw/test_summary.log

@@ -1,3 +1,5 @@
+> 2026-10-24更新：C0–C3均已完成150轮；后处理修复后的四组预测SHA和COCO指标保持一致。[完整核查与训练证据](../../docs/experiment_reports/2026-10-24_r18_p2_sfi_audit/README.md)。现按seed0接续C2/C0至经验平台期，不跑多seed。
+
 # RT-DETR-R18 P2-SFI：C0–C3 配对实验
 
 2026-10-23，Asia/Shanghai。仓库 `Bonjomondo/ultralytics`，分支 `feat/r18-p2-sfi`，起点 `917109ac`。

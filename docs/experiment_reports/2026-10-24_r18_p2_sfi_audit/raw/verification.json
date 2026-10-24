@@ -1,0 +1,16 @@
+{
+  "unittest_command": "PYTHONPATH=$PWD python -m unittest tests.test_rtdetr_confidence_filter tests.test_sfi_continuation tests.test_rtdetr_p2_sfi tests.test_rtdetr_r18_na -q",
+  "unittest_result": "19 tests passed",
+  "smoke": {
+    "variant": "c2",
+    "fraction": 0.01,
+    "additional_epochs": 1,
+    "validation_images": 548,
+    "loaded_state_verified": true,
+    "resume_optimizer_present": true,
+    "resume_epoch_zero_based": 0,
+    "EMA_updates": 8,
+    "scope": "pipeline verification only; accuracy not a research result",
+    "server_run_path": "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/ultralytics/runs/detect/runs/detect/r18_p2_sfi_continuation_smoke_20261024/c2"
+  }
+}

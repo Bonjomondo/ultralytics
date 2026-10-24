@@ -1,0 +1,33 @@
+{
+  "seed": 0,
+  "new_branch_seed": 1000,
+  "source": "seeded R0 from scratch; no checkpoint or backbone pretrained weights",
+  "r0_full_state_sha256": "e1c9a8c9f9bb55b33b22a6ddf20386256b675014c21ff419e263405324432d08",
+  "shared_state_sha256": "1d9a8e81f45383d572f319a2039a24338a82f7847a9708e98ab4c0fed07b871e",
+  "shared_state_items": 527,
+  "shared_state_verified": true,
+  "excluded_slot": "model.14: baseline P3 projection versus candidate P2 downsampling",
+  "variant_only_state": [
+    "model.14.depthwise.bn.bias",
+    "model.14.depthwise.bn.num_batches_tracked",
+    "model.14.depthwise.bn.running_mean",
+    "model.14.depthwise.bn.running_var",
+    "model.14.depthwise.bn.weight",
+    "model.14.depthwise.conv.weight",
+    "model.14.expand.bn.bias",
+    "model.14.expand.bn.num_batches_tracked",
+    "model.14.expand.bn.running_mean",
+    "model.14.expand.bn.running_var",
+    "model.14.expand.bn.weight",
+    "model.14.expand.conv.weight",
+    "model.14.reduce.bn.bias",
+    "model.14.reduce.bn.num_batches_tracked",
+    "model.14.reduce.bn.running_mean",
+    "model.14.reduce.bn.running_var",
+    "model.14.reduce.bn.weight",
+    "model.14.reduce.conv.weight"
+  ],
+  "model_config": "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/ultralytics/ultralytics/cfg/models/rt-detr/rtdetr-resnet18-p2-sfi-c3.yaml",
+  "amp": false,
+  "gradient_sampling": "first three training batches per epoch; scaled if AMP is enabled"
+}
