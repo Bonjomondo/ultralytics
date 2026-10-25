@@ -4,6 +4,8 @@
 
 ## 当前事实与可复用基础
 
+- 用户要求四组全部重新训练，已启动[独立从零150轮队列](../../docs/experiment_reports/2026-10-25_5090_fresh_decoder_training/README.md)：Q300/P2/D3、Q200/P2/D3、Q300/P4/D2、Q300/P4/D1。都基于C2，四组真实训练门禁已通过，不从现有checkpoint微调；完成后自动正式评估和部署测速。
+
 - 第二/第三优先级：[Sampling Points速度筛选与Decoder深度报告](../../docs/experiment_reports/2026-10-25_5090_decoder_screen/README.md)。五组采样预算同时测独立Attention/整网；真实D1/D2/D3早退比较完整验证集AP、同GT状态迁移和实际延迟；不训练。
 
 - 7.4 ms的第一优先级诊断已独立归档：[算子与运行时报告](../../docs/experiment_reports/2026-10-25_5090_runtime_profile/README.md)。包括CPU/CUDA timeline、算子归属、FP16/BF16、Conv-BN/RepConv融合、CUDA Graph和部署路径；该次归档未开展Sampling Points实验，新的筛选见上方第二/第三优先级报告。

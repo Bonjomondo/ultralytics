@@ -1,0 +1,126 @@
+{
+  "audit_script_sha256": "a7a2269b00d369fd9408fd8f70098785336a8b31fbf91fa8d40a4e028fc56e9a",
+  "class_names": [
+    "pedestrian",
+    "people",
+    "bicycle",
+    "car",
+    "van",
+    "truck",
+    "tricycle",
+    "awning-tricycle",
+    "bus",
+    "motor"
+  ],
+  "coco": {
+    "annotations": 38759,
+    "category_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "coordinate_discrepancies": [],
+    "coordinate_tolerance": 5e-07,
+    "floating_point_slack": 1e-12,
+    "ignore_count": 0,
+    "image_dimension_errors": [],
+    "images": 548,
+    "iscrowd_count": 0,
+    "max_sorted_normalized_field_difference": 5.000000000143778e-07,
+    "metadata_fields": {
+      "occlusion": {
+        "present": 38759,
+        "value_counts": {
+          "0": 16810,
+          "1": 18863,
+          "2": 3086
+        }
+      },
+      "truncation": {
+        "present": 38759,
+        "value_counts": {
+          "0": 37287,
+          "1": 1472
+        }
+      }
+    },
+    "native_label_boxes_compared": 38759,
+    "pairing_definition": "per-image sorted class,cx,cy,w,h sanity check; not exact historical GT identity proof",
+    "path": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/SO_DETR/datasets/VisDrone2019-DET-YOLO/annotations/VisDrone2019-DET_val_coco.json",
+    "sha256": "6f8b8686864f1485ab172de9339f7049593f74766f6654c6e980a6c00d810371"
+  },
+  "created_utc": "2026-10-25T08:26:16.822739+00:00",
+  "data_root": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/SO_DETR/datasets/VisDrone2019-DET-YOLO",
+  "data_yaml": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/SO_DETR/datasets/VisDrone2019-DET-YOLO/data.yaml",
+  "data_yaml_sha256": "ed805cf0ee32a7e13a4f66946cb6a44bf9728ebc2d642478ffedc3ca8ec8f980",
+  "errors": [],
+  "historical_r0": {
+    "annotation_sha256": "6f57aa4b42d64ee7b99b8a6a5b159ad19cba2eacf00bd86f23314966614bf4d8",
+    "annotation_sha_matches": false,
+    "image_ids_match": true,
+    "limitation": "SHA differs; historical annotation bytes unavailable, so format-only or semantic equivalence is not established",
+    "metrics": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/experiments/r18_na_ablation/completed_pair/r0_formal_metrics.json"
+  },
+  "image_inventory_definition": "canonical JSON list of relative filename and byte size, train then val; NOT image pixel/content SHA; headers read only",
+  "image_inventory_sha256": "4db47e9eac5d5c87aba6617aec25a786015d9029a27c502009105ba26c1fa0d6",
+  "label_content_digest_definition": "SHA256 of sorted split/path UTF-8 and exact label bytes; each length framed by 8-byte big-endian; train then val",
+  "label_content_sha256": "0053d3cc406e9d3d833370024cf8110cfc7f87fdcd56eb207db1fe927c3489a3",
+  "label_inventory_sha256": "39751e49e1e115206de112c6432ff5cb04bcef033b3356bc0267dea8fed4f8ff",
+  "schema": "5090-baseline.asset-audit.v1",
+  "splits": {
+    "train": {
+      "boxes": 343200,
+      "boxes_by_class_index": {
+        "0": 79335,
+        "1": 27059,
+        "2": 10480,
+        "3": 144865,
+        "4": 24956,
+        "5": 12875,
+        "6": 4812,
+        "7": 3246,
+        "8": 5926,
+        "9": 29646
+      },
+      "empty_label_files": 0,
+      "extra_labels": [],
+      "image_header_errors": 0,
+      "image_headers_read": 6471,
+      "images": 6471,
+      "invalid_label_rows": 0,
+      "labels": 6471,
+      "missing_labels": []
+    },
+    "val": {
+      "boxes": 38759,
+      "boxes_by_class_index": {
+        "0": 8844,
+        "1": 5125,
+        "2": 1287,
+        "3": 14064,
+        "4": 1975,
+        "5": 750,
+        "6": 1045,
+        "7": 532,
+        "8": 251,
+        "9": 4886
+      },
+      "empty_label_files": 0,
+      "extra_labels": [],
+      "image_header_errors": 0,
+      "image_headers_read": 548,
+      "images": 548,
+      "invalid_label_rows": 0,
+      "labels": 548,
+      "missing_labels": []
+    }
+  },
+  "status": "passed"
+}

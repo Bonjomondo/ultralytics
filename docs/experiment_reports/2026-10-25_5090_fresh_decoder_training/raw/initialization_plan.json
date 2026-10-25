@@ -1,0 +1,947 @@
+{
+  "checkpoint_initialization": false,
+  "common_keys": [
+    "model.0.layers.0.bn.bias",
+    "model.0.layers.0.bn.num_batches_tracked",
+    "model.0.layers.0.bn.running_mean",
+    "model.0.layers.0.bn.running_var",
+    "model.0.layers.0.bn.weight",
+    "model.0.layers.0.conv.weight",
+    "model.0.layers.1.bn.bias",
+    "model.0.layers.1.bn.num_batches_tracked",
+    "model.0.layers.1.bn.running_mean",
+    "model.0.layers.1.bn.running_var",
+    "model.0.layers.1.bn.weight",
+    "model.0.layers.1.conv.weight",
+    "model.0.layers.2.bn.bias",
+    "model.0.layers.2.bn.num_batches_tracked",
+    "model.0.layers.2.bn.running_mean",
+    "model.0.layers.2.bn.running_var",
+    "model.0.layers.2.bn.weight",
+    "model.0.layers.2.conv.weight",
+    "model.1.blocks.0.conv1.bn.bias",
+    "model.1.blocks.0.conv1.bn.num_batches_tracked",
+    "model.1.blocks.0.conv1.bn.running_mean",
+    "model.1.blocks.0.conv1.bn.running_var",
+    "model.1.blocks.0.conv1.bn.weight",
+    "model.1.blocks.0.conv1.conv.weight",
+    "model.1.blocks.0.conv2.bn.bias",
+    "model.1.blocks.0.conv2.bn.num_batches_tracked",
+    "model.1.blocks.0.conv2.bn.running_mean",
+    "model.1.blocks.0.conv2.bn.running_var",
+    "model.1.blocks.0.conv2.bn.weight",
+    "model.1.blocks.0.conv2.conv.weight",
+    "model.1.blocks.0.shortcut.bn.bias",
+    "model.1.blocks.0.shortcut.bn.num_batches_tracked",
+    "model.1.blocks.0.shortcut.bn.running_mean",
+    "model.1.blocks.0.shortcut.bn.running_var",
+    "model.1.blocks.0.shortcut.bn.weight",
+    "model.1.blocks.0.shortcut.conv.weight",
+    "model.1.blocks.1.conv1.bn.bias",
+    "model.1.blocks.1.conv1.bn.num_batches_tracked",
+    "model.1.blocks.1.conv1.bn.running_mean",
+    "model.1.blocks.1.conv1.bn.running_var",
+    "model.1.blocks.1.conv1.bn.weight",
+    "model.1.blocks.1.conv1.conv.weight",
+    "model.1.blocks.1.conv2.bn.bias",
+    "model.1.blocks.1.conv2.bn.num_batches_tracked",
+    "model.1.blocks.1.conv2.bn.running_mean",
+    "model.1.blocks.1.conv2.bn.running_var",
+    "model.1.blocks.1.conv2.bn.weight",
+    "model.1.blocks.1.conv2.conv.weight",
+    "model.11.cv1.bn.bias",
+    "model.11.cv1.bn.num_batches_tracked",
+    "model.11.cv1.bn.running_mean",
+    "model.11.cv1.bn.running_var",
+    "model.11.cv1.bn.weight",
+    "model.11.cv1.conv.weight",
+    "model.11.cv2.bn.bias",
+    "model.11.cv2.bn.num_batches_tracked",
+    "model.11.cv2.bn.running_mean",
+    "model.11.cv2.bn.running_var",
+    "model.11.cv2.bn.weight",
+    "model.11.cv2.conv.weight",
+    "model.11.cv3.bn.bias",
+    "model.11.cv3.bn.num_batches_tracked",
+    "model.11.cv3.bn.running_mean",
+    "model.11.cv3.bn.running_var",
+    "model.11.cv3.bn.weight",
+    "model.11.cv3.conv.weight",
+    "model.11.m.0.conv1.bn.bias",
+    "model.11.m.0.conv1.bn.num_batches_tracked",
+    "model.11.m.0.conv1.bn.running_mean",
+    "model.11.m.0.conv1.bn.running_var",
+    "model.11.m.0.conv1.bn.weight",
+    "model.11.m.0.conv1.conv.weight",
+    "model.11.m.0.conv2.bn.bias",
+    "model.11.m.0.conv2.bn.num_batches_tracked",
+    "model.11.m.0.conv2.bn.running_mean",
+    "model.11.m.0.conv2.bn.running_var",
+    "model.11.m.0.conv2.bn.weight",
+    "model.11.m.0.conv2.conv.weight",
+    "model.11.m.1.conv1.bn.bias",
+    "model.11.m.1.conv1.bn.num_batches_tracked",
+    "model.11.m.1.conv1.bn.running_mean",
+    "model.11.m.1.conv1.bn.running_var",
+    "model.11.m.1.conv1.bn.weight",
+    "model.11.m.1.conv1.conv.weight",
+    "model.11.m.1.conv2.bn.bias",
+    "model.11.m.1.conv2.bn.num_batches_tracked",
+    "model.11.m.1.conv2.bn.running_mean",
+    "model.11.m.1.conv2.bn.running_var",
+    "model.11.m.1.conv2.bn.weight",
+    "model.11.m.1.conv2.conv.weight",
+    "model.11.m.2.conv1.bn.bias",
+    "model.11.m.2.conv1.bn.num_batches_tracked",
+    "model.11.m.2.conv1.bn.running_mean",
+    "model.11.m.2.conv1.bn.running_var",
+    "model.11.m.2.conv1.bn.weight",
+    "model.11.m.2.conv1.conv.weight",
+    "model.11.m.2.conv2.bn.bias",
+    "model.11.m.2.conv2.bn.num_batches_tracked",
+    "model.11.m.2.conv2.bn.running_mean",
+    "model.11.m.2.conv2.bn.running_var",
+    "model.11.m.2.conv2.bn.weight",
+    "model.11.m.2.conv2.conv.weight",
+    "model.12.bn.bias",
+    "model.12.bn.num_batches_tracked",
+    "model.12.bn.running_mean",
+    "model.12.bn.running_var",
+    "model.12.bn.weight",
+    "model.12.conv.weight",
+    "model.14.bn.bias",
+    "model.14.bn.num_batches_tracked",
+    "model.14.bn.running_mean",
+    "model.14.bn.running_var",
+    "model.14.bn.weight",
+    "model.14.conv.weight",
+    "model.16.cv1.bn.bias",
+    "model.16.cv1.bn.num_batches_tracked",
+    "model.16.cv1.bn.running_mean",
+    "model.16.cv1.bn.running_var",
+    "model.16.cv1.bn.weight",
+    "model.16.cv1.conv.weight",
+    "model.16.cv2.bn.bias",
+    "model.16.cv2.bn.num_batches_tracked",
+    "model.16.cv2.bn.running_mean",
+    "model.16.cv2.bn.running_var",
+    "model.16.cv2.bn.weight",
+    "model.16.cv2.conv.weight",
+    "model.16.cv3.bn.bias",
+    "model.16.cv3.bn.num_batches_tracked",
+    "model.16.cv3.bn.running_mean",
+    "model.16.cv3.bn.running_var",
+    "model.16.cv3.bn.weight",
+    "model.16.cv3.conv.weight",
+    "model.16.m.0.conv1.bn.bias",
+    "model.16.m.0.conv1.bn.num_batches_tracked",
+    "model.16.m.0.conv1.bn.running_mean",
+    "model.16.m.0.conv1.bn.running_var",
+    "model.16.m.0.conv1.bn.weight",
+    "model.16.m.0.conv1.conv.weight",
+    "model.16.m.0.conv2.bn.bias",
+    "model.16.m.0.conv2.bn.num_batches_tracked",
+    "model.16.m.0.conv2.bn.running_mean",
+    "model.16.m.0.conv2.bn.running_var",
+    "model.16.m.0.conv2.bn.weight",
+    "model.16.m.0.conv2.conv.weight",
+    "model.16.m.1.conv1.bn.bias",
+    "model.16.m.1.conv1.bn.num_batches_tracked",
+    "model.16.m.1.conv1.bn.running_mean",
+    "model.16.m.1.conv1.bn.running_var",
+    "model.16.m.1.conv1.bn.weight",
+    "model.16.m.1.conv1.conv.weight",
+    "model.16.m.1.conv2.bn.bias",
+    "model.16.m.1.conv2.bn.num_batches_tracked",
+    "model.16.m.1.conv2.bn.running_mean",
+    "model.16.m.1.conv2.bn.running_var",
+    "model.16.m.1.conv2.bn.weight",
+    "model.16.m.1.conv2.conv.weight",
+    "model.16.m.2.conv1.bn.bias",
+    "model.16.m.2.conv1.bn.num_batches_tracked",
+    "model.16.m.2.conv1.bn.running_mean",
+    "model.16.m.2.conv1.bn.running_var",
+    "model.16.m.2.conv1.bn.weight",
+    "model.16.m.2.conv1.conv.weight",
+    "model.16.m.2.conv2.bn.bias",
+    "model.16.m.2.conv2.bn.num_batches_tracked",
+    "model.16.m.2.conv2.bn.running_mean",
+    "model.16.m.2.conv2.bn.running_var",
+    "model.16.m.2.conv2.bn.weight",
+    "model.16.m.2.conv2.conv.weight",
+    "model.17.bn.bias",
+    "model.17.bn.num_batches_tracked",
+    "model.17.bn.running_mean",
+    "model.17.bn.running_var",
+    "model.17.bn.weight",
+    "model.17.conv.weight",
+    "model.19.cv1.bn.bias",
+    "model.19.cv1.bn.num_batches_tracked",
+    "model.19.cv1.bn.running_mean",
+    "model.19.cv1.bn.running_var",
+    "model.19.cv1.bn.weight",
+    "model.19.cv1.conv.weight",
+    "model.19.cv2.bn.bias",
+    "model.19.cv2.bn.num_batches_tracked",
+    "model.19.cv2.bn.running_mean",
+    "model.19.cv2.bn.running_var",
+    "model.19.cv2.bn.weight",
+    "model.19.cv2.conv.weight",
+    "model.19.cv3.bn.bias",
+    "model.19.cv3.bn.num_batches_tracked",
+    "model.19.cv3.bn.running_mean",
+    "model.19.cv3.bn.running_var",
+    "model.19.cv3.bn.weight",
+    "model.19.cv3.conv.weight",
+    "model.19.m.0.conv1.bn.bias",
+    "model.19.m.0.conv1.bn.num_batches_tracked",
+    "model.19.m.0.conv1.bn.running_mean",
+    "model.19.m.0.conv1.bn.running_var",
+    "model.19.m.0.conv1.bn.weight",
+    "model.19.m.0.conv1.conv.weight",
+    "model.19.m.0.conv2.bn.bias",
+    "model.19.m.0.conv2.bn.num_batches_tracked",
+    "model.19.m.0.conv2.bn.running_mean",
+    "model.19.m.0.conv2.bn.running_var",
+    "model.19.m.0.conv2.bn.weight",
+    "model.19.m.0.conv2.conv.weight",
+    "model.19.m.1.conv1.bn.bias",
+    "model.19.m.1.conv1.bn.num_batches_tracked",
+    "model.19.m.1.conv1.bn.running_mean",
+    "model.19.m.1.conv1.bn.running_var",
+    "model.19.m.1.conv1.bn.weight",
+    "model.19.m.1.conv1.conv.weight",
+    "model.19.m.1.conv2.bn.bias",
+    "model.19.m.1.conv2.bn.num_batches_tracked",
+    "model.19.m.1.conv2.bn.running_mean",
+    "model.19.m.1.conv2.bn.running_var",
+    "model.19.m.1.conv2.bn.weight",
+    "model.19.m.1.conv2.conv.weight",
+    "model.19.m.2.conv1.bn.bias",
+    "model.19.m.2.conv1.bn.num_batches_tracked",
+    "model.19.m.2.conv1.bn.running_mean",
+    "model.19.m.2.conv1.bn.running_var",
+    "model.19.m.2.conv1.bn.weight",
+    "model.19.m.2.conv1.conv.weight",
+    "model.19.m.2.conv2.bn.bias",
+    "model.19.m.2.conv2.bn.num_batches_tracked",
+    "model.19.m.2.conv2.bn.running_mean",
+    "model.19.m.2.conv2.bn.running_var",
+    "model.19.m.2.conv2.bn.weight",
+    "model.19.m.2.conv2.conv.weight",
+    "model.2.blocks.0.conv1.bn.bias",
+    "model.2.blocks.0.conv1.bn.num_batches_tracked",
+    "model.2.blocks.0.conv1.bn.running_mean",
+    "model.2.blocks.0.conv1.bn.running_var",
+    "model.2.blocks.0.conv1.bn.weight",
+    "model.2.blocks.0.conv1.conv.weight",
+    "model.2.blocks.0.conv2.bn.bias",
+    "model.2.blocks.0.conv2.bn.num_batches_tracked",
+    "model.2.blocks.0.conv2.bn.running_mean",
+    "model.2.blocks.0.conv2.bn.running_var",
+    "model.2.blocks.0.conv2.bn.weight",
+    "model.2.blocks.0.conv2.conv.weight",
+    "model.2.blocks.0.shortcut.1.bn.bias",
+    "model.2.blocks.0.shortcut.1.bn.num_batches_tracked",
+    "model.2.blocks.0.shortcut.1.bn.running_mean",
+    "model.2.blocks.0.shortcut.1.bn.running_var",
+    "model.2.blocks.0.shortcut.1.bn.weight",
+    "model.2.blocks.0.shortcut.1.conv.weight",
+    "model.2.blocks.1.conv1.bn.bias",
+    "model.2.blocks.1.conv1.bn.num_batches_tracked",
+    "model.2.blocks.1.conv1.bn.running_mean",
+    "model.2.blocks.1.conv1.bn.running_var",
+    "model.2.blocks.1.conv1.bn.weight",
+    "model.2.blocks.1.conv1.conv.weight",
+    "model.2.blocks.1.conv2.bn.bias",
+    "model.2.blocks.1.conv2.bn.num_batches_tracked",
+    "model.2.blocks.1.conv2.bn.running_mean",
+    "model.2.blocks.1.conv2.bn.running_var",
+    "model.2.blocks.1.conv2.bn.weight",
+    "model.2.blocks.1.conv2.conv.weight",
+    "model.20.bn.bias",
+    "model.20.bn.num_batches_tracked",
+    "model.20.bn.running_mean",
+    "model.20.bn.running_var",
+    "model.20.bn.weight",
+    "model.20.conv.weight",
+    "model.22.cv1.bn.bias",
+    "model.22.cv1.bn.num_batches_tracked",
+    "model.22.cv1.bn.running_mean",
+    "model.22.cv1.bn.running_var",
+    "model.22.cv1.bn.weight",
+    "model.22.cv1.conv.weight",
+    "model.22.cv2.bn.bias",
+    "model.22.cv2.bn.num_batches_tracked",
+    "model.22.cv2.bn.running_mean",
+    "model.22.cv2.bn.running_var",
+    "model.22.cv2.bn.weight",
+    "model.22.cv2.conv.weight",
+    "model.22.cv3.bn.bias",
+    "model.22.cv3.bn.num_batches_tracked",
+    "model.22.cv3.bn.running_mean",
+    "model.22.cv3.bn.running_var",
+    "model.22.cv3.bn.weight",
+    "model.22.cv3.conv.weight",
+    "model.22.m.0.conv1.bn.bias",
+    "model.22.m.0.conv1.bn.num_batches_tracked",
+    "model.22.m.0.conv1.bn.running_mean",
+    "model.22.m.0.conv1.bn.running_var",
+    "model.22.m.0.conv1.bn.weight",
+    "model.22.m.0.conv1.conv.weight",
+    "model.22.m.0.conv2.bn.bias",
+    "model.22.m.0.conv2.bn.num_batches_tracked",
+    "model.22.m.0.conv2.bn.running_mean",
+    "model.22.m.0.conv2.bn.running_var",
+    "model.22.m.0.conv2.bn.weight",
+    "model.22.m.0.conv2.conv.weight",
+    "model.22.m.1.conv1.bn.bias",
+    "model.22.m.1.conv1.bn.num_batches_tracked",
+    "model.22.m.1.conv1.bn.running_mean",
+    "model.22.m.1.conv1.bn.running_var",
+    "model.22.m.1.conv1.bn.weight",
+    "model.22.m.1.conv1.conv.weight",
+    "model.22.m.1.conv2.bn.bias",
+    "model.22.m.1.conv2.bn.num_batches_tracked",
+    "model.22.m.1.conv2.bn.running_mean",
+    "model.22.m.1.conv2.bn.running_var",
+    "model.22.m.1.conv2.bn.weight",
+    "model.22.m.1.conv2.conv.weight",
+    "model.22.m.2.conv1.bn.bias",
+    "model.22.m.2.conv1.bn.num_batches_tracked",
+    "model.22.m.2.conv1.bn.running_mean",
+    "model.22.m.2.conv1.bn.running_var",
+    "model.22.m.2.conv1.bn.weight",
+    "model.22.m.2.conv1.conv.weight",
+    "model.22.m.2.conv2.bn.bias",
+    "model.22.m.2.conv2.bn.num_batches_tracked",
+    "model.22.m.2.conv2.bn.running_mean",
+    "model.22.m.2.conv2.bn.running_var",
+    "model.22.m.2.conv2.bn.weight",
+    "model.22.m.2.conv2.conv.weight",
+    "model.24.dec_bbox_head.0.layers.0.bias",
+    "model.24.dec_bbox_head.0.layers.0.weight",
+    "model.24.dec_bbox_head.0.layers.1.bias",
+    "model.24.dec_bbox_head.0.layers.1.weight",
+    "model.24.dec_bbox_head.0.layers.2.bias",
+    "model.24.dec_bbox_head.0.layers.2.weight",
+    "model.24.dec_score_head.0.bias",
+    "model.24.dec_score_head.0.weight",
+    "model.24.decoder.layers.0.cross_attn.output_proj.bias",
+    "model.24.decoder.layers.0.cross_attn.output_proj.weight",
+    "model.24.decoder.layers.0.cross_attn.value_proj.bias",
+    "model.24.decoder.layers.0.cross_attn.value_proj.weight",
+    "model.24.decoder.layers.0.linear1.bias",
+    "model.24.decoder.layers.0.linear1.weight",
+    "model.24.decoder.layers.0.linear2.bias",
+    "model.24.decoder.layers.0.linear2.weight",
+    "model.24.decoder.layers.0.norm1.bias",
+    "model.24.decoder.layers.0.norm1.weight",
+    "model.24.decoder.layers.0.norm2.bias",
+    "model.24.decoder.layers.0.norm2.weight",
+    "model.24.decoder.layers.0.norm3.bias",
+    "model.24.decoder.layers.0.norm3.weight",
+    "model.24.decoder.layers.0.self_attn.in_proj_bias",
+    "model.24.decoder.layers.0.self_attn.in_proj_weight",
+    "model.24.decoder.layers.0.self_attn.out_proj.bias",
+    "model.24.decoder.layers.0.self_attn.out_proj.weight",
+    "model.24.denoising_class_embed.weight",
+    "model.24.enc_bbox_head.layers.0.bias",
+    "model.24.enc_bbox_head.layers.0.weight",
+    "model.24.enc_bbox_head.layers.1.bias",
+    "model.24.enc_bbox_head.layers.1.weight",
+    "model.24.enc_bbox_head.layers.2.bias",
+    "model.24.enc_bbox_head.layers.2.weight",
+    "model.24.enc_output.0.bias",
+    "model.24.enc_output.0.weight",
+    "model.24.enc_output.1.bias",
+    "model.24.enc_output.1.weight",
+    "model.24.enc_score_head.bias",
+    "model.24.enc_score_head.weight",
+    "model.24.input_proj.0.0.weight",
+    "model.24.input_proj.0.1.bias",
+    "model.24.input_proj.0.1.num_batches_tracked",
+    "model.24.input_proj.0.1.running_mean",
+    "model.24.input_proj.0.1.running_var",
+    "model.24.input_proj.0.1.weight",
+    "model.24.input_proj.1.0.weight",
+    "model.24.input_proj.1.1.bias",
+    "model.24.input_proj.1.1.num_batches_tracked",
+    "model.24.input_proj.1.1.running_mean",
+    "model.24.input_proj.1.1.running_var",
+    "model.24.input_proj.1.1.weight",
+    "model.24.input_proj.2.0.weight",
+    "model.24.input_proj.2.1.bias",
+    "model.24.input_proj.2.1.num_batches_tracked",
+    "model.24.input_proj.2.1.running_mean",
+    "model.24.input_proj.2.1.running_var",
+    "model.24.input_proj.2.1.weight",
+    "model.24.query_pos_head.layers.0.bias",
+    "model.24.query_pos_head.layers.0.weight",
+    "model.24.query_pos_head.layers.1.bias",
+    "model.24.query_pos_head.layers.1.weight",
+    "model.3.blocks.0.conv1.bn.bias",
+    "model.3.blocks.0.conv1.bn.num_batches_tracked",
+    "model.3.blocks.0.conv1.bn.running_mean",
+    "model.3.blocks.0.conv1.bn.running_var",
+    "model.3.blocks.0.conv1.bn.weight",
+    "model.3.blocks.0.conv1.conv.weight",
+    "model.3.blocks.0.conv2.bn.bias",
+    "model.3.blocks.0.conv2.bn.num_batches_tracked",
+    "model.3.blocks.0.conv2.bn.running_mean",
+    "model.3.blocks.0.conv2.bn.running_var",
+    "model.3.blocks.0.conv2.bn.weight",
+    "model.3.blocks.0.conv2.conv.weight",
+    "model.3.blocks.0.shortcut.1.bn.bias",
+    "model.3.blocks.0.shortcut.1.bn.num_batches_tracked",
+    "model.3.blocks.0.shortcut.1.bn.running_mean",
+    "model.3.blocks.0.shortcut.1.bn.running_var",
+    "model.3.blocks.0.shortcut.1.bn.weight",
+    "model.3.blocks.0.shortcut.1.conv.weight",
+    "model.3.blocks.1.conv1.bn.bias",
+    "model.3.blocks.1.conv1.bn.num_batches_tracked",
+    "model.3.blocks.1.conv1.bn.running_mean",
+    "model.3.blocks.1.conv1.bn.running_var",
+    "model.3.blocks.1.conv1.bn.weight",
+    "model.3.blocks.1.conv1.conv.weight",
+    "model.3.blocks.1.conv2.bn.bias",
+    "model.3.blocks.1.conv2.bn.num_batches_tracked",
+    "model.3.blocks.1.conv2.bn.running_mean",
+    "model.3.blocks.1.conv2.bn.running_var",
+    "model.3.blocks.1.conv2.bn.weight",
+    "model.3.blocks.1.conv2.conv.weight",
+    "model.4.blocks.0.conv1.bn.bias",
+    "model.4.blocks.0.conv1.bn.num_batches_tracked",
+    "model.4.blocks.0.conv1.bn.running_mean",
+    "model.4.blocks.0.conv1.bn.running_var",
+    "model.4.blocks.0.conv1.bn.weight",
+    "model.4.blocks.0.conv1.conv.weight",
+    "model.4.blocks.0.conv2.bn.bias",
+    "model.4.blocks.0.conv2.bn.num_batches_tracked",
+    "model.4.blocks.0.conv2.bn.running_mean",
+    "model.4.blocks.0.conv2.bn.running_var",
+    "model.4.blocks.0.conv2.bn.weight",
+    "model.4.blocks.0.conv2.conv.weight",
+    "model.4.blocks.0.shortcut.1.bn.bias",
+    "model.4.blocks.0.shortcut.1.bn.num_batches_tracked",
+    "model.4.blocks.0.shortcut.1.bn.running_mean",
+    "model.4.blocks.0.shortcut.1.bn.running_var",
+    "model.4.blocks.0.shortcut.1.bn.weight",
+    "model.4.blocks.0.shortcut.1.conv.weight",
+    "model.4.blocks.1.conv1.bn.bias",
+    "model.4.blocks.1.conv1.bn.num_batches_tracked",
+    "model.4.blocks.1.conv1.bn.running_mean",
+    "model.4.blocks.1.conv1.bn.running_var",
+    "model.4.blocks.1.conv1.bn.weight",
+    "model.4.blocks.1.conv1.conv.weight",
+    "model.4.blocks.1.conv2.bn.bias",
+    "model.4.blocks.1.conv2.bn.num_batches_tracked",
+    "model.4.blocks.1.conv2.bn.running_mean",
+    "model.4.blocks.1.conv2.bn.running_var",
+    "model.4.blocks.1.conv2.bn.weight",
+    "model.4.blocks.1.conv2.conv.weight",
+    "model.5.bn.bias",
+    "model.5.bn.num_batches_tracked",
+    "model.5.bn.running_mean",
+    "model.5.bn.running_var",
+    "model.5.bn.weight",
+    "model.5.conv.weight",
+    "model.6.fc1.bias",
+    "model.6.fc1.weight",
+    "model.6.fc2.bias",
+    "model.6.fc2.weight",
+    "model.6.ma.in_proj_bias",
+    "model.6.ma.in_proj_weight",
+    "model.6.ma.out_proj.bias",
+    "model.6.ma.out_proj.weight",
+    "model.6.norm1.bias",
+    "model.6.norm1.weight",
+    "model.6.norm2.bias",
+    "model.6.norm2.weight",
+    "model.7.bn.bias",
+    "model.7.bn.num_batches_tracked",
+    "model.7.bn.running_mean",
+    "model.7.bn.running_var",
+    "model.7.bn.weight",
+    "model.7.conv.weight",
+    "model.9.bn.bias",
+    "model.9.bn.num_batches_tracked",
+    "model.9.bn.running_mean",
+    "model.9.bn.running_var",
+    "model.9.bn.weight",
+    "model.9.conv.weight"
+  ],
+  "common_state_sha256": "8b26d67d3f1eb4e5544434ebb357015c336e65e6bb8294195e6bb39df676a61d",
+  "schema": "5090.fresh-budget-init.v1",
+  "seed": 0,
+  "variants": {
+    "c2-q200-p2-d3": {
+      "architecture": {
+        "decoder_layers": 3,
+        "eval_idx": 2,
+        "parameters": 20024008,
+        "points_per_level": [
+          2,
+          2,
+          2
+        ],
+        "queries": 200
+      },
+      "config": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/experiments/decoder_budget_5090/configs/c2-q200-p2-d3.yaml",
+      "config_sha256": "e66ee39dec05c601851acbd348e7204352ce037774ed955ec1fd8c09ba9b180c",
+      "initialization": {
+        "candidate_seed": 1000,
+        "full_initial_state_sha256": "cc59f0529664158255571b8fc5de7876ac06e8d6516d7e490565e6137fb43486",
+        "new_native_initialized_state": [
+          "model.24.decoder.layers.0.cross_attn.attention_weights.bias",
+          "model.24.decoder.layers.0.cross_attn.attention_weights.weight",
+          "model.24.decoder.layers.0.cross_attn.sampling_offsets.bias",
+          "model.24.decoder.layers.0.cross_attn.sampling_offsets.weight",
+          "model.24.decoder.layers.1.cross_attn.attention_weights.bias",
+          "model.24.decoder.layers.1.cross_attn.attention_weights.weight",
+          "model.24.decoder.layers.1.cross_attn.sampling_offsets.bias",
+          "model.24.decoder.layers.1.cross_attn.sampling_offsets.weight",
+          "model.24.decoder.layers.2.cross_attn.attention_weights.bias",
+          "model.24.decoder.layers.2.cross_attn.attention_weights.weight",
+          "model.24.decoder.layers.2.cross_attn.sampling_offsets.bias",
+          "model.24.decoder.layers.2.cross_attn.sampling_offsets.weight"
+        ],
+        "pretrained": false,
+        "reference_c2_full_sha256": "7ea3429f4bb30bf725578108d287b4a8a82dbccff545cd022c0daad0ddd75737",
+        "reference_r0_shared_sha256": "1d9a8e81f45383d572f319a2039a24338a82f7847a9708e98ab4c0fed07b871e",
+        "removed_reference_state": [],
+        "resume": false,
+        "seed": 0,
+        "shape_changed_state": {
+          "model.24.decoder.layers.0.cross_attn.attention_weights.bias": [
+            [
+              96
+            ],
+            [
+              48
+            ]
+          ],
+          "model.24.decoder.layers.0.cross_attn.attention_weights.weight": [
+            [
+              96,
+              256
+            ],
+            [
+              48,
+              256
+            ]
+          ],
+          "model.24.decoder.layers.0.cross_attn.sampling_offsets.bias": [
+            [
+              192
+            ],
+            [
+              96
+            ]
+          ],
+          "model.24.decoder.layers.0.cross_attn.sampling_offsets.weight": [
+            [
+              192,
+              256
+            ],
+            [
+              96,
+              256
+            ]
+          ],
+          "model.24.decoder.layers.1.cross_attn.attention_weights.bias": [
+            [
+              96
+            ],
+            [
+              48
+            ]
+          ],
+          "model.24.decoder.layers.1.cross_attn.attention_weights.weight": [
+            [
+              96,
+              256
+            ],
+            [
+              48,
+              256
+            ]
+          ],
+          "model.24.decoder.layers.1.cross_attn.sampling_offsets.bias": [
+            [
+              192
+            ],
+            [
+              96
+            ]
+          ],
+          "model.24.decoder.layers.1.cross_attn.sampling_offsets.weight": [
+            [
+              192,
+              256
+            ],
+            [
+              96,
+              256
+            ]
+          ],
+          "model.24.decoder.layers.2.cross_attn.attention_weights.bias": [
+            [
+              96
+            ],
+            [
+              48
+            ]
+          ],
+          "model.24.decoder.layers.2.cross_attn.attention_weights.weight": [
+            [
+              96,
+              256
+            ],
+            [
+              48,
+              256
+            ]
+          ],
+          "model.24.decoder.layers.2.cross_attn.sampling_offsets.bias": [
+            [
+              192
+            ],
+            [
+              96
+            ]
+          ],
+          "model.24.decoder.layers.2.cross_attn.sampling_offsets.weight": [
+            [
+              192,
+              256
+            ],
+            [
+              96,
+              256
+            ]
+          ]
+        },
+        "shared_state_items": 521,
+        "shared_state_sha256": "86758ae6cebcc58d1a84645848b0e1a254464406b76f6816a20f3648c833421e",
+        "shared_state_verified": true,
+        "source": "fresh seeded C2 generated in RAM; no checkpoint/backbone pretrained weights read",
+        "source_checkpoint": null,
+        "variant": "c2-q200-p2-d3"
+      }
+    },
+    "c2-q300-p2-d3": {
+      "architecture": {
+        "decoder_layers": 3,
+        "eval_idx": 2,
+        "parameters": 20024008,
+        "points_per_level": [
+          2,
+          2,
+          2
+        ],
+        "queries": 300
+      },
+      "config": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/experiments/decoder_budget_5090/configs/c2-q300-p2-d3.yaml",
+      "config_sha256": "1c4ce89131505e51671d2b5fddb1074900b7370680694496e344a7ebdba6b5f5",
+      "initialization": {
+        "candidate_seed": 1000,
+        "full_initial_state_sha256": "cc59f0529664158255571b8fc5de7876ac06e8d6516d7e490565e6137fb43486",
+        "new_native_initialized_state": [
+          "model.24.decoder.layers.0.cross_attn.attention_weights.bias",
+          "model.24.decoder.layers.0.cross_attn.attention_weights.weight",
+          "model.24.decoder.layers.0.cross_attn.sampling_offsets.bias",
+          "model.24.decoder.layers.0.cross_attn.sampling_offsets.weight",
+          "model.24.decoder.layers.1.cross_attn.attention_weights.bias",
+          "model.24.decoder.layers.1.cross_attn.attention_weights.weight",
+          "model.24.decoder.layers.1.cross_attn.sampling_offsets.bias",
+          "model.24.decoder.layers.1.cross_attn.sampling_offsets.weight",
+          "model.24.decoder.layers.2.cross_attn.attention_weights.bias",
+          "model.24.decoder.layers.2.cross_attn.attention_weights.weight",
+          "model.24.decoder.layers.2.cross_attn.sampling_offsets.bias",
+          "model.24.decoder.layers.2.cross_attn.sampling_offsets.weight"
+        ],
+        "pretrained": false,
+        "reference_c2_full_sha256": "7ea3429f4bb30bf725578108d287b4a8a82dbccff545cd022c0daad0ddd75737",
+        "reference_r0_shared_sha256": "1d9a8e81f45383d572f319a2039a24338a82f7847a9708e98ab4c0fed07b871e",
+        "removed_reference_state": [],
+        "resume": false,
+        "seed": 0,
+        "shape_changed_state": {
+          "model.24.decoder.layers.0.cross_attn.attention_weights.bias": [
+            [
+              96
+            ],
+            [
+              48
+            ]
+          ],
+          "model.24.decoder.layers.0.cross_attn.attention_weights.weight": [
+            [
+              96,
+              256
+            ],
+            [
+              48,
+              256
+            ]
+          ],
+          "model.24.decoder.layers.0.cross_attn.sampling_offsets.bias": [
+            [
+              192
+            ],
+            [
+              96
+            ]
+          ],
+          "model.24.decoder.layers.0.cross_attn.sampling_offsets.weight": [
+            [
+              192,
+              256
+            ],
+            [
+              96,
+              256
+            ]
+          ],
+          "model.24.decoder.layers.1.cross_attn.attention_weights.bias": [
+            [
+              96
+            ],
+            [
+              48
+            ]
+          ],
+          "model.24.decoder.layers.1.cross_attn.attention_weights.weight": [
+            [
+              96,
+              256
+            ],
+            [
+              48,
+              256
+            ]
+          ],
+          "model.24.decoder.layers.1.cross_attn.sampling_offsets.bias": [
+            [
+              192
+            ],
+            [
+              96
+            ]
+          ],
+          "model.24.decoder.layers.1.cross_attn.sampling_offsets.weight": [
+            [
+              192,
+              256
+            ],
+            [
+              96,
+              256
+            ]
+          ],
+          "model.24.decoder.layers.2.cross_attn.attention_weights.bias": [
+            [
+              96
+            ],
+            [
+              48
+            ]
+          ],
+          "model.24.decoder.layers.2.cross_attn.attention_weights.weight": [
+            [
+              96,
+              256
+            ],
+            [
+              48,
+              256
+            ]
+          ],
+          "model.24.decoder.layers.2.cross_attn.sampling_offsets.bias": [
+            [
+              192
+            ],
+            [
+              96
+            ]
+          ],
+          "model.24.decoder.layers.2.cross_attn.sampling_offsets.weight": [
+            [
+              192,
+              256
+            ],
+            [
+              96,
+              256
+            ]
+          ]
+        },
+        "shared_state_items": 521,
+        "shared_state_sha256": "86758ae6cebcc58d1a84645848b0e1a254464406b76f6816a20f3648c833421e",
+        "shared_state_verified": true,
+        "source": "fresh seeded C2 generated in RAM; no checkpoint/backbone pretrained weights read",
+        "source_checkpoint": null,
+        "variant": "c2-q300-p2-d3"
+      }
+    },
+    "c2-q300-p4-d1": {
+      "architecture": {
+        "decoder_layers": 1,
+        "eval_idx": 0,
+        "parameters": 17872924,
+        "points_per_level": [
+          4,
+          4,
+          4
+        ],
+        "queries": 300
+      },
+      "config": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/experiments/decoder_budget_5090/configs/c2-q300-p4-d1.yaml",
+      "config_sha256": "d7f1eae532abaebda6e065a2a9c51f673399a5e870e631e004f305175f76ec1f",
+      "initialization": {
+        "candidate_seed": 1000,
+        "full_initial_state_sha256": "12d72c5dbaf0dfa6b42157f2da403acd9777ec46f6861ee22dfac9e967529657",
+        "new_native_initialized_state": [],
+        "pretrained": false,
+        "reference_c2_full_sha256": "7ea3429f4bb30bf725578108d287b4a8a82dbccff545cd022c0daad0ddd75737",
+        "reference_r0_shared_sha256": "1d9a8e81f45383d572f319a2039a24338a82f7847a9708e98ab4c0fed07b871e",
+        "removed_reference_state": [
+          "model.24.dec_bbox_head.1.layers.0.bias",
+          "model.24.dec_bbox_head.1.layers.0.weight",
+          "model.24.dec_bbox_head.1.layers.1.bias",
+          "model.24.dec_bbox_head.1.layers.1.weight",
+          "model.24.dec_bbox_head.1.layers.2.bias",
+          "model.24.dec_bbox_head.1.layers.2.weight",
+          "model.24.dec_bbox_head.2.layers.0.bias",
+          "model.24.dec_bbox_head.2.layers.0.weight",
+          "model.24.dec_bbox_head.2.layers.1.bias",
+          "model.24.dec_bbox_head.2.layers.1.weight",
+          "model.24.dec_bbox_head.2.layers.2.bias",
+          "model.24.dec_bbox_head.2.layers.2.weight",
+          "model.24.dec_score_head.1.bias",
+          "model.24.dec_score_head.1.weight",
+          "model.24.dec_score_head.2.bias",
+          "model.24.dec_score_head.2.weight",
+          "model.24.decoder.layers.1.cross_attn.attention_weights.bias",
+          "model.24.decoder.layers.1.cross_attn.attention_weights.weight",
+          "model.24.decoder.layers.1.cross_attn.output_proj.bias",
+          "model.24.decoder.layers.1.cross_attn.output_proj.weight",
+          "model.24.decoder.layers.1.cross_attn.sampling_offsets.bias",
+          "model.24.decoder.layers.1.cross_attn.sampling_offsets.weight",
+          "model.24.decoder.layers.1.cross_attn.value_proj.bias",
+          "model.24.decoder.layers.1.cross_attn.value_proj.weight",
+          "model.24.decoder.layers.1.linear1.bias",
+          "model.24.decoder.layers.1.linear1.weight",
+          "model.24.decoder.layers.1.linear2.bias",
+          "model.24.decoder.layers.1.linear2.weight",
+          "model.24.decoder.layers.1.norm1.bias",
+          "model.24.decoder.layers.1.norm1.weight",
+          "model.24.decoder.layers.1.norm2.bias",
+          "model.24.decoder.layers.1.norm2.weight",
+          "model.24.decoder.layers.1.norm3.bias",
+          "model.24.decoder.layers.1.norm3.weight",
+          "model.24.decoder.layers.1.self_attn.in_proj_bias",
+          "model.24.decoder.layers.1.self_attn.in_proj_weight",
+          "model.24.decoder.layers.1.self_attn.out_proj.bias",
+          "model.24.decoder.layers.1.self_attn.out_proj.weight",
+          "model.24.decoder.layers.2.cross_attn.attention_weights.bias",
+          "model.24.decoder.layers.2.cross_attn.attention_weights.weight",
+          "model.24.decoder.layers.2.cross_attn.output_proj.bias",
+          "model.24.decoder.layers.2.cross_attn.output_proj.weight",
+          "model.24.decoder.layers.2.cross_attn.sampling_offsets.bias",
+          "model.24.decoder.layers.2.cross_attn.sampling_offsets.weight",
+          "model.24.decoder.layers.2.cross_attn.value_proj.bias",
+          "model.24.decoder.layers.2.cross_attn.value_proj.weight",
+          "model.24.decoder.layers.2.linear1.bias",
+          "model.24.decoder.layers.2.linear1.weight",
+          "model.24.decoder.layers.2.linear2.bias",
+          "model.24.decoder.layers.2.linear2.weight",
+          "model.24.decoder.layers.2.norm1.bias",
+          "model.24.decoder.layers.2.norm1.weight",
+          "model.24.decoder.layers.2.norm2.bias",
+          "model.24.decoder.layers.2.norm2.weight",
+          "model.24.decoder.layers.2.norm3.bias",
+          "model.24.decoder.layers.2.norm3.weight",
+          "model.24.decoder.layers.2.self_attn.in_proj_bias",
+          "model.24.decoder.layers.2.self_attn.in_proj_weight",
+          "model.24.decoder.layers.2.self_attn.out_proj.bias",
+          "model.24.decoder.layers.2.self_attn.out_proj.weight"
+        ],
+        "resume": false,
+        "seed": 0,
+        "shape_changed_state": {},
+        "shared_state_items": 473,
+        "shared_state_sha256": "12d72c5dbaf0dfa6b42157f2da403acd9777ec46f6861ee22dfac9e967529657",
+        "shared_state_verified": true,
+        "source": "fresh seeded C2 generated in RAM; no checkpoint/backbone pretrained weights read",
+        "source_checkpoint": null,
+        "variant": "c2-q300-p4-d1"
+      }
+    },
+    "c2-q300-p4-d2": {
+      "architecture": {
+        "decoder_layers": 2,
+        "eval_idx": 1,
+        "parameters": 19003978,
+        "points_per_level": [
+          4,
+          4,
+          4
+        ],
+        "queries": 300
+      },
+      "config": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/experiments/decoder_budget_5090/configs/c2-q300-p4-d2.yaml",
+      "config_sha256": "5c76b4fd23ae629ab9ce543b15355c0a3ac2b059d37498abc489854dfa2cf115",
+      "initialization": {
+        "candidate_seed": 1000,
+        "full_initial_state_sha256": "853fb3eb6c37d4372421445b78d458377d3868941d588508960bbe9b1e01b954",
+        "new_native_initialized_state": [],
+        "pretrained": false,
+        "reference_c2_full_sha256": "7ea3429f4bb30bf725578108d287b4a8a82dbccff545cd022c0daad0ddd75737",
+        "reference_r0_shared_sha256": "1d9a8e81f45383d572f319a2039a24338a82f7847a9708e98ab4c0fed07b871e",
+        "removed_reference_state": [
+          "model.24.dec_bbox_head.2.layers.0.bias",
+          "model.24.dec_bbox_head.2.layers.0.weight",
+          "model.24.dec_bbox_head.2.layers.1.bias",
+          "model.24.dec_bbox_head.2.layers.1.weight",
+          "model.24.dec_bbox_head.2.layers.2.bias",
+          "model.24.dec_bbox_head.2.layers.2.weight",
+          "model.24.dec_score_head.2.bias",
+          "model.24.dec_score_head.2.weight",
+          "model.24.decoder.layers.2.cross_attn.attention_weights.bias",
+          "model.24.decoder.layers.2.cross_attn.attention_weights.weight",
+          "model.24.decoder.layers.2.cross_attn.output_proj.bias",
+          "model.24.decoder.layers.2.cross_attn.output_proj.weight",
+          "model.24.decoder.layers.2.cross_attn.sampling_offsets.bias",
+          "model.24.decoder.layers.2.cross_attn.sampling_offsets.weight",
+          "model.24.decoder.layers.2.cross_attn.value_proj.bias",
+          "model.24.decoder.layers.2.cross_attn.value_proj.weight",
+          "model.24.decoder.layers.2.linear1.bias",
+          "model.24.decoder.layers.2.linear1.weight",
+          "model.24.decoder.layers.2.linear2.bias",
+          "model.24.decoder.layers.2.linear2.weight",
+          "model.24.decoder.layers.2.norm1.bias",
+          "model.24.decoder.layers.2.norm1.weight",
+          "model.24.decoder.layers.2.norm2.bias",
+          "model.24.decoder.layers.2.norm2.weight",
+          "model.24.decoder.layers.2.norm3.bias",
+          "model.24.decoder.layers.2.norm3.weight",
+          "model.24.decoder.layers.2.self_attn.in_proj_bias",
+          "model.24.decoder.layers.2.self_attn.in_proj_weight",
+          "model.24.decoder.layers.2.self_attn.out_proj.bias",
+          "model.24.decoder.layers.2.self_attn.out_proj.weight"
+        ],
+        "resume": false,
+        "seed": 0,
+        "shape_changed_state": {},
+        "shared_state_items": 503,
+        "shared_state_sha256": "853fb3eb6c37d4372421445b78d458377d3868941d588508960bbe9b1e01b954",
+        "shared_state_verified": true,
+        "source": "fresh seeded C2 generated in RAM; no checkpoint/backbone pretrained weights read",
+        "source_checkpoint": null,
+        "variant": "c2-q300-p4-d2"
+      }
+    }
+  }
+}

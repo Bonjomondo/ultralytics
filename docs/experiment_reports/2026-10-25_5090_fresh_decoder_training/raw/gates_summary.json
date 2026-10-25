@@ -1,0 +1,876 @@
+{
+  "status": "passed",
+  "scope": "four independent engineering smokes; not accuracy results",
+  "variants": [
+    {
+      "variant": "c2-q200-p2-d3",
+      "status": "completed",
+      "epochs": 1,
+      "fraction": 0.01,
+      "architecture": {
+        "decoder_layers": 3,
+        "eval_idx": 2,
+        "parameters": 20024008,
+        "points_per_level": [
+          2,
+          2,
+          2
+        ],
+        "queries": 200
+      },
+      "initialization": {
+        "amp": false,
+        "candidate_seed": 1000,
+        "full_initial_state_sha256": "cc59f0529664158255571b8fc5de7876ac06e8d6516d7e490565e6137fb43486",
+        "gradient_sampling": "first three training batches per epoch; normal matching queries only for activations",
+        "model_config": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/experiments/decoder_budget_5090/configs/c2-q200-p2-d3.yaml",
+        "new_native_initialized_state": [
+          "model.24.decoder.layers.0.cross_attn.attention_weights.bias",
+          "model.24.decoder.layers.0.cross_attn.attention_weights.weight",
+          "model.24.decoder.layers.0.cross_attn.sampling_offsets.bias",
+          "model.24.decoder.layers.0.cross_attn.sampling_offsets.weight",
+          "model.24.decoder.layers.1.cross_attn.attention_weights.bias",
+          "model.24.decoder.layers.1.cross_attn.attention_weights.weight",
+          "model.24.decoder.layers.1.cross_attn.sampling_offsets.bias",
+          "model.24.decoder.layers.1.cross_attn.sampling_offsets.weight",
+          "model.24.decoder.layers.2.cross_attn.attention_weights.bias",
+          "model.24.decoder.layers.2.cross_attn.attention_weights.weight",
+          "model.24.decoder.layers.2.cross_attn.sampling_offsets.bias",
+          "model.24.decoder.layers.2.cross_attn.sampling_offsets.weight"
+        ],
+        "pretrained": false,
+        "reference_c2_full_sha256": "7ea3429f4bb30bf725578108d287b4a8a82dbccff545cd022c0daad0ddd75737",
+        "reference_r0_shared_sha256": "1d9a8e81f45383d572f319a2039a24338a82f7847a9708e98ab4c0fed07b871e",
+        "removed_reference_state": [],
+        "resume": false,
+        "seed": 0,
+        "shape_changed_state": {
+          "model.24.decoder.layers.0.cross_attn.attention_weights.bias": [
+            [
+              96
+            ],
+            [
+              48
+            ]
+          ],
+          "model.24.decoder.layers.0.cross_attn.attention_weights.weight": [
+            [
+              96,
+              256
+            ],
+            [
+              48,
+              256
+            ]
+          ],
+          "model.24.decoder.layers.0.cross_attn.sampling_offsets.bias": [
+            [
+              192
+            ],
+            [
+              96
+            ]
+          ],
+          "model.24.decoder.layers.0.cross_attn.sampling_offsets.weight": [
+            [
+              192,
+              256
+            ],
+            [
+              96,
+              256
+            ]
+          ],
+          "model.24.decoder.layers.1.cross_attn.attention_weights.bias": [
+            [
+              96
+            ],
+            [
+              48
+            ]
+          ],
+          "model.24.decoder.layers.1.cross_attn.attention_weights.weight": [
+            [
+              96,
+              256
+            ],
+            [
+              48,
+              256
+            ]
+          ],
+          "model.24.decoder.layers.1.cross_attn.sampling_offsets.bias": [
+            [
+              192
+            ],
+            [
+              96
+            ]
+          ],
+          "model.24.decoder.layers.1.cross_attn.sampling_offsets.weight": [
+            [
+              192,
+              256
+            ],
+            [
+              96,
+              256
+            ]
+          ],
+          "model.24.decoder.layers.2.cross_attn.attention_weights.bias": [
+            [
+              96
+            ],
+            [
+              48
+            ]
+          ],
+          "model.24.decoder.layers.2.cross_attn.attention_weights.weight": [
+            [
+              96,
+              256
+            ],
+            [
+              48,
+              256
+            ]
+          ],
+          "model.24.decoder.layers.2.cross_attn.sampling_offsets.bias": [
+            [
+              192
+            ],
+            [
+              96
+            ]
+          ],
+          "model.24.decoder.layers.2.cross_attn.sampling_offsets.weight": [
+            [
+              192,
+              256
+            ],
+            [
+              96,
+              256
+            ]
+          ]
+        },
+        "shared_state_items": 521,
+        "shared_state_sha256": "86758ae6cebcc58d1a84645848b0e1a254464406b76f6816a20f3648c833421e",
+        "shared_state_verified": true,
+        "source": "fresh seeded C2 generated in RAM; no checkpoint/backbone pretrained weights read",
+        "source_checkpoint": null,
+        "variant": "c2-q200-p2-d3"
+      },
+      "common_state_sha256": "8b26d67d3f1eb4e5544434ebb357015c336e65e6bb8294195e6bb39df676a61d",
+      "full_initial_state_verified": true,
+      "cpu_initial_seed": 0,
+      "cuda_initial_seed": 1000,
+      "effective_train_args": {
+        "amp": false,
+        "batch": 8,
+        "cache": false,
+        "close_mosaic": 0,
+        "deterministic": false,
+        "epochs": 1,
+        "imgsz": 640,
+        "lr0": 0.0001,
+        "lrf": 1.0,
+        "max_det": 300,
+        "mixup": 0.2,
+        "momentum": 0.9,
+        "nbs": 64,
+        "optimizer": "AdamW",
+        "patience": 0,
+        "plots": true,
+        "pretrained": false,
+        "resume": false,
+        "seed": 0,
+        "val": true,
+        "warmup_bias_lr": 0.0,
+        "warmup_epochs": 3.0,
+        "warmup_momentum": 0.8,
+        "weight_decay": 0.0001,
+        "workers": 0
+      },
+      "health": {
+        "d1_delta_abs": 7.509988336096285e-06,
+        "d1_delta_finite": 1.0,
+        "d1_delta_query_variance": 1.5524708255054698e-12,
+        "d1_hidden_active_ratio": 0.5344018340110779,
+        "d1_hidden_query_variance": 0.01398395374417305,
+        "d1_offset_weight_grad_abs": 0.02052907645702362,
+        "d2_delta_abs": 6.534620297315996e-06,
+        "d2_delta_finite": 1.0,
+        "d2_delta_query_variance": 1.2390457583555392e-12,
+        "d2_hidden_active_ratio": 0.5152799487113953,
+        "d2_hidden_query_variance": 0.012717589735984802,
+        "d2_offset_weight_grad_abs": 0.015689879655838013,
+        "d3_delta_abs": 6.093201591284014e-06,
+        "d3_delta_finite": 1.0,
+        "d3_delta_query_variance": 1.0215448278949602e-12,
+        "d3_hidden_active_ratio": 0.5058838129043579,
+        "d3_hidden_query_variance": 0.01094942819327116,
+        "d3_offset_weight_grad_abs": 0.012246529571712017,
+        "encoder_delta_abs": 6.516004759760108e-06,
+        "encoder_delta_finite": 1.0,
+        "encoder_delta_query_variance": 1.7668271359849719e-12,
+        "encoder_hidden_active_ratio": 0.4848201274871826,
+        "encoder_hidden_query_variance": 0.012250307016074657,
+        "epoch": 1,
+        "gamma": null,
+        "last_bbox_step_abs": 6.297994445958466e-07,
+        "p2_first_weight_grad_abs": 0.007069689687341452,
+        "train_peak_allocated_mib": 5628.947265625,
+        "train_seconds": 2.1027617999352515
+      },
+      "checkpoints": {
+        "best": {
+          "bytes": 40439439,
+          "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q200-p2-d3-1e-gate-s0/weights/best.pt",
+          "sha256": "932a1759f000a9624472867c29cd4dd691c162b9e267df81c32c25adb671572f"
+        },
+        "last": {
+          "bytes": 40439439,
+          "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q200-p2-d3-1e-gate-s0/weights/last.pt",
+          "sha256": "932a1759f000a9624472867c29cd4dd691c162b9e267df81c32c25adb671572f"
+        },
+        "resume": {
+          "bytes": 120820716,
+          "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q200-p2-d3-1e-gate-s0/weights/resume.pt",
+          "sha256": "a91abd4b92b9b56055a386d36f5ff7be095526ee035755ffcdaea1117db27bbd"
+        }
+      },
+      "reload_gate": {
+        "scope": "subset_gate",
+        "images": 8,
+        "repeated_forward_exact": true,
+        "model_state_unchanged": true,
+        "checkpoint_sha256": "932a1759f000a9624472867c29cd4dd691c162b9e267df81c32c25adb671572f",
+        "metrics": {
+          "AP": 0.0,
+          "AP50": 0.0,
+          "AP75": 0.0,
+          "APl": 0.0,
+          "APm": 0.0,
+          "APs": 0.0,
+          "AR1": 0.0,
+          "AR10": 0.0,
+          "AR100": 0.0,
+          "ARl": 0.0,
+          "ARm": 0.0,
+          "ARs": 0.0
+        }
+      }
+    },
+    {
+      "variant": "c2-q300-p2-d3",
+      "status": "completed",
+      "epochs": 1,
+      "fraction": 0.01,
+      "architecture": {
+        "decoder_layers": 3,
+        "eval_idx": 2,
+        "parameters": 20024008,
+        "points_per_level": [
+          2,
+          2,
+          2
+        ],
+        "queries": 300
+      },
+      "initialization": {
+        "amp": false,
+        "candidate_seed": 1000,
+        "full_initial_state_sha256": "cc59f0529664158255571b8fc5de7876ac06e8d6516d7e490565e6137fb43486",
+        "gradient_sampling": "first three training batches per epoch; normal matching queries only for activations",
+        "model_config": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/experiments/decoder_budget_5090/configs/c2-q300-p2-d3.yaml",
+        "new_native_initialized_state": [
+          "model.24.decoder.layers.0.cross_attn.attention_weights.bias",
+          "model.24.decoder.layers.0.cross_attn.attention_weights.weight",
+          "model.24.decoder.layers.0.cross_attn.sampling_offsets.bias",
+          "model.24.decoder.layers.0.cross_attn.sampling_offsets.weight",
+          "model.24.decoder.layers.1.cross_attn.attention_weights.bias",
+          "model.24.decoder.layers.1.cross_attn.attention_weights.weight",
+          "model.24.decoder.layers.1.cross_attn.sampling_offsets.bias",
+          "model.24.decoder.layers.1.cross_attn.sampling_offsets.weight",
+          "model.24.decoder.layers.2.cross_attn.attention_weights.bias",
+          "model.24.decoder.layers.2.cross_attn.attention_weights.weight",
+          "model.24.decoder.layers.2.cross_attn.sampling_offsets.bias",
+          "model.24.decoder.layers.2.cross_attn.sampling_offsets.weight"
+        ],
+        "pretrained": false,
+        "reference_c2_full_sha256": "7ea3429f4bb30bf725578108d287b4a8a82dbccff545cd022c0daad0ddd75737",
+        "reference_r0_shared_sha256": "1d9a8e81f45383d572f319a2039a24338a82f7847a9708e98ab4c0fed07b871e",
+        "removed_reference_state": [],
+        "resume": false,
+        "seed": 0,
+        "shape_changed_state": {
+          "model.24.decoder.layers.0.cross_attn.attention_weights.bias": [
+            [
+              96
+            ],
+            [
+              48
+            ]
+          ],
+          "model.24.decoder.layers.0.cross_attn.attention_weights.weight": [
+            [
+              96,
+              256
+            ],
+            [
+              48,
+              256
+            ]
+          ],
+          "model.24.decoder.layers.0.cross_attn.sampling_offsets.bias": [
+            [
+              192
+            ],
+            [
+              96
+            ]
+          ],
+          "model.24.decoder.layers.0.cross_attn.sampling_offsets.weight": [
+            [
+              192,
+              256
+            ],
+            [
+              96,
+              256
+            ]
+          ],
+          "model.24.decoder.layers.1.cross_attn.attention_weights.bias": [
+            [
+              96
+            ],
+            [
+              48
+            ]
+          ],
+          "model.24.decoder.layers.1.cross_attn.attention_weights.weight": [
+            [
+              96,
+              256
+            ],
+            [
+              48,
+              256
+            ]
+          ],
+          "model.24.decoder.layers.1.cross_attn.sampling_offsets.bias": [
+            [
+              192
+            ],
+            [
+              96
+            ]
+          ],
+          "model.24.decoder.layers.1.cross_attn.sampling_offsets.weight": [
+            [
+              192,
+              256
+            ],
+            [
+              96,
+              256
+            ]
+          ],
+          "model.24.decoder.layers.2.cross_attn.attention_weights.bias": [
+            [
+              96
+            ],
+            [
+              48
+            ]
+          ],
+          "model.24.decoder.layers.2.cross_attn.attention_weights.weight": [
+            [
+              96,
+              256
+            ],
+            [
+              48,
+              256
+            ]
+          ],
+          "model.24.decoder.layers.2.cross_attn.sampling_offsets.bias": [
+            [
+              192
+            ],
+            [
+              96
+            ]
+          ],
+          "model.24.decoder.layers.2.cross_attn.sampling_offsets.weight": [
+            [
+              192,
+              256
+            ],
+            [
+              96,
+              256
+            ]
+          ]
+        },
+        "shared_state_items": 521,
+        "shared_state_sha256": "86758ae6cebcc58d1a84645848b0e1a254464406b76f6816a20f3648c833421e",
+        "shared_state_verified": true,
+        "source": "fresh seeded C2 generated in RAM; no checkpoint/backbone pretrained weights read",
+        "source_checkpoint": null,
+        "variant": "c2-q300-p2-d3"
+      },
+      "common_state_sha256": "8b26d67d3f1eb4e5544434ebb357015c336e65e6bb8294195e6bb39df676a61d",
+      "full_initial_state_verified": true,
+      "cpu_initial_seed": 0,
+      "cuda_initial_seed": 1000,
+      "effective_train_args": {
+        "amp": false,
+        "batch": 8,
+        "cache": false,
+        "close_mosaic": 0,
+        "deterministic": false,
+        "epochs": 1,
+        "imgsz": 640,
+        "lr0": 0.0001,
+        "lrf": 1.0,
+        "max_det": 300,
+        "mixup": 0.2,
+        "momentum": 0.9,
+        "nbs": 64,
+        "optimizer": "AdamW",
+        "patience": 0,
+        "plots": true,
+        "pretrained": false,
+        "resume": false,
+        "seed": 0,
+        "val": true,
+        "warmup_bias_lr": 0.0,
+        "warmup_epochs": 3.0,
+        "warmup_momentum": 0.8,
+        "weight_decay": 0.0001,
+        "workers": 0
+      },
+      "health": {
+        "d1_delta_abs": 7.07682738720905e-06,
+        "d1_delta_finite": 1.0,
+        "d1_delta_query_variance": 1.5712374977494559e-12,
+        "d1_hidden_active_ratio": 0.5342404842376709,
+        "d1_hidden_query_variance": 0.014035306870937347,
+        "d1_offset_weight_grad_abs": 0.02066158875823021,
+        "d2_delta_abs": 6.129828761913814e-06,
+        "d2_delta_finite": 1.0,
+        "d2_delta_query_variance": 1.284673647843071e-12,
+        "d2_hidden_active_ratio": 0.5153337121009827,
+        "d2_hidden_query_variance": 0.012779556214809418,
+        "d2_offset_weight_grad_abs": 0.015481538139283657,
+        "d3_delta_abs": 5.782166226708796e-06,
+        "d3_delta_finite": 1.0,
+        "d3_delta_query_variance": 1.0826645569644855e-12,
+        "d3_hidden_active_ratio": 0.5060075521469116,
+        "d3_hidden_query_variance": 0.011047735810279846,
+        "d3_offset_weight_grad_abs": 0.012021675705909729,
+        "encoder_delta_abs": 6.886334631417412e-06,
+        "encoder_delta_finite": 1.0,
+        "encoder_delta_query_variance": 1.6135958671656403e-12,
+        "encoder_hidden_active_ratio": 0.48467883467674255,
+        "encoder_hidden_query_variance": 0.012320835143327713,
+        "epoch": 1,
+        "gamma": null,
+        "last_bbox_step_abs": 5.869189863005886e-07,
+        "p2_first_weight_grad_abs": 0.0072150928899645805,
+        "train_peak_allocated_mib": 5948.2216796875,
+        "train_seconds": 2.2043977291323245
+      },
+      "checkpoints": {
+        "best": {
+          "bytes": 40439439,
+          "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p2-d3-1e-gate-s0/weights/best.pt",
+          "sha256": "0ade7818acc414fa67031914ebe6404756f9c52aa5af27639f511a08518e5dda"
+        },
+        "last": {
+          "bytes": 40439439,
+          "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p2-d3-1e-gate-s0/weights/last.pt",
+          "sha256": "0ade7818acc414fa67031914ebe6404756f9c52aa5af27639f511a08518e5dda"
+        },
+        "resume": {
+          "bytes": 120820780,
+          "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p2-d3-1e-gate-s0/weights/resume.pt",
+          "sha256": "9a62880b1d5f7e935c3a21058a82f21b28eecadb6f4034bcb63a64cbf62717df"
+        }
+      },
+      "reload_gate": {
+        "scope": "subset_gate",
+        "images": 8,
+        "repeated_forward_exact": true,
+        "model_state_unchanged": true,
+        "checkpoint_sha256": "0ade7818acc414fa67031914ebe6404756f9c52aa5af27639f511a08518e5dda",
+        "metrics": {
+          "AP": 0.0,
+          "AP50": 0.0,
+          "AP75": 0.0,
+          "APl": 0.0,
+          "APm": 0.0,
+          "APs": 0.0,
+          "AR1": 0.0,
+          "AR10": 0.0,
+          "AR100": 0.0,
+          "ARl": 0.0,
+          "ARm": 0.0,
+          "ARs": 0.0
+        }
+      }
+    },
+    {
+      "variant": "c2-q300-p4-d1",
+      "status": "completed",
+      "epochs": 1,
+      "fraction": 0.01,
+      "architecture": {
+        "decoder_layers": 1,
+        "eval_idx": 0,
+        "parameters": 17872924,
+        "points_per_level": [
+          4,
+          4,
+          4
+        ],
+        "queries": 300
+      },
+      "initialization": {
+        "amp": false,
+        "candidate_seed": 1000,
+        "full_initial_state_sha256": "12d72c5dbaf0dfa6b42157f2da403acd9777ec46f6861ee22dfac9e967529657",
+        "gradient_sampling": "first three training batches per epoch; normal matching queries only for activations",
+        "model_config": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/experiments/decoder_budget_5090/configs/c2-q300-p4-d1.yaml",
+        "new_native_initialized_state": [],
+        "pretrained": false,
+        "reference_c2_full_sha256": "7ea3429f4bb30bf725578108d287b4a8a82dbccff545cd022c0daad0ddd75737",
+        "reference_r0_shared_sha256": "1d9a8e81f45383d572f319a2039a24338a82f7847a9708e98ab4c0fed07b871e",
+        "removed_reference_state": [
+          "model.24.dec_bbox_head.1.layers.0.bias",
+          "model.24.dec_bbox_head.1.layers.0.weight",
+          "model.24.dec_bbox_head.1.layers.1.bias",
+          "model.24.dec_bbox_head.1.layers.1.weight",
+          "model.24.dec_bbox_head.1.layers.2.bias",
+          "model.24.dec_bbox_head.1.layers.2.weight",
+          "model.24.dec_bbox_head.2.layers.0.bias",
+          "model.24.dec_bbox_head.2.layers.0.weight",
+          "model.24.dec_bbox_head.2.layers.1.bias",
+          "model.24.dec_bbox_head.2.layers.1.weight",
+          "model.24.dec_bbox_head.2.layers.2.bias",
+          "model.24.dec_bbox_head.2.layers.2.weight",
+          "model.24.dec_score_head.1.bias",
+          "model.24.dec_score_head.1.weight",
+          "model.24.dec_score_head.2.bias",
+          "model.24.dec_score_head.2.weight",
+          "model.24.decoder.layers.1.cross_attn.attention_weights.bias",
+          "model.24.decoder.layers.1.cross_attn.attention_weights.weight",
+          "model.24.decoder.layers.1.cross_attn.output_proj.bias",
+          "model.24.decoder.layers.1.cross_attn.output_proj.weight",
+          "model.24.decoder.layers.1.cross_attn.sampling_offsets.bias",
+          "model.24.decoder.layers.1.cross_attn.sampling_offsets.weight",
+          "model.24.decoder.layers.1.cross_attn.value_proj.bias",
+          "model.24.decoder.layers.1.cross_attn.value_proj.weight",
+          "model.24.decoder.layers.1.linear1.bias",
+          "model.24.decoder.layers.1.linear1.weight",
+          "model.24.decoder.layers.1.linear2.bias",
+          "model.24.decoder.layers.1.linear2.weight",
+          "model.24.decoder.layers.1.norm1.bias",
+          "model.24.decoder.layers.1.norm1.weight",
+          "model.24.decoder.layers.1.norm2.bias",
+          "model.24.decoder.layers.1.norm2.weight",
+          "model.24.decoder.layers.1.norm3.bias",
+          "model.24.decoder.layers.1.norm3.weight",
+          "model.24.decoder.layers.1.self_attn.in_proj_bias",
+          "model.24.decoder.layers.1.self_attn.in_proj_weight",
+          "model.24.decoder.layers.1.self_attn.out_proj.bias",
+          "model.24.decoder.layers.1.self_attn.out_proj.weight",
+          "model.24.decoder.layers.2.cross_attn.attention_weights.bias",
+          "model.24.decoder.layers.2.cross_attn.attention_weights.weight",
+          "model.24.decoder.layers.2.cross_attn.output_proj.bias",
+          "model.24.decoder.layers.2.cross_attn.output_proj.weight",
+          "model.24.decoder.layers.2.cross_attn.sampling_offsets.bias",
+          "model.24.decoder.layers.2.cross_attn.sampling_offsets.weight",
+          "model.24.decoder.layers.2.cross_attn.value_proj.bias",
+          "model.24.decoder.layers.2.cross_attn.value_proj.weight",
+          "model.24.decoder.layers.2.linear1.bias",
+          "model.24.decoder.layers.2.linear1.weight",
+          "model.24.decoder.layers.2.linear2.bias",
+          "model.24.decoder.layers.2.linear2.weight",
+          "model.24.decoder.layers.2.norm1.bias",
+          "model.24.decoder.layers.2.norm1.weight",
+          "model.24.decoder.layers.2.norm2.bias",
+          "model.24.decoder.layers.2.norm2.weight",
+          "model.24.decoder.layers.2.norm3.bias",
+          "model.24.decoder.layers.2.norm3.weight",
+          "model.24.decoder.layers.2.self_attn.in_proj_bias",
+          "model.24.decoder.layers.2.self_attn.in_proj_weight",
+          "model.24.decoder.layers.2.self_attn.out_proj.bias",
+          "model.24.decoder.layers.2.self_attn.out_proj.weight"
+        ],
+        "resume": false,
+        "seed": 0,
+        "shape_changed_state": {},
+        "shared_state_items": 473,
+        "shared_state_sha256": "12d72c5dbaf0dfa6b42157f2da403acd9777ec46f6861ee22dfac9e967529657",
+        "shared_state_verified": true,
+        "source": "fresh seeded C2 generated in RAM; no checkpoint/backbone pretrained weights read",
+        "source_checkpoint": null,
+        "variant": "c2-q300-p4-d1"
+      },
+      "common_state_sha256": "8b26d67d3f1eb4e5544434ebb357015c336e65e6bb8294195e6bb39df676a61d",
+      "full_initial_state_verified": true,
+      "cpu_initial_seed": 0,
+      "cuda_initial_seed": 1000,
+      "effective_train_args": {
+        "amp": false,
+        "batch": 8,
+        "cache": false,
+        "close_mosaic": 0,
+        "deterministic": false,
+        "epochs": 1,
+        "imgsz": 640,
+        "lr0": 0.0001,
+        "lrf": 1.0,
+        "max_det": 300,
+        "mixup": 0.2,
+        "momentum": 0.9,
+        "nbs": 64,
+        "optimizer": "AdamW",
+        "patience": 0,
+        "plots": true,
+        "pretrained": false,
+        "resume": false,
+        "seed": 0,
+        "val": true,
+        "warmup_bias_lr": 0.0,
+        "warmup_epochs": 3.0,
+        "warmup_momentum": 0.8,
+        "weight_decay": 0.0001,
+        "workers": 0
+      },
+      "health": {
+        "d1_delta_abs": 7.053671652101912e-06,
+        "d1_delta_finite": 1.0,
+        "d1_delta_query_variance": 1.5886822022845304e-12,
+        "d1_hidden_active_ratio": 0.534065842628479,
+        "d1_hidden_query_variance": 0.014047875069081783,
+        "d1_offset_weight_grad_abs": 0.003459037747234106,
+        "encoder_delta_abs": 6.898551418998977e-06,
+        "encoder_delta_finite": 1.0,
+        "encoder_delta_query_variance": 1.6201352325689866e-12,
+        "encoder_hidden_active_ratio": 0.48470866680145264,
+        "encoder_hidden_query_variance": 0.012320919893682003,
+        "epoch": 1,
+        "gamma": null,
+        "last_bbox_step_abs": 7.045466077215679e-07,
+        "p2_first_weight_grad_abs": 0.0028631901368498802,
+        "train_peak_allocated_mib": 4846.09765625,
+        "train_seconds": 1.9664156599901617
+      },
+      "checkpoints": {
+        "best": {
+          "bytes": 36110407,
+          "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p4-d1-1e-gate-s0/weights/best.pt",
+          "sha256": "fa65b923d462868342cf83685d8bb4c6febce74a8313a18a6c512512302f5876"
+        },
+        "last": {
+          "bytes": 36110407,
+          "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p4-d1-1e-gate-s0/weights/last.pt",
+          "sha256": "fa65b923d462868342cf83685d8bb4c6febce74a8313a18a6c512512302f5876"
+        },
+        "resume": {
+          "bytes": 107835676,
+          "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p4-d1-1e-gate-s0/weights/resume.pt",
+          "sha256": "e4267e9c316ea626779f874061d03867093544843b4764ab96d5a28557106f88"
+        }
+      },
+      "reload_gate": {
+        "scope": "subset_gate",
+        "images": 8,
+        "repeated_forward_exact": true,
+        "model_state_unchanged": true,
+        "checkpoint_sha256": "fa65b923d462868342cf83685d8bb4c6febce74a8313a18a6c512512302f5876",
+        "metrics": {
+          "AP": 0.0,
+          "AP50": 0.0,
+          "AP75": 0.0,
+          "APl": 0.0,
+          "APm": 0.0,
+          "APs": 0.0,
+          "AR1": 0.0,
+          "AR10": 0.0,
+          "AR100": 0.0,
+          "ARl": 0.0,
+          "ARm": 0.0,
+          "ARs": 0.0
+        }
+      }
+    },
+    {
+      "variant": "c2-q300-p4-d2",
+      "status": "completed",
+      "epochs": 1,
+      "fraction": 0.01,
+      "architecture": {
+        "decoder_layers": 2,
+        "eval_idx": 1,
+        "parameters": 19003978,
+        "points_per_level": [
+          4,
+          4,
+          4
+        ],
+        "queries": 300
+      },
+      "initialization": {
+        "amp": false,
+        "candidate_seed": 1000,
+        "full_initial_state_sha256": "853fb3eb6c37d4372421445b78d458377d3868941d588508960bbe9b1e01b954",
+        "gradient_sampling": "first three training batches per epoch; normal matching queries only for activations",
+        "model_config": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/experiments/decoder_budget_5090/configs/c2-q300-p4-d2.yaml",
+        "new_native_initialized_state": [],
+        "pretrained": false,
+        "reference_c2_full_sha256": "7ea3429f4bb30bf725578108d287b4a8a82dbccff545cd022c0daad0ddd75737",
+        "reference_r0_shared_sha256": "1d9a8e81f45383d572f319a2039a24338a82f7847a9708e98ab4c0fed07b871e",
+        "removed_reference_state": [
+          "model.24.dec_bbox_head.2.layers.0.bias",
+          "model.24.dec_bbox_head.2.layers.0.weight",
+          "model.24.dec_bbox_head.2.layers.1.bias",
+          "model.24.dec_bbox_head.2.layers.1.weight",
+          "model.24.dec_bbox_head.2.layers.2.bias",
+          "model.24.dec_bbox_head.2.layers.2.weight",
+          "model.24.dec_score_head.2.bias",
+          "model.24.dec_score_head.2.weight",
+          "model.24.decoder.layers.2.cross_attn.attention_weights.bias",
+          "model.24.decoder.layers.2.cross_attn.attention_weights.weight",
+          "model.24.decoder.layers.2.cross_attn.output_proj.bias",
+          "model.24.decoder.layers.2.cross_attn.output_proj.weight",
+          "model.24.decoder.layers.2.cross_attn.sampling_offsets.bias",
+          "model.24.decoder.layers.2.cross_attn.sampling_offsets.weight",
+          "model.24.decoder.layers.2.cross_attn.value_proj.bias",
+          "model.24.decoder.layers.2.cross_attn.value_proj.weight",
+          "model.24.decoder.layers.2.linear1.bias",
+          "model.24.decoder.layers.2.linear1.weight",
+          "model.24.decoder.layers.2.linear2.bias",
+          "model.24.decoder.layers.2.linear2.weight",
+          "model.24.decoder.layers.2.norm1.bias",
+          "model.24.decoder.layers.2.norm1.weight",
+          "model.24.decoder.layers.2.norm2.bias",
+          "model.24.decoder.layers.2.norm2.weight",
+          "model.24.decoder.layers.2.norm3.bias",
+          "model.24.decoder.layers.2.norm3.weight",
+          "model.24.decoder.layers.2.self_attn.in_proj_bias",
+          "model.24.decoder.layers.2.self_attn.in_proj_weight",
+          "model.24.decoder.layers.2.self_attn.out_proj.bias",
+          "model.24.decoder.layers.2.self_attn.out_proj.weight"
+        ],
+        "resume": false,
+        "seed": 0,
+        "shape_changed_state": {},
+        "shared_state_items": 503,
+        "shared_state_sha256": "853fb3eb6c37d4372421445b78d458377d3868941d588508960bbe9b1e01b954",
+        "shared_state_verified": true,
+        "source": "fresh seeded C2 generated in RAM; no checkpoint/backbone pretrained weights read",
+        "source_checkpoint": null,
+        "variant": "c2-q300-p4-d2"
+      },
+      "common_state_sha256": "8b26d67d3f1eb4e5544434ebb357015c336e65e6bb8294195e6bb39df676a61d",
+      "full_initial_state_verified": true,
+      "cpu_initial_seed": 0,
+      "cuda_initial_seed": 1000,
+      "effective_train_args": {
+        "amp": false,
+        "batch": 8,
+        "cache": false,
+        "close_mosaic": 0,
+        "deterministic": false,
+        "epochs": 1,
+        "imgsz": 640,
+        "lr0": 0.0001,
+        "lrf": 1.0,
+        "max_det": 300,
+        "mixup": 0.2,
+        "momentum": 0.9,
+        "nbs": 64,
+        "optimizer": "AdamW",
+        "patience": 0,
+        "plots": true,
+        "pretrained": false,
+        "resume": false,
+        "seed": 0,
+        "val": true,
+        "warmup_bias_lr": 0.0,
+        "warmup_epochs": 3.0,
+        "warmup_momentum": 0.8,
+        "weight_decay": 0.0001,
+        "workers": 0
+      },
+      "health": {
+        "d1_delta_abs": 7.1419854066334665e-06,
+        "d1_delta_finite": 1.0,
+        "d1_delta_query_variance": 1.5804714308120804e-12,
+        "d1_hidden_active_ratio": 0.5340478420257568,
+        "d1_hidden_query_variance": 0.014047322794795036,
+        "d1_offset_weight_grad_abs": 0.0044045839458703995,
+        "d2_delta_abs": 6.039862910256488e-06,
+        "d2_delta_finite": 1.0,
+        "d2_delta_query_variance": 1.3035626180921134e-12,
+        "d2_hidden_active_ratio": 0.5154486894607544,
+        "d2_hidden_query_variance": 0.012760612182319164,
+        "d2_offset_weight_grad_abs": 0.0028765015304088593,
+        "encoder_delta_abs": 6.884674348839326e-06,
+        "encoder_delta_finite": 1.0,
+        "encoder_delta_query_variance": 1.6048389830589094e-12,
+        "encoder_hidden_active_ratio": 0.4847162663936615,
+        "encoder_hidden_query_variance": 0.012316947802901268,
+        "epoch": 1,
+        "gamma": null,
+        "last_bbox_step_abs": 5.78506558213121e-07,
+        "p2_first_weight_grad_abs": 0.00416329363361001,
+        "train_peak_allocated_mib": 5483.84619140625,
+        "train_seconds": 2.078597813844681
+      },
+      "checkpoints": {
+        "best": {
+          "bytes": 38385355,
+          "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p4-d2-1e-gate-s0/weights/best.pt",
+          "sha256": "fb9712ddb03d696c225cf892ac67b99757a026081d2ec25f703cc23ecd7ea9d3"
+        },
+        "last": {
+          "bytes": 38385355,
+          "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p4-d2-1e-gate-s0/weights/last.pt",
+          "sha256": "fb9712ddb03d696c225cf892ac67b99757a026081d2ec25f703cc23ecd7ea9d3"
+        },
+        "resume": {
+          "bytes": 114660772,
+          "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p4-d2-1e-gate-s0/weights/resume.pt",
+          "sha256": "1bde6409cf35eee1c7037cf7ce4beb7c97ddcd7054f61e0bb8ef403194772c6e"
+        }
+      },
+      "reload_gate": {
+        "scope": "subset_gate",
+        "images": 8,
+        "repeated_forward_exact": true,
+        "model_state_unchanged": true,
+        "checkpoint_sha256": "fb9712ddb03d696c225cf892ac67b99757a026081d2ec25f703cc23ecd7ea9d3",
+        "metrics": {
+          "AP": 0.0,
+          "AP50": 0.0,
+          "AP75": 0.0,
+          "APl": 0.0,
+          "APm": 0.0,
+          "APs": 0.0,
+          "AR1": 0.0,
+          "AR10": 0.0,
+          "AR100": 0.0,
+          "ARl": 0.0,
+          "ARm": 0.0,
+          "ARs": 0.0
+        }
+      }
+    }
+  ]
+}

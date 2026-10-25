@@ -1,0 +1,7 @@
+{
+  "passed": 10,
+  "result": "10 passed in 4.66s",
+  "command": "PYTHONPATH=\"$PWD:$PWD/../detrscope/src\" /tmp/zhj-uav-5090-venv/bin/python -m pytest experiments/decoder_budget_5090/tests/test_fresh_budgets_5090.py -q",
+  "server_log": "/tmp/5090-fresh-budget-tests-20261025-final.log",
+  "log_sha256": "1e9df04066484dd324c13140b925177a9db88681ced49cc6282309d89c2b819f"
+}

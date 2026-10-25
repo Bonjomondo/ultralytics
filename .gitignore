@@ -237,4 +237,5 @@ results.csv
 
 # Small generated 5090 reports are shareable; only the refresh lock is local.
 /reports/5090/.report.lock
+/reports/5090/fresh_budgets/.lock
 !/reports/5090/plots/*.png

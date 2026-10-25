@@ -1,5 +1,7 @@
 # 实验结果与报告
 
+- [2026-10-25：5090 四组采样/Query/Decoder预算从零150轮训练启动](2026-10-25_5090_fresh_decoder_training/README.md)
+
 - [2026-10-25：5090 Sampling Points 纯性能筛选与 D1/D2/D3 正式评估](2026-10-25_5090_decoder_screen/README.md)
 
 - [2026-10-25：5090 算子 Timeline、融合/低精度/CUDA Graph 与 ONNX/TensorRT 诊断](2026-10-25_5090_runtime_profile/README.md)

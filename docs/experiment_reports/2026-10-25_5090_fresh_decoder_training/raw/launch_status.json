@@ -1,0 +1,272 @@
+{
+  "arms": {
+    "c2-q200-p2-d3": {
+      "status": "pending"
+    },
+    "c2-q300-p2-d3": {
+      "status": "running"
+    },
+    "c2-q300-p4-d1": {
+      "status": "pending"
+    },
+    "c2-q300-p4-d2": {
+      "status": "pending"
+    }
+  },
+  "child_pid": 3758887,
+  "continued_utc": "2026-10-25T08:29:15.881831+00:00",
+  "epochs_per_variant": 150,
+  "order": [
+    "c2-q300-p2-d3",
+    "c2-q200-p2-d3",
+    "c2-q300-p4-d2",
+    "c2-q300-p4-d1"
+  ],
+  "phase": "5090-rtdetr-r18-c2-q300-p2-d3-150e-s0",
+  "phases": [
+    {
+      "command": [
+        "/tmp/zhj-uav-5090-venv/bin/python",
+        "-u",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/experiments/decoder_budget_5090/train_fresh_budgets_5090.py",
+        "--variant",
+        "c2-q300-p2-d3",
+        "--project",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1",
+        "--name",
+        "5090-rtdetr-r18-c2-q300-p2-d3-1e-gate-s0",
+        "--data",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/data.yaml",
+        "--plan",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/initialization_plan.json",
+        "--reports",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/reports/5090/fresh_budgets",
+        "--epochs",
+        "1",
+        "--fraction",
+        "0.01"
+      ],
+      "finished_utc": "2026-10-25T08:26:50.028582+00:00",
+      "log": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/logs/5090-rtdetr-r18-c2-q300-p2-d3-1e-gate-s0.log",
+      "name": "5090-rtdetr-r18-c2-q300-p2-d3-1e-gate-s0",
+      "output": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p2-d3-1e-gate-s0",
+      "returncode": 0,
+      "started_utc": "2026-10-25T08:26:16.867090+00:00",
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/tmp/zhj-uav-5090-venv/bin/python",
+        "-u",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/experiments/decoder_budget_5090/evaluate_fresh_budgets_5090.py",
+        "--variant",
+        "c2-q300-p2-d3",
+        "--checkpoint",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p2-d3-1e-gate-s0/weights/best.pt",
+        "--output",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p2-d3-1e-gate-s0-eval",
+        "--limit",
+        "8"
+      ],
+      "finished_utc": "2026-10-25T08:26:52.918593+00:00",
+      "log": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/logs/5090-rtdetr-r18-c2-q300-p2-d3-1e-gate-s0-eval.log",
+      "name": "5090-rtdetr-r18-c2-q300-p2-d3-1e-gate-s0-eval",
+      "output": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p2-d3-1e-gate-s0-eval",
+      "returncode": 0,
+      "started_utc": "2026-10-25T08:26:50.049615+00:00",
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/tmp/zhj-uav-5090-venv/bin/python",
+        "-u",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/experiments/decoder_budget_5090/train_fresh_budgets_5090.py",
+        "--variant",
+        "c2-q200-p2-d3",
+        "--project",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1",
+        "--name",
+        "5090-rtdetr-r18-c2-q200-p2-d3-1e-gate-s0",
+        "--data",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/data.yaml",
+        "--plan",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/initialization_plan.json",
+        "--reports",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/reports/5090/fresh_budgets",
+        "--epochs",
+        "1",
+        "--fraction",
+        "0.01"
+      ],
+      "finished_utc": "2026-10-25T08:27:21.195635+00:00",
+      "log": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/logs/5090-rtdetr-r18-c2-q200-p2-d3-1e-gate-s0.log",
+      "name": "5090-rtdetr-r18-c2-q200-p2-d3-1e-gate-s0",
+      "output": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q200-p2-d3-1e-gate-s0",
+      "returncode": 0,
+      "started_utc": "2026-10-25T08:26:52.939359+00:00",
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/tmp/zhj-uav-5090-venv/bin/python",
+        "-u",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/experiments/decoder_budget_5090/evaluate_fresh_budgets_5090.py",
+        "--variant",
+        "c2-q200-p2-d3",
+        "--checkpoint",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q200-p2-d3-1e-gate-s0/weights/best.pt",
+        "--output",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q200-p2-d3-1e-gate-s0-eval",
+        "--limit",
+        "8"
+      ],
+      "finished_utc": "2026-10-25T08:27:24.099864+00:00",
+      "log": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/logs/5090-rtdetr-r18-c2-q200-p2-d3-1e-gate-s0-eval.log",
+      "name": "5090-rtdetr-r18-c2-q200-p2-d3-1e-gate-s0-eval",
+      "output": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q200-p2-d3-1e-gate-s0-eval",
+      "returncode": 0,
+      "started_utc": "2026-10-25T08:27:21.217289+00:00",
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/tmp/zhj-uav-5090-venv/bin/python",
+        "-u",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/experiments/decoder_budget_5090/train_fresh_budgets_5090.py",
+        "--variant",
+        "c2-q300-p4-d2",
+        "--project",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1",
+        "--name",
+        "5090-rtdetr-r18-c2-q300-p4-d2-1e-gate-s0",
+        "--data",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/data.yaml",
+        "--plan",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/initialization_plan.json",
+        "--reports",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/reports/5090/fresh_budgets",
+        "--epochs",
+        "1",
+        "--fraction",
+        "0.01"
+      ],
+      "finished_utc": "2026-10-25T08:27:51.743362+00:00",
+      "log": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/logs/5090-rtdetr-r18-c2-q300-p4-d2-1e-gate-s0.log",
+      "name": "5090-rtdetr-r18-c2-q300-p4-d2-1e-gate-s0",
+      "output": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p4-d2-1e-gate-s0",
+      "returncode": 0,
+      "started_utc": "2026-10-25T08:27:24.120862+00:00",
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/tmp/zhj-uav-5090-venv/bin/python",
+        "-u",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/experiments/decoder_budget_5090/evaluate_fresh_budgets_5090.py",
+        "--variant",
+        "c2-q300-p4-d2",
+        "--checkpoint",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p4-d2-1e-gate-s0/weights/best.pt",
+        "--output",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p4-d2-1e-gate-s0-eval",
+        "--limit",
+        "8"
+      ],
+      "finished_utc": "2026-10-25T08:27:54.579674+00:00",
+      "log": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/logs/5090-rtdetr-r18-c2-q300-p4-d2-1e-gate-s0-eval.log",
+      "name": "5090-rtdetr-r18-c2-q300-p4-d2-1e-gate-s0-eval",
+      "output": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p4-d2-1e-gate-s0-eval",
+      "returncode": 0,
+      "started_utc": "2026-10-25T08:27:51.766195+00:00",
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/tmp/zhj-uav-5090-venv/bin/python",
+        "-u",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/experiments/decoder_budget_5090/train_fresh_budgets_5090.py",
+        "--variant",
+        "c2-q300-p4-d1",
+        "--project",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1",
+        "--name",
+        "5090-rtdetr-r18-c2-q300-p4-d1-1e-gate-s0",
+        "--data",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/data.yaml",
+        "--plan",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/initialization_plan.json",
+        "--reports",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/reports/5090/fresh_budgets",
+        "--epochs",
+        "1",
+        "--fraction",
+        "0.01"
+      ],
+      "finished_utc": "2026-10-25T08:28:22.537930+00:00",
+      "log": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/logs/5090-rtdetr-r18-c2-q300-p4-d1-1e-gate-s0.log",
+      "name": "5090-rtdetr-r18-c2-q300-p4-d1-1e-gate-s0",
+      "output": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p4-d1-1e-gate-s0",
+      "returncode": 0,
+      "started_utc": "2026-10-25T08:27:54.601137+00:00",
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/tmp/zhj-uav-5090-venv/bin/python",
+        "-u",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/experiments/decoder_budget_5090/evaluate_fresh_budgets_5090.py",
+        "--variant",
+        "c2-q300-p4-d1",
+        "--checkpoint",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p4-d1-1e-gate-s0/weights/best.pt",
+        "--output",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p4-d1-1e-gate-s0-eval",
+        "--limit",
+        "8"
+      ],
+      "finished_utc": "2026-10-25T08:28:25.510599+00:00",
+      "log": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/logs/5090-rtdetr-r18-c2-q300-p4-d1-1e-gate-s0-eval.log",
+      "name": "5090-rtdetr-r18-c2-q300-p4-d1-1e-gate-s0-eval",
+      "output": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p4-d1-1e-gate-s0-eval",
+      "returncode": 0,
+      "started_utc": "2026-10-25T08:28:22.559890+00:00",
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/tmp/zhj-uav-5090-venv/bin/python",
+        "-u",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/experiments/decoder_budget_5090/train_fresh_budgets_5090.py",
+        "--variant",
+        "c2-q300-p2-d3",
+        "--project",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1",
+        "--name",
+        "5090-rtdetr-r18-c2-q300-p2-d3-150e-s0",
+        "--data",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/data.yaml",
+        "--plan",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/initialization_plan.json",
+        "--reports",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/reports/5090/fresh_budgets",
+        "--epochs",
+        "150",
+        "--fraction",
+        "1"
+      ],
+      "log": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/logs/5090-rtdetr-r18-c2-q300-p2-d3-150e-s0.log",
+      "name": "5090-rtdetr-r18-c2-q300-p2-d3-150e-s0",
+      "output": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p2-d3-150e-s0",
+      "started_utc": "2026-10-25T08:29:15.896358+00:00",
+      "status": "running"
+    }
+  ],
+  "pid": 3758823,
+  "reports": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/reports/5090/fresh_budgets",
+  "schema": "5090.fresh-budget-queue.v1",
+  "scope": "all four C2 budget architectures from scratch; no existing checkpoint/pretrained/finetuning",
+  "seed": 0,
+  "started_utc": "2026-10-25T08:26:14.279968+00:00",
+  "status": "running",
+  "updated_utc": "2026-10-25T08:29:15.900604+00:00"
+}
