@@ -1,5 +1,7 @@
 # 实验结果与报告
 
+- [2026-10-25：5090 算子 Timeline、融合/低精度/CUDA Graph 与 ONNX/TensorRT 诊断](2026-10-25_5090_runtime_profile/README.md)
+
 - [5090 实验自动汇总：完整验证结果、状态与曲线](../../reports/5090/experiments.md) · [生成方式](../../experiments/decoder_budget_5090/AUTO_REPORTS_5090.md)
 
 - [2026-10-24：5090 C0/C2 基线、Query预算与推理分段瓶颈评估](2026-10-24_5090_baselines/README.md)

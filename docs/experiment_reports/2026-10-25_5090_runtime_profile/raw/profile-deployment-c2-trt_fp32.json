@@ -1,0 +1,785 @@
+{
+  "iterations": [
+    {
+      "iteration": "iteration::0",
+      "cpu_forward_us": 951.609,
+      "kernel_count": 215,
+      "kernel_sum_us": 2157.344,
+      "gpu_span_us": 2387.901123046875,
+      "gpu_busy_union_us": 2157.24755859375,
+      "gpu_idle_in_span_us": 230.653564453125,
+      "gpu_idle_fraction": 0.09659259431932399,
+      "kernel_duration_us": {
+        "mean": 10.034158139534885,
+        "median": 5.952,
+        "p95": 42.24,
+        "min": 0.864,
+        "max": 96.096,
+        "n": 215
+      },
+      "cpu_launch_gap_us": {
+        "mean": 0.8474086868428738,
+        "median": 0.6339111328125,
+        "p95": 2.6298828125,
+        "min": 0.0859375,
+        "max": 9.239990234375,
+        "n": 214
+      },
+      "gpu_gap_us": {
+        "mean": 1.1649169921875,
+        "median": 0.9281005859375,
+        "p95": 3.6162109375,
+        "min": 0.031005859375,
+        "max": 4.9599609375,
+        "n": 198
+      }
+    },
+    {
+      "iteration": "iteration::1",
+      "cpu_forward_us": 507.173,
+      "kernel_count": 215,
+      "kernel_sum_us": 2156.642,
+      "gpu_span_us": 2377.66015625,
+      "gpu_busy_union_us": 2156.483642578125,
+      "gpu_idle_in_span_us": 221.176513671875,
+      "gpu_idle_fraction": 0.0930227615121878,
+      "kernel_duration_us": {
+        "mean": 10.030893023255814,
+        "median": 5.92,
+        "p95": 41.92,
+        "min": 0.864,
+        "max": 96.512,
+        "n": 215
+      },
+      "cpu_launch_gap_us": {
+        "mean": 0.5527069947429907,
+        "median": 0.427978515625,
+        "p95": 2.196044921875,
+        "min": 0.082763671875,
+        "max": 3.302978515625,
+        "n": 214
+      },
+      "gpu_gap_us": {
+        "mean": 1.1114397671953518,
+        "median": 0.89599609375,
+        "p95": 3.7119140625,
+        "min": 0.000244140625,
+        "max": 4.89599609375,
+        "n": 199
+      }
+    },
+    {
+      "iteration": "iteration::2",
+      "cpu_forward_us": 480.519,
+      "kernel_count": 215,
+      "kernel_sum_us": 2152.2489999999993,
+      "gpu_span_us": 2378.4609375,
+      "gpu_busy_union_us": 2152.185302734375,
+      "gpu_idle_in_span_us": 226.275634765625,
+      "gpu_idle_fraction": 0.095135316791649,
+      "kernel_duration_us": {
+        "mean": 10.010460465116278,
+        "median": 5.92,
+        "p95": 41.728,
+        "min": 0.864,
+        "max": 96.448,
+        "n": 215
+      },
+      "cpu_launch_gap_us": {
+        "mean": 0.5274144823306075,
+        "median": 0.3914794921875,
+        "p95": 2.184814453125,
+        "min": 0.090087890625,
+        "max": 2.889892578125,
+        "n": 214
+      },
+      "gpu_gap_us": {
+        "mean": 1.120176409730817,
+        "median": 0.8160400390625,
+        "p95": 3.90380859375,
+        "min": 0.000244140625,
+        "max": 4.89599609375,
+        "n": 202
+      }
+    }
+  ],
+  "tables": {
+    "op": [
+      {
+        "name": "unattributed",
+        "calls": 645,
+        "cuda_us": 6466.235000000001,
+        "calls_per_forward": 215.0,
+        "cuda_us_per_forward": 2155.411666666667
+      }
+    ],
+    "group": [
+      {
+        "name": "other",
+        "calls": 645,
+        "cuda_us": 6466.235000000001,
+        "calls_per_forward": 215.0,
+        "cuda_us_per_forward": 2155.411666666667
+      }
+    ],
+    "layer": [
+      {
+        "name": "unattributed",
+        "calls": 645,
+        "cuda_us": 6466.235000000001,
+        "calls_per_forward": 215.0,
+        "cuda_us_per_forward": 2155.411666666667
+      }
+    ],
+    "module": [
+      {
+        "name": "unattributed",
+        "calls": 645,
+        "cuda_us": 6466.235000000001,
+        "calls_per_forward": 215.0,
+        "cuda_us_per_forward": 2155.411666666667
+      }
+    ],
+    "kernel": [
+      {
+        "name": "sm80_xmma_fprop_wngd_f32f32_f32_f32_nchwkcrs_nchw_tilesize8x16x64x8_warpsize8x1x1_wngd2x2_execute_kernel_trt",
+        "calls": 27,
+        "cuda_us": 854.718,
+        "calls_per_forward": 9.0,
+        "cuda_us_per_forward": 284.906
+      },
+      {
+        "name": "sm80_xmma_fprop_implicit_gemm_f32f32_f32f32_f32_nhwckrsc_nhwc_tilesize64x64x8_stage3_warpsize1x4x1_g1_ffma_aligna4_alignc4_execute_kernel_trt",
+        "calls": 24,
+        "cuda_us": 778.8800000000001,
+        "calls_per_forward": 8.0,
+        "cuda_us_per_forward": 259.6266666666667
+      },
+      {
+        "name": "sm80_xmma_gemm_f32f32_f32f32_f32_nn_n_tilesize32x32x8_stage3_warpsize1x2x1_ffma_aligna4_alignc4_execute_kernel_trt",
+        "calls": 84,
+        "cuda_us": 736.7629999999999,
+        "calls_per_forward": 28.0,
+        "cuda_us_per_forward": 245.58766666666665
+      },
+      {
+        "name": "sm80_xmma_fprop_wngd_f32f32_f32_f32_nchwkcrs_nchw_tilesize8x16x32x8_warpsize8x1x1_wngd2x2_execute_kernel_trt",
+        "calls": 15,
+        "cuda_us": 647.2320000000001,
+        "calls_per_forward": 5.0,
+        "cuda_us_per_forward": 215.74400000000003
+      },
+      {
+        "name": "sm80_xmma_fprop_implicit_gemm_f32f32_f32f32_f32_nhwckrsc_nhwc_tilesize32x32x8_stage3_warpsize1x2x1_g1_ffma_aligna4_alignc4_execute_kernel_trt",
+        "calls": 12,
+        "cuda_us": 594.24,
+        "calls_per_forward": 4.0,
+        "cuda_us_per_forward": 198.08
+      },
+      {
+        "name": "sm80_xmma_fprop_wngd_f32f32_f32_f32_nchwkcrs_nchw_tilesize8x16x16x8_warpsize8x1x1_wngd2x2_execute_kernel_trt",
+        "calls": 27,
+        "cuda_us": 409.7609999999999,
+        "calls_per_forward": 9.0,
+        "cuda_us_per_forward": 136.58699999999996
+      },
+      {
+        "name": "sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize32x32x8_stage3_warpsize1x2x1_ffma_aligna4_alignc4_execute_kernel_trt",
+        "calls": 42,
+        "cuda_us": 345.62800000000004,
+        "calls_per_forward": 14.0,
+        "cuda_us_per_forward": 115.20933333333335
+      },
+      {
+        "name": "sm80_xmma_gemm_f32f32_f32f32_f32_nn_n_tilesize64x64x8_stage3_warpsize1x4x1_ffma_aligna4_alignc4_execute_kernel_trt",
+        "calls": 21,
+        "cuda_us": 295.74299999999994,
+        "calls_per_forward": 7.0,
+        "cuda_us_per_forward": 98.58099999999997
+      },
+      {
+        "name": "sm80_xmma_gemm_f32f32_f32f32_f32_nn_n_tilesize64x128x8_stage3_warpsize1x4x1_ffma_aligna4_alignc4_execute_kernel_trt",
+        "calls": 6,
+        "cuda_us": 213.21599999999998,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 71.07199999999999
+      },
+      {
+        "name": "sm80_xmma_fprop_implicit_gemm_f32f32_f32f32_f32_nhwckrsc_nhwc_tilesize128x64x8_stage3_warpsize2x2x1_g1_ffma_t1r3s3_aligna4_alignc4_execute_kernel_trt",
+        "calls": 3,
+        "cuda_us": 156.096,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 52.032000000000004
+      },
+      {
+        "name": "sm80_xmma_fprop_implicit_gemm_f32f32_f32f32_f32_nchwkcrs_nchw_tilesize64x64x8_stage3_warpsize1x4x1_g1_ffma_t1r3s3_aligna4_alignc4_execute_kernel_trt",
+        "calls": 3,
+        "cuda_us": 125.888,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 41.96266666666667
+      },
+      {
+        "name": "__myl_DivMulReshTranReshReshConcReshMoveMulSum_0x233b7a30b3a7325ad2748895c3bc916c",
+        "calls": 9,
+        "cuda_us": 109.408,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 36.46933333333333
+      },
+      {
+        "name": "__myl_Topk_0xee8c72b8eeb023137266342beb145c86",
+        "calls": 3,
+        "cuda_us": 99.80799999999999,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 33.26933333333333
+      },
+      {
+        "name": "sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize64x32x8_stage3_warpsize1x2x1_ffma_aligna4_alignc4_execute_kernel_trt",
+        "calls": 9,
+        "cuda_us": 85.728,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 28.575999999999997
+      },
+      {
+        "name": "sm80_xmma_gemm_f32f32_f32f32_f32_tt_n_tilesize32x32x8_stage3_warpsize1x2x1_ffma_aligna4_alignc4_execute_kernel_trt",
+        "calls": 9,
+        "cuda_us": 67.32700000000001,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 22.442333333333337
+      },
+      {
+        "name": "sm80_xmma_fprop_implicit_gemm_f32f32_f32f32_f32_nchwkcrs_nchw_tilesize64x64x8_stage3_warpsize1x4x1_g1_ffma_simple_t1r1s1_aligna4_alignc4_execute_kernel_trt",
+        "calls": 6,
+        "cuda_us": 63.232000000000006,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 21.077333333333335
+      },
+      {
+        "name": "__myl_SiluMoveResi_0x0b07c9159ba3435cec965b2ac67248d8",
+        "calls": 3,
+        "cuda_us": 57.504000000000005,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 19.168000000000003
+      },
+      {
+        "name": "sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize64x64x8_stage3_warpsize1x4x1_ffma_aligna4_alignc4_execute_kernel_trt",
+        "calls": 9,
+        "cuda_us": 52.672000000000004,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 17.557333333333336
+      },
+      {
+        "name": "sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize64x128x8_stage3_warpsize1x4x1_ffma_aligna4_alignc4_execute_kernel_trt",
+        "calls": 9,
+        "cuda_us": 44.160000000000004,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 14.72
+      },
+      {
+        "name": "sm80_xmma_fprop_implicit_gemm_f32f32_f32f32_f32_nhwckrsc_nhwc_tilesize32x32x8_stage3_warpsize1x2x1_g1_ffma_simple_t1r1s1_aligna4_alignc4_execute_kernel_trt",
+        "calls": 3,
+        "cuda_us": 43.457,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 14.485666666666667
+      },
+      {
+        "name": "sm80_xmma_fprop_implicit_gemm_f32f32_f32f32_f32_nchwkcrs_nchw_tilesize32x32x8_stage3_warpsize1x2x1_g1_ffma_t1r3s3_aligna4_alignc4_execute_kernel_trt",
+        "calls": 3,
+        "cuda_us": 32.991,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 10.997
+      },
+      {
+        "name": "sm80_xmma_gemm_f32f32_f32f32_f32_nn_n_tilesize64x64x8_stage3_warpsize1x4x1_ffma_aligna4_alignc4_execute_split_k_kernel_trt",
+        "calls": 9,
+        "cuda_us": 32.128,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 10.709333333333333
+      },
+      {
+        "name": "__myl_Tran_0x2c5c6d95d07e67bab9cd3e3f7a4e2156",
+        "calls": 3,
+        "cuda_us": 31.777,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 10.592333333333334
+      },
+      {
+        "name": "sm50_xmma_pooling_max_nhwc_FP32FP32_WINDOWSIZE_3_NOT_PROPAGATE_NAN_2D_execute_kernel_trt",
+        "calls": 3,
+        "cuda_us": 26.271,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 8.757
+      },
+      {
+        "name": "sm80_xmma_fprop_implicit_gemm_f32f32_f32f32_f32_nchwkcrs_nchw_tilesize32x32x8_stage3_warpsize1x2x1_g1_ffma_simple_t1r1s1_aligna4_alignc4_execute_kernel_trt",
+        "calls": 3,
+        "cuda_us": 25.856,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 8.618666666666668
+      },
+      {
+        "name": "sm80_xmma_gemm_f32f32_f32f32_f32_nn_n_tilesize32x64x8_stage3_warpsize1x2x1_ffma_aligna4_alignc4_execute_kernel_trt",
+        "calls": 9,
+        "cuda_us": 19.68,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 6.56
+      },
+      {
+        "name": "__myl_MaxrSubExpSumDivMul_0xe7d314cc73dbf705f429f8278ab30c57",
+        "calls": 9,
+        "cuda_us": 19.359,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 6.453
+      },
+      {
+        "name": "__myl_ReshAddReshMeanSubMulMeanAddSqrtDivMulMulAdd_0x9e52ca699037f71b6b8b557bee5a63e4",
+        "calls": 9,
+        "cuda_us": 18.878999999999998,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 6.292999999999999
+      },
+      {
+        "name": "__myl_AddReshMeanSubMulMeanAddSqrtDivMulMulAddAdd_0xf8dd8999fb66a09362fff7e1ea634ece",
+        "calls": 9,
+        "cuda_us": 18.592,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 6.197333333333333
+      },
+      {
+        "name": "sm80_xmma_fprop_implicit_gemm_f32f32_f32f32_f32_nchwkcrs_nchw_tilesize32x32x8_stage3_warpsize1x2x1_g1_ffma_aligna4_alignc4_execute_kernel_trt",
+        "calls": 3,
+        "cuda_us": 18.240000000000002,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 6.080000000000001
+      },
+      {
+        "name": "__myl_SlicReshTranReshGridResh_0xfced5a4aaa79bd102a46e9ab851b2dd5",
+        "calls": 9,
+        "cuda_us": 17.345,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 5.781666666666666
+      },
+      {
+        "name": "__myl_SlicReshTranReshGridResh_0xc564b1f09470b5e3b37bca49a9be829b",
+        "calls": 9,
+        "cuda_us": 16.992,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 5.664000000000001
+      },
+      {
+        "name": "__myl_SlicReshTranReshGrid_0xad88c675975c0bd7e4fddb8d4270cbaa",
+        "calls": 9,
+        "cuda_us": 16.768,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 5.589333333333333
+      },
+      {
+        "name": "__myl_MeanSubMulMeanAddSqrtDivMulMulAdd_0x1e0381cd530073ffd7ea0ec5d9707264",
+        "calls": 3,
+        "cuda_us": 15.617,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 5.205666666666667
+      },
+      {
+        "name": "sm50_xmma_pooling_nd_NCDHW_kAVERAGE_kGENERIC_3D_POOLING_MODE_kFLOAT_0_execute_kernel_trt",
+        "calls": 6,
+        "cuda_us": 14.334999999999999,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 4.778333333333333
+      },
+      {
+        "name": "__myl_Silu_0x04e205debbc133b055b67a6d9efa7869",
+        "calls": 12,
+        "cuda_us": 13.664000000000001,
+        "calls_per_forward": 4.0,
+        "cuda_us_per_forward": 4.554666666666667
+      },
+      {
+        "name": "__myl_ReshAddReshMoveMeanSubMulMeanAddSqrtDivMulMulAdd_0x041fc7c0330a82bfb55ae460c2a2ccc6",
+        "calls": 3,
+        "cuda_us": 13.153,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 4.384333333333333
+      },
+      {
+        "name": "__myl_ReshAddReshMeanSubMulMeanAddSqrtDivMulMulAddResh_0x102eba214d86dcc2b471bb420b1c2f0e",
+        "calls": 6,
+        "cuda_us": 13.119,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 4.373
+      },
+      {
+        "name": "__myl_Tran_0xac81fd851ad5da6ee6c8ef739631431f",
+        "calls": 9,
+        "cuda_us": 11.678999999999998,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 3.8929999999999993
+      },
+      {
+        "name": "__myl_Mul_0xc7d18dc7a9b7b0944ccfade977f8a85b",
+        "calls": 3,
+        "cuda_us": 11.551,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 3.8503333333333334
+      },
+      {
+        "name": "__myl_Silu_0xa64fc55fac8cce08ec0294901df0cca4",
+        "calls": 6,
+        "cuda_us": 11.328,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 3.776
+      },
+      {
+        "name": "__myl_Tran_0x4fd184c3b7cb93727b1b8601785603aa",
+        "calls": 6,
+        "cuda_us": 11.232,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 3.7439999999999998
+      },
+      {
+        "name": "__myl_SiluSiluAdd_0x1b36a2dfcb869b09792f515928e32eaf",
+        "calls": 6,
+        "cuda_us": 11.008000000000001,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 3.669333333333334
+      },
+      {
+        "name": "__myl_MaxrSubExpSumDivMul_0x954ecab20dc21ebdd768d1792fae06d0",
+        "calls": 3,
+        "cuda_us": 10.305,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 3.435
+      },
+      {
+        "name": "__myl_Silu_0x05990b1f8cf4c3af7b984922175a1774",
+        "calls": 3,
+        "cuda_us": 10.176,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 3.392
+      },
+      {
+        "name": "__myl_Tran_0x914d811b257d8eb4a6a3e1bc8001a1bb",
+        "calls": 3,
+        "cuda_us": 10.113,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 3.371
+      },
+      {
+        "name": "__myl_ReshMaxrSubExpSum_0xf2da65babbfdba9319fb6fef7954bb4f",
+        "calls": 9,
+        "cuda_us": 9.824000000000002,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 3.274666666666667
+      },
+      {
+        "name": "__myl_Move_0x50fb1bd4d7b5a875a7765e2748fc661a",
+        "calls": 3,
+        "cuda_us": 9.824,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 3.2746666666666666
+      },
+      {
+        "name": "__myl_Tran_0x12262899a0f91dd4848b80f3a2507e69",
+        "calls": 3,
+        "cuda_us": 9.152999999999999,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 3.0509999999999997
+      },
+      {
+        "name": "__myl_MoveMove_0xc7d3e384abddfdc0a23dc04f35102a47",
+        "calls": 3,
+        "cuda_us": 8.929,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 2.9763333333333333
+      },
+      {
+        "name": "__myl_SiluSiluAdd_0x94b43fbad8d8d1db5d6d65a1b65da143",
+        "calls": 3,
+        "cuda_us": 8.256,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 2.7520000000000002
+      },
+      {
+        "name": "__myl_Silu_0xbf39c5a1e5aefd09af308e876601b071",
+        "calls": 6,
+        "cuda_us": 8.192,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 2.7306666666666666
+      },
+      {
+        "name": "__myl_Tran_0x812a618d2f6da6e0d008691c870cb2b7",
+        "calls": 9,
+        "cuda_us": 8.064,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 2.688
+      },
+      {
+        "name": "__myl_Tran_0xb2eacdaae5c649ffcfcaa31008386efc",
+        "calls": 6,
+        "cuda_us": 7.840000000000001,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 2.6133333333333337
+      },
+      {
+        "name": "__myl_Silu_0x7923992c387c1a52923bf148c8cd7fa4",
+        "calls": 3,
+        "cuda_us": 6.6240000000000006,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 2.208
+      },
+      {
+        "name": "__myl_SiluMoveResi_0x745fddb149147a680aa1d78357a58cbf",
+        "calls": 3,
+        "cuda_us": 6.5920000000000005,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 2.1973333333333334
+      },
+      {
+        "name": "__myl_TranCosSinCosSinConcReshAdd_0x068096e71166dd4a487e4935402ef4cf",
+        "calls": 3,
+        "cuda_us": 6.527,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 2.175666666666667
+      },
+      {
+        "name": "__myl_Tran_0x52c8af9b38dba606b375b92c0783e90b",
+        "calls": 6,
+        "cuda_us": 6.497,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 2.1656666666666666
+      },
+      {
+        "name": "__myl_Tran_0x44a03091483bb19165631714c51313f6",
+        "calls": 6,
+        "cuda_us": 6.337,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 2.1123333333333334
+      },
+      {
+        "name": "__myl_SiluMove_0xdfbabcb19823269dd904ceb61c77c0ce",
+        "calls": 3,
+        "cuda_us": 6.208,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 2.0693333333333332
+      },
+      {
+        "name": "__myl_Silu_0x9574ca44f3401db91a89c7e9d83c4071",
+        "calls": 3,
+        "cuda_us": 6.144,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 2.048
+      },
+      {
+        "name": "__myl_ReshAddReshMeanSubMulMeanAddSqrtDivMulMulAdd_0x5e96f1d6b9d70990a48e2e976095321a",
+        "calls": 3,
+        "cuda_us": 6.112,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 2.037333333333333
+      },
+      {
+        "name": "sm50_xmma_pooling_fw_4d_FP32FP32NCHW_Average_FastDiv_execute_kernel_trt",
+        "calls": 3,
+        "cuda_us": 6.048,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 2.016
+      },
+      {
+        "name": "__myl_ReshSlicSlicReshMulMulMulAddMulAddSlicReshTranReshSlicReshTranReshSlicReshTranResh_0x19dace967bce896a567cb1938f9507af",
+        "calls": 6,
+        "cuda_us": 5.952,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 1.984
+      },
+      {
+        "name": "__myl_Tran_0x21f39ed9942fc7a8ef428aacc8122a11",
+        "calls": 3,
+        "cuda_us": 5.92,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.9733333333333334
+      },
+      {
+        "name": "__myl_MaxMinSubMaxMaxMinMinDivLogAddSigm_0x90d054e0f4aa893c62f7bc0d537104db",
+        "calls": 6,
+        "cuda_us": 5.567,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 1.8556666666666668
+      },
+      {
+        "name": "__myl_Add_0xb0206d942e687a41bd32a2b95ff44f68",
+        "calls": 6,
+        "cuda_us": 5.344,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 1.7813333333333334
+      },
+      {
+        "name": "__myl_Silu_0x2336cb908a53ba65a7d5ae42295a0723",
+        "calls": 6,
+        "cuda_us": 5.249,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 1.7496666666666665
+      },
+      {
+        "name": "__myl_AddSqrtDivMulMulAddReshTran_0x6bcb051f5e3300611705347db4490724",
+        "calls": 3,
+        "cuda_us": 5.184,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.728
+      },
+      {
+        "name": "__myl_DivErfAddMulMul_0x628489f757a5ffa5c8ad894966a7fcfb",
+        "calls": 3,
+        "cuda_us": 5.1209999999999996,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.7069999999999999
+      },
+      {
+        "name": "__myl_Silu_0xf68d64267037283c87fbf115e52eccef",
+        "calls": 3,
+        "cuda_us": 4.896,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.632
+      },
+      {
+        "name": "__myl_Silu_0xfae65d1d1423e9f093ee2e83bb45ea8c",
+        "calls": 3,
+        "cuda_us": 4.832000000000001,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.610666666666667
+      },
+      {
+        "name": "__myl_SiluSiluAdd_0xfd266a3876aa36b7030bccd2614843fa",
+        "calls": 3,
+        "cuda_us": 4.6080000000000005,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.5360000000000003
+      },
+      {
+        "name": "__myl_Tran_0xd0c4ef70a00cbaa62220bbac55d9a227",
+        "calls": 3,
+        "cuda_us": 4.096,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.3653333333333333
+      },
+      {
+        "name": "__myl_CastReshAddCastGathResh_0xba3028858d4746f78dd00b4cde7e48c6",
+        "calls": 3,
+        "cuda_us": 3.9370000000000003,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.3123333333333334
+      },
+      {
+        "name": "__myl_CastGathAddSigm_0x4e22a9583646f327596af13d072924aa",
+        "calls": 3,
+        "cuda_us": 3.904,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.3013333333333332
+      },
+      {
+        "name": "__myl_ReshAddReshMeanSubMulMean_0x88e6ba00d2d57e31c2a7a0e5fee942bc",
+        "calls": 3,
+        "cuda_us": 3.808,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.2693333333333332
+      },
+      {
+        "name": "__myl_PowDivReshMul_0x9e49809ad5c110d379e3671f33c9a2e7",
+        "calls": 3,
+        "cuda_us": 3.6479999999999997,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.216
+      },
+      {
+        "name": "__myl_Move_0x2285750cb1f683bbcd28667a9e071296",
+        "calls": 3,
+        "cuda_us": 3.4559999999999995,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.152
+      },
+      {
+        "name": "__myl_MaxMinSubMaxMaxMinMinDivLogSigmAddSigmConc_0x8a89eb433e78a144e51aad44a42a87d5",
+        "calls": 3,
+        "cuda_us": 3.4559999999999995,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.152
+      },
+      {
+        "name": "__myl_Silu_0xd6e9308c27f158cac2e9b1ca31332bf3",
+        "calls": 3,
+        "cuda_us": 3.3920000000000003,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.1306666666666667
+      },
+      {
+        "name": "__myl_MaxrResh_0x1e92f8474508275279455d1a80185563",
+        "calls": 3,
+        "cuda_us": 3.169,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.0563333333333333
+      },
+      {
+        "name": "__myl_Silu_0xad820aa164fbc22a8c46f7c6f8862748",
+        "calls": 3,
+        "cuda_us": 2.977,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 0.9923333333333333
+      },
+      {
+        "name": "__myl_Silu_0x651a74bc12cd1639677be820ffe3056a",
+        "calls": 3,
+        "cuda_us": 2.976,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 0.992
+      },
+      {
+        "name": "__myl_ReshSlicSlicReshMulMulMulAddMulAddSlicReshTranReshSlicReshTranReshSlicReshTranResh_0xf429acaa4138e642292175f8ae9aeda2",
+        "calls": 3,
+        "cuda_us": 2.976,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 0.992
+      },
+      {
+        "name": "__myl_Move_0x28966fe91a62eaa3f39b15605d288cf6",
+        "calls": 3,
+        "cuda_us": 2.88,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 0.96
+      },
+      {
+        "name": "__myl_Tran_0x63a37f10c76dc8f3f5a3feb4ba923ca4",
+        "calls": 3,
+        "cuda_us": 2.721,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 0.907
+      },
+      {
+        "name": "__myl_Tran_0xa9ca448ca989e446f5b6e9b30bb6066d",
+        "calls": 3,
+        "cuda_us": 2.72,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 0.9066666666666667
+      },
+      {
+        "name": "__myl_Add_0x4fdf265f79a1345075d0b11e44d4fbb3",
+        "calls": 3,
+        "cuda_us": 2.656,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 0.8853333333333334
+      }
+    ],
+    "layer_group": [
+      {
+        "layer": "unattributed",
+        "group": "other",
+        "calls": 645,
+        "cuda_us": 6466.235000000001,
+        "calls_per_forward": 215.0,
+        "cuda_us_per_forward": 2155.411666666667
+      }
+    ]
+  },
+  "trace_memcpy_memset_count": 72,
+  "trace": {
+    "server_path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-deployment-profile-20261025-c2-stream-final/c2/trt_fp32.trace.json",
+    "bytes": 1002986,
+    "sha256": "15c0fc5a4eef5e13786d882072271858922c6ce21ffbe40dfb3f384869b99671"
+  }
+}

@@ -4,6 +4,8 @@
 
 ## 当前事实与可复用基础
 
+- 7.4 ms的第一优先级诊断已独立归档：[算子与运行时报告](../../docs/experiment_reports/2026-10-25_5090_runtime_profile/README.md)。包括CPU/CUDA timeline、算子归属、FP16/BF16、Conv-BN/RepConv融合、CUDA Graph和部署路径；本轮不开展Sampling Points实验。
+
 - [C0/C2 原始150轮正式结果](../r18_p2_sfi/corrected_20261024/RESULTS.md)来自4090：C0 AP/APs 为18.705/12.104%，C2为19.408/12.933%。它们是单seed筛选，末期仍上涨；C2同时改变P2接入和P3融合通道，不能仅归因高分辨率信息。原服务器另有[分阶段收敛训练记录](../../docs/experiment_reports/2026-10-24_r18_p2_sfi_convergence/README.md)，当前Git快照状态为running，不能推定已完成。
 - 本fork已有[4090真实权重验收](../r18_na_ablation/detrscope_20261021/README.md)：R18+P4 NA5、548张真实验证图、38,759个转换后GT，完整观测和正式COCOeval通过；内部探针/干预只覆盖8图。它使用显式源码SHA桥接，不是SDK官方wheel适配器。
 - 相邻独立 `detrscope` 库的发布验收使用合成CPU模型；上述真实checkpoint验收属于本fork的实验插件。两项证据分别记录，不能相互替代，也不能自动证明新C0/C2或可变Query已通过。

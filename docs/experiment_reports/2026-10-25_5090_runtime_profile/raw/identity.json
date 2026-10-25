@@ -1,0 +1,282 @@
+{
+  "schema": "5090.runtime-archive.v1",
+  "runtime": {
+    "c0": {
+      "schema": "5090.runtime-profile.v1",
+      "started_at": "2026-10-25T12:27:03.684105+08:00",
+      "source": {
+        "root": "/home/ubuntu/文档/ZHJ_UAV/ultralytics",
+        "commit": "14dc3f0bca2ef1ba09a876aad3912f33221c2b81",
+        "branch": "5090-detrscope-query-budget",
+        "dirty_paths": [
+          "?? :memory:.ses",
+          "?? experiments/decoder_budget_5090/profile_runtime_5090.py"
+        ]
+      },
+      "environment": {
+        "python": "3.11.16",
+        "executable": "/tmp/zhj-uav-5090-venv/bin/python",
+        "torch": "2.14.0+cu130",
+        "torch_cuda": "13.0",
+        "cudnn": 92400,
+        "device_requested": "cuda:0",
+        "cuda_available": true,
+        "deterministic_algorithms": false,
+        "cudnn_benchmark": false,
+        "cudnn_deterministic": false,
+        "matmul_tf32": false,
+        "cudnn_tf32": false,
+        "dtype": "float32",
+        "autocast": false,
+        "nvidia_smi": {
+          "returncode": 0,
+          "stdout": "0, NVIDIA GeForce RTX 5090 D v2, GPU-49e248ed-74af-bad5-bc6e-1c5095289883, 580.178.04",
+          "stderr": ""
+        },
+        "gpu": "NVIDIA GeForce RTX 5090 D v2",
+        "capability": [
+          12,
+          0
+        ],
+        "total_memory_bytes": 25138495488,
+        "cuda_device_index": 0
+      },
+      "input": {
+        "annotation_path": "/home/ubuntu/文档/ZHJ_UAV/SO_DETR/datasets/VisDrone2019-DET-YOLO/annotations/VisDrone2019-DET_val_coco.json",
+        "annotation_sha256": "6f8b8686864f1485ab172de9339f7049593f74766f6654c6e980a6c00d810371",
+        "image": {
+          "id": 1,
+          "file_name": "0000001_02999_d_0000005.jpg",
+          "width": 1920,
+          "height": 1080
+        },
+        "image_path": "/home/ubuntu/文档/ZHJ_UAV/SO_DETR/datasets/VisDrone2019-DET-YOLO/images/val/0000001_02999_d_0000005.jpg",
+        "image_sha256": "fc80a9305b38af026091cbe0a1d4cfe059964852253b93f01fee17b7443e5514",
+        "input_sha256": "883789210db2b7f51d7a34c75b61b504637c17d8200c616eef69478cb0ec7bed",
+        "preprocess": "OpenCV BGR -> scale_fill 640 square -> RGB BCHW contiguous FP32 /255; before timing"
+      },
+      "protocol": {
+        "batch": 1,
+        "shape": [
+          1,
+          3,
+          640,
+          640
+        ],
+        "queries": 300,
+        "points_per_level": [
+          4,
+          4,
+          4
+        ],
+        "seed": 20261024,
+        "warmup_initial": 150,
+        "rounds": 5,
+        "warmup_block": 10,
+        "repeats_block": 50,
+        "profiler_iterations": 3,
+        "scope": "model forward only; resident GPU input/output, no H2D, preprocessing, decoding or NMS",
+        "timing": "CUDA events + perf_counter wall through end-event synchronize; profiler disabled",
+        "cudagraph": "static resident input/output; replay only, capture excluded"
+      },
+      "source_sha256": {
+        "experiments/decoder_budget_5090/profile_runtime_5090.py": "8a704eaf3ff93cc85625c0ae30b52680aa0c3a447d44a059c5c604d7c5eabe0b",
+        "ultralytics/nn/tasks.py": "6c9fb84577900e3105f6dc24b901802e1f0e625b985a2082a280a1aafedb4bd4",
+        "ultralytics/nn/modules/head.py": "c092316743055f02adc84589d843588631ffe705fb0777178e0362d81471f4bc",
+        "ultralytics/nn/modules/transformer.py": "8986f3f58a5e30a42545f544f1a35f5e5861b13ee5d4507d8b2afab1c41df782",
+        "ultralytics/nn/modules/utils.py": "bcf0492178d3924b5d6a5f5808906b7aec6214172b70bfeb21b3aab308b17164",
+        "ultralytics/nn/modules/block.py": "1e135bf35f1fc3520687b73942259108ccbfb6ed983bda0e74e7bc6a76db0b6a",
+        "ultralytics/nn/modules/conv.py": "c802f36ea1596d8910f2b651d57877b50a4960857b97cbb5a20d44a1dbbaa774",
+        "ultralytics/nn/modules/rtdetr_na.py": "40864c2cad00596329f923c655dcb84c2a135e890e87cb5ba0f8df2fcd82d95e"
+      },
+      "finished_at": "2026-10-25T12:28:01.175322+08:00",
+      "server_assessment": {
+        "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-runtime-profile-20261025-r3/assessment.json",
+        "sha256": "7d5381b4a17db27af59ebdb6bb7ba5523a6dbb093f2961a5de12f3367af472e0",
+        "bytes": 5473983
+      }
+    },
+    "c2": {
+      "schema": "5090.runtime-profile.v1",
+      "started_at": "2026-10-25T12:28:49.927523+08:00",
+      "source": {
+        "root": "/home/ubuntu/文档/ZHJ_UAV/ultralytics",
+        "commit": "14dc3f0bca2ef1ba09a876aad3912f33221c2b81",
+        "branch": "5090-detrscope-query-budget",
+        "dirty_paths": [
+          "?? :memory:.ses",
+          "?? experiments/decoder_budget_5090/profile_deployment_5090.py",
+          "?? experiments/decoder_budget_5090/profile_runtime_5090.py"
+        ]
+      },
+      "environment": {
+        "python": "3.11.16",
+        "executable": "/tmp/zhj-uav-5090-venv/bin/python",
+        "torch": "2.14.0+cu130",
+        "torch_cuda": "13.0",
+        "cudnn": 92400,
+        "device_requested": "cuda:0",
+        "cuda_available": true,
+        "deterministic_algorithms": false,
+        "cudnn_benchmark": false,
+        "cudnn_deterministic": false,
+        "matmul_tf32": false,
+        "cudnn_tf32": false,
+        "dtype": "float32",
+        "autocast": false,
+        "nvidia_smi": {
+          "returncode": 0,
+          "stdout": "0, NVIDIA GeForce RTX 5090 D v2, GPU-49e248ed-74af-bad5-bc6e-1c5095289883, 580.178.04",
+          "stderr": ""
+        },
+        "gpu": "NVIDIA GeForce RTX 5090 D v2",
+        "capability": [
+          12,
+          0
+        ],
+        "total_memory_bytes": 25138495488,
+        "cuda_device_index": 0
+      },
+      "input": {
+        "annotation_path": "/home/ubuntu/文档/ZHJ_UAV/SO_DETR/datasets/VisDrone2019-DET-YOLO/annotations/VisDrone2019-DET_val_coco.json",
+        "annotation_sha256": "6f8b8686864f1485ab172de9339f7049593f74766f6654c6e980a6c00d810371",
+        "image": {
+          "id": 1,
+          "file_name": "0000001_02999_d_0000005.jpg",
+          "width": 1920,
+          "height": 1080
+        },
+        "image_path": "/home/ubuntu/文档/ZHJ_UAV/SO_DETR/datasets/VisDrone2019-DET-YOLO/images/val/0000001_02999_d_0000005.jpg",
+        "image_sha256": "fc80a9305b38af026091cbe0a1d4cfe059964852253b93f01fee17b7443e5514",
+        "input_sha256": "883789210db2b7f51d7a34c75b61b504637c17d8200c616eef69478cb0ec7bed",
+        "preprocess": "OpenCV BGR -> scale_fill 640 square -> RGB BCHW contiguous FP32 /255; before timing"
+      },
+      "protocol": {
+        "batch": 1,
+        "shape": [
+          1,
+          3,
+          640,
+          640
+        ],
+        "queries": 300,
+        "points_per_level": [
+          4,
+          4,
+          4
+        ],
+        "seed": 20261024,
+        "warmup_initial": 150,
+        "rounds": 5,
+        "warmup_block": 10,
+        "repeats_block": 50,
+        "profiler_iterations": 3,
+        "scope": "model forward only; resident GPU input/output, no H2D, preprocessing, decoding or NMS",
+        "timing": "CUDA events + perf_counter wall through end-event synchronize; profiler disabled",
+        "cudagraph": "static resident input/output; replay only, capture excluded"
+      },
+      "source_sha256": {
+        "experiments/decoder_budget_5090/profile_runtime_5090.py": "8a704eaf3ff93cc85625c0ae30b52680aa0c3a447d44a059c5c604d7c5eabe0b",
+        "ultralytics/nn/tasks.py": "6c9fb84577900e3105f6dc24b901802e1f0e625b985a2082a280a1aafedb4bd4",
+        "ultralytics/nn/modules/head.py": "c092316743055f02adc84589d843588631ffe705fb0777178e0362d81471f4bc",
+        "ultralytics/nn/modules/transformer.py": "8986f3f58a5e30a42545f544f1a35f5e5861b13ee5d4507d8b2afab1c41df782",
+        "ultralytics/nn/modules/utils.py": "bcf0492178d3924b5d6a5f5808906b7aec6214172b70bfeb21b3aab308b17164",
+        "ultralytics/nn/modules/block.py": "1e135bf35f1fc3520687b73942259108ccbfb6ed983bda0e74e7bc6a76db0b6a",
+        "ultralytics/nn/modules/conv.py": "c802f36ea1596d8910f2b651d57877b50a4960857b97cbb5a20d44a1dbbaa774",
+        "ultralytics/nn/modules/rtdetr_na.py": "40864c2cad00596329f923c655dcb84c2a135e890e87cb5ba0f8df2fcd82d95e"
+      },
+      "finished_at": "2026-10-25T12:29:17.790028+08:00",
+      "server_assessment": {
+        "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-runtime-profile-20261025-c2-final/assessment.json",
+        "sha256": "59c26ca67c6646b0cb44a2ee6ef2733c8b0dad1c9ba2249a967a8710d34da4c3",
+        "bytes": 2742563
+      }
+    }
+  },
+  "deployment": [
+    {
+      "schema": "5090.deployment-profile.v1",
+      "started_at": "2026-10-25T12:43:41.577138+08:00",
+      "source": {
+        "root": "/home/ubuntu/文档/ZHJ_UAV/ultralytics",
+        "commit": "14dc3f0bca2ef1ba09a876aad3912f33221c2b81",
+        "branch": "5090-detrscope-query-budget",
+        "dirty_paths": [
+          "M docs/experiment_reports/2026-10-24_5090_baselines/MANIFEST.sha256",
+          " M docs/experiment_reports/2026-10-24_5090_detrscope/MANIFEST.sha256",
+          " M docs/experiment_reports/README.md",
+          " M experiments/decoder_budget_5090/README.md",
+          "?? docs/experiment_reports/2026-10-25_5090_runtime_profile/",
+          "?? experiments/decoder_budget_5090/archive_runtime_5090.py",
+          "?? experiments/decoder_budget_5090/profile_deployment_5090.py",
+          "?? experiments/decoder_budget_5090/profile_runtime_5090.py",
+          "?? experiments/decoder_budget_5090/report_runtime_5090.py",
+          "?? experiments/decoder_budget_5090/tests/test_runtime_profile_5090.py"
+        ]
+      },
+      "environment": {
+        "python": "3.11.16",
+        "executable": "/tmp/zhj-uav-profiler-20261025-venv/bin/python",
+        "torch": "2.14.0+cu130",
+        "torch_cuda": "13.0",
+        "cudnn": 92400,
+        "device_requested": "cuda:0",
+        "cuda_available": true,
+        "deterministic_algorithms": false,
+        "cudnn_benchmark": false,
+        "cudnn_deterministic": false,
+        "matmul_tf32": false,
+        "cudnn_tf32": false,
+        "dtype": "float32",
+        "autocast": false,
+        "nvidia_smi": {
+          "returncode": 0,
+          "stdout": "0, NVIDIA GeForce RTX 5090 D v2, GPU-49e248ed-74af-bad5-bc6e-1c5095289883, 580.178.04",
+          "stderr": ""
+        },
+        "gpu": "NVIDIA GeForce RTX 5090 D v2",
+        "capability": [
+          12,
+          0
+        ],
+        "total_memory_bytes": 25138495488,
+        "cuda_device_index": 0
+      },
+      "input": {
+        "annotation_path": "/home/ubuntu/文档/ZHJ_UAV/SO_DETR/datasets/VisDrone2019-DET-YOLO/annotations/VisDrone2019-DET_val_coco.json",
+        "annotation_sha256": "6f8b8686864f1485ab172de9339f7049593f74766f6654c6e980a6c00d810371",
+        "image": {
+          "id": 1,
+          "file_name": "0000001_02999_d_0000005.jpg",
+          "width": 1920,
+          "height": 1080
+        },
+        "image_path": "/home/ubuntu/文档/ZHJ_UAV/SO_DETR/datasets/VisDrone2019-DET-YOLO/images/val/0000001_02999_d_0000005.jpg",
+        "image_sha256": "fc80a9305b38af026091cbe0a1d4cfe059964852253b93f01fee17b7443e5514",
+        "input_sha256": "883789210db2b7f51d7a34c75b61b504637c17d8200c616eef69478cb0ec7bed",
+        "preprocess": "OpenCV BGR -> scale_fill 640 square -> RGB BCHW contiguous FP32 /255; before timing"
+      },
+      "source_sha256": {
+        "experiments/decoder_budget_5090/profile_deployment_5090.py": "9fbd351cb253176728662e80d14c8864594dcd6e4fb39a0b25dcab68a94226bf",
+        "experiments/decoder_budget_5090/profile_runtime_5090.py": "8a704eaf3ff93cc85625c0ae30b52680aa0c3a447d44a059c5c604d7c5eabe0b"
+      },
+      "protocol": {
+        "scope": "batch1 640 square 300Q [4,4,4], resident CUDA I/O, model predictions only",
+        "rounds": 5,
+        "repeats_block": 50,
+        "warmup_block": 10,
+        "warmup_initial": 150,
+        "timing": "CUDA events and synchronized wall; build/export excluded",
+        "stream": "dedicated non-default torch CUDA stream shared by events, ONNX and TensorRT",
+        "accuracy": "finite/shape/output differences only; no AP claim"
+      },
+      "finished_at": "2026-10-25T12:44:23.743649+08:00",
+      "server_assessment": {
+        "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-deployment-profile-20261025-c2-stream-final/assessment.json",
+        "bytes": 1087655,
+        "sha256": "a4f8772814f3b2b1454c96b6bcb289f62f7ae9d755e8b6022efb0f4ff9ce6ad2"
+      }
+    }
+  ],
+  "boundary": "Only files inside this archive and linked source scripts are cloud artifacts. Absolute server paths are references, not required inputs for offline analysis."
+}

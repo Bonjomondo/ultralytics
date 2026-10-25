@@ -1,0 +1,2608 @@
+{
+  "iterations": [
+    {
+      "iteration": "iteration::0",
+      "cpu_forward_us": 9960.956,
+      "kernel_count": 456,
+      "kernel_sum_us": 5648.648,
+      "gpu_span_us": 9406.39306640625,
+      "gpu_busy_union_us": 5648.649169921875,
+      "gpu_idle_in_span_us": 3757.743896484375,
+      "gpu_idle_fraction": 0.3994882916284548,
+      "kernel_duration_us": {
+        "mean": 12.387385964912282,
+        "median": 2.528,
+        "p95": 57.728,
+        "min": 0.8,
+        "max": 209.121,
+        "n": 456
+      },
+      "cpu_launch_gap_us": {
+        "mean": 18.27803217290522,
+        "median": 11.572021484375,
+        "p95": 35.1259765625,
+        "min": 0.263916015625,
+        "max": 1360.279052734375,
+        "n": 455
+      },
+      "gpu_gap_us": {
+        "mean": 8.258777794471154,
+        "median": 2.39990234375,
+        "p95": 31.615966796875,
+        "min": 0.576171875,
+        "max": 78.049072265625,
+        "n": 455
+      }
+    },
+    {
+      "iteration": "iteration::1",
+      "cpu_forward_us": 9204.626,
+      "kernel_count": 456,
+      "kernel_sum_us": 5649.658999999997,
+      "gpu_span_us": 9096.6640625,
+      "gpu_busy_union_us": 5649.658203125,
+      "gpu_idle_in_span_us": 3447.005859375,
+      "gpu_idle_fraction": 0.3789307635955145,
+      "kernel_duration_us": {
+        "mean": 12.389603070175438,
+        "median": 2.512,
+        "p95": 57.249,
+        "min": 0.8,
+        "max": 209.825,
+        "n": 456
+      },
+      "cpu_launch_gap_us": {
+        "mean": 17.686515388907967,
+        "median": 10.97900390625,
+        "p95": 33.77294921875,
+        "min": 0.23876953125,
+        "max": 1405.859130859375,
+        "n": 455
+      },
+      "gpu_gap_us": {
+        "mean": 7.575837053571429,
+        "median": 2.400146484375,
+        "p95": 28.864013671875,
+        "min": 0.575927734375,
+        "max": 69.76025390625,
+        "n": 455
+      }
+    },
+    {
+      "iteration": "iteration::2",
+      "cpu_forward_us": 9223.314,
+      "kernel_count": 456,
+      "kernel_sum_us": 5656.781999999992,
+      "gpu_span_us": 9121.94287109375,
+      "gpu_busy_union_us": 5656.77978515625,
+      "gpu_idle_in_span_us": 3465.1630859375,
+      "gpu_idle_fraction": 0.3798711672398378,
+      "kernel_duration_us": {
+        "mean": 12.405223684210526,
+        "median": 2.528,
+        "p95": 57.856,
+        "min": 0.8,
+        "max": 208.321,
+        "n": 456
+      },
+      "cpu_launch_gap_us": {
+        "mean": 17.749403331043958,
+        "median": 11.09814453125,
+        "p95": 31.300048828125,
+        "min": 0.235107421875,
+        "max": 1501.77587890625,
+        "n": 455
+      },
+      "gpu_gap_us": {
+        "mean": 7.615743046016483,
+        "median": 2.400146484375,
+        "p95": 29.85595703125,
+        "min": 0.575927734375,
+        "max": 68.256103515625,
+        "n": 455
+      }
+    }
+  ],
+  "tables": {
+    "op": [
+      {
+        "name": "aten::cudnn_convolution",
+        "calls": 285,
+        "cuda_us": 12628.786000000007,
+        "calls_per_forward": 95.0,
+        "cuda_us_per_forward": 4209.5953333333355
+      },
+      {
+        "name": "aten::addmm",
+        "calls": 228,
+        "cuda_us": 2024.3649999999993,
+        "calls_per_forward": 76.0,
+        "cuda_us_per_forward": 674.7883333333331
+      },
+      {
+        "name": "aten::add_",
+        "calls": 180,
+        "cuda_us": 512.9659999999999,
+        "calls_per_forward": 60.0,
+        "cuda_us_per_forward": 170.98866666666663
+      },
+      {
+        "name": "aten::bmm",
+        "calls": 24,
+        "cuda_us": 246.11300000000006,
+        "calls_per_forward": 8.0,
+        "cuda_us_per_forward": 82.03766666666668
+      },
+      {
+        "name": "aten::grid_sampler_2d",
+        "calls": 27,
+        "cuda_us": 217.66800000000006,
+        "calls_per_forward": 9.0,
+        "cuda_us_per_forward": 72.55600000000003
+      },
+      {
+        "name": "aten::clamp_min_",
+        "calls": 99,
+        "cuda_us": 194.04799999999986,
+        "calls_per_forward": 33.0,
+        "cuda_us_per_forward": 64.68266666666662
+      },
+      {
+        "name": "aten::add",
+        "calls": 111,
+        "cuda_us": 151.58599999999987,
+        "calls_per_forward": 37.0,
+        "cuda_us_per_forward": 50.52866666666662
+      },
+      {
+        "name": "aten::silu_",
+        "calls": 84,
+        "cuda_us": 127.80699999999996,
+        "calls_per_forward": 28.0,
+        "cuda_us_per_forward": 42.60233333333332
+      },
+      {
+        "name": "aten::native_layer_norm",
+        "calls": 36,
+        "cuda_us": 113.25000000000003,
+        "calls_per_forward": 12.0,
+        "cuda_us_per_forward": 37.75000000000001
+      },
+      {
+        "name": "aten::cat",
+        "calls": 27,
+        "cuda_us": 106.17800000000004,
+        "calls_per_forward": 9.0,
+        "cuda_us_per_forward": 35.39266666666668
+      },
+      {
+        "name": "aten::topk",
+        "calls": 6,
+        "cuda_us": 104.288,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 34.76266666666667
+      },
+      {
+        "name": "aten::mul",
+        "calls": 51,
+        "cuda_us": 89.53900000000002,
+        "calls_per_forward": 17.0,
+        "cuda_us_per_forward": 29.846333333333337
+      },
+      {
+        "name": "aten::mm",
+        "calls": 18,
+        "cuda_us": 48.257999999999996,
+        "calls_per_forward": 6.0,
+        "cuda_us_per_forward": 16.086
+      },
+      {
+        "name": "aten::max_pool2d_with_indices",
+        "calls": 3,
+        "cuda_us": 44.736000000000004,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 14.912
+      },
+      {
+        "name": "aten::copy_",
+        "calls": 27,
+        "cuda_us": 43.649,
+        "calls_per_forward": 9.0,
+        "cuda_us_per_forward": 14.549666666666667
+      },
+      {
+        "name": "aten::_softmax",
+        "calls": 21,
+        "cuda_us": 40.190999999999995,
+        "calls_per_forward": 7.0,
+        "cuda_us_per_forward": 13.396999999999998
+      },
+      {
+        "name": "aten::avg_pool2d",
+        "calls": 9,
+        "cuda_us": 35.039,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 11.679666666666668
+      },
+      {
+        "name": "aten::mean",
+        "calls": 12,
+        "cuda_us": 34.175999999999995,
+        "calls_per_forward": 4.0,
+        "cuda_us_per_forward": 11.391999999999998
+      },
+      {
+        "name": "aten::sum",
+        "calls": 9,
+        "cuda_us": 32.831,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 10.943666666666667
+      },
+      {
+        "name": "aten::index",
+        "calls": 9,
+        "cuda_us": 30.880000000000003,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 10.293333333333335
+      },
+      {
+        "name": "aten::clamp",
+        "calls": 27,
+        "cuda_us": 26.463000000000015,
+        "calls_per_forward": 9.0,
+        "cuda_us_per_forward": 8.821000000000005
+      },
+      {
+        "name": "aten::sigmoid",
+        "calls": 18,
+        "cuda_us": 22.368000000000002,
+        "calls_per_forward": 6.0,
+        "cuda_us_per_forward": 7.456
+      },
+      {
+        "name": "aten::div",
+        "calls": 18,
+        "cuda_us": 22.304000000000006,
+        "calls_per_forward": 6.0,
+        "cuda_us_per_forward": 7.4346666666666685
+      },
+      {
+        "name": "aten::upsample_nearest2d",
+        "calls": 6,
+        "cuda_us": 18.657,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 6.219
+      },
+      {
+        "name": "aten::sub",
+        "calls": 18,
+        "cuda_us": 16.799000000000007,
+        "calls_per_forward": 6.0,
+        "cuda_us_per_forward": 5.599666666666669
+      },
+      {
+        "name": "aten::log",
+        "calls": 9,
+        "cuda_us": 10.081,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 3.360333333333333
+      },
+      {
+        "name": "aten::max",
+        "calls": 3,
+        "cuda_us": 7.743,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 2.581
+      },
+      {
+        "name": "aten::gelu",
+        "calls": 3,
+        "cuda_us": 4.32,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.4400000000000002
+      }
+    ],
+    "group": [
+      {
+        "name": "convolution",
+        "calls": 285,
+        "cuda_us": 12628.786000000007,
+        "calls_per_forward": 95.0,
+        "cuda_us_per_forward": 4209.5953333333355
+      },
+      {
+        "name": "matmul_linear_attention",
+        "calls": 270,
+        "cuda_us": 2318.7360000000003,
+        "calls_per_forward": 90.0,
+        "cuda_us_per_forward": 772.9120000000001
+      },
+      {
+        "name": "other",
+        "calls": 582,
+        "cuda_us": 1335.847000000002,
+        "calls_per_forward": 194.0,
+        "cuda_us_per_forward": 445.282333333334
+      },
+      {
+        "name": "grid_sample",
+        "calls": 27,
+        "cuda_us": 217.66800000000006,
+        "calls_per_forward": 9.0,
+        "cuda_us_per_forward": 72.55600000000003
+      },
+      {
+        "name": "activation",
+        "calls": 87,
+        "cuda_us": 132.12699999999995,
+        "calls_per_forward": 29.0,
+        "cuda_us_per_forward": 44.04233333333332
+      },
+      {
+        "name": "layer_norm",
+        "calls": 36,
+        "cuda_us": 113.25000000000003,
+        "calls_per_forward": 12.0,
+        "cuda_us_per_forward": 37.75000000000001
+      },
+      {
+        "name": "concat_stack",
+        "calls": 27,
+        "cuda_us": 106.17800000000004,
+        "calls_per_forward": 9.0,
+        "cuda_us_per_forward": 35.39266666666668
+      },
+      {
+        "name": "copy_layout",
+        "calls": 27,
+        "cuda_us": 43.649,
+        "calls_per_forward": 9.0,
+        "cuda_us_per_forward": 14.549666666666667
+      },
+      {
+        "name": "softmax",
+        "calls": 21,
+        "cuda_us": 40.190999999999995,
+        "calls_per_forward": 7.0,
+        "cuda_us_per_forward": 13.396999999999998
+      },
+      {
+        "name": "upsample",
+        "calls": 6,
+        "cuda_us": 18.657,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 6.219
+      }
+    ],
+    "layer": [
+      {
+        "name": "model.24:RTDETRDecoder",
+        "calls": 639,
+        "cuda_us": 3217.5879999999993,
+        "calls_per_forward": 213.0,
+        "cuda_us_per_forward": 1072.5293333333332
+      },
+      {
+        "name": "model.4:ResNet18Stage",
+        "calls": 78,
+        "cuda_us": 2866.8999999999987,
+        "calls_per_forward": 26.0,
+        "cuda_us_per_forward": 955.6333333333329
+      },
+      {
+        "name": "model.3:ResNet18Stage",
+        "calls": 51,
+        "cuda_us": 1973.3879999999995,
+        "calls_per_forward": 17.0,
+        "cuda_us_per_forward": 657.7959999999998
+      },
+      {
+        "name": "model.16:RepC3",
+        "calls": 63,
+        "cuda_us": 1456.3910000000003,
+        "calls_per_forward": 21.0,
+        "cuda_us_per_forward": 485.46366666666677
+      },
+      {
+        "name": "model.2:ResNet18Stage",
+        "calls": 51,
+        "cuda_us": 1331.785,
+        "calls_per_forward": 17.0,
+        "cuda_us_per_forward": 443.92833333333334
+      },
+      {
+        "name": "model.1:ResNet18Stage",
+        "calls": 48,
+        "cuda_us": 945.8930000000003,
+        "calls_per_forward": 16.0,
+        "cuda_us_per_forward": 315.29766666666677
+      },
+      {
+        "name": "model.11:RepC3",
+        "calls": 84,
+        "cuda_us": 933.2539999999998,
+        "calls_per_forward": 28.0,
+        "cuda_us_per_forward": 311.0846666666666
+      },
+      {
+        "name": "model.19:RepC3",
+        "calls": 84,
+        "cuda_us": 922.4310000000003,
+        "calls_per_forward": 28.0,
+        "cuda_us_per_forward": 307.4770000000001
+      },
+      {
+        "name": "model.0:ResNet18Stem",
+        "calls": 30,
+        "cuda_us": 849.6679999999999,
+        "calls_per_forward": 10.0,
+        "cuda_us_per_forward": 283.2226666666666
+      },
+      {
+        "name": "model.17:Conv",
+        "calls": 9,
+        "cuda_us": 615.2030000000001,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 205.0676666666667
+      },
+      {
+        "name": "model.22:RepC3",
+        "calls": 84,
+        "cuda_us": 539.5600000000003,
+        "calls_per_forward": 28.0,
+        "cuda_us_per_forward": 179.85333333333344
+      },
+      {
+        "name": "model.20:Conv",
+        "calls": 9,
+        "cuda_us": 449.53900000000004,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 149.84633333333335
+      },
+      {
+        "name": "model.6:AIFI",
+        "calls": 84,
+        "cuda_us": 403.75199999999995,
+        "calls_per_forward": 28.0,
+        "cuda_us_per_forward": 134.58399999999997
+      },
+      {
+        "name": "model.5:Conv",
+        "calls": 6,
+        "cuda_us": 103.97,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 34.656666666666666
+      },
+      {
+        "name": "model.14:Conv",
+        "calls": 6,
+        "cuda_us": 88.09799999999998,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 29.365999999999996
+      },
+      {
+        "name": "model.12:Conv",
+        "calls": 9,
+        "cuda_us": 77.632,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 25.877333333333336
+      },
+      {
+        "name": "model.9:Conv",
+        "calls": 6,
+        "cuda_us": 67.523,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 22.507666666666665
+      },
+      {
+        "name": "model.7:Conv",
+        "calls": 9,
+        "cuda_us": 60.352000000000004,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 20.117333333333335
+      },
+      {
+        "name": "model.15:Concat",
+        "calls": 3,
+        "cuda_us": 16.896,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 5.632000000000001
+      },
+      {
+        "name": "model.13:Upsample",
+        "calls": 3,
+        "cuda_us": 12.577,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 4.192333333333333
+      },
+      {
+        "name": "model.18:Concat",
+        "calls": 3,
+        "cuda_us": 6.144,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 2.048
+      },
+      {
+        "name": "model.8:Upsample",
+        "calls": 3,
+        "cuda_us": 6.08,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 2.026666666666667
+      },
+      {
+        "name": "model.10:Concat",
+        "calls": 3,
+        "cuda_us": 6.048,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 2.016
+      },
+      {
+        "name": "model.21:Concat",
+        "calls": 3,
+        "cuda_us": 4.417,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.4723333333333333
+      }
+    ],
+    "module": [
+      {
+        "name": "model.4.blocks.0.conv2.conv:Conv2d",
+        "calls": 15,
+        "cuda_us": 785.1250000000002,
+        "calls_per_forward": 5.0,
+        "cuda_us_per_forward": 261.7083333333334
+      },
+      {
+        "name": "model.4.blocks.1.conv1.conv:Conv2d",
+        "calls": 15,
+        "cuda_us": 778.213,
+        "calls_per_forward": 5.0,
+        "cuda_us_per_forward": 259.40433333333334
+      },
+      {
+        "name": "model.4.blocks.1.conv2.conv:Conv2d",
+        "calls": 15,
+        "cuda_us": 768.7410000000001,
+        "calls_per_forward": 5.0,
+        "cuda_us_per_forward": 256.247
+      },
+      {
+        "name": "model.17.conv:Conv2d",
+        "calls": 6,
+        "cuda_us": 610.595,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 203.53166666666667
+      },
+      {
+        "name": "model.3.blocks.1.conv2.conv:Conv2d",
+        "calls": 6,
+        "cuda_us": 530.371,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 176.79033333333334
+      },
+      {
+        "name": "model.3.blocks.0.conv2.conv:Conv2d",
+        "calls": 6,
+        "cuda_us": 529.988,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 176.6626666666667
+      },
+      {
+        "name": "model.3.blocks.1.conv1.conv:Conv2d",
+        "calls": 6,
+        "cuda_us": 529.5709999999999,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 176.52366666666663
+      },
+      {
+        "name": "model.20.conv:Conv2d",
+        "calls": 6,
+        "cuda_us": 446.0830000000001,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 148.69433333333336
+      },
+      {
+        "name": "model.4.blocks.0.conv1.conv:Conv2d",
+        "calls": 6,
+        "cuda_us": 443.68300000000005,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 147.89433333333335
+      },
+      {
+        "name": "model.0.layers.2.conv:Conv2d",
+        "calls": 6,
+        "cuda_us": 424.03499999999997,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 141.345
+      },
+      {
+        "name": "model.2.blocks.1.conv2.conv:Conv2d",
+        "calls": 6,
+        "cuda_us": 353.24999999999994,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 117.74999999999999
+      },
+      {
+        "name": "model.2.blocks.1.conv1.conv:Conv2d",
+        "calls": 6,
+        "cuda_us": 353.155,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 117.71833333333332
+      },
+      {
+        "name": "model.16.m.0.conv:Conv2d",
+        "calls": 6,
+        "cuda_us": 352.64300000000003,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 117.54766666666667
+      },
+      {
+        "name": "model.2.blocks.0.conv2.conv:Conv2d",
+        "calls": 6,
+        "cuda_us": 352.193,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 117.39766666666667
+      },
+      {
+        "name": "model.16.m.1.conv:Conv2d",
+        "calls": 6,
+        "cuda_us": 347.87300000000005,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 115.95766666666668
+      },
+      {
+        "name": "model.16.m.2.conv:Conv2d",
+        "calls": 6,
+        "cuda_us": 347.425,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 115.80833333333334
+      },
+      {
+        "name": "model.3.blocks.0.conv1.conv:Conv2d",
+        "calls": 6,
+        "cuda_us": 306.402,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 102.134
+      },
+      {
+        "name": "model.0.layers.1.conv:Conv2d",
+        "calls": 6,
+        "cuda_us": 223.041,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 74.347
+      },
+      {
+        "name": "model.24:RTDETRDecoder",
+        "calls": 36,
+        "cuda_us": 218.36600000000004,
+        "calls_per_forward": 12.0,
+        "cuda_us_per_forward": 72.78866666666669
+      },
+      {
+        "name": "model.11.m.1.conv:Conv2d",
+        "calls": 15,
+        "cuda_us": 215.20000000000005,
+        "calls_per_forward": 5.0,
+        "cuda_us_per_forward": 71.73333333333335
+      },
+      {
+        "name": "model.19.m.1.conv:Conv2d",
+        "calls": 15,
+        "cuda_us": 213.08799999999997,
+        "calls_per_forward": 5.0,
+        "cuda_us_per_forward": 71.02933333333333
+      },
+      {
+        "name": "model.11.m.0.conv:Conv2d",
+        "calls": 15,
+        "cuda_us": 211.07499999999996,
+        "calls_per_forward": 5.0,
+        "cuda_us_per_forward": 70.35833333333332
+      },
+      {
+        "name": "model.19.m.0.conv:Conv2d",
+        "calls": 15,
+        "cuda_us": 209.952,
+        "calls_per_forward": 5.0,
+        "cuda_us_per_forward": 69.984
+      },
+      {
+        "name": "model.1.blocks.0.conv1.conv:Conv2d",
+        "calls": 6,
+        "cuda_us": 209.794,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 69.93133333333334
+      },
+      {
+        "name": "model.24.decoder.layers.0.self_attn:MultiheadAttention",
+        "calls": 30,
+        "cuda_us": 209.50300000000004,
+        "calls_per_forward": 10.0,
+        "cuda_us_per_forward": 69.83433333333335
+      },
+      {
+        "name": "model.11.m.2.conv:Conv2d",
+        "calls": 15,
+        "cuda_us": 209.123,
+        "calls_per_forward": 5.0,
+        "cuda_us_per_forward": 69.70766666666667
+      },
+      {
+        "name": "model.1.blocks.0.conv2.conv:Conv2d",
+        "calls": 6,
+        "cuda_us": 208.48099999999997,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 69.49366666666666
+      },
+      {
+        "name": "model.19.m.2.conv:Conv2d",
+        "calls": 15,
+        "cuda_us": 207.39299999999997,
+        "calls_per_forward": 5.0,
+        "cuda_us_per_forward": 69.13099999999999
+      },
+      {
+        "name": "model.24.decoder.layers.2.self_attn:MultiheadAttention",
+        "calls": 30,
+        "cuda_us": 207.0420000000001,
+        "calls_per_forward": 10.0,
+        "cuda_us_per_forward": 69.01400000000002
+      },
+      {
+        "name": "model.24.decoder.layers.1.self_attn:MultiheadAttention",
+        "calls": 30,
+        "cuda_us": 206.817,
+        "calls_per_forward": 10.0,
+        "cuda_us_per_forward": 68.93900000000001
+      },
+      {
+        "name": "model.1.blocks.1.conv2.conv:Conv2d",
+        "calls": 6,
+        "cuda_us": 206.465,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 68.82166666666667
+      },
+      {
+        "name": "model.1.blocks.1.conv1.conv:Conv2d",
+        "calls": 6,
+        "cuda_us": 201.21699999999998,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 67.07233333333333
+      },
+      {
+        "name": "model.6.ma:MultiheadAttention",
+        "calls": 48,
+        "cuda_us": 193.92399999999995,
+        "calls_per_forward": 16.0,
+        "cuda_us_per_forward": 64.64133333333332
+      },
+      {
+        "name": "model.2.blocks.0.conv1.conv:Conv2d",
+        "calls": 6,
+        "cuda_us": 184.67399999999998,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 61.55799999999999
+      },
+      {
+        "name": "model.24.input_proj.0.0:Conv2d",
+        "calls": 6,
+        "cuda_us": 150.914,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 50.30466666666666
+      },
+      {
+        "name": "model.16.cv1.conv:Conv2d",
+        "calls": 9,
+        "cuda_us": 142.39999999999998,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 47.46666666666666
+      },
+      {
+        "name": "model.24.query_pos_head.layers.1:Linear",
+        "calls": 9,
+        "cuda_us": 139.458,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 46.486
+      },
+      {
+        "name": "model.16.cv2.conv:Conv2d",
+        "calls": 9,
+        "cuda_us": 138.432,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 46.144
+      },
+      {
+        "name": "model.24.decoder.layers.2.cross_attn:MSDeformAttn",
+        "calls": 42,
+        "cuda_us": 132.036,
+        "calls_per_forward": 14.0,
+        "cuda_us_per_forward": 44.012
+      },
+      {
+        "name": "model.24.decoder.layers.1.cross_attn:MSDeformAttn",
+        "calls": 42,
+        "cuda_us": 129.921,
+        "calls_per_forward": 14.0,
+        "cuda_us_per_forward": 43.306999999999995
+      },
+      {
+        "name": "model.24.decoder.layers.0.cross_attn:MSDeformAttn",
+        "calls": 42,
+        "cuda_us": 129.763,
+        "calls_per_forward": 14.0,
+        "cuda_us_per_forward": 43.254333333333335
+      },
+      {
+        "name": "model.22.cv1.conv:Conv2d",
+        "calls": 6,
+        "cuda_us": 118.786,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 39.595333333333336
+      },
+      {
+        "name": "model.22.cv2.conv:Conv2d",
+        "calls": 6,
+        "cuda_us": 117.88900000000001,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 39.29633333333334
+      },
+      {
+        "name": "model.11.cv2.conv:Conv2d",
+        "calls": 6,
+        "cuda_us": 116.12799999999999,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 38.709333333333326
+      },
+      {
+        "name": "model.6.fc2:Linear",
+        "calls": 3,
+        "cuda_us": 114.94600000000001,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 38.315333333333335
+      },
+      {
+        "name": "model.19.cv2.conv:Conv2d",
+        "calls": 6,
+        "cuda_us": 112.224,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 37.408
+      },
+      {
+        "name": "model.11.cv1.conv:Conv2d",
+        "calls": 6,
+        "cuda_us": 111.23199999999999,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 37.07733333333333
+      },
+      {
+        "name": "model.19.cv1.conv:Conv2d",
+        "calls": 6,
+        "cuda_us": 108.095,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 36.031666666666666
+      },
+      {
+        "name": "model.5.conv:Conv2d",
+        "calls": 6,
+        "cuda_us": 103.97,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 34.656666666666666
+      },
+      {
+        "name": "model.24.enc_output.0:Linear",
+        "calls": 3,
+        "cuda_us": 92.609,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 30.869666666666664
+      },
+      {
+        "name": "model.24.decoder.layers.2.cross_attn.value_proj:Linear",
+        "calls": 3,
+        "cuda_us": 91.45599999999999,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 30.48533333333333
+      },
+      {
+        "name": "model.24.decoder.layers.0.cross_attn.value_proj:Linear",
+        "calls": 3,
+        "cuda_us": 91.42399999999999,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 30.474666666666664
+      },
+      {
+        "name": "model.0.layers.0.conv:Conv2d",
+        "calls": 6,
+        "cuda_us": 91.232,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 30.410666666666668
+      },
+      {
+        "name": "model.24.decoder.layers.1.cross_attn.value_proj:Linear",
+        "calls": 3,
+        "cuda_us": 91.01,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 30.33666666666667
+      },
+      {
+        "name": "model.24.decoder.layers.0.linear2:Linear",
+        "calls": 9,
+        "cuda_us": 89.443,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 29.814333333333334
+      },
+      {
+        "name": "model.24.decoder.layers.2.linear2:Linear",
+        "calls": 9,
+        "cuda_us": 89.023,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 29.674333333333333
+      },
+      {
+        "name": "model.24.decoder.layers.1.linear2:Linear",
+        "calls": 9,
+        "cuda_us": 88.961,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 29.653666666666666
+      },
+      {
+        "name": "model.14.conv:Conv2d",
+        "calls": 6,
+        "cuda_us": 88.09799999999998,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 29.365999999999996
+      },
+      {
+        "name": "model.22.m.0.conv:Conv2d",
+        "calls": 15,
+        "cuda_us": 82.434,
+        "calls_per_forward": 5.0,
+        "cuda_us_per_forward": 27.477999999999998
+      },
+      {
+        "name": "model.22.m.1.conv:Conv2d",
+        "calls": 15,
+        "cuda_us": 81.984,
+        "calls_per_forward": 5.0,
+        "cuda_us_per_forward": 27.328
+      },
+      {
+        "name": "model.22.m.2.conv:Conv2d",
+        "calls": 15,
+        "cuda_us": 81.536,
+        "calls_per_forward": 5.0,
+        "cuda_us_per_forward": 27.17866666666667
+      },
+      {
+        "name": "model.24.decoder:DeformableTransformerDecoder",
+        "calls": 75,
+        "cuda_us": 81.53499999999995,
+        "calls_per_forward": 25.0,
+        "cuda_us_per_forward": 27.178333333333317
+      },
+      {
+        "name": "model.16.cv3.conv:Conv2d",
+        "calls": 6,
+        "cuda_us": 79.90500000000002,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 26.635000000000005
+      },
+      {
+        "name": "model.7.act:SiLU",
+        "calls": 48,
+        "cuda_us": 73.82300000000001,
+        "calls_per_forward": 16.0,
+        "cuda_us_per_forward": 24.60766666666667
+      },
+      {
+        "name": "model.12.conv:Conv2d",
+        "calls": 6,
+        "cuda_us": 73.056,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 24.352
+      },
+      {
+        "name": "model.24.input_proj.1.0:Conv2d",
+        "calls": 6,
+        "cuda_us": 68.416,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 22.805333333333333
+      },
+      {
+        "name": "model.9.conv:Conv2d",
+        "calls": 6,
+        "cuda_us": 67.523,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 22.507666666666665
+      },
+      {
+        "name": "model.4.blocks.0.shortcut.1.conv:Conv2d",
+        "calls": 6,
+        "cuda_us": 60.800999999999995,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 20.267
+      },
+      {
+        "name": "model.1.blocks.0.shortcut.conv:Conv2d",
+        "calls": 6,
+        "cuda_us": 57.504999999999995,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 19.168333333333333
+      },
+      {
+        "name": "model.7.conv:Conv2d",
+        "calls": 6,
+        "cuda_us": 56.736000000000004,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 18.912000000000003
+      },
+      {
+        "name": "model.24.input_proj.2.0:Conv2d",
+        "calls": 6,
+        "cuda_us": 56.608000000000004,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 18.869333333333334
+      },
+      {
+        "name": "model.11.m.0.act:SiLU",
+        "calls": 36,
+        "cuda_us": 53.98399999999999,
+        "calls_per_forward": 12.0,
+        "cuda_us_per_forward": 17.994666666666664
+      },
+      {
+        "name": "model.6.fc1:Linear",
+        "calls": 9,
+        "cuda_us": 47.872,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 15.957333333333333
+      },
+      {
+        "name": "model.0.layers.3:MaxPool2d",
+        "calls": 3,
+        "cuda_us": 44.736000000000004,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 14.912
+      },
+      {
+        "name": "model.19.cv3.conv:Conv2d",
+        "calls": 6,
+        "cuda_us": 43.489000000000004,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 14.496333333333334
+      },
+      {
+        "name": "model.3.blocks.0.shortcut.1.conv:Conv2d",
+        "calls": 6,
+        "cuda_us": 42.592000000000006,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 14.197333333333335
+      },
+      {
+        "name": "model.11.cv3.conv:Conv2d",
+        "calls": 6,
+        "cuda_us": 42.303999999999995,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 14.101333333333331
+      },
+      {
+        "name": "model.2.blocks.0.shortcut.1.conv:Conv2d",
+        "calls": 6,
+        "cuda_us": 38.913,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 12.970999999999998
+      },
+      {
+        "name": "model.22.cv3.conv:Conv2d",
+        "calls": 6,
+        "cuda_us": 33.027,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 11.009
+      },
+      {
+        "name": "model.24.decoder.layers.0.cross_attn.output_proj:Linear",
+        "calls": 3,
+        "cuda_us": 32.993,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 10.997666666666667
+      },
+      {
+        "name": "model.24.decoder.layers.1.cross_attn.output_proj:Linear",
+        "calls": 3,
+        "cuda_us": 32.704,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 10.901333333333334
+      },
+      {
+        "name": "model.24.query_pos_head.layers.0:Linear",
+        "calls": 18,
+        "cuda_us": 32.64,
+        "calls_per_forward": 6.0,
+        "cuda_us_per_forward": 10.88
+      },
+      {
+        "name": "model.24.enc_bbox_head.layers.0:Linear",
+        "calls": 3,
+        "cuda_us": 32.544000000000004,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 10.848
+      },
+      {
+        "name": "model.24.dec_bbox_head.1.layers.0:Linear",
+        "calls": 3,
+        "cuda_us": 32.385000000000005,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 10.795000000000002
+      },
+      {
+        "name": "model.24.dec_bbox_head.0.layers.0:Linear",
+        "calls": 3,
+        "cuda_us": 32.32,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 10.773333333333333
+      },
+      {
+        "name": "model.24.decoder.layers.2.cross_attn.output_proj:Linear",
+        "calls": 3,
+        "cuda_us": 32.32,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 10.773333333333333
+      },
+      {
+        "name": "model.24.dec_bbox_head.2.layers.1:Linear",
+        "calls": 3,
+        "cuda_us": 32.32,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 10.773333333333333
+      },
+      {
+        "name": "model.0.layers.2.act:ReLU",
+        "calls": 3,
+        "cuda_us": 32.096000000000004,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 10.698666666666668
+      },
+      {
+        "name": "model.24.enc_bbox_head.layers.1:Linear",
+        "calls": 3,
+        "cuda_us": 32.096000000000004,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 10.698666666666668
+      },
+      {
+        "name": "model.24.dec_bbox_head.2.layers.0:Linear",
+        "calls": 3,
+        "cuda_us": 32.096000000000004,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 10.698666666666668
+      },
+      {
+        "name": "model.24.dec_bbox_head.1.layers.1:Linear",
+        "calls": 3,
+        "cuda_us": 32.001000000000005,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 10.667000000000002
+      },
+      {
+        "name": "model.24.dec_bbox_head.0.layers.1:Linear",
+        "calls": 3,
+        "cuda_us": 31.872,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 10.624
+      },
+      {
+        "name": "model.24.enc_score_head:Linear",
+        "calls": 3,
+        "cuda_us": 29.344,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 9.781333333333334
+      },
+      {
+        "name": "model.24.decoder.layers.0.linear1:Linear",
+        "calls": 3,
+        "cuda_us": 29.183999999999997,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 9.728
+      },
+      {
+        "name": "model.24.enc_output.1:LayerNorm",
+        "calls": 3,
+        "cuda_us": 29.025,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 9.674999999999999
+      },
+      {
+        "name": "model.24.decoder.layers.1.linear1:Linear",
+        "calls": 3,
+        "cuda_us": 28.415999999999997,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 9.472
+      },
+      {
+        "name": "model.24.decoder.layers.2.linear1:Linear",
+        "calls": 3,
+        "cuda_us": 28.32,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 9.44
+      },
+      {
+        "name": "model.6:AIFI",
+        "calls": 12,
+        "cuda_us": 21.058,
+        "calls_per_forward": 4.0,
+        "cuda_us_per_forward": 7.019333333333333
+      },
+      {
+        "name": "model.0.layers.1.act:ReLU",
+        "calls": 3,
+        "cuda_us": 17.856,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 5.952000000000001
+      },
+      {
+        "name": "model.24.decoder.layers.0.cross_attn.sampling_offsets:Linear",
+        "calls": 6,
+        "cuda_us": 16.928,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 5.642666666666667
+      },
+      {
+        "name": "model.15:Concat",
+        "calls": 3,
+        "cuda_us": 16.896,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 5.632000000000001
+      },
+      {
+        "name": "model.24.decoder.layers.2.cross_attn.sampling_offsets:Linear",
+        "calls": 6,
+        "cuda_us": 16.896,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 5.632000000000001
+      },
+      {
+        "name": "model.24.decoder.layers.1.cross_attn.sampling_offsets:Linear",
+        "calls": 6,
+        "cuda_us": 16.832,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 5.610666666666667
+      },
+      {
+        "name": "model.24.decoder.layers.0.cross_attn.attention_weights:Linear",
+        "calls": 6,
+        "cuda_us": 16.704,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 5.5680000000000005
+      },
+      {
+        "name": "model.0.layers.0.act:ReLU",
+        "calls": 3,
+        "cuda_us": 16.671999999999997,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 5.557333333333332
+      },
+      {
+        "name": "model.24.decoder.layers.2.cross_attn.attention_weights:Linear",
+        "calls": 6,
+        "cuda_us": 16.064,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 5.354666666666667
+      },
+      {
+        "name": "model.24.decoder.layers.1.cross_attn.attention_weights:Linear",
+        "calls": 6,
+        "cuda_us": 15.968,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 5.322666666666667
+      },
+      {
+        "name": "model.2.blocks.0.shortcut.0:AvgPool2d",
+        "calls": 3,
+        "cuda_us": 15.519000000000002,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 5.173000000000001
+      },
+      {
+        "name": "model.24.dec_bbox_head.2.layers.2:Linear",
+        "calls": 6,
+        "cuda_us": 14.143999999999998,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 4.714666666666666
+      },
+      {
+        "name": "model.24.decoder.layers.0:DeformableTransformerDecoderLayer",
+        "calls": 15,
+        "cuda_us": 14.113000000000003,
+        "calls_per_forward": 5.0,
+        "cuda_us_per_forward": 4.704333333333334
+      },
+      {
+        "name": "model.24.decoder.layers.1:DeformableTransformerDecoderLayer",
+        "calls": 15,
+        "cuda_us": 14.111000000000004,
+        "calls_per_forward": 5.0,
+        "cuda_us_per_forward": 4.703666666666668
+      },
+      {
+        "name": "model.24.enc_bbox_head.layers.2:Linear",
+        "calls": 6,
+        "cuda_us": 14.079999999999998,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 4.6933333333333325
+      },
+      {
+        "name": "model.24.dec_bbox_head.1.layers.2:Linear",
+        "calls": 6,
+        "cuda_us": 14.078999999999999,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 4.693
+      },
+      {
+        "name": "model.24.dec_bbox_head.0.layers.2:Linear",
+        "calls": 6,
+        "cuda_us": 14.048,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 4.682666666666667
+      },
+      {
+        "name": "model.24.decoder.layers.2:DeformableTransformerDecoderLayer",
+        "calls": 15,
+        "cuda_us": 13.920000000000005,
+        "calls_per_forward": 5.0,
+        "cuda_us_per_forward": 4.6400000000000015
+      },
+      {
+        "name": "model.6.norm1:LayerNorm",
+        "calls": 6,
+        "cuda_us": 13.824000000000002,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 4.6080000000000005
+      },
+      {
+        "name": "model.24.dec_score_head.2:Linear",
+        "calls": 6,
+        "cuda_us": 13.663,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 4.554333333333333
+      },
+      {
+        "name": "model.13:Upsample",
+        "calls": 3,
+        "cuda_us": 12.577,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 4.192333333333333
+      },
+      {
+        "name": "model.1.blocks.1:ResNet18BasicBlock",
+        "calls": 3,
+        "cuda_us": 12.256,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 4.085333333333334
+      },
+      {
+        "name": "model.1.blocks.0:ResNet18BasicBlock",
+        "calls": 3,
+        "cuda_us": 12.192,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 4.064
+      },
+      {
+        "name": "model.3.blocks.0.shortcut.0:AvgPool2d",
+        "calls": 3,
+        "cuda_us": 10.656,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 3.552
+      },
+      {
+        "name": "model.1.blocks.0.conv1.act:ReLU",
+        "calls": 3,
+        "cuda_us": 9.76,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 3.2533333333333334
+      },
+      {
+        "name": "model.1.blocks.0.act:ReLU",
+        "calls": 3,
+        "cuda_us": 9.408000000000001,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 3.1360000000000006
+      },
+      {
+        "name": "model.1.blocks.1.conv1.act:ReLU",
+        "calls": 3,
+        "cuda_us": 9.408000000000001,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 3.1360000000000006
+      },
+      {
+        "name": "model.1.blocks.1.act:ReLU",
+        "calls": 3,
+        "cuda_us": 9.407,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 3.135666666666667
+      },
+      {
+        "name": "model.4.blocks.0.shortcut.0:AvgPool2d",
+        "calls": 3,
+        "cuda_us": 8.864,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 2.9546666666666668
+      },
+      {
+        "name": "model.24.query_pos_head.act:ReLU",
+        "calls": 9,
+        "cuda_us": 8.577,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 2.859
+      },
+      {
+        "name": "model.6.norm2:LayerNorm",
+        "calls": 3,
+        "cuda_us": 7.808,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 2.6026666666666665
+      },
+      {
+        "name": "model.24.decoder.layers.1.norm2:LayerNorm",
+        "calls": 3,
+        "cuda_us": 7.713000000000001,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 2.571
+      },
+      {
+        "name": "model.24.decoder.layers.1.norm1:LayerNorm",
+        "calls": 3,
+        "cuda_us": 7.712,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 2.5706666666666664
+      },
+      {
+        "name": "model.24.decoder.layers.0.norm3:LayerNorm",
+        "calls": 3,
+        "cuda_us": 7.647,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 2.549
+      },
+      {
+        "name": "model.24.decoder.layers.0.norm1:LayerNorm",
+        "calls": 3,
+        "cuda_us": 7.617000000000001,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 2.539
+      },
+      {
+        "name": "model.24.decoder.layers.0.norm2:LayerNorm",
+        "calls": 3,
+        "cuda_us": 7.616,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 2.5386666666666664
+      },
+      {
+        "name": "model.24.decoder.layers.2.norm1:LayerNorm",
+        "calls": 3,
+        "cuda_us": 7.616,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 2.5386666666666664
+      },
+      {
+        "name": "model.24.decoder.layers.1.norm3:LayerNorm",
+        "calls": 3,
+        "cuda_us": 7.584,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 2.528
+      },
+      {
+        "name": "model.24.decoder.layers.2.norm3:LayerNorm",
+        "calls": 3,
+        "cuda_us": 7.584,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 2.528
+      },
+      {
+        "name": "model.24.decoder.layers.2.norm2:LayerNorm",
+        "calls": 3,
+        "cuda_us": 7.552,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 2.517333333333333
+      },
+      {
+        "name": "model.16:RepC3",
+        "calls": 3,
+        "cuda_us": 6.4,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 2.1333333333333333
+      },
+      {
+        "name": "model.2.blocks.0:ResNet18BasicBlock",
+        "calls": 3,
+        "cuda_us": 6.369,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 2.1229999999999998
+      },
+      {
+        "name": "model.2.blocks.1:ResNet18BasicBlock",
+        "calls": 3,
+        "cuda_us": 6.336,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 2.112
+      },
+      {
+        "name": "model.18:Concat",
+        "calls": 3,
+        "cuda_us": 6.144,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 2.048
+      },
+      {
+        "name": "model.8:Upsample",
+        "calls": 3,
+        "cuda_us": 6.08,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 2.026666666666667
+      },
+      {
+        "name": "model.10:Concat",
+        "calls": 3,
+        "cuda_us": 6.048,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 2.016
+      },
+      {
+        "name": "model.2.blocks.0.act:ReLU",
+        "calls": 3,
+        "cuda_us": 5.472,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.824
+      },
+      {
+        "name": "model.24.dec_bbox_head.0.act:ReLU",
+        "calls": 6,
+        "cuda_us": 5.472,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 1.824
+      },
+      {
+        "name": "model.24.enc_bbox_head.act:ReLU",
+        "calls": 6,
+        "cuda_us": 5.470999999999999,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 1.8236666666666663
+      },
+      {
+        "name": "model.24.dec_bbox_head.1.act:ReLU",
+        "calls": 6,
+        "cuda_us": 5.376,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 1.792
+      },
+      {
+        "name": "model.24.dec_bbox_head.2.act:ReLU",
+        "calls": 6,
+        "cuda_us": 5.344,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 1.7813333333333334
+      },
+      {
+        "name": "model.2.blocks.0.conv1.act:ReLU",
+        "calls": 3,
+        "cuda_us": 5.312,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.7706666666666668
+      },
+      {
+        "name": "model.2.blocks.1.act:ReLU",
+        "calls": 3,
+        "cuda_us": 5.312,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.7706666666666668
+      },
+      {
+        "name": "model.2.blocks.1.conv1.act:ReLU",
+        "calls": 3,
+        "cuda_us": 5.28,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.76
+      },
+      {
+        "name": "model.4.blocks.1:ResNet18BasicBlock",
+        "calls": 3,
+        "cuda_us": 5.088,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.696
+      },
+      {
+        "name": "model.3.blocks.0:ResNet18BasicBlock",
+        "calls": 3,
+        "cuda_us": 4.5760000000000005,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.5253333333333334
+      },
+      {
+        "name": "model.21:Concat",
+        "calls": 3,
+        "cuda_us": 4.417,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.4723333333333333
+      },
+      {
+        "name": "model.3.blocks.1:ResNet18BasicBlock",
+        "calls": 3,
+        "cuda_us": 4.384,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.4613333333333334
+      },
+      {
+        "name": "model.6.act:GELU",
+        "calls": 3,
+        "cuda_us": 4.32,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.4400000000000002
+      },
+      {
+        "name": "model.3.blocks.0.act:ReLU",
+        "calls": 3,
+        "cuda_us": 3.7439999999999998,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.248
+      },
+      {
+        "name": "model.3.blocks.1.conv1.act:ReLU",
+        "calls": 3,
+        "cuda_us": 3.7119999999999997,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.2373333333333332
+      },
+      {
+        "name": "model.3.blocks.1.act:ReLU",
+        "calls": 3,
+        "cuda_us": 3.7119999999999997,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.2373333333333332
+      },
+      {
+        "name": "model.3.blocks.0.conv1.act:ReLU",
+        "calls": 3,
+        "cuda_us": 3.6799999999999997,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.2266666666666666
+      },
+      {
+        "name": "model.4.blocks.0:ResNet18BasicBlock",
+        "calls": 3,
+        "cuda_us": 3.6799999999999997,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.2266666666666666
+      },
+      {
+        "name": "model.19:RepC3",
+        "calls": 3,
+        "cuda_us": 3.6159999999999997,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.2053333333333331
+      },
+      {
+        "name": "model.11:RepC3",
+        "calls": 3,
+        "cuda_us": 3.5839999999999996,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.1946666666666665
+      },
+      {
+        "name": "model.24.decoder.layers.1.act:ReLU",
+        "calls": 3,
+        "cuda_us": 3.4559999999999995,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.152
+      },
+      {
+        "name": "model.24.decoder.layers.0.act:ReLU",
+        "calls": 3,
+        "cuda_us": 3.4240000000000004,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.1413333333333335
+      },
+      {
+        "name": "model.24.decoder.layers.2.act:ReLU",
+        "calls": 3,
+        "cuda_us": 3.3920000000000003,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.1306666666666667
+      },
+      {
+        "name": "model.4.blocks.1.conv1.act:ReLU",
+        "calls": 3,
+        "cuda_us": 3.2640000000000002,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.088
+      },
+      {
+        "name": "model.4.blocks.1.act:ReLU",
+        "calls": 3,
+        "cuda_us": 3.201,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.067
+      },
+      {
+        "name": "model.4.blocks.0.act:ReLU",
+        "calls": 3,
+        "cuda_us": 3.168,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.056
+      },
+      {
+        "name": "model.4.blocks.0.conv1.act:ReLU",
+        "calls": 3,
+        "cuda_us": 3.072,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.024
+      },
+      {
+        "name": "model.22:RepC3",
+        "calls": 3,
+        "cuda_us": 2.848,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 0.9493333333333333
+      }
+    ],
+    "kernel": [
+      {
+        "name": "void implicit_convolve_sgemm<float, float, int, 1024, 5, 5, 3, 3, 3, 1, false, false, true>(int, int, int, float const*, int, float*, float const*, kernel_conv_params, unsigned long long, int, float, float, int, float const*, float const*, bool, bool, int, int)",
+        "calls": 90,
+        "cuda_us": 4425.376,
+        "calls_per_forward": 30.0,
+        "cuda_us_per_forward": 1475.1253333333334
+      },
+      {
+        "name": "void implicit_convolve_sgemm<float, float, int, 128, 5, 5, 3, 3, 3, 1, false, false, true>(int, int, int, float const*, int, float*, float const*, kernel_conv_params, unsigned long long, int, float, float, int, float const*, float const*, bool, bool, int, int)",
+        "calls": 36,
+        "cuda_us": 4024.855000000001,
+        "calls_per_forward": 12.0,
+        "cuda_us_per_forward": 1341.6183333333336
+      },
+      {
+        "name": "void cutlass::Kernel2<cutlass_80_simt_sgemm_128x32_8x5_nn_align1>(cutlass_80_simt_sgemm_128x32_8x5_nn_align1::Params)",
+        "calls": 36,
+        "cuda_us": 2892.082000000001,
+        "calls_per_forward": 12.0,
+        "cuda_us_per_forward": 964.0273333333336
+      },
+      {
+        "name": "void cutlass::Kernel2<cutlass_80_simt_sgemm_64x64_8x5_tn_align1>(cutlass_80_simt_sgemm_64x64_8x5_tn_align1::Params)",
+        "calls": 123,
+        "cuda_us": 1233.7690000000002,
+        "calls_per_forward": 41.0,
+        "cuda_us_per_forward": 411.25633333333343
+      },
+      {
+        "name": "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::CUDAFunctor_add<float> >(at::TensorIteratorBase&, at::native::CUDAFunctor_add<float> const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::CUDAFunctor_add<float> >(at::TensorIteratorBase&, at::native::CUDAFunctor_add<float> const&)::{lambda(int)#1})",
+        "calls": 195,
+        "cuda_us": 536.9980000000004,
+        "calls_per_forward": 65.0,
+        "cuda_us_per_forward": 178.99933333333345
+      },
+      {
+        "name": "void cudnn::winograd_nonfused::winogradForwardFilter4x4<float, float>(cudnn::winograd_nonfused::WinogradFilterParams<float, float>)",
+        "calls": 36,
+        "cuda_us": 368.8700000000001,
+        "calls_per_forward": 12.0,
+        "cuda_us_per_forward": 122.9566666666667
+      },
+      {
+        "name": "void cutlass::Kernel2<cutlass_80_simt_sgemm_128x256_8x4_tn_align1>(cutlass_80_simt_sgemm_128x256_8x4_tn_align1::Params)",
+        "calls": 12,
+        "cuda_us": 366.4989999999999,
+        "calls_per_forward": 4.0,
+        "cuda_us_per_forward": 122.1663333333333
+      },
+      {
+        "name": "void cudnn::winograd_nonfused::winogradForwardData4x4<float, float>(cudnn::winograd_nonfused::WinogradDataParams<float, float>)",
+        "calls": 36,
+        "cuda_us": 328.3510000000001,
+        "calls_per_forward": 12.0,
+        "cuda_us_per_forward": 109.45033333333338
+      },
+      {
+        "name": "void sgemm_largek_lds64<true, false, 5, 5, 4, 4, 4, 34>(float*, float const*, float const*, int, int, int, int, int, int, float const*, float const*, float, float, int, int, int*, int*)",
+        "calls": 12,
+        "cuda_us": 286.435,
+        "calls_per_forward": 4.0,
+        "cuda_us_per_forward": 95.47833333333334
+      },
+      {
+        "name": "void precomputed_convolve_sgemm<float, int, 512, 6, 7, 4, 3, 5, 1, false>(int, int, int, float const*, int, float*, float const*, kernel_conv_params, unsigned long long, int, float, float, int, bool, bool, float const*, float const*, int*)",
+        "calls": 6,
+        "cuda_us": 254.913,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 84.971
+      },
+      {
+        "name": "void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::launch_clamp_scalar(at::TensorIteratorBase&, c10::Scalar, c10::Scalar, at::native::detail::ClampLimits)::{lambda()#1}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>, false>(int, at::native::(anonymous namespace)::launch_clamp_scalar(at::TensorIteratorBase&, c10::Scalar, c10::Scalar, at::native::detail::ClampLimits)::{lambda()#1}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>)",
+        "calls": 126,
+        "cuda_us": 220.5109999999999,
+        "calls_per_forward": 42.0,
+        "cuda_us_per_forward": 73.50366666666663
+      },
+      {
+        "name": "void at::native::(anonymous namespace)::grid_sampler_2d_kernel<float, int>(int, at::cuda::detail::TensorInfo<float const, int>, at::cuda::detail::TensorInfo<float const, int>, at::cuda::detail::TensorInfo<float, int>, at::native::detail::GridSamplerInterpolation, at::native::detail::GridSamplerPadding, bool)",
+        "calls": 27,
+        "cuda_us": 217.66800000000006,
+        "calls_per_forward": 9.0,
+        "cuda_us_per_forward": 72.55600000000003
+      },
+      {
+        "name": "void cudnn::winograd_nonfused::winogradForwardOutput4x4<float, float>(cudnn::winograd_nonfused::WinogradOutputParams<float, float>)",
+        "calls": 36,
+        "cuda_us": 199.10500000000002,
+        "calls_per_forward": 12.0,
+        "cuda_us_per_forward": 66.36833333333334
+      },
+      {
+        "name": "void cutlass::Kernel2<cutlass_80_simt_sgemm_64x64_8x5_nn_align1>(cutlass_80_simt_sgemm_64x64_8x5_nn_align1::Params)",
+        "calls": 12,
+        "cuda_us": 153.728,
+        "calls_per_forward": 4.0,
+        "cuda_us_per_forward": 51.24266666666667
+      },
+      {
+        "name": "void implicit_convolve_sgemm<float, float, int, 512, 6, 8, 3, 3, 5, 1, false, false, true>(int, int, int, float const*, int, float*, float const*, kernel_conv_params, unsigned long long, int, float, float, int, float const*, float const*, bool, bool, int, int)",
+        "calls": 3,
+        "cuda_us": 130.178,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 43.39266666666666
+      },
+      {
+        "name": "void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::silu_kernel(at::TensorIteratorBase&)::{lambda()#1}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>, false>(int, at::native::(anonymous namespace)::silu_kernel(at::TensorIteratorBase&)::{lambda()#1}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>)",
+        "calls": 84,
+        "cuda_us": 127.80699999999996,
+        "calls_per_forward": 28.0,
+        "cuda_us_per_forward": 42.60233333333332
+      },
+      {
+        "name": "void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctor_add<float>, std::array<char*, 3ul>, false>(int, at::native::CUDAFunctor_add<float>, std::array<char*, 3ul>)",
+        "calls": 96,
+        "cuda_us": 127.55399999999983,
+        "calls_per_forward": 32.0,
+        "cuda_us_per_forward": 42.517999999999944
+      },
+      {
+        "name": "void at::native::(anonymous namespace)::vectorized_layer_norm_kernel<float, float, false>(int, float, float const*, float const*, float const*, float*, float*, float*)",
+        "calls": 36,
+        "cuda_us": 113.25000000000003,
+        "calls_per_forward": 12.0,
+        "cuda_us_per_forward": 37.75000000000001
+      },
+      {
+        "name": "void magma_sgemmEx_kernel<float, float, float, true, false, 6, 4, 6, 3, 4>(int, int, int, BatchedTensor, int, BatchedTensor, int, BatchedTensor, int, BatchedTensor, int, int, int, float const*, float const*, float, float, int, cublasLtEpilogue_t, int, void const*, long)",
+        "calls": 12,
+        "cuda_us": 92.385,
+        "calls_per_forward": 4.0,
+        "cuda_us_per_forward": 30.795
+      },
+      {
+        "name": "void at::native::sbtopk::gatherTopK<float, unsigned int, 1, false>(at::cuda::detail::TensorInfo<float const, unsigned int>, unsigned int, unsigned int, bool, unsigned int, unsigned int, at::cuda::detail::TensorInfo<float, unsigned int>, unsigned int, at::cuda::detail::TensorInfo<long, unsigned int>, unsigned int, float*)",
+        "calls": 3,
+        "cuda_us": 72.832,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 24.27733333333333
+      },
+      {
+        "name": "void cublasLt::splitKreduce_kernel<32, 16, int, float, float, float, float, false, float, float, float, true, true, false, false>(cublasLt::cublasSplitKParams<float>, float const*, float const*, float*, float*, float const*, float const*, float const*, float const*, float*, void*, long, float*, int*, float*, float*, float const*, float const*, float const*, float const*, float const*)",
+        "calls": 42,
+        "cuda_us": 59.93399999999999,
+        "calls_per_forward": 14.0,
+        "cuda_us_per_forward": 19.977999999999998
+      },
+      {
+        "name": "void cutlass::Kernel2<cutlass_80_simt_sgemm_32x128_8x5_tn_align1>(cutlass_80_simt_sgemm_32x128_8x5_tn_align1::Params)",
+        "calls": 15,
+        "cuda_us": 48.86400000000001,
+        "calls_per_forward": 5.0,
+        "cuda_us_per_forward": 16.288000000000004
+      },
+      {
+        "name": "void at::native::(anonymous namespace)::max_pool_forward_nchw<float, int>(int, float const*, long, long, long, int, int, int, int, int, int, int, int, int, int, float*, long*)",
+        "calls": 3,
+        "cuda_us": 44.736000000000004,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 14.912
+      },
+      {
+        "name": "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1} const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1} const&)::{lambda(int)#1})",
+        "calls": 27,
+        "cuda_us": 43.649,
+        "calls_per_forward": 9.0,
+        "cuda_us_per_forward": 14.549666666666667
+      },
+      {
+        "name": "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> > const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> > const&)::{lambda(int)#1})",
+        "calls": 18,
+        "cuda_us": 41.027,
+        "calls_per_forward": 6.0,
+        "cuda_us_per_forward": 13.675666666666666
+      },
+      {
+        "name": "void at::native::(anonymous namespace)::CatArrayBatchedCopy<at::native::(anonymous namespace)::OpaqueType<4u>, unsigned int, 3, 64, 64>(at::native::(anonymous namespace)::OpaqueType<4u>*, at::native::(anonymous namespace)::CatArrInputTensorMetadata<at::native::(anonymous namespace)::OpaqueType<4u>, unsigned int, 64, 64>, at::native::(anonymous namespace)::TensorSizeStride<unsigned int, 4u>, int, unsigned int)",
+        "calls": 3,
+        "cuda_us": 39.713,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 13.237666666666668
+      },
+      {
+        "name": "void cutlass::Kernel2<cutlass_80_simt_sgemm_64x64_8x5_tt_align1>(cutlass_80_simt_sgemm_64x64_8x5_tt_align1::Params)",
+        "calls": 9,
+        "cuda_us": 35.457,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 11.819
+      },
+      {
+        "name": "void at::native::(anonymous namespace)::avg_pool2d_out_cuda_frame<float, float>(int, float const*, long, long, long, long, int, int, int, int, int, int, int, float*, int, bool, bool)",
+        "calls": 9,
+        "cuda_us": 35.039,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 11.679666666666668
+      },
+      {
+        "name": "void at::native::reduce_kernel<128, 4, at::native::ReduceOp<float, at::native::MeanOps<float, float, float, float>, unsigned int, float, 4, 4> >(at::native::ReduceOp<float, at::native::MeanOps<float, float, float, float>, unsigned int, float, 4, 4>)",
+        "calls": 12,
+        "cuda_us": 34.175999999999995,
+        "calls_per_forward": 4.0,
+        "cuda_us_per_forward": 11.391999999999998
+      },
+      {
+        "name": "void at::native::(anonymous namespace)::CatArrayBatchedCopy_vectorized<at::native::(anonymous namespace)::OpaqueType<4u>, unsigned int, 2, 128, 1, 16, 4>(char*, at::native::(anonymous namespace)::CatArrInputTensorMetadata<at::native::(anonymous namespace)::OpaqueType<4u>, unsigned int, 128, 1>, at::native::(anonymous namespace)::TensorSizeStride<unsigned int, 4u>, int, unsigned int)",
+        "calls": 12,
+        "cuda_us": 33.504999999999995,
+        "calls_per_forward": 4.0,
+        "cuda_us_per_forward": 11.168333333333331
+      },
+      {
+        "name": "void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::func_wrapper_t<float, at::native::sum_functor<float, float, float>::operator()(at::TensorIterator&)::{lambda(float, float)#1}>, unsigned int, float, 4, 4> >(at::native::ReduceOp<float, at::native::func_wrapper_t<float, at::native::sum_functor<float, float, float>::operator()(at::TensorIterator&)::{lambda(float, float)#1}>, unsigned int, float, 4, 4>)",
+        "calls": 9,
+        "cuda_us": 32.831,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 10.943666666666667
+      },
+      {
+        "name": "void at::native::radixSortKVInPlace<-2, -1, 32, 32, float, long, unsigned int>(at::cuda::detail::TensorInfo<float, unsigned int>, unsigned int, unsigned int, unsigned int, at::cuda::detail::TensorInfo<long, unsigned int>, unsigned int, bool)",
+        "calls": 3,
+        "cuda_us": 31.456000000000003,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 10.485333333333335
+      },
+      {
+        "name": "void (anonymous namespace)::softmax_warp_forward<float, float, float, 9, false, false, 32>(float*, float const*, int, int, int, bool const*, int, bool)",
+        "calls": 12,
+        "cuda_us": 30.782999999999994,
+        "calls_per_forward": 4.0,
+        "cuda_us_per_forward": 10.260999999999997
+      },
+      {
+        "name": "void at::native::(anonymous namespace)::CatArrayBatchedCopy_vectorized<at::native::(anonymous namespace)::OpaqueType<4u>, unsigned int, 4, 128, 1, 16, 4>(char*, at::native::(anonymous namespace)::CatArrInputTensorMetadata<at::native::(anonymous namespace)::OpaqueType<4u>, unsigned int, 128, 1>, at::native::(anonymous namespace)::TensorSizeStride<unsigned int, 4u>, int, unsigned int)",
+        "calls": 9,
+        "cuda_us": 29.825,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 9.941666666666666
+      },
+      {
+        "name": "void at::native::index_elementwise_kernel<128, 4, at::native::gpu_index_kernel<at::native::index_kernel_impl<at::native::OpaqueType<4> >(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>)::{lambda(char*, char const*, long)#1}>(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>, at::native::index_kernel_impl<at::native::OpaqueType<4> >(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>)::{lambda(char*, char const*, long)#1} const&, bool)::{lambda(int)#1}>(long, at::native::gpu_index_kernel<at::native::index_kernel_impl<at::native::OpaqueType<4> >(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>)::{lambda(char*, char const*, long)#1}>(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>, at::native::index_kernel_impl<at::native::OpaqueType<4> >(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>)::{lambda(char*, char const*, long)#1} const&, bool)::{lambda(int)#1})",
+        "calls": 6,
+        "cuda_us": 27.232000000000003,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 9.077333333333334
+      },
+      {
+        "name": "void at::native::vectorized_elementwise_kernel<4, at::native::AUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, std::array<char*, 2ul>, false>(int, at::native::AUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, std::array<char*, 2ul>)",
+        "calls": 30,
+        "cuda_us": 26.785000000000014,
+        "calls_per_forward": 10.0,
+        "cuda_us_per_forward": 8.928333333333338
+      },
+      {
+        "name": "void at::native::vectorized_elementwise_kernel<4, at::native::sigmoid_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>, false>(int, at::native::sigmoid_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>)",
+        "calls": 18,
+        "cuda_us": 22.368000000000002,
+        "calls_per_forward": 6.0,
+        "cuda_us_per_forward": 7.456
+      },
+      {
+        "name": "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl<at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> > const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl<at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> > const&)::{lambda(int)#1})",
+        "calls": 3,
+        "cuda_us": 21.727,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 7.242333333333334
+      },
+      {
+        "name": "void at::native::(anonymous namespace)::upsample_nearest2d_out_frame<float, &at::native::nearest_neighbor_compute_source_index>(float const*, float*, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, float, float)",
+        "calls": 6,
+        "cuda_us": 18.657,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 6.219
+      },
+      {
+        "name": "void cublasLt::epilogue::impl::globalKernel<8, 32, float, float, float, true, true, 1>(int, int, long, float*, cublasLtEpilogue_t, int, float*, long, void*, long, long, long, float*, long, int*)",
+        "calls": 12,
+        "cuda_us": 18.4,
+        "calls_per_forward": 4.0,
+        "cuda_us_per_forward": 6.133333333333333
+      },
+      {
+        "name": "void at::native::vectorized_elementwise_kernel<4, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::DivFunctor<float> >, std::array<char*, 3ul>, false>(int, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::DivFunctor<float> >, std::array<char*, 3ul>)",
+        "calls": 9,
+        "cuda_us": 14.047999999999998,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 4.682666666666666
+      },
+      {
+        "name": "void cublasLt::splitKreduce_kernel<32, 16, int, float, float, float, float, false, float, float, float, true, false, false, false>(cublasLt::cublasSplitKParams<float>, float const*, float const*, float*, float*, float const*, float const*, float const*, float const*, float*, void*, long, float*, int*, float*, float*, float const*, float const*, float const*, float const*, float const*)",
+        "calls": 9,
+        "cuda_us": 12.800999999999998,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 4.2669999999999995
+      },
+      {
+        "name": "void scal_kernel<float, float, 1, true, 6, 5, 5, 3>(cublasTransposeParams<float>, float const*, float*, float const*)",
+        "calls": 12,
+        "cuda_us": 10.464000000000002,
+        "calls_per_forward": 4.0,
+        "cuda_us_per_forward": 3.488000000000001
+      },
+      {
+        "name": "void at::native::vectorized_elementwise_kernel<4, at::native::log_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>, false>(int, at::native::log_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>)",
+        "calls": 9,
+        "cuda_us": 10.081,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 3.360333333333333
+      },
+      {
+        "name": "void (anonymous namespace)::softmax_warp_forward<float, float, float, 4, false, false, 32>(float*, float const*, int, int, int, bool const*, int, bool)",
+        "calls": 9,
+        "cuda_us": 9.408000000000001,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 3.1360000000000006
+      },
+      {
+        "name": "void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctorOnSelf_add<float>, std::array<char*, 2ul>, false>(int, at::native::CUDAFunctorOnSelf_add<float>, std::array<char*, 2ul>)",
+        "calls": 9,
+        "cuda_us": 8.448,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 2.8160000000000003
+      },
+      {
+        "name": "void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctorOnOther_add<float>, std::array<char*, 2ul>, false>(int, at::native::CUDAFunctorOnOther_add<float>, std::array<char*, 2ul>)",
+        "calls": 9,
+        "cuda_us": 8.351,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 2.783666666666667
+      },
+      {
+        "name": "void at::native::vectorized_elementwise_kernel<4, at::native::BUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, std::array<char*, 2ul>, false>(int, at::native::BUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, std::array<char*, 2ul>)",
+        "calls": 9,
+        "cuda_us": 8.256,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 2.7520000000000002
+      },
+      {
+        "name": "void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::MaxOps<float>, unsigned int, float, 4, 4> >(at::native::ReduceOp<float, at::native::MaxOps<float>, unsigned int, float, 4, 4>)",
+        "calls": 3,
+        "cuda_us": 7.743,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 2.581
+      },
+      {
+        "name": "void cudnn::cnn::kern_precompute_indices<false>(int*, int, int, int, int, int)",
+        "calls": 6,
+        "cuda_us": 5.056,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 1.6853333333333333
+      },
+      {
+        "name": "void at::native::vectorized_elementwise_kernel<4, at::native::GeluCUDAKernelImpl(at::TensorIteratorBase&, at::native::GeluType)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>, false>(int, at::native::GeluCUDAKernelImpl(at::TensorIteratorBase&, at::native::GeluType)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>)",
+        "calls": 3,
+        "cuda_us": 4.32,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.4400000000000002
+      },
+      {
+        "name": "void at::native::vectorized_gather_kernel<16, long>(char*, char*, long*, int, long, long, long, long, bool)",
+        "calls": 3,
+        "cuda_us": 3.6479999999999997,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.216
+      },
+      {
+        "name": "void at::native::(anonymous namespace)::CatArrayBatchedCopy_alignedK_contig<at::native::(anonymous namespace)::OpaqueType<4u>, unsigned int, 3, 128, 1, 16>(at::native::(anonymous namespace)::OpaqueType<4u>*, at::native::(anonymous namespace)::CatArrInputTensorMetadata<at::native::(anonymous namespace)::OpaqueType<4u>, unsigned int, 128, 1>, at::native::(anonymous namespace)::TensorSizeStride<unsigned int, 4u>, int, unsigned int)",
+        "calls": 3,
+        "cuda_us": 3.135,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.045
+      }
+    ],
+    "layer_group": [
+      {
+        "layer": "model.0:ResNet18Stem",
+        "group": "convolution",
+        "calls": 9,
+        "cuda_us": 643.427,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 214.47566666666668
+      },
+      {
+        "layer": "model.0:ResNet18Stem",
+        "group": "other",
+        "calls": 21,
+        "cuda_us": 206.241,
+        "calls_per_forward": 7.0,
+        "cuda_us_per_forward": 68.747
+      },
+      {
+        "layer": "model.1:ResNet18Stage",
+        "group": "convolution",
+        "calls": 15,
+        "cuda_us": 816.4220000000001,
+        "calls_per_forward": 5.0,
+        "cuda_us_per_forward": 272.14066666666673
+      },
+      {
+        "layer": "model.1:ResNet18Stage",
+        "group": "other",
+        "calls": 33,
+        "cuda_us": 129.47099999999998,
+        "calls_per_forward": 11.0,
+        "cuda_us_per_forward": 43.15699999999999
+      },
+      {
+        "layer": "model.2:ResNet18Stage",
+        "group": "convolution",
+        "calls": 15,
+        "cuda_us": 1233.4470000000001,
+        "calls_per_forward": 5.0,
+        "cuda_us_per_forward": 411.14900000000006
+      },
+      {
+        "layer": "model.2:ResNet18Stage",
+        "group": "other",
+        "calls": 36,
+        "cuda_us": 98.33800000000001,
+        "calls_per_forward": 12.0,
+        "cuda_us_per_forward": 32.779333333333334
+      },
+      {
+        "layer": "model.3:ResNet18Stage",
+        "group": "convolution",
+        "calls": 15,
+        "cuda_us": 1909.356,
+        "calls_per_forward": 5.0,
+        "cuda_us_per_forward": 636.452
+      },
+      {
+        "layer": "model.3:ResNet18Stage",
+        "group": "other",
+        "calls": 36,
+        "cuda_us": 64.032,
+        "calls_per_forward": 12.0,
+        "cuda_us_per_forward": 21.343999999999998
+      },
+      {
+        "layer": "model.4:ResNet18Stage",
+        "group": "convolution",
+        "calls": 42,
+        "cuda_us": 2812.8179999999998,
+        "calls_per_forward": 14.0,
+        "cuda_us_per_forward": 937.6059999999999
+      },
+      {
+        "layer": "model.4:ResNet18Stage",
+        "group": "other",
+        "calls": 36,
+        "cuda_us": 54.082000000000015,
+        "calls_per_forward": 12.0,
+        "cuda_us_per_forward": 18.02733333333334
+      },
+      {
+        "layer": "model.5:Conv",
+        "group": "convolution",
+        "calls": 3,
+        "cuda_us": 99.93799999999999,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 33.312666666666665
+      },
+      {
+        "layer": "model.5:Conv",
+        "group": "other",
+        "calls": 3,
+        "cuda_us": 4.032,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.344
+      },
+      {
+        "layer": "model.6:AIFI",
+        "group": "other",
+        "calls": 24,
+        "cuda_us": 44.83500000000001,
+        "calls_per_forward": 8.0,
+        "cuda_us_per_forward": 14.945000000000002
+      },
+      {
+        "layer": "model.6:AIFI",
+        "group": "matmul_linear_attention",
+        "calls": 39,
+        "cuda_us": 313.7329999999999,
+        "calls_per_forward": 13.0,
+        "cuda_us_per_forward": 104.57766666666663
+      },
+      {
+        "layer": "model.6:AIFI",
+        "group": "softmax",
+        "calls": 3,
+        "cuda_us": 9.375,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 3.125
+      },
+      {
+        "layer": "model.6:AIFI",
+        "group": "copy_layout",
+        "calls": 9,
+        "cuda_us": 15.905000000000001,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 5.301666666666667
+      },
+      {
+        "layer": "model.6:AIFI",
+        "group": "layer_norm",
+        "calls": 6,
+        "cuda_us": 15.584000000000001,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 5.194666666666667
+      },
+      {
+        "layer": "model.6:AIFI",
+        "group": "activation",
+        "calls": 3,
+        "cuda_us": 4.32,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.4400000000000002
+      },
+      {
+        "layer": "model.7:Conv",
+        "group": "convolution",
+        "calls": 3,
+        "cuda_us": 52.544000000000004,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 17.514666666666667
+      },
+      {
+        "layer": "model.7:Conv",
+        "group": "other",
+        "calls": 3,
+        "cuda_us": 4.192,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.3973333333333333
+      },
+      {
+        "layer": "model.7:Conv",
+        "group": "activation",
+        "calls": 3,
+        "cuda_us": 3.6159999999999997,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.2053333333333331
+      },
+      {
+        "layer": "model.8:Upsample",
+        "group": "upsample",
+        "calls": 3,
+        "cuda_us": 6.08,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 2.026666666666667
+      },
+      {
+        "layer": "model.9:Conv",
+        "group": "convolution",
+        "calls": 3,
+        "cuda_us": 61.635000000000005,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 20.545
+      },
+      {
+        "layer": "model.9:Conv",
+        "group": "other",
+        "calls": 3,
+        "cuda_us": 5.888,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.9626666666666666
+      },
+      {
+        "layer": "model.10:Concat",
+        "group": "concat_stack",
+        "calls": 3,
+        "cuda_us": 6.048,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 2.016
+      },
+      {
+        "layer": "model.11:RepC3",
+        "group": "convolution",
+        "calls": 45,
+        "cuda_us": 874.534,
+        "calls_per_forward": 15.0,
+        "cuda_us_per_forward": 291.5113333333333
+      },
+      {
+        "layer": "model.11:RepC3",
+        "group": "other",
+        "calls": 21,
+        "cuda_us": 34.11200000000001,
+        "calls_per_forward": 7.0,
+        "cuda_us_per_forward": 11.37066666666667
+      },
+      {
+        "layer": "model.11:RepC3",
+        "group": "activation",
+        "calls": 18,
+        "cuda_us": 24.608000000000004,
+        "calls_per_forward": 6.0,
+        "cuda_us_per_forward": 8.202666666666667
+      },
+      {
+        "layer": "model.12:Conv",
+        "group": "convolution",
+        "calls": 3,
+        "cuda_us": 65.504,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 21.834666666666667
+      },
+      {
+        "layer": "model.12:Conv",
+        "group": "other",
+        "calls": 3,
+        "cuda_us": 7.552,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 2.517333333333333
+      },
+      {
+        "layer": "model.12:Conv",
+        "group": "activation",
+        "calls": 3,
+        "cuda_us": 4.5760000000000005,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.5253333333333334
+      },
+      {
+        "layer": "model.13:Upsample",
+        "group": "upsample",
+        "calls": 3,
+        "cuda_us": 12.577,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 4.192333333333333
+      },
+      {
+        "layer": "model.14:Conv",
+        "group": "convolution",
+        "calls": 3,
+        "cuda_us": 67.073,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 22.357666666666663
+      },
+      {
+        "layer": "model.14:Conv",
+        "group": "other",
+        "calls": 3,
+        "cuda_us": 21.025,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 7.008333333333333
+      },
+      {
+        "layer": "model.15:Concat",
+        "group": "concat_stack",
+        "calls": 3,
+        "cuda_us": 16.896,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 5.632000000000001
+      },
+      {
+        "layer": "model.16:RepC3",
+        "group": "convolution",
+        "calls": 24,
+        "cuda_us": 1344.5189999999998,
+        "calls_per_forward": 8.0,
+        "cuda_us_per_forward": 448.17299999999994
+      },
+      {
+        "layer": "model.16:RepC3",
+        "group": "other",
+        "calls": 21,
+        "cuda_us": 70.55900000000003,
+        "calls_per_forward": 7.0,
+        "cuda_us_per_forward": 23.519666666666676
+      },
+      {
+        "layer": "model.16:RepC3",
+        "group": "activation",
+        "calls": 18,
+        "cuda_us": 41.313,
+        "calls_per_forward": 6.0,
+        "cuda_us_per_forward": 13.771
+      },
+      {
+        "layer": "model.17:Conv",
+        "group": "convolution",
+        "calls": 3,
+        "cuda_us": 604.355,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 201.45166666666668
+      },
+      {
+        "layer": "model.17:Conv",
+        "group": "other",
+        "calls": 3,
+        "cuda_us": 6.24,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 2.08
+      },
+      {
+        "layer": "model.17:Conv",
+        "group": "activation",
+        "calls": 3,
+        "cuda_us": 4.6080000000000005,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.5360000000000003
+      },
+      {
+        "layer": "model.18:Concat",
+        "group": "concat_stack",
+        "calls": 3,
+        "cuda_us": 6.144,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 2.048
+      },
+      {
+        "layer": "model.19:RepC3",
+        "group": "convolution",
+        "calls": 45,
+        "cuda_us": 863.7800000000002,
+        "calls_per_forward": 15.0,
+        "cuda_us_per_forward": 287.92666666666673
+      },
+      {
+        "layer": "model.19:RepC3",
+        "group": "other",
+        "calls": 21,
+        "cuda_us": 34.07700000000001,
+        "calls_per_forward": 7.0,
+        "cuda_us_per_forward": 11.359000000000004
+      },
+      {
+        "layer": "model.19:RepC3",
+        "group": "activation",
+        "calls": 18,
+        "cuda_us": 24.574000000000005,
+        "calls_per_forward": 6.0,
+        "cuda_us_per_forward": 8.191333333333334
+      },
+      {
+        "layer": "model.20:Conv",
+        "group": "convolution",
+        "calls": 3,
+        "cuda_us": 441.95400000000006,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 147.318
+      },
+      {
+        "layer": "model.20:Conv",
+        "group": "other",
+        "calls": 3,
+        "cuda_us": 4.129,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.3763333333333332
+      },
+      {
+        "layer": "model.20:Conv",
+        "group": "activation",
+        "calls": 3,
+        "cuda_us": 3.4559999999999995,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.152
+      },
+      {
+        "layer": "model.21:Concat",
+        "group": "concat_stack",
+        "calls": 3,
+        "cuda_us": 4.417,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.4723333333333333
+      },
+      {
+        "layer": "model.22:RepC3",
+        "group": "convolution",
+        "calls": 45,
+        "cuda_us": 492.26200000000017,
+        "calls_per_forward": 15.0,
+        "cuda_us_per_forward": 164.0873333333334
+      },
+      {
+        "layer": "model.22:RepC3",
+        "group": "other",
+        "calls": 21,
+        "cuda_us": 26.242000000000008,
+        "calls_per_forward": 7.0,
+        "cuda_us_per_forward": 8.747333333333335
+      },
+      {
+        "layer": "model.22:RepC3",
+        "group": "activation",
+        "calls": 18,
+        "cuda_us": 21.056,
+        "calls_per_forward": 6.0,
+        "cuda_us_per_forward": 7.018666666666667
+      },
+      {
+        "layer": "model.24:RTDETRDecoder",
+        "group": "convolution",
+        "calls": 9,
+        "cuda_us": 245.21800000000002,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 81.73933333333333
+      },
+      {
+        "layer": "model.24:RTDETRDecoder",
+        "group": "other",
+        "calls": 291,
+        "cuda_us": 520.7999999999995,
+        "calls_per_forward": 97.0,
+        "cuda_us_per_forward": 173.59999999999982
+      },
+      {
+        "layer": "model.24:RTDETRDecoder",
+        "group": "concat_stack",
+        "calls": 15,
+        "cuda_us": 72.67300000000002,
+        "calls_per_forward": 5.0,
+        "cuda_us_per_forward": 24.224333333333337
+      },
+      {
+        "layer": "model.24:RTDETRDecoder",
+        "group": "matmul_linear_attention",
+        "calls": 231,
+        "cuda_us": 2005.0029999999988,
+        "calls_per_forward": 77.0,
+        "cuda_us_per_forward": 668.3343333333329
+      },
+      {
+        "layer": "model.24:RTDETRDecoder",
+        "group": "layer_norm",
+        "calls": 30,
+        "cuda_us": 97.66600000000004,
+        "calls_per_forward": 10.0,
+        "cuda_us_per_forward": 32.555333333333344
+      },
+      {
+        "layer": "model.24:RTDETRDecoder",
+        "group": "softmax",
+        "calls": 18,
+        "cuda_us": 30.815999999999995,
+        "calls_per_forward": 6.0,
+        "cuda_us_per_forward": 10.271999999999998
+      },
+      {
+        "layer": "model.24:RTDETRDecoder",
+        "group": "copy_layout",
+        "calls": 18,
+        "cuda_us": 27.74400000000001,
+        "calls_per_forward": 6.0,
+        "cuda_us_per_forward": 9.248000000000003
+      },
+      {
+        "layer": "model.24:RTDETRDecoder",
+        "group": "grid_sample",
+        "calls": 27,
+        "cuda_us": 217.66800000000006,
+        "calls_per_forward": 9.0,
+        "cuda_us_per_forward": 72.55600000000003
+      }
+    ]
+  },
+  "trace_memcpy_memset_count": 132,
+  "trace": {
+    "server_path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-runtime-profile-20261025-r3/c0-fused_fp32-modules.trace.json",
+    "bytes": 4415957,
+    "sha256": "321c8fa9cdf26119cea76c2f45350ca6e47e8c822cb4789de3526981829caa3e"
+  }
+}

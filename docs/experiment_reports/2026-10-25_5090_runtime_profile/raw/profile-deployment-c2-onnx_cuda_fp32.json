@@ -1,0 +1,533 @@
+{
+  "iterations": [
+    {
+      "iteration": "iteration::0",
+      "cpu_forward_us": 6859.506,
+      "kernel_count": 551,
+      "kernel_sum_us": 5602.545000000009,
+      "gpu_span_us": 6505.56396484375,
+      "gpu_busy_union_us": 5602.543212890625,
+      "gpu_idle_in_span_us": 903.020751953125,
+      "gpu_idle_fraction": 0.1388074511038665,
+      "kernel_duration_us": {
+        "mean": 10.167958257713249,
+        "median": 2.048,
+        "p95": 47.968,
+        "min": 0.768,
+        "max": 208.801,
+        "n": 551
+      },
+      "cpu_launch_gap_us": {
+        "mean": 1.9680712890625,
+        "median": 1.5369873046875,
+        "p95": 4.76611328125,
+        "min": 0.172119140625,
+        "max": 24.2529296875,
+        "n": 550
+      },
+      "gpu_gap_us": {
+        "mean": 1.6418559126420456,
+        "median": 1.216064453125,
+        "p95": 2.59228515625,
+        "min": 0.575927734375,
+        "max": 18.68798828125,
+        "n": 550
+      }
+    },
+    {
+      "iteration": "iteration::1",
+      "cpu_forward_us": 6574.738,
+      "kernel_count": 551,
+      "kernel_sum_us": 5601.170000000002,
+      "gpu_span_us": 6493.435791015625,
+      "gpu_busy_union_us": 5601.17138671875,
+      "gpu_idle_in_span_us": 892.264404296875,
+      "gpu_idle_fraction": 0.13741021440936085,
+      "kernel_duration_us": {
+        "mean": 10.16546279491833,
+        "median": 2.048,
+        "p95": 48.032,
+        "min": 0.8,
+        "max": 208.193,
+        "n": 551
+      },
+      "cpu_launch_gap_us": {
+        "mean": 1.7993874289772727,
+        "median": 1.435546875,
+        "p95": 4.119873046875,
+        "min": 0.16796875,
+        "max": 18.3779296875,
+        "n": 550
+      },
+      "gpu_gap_us": {
+        "mean": 1.622298916903409,
+        "median": 1.280029296875,
+        "p95": 2.592041015625,
+        "min": 0.575927734375,
+        "max": 18.68798828125,
+        "n": 550
+      }
+    },
+    {
+      "iteration": "iteration::2",
+      "cpu_forward_us": 6585.333,
+      "kernel_count": 551,
+      "kernel_sum_us": 5602.775000000004,
+      "gpu_span_us": 6506.653076171875,
+      "gpu_busy_union_us": 5602.7734375,
+      "gpu_idle_in_span_us": 903.879638671875,
+      "gpu_idle_fraction": 0.13891621822930567,
+      "kernel_duration_us": {
+        "mean": 10.16837568058076,
+        "median": 2.016,
+        "p95": 47.905,
+        "min": 0.8,
+        "max": 208.417,
+        "n": 551
+      },
+      "cpu_launch_gap_us": {
+        "mean": 1.8027472478693183,
+        "median": 1.407470703125,
+        "p95": 4.113037109375,
+        "min": 0.192138671875,
+        "max": 19.4189453125,
+        "n": 550
+      },
+      "gpu_gap_us": {
+        "mean": 1.6434175248579546,
+        "median": 1.280517578125,
+        "p95": 2.592041015625,
+        "min": 0.575927734375,
+        "max": 18.6240234375,
+        "n": 550
+      }
+    }
+  ],
+  "tables": {
+    "op": [
+      {
+        "name": "unattributed",
+        "calls": 1653,
+        "cuda_us": 16806.489999999976,
+        "calls_per_forward": 551.0,
+        "cuda_us_per_forward": 5602.163333333326
+      }
+    ],
+    "group": [
+      {
+        "name": "other",
+        "calls": 1653,
+        "cuda_us": 16806.489999999976,
+        "calls_per_forward": 551.0,
+        "cuda_us_per_forward": 5602.163333333326
+      }
+    ],
+    "layer": [
+      {
+        "name": "unattributed",
+        "calls": 1653,
+        "cuda_us": 16806.489999999976,
+        "calls_per_forward": 551.0,
+        "cuda_us_per_forward": 5602.163333333326
+      }
+    ],
+    "module": [
+      {
+        "name": "unattributed",
+        "calls": 1653,
+        "cuda_us": 16806.489999999976,
+        "calls_per_forward": 551.0,
+        "cuda_us_per_forward": 5602.163333333326
+      }
+    ],
+    "kernel": [
+      {
+        "name": "void implicit_convolve_sgemm<float, float, int, 1024, 5, 5, 3, 3, 3, 1, false, false, true>(int, int, int, float const*, int, float*, float const*, kernel_conv_params, unsigned long long, int, float, float, int, float const*, float const*, bool, bool, int, int)",
+        "calls": 87,
+        "cuda_us": 4370.835,
+        "calls_per_forward": 29.0,
+        "cuda_us_per_forward": 1456.945
+      },
+      {
+        "name": "void implicit_convolve_sgemm<float, float, int, 128, 5, 5, 3, 3, 3, 1, false, false, true>(int, int, int, float const*, int, float*, float const*, kernel_conv_params, unsigned long long, int, float, float, int, float const*, float const*, bool, bool, int, int)",
+        "calls": 39,
+        "cuda_us": 4202.576999999999,
+        "calls_per_forward": 13.0,
+        "cuda_us_per_forward": 1400.8589999999997
+      },
+      {
+        "name": "void cutlass::Kernel2<cutlass_80_simt_sgemm_128x32_8x5_nn_align1>(cutlass_80_simt_sgemm_128x32_8x5_nn_align1::Params)",
+        "calls": 126,
+        "cuda_us": 3385.678000000002,
+        "calls_per_forward": 42.0,
+        "cuda_us_per_forward": 1128.559333333334
+      },
+      {
+        "name": "void op_generic_tensor_kernel<3, float, float, float, 256, (cudnnGenericOp_t)0, (cudnnNanPropagation_t)0, 0>(cudnnTensorStruct, float*, cudnnTensorStruct, float const*, cudnnTensorStruct, float const*, float, float, float, cudnnActivationStruct, reducedDivisorArray, int)",
+        "calls": 171,
+        "cuda_us": 565.8900000000002,
+        "calls_per_forward": 57.0,
+        "cuda_us_per_forward": 188.63000000000008
+      },
+      {
+        "name": "void cutlass::Kernel2<cutlass_80_simt_sgemm_128x64_8x5_nn_align1>(cutlass_80_simt_sgemm_128x64_8x5_nn_align1::Params)",
+        "calls": 42,
+        "cuda_us": 501.53800000000007,
+        "calls_per_forward": 14.0,
+        "cuda_us_per_forward": 167.17933333333335
+      },
+      {
+        "name": "void cudnn::winograd_nonfused::winogradForwardFilter4x4<float, float>(cudnn::winograd_nonfused::WinogradFilterParams<float, float>)",
+        "calls": 36,
+        "cuda_us": 369.921,
+        "calls_per_forward": 12.0,
+        "cuda_us_per_forward": 123.307
+      },
+      {
+        "name": "void cudnn::winograd_nonfused::winogradForwardData4x4<float, float>(cudnn::winograd_nonfused::WinogradDataParams<float, float>)",
+        "calls": 36,
+        "cuda_us": 328.354,
+        "calls_per_forward": 12.0,
+        "cuda_us_per_forward": 109.45133333333332
+      },
+      {
+        "name": "void precomputed_convolve_sgemm<float, int, 512, 6, 7, 4, 3, 5, 1, false>(int, int, int, float const*, int, float*, float const*, kernel_conv_params, unsigned long long, int, float, float, int, bool, bool, float const*, float const*, int*)",
+        "calls": 6,
+        "cuda_us": 258.241,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 86.08033333333333
+      },
+      {
+        "name": "void gemmk1_kernel<int, float, 256, 5, false, false, false, false, cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float>, float, 0>(cublasGemmk1Params<float, cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float>, float, biasType<cublasGemvTensorStridedBatched<float>::value_type, float>::type>)",
+        "calls": 171,
+        "cuda_us": 236.0029999999997,
+        "calls_per_forward": 57.0,
+        "cuda_us_per_forward": 78.66766666666656
+      },
+      {
+        "name": "void cutlass::Kernel2<cutlass_80_simt_sgemm_64x64_8x5_nn_align1>(cutlass_80_simt_sgemm_64x64_8x5_nn_align1::Params)",
+        "calls": 24,
+        "cuda_us": 216.993,
+        "calls_per_forward": 8.0,
+        "cuda_us_per_forward": 72.331
+      },
+      {
+        "name": "void cublasLt::splitKreduce_kernel<32, 16, int, float, float, float, float, false, float, float, float, true, false, false, false>(cublasLt::cublasSplitKParams<float>, float const*, float const*, float*, float*, float const*, float const*, float const*, float const*, float*, void*, long, float*, int*, float*, float*, float const*, float const*, float const*, float const*, float const*)",
+        "calls": 144,
+        "cuda_us": 214.7529999999999,
+        "calls_per_forward": 48.0,
+        "cuda_us_per_forward": 71.5843333333333
+      },
+      {
+        "name": "void cudnn::winograd_nonfused::winogradForwardOutput4x4<float, float>(cudnn::winograd_nonfused::WinogradOutputParams<float, float>)",
+        "calls": 36,
+        "cuda_us": 198.40199999999996,
+        "calls_per_forward": 12.0,
+        "cuda_us_per_forward": 66.13399999999999
+      },
+      {
+        "name": "void onnxruntime::cuda::_UnaryElementWise<float, float, onnxruntime::cuda::OP_Relu<float>, 256, 4>(float const*, float*, onnxruntime::cuda::OP_Relu<float>, long)",
+        "calls": 99,
+        "cuda_us": 196.225,
+        "calls_per_forward": 33.0,
+        "cuda_us_per_forward": 65.40833333333333
+      },
+      {
+        "name": "void onnxruntime::cuda::_UnaryElementWise<float, float, onnxruntime::contrib::cuda::OP_QuickGelu<float>, 256, 4>(float const*, float*, onnxruntime::contrib::cuda::OP_QuickGelu<float>, long)",
+        "calls": 87,
+        "cuda_us": 156.31900000000007,
+        "calls_per_forward": 29.0,
+        "cuda_us_per_forward": 52.10633333333336
+      },
+      {
+        "name": "void onnxruntime::cuda::detail::reduce_matrix_columns_kernel<float, float, float, onnxruntime::cuda::Identity, onnxruntime::cuda::Identity, false>(int, int, float const*, float*, float*, int*)",
+        "calls": 9,
+        "cuda_us": 154.52800000000002,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 51.50933333333334
+      },
+      {
+        "name": "void implicit_convolve_sgemm<float, float, int, 512, 6, 8, 3, 3, 5, 1, false, false, true>(int, int, int, float const*, int, float*, float const*, kernel_conv_params, unsigned long long, int, float, float, int, float const*, float const*, bool, bool, int, int)",
+        "calls": 3,
+        "cuda_us": 132.577,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 44.19233333333333
+      },
+      {
+        "name": "void transpose_readWrite_alignment_kernel<float, float, 1, false, 6, 5, 3>(cublasTransposeParams<float>, float const*, float*, float const*)",
+        "calls": 51,
+        "cuda_us": 131.80899999999994,
+        "calls_per_forward": 17.0,
+        "cuda_us_per_forward": 43.936333333333316
+      },
+      {
+        "name": "void onnxruntime::contrib::cuda::_GridSampleKernel<float, false>(float const*, float const*, long, long, long, long, long, long, long, long, long, float*)",
+        "calls": 27,
+        "cuda_us": 119.19999999999996,
+        "calls_per_forward": 9.0,
+        "cuda_us_per_forward": 39.73333333333332
+      },
+      {
+        "name": "void onnxruntime::cuda::_BinaryElementWiseSimple<true, true, float, float, float, onnxruntime::cuda::OP_Add<float, float, float>, 256, 4, int>(float const*, float const*, float*, onnxruntime::cuda::OP_Add<float, float, float>, int)",
+        "calls": 69,
+        "cuda_us": 107.87,
+        "calls_per_forward": 23.0,
+        "cuda_us_per_forward": 35.95666666666667
+      },
+      {
+        "name": "void onnxruntime::cuda::RadixTopK<float, 256l, 2l>(float const*, float*, long*, onnxruntime::cuda::TArray<long, 8>, unsigned long, int, long, long, long, long, long, float, float)",
+        "calls": 3,
+        "cuda_us": 105.601,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 35.20033333333333
+      },
+      {
+        "name": "void magma_sgemmEx_kernel<float, float, float, true, false, 6, 4, 6, 3, 4>(int, int, int, BatchedTensor, int, BatchedTensor, int, BatchedTensor, int, BatchedTensor, int, int, int, float const*, float const*, float, float, int, cublasLtEpilogue_t, int, void const*, long)",
+        "calls": 12,
+        "cuda_us": 91.809,
+        "calls_per_forward": 4.0,
+        "cuda_us_per_forward": 30.602999999999998
+      },
+      {
+        "name": "void cutlass::Kernel2<cutlass_80_simt_sgemm_128x32_8x5_tn_align1>(cutlass_80_simt_sgemm_128x32_8x5_tn_align1::Params)",
+        "calls": 12,
+        "cuda_us": 63.007999999999996,
+        "calls_per_forward": 4.0,
+        "cuda_us_per_forward": 21.002666666666666
+      },
+      {
+        "name": "void onnxruntime::contrib::cuda::SkipLayerNormKernelSmall<float, 40u, 8, false>(float*, float*, float const*, float const*, float const*, float const*, float const*, float, int, int)",
+        "calls": 33,
+        "cuda_us": 62.177,
+        "calls_per_forward": 11.0,
+        "cuda_us_per_forward": 20.725666666666665
+      },
+      {
+        "name": "void onnxruntime::cuda::_ConcatKernel<int>(onnxruntime::cuda::DivMod<int>, onnxruntime::cuda::DivMod<int>, long const*, long const*, long const*, int*, void const**, int)",
+        "calls": 9,
+        "cuda_us": 55.617000000000004,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 18.539
+      },
+      {
+        "name": "void cutlass::Kernel2<cutlass_80_simt_sgemm_32x128_8x5_nn_align1>(cutlass_80_simt_sgemm_32x128_8x5_nn_align1::Params)",
+        "calls": 15,
+        "cuda_us": 52.48000000000001,
+        "calls_per_forward": 5.0,
+        "cuda_us_per_forward": 17.493333333333336
+      },
+      {
+        "name": "void onnxruntime::cuda::_ConcatKernelSameConcatDim<int, onnxruntime::cuda::TArray<void const*, 32> >(onnxruntime::cuda::DivMod<int>, onnxruntime::cuda::DivMod<int>, onnxruntime::cuda::DivMod<int>, int*, onnxruntime::cuda::TArray<void const*, 32>, int)",
+        "calls": 24,
+        "cuda_us": 51.806,
+        "calls_per_forward": 8.0,
+        "cuda_us_per_forward": 17.268666666666665
+      },
+      {
+        "name": "void onnxruntime::cuda::Transpose4DKernelParallelizeMultipleElementsPerThreadInInnermostDim<4>(onnxruntime::cuda::TArray<long, 8>, void const*, onnxruntime::cuda::TArray<long, 8>, void*, long, int)",
+        "calls": 48,
+        "cuda_us": 47.007999999999996,
+        "calls_per_forward": 16.0,
+        "cuda_us_per_forward": 15.669333333333332
+      },
+      {
+        "name": "void onnxruntime::cuda::_SplitKernel<int>(onnxruntime::cuda::DivMod<int>, onnxruntime::cuda::DivMod<int>, long const*, long const*, long const*, int, int const*, void**, int)",
+        "calls": 9,
+        "cuda_us": 44.608,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 14.869333333333332
+      },
+      {
+        "name": "void onnxruntime::cuda::_BinaryElementWise<float, float, float, onnxruntime::cuda::OP_Mul<float, float, float>, false, true, 256, 4, int>(int, onnxruntime::cuda::TArray<long, 8>, float const*, onnxruntime::cuda::TArray<long, 8>, float const*, onnxruntime::cuda::TArray<onnxruntime::cuda::DivMod<int>, 8>, float*, onnxruntime::cuda::OP_Mul<float, float, float> const&, int)",
+        "calls": 18,
+        "cuda_us": 41.344,
+        "calls_per_forward": 6.0,
+        "cuda_us_per_forward": 13.781333333333334
+      },
+      {
+        "name": "void cudnn::pooling_fw_4d_kernel<float, float, cudnn::maxpooling_func<float, float, (cudnnNanPropagation_t)1>, (cudnnPoolingMode_t)0, false>(cudnnTensorStruct, float const*, cudnnTensorStruct, float*, cudnnPoolingStruct, float, float, int, cudnn::reduced_divisor, cudnn::reduced_divisor)",
+        "calls": 3,
+        "cuda_us": 33.983999999999995,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 11.327999999999998
+      },
+      {
+        "name": "void onnxruntime::cuda::softmax_warp_forward<float, float, float, 9, false>(float*, float const*, int, int, int)",
+        "calls": 12,
+        "cuda_us": 30.782999999999998,
+        "calls_per_forward": 4.0,
+        "cuda_us_per_forward": 10.261
+      },
+      {
+        "name": "void onnxruntime::cuda::cuApplyLayerNorm<float, float, float, false>(float*, float*, float*, float const*, int, int, float, float const*, float const*, int, float const*, float const*, float*)",
+        "calls": 3,
+        "cuda_us": 25.121,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 8.373666666666667
+      },
+      {
+        "name": "void onnxruntime::cuda::_Clip<float>(float const*, float*, float const*, float const*, float, float, unsigned long)",
+        "calls": 27,
+        "cuda_us": 23.071000000000012,
+        "calls_per_forward": 9.0,
+        "cuda_us_per_forward": 7.690333333333338
+      },
+      {
+        "name": "void onnxruntime::cuda::_BinaryElementWiseSimple<true, false, float, float, float, onnxruntime::cuda::OP_Mul<float, float, float>, 256, 4, int>(float const*, float const*, float*, onnxruntime::cuda::OP_Mul<float, float, float>, int)",
+        "calls": 18,
+        "cuda_us": 22.398000000000003,
+        "calls_per_forward": 6.0,
+        "cuda_us_per_forward": 7.466000000000001
+      },
+      {
+        "name": "void onnxruntime::cuda::_UnaryElementWise<float, float, onnxruntime::cuda::OP_Sigmoid<float>, 256, 4>(float const*, float*, onnxruntime::cuda::OP_Sigmoid<float>, long)",
+        "calls": 15,
+        "cuda_us": 21.183,
+        "calls_per_forward": 5.0,
+        "cuda_us_per_forward": 7.061
+      },
+      {
+        "name": "void onnxruntime::cuda::_SplitKernelSameSplitDim<int, onnxruntime::cuda::TArray<void*, 32> >(onnxruntime::cuda::DivMod<int>, onnxruntime::cuda::DivMod<int>, onnxruntime::cuda::DivMod<int>, int, int const*, onnxruntime::cuda::TArray<void*, 32>, int)",
+        "calls": 18,
+        "cuda_us": 19.07200000000001,
+        "calls_per_forward": 6.0,
+        "cuda_us_per_forward": 6.357333333333337
+      },
+      {
+        "name": "void cudnn::pooling_fw_4d_kernel<float, float, cudnn::averpooling_func<float, true>, (cudnnPoolingMode_t)1, false>(cudnnTensorStruct, float const*, cudnnTensorStruct, float*, cudnnPoolingStruct, float, float, int, cudnn::reduced_divisor, cudnn::reduced_divisor)",
+        "calls": 9,
+        "cuda_us": 18.752000000000002,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 6.2506666666666675
+      },
+      {
+        "name": "void onnxruntime::cuda::_ResizeNearestKernel2D<float, false>(long, long, long, int, onnxruntime::cuda::DivMod<int>, onnxruntime::cuda::DivMod<int>, float const*, float*, unsigned long, float, onnxruntime::cuda::NearestMappingInfo const*)",
+        "calls": 6,
+        "cuda_us": 18.496000000000002,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 6.165333333333334
+      },
+      {
+        "name": "void onnxruntime::cuda::_BinaryElementWise<float, float, float, onnxruntime::cuda::OP_Add<float, float, float>, true, false, 256, 4, int>(int, onnxruntime::cuda::TArray<long, 8>, float const*, onnxruntime::cuda::TArray<long, 8>, float const*, onnxruntime::cuda::TArray<onnxruntime::cuda::DivMod<int>, 8>, float*, onnxruntime::cuda::OP_Add<float, float, float> const&, int)",
+        "calls": 9,
+        "cuda_us": 13.759999999999998,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 4.586666666666666
+      },
+      {
+        "name": "void onnxruntime::cuda::_BinaryElementWise<float, float, float, onnxruntime::cuda::OP_Mul<float, float, float>, true, false, 256, 4, int>(int, onnxruntime::cuda::TArray<long, 8>, float const*, onnxruntime::cuda::TArray<long, 8>, float const*, onnxruntime::cuda::TArray<onnxruntime::cuda::DivMod<int>, 8>, float*, onnxruntime::cuda::OP_Mul<float, float, float> const&, int)",
+        "calls": 3,
+        "cuda_us": 13.504000000000001,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 4.501333333333334
+      },
+      {
+        "name": "void onnxruntime::cuda::_BinaryElementWiseSimple<true, false, float, float, float, onnxruntime::cuda::OP_Div<float, float, float>, 256, 4, int>(float const*, float const*, float*, onnxruntime::cuda::OP_Div<float, float, float>, int)",
+        "calls": 9,
+        "cuda_us": 12.126999999999997,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 4.042333333333333
+      },
+      {
+        "name": "void onnxruntime::cuda::_BinaryElementWiseSimple<true, false, float, float, float, onnxruntime::cuda::OP_Sub<float, float, float>, 256, 4, int>(float const*, float const*, float*, onnxruntime::cuda::OP_Sub<float, float, float>, int)",
+        "calls": 9,
+        "cuda_us": 11.296,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 3.765333333333333
+      },
+      {
+        "name": "void reduce_tensor_kernel_free<float, 8, 16, 1, 1, (cudnnReduceTensorOp_t)3, (cudnnNanPropagation_t)1>(cudnnReduceTensorStruct, unsigned int*, float*, cudnnTensorStruct, float*, float, int, int, bool, cudnn::reduced_divisor)",
+        "calls": 3,
+        "cuda_us": 11.264,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 3.7546666666666666
+      },
+      {
+        "name": "void onnxruntime::cuda::_BinaryElementWiseSimple<false, true, float, float, float, onnxruntime::cuda::OP_Sub<float, float, float>, 256, 4, int>(float const*, float const*, float*, onnxruntime::cuda::OP_Sub<float, float, float>, int)",
+        "calls": 9,
+        "cuda_us": 10.271999999999998,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 3.4239999999999995
+      },
+      {
+        "name": "void onnxruntime::cuda::_BinaryElementWiseSimple<true, true, float, float, float, onnxruntime::cuda::OP_Div<float, float, float>, 256, 4, int>(float const*, float const*, float*, onnxruntime::cuda::OP_Div<float, float, float>, int)",
+        "calls": 9,
+        "cuda_us": 9.759,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 3.253
+      },
+      {
+        "name": "void onnxruntime::cuda::softmax_warp_forward<float, float, float, 4, false>(float*, float const*, int, int, int)",
+        "calls": 9,
+        "cuda_us": 9.504999999999999,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 3.168333333333333
+      },
+      {
+        "name": "void onnxruntime::cuda::_UnaryElementWise<float, float, onnxruntime::cuda::OP_Log<float>, 256, 4>(float const*, float*, onnxruntime::cuda::OP_Log<float>, long)",
+        "calls": 9,
+        "cuda_us": 9.183,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 3.061
+      },
+      {
+        "name": "void onnxruntime::cuda::_GatherKernel<int>(long, long, onnxruntime::cuda::DivMod<int>, onnxruntime::cuda::DivMod<int>, void const*, unsigned long, int const*, int*, int)",
+        "calls": 6,
+        "cuda_us": 6.9430000000000005,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 2.3143333333333334
+      },
+      {
+        "name": "void cudnn::cnn::kern_precompute_indices<false>(int*, int, int, int, int, int)",
+        "calls": 6,
+        "cuda_us": 5.662999999999999,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 1.8876666666666664
+      },
+      {
+        "name": "void onnxruntime::cuda::_UnaryElementWise<float, float, onnxruntime::cuda::OP_Gelu<float>, 256, 4>(float const*, float*, onnxruntime::cuda::OP_Gelu<float>, long)",
+        "calls": 3,
+        "cuda_us": 5.472,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.824
+      },
+      {
+        "name": "void onnxruntime::cuda::_ResizeNearestMappingKernel2D<float, onnxruntime::cuda::TransformCoordinate_ASYMMETRIC, onnxruntime::cuda::NearestPixel_FLOOR>(int, int, int, int, float, float, float, float, float, float, bool, onnxruntime::cuda::TransformCoordinate_ASYMMETRIC const&, onnxruntime::cuda::NearestPixel_FLOOR const&, onnxruntime::cuda::NearestMappingInfo*)",
+        "calls": 6,
+        "cuda_us": 5.312,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 1.7706666666666668
+      },
+      {
+        "name": "void onnxruntime::cuda::_BinaryElementWiseSimple<true, true, long, long, long, onnxruntime::cuda::OP_Add<long, long, long>, 256, 4, int>(long const*, long const*, long*, onnxruntime::cuda::OP_Add<long, long, long>, int)",
+        "calls": 3,
+        "cuda_us": 3.327,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.109
+      },
+      {
+        "name": "void op_tensor_kernel_alpha2_zero<3, float, float, float, 1, 256, 1, 1, (cudnnOpTensorOp_t)0>(alpha2_zero_args<float, float, float>)",
+        "calls": 3,
+        "cuda_us": 3.072,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.024
+      }
+    ],
+    "layer_group": [
+      {
+        "layer": "unattributed",
+        "group": "other",
+        "calls": 1653,
+        "cuda_us": 16806.489999999976,
+        "calls_per_forward": 551.0,
+        "cuda_us_per_forward": 5602.163333333326
+      }
+    ]
+  },
+  "trace_memcpy_memset_count": 120,
+  "trace": {
+    "server_path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-deployment-profile-20261025-c2-stream-final/c2/onnx_cuda_fp32.trace.json",
+    "bytes": 3056719,
+    "sha256": "009e88fc10133bce8f539d533f11077e607fced78d16a91b7396e4a47958e200"
+  }
+}

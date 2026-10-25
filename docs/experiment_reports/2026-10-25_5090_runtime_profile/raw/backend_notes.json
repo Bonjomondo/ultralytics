@@ -1,0 +1,71 @@
+{
+  "schema": "5090.runtime-backend-notes.v1",
+  "scope": "Compact failure/warning record; full logs and downloaded wheel remain server-only",
+  "dependency_recovery": "PyPI TensorRT stub metadata stalled; original 10.14.1.48 had no matching cp311 binding. Installed official 10.14.1.48.post1 bindings/meta and NVIDIA library wheel after SHA verification in isolated /tmp venv. Shared training environment unchanged.",
+  "default_stream": "Exploratory deployment used default stream and warned of extra synchronization. Final comparison reran all backends in a dedicated shared non-default stream; only final timing samples are archived.",
+  "fp16_clipping": "Six Constant nodes clipped out-of-range FP16 values. Finite output smoke passed, but this is not an AP/equivalence acceptance.",
+  "onnx_warning": "CUDA EP device registration warning was emitted. Session required CUDAExecutionProvider first; actual CUPTI profiler captures 551 CUDA kernels/forward, so the run was not silently CPU-only.",
+  "process_order": "Exploratory two-model C2 baseline measured 7.798 ms. Final independent C2 process measured 7.345 ms over five randomized rounds; no causal explanation of process-order difference is claimed.",
+  "logs": [
+    {
+      "server_path": "/tmp/zhj-uav-profiler-20261025-trt-install-direct.log",
+      "bytes": 680,
+      "sha256": "8cfbf065b0dc1a3d7d9fcc96882d51db0485bf67f14982a9ca5ca637cfd48dc0",
+      "selected_evidence": [
+        "ERROR: Could not find a version that satisfies the requirement tensorrt-cu13-bindings==10.14.1.48 (from versions: 10.13.2.6, 10.13.3.9, 10.13.3.9.post1, 10.14.1.48.post1, 10.15.1.29, 10.16.0.72, 10.16.1.11, 11.0.0.114, 11.1.0.106, 11.2.1.2, 11.3.0.99, 11.4.0.106)",
+        "ERROR: No matching distribution found for tensorrt-cu13-bindings==10.14.1.48"
+      ]
+    },
+    {
+      "server_path": "/tmp/zhj-uav-profiler-20261025-trt-bindings.log",
+      "bytes": 1312,
+      "sha256": "f2f83ae19f26b8c58531cf23d2567d43c09b66502b73235714a5b09226e8ba9c",
+      "selected_evidence": [
+        "Successfully installed tensorrt-cu13-10.14.1.48.post1 tensorrt-cu13-bindings-10.14.1.48.post1"
+      ]
+    },
+    {
+      "server_path": "/tmp/zhj-uav-profiler-20261025-trt-wheel.log",
+      "bytes": 691,
+      "sha256": "58e5590452b92afd2dd1b7deda59e67232b8ff4fb3b45c5d8475b6ebf8aace2a",
+      "selected_evidence": [
+        "SHA256 verified f55d59e9f93ebe0967c4bc108fb4068e74cdbc50bef3e6c9936e92f21cf11352",
+        "Successfully installed tensorrt-cu13-libs-10.14.1.48.post1"
+      ]
+    },
+    {
+      "server_path": "/tmp/zhj-uav-profiler-20261025-deployment-c2-final.log",
+      "bytes": 4322,
+      "sha256": "ddec4a60a797f64d779f17a8867e9b8b68f573408bad546836bed628af16fcd7",
+      "selected_evidence": [
+        "2026-10-25 12:42:46.141345445 [W:onnxruntime:Default, onnxruntime_pybind_state.cc:855 operator()] No registered plugin EP device found for 'CUDAExecutionProvider' with device_id=0",
+        "[10/25/2026-12:42:58] [TRT] [W] Using default stream in enqueueV3() may lead to performance issues due to additional calls to cudaStreamSynchronize() by TensorRT to ensure correct synchronization. Please use non-default stream instead.",
+        "[10/25/2026-12:42:58] [TRT] [W] WARNING The logger passed into createInferBuilder differs from one already registered for an existing builder, runtime, or refitter. So the current new logger is ignored, and TensorRT will use the existing one which is returned by nvinfer1::getLogger() instead.",
+        "[10/25/2026-12:42:58] [TRT] [W] (Unnamed Layer* 1192) [Constant] [CONSTANT] contains out-of-range weights when cast to Half, clipping to +/- 65504.",
+        "[10/25/2026-12:42:58] [TRT] [W] (Unnamed Layer* 1201) [Constant] [CONSTANT] contains out-of-range weights when cast to Half, clipping to +/- 65504.",
+        "[10/25/2026-12:42:58] [TRT] [W] (Unnamed Layer* 1841) [Constant] [CONSTANT] contains out-of-range weights when cast to Half, clipping to +/- 65504.",
+        "[10/25/2026-12:42:58] [TRT] [W] (Unnamed Layer* 1850) [Constant] [CONSTANT] contains out-of-range weights when cast to Half, clipping to +/- 65504.",
+        "[10/25/2026-12:42:58] [TRT] [W] (Unnamed Layer* 2490) [Constant] [CONSTANT] contains out-of-range weights when cast to Half, clipping to +/- 65504.",
+        "[10/25/2026-12:42:58] [TRT] [W] (Unnamed Layer* 2499) [Constant] [CONSTANT] contains out-of-range weights when cast to Half, clipping to +/- 65504.",
+        "[10/25/2026-12:43:17] [TRT] [W] WARNING The logger passed into createInferRuntime differs from one already registered for an existing builder, runtime, or refitter. So the current new logger is ignored, and TensorRT will use the existing one which is returned by nvinfer1::getLogger() instead.",
+        "[10/25/2026-12:43:17] [TRT] [W] Using default stream in enqueueV3() may lead to performance issues due to additional calls to cudaStreamSynchronize() by TensorRT to ensure correct synchronization. Please use non-default stream instead."
+      ]
+    },
+    {
+      "server_path": "/tmp/zhj-uav-profiler-20261025-deployment-c2-stream-final.log",
+      "bytes": 3854,
+      "sha256": "594817d40657f24f944eda8fc5cf36a91f8dd8e65a92621e024032187cebedcc",
+      "selected_evidence": [
+        "2026-10-25 12:43:43.409112302 [W:onnxruntime:Default, onnxruntime_pybind_state.cc:855 operator()] No registered plugin EP device found for 'CUDAExecutionProvider' with device_id=0",
+        "[10/25/2026-12:43:55] [TRT] [W] WARNING The logger passed into createInferBuilder differs from one already registered for an existing builder, runtime, or refitter. So the current new logger is ignored, and TensorRT will use the existing one which is returned by nvinfer1::getLogger() instead.",
+        "[10/25/2026-12:43:55] [TRT] [W] (Unnamed Layer* 1192) [Constant] [CONSTANT] contains out-of-range weights when cast to Half, clipping to +/- 65504.",
+        "[10/25/2026-12:43:55] [TRT] [W] (Unnamed Layer* 1201) [Constant] [CONSTANT] contains out-of-range weights when cast to Half, clipping to +/- 65504.",
+        "[10/25/2026-12:43:55] [TRT] [W] (Unnamed Layer* 1841) [Constant] [CONSTANT] contains out-of-range weights when cast to Half, clipping to +/- 65504.",
+        "[10/25/2026-12:43:55] [TRT] [W] (Unnamed Layer* 1850) [Constant] [CONSTANT] contains out-of-range weights when cast to Half, clipping to +/- 65504.",
+        "[10/25/2026-12:43:55] [TRT] [W] (Unnamed Layer* 2490) [Constant] [CONSTANT] contains out-of-range weights when cast to Half, clipping to +/- 65504.",
+        "[10/25/2026-12:43:55] [TRT] [W] (Unnamed Layer* 2499) [Constant] [CONSTANT] contains out-of-range weights when cast to Half, clipping to +/- 65504.",
+        "[10/25/2026-12:44:14] [TRT] [W] WARNING The logger passed into createInferRuntime differs from one already registered for an existing builder, runtime, or refitter. So the current new logger is ignored, and TensorRT will use the existing one which is returned by nvinfer1::getLogger() instead."
+      ]
+    }
+  ]
+}

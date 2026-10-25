@@ -1,0 +1,750 @@
+{
+  "iterations": [
+    {
+      "iteration": "iteration::0",
+      "cpu_forward_us": 1064.928,
+      "kernel_count": 183,
+      "kernel_sum_us": 709.4690000000002,
+      "gpu_span_us": 878.942138671875,
+      "gpu_busy_union_us": 709.33984375,
+      "gpu_idle_in_span_us": 169.602294921875,
+      "gpu_idle_fraction": 0.1929618429469686,
+      "kernel_duration_us": {
+        "mean": 3.876879781420765,
+        "median": 2.592,
+        "p95": 11.936,
+        "min": 0.832,
+        "max": 19.104,
+        "n": 183
+      },
+      "cpu_launch_gap_us": {
+        "mean": 0.8338408417754121,
+        "median": 0.761962890625,
+        "p95": 1.72021484375,
+        "min": 0.1220703125,
+        "max": 4.51708984375,
+        "n": 182
+      },
+      "gpu_gap_us": {
+        "mean": 0.9860598541969476,
+        "median": 0.8800048828125,
+        "p95": 2.3681640625,
+        "min": 0.000244140625,
+        "max": 6.143798828125,
+        "n": 172
+      }
+    },
+    {
+      "iteration": "iteration::1",
+      "cpu_forward_us": 433.909,
+      "kernel_count": 183,
+      "kernel_sum_us": 706.908,
+      "gpu_span_us": 871.51708984375,
+      "gpu_busy_union_us": 706.779296875,
+      "gpu_idle_in_span_us": 164.73779296875,
+      "gpu_idle_fraction": 0.18902416818732148,
+      "kernel_duration_us": {
+        "mean": 3.8628852459016394,
+        "median": 2.591,
+        "p95": 11.745,
+        "min": 0.8,
+        "max": 19.007,
+        "n": 183
+      },
+      "cpu_launch_gap_us": {
+        "mean": 0.5072450742616759,
+        "median": 0.4853515625,
+        "p95": 1.08984375,
+        "min": 0.126953125,
+        "max": 1.81884765625,
+        "n": 182
+      },
+      "gpu_gap_us": {
+        "mean": 0.9864538501122755,
+        "median": 0.9599609375,
+        "p95": 2.303955078125,
+        "min": 0.031005859375,
+        "max": 2.592041015625,
+        "n": 167
+      }
+    },
+    {
+      "iteration": "iteration::2",
+      "cpu_forward_us": 411.147,
+      "kernel_count": 183,
+      "kernel_sum_us": 706.1740000000001,
+      "gpu_span_us": 865.31005859375,
+      "gpu_busy_union_us": 706.076904296875,
+      "gpu_idle_in_span_us": 159.233154296875,
+      "gpu_idle_fraction": 0.18401861011028942,
+      "kernel_duration_us": {
+        "mean": 3.8588743169398905,
+        "median": 2.592,
+        "p95": 11.712,
+        "min": 0.831,
+        "max": 19.296,
+        "n": 183
+      },
+      "cpu_launch_gap_us": {
+        "mean": 0.46710003863324173,
+        "median": 0.46240234375,
+        "p95": 0.94775390625,
+        "min": 0.111083984375,
+        "max": 1.3828125,
+        "n": 182
+      },
+      "gpu_gap_us": {
+        "mean": 0.9422080135909763,
+        "median": 0.864013671875,
+        "p95": 2.27197265625,
+        "min": 0.000244140625,
+        "max": 2.592041015625,
+        "n": 169
+      }
+    }
+  ],
+  "tables": {
+    "op": [
+      {
+        "name": "unattributed",
+        "calls": 549,
+        "cuda_us": 2122.550999999999,
+        "calls_per_forward": 183.0,
+        "cuda_us_per_forward": 707.5169999999997
+      }
+    ],
+    "group": [
+      {
+        "name": "other",
+        "calls": 549,
+        "cuda_us": 2122.550999999999,
+        "calls_per_forward": 183.0,
+        "cuda_us_per_forward": 707.5169999999997
+      }
+    ],
+    "layer": [
+      {
+        "name": "unattributed",
+        "calls": 549,
+        "cuda_us": 2122.550999999999,
+        "calls_per_forward": 183.0,
+        "cuda_us_per_forward": 707.5169999999997
+      }
+    ],
+    "module": [
+      {
+        "name": "unattributed",
+        "calls": 549,
+        "cuda_us": 2122.550999999999,
+        "calls_per_forward": 183.0,
+        "cuda_us_per_forward": 707.5169999999997
+      }
+    ],
+    "kernel": [
+      {
+        "name": "sm80_xmma_fprop_implicit_gemm_f16f16_f16f16_f16_nhwckrsc_nhwc_tilesize64x64x64_stage4_warpsize2x2x1_g1_tensor16x8x16_t1r3s3_aACCESS_execute_kernel_trt",
+        "calls": 21,
+        "cuda_us": 263.67900000000003,
+        "calls_per_forward": 7.0,
+        "cuda_us_per_forward": 87.89300000000001
+      },
+      {
+        "name": "sm80_xmma_fprop_implicit_gemm_indexed_wo_smem_f16f16_f16f16_f16_nhwckrsc_nhwc_tilesize128x32x64_stage1_warpsize4x1x1_g1_tensor16x8x16_alignc8_execute_kernel_trt",
+        "calls": 18,
+        "cuda_us": 209.535,
+        "calls_per_forward": 6.0,
+        "cuda_us_per_forward": 69.845
+      },
+      {
+        "name": "sm80_xmma_fprop_implicit_gemm_f16f16_f16f16_f16_nhwckrsc_nhwc_tilesize64x32x64_stage5_warpsize2x2x1_g1_tensor16x8x16_t1r3s3_execute_kernel_trt",
+        "calls": 30,
+        "cuda_us": 165.47200000000004,
+        "calls_per_forward": 10.0,
+        "cuda_us_per_forward": 55.15733333333335
+      },
+      {
+        "name": "sm80_xmma_gemm_f16f16_f16f16_f16_nn_n_tilesize32x32x64_stage6_warpsize2x2x1_tensor16x8x16_execute_kernel_trt",
+        "calls": 54,
+        "cuda_us": 140.92700000000005,
+        "calls_per_forward": 18.0,
+        "cuda_us_per_forward": 46.97566666666668
+      },
+      {
+        "name": "sm80_xmma_fprop_implicit_gemm_f16f16_f16f16_f16_nhwckrsc_nhwc_tilesize128x64x32_stage5_warpsize2x2x1_g1_tensor16x8x16_t1r3s3_execute_kernel_trt",
+        "calls": 12,
+        "cuda_us": 121.183,
+        "calls_per_forward": 4.0,
+        "cuda_us_per_forward": 40.394333333333336
+      },
+      {
+        "name": "sm80_xmma_fprop_implicit_gemm_f16f16_f16f16_f16_nhwckrsc_nhwc_tilesize128x64x32_stage5_warpsize2x2x1_g1_tensor16x8x16_execute_kernel_trt",
+        "calls": 12,
+        "cuda_us": 104.575,
+        "calls_per_forward": 4.0,
+        "cuda_us_per_forward": 34.858333333333334
+      },
+      {
+        "name": "sm80_xmma_gemm_f16f16_f16f16_f16_tn_n_tilesize128x128x32_stage4_warpsize2x2x1_tensor16x8x16_execute_kernel_trt",
+        "calls": 9,
+        "cuda_us": 91.96799999999999,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 30.655999999999995
+      },
+      {
+        "name": "__myl_DivMulReshTranReshReshConcReshMoveMulSum_0xac26158ad4e8cd777a8151b1d4ff0d20",
+        "calls": 9,
+        "cuda_us": 69.184,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 23.061333333333334
+      },
+      {
+        "name": "sm80_xmma_gemm_f16f16_f16f16_f16_tn_n_tilesize32x32x64_stage6_warpsize2x2x1_tensor16x8x16_execute_kernel_trt",
+        "calls": 24,
+        "cuda_us": 63.841000000000015,
+        "calls_per_forward": 8.0,
+        "cuda_us_per_forward": 21.28033333333334
+      },
+      {
+        "name": "__myl_Topk_0x6bff333197e007454114d255c7c47b84",
+        "calls": 3,
+        "cuda_us": 53.312000000000005,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 17.770666666666667
+      },
+      {
+        "name": "sm80_xmma_fprop_implicit_gemm_f16f16_f16f16_f16_nhwckrsc_nhwc_tilesize256x64x32_stage3_warpsize4x1x1_g1_tensor16x8x16_t1r3s3_aACCESS_execute_kernel_trt",
+        "calls": 3,
+        "cuda_us": 35.968,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 11.989333333333335
+      },
+      {
+        "name": "sm80_xmma_fprop_implicit_gemm_f16f16_f16f16_f16_nhwckrsc_nhwc_tilesize64x64x64_stage4_warpsize2x2x1_g1_tensor16x8x16_t1r3s3_execute_kernel_trt",
+        "calls": 3,
+        "cuda_us": 34.977000000000004,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 11.659
+      },
+      {
+        "name": "sm80_xmma_gemm_f16f16_f16f16_f16_tn_n_tilesize64x64x64_stage4_warpsize2x2x1_tensor16x8x16_execute_kernel_trt",
+        "calls": 12,
+        "cuda_us": 34.04599999999999,
+        "calls_per_forward": 4.0,
+        "cuda_us_per_forward": 11.348666666666665
+      },
+      {
+        "name": "_gemm_mha_v2_0x7d283f49a9d47dc66ed725a766f1f0c9",
+        "calls": 9,
+        "cuda_us": 33.983999999999995,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 11.327999999999998
+      },
+      {
+        "name": "sm80_xmma_gemm_f16f16_f16f16_f16_tn_n_tilesize32x32x64_stage6_warpsize2x2x1_tensor16x8x16_aligna2_alignc2_execute_kernel_trt",
+        "calls": 9,
+        "cuda_us": 32.095000000000006,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 10.698333333333336
+      },
+      {
+        "name": "sm80_xmma_fprop_implicit_gemm_indexed_f16f16_f16f16_f16_nhwckrsc_nhwc_tilesize64x64x64_stage4_warpsize2x2x1_g1_tensor16x8x16_execute_kernel_trt",
+        "calls": 6,
+        "cuda_us": 31.073,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 10.357666666666667
+      },
+      {
+        "name": "sm80_xmma_fprop_implicit_gemm_f16f16_f16f16_f16_nhwckrsc_nhwc_tilesize64x32x64_stage5_warpsize2x2x1_g1_tensor16x8x16_simple_t1r1s1_execute_kernel_trt",
+        "calls": 9,
+        "cuda_us": 27.455,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 9.151666666666666
+      },
+      {
+        "name": "sm80_xmma_gemm_f16f16_f16f16_f16_tt_n_tilesize32x32x64_stage6_warpsize2x2x1_tensor16x8x16_aligna4_alignc4_execute_kernel_trt",
+        "calls": 9,
+        "cuda_us": 25.981999999999996,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 8.660666666666666
+      },
+      {
+        "name": "sm80_xmma_gemm_f16f16_f16f16_f16_nn_n_tilesize64x64x64_stage4_warpsize2x2x1_tensor16x8x16_execute_kernel_trt",
+        "calls": 6,
+        "cuda_us": 25.729,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 8.576333333333332
+      },
+      {
+        "name": "sm80_xmma_gemm_f16f16_f16f32_f32_tn_n_tilesize32x32x64_stage6_warpsize2x2x1_tensor16x8x16_execute_kernel_trt",
+        "calls": 9,
+        "cuda_us": 24.159999999999997,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 8.053333333333333
+      },
+      {
+        "name": "sm80_xmma_fprop_implicit_gemm_indexed_f16f16_f16f16_f16_nhwckrsc_nhwc_tilesize128x32x32_stage4_warpsize4x1x1_g1_tensor16x8x16_execute_kernel_trt",
+        "calls": 6,
+        "cuda_us": 22.175,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 7.391666666666667
+      },
+      {
+        "name": "sm80_xmma_gemm_f16f16_f16f16_f16_tn_n_tilesize32x32x64_stage6_warpsize2x2x1_tensor16x8x16_aligna4_alignc4_execute_kernel_trt",
+        "calls": 9,
+        "cuda_us": 21.791,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 7.2636666666666665
+      },
+      {
+        "name": "sm80_xmma_gemm_f16f16_f16f16_f16_nn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x16_execute_kernel_trt",
+        "calls": 6,
+        "cuda_us": 19.872,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 6.624
+      },
+      {
+        "name": "sm80_xmma_gemm_f16f16_f16f16_f16_nn_n_tilesize128x128x32_stage4_warpsize2x2x1_tensor16x8x16_execute_kernel_trt",
+        "calls": 3,
+        "cuda_us": 19.871,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 6.623666666666666
+      },
+      {
+        "name": "sm80_xmma_gemm_f16f16_f16f16_f16_nn_n_tilesize64x32x64_stage5_warpsize2x2x1_tensor16x8x16_aligna4_alignc4_execute_kernel_trt",
+        "calls": 9,
+        "cuda_us": 19.424,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 6.474666666666667
+      },
+      {
+        "name": "sm80_xmma_fprop_implicit_gemm_f16f16_f16f16_f16_nhwckrsc_nhwc_tilesize128x128x32_stage4_warpsize2x2x1_g1_tensor16x8x16_simple_t1r1s1_execute_kernel_trt",
+        "calls": 3,
+        "cuda_us": 17.953,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 5.984333333333333
+      },
+      {
+        "name": "__myl_SlicReshTranReshGridCast_0x0440bce6b801dad0f2d7617ee6adf15c",
+        "calls": 9,
+        "cuda_us": 16.929,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 5.643
+      },
+      {
+        "name": "__myl_SlicReshTranReshGridCastResh_0x55616dd116548de497e0f833add443f5",
+        "calls": 9,
+        "cuda_us": 16.575,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 5.5249999999999995
+      },
+      {
+        "name": "__myl_SlicReshTranReshGridCastResh_0xce509ec0a13d3a61fec0e29c8d2f74b8",
+        "calls": 9,
+        "cuda_us": 16.351,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 5.450333333333333
+      },
+      {
+        "name": "_gemm_mha_v2_0xf61b8221cfc56d716fe3491a5248d203",
+        "calls": 3,
+        "cuda_us": 16.224,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 5.408
+      },
+      {
+        "name": "sm80_xmma_fprop_implicit_gemm_indexed_wo_smem_f16f16_f16f16_f16_nhwckrsc_nhwc_tilesize128x16x64_stage1_warpsize4x1x1_g1_tensor16x8x16_aligna8_alignc8_execute_kernel_trt",
+        "calls": 3,
+        "cuda_us": 15.2,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 5.066666666666666
+      },
+      {
+        "name": "sm50_xmma_pooling_coalescedC_NHWC_kMAX_3_False_execute_kernel_trt",
+        "calls": 3,
+        "cuda_us": 13.919999999999998,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 4.64
+      },
+      {
+        "name": "__myl_Silu_0x0c969b478bcdb91d0108bf8d452c9832",
+        "calls": 12,
+        "cuda_us": 13.056000000000004,
+        "calls_per_forward": 4.0,
+        "cuda_us_per_forward": 4.352000000000001
+      },
+      {
+        "name": "__myl_AddCastMeanSubMulMeanAddSqrtDivMulCastMulAdd_0xa4deb5483aee644da51ccffb19ed0431",
+        "calls": 9,
+        "cuda_us": 12.094999999999999,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 4.031666666666666
+      },
+      {
+        "name": "sm80_xmma_fprop_implicit_gemm_f16f16_f16f16_f16_nhwckrsc_nhwc_tilesize64x128x32_stage5_warpsize2x2x1_g1_tensor16x8x16_t1r1s1_execute_kernel_trt",
+        "calls": 3,
+        "cuda_us": 10.464,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 3.488
+      },
+      {
+        "name": "sm80_xmma_gemm_f16f16_f16f16_f16_tn_n_tilesize64x32x64_stage5_warpsize2x2x1_tensor16x8x16_aligna4_alignc4_execute_kernel_trt",
+        "calls": 3,
+        "cuda_us": 10.464,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 3.488
+      },
+      {
+        "name": "sm80_xmma_gemm_f16f16_f16f16_f16_nn_n_tilesize64x64x64_stage4_warpsize2x2x1_tensor16x8x16_fused",
+        "calls": 3,
+        "cuda_us": 10.368,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 3.456
+      },
+      {
+        "name": "sm80_xmma_fprop_implicit_gemm_f16f16_f16f16_f16_nhwckrsc_nhwc_tilesize128x32x32_stage4_warpsize4x1x1_g1_tensor16x8x16_execute_kernel_trt",
+        "calls": 3,
+        "cuda_us": 9.568000000000001,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 3.189333333333334
+      },
+      {
+        "name": "__myl_ReshMaxrSubExpSum_0x732552c4156fc552aa9ea316e74063eb",
+        "calls": 9,
+        "cuda_us": 9.345000000000002,
+        "calls_per_forward": 3.0,
+        "cuda_us_per_forward": 3.1150000000000007
+      },
+      {
+        "name": "__myl_ReshAddCastMeanSubMulMeanAddSqrtDivMulCastMulAdd_0x647a131d54ae0e4ebe3b18486459cb76",
+        "calls": 3,
+        "cuda_us": 9.280000000000001,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 3.0933333333333337
+      },
+      {
+        "name": "__myl_CastMeanSubMulMeanAddSqrtDivMulCastMulAdd_0xd655ac18e6d2d8fa106b86c5b86d84de",
+        "calls": 3,
+        "cuda_us": 9.280000000000001,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 3.0933333333333337
+      },
+      {
+        "name": "sm80_xmma_fprop_implicit_gemm_f16f16_f16f16_f16_nhwckrsc_nhwc_tilesize64x32x64_stage5_warpsize2x2x1_g1_tensor16x8x16_execute_kernel_trt",
+        "calls": 3,
+        "cuda_us": 9.248000000000001,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 3.082666666666667
+      },
+      {
+        "name": "sm80_xmma_fprop_implicit_gemm_f16f16_f16f16_f16_nhwckrsc_nhwc_tilesize128x32x32_stage4_warpsize4x1x1_g1_tensor16x8x16_t1r1s1_execute_kernel_trt",
+        "calls": 3,
+        "cuda_us": 9.185,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 3.061666666666667
+      },
+      {
+        "name": "__myl_Silu_0xac432564d2a7e781f6679123739c4480",
+        "calls": 6,
+        "cuda_us": 9.120999999999999,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 3.040333333333333
+      },
+      {
+        "name": "__myl_AddCastMeanSubMulMeanAddSqrtDivMulCastMulAddReshAdd_0xa5643579801d28787799e26038f027bc",
+        "calls": 6,
+        "cuda_us": 9.025,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 3.0083333333333333
+      },
+      {
+        "name": "__myl_CastConc_0x695f6248810ce58a81254d1e3c0fd06c",
+        "calls": 3,
+        "cuda_us": 8.96,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 2.986666666666667
+      },
+      {
+        "name": "__myl_AddCastMeanSubMulMeanAddSqrtDivMulCastMulAdd_0x5b2ba039e918f62751d9e744047adb51",
+        "calls": 6,
+        "cuda_us": 8.417,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 2.8056666666666668
+      },
+      {
+        "name": "sm50_xmma_pooling_coalescedC_NHWC_kAVERAGE_2_False_execute_kernel_trt",
+        "calls": 6,
+        "cuda_us": 8.191,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 2.7303333333333337
+      },
+      {
+        "name": "__myl_SiluMoveResi_0x594893182c691f701d84ad7b519aa8b2",
+        "calls": 3,
+        "cuda_us": 7.712,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 2.5706666666666664
+      },
+      {
+        "name": "__myl_Silu_0xd9629494eab19d9b73495b8adfbf62e9",
+        "calls": 6,
+        "cuda_us": 7.36,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 2.4533333333333336
+      },
+      {
+        "name": "__myl_TranCosSinCosSinConcReshAdd_0x0bb9c0eb869dabd4351f1419521ffbbd",
+        "calls": 3,
+        "cuda_us": 6.816000000000001,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 2.2720000000000002
+      },
+      {
+        "name": "__myl_SiluSiluAdd_0x88021a19d4a5c2619d956bc7c0137c3c",
+        "calls": 6,
+        "cuda_us": 6.657,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 2.219
+      },
+      {
+        "name": "__myl_Mul_0x23e6a3cf351340779c66dc6404839829",
+        "calls": 3,
+        "cuda_us": 6.625,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 2.2083333333333335
+      },
+      {
+        "name": "__myl_Silu_0xe1f92bf23a66806e741ddc6440e3bf0d",
+        "calls": 6,
+        "cuda_us": 6.5600000000000005,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 2.186666666666667
+      },
+      {
+        "name": "sm50_xmma_pooling_coalescedC_NHWC_kAVERAGE_3_False_execute_kernel_trt",
+        "calls": 3,
+        "cuda_us": 5.952,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.984
+      },
+      {
+        "name": "__myl_ReshSlicSlicReshMulMulMulAddMulAddSlicReshTranReshSlicReshTranReshSlicReshTranResh_0x4e86057dca8d3c2249c66cdd20ea7b26",
+        "calls": 6,
+        "cuda_us": 5.824,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 1.9413333333333334
+      },
+      {
+        "name": "__myl_Silu_0x9085feafcc11d0d657cb225190f3693e",
+        "calls": 3,
+        "cuda_us": 5.5360000000000005,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.8453333333333335
+      },
+      {
+        "name": "__myl_MaxMinSubMaxMinMaxMinDivLogAddSigm_0xc6896ff0cf336347b4a5759d3f3ed62c",
+        "calls": 6,
+        "cuda_us": 5.376,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 1.792
+      },
+      {
+        "name": "__myl_Tran_0x31f8171c45e39c2667fac284a1e6bd44",
+        "calls": 3,
+        "cuda_us": 5.311,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.7703333333333333
+      },
+      {
+        "name": "__myl_MoveMove_0xdae2526a9242123cc0c9a0ed5e4652f4",
+        "calls": 3,
+        "cuda_us": 5.28,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.76
+      },
+      {
+        "name": "__myl_Add_0x49cd48e18dac6cc5501166ded8b986cc",
+        "calls": 6,
+        "cuda_us": 5.024,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 1.6746666666666667
+      },
+      {
+        "name": "__myl_Silu_0x979c8e80ca78711bed57a26423c3a19b",
+        "calls": 6,
+        "cuda_us": 4.9910000000000005,
+        "calls_per_forward": 2.0,
+        "cuda_us_per_forward": 1.6636666666666668
+      },
+      {
+        "name": "__myl_SiluMoveResi_0xa989619adb092a06f8c5339860e83b81",
+        "calls": 3,
+        "cuda_us": 4.736000000000001,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.5786666666666669
+      },
+      {
+        "name": "__myl_Silu_0x7a0cb075fdfc62e4f818021fcf02381e",
+        "calls": 3,
+        "cuda_us": 4.6080000000000005,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.5360000000000003
+      },
+      {
+        "name": "__myl_AddSqrtDivMulCastMulAddTran_0x6d949e7a13572f8b33c538f6f1e472c0",
+        "calls": 3,
+        "cuda_us": 4.5440000000000005,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.5146666666666668
+      },
+      {
+        "name": "__myl_Tran_0x06251a27d33da1ba7c5dd0ab593167ea",
+        "calls": 3,
+        "cuda_us": 4.48,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.4933333333333334
+      },
+      {
+        "name": "__myl_MulAddAddCastMeanSubMulMeanAddSqrtDivMulCastMulAdd_0x3ced3e181d8a8c4c1aecd07a6342452b",
+        "calls": 3,
+        "cuda_us": 4.384,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.4613333333333334
+      },
+      {
+        "name": "__myl_SiluSiluAdd_0xd071a25830355e7150c74bd05d4cfcfa",
+        "calls": 3,
+        "cuda_us": 4.288,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.4293333333333333
+      },
+      {
+        "name": "__myl_AddCastMeanSubMulMeanAddSqrtDivMulCastMulAddReshAdd_0xdd764ded77e4773517e9b61be6fa848f",
+        "calls": 3,
+        "cuda_us": 4.096,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.3653333333333333
+      },
+      {
+        "name": "__myl_Silu_0x9155170823d1ea84e94efa2507beae36",
+        "calls": 3,
+        "cuda_us": 3.7439999999999998,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.248
+      },
+      {
+        "name": "__myl_Silu_0x0d59f821b7fd2a12b5644190f1e59a1e",
+        "calls": 3,
+        "cuda_us": 3.6799999999999997,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.2266666666666666
+      },
+      {
+        "name": "__myl_MaxMinSubMaxMinMaxMinDivLogSigmAddSigmConcCast_0x16efa5ffd9160c36be30f95c0b7990c4",
+        "calls": 3,
+        "cuda_us": 3.4240000000000004,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.1413333333333335
+      },
+      {
+        "name": "__myl_AddCastMeanSubMulMean_0xcb28042ef546ef1afd6606090d3c9383",
+        "calls": 3,
+        "cuda_us": 3.3600000000000003,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.12
+      },
+      {
+        "name": "__myl_ReshCastReshAddCastGath_0x730c4283ea59eba9440c595f29057a90",
+        "calls": 3,
+        "cuda_us": 3.168,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.056
+      },
+      {
+        "name": "__myl_MaxrResh_0xad8fcaae4d09729c8609e673deae7e93",
+        "calls": 3,
+        "cuda_us": 3.008,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.0026666666666666
+      },
+      {
+        "name": "__myl_CastGathAddSigm_0x3728d92323d6b758044cdf56b21f972f",
+        "calls": 3,
+        "cuda_us": 3.007,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 1.0023333333333333
+      },
+      {
+        "name": "__myl_ReshSlicSlicReshMulMulMulAddMulAddSlicReshTranReshSlicReshTranReshSlicReshTranResh_0xc49886d669dd36fd214c52224dc3e879",
+        "calls": 3,
+        "cuda_us": 2.912,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 0.9706666666666667
+      },
+      {
+        "name": "__myl_CastCastPowCastDivReshMul_0xd6b48551157e0abb872f8430bf5c7c3b",
+        "calls": 3,
+        "cuda_us": 2.88,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 0.96
+      },
+      {
+        "name": "__myl_Silu_0x262e604a8f6a52b3c1da78461fdec663",
+        "calls": 3,
+        "cuda_us": 2.72,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 0.9066666666666667
+      },
+      {
+        "name": "__myl_Silu_0x25ff29e587ed5a4a4d83f69006afbb97",
+        "calls": 3,
+        "cuda_us": 2.7190000000000003,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 0.9063333333333334
+      },
+      {
+        "name": "__myl_Tran_0xf4c04539f5753d6162a1cb35d380864a",
+        "calls": 3,
+        "cuda_us": 2.656,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 0.8853333333333334
+      },
+      {
+        "name": "__myl_SiluSiluAdd_0x3d684425e54eead3e9c85bdb5833e273",
+        "calls": 3,
+        "cuda_us": 2.56,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 0.8533333333333334
+      },
+      {
+        "name": "__myl_Silu_0x84a9cbc84f67f80d90bd0f5f6b63bd77",
+        "calls": 3,
+        "cuda_us": 2.528,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 0.8426666666666667
+      },
+      {
+        "name": "__myl_ReshAdd_0x4d166f0cce694c78caca58056b980d1f",
+        "calls": 3,
+        "cuda_us": 2.528,
+        "calls_per_forward": 1.0,
+        "cuda_us_per_forward": 0.8426666666666667
+      }
+    ],
+    "layer_group": [
+      {
+        "layer": "unattributed",
+        "group": "other",
+        "calls": 549,
+        "cuda_us": 2122.550999999999,
+        "calls_per_forward": 183.0,
+        "cuda_us_per_forward": 707.5169999999997
+      }
+    ]
+  },
+  "trace_memcpy_memset_count": 0,
+  "trace": {
+    "server_path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-deployment-profile-20261025-c2-stream-final/c2/trt_fp16.trace.json",
+    "bytes": 804899,
+    "sha256": "4d26cca81f757a5e640ddffbbb47bdc6309736bde7a22a772ad26cdb4efc532f"
+  }
+}
