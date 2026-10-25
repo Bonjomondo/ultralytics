@@ -104,6 +104,8 @@ def test_identical_run_names_in_different_cohorts_keep_separate_baselines(tmp_pa
 def test_saved_snapshot_regenerates_all_outputs_without_server_assets(tmp_path):
     root, output = tmp_path / "runs", tmp_path / "output"
     evidence(root / "5090-a")
+    write(root / "5090-a/5090-c0-query-full/q300/benchmark.json",
+          {"latency_ms": [1, 3, 8], "repetitions": 3, "median_ms": 3, "p95_ms": 8})
     data = report.collect(root)
     report.generate_reports(root, output, data=data)
     snapshot = report.read(output / "experiments.json")
@@ -111,13 +113,40 @@ def test_saved_snapshot_regenerates_all_outputs_without_server_assets(tmp_path):
     report.generate_reports(tmp_path / "missing-server-runs", second, data=snapshot)
     assert (second / "experiments.md").read_bytes() == (output / "experiments.md").read_bytes()
     with (output / "experiments.csv").open() as stream:
-        assert float(next(csv.DictReader(stream))["AP"]) == .2
+        row = next(csv.DictReader(stream))
+        assert float(row["AP"]) == .2
+        assert float(row["mean_ms"]) == 4 and float(row["fps_from_mean"]) == 250
     from openpyxl import load_workbook
     book = load_workbook(second / "experiments.xlsx")
     sheet = book["Query results"]
     index = list(report.FIELDS).index("AP") + 1
     assert sheet.cell(2, index).value == .2 and sheet.cell(2, index).number_format == "0.00%"
+    assert sheet.cell(2, list(report.FIELDS).index("fps_from_mean") + 1).value == 250
     assert len(list((second / "plots").glob("*.png"))) == 3
+
+
+def test_fps_uses_mean_latency_instead_of_median_or_average_reciprocals():
+    measured = report.timing({"latency_ms": [1, 3, 8], "repetitions": 3, "median_ms": 3})
+    assert measured["mean_ms"] == 4 and measured["fps_from_mean"] == 250
+    assert measured["median_ms"] == 3
+    assert measured["peak_allocated_mib"] is None
+
+
+@pytest.mark.parametrize("samples", [[], [0], [-1], [float("nan")], [float("inf")]])
+def test_invalid_latency_samples_never_generate_fps(samples):
+    with pytest.raises(ValueError):
+        report.timing({"latency_ms": samples})
+
+
+def test_missing_or_corrupt_timing_preserves_ap_and_leaves_fps_unavailable(tmp_path):
+    _, sweep = evidence(tmp_path / "5090-a")
+    write(sweep / "q300/benchmark.json", {"latency_ms": [1, 3], "repetitions": 200})
+    data = report.collect(tmp_path)
+    result = report.rows(data, main=True)
+    assert len(result) == 2 and result[0]["AP"] == .2
+    assert result[0]["benchmark_status"] == "invalid"
+    assert result[1]["benchmark_status"] == "not_measured"
+    assert all(row["fps_from_mean"] is None for row in result)
 
 
 def test_queue_refreshes_after_state_changes_and_retains_report_error(tmp_path, monkeypatch):

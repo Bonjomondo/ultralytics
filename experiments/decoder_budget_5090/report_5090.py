@@ -20,7 +20,8 @@ ROOT = Path(__file__).resolve().parents[2]
 METRICS = ("AP", "AP50", "AP75", "APs", "APm", "APl", "AR1", "AR10", "AR100", "ARs", "ARm", "ARl")
 BEST_KEY = "metrics/mAP50-95(B)"
 FIELDS = ("experiment", "run_id", "variant", "queries", "training_status", "evaluation_status", "epochs", "images",
-          *METRICS, "delta_AP_pp", "delta_APs_pp", "median_ms", "p95_ms", "peak_allocated_mib",
+          *METRICS, "delta_AP_pp", "delta_APs_pp", "mean_ms", "median_ms", "p95_ms", "fps_from_mean", "peak_allocated_mib",
+          "benchmark_status", "benchmark_reason",
           "coverage_05", "class_correct_coverage_05", "identity_passed", "scope", "reason")
 
 
@@ -41,6 +42,26 @@ def number(value):
 def valid_metric(value):
     value = number(value)
     return value if value is not None and 0 <= value <= 1 else None
+
+
+def timing(benchmark):
+    """Batch-one forward FPS is reciprocal mean latency, not mean(1/latency)."""
+    if not isinstance(benchmark, dict):
+        raise ValueError("计时记录必须为JSON对象")
+    samples = benchmark.get("latency_ms", [])
+    if not isinstance(samples, list) or not samples:
+        raise ValueError("缺少原始计时样本，不能计算平均延迟/FPS")
+    values = [number(value) for value in samples]
+    if any(value is None or value <= 0 for value in values):
+        raise ValueError("计时样本必须是有限正数")
+    if benchmark.get("repetitions", len(values)) != len(values):
+        raise ValueError("计时样本数与repetitions不一致")
+    mean = math.fsum(values) / len(values)
+    allocated = number(benchmark.get("peak_allocated_bytes"))
+    return {"mean_ms": mean, "fps_from_mean": 1000 / mean,
+            "median_ms": number(benchmark.get("median_ms")), "p95_ms": number(benchmark.get("p95_ms")),
+            "peak_allocated_mib": allocated / 2 ** 20 if allocated is not None else None,
+            "benchmark_scope": benchmark.get("scope"), "benchmark_status": "completed", "benchmark_reason": ""}
 
 
 def curves(path):
@@ -77,7 +98,8 @@ def blank_row(training, queries, scope, status, reason=""):
     row = {key: None for key in FIELDS}
     row.update(experiment=training["experiment"], run_id=training["run_id"], variant=training["variant"], queries=queries,
                training_status=training["training_status"], evaluation_status=status,
-               epochs=training["epochs"], scope=scope, reason=reason)
+               epochs=training["epochs"], scope=scope, reason=reason,
+               benchmark_status="not_measured", benchmark_reason="未保存计时结果")
     return row
 
 
@@ -135,10 +157,10 @@ def collect_sweep(path, training):
                        coverage_05=valid_metric(coverage["coverage"]),
                        class_correct_coverage_05=valid_metric(coverage["class_correct_coverage"]))
             if (query_dir / "benchmark.json").is_file():
-                benchmark = read(query_dir / "benchmark.json")
-                row.update(median_ms=number(benchmark.get("median_ms")), p95_ms=number(benchmark.get("p95_ms")),
-                           peak_allocated_mib=number(benchmark.get("peak_allocated_bytes", 0) / 2 ** 20),
-                           benchmark_scope=benchmark.get("scope"))
+                try:
+                    row.update(timing(read(query_dir / "benchmark.json")))
+                except (OSError, ValueError, TypeError) as error:
+                    row.update(benchmark_status="invalid", benchmark_reason=str(error))
         except (OSError, ValueError, KeyError, StopIteration, TypeError) as error:
             row.update({key: None for key in (*METRICS, "median_ms", "p95_ms", "peak_allocated_mib", "coverage_05", "class_correct_coverage_05")})
             row.update(evaluation_status="invalid", reason=str(error), identity_passed=False)
@@ -174,7 +196,7 @@ def collect(runs_dir):
             errors.append({"path": str(path), "error": str(error)})
     return {"schema": "5090.experiments-report.v1", "generated_at": datetime.now(ZoneInfo("Asia/Shanghai")).isoformat(),
             "runs_dir": str(runs_dir), "records": records, "collection_errors": errors,
-            "units": "JSON/CSV metrics are 0–1; delta is percentage points; latency is milliseconds"}
+            "units": "JSON/CSV metrics are 0–1; delta is percentage points; latency is milliseconds; fps_from_mean=1000/mean_ms for batch1 GPU forward"}
 
 
 def rows(data, *, main=False):
@@ -202,21 +224,23 @@ def markdown(data):
              "由 `experiments/decoder_budget_5090/report_5090.py` 自动扫描生成。正式COCO指标以百分数显示，Δ为相对同一checkpoint的300Q基线的百分点；JSON/CSV保留0–1原始指标。",
              "内部Precision/Recall/mAP仅描述训练日志。完整验证、8图门禁和1轮短跑分别展示；失败/中断后残留的评估标为stale，不进入主结果。",
              "不同checkpoint不直接计算Query压缩差值。单seed与单次计时不证明稳定收益；完整训练150轮不等于证明收敛。", "", "## 主结果：完整验证集", "",
-             "| 实验 / Run | Q | 图像 | 状态 | AP | AP50 | AP75 | APs | APm | APl | ΔAP (pp) | ΔAPs (pp) |",
-             "|---|---:|---:|---|---:|---:|---:|---:|---:|---:|---:|---:|"]
+             "| 实验 / Run | Q | 图像 | 状态 | AP | AP50 | AP75 | APs | APm | APl | ΔAP (pp) | ΔAPs (pp) | 平均GPU延迟 ms | GPU FPS |",
+             "|---|---:|---:|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|"]
     main = rows(data, main=True)
     for row in main:
         values = [safe(row["run_id"]), str(row["queries"]), str(row["images"]), row["evaluation_status"],
-                  *[display(row[key], True) for key in METRICS[:6]], display(row["delta_AP_pp"]), display(row["delta_APs_pp"])]
+                  *[display(row[key], True) for key in METRICS[:6]], display(row["delta_AP_pp"]), display(row["delta_APs_pp"]),
+                  display(row.get("mean_ms"), digits=3), display(row.get("fps_from_mean"))]
         lines.append("| " + " | ".join(values) + " |")
     if not main:
         lines += ["", "尚无通过身份门禁的完整验证结果。"]
-    lines += ["", "## 计时与候选覆盖", "", "计时为未融合FP32、batch1、50次预热/200次CUDA Event、无observer的GPU整网forward，不含传输/预处理/后处理；不是Decoder单独或端到端延迟。Coverage为Encoder候选多对多GT覆盖，不是COCO召回/AP。", "",
-              "| 实验 / Run | Q | 中位延迟 ms | P95 ms | 峰值allocated MiB | Coverage@.5 | 正确类Coverage@.5 |",
-              "|---|---:|---:|---:|---:|---:|---:|"]
+    lines += ["", "## 计时与候选覆盖", "", "计时为未融合FP32、batch1、50次预热/200次CUDA Event、无observer的GPU整网forward，不含传输/预处理/后处理；不是Decoder单独或端到端延迟。GPU FPS=1000/原始计时样本的平均延迟(ms)，不是中位延迟倒数或逐样本FPS的平均；没有计时样本时不估算FPS。Coverage为Encoder候选多对多GT覆盖，不是COCO召回/AP。", "",
+              "| 实验 / Run | Q | 平均延迟 ms | 中位延迟 ms | P95 ms | GPU FPS | 峰值allocated MiB | Coverage@.5 | 正确类Coverage@.5 |",
+              "|---|---:|---:|---:|---:|---:|---:|---:|---:|"]
     for row in main:
-        lines.append("| " + " | ".join([safe(row["run_id"]), str(row["queries"]), display(row["median_ms"], digits=3),
-                                      display(row["p95_ms"], digits=3), display(row["peak_allocated_mib"]),
+        lines.append("| " + " | ".join([safe(row["run_id"]), str(row["queries"]), display(row.get("mean_ms"), digits=3),
+                                      display(row["median_ms"], digits=3), display(row["p95_ms"], digits=3),
+                                      display(row.get("fps_from_mean")), display(row["peak_allocated_mib"]),
                                       display(row["coverage_05"], True), display(row["class_correct_coverage_05"], True)]) + " |")
     lines += ["", "## 训练、门禁与异常状态", "", "| 实验 | 训练状态 | 已记录轮数 / 请求 | 最佳内部mAP轮次 | 最佳内部mAP (%) | 正式全量结果行数 |", "|---|---|---:|---:|---:|---:|"]
     for record in data["records"]:
@@ -236,6 +260,8 @@ def markdown(data):
             for row in sweep["rows"]:
                 if row["evaluation_status"] != "completed":
                     lines.append(f"- Q{row['queries']}：{row['evaluation_status']}；{safe(row['reason'])}")
+                elif row.get("benchmark_status") not in (None, "completed"):
+                    lines.append(f"- Q{row['queries']}计时：{row['benchmark_status']}；{safe(row['benchmark_reason'])}；FPS显示为—。")
     if data["collection_errors"]:
         lines += ["", "## 无法读取的实验", ""]
         lines += [f"- `{item['path']}`：{safe(item['error'])}" for item in data["collection_errors"]]

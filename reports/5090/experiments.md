@@ -1,6 +1,6 @@
 # 5090 RT-DETR 实验汇总
 
-更新时间：2026-10-25T11:05:22.207502+08:00
+更新时间：2026-10-25T11:16:03.004330+08:00
 
 [CSV](experiments.csv) · [JSON](experiments.json) · [Excel](experiments.xlsx) · [产物校验](MANIFEST.sha256)
 
@@ -10,31 +10,31 @@
 
 ## 主结果：完整验证集
 
-| 实验 / Run | Q | 图像 | 状态 | AP | AP50 | AP75 | APs | APm | APl | ΔAP (pp) | ΔAPs (pp) |
-|---|---:|---:|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c0-150e-s0 | 300 | 548 | completed | 18.66 | 32.50 | 18.07 | 12.17 | 25.96 | 29.23 | 0.00 | 0.00 |
-| 5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c0-150e-s0 | 250 | 548 | completed | 18.53 | 32.21 | 17.93 | 12.05 | 25.78 | 28.96 | -0.13 | -0.12 |
-| 5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c0-150e-s0 | 200 | 548 | completed | 18.29 | 31.62 | 17.70 | 11.86 | 25.37 | 28.45 | -0.37 | -0.30 |
-| 5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c0-150e-s0 | 150 | 548 | completed | 17.73 | 30.38 | 17.33 | 11.53 | 24.54 | 28.02 | -0.93 | -0.64 |
-| 5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c2-150e-s0 | 300 | 548 | completed | 19.52 | 33.49 | 19.15 | 12.65 | 26.70 | 34.67 | 0.00 | 0.00 |
-| 5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c2-150e-s0 | 250 | 548 | completed | 19.35 | 33.13 | 19.03 | 12.55 | 26.52 | 34.40 | -0.17 | -0.11 |
-| 5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c2-150e-s0 | 200 | 548 | completed | 19.05 | 32.53 | 18.78 | 12.28 | 26.09 | 34.28 | -0.47 | -0.37 |
-| 5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c2-150e-s0 | 150 | 548 | completed | 18.50 | 31.37 | 18.35 | 11.89 | 25.37 | 34.08 | -1.02 | -0.77 |
+| 实验 / Run | Q | 图像 | 状态 | AP | AP50 | AP75 | APs | APm | APl | ΔAP (pp) | ΔAPs (pp) | 平均GPU延迟 ms | GPU FPS |
+|---|---:|---:|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c0-150e-s0 | 300 | 548 | completed | 18.66 | 32.50 | 18.07 | 12.17 | 25.96 | 29.23 | 0.00 | 0.00 | 7.332 | 136.39 |
+| 5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c0-150e-s0 | 250 | 548 | completed | 18.53 | 32.21 | 17.93 | 12.05 | 25.78 | 28.96 | -0.13 | -0.12 | 7.299 | 137.01 |
+| 5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c0-150e-s0 | 200 | 548 | completed | 18.29 | 31.62 | 17.70 | 11.86 | 25.37 | 28.45 | -0.37 | -0.30 | 7.293 | 137.11 |
+| 5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c0-150e-s0 | 150 | 548 | completed | 17.73 | 30.38 | 17.33 | 11.53 | 24.54 | 28.02 | -0.93 | -0.64 | 7.311 | 136.78 |
+| 5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c2-150e-s0 | 300 | 548 | completed | 19.52 | 33.49 | 19.15 | 12.65 | 26.70 | 34.67 | 0.00 | 0.00 | 7.363 | 135.82 |
+| 5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c2-150e-s0 | 250 | 548 | completed | 19.35 | 33.13 | 19.03 | 12.55 | 26.52 | 34.40 | -0.17 | -0.11 | 7.343 | 136.19 |
+| 5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c2-150e-s0 | 200 | 548 | completed | 19.05 | 32.53 | 18.78 | 12.28 | 26.09 | 34.28 | -0.47 | -0.37 | 7.327 | 136.49 |
+| 5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c2-150e-s0 | 150 | 548 | completed | 18.50 | 31.37 | 18.35 | 11.89 | 25.37 | 34.08 | -1.02 | -0.77 | 7.346 | 136.13 |
 
 ## 计时与候选覆盖
 
-计时为未融合FP32、batch1、50次预热/200次CUDA Event、无observer的GPU整网forward，不含传输/预处理/后处理；不是Decoder单独或端到端延迟。Coverage为Encoder候选多对多GT覆盖，不是COCO召回/AP。
+计时为未融合FP32、batch1、50次预热/200次CUDA Event、无observer的GPU整网forward，不含传输/预处理/后处理；不是Decoder单独或端到端延迟。GPU FPS=1000/原始计时样本的平均延迟(ms)，不是中位延迟倒数或逐样本FPS的平均；没有计时样本时不估算FPS。Coverage为Encoder候选多对多GT覆盖，不是COCO召回/AP。
 
-| 实验 / Run | Q | 中位延迟 ms | P95 ms | 峰值allocated MiB | Coverage@.5 | 正确类Coverage@.5 |
-|---|---:|---:|---:|---:|---:|---:|
-| 5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c0-150e-s0 | 300 | 7.329 | 7.369 | 212.90 | 78.68 | 65.39 |
-| 5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c0-150e-s0 | 250 | 7.298 | 7.328 | 212.90 | 77.28 | 64.25 |
-| 5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c0-150e-s0 | 200 | 7.290 | 7.329 | 212.90 | 74.98 | 62.43 |
-| 5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c0-150e-s0 | 150 | 7.308 | 7.337 | 212.90 | 71.48 | 59.59 |
-| 5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c2-150e-s0 | 300 | 7.363 | 7.388 | 219.31 | 79.12 | 65.98 |
-| 5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c2-150e-s0 | 250 | 7.342 | 7.368 | 219.31 | 77.62 | 64.77 |
-| 5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c2-150e-s0 | 200 | 7.324 | 7.356 | 219.31 | 75.43 | 63.03 |
-| 5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c2-150e-s0 | 150 | 7.343 | 7.375 | 219.31 | 71.85 | 60.18 |
+| 实验 / Run | Q | 平均延迟 ms | 中位延迟 ms | P95 ms | GPU FPS | 峰值allocated MiB | Coverage@.5 | 正确类Coverage@.5 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| 5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c0-150e-s0 | 300 | 7.332 | 7.329 | 7.369 | 136.39 | 212.90 | 78.68 | 65.39 |
+| 5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c0-150e-s0 | 250 | 7.299 | 7.298 | 7.328 | 137.01 | 212.90 | 77.28 | 64.25 |
+| 5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c0-150e-s0 | 200 | 7.293 | 7.290 | 7.329 | 137.11 | 212.90 | 74.98 | 62.43 |
+| 5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c0-150e-s0 | 150 | 7.311 | 7.308 | 7.337 | 136.78 | 212.90 | 71.48 | 59.59 |
+| 5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c2-150e-s0 | 300 | 7.363 | 7.363 | 7.388 | 135.82 | 219.31 | 79.12 | 65.98 |
+| 5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c2-150e-s0 | 250 | 7.343 | 7.342 | 7.368 | 136.19 | 219.31 | 77.62 | 64.77 |
+| 5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c2-150e-s0 | 200 | 7.327 | 7.324 | 7.356 | 136.49 | 219.31 | 75.43 | 63.03 |
+| 5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c2-150e-s0 | 150 | 7.346 | 7.343 | 7.375 | 136.13 | 219.31 | 71.85 | 60.18 |
 
 ## 训练、门禁与异常状态
 
@@ -72,6 +72,10 @@ checkpoint SHA：`adeaec17109a3b3ac6b8a6e521fb6cc3c2bdb3cd124ad6eedecc930d35a03d
 评估：`/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_budget_5090/5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c0-150e-s0-query-gate`；范围：`subset_engineering_check`；状态：`completed`。
 checkpoint SHA：`adeaec17109a3b3ac6b8a6e521fb6cc3c2bdb3cd124ad6eedecc930d35a03d2e`；GT SHA：`6f8b8686864f1485ab172de9339f7049593f74766f6654c6e980a6c00d810371`。
 
+- Q300计时：not_measured；未保存计时结果；FPS显示为—。
+- Q250计时：not_measured；未保存计时结果；FPS显示为—。
+- Q200计时：not_measured；未保存计时结果；FPS显示为—。
+- Q150计时：not_measured；未保存计时结果；FPS显示为—。
 ### 5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c0-1e-gate-s0
 
 角色：`engineering_smoke_not_architecture_result`；训练状态：`completed`；seed：0。
@@ -83,6 +87,10 @@ GPU：NVIDIA GeForce RTX 5090 D v2；PyTorch：2.14.0+cu130；源码commit：`fc
 评估：`/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_budget_5090/5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c0-1e-gate-s0-query-gate`；范围：`subset_engineering_check`；状态：`completed`。
 checkpoint SHA：`331f1b25b4408e7dd67e83782f4d59ca10e5e542ed8bd3ed69057a8890a651bb`；GT SHA：`6f8b8686864f1485ab172de9339f7049593f74766f6654c6e980a6c00d810371`。
 
+- Q300计时：not_measured；未保存计时结果；FPS显示为—。
+- Q250计时：not_measured；未保存计时结果；FPS显示为—。
+- Q200计时：not_measured；未保存计时结果；FPS显示为—。
+- Q150计时：not_measured；未保存计时结果；FPS显示为—。
 ### 5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c2-150e-s0
 
 角色：`paired_150e_screen`；训练状态：`completed`；seed：0。
@@ -97,6 +105,10 @@ checkpoint SHA：`ac2b02c45596bb816c4a42799d2b97ff02d62a4dc153bc5816502f02e936a5
 评估：`/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_budget_5090/5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c2-150e-s0-query-gate`；范围：`subset_engineering_check`；状态：`completed`。
 checkpoint SHA：`ac2b02c45596bb816c4a42799d2b97ff02d62a4dc153bc5816502f02e936a5d6`；GT SHA：`6f8b8686864f1485ab172de9339f7049593f74766f6654c6e980a6c00d810371`。
 
+- Q300计时：not_measured；未保存计时结果；FPS显示为—。
+- Q250计时：not_measured；未保存计时结果；FPS显示为—。
+- Q200计时：not_measured；未保存计时结果；FPS显示为—。
+- Q150计时：not_measured；未保存计时结果；FPS显示为—。
 ### 5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c2-1e-gate-s0
 
 角色：`engineering_smoke_not_architecture_result`；训练状态：`completed`；seed：0。
@@ -108,6 +120,10 @@ GPU：NVIDIA GeForce RTX 5090 D v2；PyTorch：2.14.0+cu130；源码commit：`fc
 评估：`/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_budget_5090/5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c2-1e-gate-s0-query-gate`；范围：`subset_engineering_check`；状态：`completed`。
 checkpoint SHA：`4ca42ed5a7f2ce5754bdd61cb34773a16f6329d321209b232a55b981da7eeac8`；GT SHA：`6f8b8686864f1485ab172de9339f7049593f74766f6654c6e980a6c00d810371`。
 
+- Q300计时：not_measured；未保存计时结果；FPS显示为—。
+- Q250计时：not_measured；未保存计时结果；FPS显示为—。
+- Q200计时：not_measured；未保存计时结果；FPS显示为—。
+- Q150计时：not_measured；未保存计时结果；FPS显示为—。
 
 ## 图表
 

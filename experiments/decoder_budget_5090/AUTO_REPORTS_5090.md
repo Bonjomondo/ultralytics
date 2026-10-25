@@ -31,7 +31,7 @@ bash experiments/decoder_budget_5090/update_reports_5090.sh
 - 主结果只收录正式训练角色、完整验证集、完成且身份核验通过的条件。8图接入门禁与1轮短跑保留在实验说明/结构化文件中，失败/中断后残留的AP标记为 `stale`，不作为有效结果显示。
 - AP、AP50、AP75、APs、APm、APl和12项COCO指标；同一checkpoint的300Q与其他预算的ΔAP/ΔAPs。不同队列用包含批次名的 `run_id` 区分，不合并同名run，不跨checkpoint计算Query差值。
 - 原生观测/卸载恢复门禁、checkpoint/manifest/覆盖分析身份核验、训练轮数与最佳内部mAP轮次；训练内部Precision/Recall/mAP与正式COCOeval分开。
-- 未融合FP32 batch1整网forward中位/P95延迟、峰值allocated显存，以及Encoder Coverage@IoU.5和正确类Coverage。采集batch2与计时batch1分别标注；Coverage不当作正式召回或AP。
+- 未融合FP32 batch1整网forward平均/中位/P95延迟、GPU FPS、峰值allocated显存，以及Encoder Coverage@IoU.5和正确类Coverage。主结果表也直接显示平均GPU延迟与FPS。FPS由保存的原始样本计算为 `1000 / mean_ms`，不取中位延迟倒数、不平均逐次FPS；没有有效样本时显示为空。采集batch2与计时batch1分别标注，不包含传输/预处理/后处理；Coverage不当作正式召回或AP。
 - 训练内部mAP曲线、Query AP/APs曲线和Query计时曲线。仅扫描保存的数据，不把小样本结论外推到全量，不将单次细小时延差当作稳定加速。
 
 Markdown/Excel以百分数显示检测指标；JSON/CSV保存0–1原始值，差值单位为百分点。COCO的 `-1` 指标显示为空，不当作负AP或零AP。所有仅服务器保存的路径在Markdown内以文字列出，图表使用报告内的相对链接。
