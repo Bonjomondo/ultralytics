@@ -1,6 +1,6 @@
 {
   "collection_errors": [],
-  "generated_at": "2026-10-25T11:16:03.004330+08:00",
+  "generated_at": "2026-10-25T12:11:51.428199+08:00",
   "records": [
     {
       "best_epoch": 1.0,
@@ -7151,5 +7151,468 @@
   ],
   "runs_dir": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_budget_5090",
   "schema": "5090.experiments-report.v1",
+  "stage_assessment": {
+    "assessment_sha256": "88d635f00ee42996704ce1bdc00c52d2c741c1d87ac528a490e50b2e7f5f9dd9",
+    "environment": {
+      "autocast": false,
+      "capability": [
+        12,
+        0
+      ],
+      "cuda_available": true,
+      "cuda_device_index": 0,
+      "cudnn": 92400,
+      "cudnn_benchmark": false,
+      "cudnn_deterministic": false,
+      "cudnn_tf32": false,
+      "deterministic_algorithms": false,
+      "device_requested": "cuda:0",
+      "dtype": "float32",
+      "executable": "/tmp/zhj-uav-5090-venv/bin/python",
+      "gpu": "NVIDIA GeForce RTX 5090 D v2",
+      "matmul_tf32": false,
+      "nvidia_smi": {
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "0, NVIDIA GeForce RTX 5090 D v2, GPU-49e248ed-74af-bad5-bc6e-1c5095289883, 580.178.04"
+      },
+      "python": "3.11.16",
+      "torch": "2.14.0+cu130",
+      "torch_cuda": "13.0",
+      "total_memory_bytes": 25138495488
+    },
+    "evidence": "docs/experiment_reports/2026-10-24_5090_baselines/raw/stage_latency_5090.json",
+    "identity": "docs/experiment_reports/2026-10-24_5090_baselines/raw/stage_latency_identity_5090.json",
+    "measurement_started_at": "2026-10-25T11:50:17+08:00",
+    "models": {
+      "c0": {
+        "checkpoint_sha256": "adeaec17109a3b3ac6b8a6e521fb6cc3c2bdb3cd124ad6eedecc930d35a03d2e",
+        "run_id": "5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c0-150e-s0",
+        "summary": {
+          "150": {
+            "bare_whole": {
+              "max_ms": 7.376512050628662,
+              "mean_ms": 7.319018753051758,
+              "median_ms": 7.318351984024048,
+              "min_ms": 7.283135890960693,
+              "samples": 250
+            },
+            "instrumentation_overhead_percent": 0.41616252141079,
+            "staged_whole": {
+              "max_ms": 7.464288234710693,
+              "mean_ms": 7.349477766036987,
+              "median_ms": 7.347791910171509,
+              "min_ms": 7.301760196685791,
+              "samples": 250
+            },
+            "stages": {
+              "backbone_0_to_4": {
+                "fraction_of_staged_forward": 0.39700596183448744,
+                "max_ms": 2.937472105026245,
+                "mean_ms": 2.9177864894866943,
+                "median_ms": 2.918031930923462,
+                "min_ms": 2.8993918895721436,
+                "round_mean_max_ms": 2.9184518384933473,
+                "round_mean_min_ms": 2.9171679830551147,
+                "samples": 250
+              },
+              "decoder_and_prediction_heads": {
+                "fraction_of_staged_forward": 0.2025854528776372,
+                "max_ms": 1.5816320180892944,
+                "mean_ms": 1.4888972816467285,
+                "median_ms": 1.4864479899406433,
+                "min_ms": 1.4625600576400757,
+                "round_mean_max_ms": 1.4946092820167542,
+                "round_mean_min_ms": 1.484351363182068,
+                "samples": 250
+              },
+              "input_projection_and_query_selection": {
+                "fraction_of_staged_forward": 0.04896778082097801,
+                "max_ms": 0.3678080141544342,
+                "mean_ms": 0.3598876163959503,
+                "median_ms": 0.35974401235580444,
+                "min_ms": 0.3548800051212311,
+                "round_mean_max_ms": 0.3603743994235992,
+                "round_mean_min_ms": 0.35929792165756225,
+                "samples": 250
+              },
+              "neck_encoder_5_to_23": {
+                "fraction_of_staged_forward": 0.3473353864127789,
+                "max_ms": 2.5763840675354004,
+                "mean_ms": 2.552733699798584,
+                "median_ms": 2.5528318881988525,
+                "min_ms": 2.531327962875366,
+                "round_mean_max_ms": 2.5540198278427124,
+                "round_mean_min_ms": 2.549329924583435,
+                "samples": 250
+              },
+              "output_assembly": {
+                "fraction_of_staged_forward": 0.004105417142751357,
+                "max_ms": 0.036959998309612274,
+                "mean_ms": 0.030172672010958194,
+                "median_ms": 0.029999999329447746,
+                "min_ms": 0.028575999662280083,
+                "round_mean_max_ms": 0.030611199997365474,
+                "round_mean_min_ms": 0.029841280020773412,
+                "samples": 250
+              }
+            }
+          },
+          "200": {
+            "bare_whole": {
+              "max_ms": 7.4877119064331055,
+              "mean_ms": 7.3135242252349855,
+              "median_ms": 7.310191869735718,
+              "min_ms": 7.264832019805908,
+              "samples": 250
+            },
+            "instrumentation_overhead_percent": 0.48150116727641024,
+            "staged_whole": {
+              "max_ms": 7.596127986907959,
+              "mean_ms": 7.348738929748535,
+              "median_ms": 7.345871925354004,
+              "min_ms": 7.310239791870117,
+              "samples": 250
+            },
+            "stages": {
+              "backbone_0_to_4": {
+                "fraction_of_staged_forward": 0.39706735419972017,
+                "max_ms": 2.9333438873291016,
+                "mean_ms": 2.917944323539734,
+                "median_ms": 2.9183520078659058,
+                "min_ms": 2.8991360664367676,
+                "round_mean_max_ms": 2.9186956787109377,
+                "round_mean_min_ms": 2.9171264028549193,
+                "samples": 250
+              },
+              "decoder_and_prediction_heads": {
+                "fraction_of_staged_forward": 0.20239626504915847,
+                "max_ms": 1.6331199407577515,
+                "mean_ms": 1.4873573122024537,
+                "median_ms": 1.4841600060462952,
+                "min_ms": 1.4564800262451172,
+                "round_mean_max_ms": 1.4905644822120667,
+                "round_mean_min_ms": 1.4805343985557555,
+                "samples": 250
+              },
+              "input_projection_and_query_selection": {
+                "fraction_of_staged_forward": 0.048798611410001975,
+                "max_ms": 0.3854080140590668,
+                "mean_ms": 0.35860825538635255,
+                "median_ms": 0.35815998911857605,
+                "min_ms": 0.35177600383758545,
+                "round_mean_max_ms": 0.35923391819000244,
+                "round_mean_min_ms": 0.3579865580797195,
+                "samples": 250
+              },
+              "neck_encoder_5_to_23": {
+                "fraction_of_staged_forward": 0.3476489946793324,
+                "max_ms": 2.6122241020202637,
+                "mean_ms": 2.5547817010879514,
+                "median_ms": 2.5538558959960938,
+                "min_ms": 2.529279947280884,
+                "round_mean_max_ms": 2.5586483240127564,
+                "round_mean_min_ms": 2.5505177688598635,
+                "samples": 250
+              },
+              "output_assembly": {
+                "fraction_of_staged_forward": 0.004088777721611602,
+                "max_ms": 0.03542400151491165,
+                "mean_ms": 0.030047360017895697,
+                "median_ms": 0.029888000339269638,
+                "min_ms": 0.028416000306606293,
+                "round_mean_max_ms": 0.030374400168657303,
+                "round_mean_min_ms": 0.029644159972667693,
+                "samples": 250
+              }
+            }
+          },
+          "300": {
+            "bare_whole": {
+              "max_ms": 7.395904064178467,
+              "mean_ms": 7.328705795288086,
+              "median_ms": 7.328160047531128,
+              "min_ms": 7.288928031921387,
+              "samples": 250
+            },
+            "instrumentation_overhead_percent": 0.5305620964962676,
+            "staged_whole": {
+              "max_ms": 7.4627838134765625,
+              "mean_ms": 7.367589130401611,
+              "median_ms": 7.365695953369141,
+              "min_ms": 7.320703983306885,
+              "samples": 250
+            },
+            "stages": {
+              "backbone_0_to_4": {
+                "fraction_of_staged_forward": 0.3961563457554934,
+                "max_ms": 2.938783884048462,
+                "mean_ms": 2.9187171869277955,
+                "median_ms": 2.9186720848083496,
+                "min_ms": 2.903264045715332,
+                "round_mean_max_ms": 2.9207916831970215,
+                "round_mean_min_ms": 2.9175603199005127,
+                "samples": 250
+              },
+              "decoder_and_prediction_heads": {
+                "fraction_of_staged_forward": 0.20376635960118833,
+                "max_ms": 1.5670080184936523,
+                "mean_ms": 1.501266816139221,
+                "median_ms": 1.4981440305709839,
+                "min_ms": 1.4751360416412354,
+                "round_mean_max_ms": 1.5038329553604126,
+                "round_mean_min_ms": 1.497284483909607,
+                "samples": 250
+              },
+              "input_projection_and_query_selection": {
+                "fraction_of_staged_forward": 0.04929895766929938,
+                "max_ms": 0.37036800384521484,
+                "mean_ms": 0.3632144646644592,
+                "median_ms": 0.3629920035600662,
+                "min_ms": 0.35734400153160095,
+                "round_mean_max_ms": 0.36379840135574343,
+                "round_mean_min_ms": 0.3626553589105606,
+                "samples": 250
+              },
+              "neck_encoder_5_to_23": {
+                "fraction_of_staged_forward": 0.3466722569319518,
+                "max_ms": 2.584575891494751,
+                "mean_ms": 2.5541387519836425,
+                "median_ms": 2.5538558959960938,
+                "min_ms": 2.5221118927001953,
+                "round_mean_max_ms": 2.560000009536743,
+                "round_mean_min_ms": 2.550784010887146,
+                "samples": 250
+              },
+              "output_assembly": {
+                "fraction_of_staged_forward": 0.004106079134962983,
+                "max_ms": 0.03481600061058998,
+                "mean_ms": 0.030251904003322123,
+                "median_ms": 0.029920000582933426,
+                "min_ms": 0.028063999488949776,
+                "round_mean_max_ms": 0.03153728000819683,
+                "round_mean_min_ms": 0.029773440062999725,
+                "samples": 250
+              }
+            }
+          }
+        }
+      },
+      "c2": {
+        "checkpoint_sha256": "ac2b02c45596bb816c4a42799d2b97ff02d62a4dc153bc5816502f02e936a5d6",
+        "run_id": "5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c2-150e-s0",
+        "summary": {
+          "150": {
+            "bare_whole": {
+              "max_ms": 7.539711952209473,
+              "mean_ms": 7.387386743545532,
+              "median_ms": 7.385023832321167,
+              "min_ms": 7.344064235687256,
+              "samples": 250
+            },
+            "instrumentation_overhead_percent": 0.520085828797634,
+            "staged_whole": {
+              "max_ms": 7.677728176116943,
+              "mean_ms": 7.425807495117187,
+              "median_ms": 7.421759843826294,
+              "min_ms": 7.372672080993652,
+              "samples": 250
+            },
+            "stages": {
+              "backbone_0_to_4": {
+                "fraction_of_staged_forward": 0.39333592573544296,
+                "max_ms": 2.938015937805176,
+                "mean_ms": 2.92083686542511,
+                "median_ms": 2.9211840629577637,
+                "min_ms": 2.9032320976257324,
+                "round_mean_max_ms": 2.9227744054794313,
+                "round_mean_min_ms": 2.9194752025604247,
+                "samples": 250
+              },
+              "decoder_and_prediction_heads": {
+                "fraction_of_staged_forward": 0.20301869293011524,
+                "max_ms": 1.640928030014038,
+                "mean_ms": 1.5075777316093444,
+                "median_ms": 1.5042080283164978,
+                "min_ms": 1.4744960069656372,
+                "round_mean_max_ms": 1.5132115292549133,
+                "round_mean_min_ms": 1.4979449653625487,
+                "samples": 250
+              },
+              "input_projection_and_query_selection": {
+                "fraction_of_staged_forward": 0.04805623092434967,
+                "max_ms": 0.37990400195121765,
+                "mean_ms": 0.3568563197851181,
+                "median_ms": 0.35607999563217163,
+                "min_ms": 0.3493120074272156,
+                "round_mean_max_ms": 0.3573023998737335,
+                "round_mean_min_ms": 0.3562918388843536,
+                "samples": 250
+              },
+              "neck_encoder_5_to_23": {
+                "fraction_of_staged_forward": 0.3513373584467128,
+                "max_ms": 2.6849279403686523,
+                "mean_ms": 2.608963589668274,
+                "median_ms": 2.60915207862854,
+                "min_ms": 2.5825281143188477,
+                "round_mean_max_ms": 2.6130022382736207,
+                "round_mean_min_ms": 2.6068172883987426,
+                "samples": 250
+              },
+              "output_assembly": {
+                "fraction_of_staged_forward": 0.004251792421903903,
+                "max_ms": 0.03840000182390213,
+                "mean_ms": 0.03157299203425646,
+                "median_ms": 0.031231999397277832,
+                "min_ms": 0.029823999851942062,
+                "round_mean_max_ms": 0.03197887998074293,
+                "round_mean_min_ms": 0.03126080010086298,
+                "samples": 250
+              }
+            }
+          },
+          "200": {
+            "bare_whole": {
+              "max_ms": 7.488768100738525,
+              "mean_ms": 7.389371778488159,
+              "median_ms": 7.387360095977783,
+              "min_ms": 7.333151817321777,
+              "samples": 250
+            },
+            "instrumentation_overhead_percent": 0.39690643038874374,
+            "staged_whole": {
+              "max_ms": 7.577184200286865,
+              "mean_ms": 7.41870067024231,
+              "median_ms": 7.416287899017334,
+              "min_ms": 7.369503974914551,
+              "samples": 250
+            },
+            "stages": {
+              "backbone_0_to_4": {
+                "fraction_of_staged_forward": 0.3936941783137034,
+                "max_ms": 2.940256118774414,
+                "mean_ms": 2.920699264526367,
+                "median_ms": 2.9209920167922974,
+                "min_ms": 2.9014720916748047,
+                "round_mean_max_ms": 2.9219417667388914,
+                "round_mean_min_ms": 2.9195526218414307,
+                "samples": 250
+              },
+              "decoder_and_prediction_heads": {
+                "fraction_of_staged_forward": 0.20179977099410823,
+                "max_ms": 1.553887963294983,
+                "mean_ms": 1.4970920963287353,
+                "median_ms": 1.4950720071792603,
+                "min_ms": 1.4735679626464844,
+                "round_mean_max_ms": 1.5015232038497925,
+                "round_mean_min_ms": 1.491112961769104,
+                "samples": 250
+              },
+              "input_projection_and_query_selection": {
+                "fraction_of_staged_forward": 0.04863185180769043,
+                "max_ms": 0.3699199855327606,
+                "mean_ms": 0.3607851516008377,
+                "median_ms": 0.36022400856018066,
+                "min_ms": 0.35385599732398987,
+                "round_mean_max_ms": 0.3628364795446396,
+                "round_mean_min_ms": 0.35988224029541016,
+                "samples": 250
+              },
+              "neck_encoder_5_to_23": {
+                "fraction_of_staged_forward": 0.3516833137661437,
+                "max_ms": 2.7607040405273438,
+                "mean_ms": 2.609033235549927,
+                "median_ms": 2.6086400747299194,
+                "min_ms": 2.5825281143188477,
+                "round_mean_max_ms": 2.6116301012039185,
+                "round_mean_min_ms": 2.6063872241973876,
+                "samples": 250
+              },
+              "output_assembly": {
+                "fraction_of_staged_forward": 0.004190888043872021,
+                "max_ms": 0.03731200098991394,
+                "mean_ms": 0.031090943939983844,
+                "median_ms": 0.030751999467611313,
+                "min_ms": 0.029472000896930695,
+                "round_mean_max_ms": 0.031337599866092206,
+                "round_mean_min_ms": 0.03089855995029211,
+                "samples": 250
+              }
+            }
+          },
+          "300": {
+            "bare_whole": {
+              "max_ms": 7.499743938446045,
+              "mean_ms": 7.394399616241455,
+              "median_ms": 7.394432067871094,
+              "min_ms": 7.344607830047607,
+              "samples": 250
+            },
+            "instrumentation_overhead_percent": 0.4993789733507503,
+            "staged_whole": {
+              "max_ms": 7.505472183227539,
+              "mean_ms": 7.431325693130493,
+              "median_ms": 7.430783987045288,
+              "min_ms": 7.369855880737305,
+              "samples": 250
+            },
+            "stages": {
+              "backbone_0_to_4": {
+                "fraction_of_staged_forward": 0.3931170888243577,
+                "max_ms": 2.939903974533081,
+                "mean_ms": 2.9213811225891115,
+                "median_ms": 2.9218720197677612,
+                "min_ms": 2.905440092086792,
+                "round_mean_max_ms": 2.9233247947692873,
+                "round_mean_min_ms": 2.9197958517074585,
+                "samples": 250
+              },
+              "decoder_and_prediction_heads": {
+                "fraction_of_staged_forward": 0.2032808073927482,
+                "max_ms": 1.5712640285491943,
+                "mean_ms": 1.5106458868980408,
+                "median_ms": 1.508895993232727,
+                "min_ms": 1.4753919839859009,
+                "round_mean_max_ms": 1.522611198425293,
+                "round_mean_min_ms": 1.5039596796035766,
+                "samples": 250
+              },
+              "input_projection_and_query_selection": {
+                "fraction_of_staged_forward": 0.04828637027798755,
+                "max_ms": 0.36825600266456604,
+                "mean_ms": 0.3588317440748215,
+                "median_ms": 0.35836800932884216,
+                "min_ms": 0.3533119857311249,
+                "round_mean_max_ms": 0.3597600001096726,
+                "round_mean_min_ms": 0.358056321144104,
+                "samples": 250
+              },
+              "neck_encoder_5_to_23": {
+                "fraction_of_staged_forward": 0.35107040681725876,
+                "max_ms": 2.6408960819244385,
+                "mean_ms": 2.6089185342788697,
+                "median_ms": 2.60915207862854,
+                "min_ms": 2.579456090927124,
+                "round_mean_max_ms": 2.6122854280471803,
+                "round_mean_min_ms": 2.6055679988861082,
+                "samples": 250
+              },
+              "output_assembly": {
+                "fraction_of_staged_forward": 0.004245328133384128,
+                "max_ms": 0.03686400130391121,
+                "mean_ms": 0.031548416033387185,
+                "median_ms": 0.031199999153614044,
+                "min_ms": 0.029664000496268272,
+                "round_mean_max_ms": 0.03188735995441675,
+                "round_mean_min_ms": 0.031091840043663978,
+                "samples": 250
+              }
+            }
+          }
+        }
+      }
+    },
+    "scope": "Within the same native unfused FP32 batch1 forward, 640 square; CUDA stream elapsed includes dispatch-induced idle gaps, not pure kernel busy time; no pre/postprocess or transfers"
+  },
   "units": "JSON/CSV metrics are 0\u20131; delta is percentage points; latency is milliseconds; fps_from_mean=1000/mean_ms for batch1 GPU forward"
 }

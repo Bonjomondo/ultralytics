@@ -16,6 +16,11 @@ from pathlib import Path
 import tempfile
 from zoneinfo import ZoneInfo
 
+if __package__:
+    from . import stage_latency_5090 as stage_latency
+else:
+    import stage_latency_5090 as stage_latency
+
 ROOT = Path(__file__).resolve().parents[2]
 METRICS = ("AP", "AP50", "AP75", "APs", "APm", "APl", "AR1", "AR10", "AR100", "ARs", "ARm", "ARl")
 BEST_KEY = "metrics/mAP50-95(B)"
@@ -194,8 +199,14 @@ def collect(runs_dir):
             records.append(record)
         except (OSError, ValueError, KeyError, TypeError) as error:
             errors.append({"path": str(path), "error": str(error)})
+    assessment = None
+    try:
+        assessment = stage_latency.collect(records)
+    except (OSError, ValueError, KeyError, TypeError) as error:
+        errors.append({"path": stage_latency.EVIDENCE, "error": str(error)})
     return {"schema": "5090.experiments-report.v1", "generated_at": datetime.now(ZoneInfo("Asia/Shanghai")).isoformat(),
             "runs_dir": str(runs_dir), "records": records, "collection_errors": errors,
+            "stage_assessment": assessment,
             "units": "JSON/CSV metrics are 0–1; delta is percentage points; latency is milliseconds; fps_from_mean=1000/mean_ms for batch1 GPU forward"}
 
 
@@ -242,6 +253,7 @@ def markdown(data):
                                       display(row["median_ms"], digits=3), display(row["p95_ms"], digits=3),
                                       display(row.get("fps_from_mean")), display(row["peak_allocated_mib"]),
                                       display(row["coverage_05"], True), display(row["class_correct_coverage_05"], True)]) + " |")
+    lines += stage_latency.markdown(data)
     lines += ["", "## 训练、门禁与异常状态", "", "| 实验 | 训练状态 | 已记录轮数 / 请求 | 最佳内部mAP轮次 | 最佳内部mAP (%) | 正式全量结果行数 |", "|---|---|---:|---:|---:|---:|"]
     for record in data["records"]:
         count = sum(row["run_id"] == record["run_id"] for row in main)
@@ -327,6 +339,13 @@ def excel(data, path):
     training.append(list(keys))
     for record in data["records"]:
         training.append([record.get(key) for key in keys])
+    stages = book.create_sheet("Stage latency")
+    stages.append(list(stage_latency.FIELDS))
+    for row in stage_latency.rows(data):
+        stages.append([row[key] for key in stage_latency.FIELDS])
+        stages.cell(stages.max_row, stage_latency.FIELDS.index("fraction_of_staged_forward") + 1).number_format = "0.00%"
+    stages.freeze_panes = "A2"
+    stages.auto_filter.ref = stages.dimensions
     book.save(path)
 
 
@@ -346,6 +365,10 @@ def generate_reports(runs_dir, output, *, data=None):
                 writer = csv.DictWriter(stream, fieldnames=FIELDS, extrasaction="ignore")
                 writer.writeheader()
                 writer.writerows(rows(data))
+            with (stage / "stage_latency.csv").open("w", newline="") as stream:
+                writer = csv.DictWriter(stream, fieldnames=stage_latency.FIELDS)
+                writer.writeheader()
+                writer.writerows(stage_latency.rows(data))
             plots(data, stage)
             excel(data, stage / "experiments.xlsx")
             (stage / "experiments.md").write_text(markdown(data))

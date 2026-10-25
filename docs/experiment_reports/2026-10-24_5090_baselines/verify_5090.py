@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 import re
 import subprocess
+import sys
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
@@ -38,6 +39,10 @@ def main():
         expected, relative = line.split("  ", 1)
         path = (ROOT / relative).resolve()
         assert path.is_relative_to(ROOT) and matches_source(path, expected), relative
+    sys.path.insert(0, str(ROOT))
+    from experiments.decoder_budget_5090.stage_latency_5090 import load_archive
+    stages = load_archive(ROOT)
+    assert set(stages["models"]) == {"c0", "c2"}
     audit = read("asset_audit_5090.json")
     assert audit["status"] == "passed" and not audit["errors"]
     assert audit["splits"]["train"]["images"] == 6471
@@ -70,7 +75,7 @@ def main():
         target = target.split("#", 1)[0]
         if target and not target.startswith(("http:", "https:")):
             assert (HERE / target).exists(), target
-    print(f"Verified {len(manifest)} files and the real-data 5090 gates; full150 status is an archived observation")
+    print(f"Verified {len(manifest)} files, stage timing evidence and the real-data 5090 gates; full150 status is an archived observation")
 
 
 if __name__ == "__main__":

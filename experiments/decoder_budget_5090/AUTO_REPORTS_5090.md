@@ -47,3 +47,12 @@ Markdown/Excel以百分数显示检测指标；JSON/CSV保存0–1原始值，�
 ```
 
 该模式保留快照时间，不假装检查远端服务器的实时状态。原实验的冻结源码SHA保持不变；后续队列增加了自动报告功能，需以新代码新建实验，不通过改写旧冻结清单恢复训练。
+
+
+## 分段延迟归档接入
+
+2026-10-25的C0/C2分段评估保存在[基线报告](../../docs/experiment_reports/2026-10-24_5090_baselines/README.md#5090分段延迟与瓶颈评估)。刷新时由 `stage_latency_5090.py` 校验已归档JSON的SHA、执行脚本SHA、五轮三预算双模式的完整性、逐次分段之和、统计摘要与等价/恢复门禁；仅关联best checkpoint SHA完全匹配的已完成正式训练。没有匹配训练时不显示该实验的分段结果，部分匹配/重复身份/证据损坏会写入 `collection_errors`，不影响其他有效AP的展示。
+
+分段结果自动进入Markdown、`experiments.json` 的 `stage_assessment`、`stage_latency.csv`（30行）及Excel的 `Stage latency` 页。CSV/JSON的 `fraction_of_staged_forward` 为0–1占比；`instrumentation_overhead_percent` 已是百分数，`0.53`表示0.53%。各段五轮均值范围与250次样本数单独保留；完整逐次样本仅归档一份，不重复塞进汇总快照。旧快照没有该字段时正常生成空的分段CSV/Excel页。
+
+这是一张固定真实输入、FP32 batch1未融合路径上的独立诊断，不替换原Query Sweep整网计时，不表示端到端或纯GPU忙碌时间。报告重生成只读取归档证据，不自动发起GPU测试；`--from-json` 完全使用已保存的分段摘要，不访问原始归档或服务器资产。
