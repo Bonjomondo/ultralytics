@@ -234,3 +234,7 @@ results.csv
 !/docs/experiment_reports/2026-10-24_5090_detrscope/raw/pytest_*.log
 
 !/docs/experiment_reports/2026-10-24_5090_baselines/raw/pytest_5090.log
+
+# Small generated 5090 reports are shareable; only the refresh lock is local.
+/reports/5090/.report.lock
+!/reports/5090/plots/*.png

@@ -2,7 +2,7 @@
 
 2026-10-24，Asia/Shanghai。分支 `5090-detrscope-query-budget`。本次在 RTX 5090 D v2 上重建 C0/C2 的同机对照，实验与日志名称均以 `5090-` 开头；4090历史结果继续单列。
 
-当前状态：**真实数据短跑及8图四档Query门禁全部通过，C0的150轮正式训练已完成第1轮并进入第2轮，loss及健康指标有限、checkpoint正常；C2和后续评估按队列顺序自动执行。** 完整训练和正式评估完成前，不报告结构收益、压缩收益或加速比例。
+当前状态：**C0/C2各150轮训练、8图接入门禁、548图四档Query评估与计时全部完成，队列于2026-10-25 10:04（Asia/Shanghai）结束。** 最新结果由[自动实验汇总](../../../reports/5090/experiments.md)提供，同时生成CSV、JSON、Excel和曲线；[自动汇总操作说明](../../../experiments/decoder_budget_5090/AUTO_REPORTS_5090.md)。
 
 ## 为什么先重建基线
 
@@ -41,7 +41,7 @@
 
 首次C0短跑在保存阶段因缺少polars失败；完整目录保留，[失败及修复记录](raw/failed_attempt_5090.json)。随后只在本次临时venv安装polars==2.0.0，并在新`-r1`目录重跑全部门禁通过，未改变共享UAV_CV环境或旧4090源码。
 
-## 当前运行位置
+## 原始产物位置
 
 实验根目录（仅服务器）：
 
@@ -49,11 +49,11 @@
 /home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_budget_5090/5090-c0c2-baselines-20261024-s0-r1/
   status_5090.json
   5090-rtdetr-r18-c0-150e-s0/
-  5090-rtdetr-r18-c2-150e-s0/       # 轮到C2时创建
+  5090-rtdetr-r18-c2-150e-s0/
   logs_5090/5090-*.log
 ```
 
-持久tmux会话：`5090-r18-c0c2-full150-20261024-r1`。控制日志为仓库下 `logs/5090-c0c2-full150-20261024-r1.log`；每阶段详细日志和命令写入`status_5090.json`。启动观察见[状态快照](raw/launch_status_5090.json)，该快照不实时更新。
+当时的tmux会话：`5090-r18-c0c2-full150-20261024-r1`，队列已正常退出。控制日志为仓库下 `logs/5090-c0c2-full150-20261024-r1.log`；每阶段详细日志和命令写入`status_5090.json`。启动观察见[历史启动快照](raw/launch_status_5090.json)，不将该历史快照改写为完成结果；最新结果由自动汇总重新扫描取得。
 
 复现时先选择不存在的新root并运行门禁，再继续该root：
 
@@ -69,3 +69,5 @@ EXPERIMENT_ROOT="$PWD/runs/decoder_budget_5090/5090-c0c2-baselines-新实验名"
 上述长任务需置于tmux并将输出直接重定向文件；`--continue-after-gates`核验先前门禁回执和源文件SHA后才继续，不接受未完成/被改动的门禁。新机器需使用Python3.11与实际依赖环境，临时venv路径是本机执行证据。
 
 本次全部专项测试共 **58项通过**。云端检出后可运行 `python3 docs/experiment_reports/2026-10-24_5090_baselines/verify_5090.py` 校验提交的源码及门禁证据，不需要服务器权重、数据或GPU。
+
+自动汇总升级了队列及其测试。原实验冻结SHA保持不变，历史门禁核验从本地Git的启动版本 `d11de6e4` 读取这两个文件的原始字节，其余文件继续核验当前归档；不静默重写冻结身份。自动报告的独立JSON可脱离Git、服务器资产和DETRScope重新渲染。

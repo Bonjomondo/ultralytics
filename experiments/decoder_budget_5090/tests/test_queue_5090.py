@@ -30,7 +30,7 @@ def sweep(run, images=8):
 def queue(tmp_path, continuation=False):
     return module.Queue(argparse.Namespace(root=tmp_path / "5090-test", sdk=tmp_path / "sdk",
                                            data_root=tmp_path / "data", gate_only=True,
-                                           continue_after_gates=continuation))
+                                           continue_after_gates=continuation, report_dir=tmp_path / "reports-5090"))
 
 
 def test_complete_training_and_sweep_receipts(tmp_path):

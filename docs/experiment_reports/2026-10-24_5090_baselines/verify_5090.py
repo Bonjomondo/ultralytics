@@ -3,9 +3,13 @@ import hashlib
 import json
 from pathlib import Path
 import re
+import subprocess
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
+LAUNCH_COMMIT = "d11de6e4b8b48e17eedce315f1d56d6ecb867f87"
+HISTORICAL_INPUTS = {"experiments/decoder_budget_5090/queue_5090.py",
+                     "experiments/decoder_budget_5090/tests/test_queue_5090.py"}
 
 
 def read(name):
@@ -16,12 +20,24 @@ def sha(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def matches_source(path, expected):
+    if path.is_file() and sha(path) == expected:
+        return True
+    relative = path.relative_to(ROOT).as_posix()
+    if relative not in HISTORICAL_INPUTS:
+        return False
+    # The reporter extends the queue after the completed experiment. Validate
+    # the actual launch bytes in Git instead of rewriting its frozen SHA map.
+    original = subprocess.check_output(["git", "show", f"{LAUNCH_COMMIT}:{relative}"], cwd=ROOT)
+    return hashlib.sha256(original).hexdigest() == expected
+
+
 def main():
     manifest = (HERE / "MANIFEST.sha256").read_text().splitlines()
     for line in manifest:
         expected, relative = line.split("  ", 1)
         path = (ROOT / relative).resolve()
-        assert path.is_relative_to(ROOT) and sha(path) == expected, relative
+        assert path.is_relative_to(ROOT) and matches_source(path, expected), relative
     audit = read("asset_audit_5090.json")
     assert audit["status"] == "passed" and not audit["errors"]
     assert audit["splits"]["train"]["images"] == 6471
@@ -48,7 +64,7 @@ def main():
         if path.is_relative_to(pin_root):
             relative = path.relative_to(pin_root)
             local = HERE / "raw/data_5090.yaml" if relative.name == "data_5090.yaml" else ROOT / relative
-            assert local.is_file() and sha(local) == expected, relative
+            assert matches_source(local, expected), relative
     assert re.search(r"\b58 passed\b", (HERE / "raw/pytest_5090.log").read_text())
     for target in re.findall(r"\]\(([^)]+)\)", (HERE / "README.md").read_text()):
         target = target.split("#", 1)[0]

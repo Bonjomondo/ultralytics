@@ -18,6 +18,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[2]
 HERE = Path(__file__).resolve().parent
+sys.path.insert(0, str(ROOT))
 EXPECTED_COMMIT = "fc843c1d62162742deac3f72b52c67291b606b8c"
 BUDGETS = [300, 250, 200, 150]
 
@@ -104,6 +105,7 @@ class Queue:
         self.child = None
         self.owned = False
         self.state = {}
+        self.report_dir = Path(getattr(args, "report_dir", ROOT / "reports/5090")).resolve()
         self.environment = {**os.environ, "PYTHONPATH": f"{ROOT}:{self.sdk / 'src'}", "MPLBACKEND": "Agg",
                             "PYTHONUNBUFFERED": "1", "OMP_NUM_THREADS": "4",
                             "YOLO_CONFIG_DIR": str(self.root / "config_5090")}
@@ -116,6 +118,16 @@ class Queue:
 
     def update(self, **values):
         self.state.update(values, updated_utc=now())
+        save(self.status, self.state)
+        try:
+            from experiments.decoder_budget_5090.report_5090 import generate_reports
+            report = generate_reports(self.root.parent, self.report_dir)
+            self.state["reporting"] = {"status": "completed", "output": str(self.report_dir),
+                                       "generated_at": report["generated_at"], "errors": report["collection_errors"]}
+        except Exception as error:
+            self.state["reporting"] = {"status": "failed", "output": str(self.report_dir),
+                                       "error": f"{type(error).__name__}: {error}"}
+            print(f"5090 report refresh failed: {error}", file=sys.stderr, flush=True)
         save(self.status, self.state)
 
     def prepare(self):
@@ -241,11 +253,13 @@ def main():
     parser.add_argument("--root", type=Path, required=True)
     parser.add_argument("--sdk", type=Path, default=ROOT.parent / "detrscope")
     parser.add_argument("--data-root", type=Path, default=ROOT.parent / "SO_DETR/datasets/VisDrone2019-DET-YOLO")
+    parser.add_argument("--report-dir", type=Path, default=ROOT / "reports/5090",
+                        help="Automatically refresh experiments.md/csv/json/xlsx and plots after each queue update")
     choice = parser.add_mutually_exclusive_group()
     choice.add_argument("--gate-only", action="store_true")
     choice.add_argument("--continue-after-gates", action="store_true")
     args = parser.parse_args()
-    required = ("torch", "torchvision", "scipy", "numpy", "cv2", "yaml", "polars", "pycocotools", "matplotlib")
+    required = ("torch", "torchvision", "scipy", "numpy", "cv2", "yaml", "polars", "pycocotools", "matplotlib", "openpyxl")
     missing = [name for name in required if find_spec(name) is None]
     if missing:
         raise RuntimeError(f"Missing experiment dependencies before launch: {', '.join(missing)}")

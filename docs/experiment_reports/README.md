@@ -1,5 +1,7 @@
 # 实验结果与报告
 
+- [5090 实验自动汇总：完整验证结果、状态与曲线](../../reports/5090/experiments.md) · [生成方式](../../experiments/decoder_budget_5090/AUTO_REPORTS_5090.md)
+
 - [2026-10-24：5090 C0/C2 真实数据门禁与150轮基线队列](2026-10-24_5090_baselines/README.md)
 
 - [2026-10-24：5090分支 DETRScope第一阶段工程验收](2026-10-24_5090_detrscope/README.md)
