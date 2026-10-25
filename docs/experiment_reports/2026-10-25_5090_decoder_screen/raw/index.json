@@ -1,0 +1,16 @@
+{
+  "schema": "5090.decoder-screen-archive.v1",
+  "performance": [
+    "sampling-c2-attention.json",
+    "sampling-c2-model.json",
+    "sampling-c0-attention.json",
+    "sampling-c0-model.json",
+    "depth-c2-model.json",
+    "depth-c0-model.json"
+  ],
+  "evaluation": [
+    "depth-eval-c2.json",
+    "depth-eval-c0.json"
+  ],
+  "archive_policy": "Full raw CUDA samples retained. Raw wall samples stay in server assessment; per-block/pooled wall stats retained. All weights, inputs, predictions, raw stage tensors, COCO GT match lists and engines stay server-only."
+}

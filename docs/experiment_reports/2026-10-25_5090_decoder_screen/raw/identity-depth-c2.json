@@ -1,0 +1,184 @@
+{
+  "schema": "5090.decoder-performance.v1",
+  "kind": "depth",
+  "variant": "c2",
+  "started_at": "2026-10-25T13:30:09.525829+08:00",
+  "source": {
+    "root": "/home/ubuntu/文档/ZHJ_UAV/ultralytics",
+    "commit": "50bc059fbdecf61267dd48dfa21c1b33548ed075",
+    "branch": "5090-detrscope-query-budget",
+    "dirty_paths": [
+      "M docs/experiment_reports/README.md",
+      " M experiments/decoder_budget_5090/README.md",
+      "?? docs/experiment_reports/2026-10-25_5090_decoder_screen/",
+      "?? experiments/decoder_budget_5090/archive_decoder_screen_5090.py",
+      "?? experiments/decoder_budget_5090/report_decoder_screen_5090.py",
+      "?? experiments/decoder_budget_5090/screen_decoder_eval_5090.py",
+      "?? experiments/decoder_budget_5090/screen_decoder_perf_5090.py",
+      "?? experiments/decoder_budget_5090/tests/test_decoder_screen_5090.py"
+    ]
+  },
+  "source_sha256": {
+    "experiments/decoder_budget_5090/screen_decoder_perf_5090.py": "766cf53a27c4a10f25a917eb261bb83f49ad0a38ff72b97fd58da1f30f8da793",
+    "experiments/decoder_budget_5090/profile_runtime_5090.py": "8a704eaf3ff93cc85625c0ae30b52680aa0c3a447d44a059c5c604d7c5eabe0b",
+    "ultralytics/nn/tasks.py": "6c9fb84577900e3105f6dc24b901802e1f0e625b985a2082a280a1aafedb4bd4",
+    "ultralytics/nn/modules/head.py": "c092316743055f02adc84589d843588631ffe705fb0777178e0362d81471f4bc",
+    "ultralytics/nn/modules/transformer.py": "8986f3f58a5e30a42545f544f1a35f5e5861b13ee5d4507d8b2afab1c41df782",
+    "ultralytics/nn/modules/utils.py": "bcf0492178d3924b5d6a5f5808906b7aec6214172b70bfeb21b3aab308b17164"
+  },
+  "environment": {
+    "python": "3.11.16",
+    "executable": "/tmp/zhj-uav-profiler-20261025-venv/bin/python",
+    "torch": "2.14.0+cu130",
+    "torch_cuda": "13.0",
+    "cudnn": 92400,
+    "device_requested": "cuda:0",
+    "cuda_available": true,
+    "deterministic_algorithms": false,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": false,
+    "matmul_tf32": false,
+    "cudnn_tf32": false,
+    "dtype": "float32",
+    "autocast": false,
+    "nvidia_smi": {
+      "returncode": 0,
+      "stdout": "0, NVIDIA GeForce RTX 5090 D v2, GPU-49e248ed-74af-bad5-bc6e-1c5095289883, 580.178.04",
+      "stderr": ""
+    },
+    "gpu": "NVIDIA GeForce RTX 5090 D v2",
+    "capability": [
+      12,
+      0
+    ],
+    "total_memory_bytes": 25138495488,
+    "cuda_device_index": 0
+  },
+  "input": {
+    "annotation_path": "/home/ubuntu/文档/ZHJ_UAV/SO_DETR/datasets/VisDrone2019-DET-YOLO/annotations/VisDrone2019-DET_val_coco.json",
+    "annotation_sha256": "6f8b8686864f1485ab172de9339f7049593f74766f6654c6e980a6c00d810371",
+    "image": {
+      "id": 1,
+      "file_name": "0000001_02999_d_0000005.jpg",
+      "width": 1920,
+      "height": 1080
+    },
+    "image_path": "/home/ubuntu/文档/ZHJ_UAV/SO_DETR/datasets/VisDrone2019-DET-YOLO/images/val/0000001_02999_d_0000005.jpg",
+    "image_sha256": "fc80a9305b38af026091cbe0a1d4cfe059964852253b93f01fee17b7443e5514",
+    "input_sha256": "883789210db2b7f51d7a34c75b61b504637c17d8200c616eef69478cb0ec7bed",
+    "preprocess": "OpenCV BGR -> scale_fill 640 square -> RGB BCHW contiguous FP32 /255; before timing"
+  },
+  "checkpoint": {
+    "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_budget_5090/5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c2-150e-s0/weights/best.pt",
+    "bytes": 40679119,
+    "sha256": "ac2b02c45596bb816c4a42799d2b97ff02d62a4dc153bc5816502f02e936a5d6"
+  },
+  "protocol": {
+    "rounds": 10,
+    "repeats_block": 50,
+    "warmup_initial": 150,
+    "warmup_block": 10,
+    "seed": 20261025,
+    "batch": 1,
+    "size": 640,
+    "feature_shapes": [
+      [
+        80,
+        80
+      ],
+      [
+        40,
+        40
+      ],
+      [
+        20,
+        20
+      ]
+    ],
+    "scope": "resident CUDA inputs/outputs; model forward only; no data I/O/pre/postprocess",
+    "stream": "shared non-default CUDA stream",
+    "sampling_accuracy": "not evaluated; compatible random cross-attention in ALL point conditions",
+    "depth_weights": "original checkpoint; native eval_idx exits after specified layer",
+    "initialization": "module seed=20261025+layer_index; common p4 value/output weights; offset/attention matrices N(0,.01) with per-head/level point prefixes; native ring offset bias and zero attention bias",
+    "precision": "all FP32 inputs/params except graph_fp16; TRT fp16 allows mixed precision with FP32 I/O; TF32 disabled"
+  },
+  "conditions": {
+    "d1": {
+      "queries": 300,
+      "points_per_level": [
+        4,
+        4,
+        4
+      ],
+      "depth": 1,
+      "executed": [
+        {
+          "layer": 1,
+          "queries": 300,
+          "points": 4
+        }
+      ],
+      "attention_inventory": [],
+      "parameters": 20135032
+    },
+    "d2": {
+      "queries": 300,
+      "points_per_level": [
+        4,
+        4,
+        4
+      ],
+      "depth": 2,
+      "executed": [
+        {
+          "layer": 1,
+          "queries": 300,
+          "points": 4
+        },
+        {
+          "layer": 2,
+          "queries": 300,
+          "points": 4
+        }
+      ],
+      "attention_inventory": [],
+      "parameters": 20135032
+    },
+    "d3": {
+      "queries": 300,
+      "points_per_level": [
+        4,
+        4,
+        4
+      ],
+      "depth": 3,
+      "executed": [
+        {
+          "layer": 1,
+          "queries": 300,
+          "points": 4
+        },
+        {
+          "layer": 2,
+          "queries": 300,
+          "points": 4
+        },
+        {
+          "layer": 3,
+          "queries": 300,
+          "points": 4
+        }
+      ],
+      "attention_inventory": [],
+      "parameters": 20135032
+    }
+  },
+  "finished_at": "2026-10-25T13:32:21.869369+08:00",
+  "hooks_remaining": 0,
+  "server_assessment": {
+    "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-depth-perf-c2-20261025-final/assessment.json",
+    "bytes": 616204,
+    "sha256": "37c8b08c5b4b3fa9c47f6dc5d38f52e4f139bf8f17a368a78deab51d94e9422d"
+  },
+  "archive_raw_wall_samples": false
+}

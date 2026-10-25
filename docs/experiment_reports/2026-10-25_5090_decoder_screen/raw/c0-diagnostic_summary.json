@@ -1,0 +1,30 @@
+{
+  "config": {
+    "eps_iou": 0.02,
+    "eps_score": 0.02,
+    "fixed_pair_policy": "all_queries_assignment_union",
+    "matching_iou_weight": 1.0,
+    "matching_score_weight": 0.25,
+    "object_size_groups": {
+      "large": [
+        9216,
+        null
+      ],
+      "medium": [
+        1024,
+        9216
+      ],
+      "small": [
+        0,
+        1024
+      ]
+    },
+    "selected_gt_ids": []
+  },
+  "event_count": 413071,
+  "excluded_transitions": 81,
+  "fixed_pair_count": 167817,
+  "gt_count": 38759,
+  "images": 548,
+  "semantics": "SDK Hungarian iou*(1-IoU)+score*(1-pGT), no confidence/IoU gate. Fixed query-GT pairs use assignment union plus D1 fallback. GT trajectories reassign each layer. Neither is COCO TP/FP/AP."
+}

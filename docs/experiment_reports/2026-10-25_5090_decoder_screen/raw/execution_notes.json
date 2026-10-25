@@ -1,0 +1,144 @@
+{
+  "schema": "5090.decoder-screen-execution-notes.v1",
+  "training": "None. Sampling uses compatible random cross-attention; depth uses unchanged trained checkpoints.",
+  "sampling_export_failure": "The first full attempt wrapped an eval network in a newly constructed training=True wrapper. Legacy ONNX export recursively restored training mode and output validation failed. That process was stopped; directory and logs remain. Fix: module.eval() before export; separate TRT gate passed. Only sampling C2 r3 and C0 final enter the report.",
+  "random_projection_control": "Native MSDeformAttn initializes offset/attention matrices to zero. Formal point screening uses nonzero N(0,.01) matrices and common point prefixes to keep projections input-dependent under optimization. Early zero-initialized smoke/gate results are excluded.",
+  "coco_json_failure": "First 8-image depth gate passed all observed/early-exit equivalence checks, then JSON serialization rejected a NumPy int64 from COCOeval. Fixed by using project JSON writer with NumPy scalar support; reran gate in a new directory before full evaluation.",
+  "precision_warning": "TensorRT FP16 builds clipped out-of-range Constant nodes to +/-65504. Output shape/finite checks passed, but no FP16 AP acceptance is claimed.",
+  "measurement_limits": "500 samples/condition in 10 randomized paired rounds. Microsecond-scale independent Attention means can have wide bootstrap intervals; a positive mean alone does not prove stable acceleration. One TensorRT build per case; tactic/build variability is not inside CI.",
+  "archive_policy": "Raw CUDA series retained; full wall series stay in server assessments with SHA/size; block and pooled wall stats retained. Predictions, raw stage tensors, official GT ID lists, ONNX/engine and full logs are server-only. No originals were deleted.",
+  "archival_host_audit": {
+    "system": "Linux",
+    "release": "7.0.0-34-generic",
+    "machine": "x86_64",
+    "logical_cpus": 20,
+    "cpu_model": "Intel(R) Core(TM) Ultra 7 265K",
+    "configured_torch_cpu_threads": 4,
+    "scope": "CPU/system details checked at archival; configured threads follow measured source configure()"
+  },
+  "logs": [
+    {
+      "server_path": "/tmp/5090-sampling-smoke-20261025-r1.log",
+      "bytes": 2517,
+      "sha256": "59c820698491a0ac000988279a066597b30fe07fa88eb6fa18c3c9f18a712284",
+      "trt_warning_lines": 0,
+      "fp16_constant_clipping_count": 0,
+      "warning_examples": [],
+      "failure_examples": []
+    },
+    {
+      "server_path": "/tmp/5090-sampling-c2-20261025-final.log",
+      "bytes": 7198,
+      "sha256": "617144e642d96766cf170775d7e209cb5c44e46bec7c91a814a601f090a2b8aa",
+      "trt_warning_lines": 30,
+      "fp16_constant_clipping_count": 30,
+      "warning_examples": [
+        "[10/25/2026-13:13:01] [TRT] [W] (Unnamed Layer* 1204) [Constant] [CONSTANT] contains out-of-range weights when cast to Half, clipping to +/- 65504.",
+        "[10/25/2026-13:13:01] [TRT] [W] (Unnamed Layer* 1213) [Constant] [CONSTANT] contains out-of-range weights when cast to Half, clipping to +/- 65504."
+      ],
+      "failure_examples": [
+        "q200-p2-model trt_fp32 ValueError: Output shape/finite check failed",
+        "q200-p2-model trt_fp16 ValueError: Output shape/finite check failed",
+        "q300-p1-model trt_fp32 ValueError: Output shape/finite check failed"
+      ]
+    },
+    {
+      "server_path": "/tmp/5090-sampling-trt-gate-20261025-r2.log",
+      "bytes": 2340,
+      "sha256": "4a0e21dac4d17e4c98de93d907150e30c82af8e74d1674846f218fc614cdf461",
+      "trt_warning_lines": 6,
+      "fp16_constant_clipping_count": 6,
+      "warning_examples": [
+        "[10/25/2026-13:15:59] [TRT] [W] (Unnamed Layer* 1204) [Constant] [CONSTANT] contains out-of-range weights when cast to Half, clipping to +/- 65504.",
+        "[10/25/2026-13:15:59] [TRT] [W] (Unnamed Layer* 1213) [Constant] [CONSTANT] contains out-of-range weights when cast to Half, clipping to +/- 65504."
+      ],
+      "failure_examples": []
+    },
+    {
+      "server_path": "/tmp/5090-sampling-c2-20261025-r3.log",
+      "bytes": 9678,
+      "sha256": "5346498b024869768a3edfb16c819ae3e74913a14099da8a53378a8266afcdf4",
+      "trt_warning_lines": 30,
+      "fp16_constant_clipping_count": 30,
+      "warning_examples": [
+        "[10/25/2026-13:17:50] [TRT] [W] (Unnamed Layer* 1200) [Constant] [CONSTANT] contains out-of-range weights when cast to Half, clipping to +/- 65504.",
+        "[10/25/2026-13:17:50] [TRT] [W] (Unnamed Layer* 1209) [Constant] [CONSTANT] contains out-of-range weights when cast to Half, clipping to +/- 65504."
+      ],
+      "failure_examples": []
+    },
+    {
+      "server_path": "/tmp/5090-sampling-c0-20261025-final.log",
+      "bytes": 9682,
+      "sha256": "f2307c993924e3ff080ace9c1feff63adc052b6475162497ede7d4d0cf298824",
+      "trt_warning_lines": 30,
+      "fp16_constant_clipping_count": 30,
+      "warning_examples": [
+        "[10/25/2026-13:23:35] [TRT] [W] (Unnamed Layer* 1198) [Constant] [CONSTANT] contains out-of-range weights when cast to Half, clipping to +/- 65504.",
+        "[10/25/2026-13:23:35] [TRT] [W] (Unnamed Layer* 1207) [Constant] [CONSTANT] contains out-of-range weights when cast to Half, clipping to +/- 65504."
+      ],
+      "failure_examples": []
+    },
+    {
+      "server_path": "/tmp/5090-depth-eval-c2-gate-20261025.log",
+      "bytes": 2076,
+      "sha256": "63f9f83fe9c246fa7c9eeeaf7e6456c46e9953a8c1bc3fa160207b39fd6be984",
+      "trt_warning_lines": 0,
+      "fp16_constant_clipping_count": 0,
+      "warning_examples": [],
+      "failure_examples": [
+        "TypeError: Object of type int64 is not JSON serializable"
+      ]
+    },
+    {
+      "server_path": "/tmp/5090-depth-eval-c2-gate-20261025-r2.log",
+      "bytes": 1120,
+      "sha256": "754270f9da4c5877d7385ee809a7843dee8e984127cac373c307e1f0cdbed090",
+      "trt_warning_lines": 0,
+      "fp16_constant_clipping_count": 0,
+      "warning_examples": [],
+      "failure_examples": []
+    },
+    {
+      "server_path": "/tmp/5090-depth-perf-c2-20261025-final.log",
+      "bytes": 4056,
+      "sha256": "464abe176397e2bbbae0c01661f5f921a56456e1635c9741c27b792078dec3df",
+      "trt_warning_lines": 12,
+      "fp16_constant_clipping_count": 12,
+      "warning_examples": [
+        "[10/25/2026-13:30:21] [TRT] [W] (Unnamed Layer* 1188) [Constant] [CONSTANT] contains out-of-range weights when cast to Half, clipping to +/- 65504.",
+        "[10/25/2026-13:30:21] [TRT] [W] (Unnamed Layer* 1197) [Constant] [CONSTANT] contains out-of-range weights when cast to Half, clipping to +/- 65504."
+      ],
+      "failure_examples": []
+    },
+    {
+      "server_path": "/tmp/5090-depth-perf-c0-20261025-final.log",
+      "bytes": 4057,
+      "sha256": "a90d3fbd1a084516594a65a4c7d1a7004800713b8f7dcc6299a24e152196a2d2",
+      "trt_warning_lines": 12,
+      "fp16_constant_clipping_count": 12,
+      "warning_examples": [
+        "[10/25/2026-13:32:36] [TRT] [W] (Unnamed Layer* 1186) [Constant] [CONSTANT] contains out-of-range weights when cast to Half, clipping to +/- 65504.",
+        "[10/25/2026-13:32:36] [TRT] [W] (Unnamed Layer* 1195) [Constant] [CONSTANT] contains out-of-range weights when cast to Half, clipping to +/- 65504."
+      ],
+      "failure_examples": []
+    },
+    {
+      "server_path": "/tmp/5090-depth-eval-c2-20261025-final.log",
+      "bytes": 1704,
+      "sha256": "da5f9a0c6422e86f843b7e66b0c8c513d9afdf4159eb61db42c733f193a827e9",
+      "trt_warning_lines": 0,
+      "fp16_constant_clipping_count": 0,
+      "warning_examples": [],
+      "failure_examples": []
+    },
+    {
+      "server_path": "/tmp/5090-depth-eval-c0-20261025-final.log",
+      "bytes": 1710,
+      "sha256": "4154772a217c5795ef657f4a735b411f5579a2adca58db6d529f4e743b0ee2fe",
+      "trt_warning_lines": 0,
+      "fp16_constant_clipping_count": 0,
+      "warning_examples": [],
+      "failure_examples": []
+    }
+  ]
+}

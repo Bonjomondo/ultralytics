@@ -1,0 +1,22 @@
+{
+  "schema": "5090.decoder-screen-validation.v1",
+  "pytest": {
+    "command": "PYTHONPATH=\"$PWD:$PWD/../detrscope/src\" YOLO_CONFIG_DIR=/tmp/zhj-uav-5090-config /tmp/zhj-uav-5090-venv/bin/python -m pytest experiments/decoder_budget_5090/tests/test_decoder_screen_5090.py -q",
+    "passed": 17,
+    "warnings": 12,
+    "exit_code": 0,
+    "result_line": "17 passed, 12 warnings in 2.31s",
+    "server_log": {
+      "path": "/tmp/5090-decoder-screen-tests-final.log",
+      "bytes": 9334,
+      "sha256": "4940ab7ca7dcf14c6804fa7e0674519de8831c4fe51e591e65bb6a2d7c7d90b7"
+    }
+  },
+  "offline_checks": [
+    "new archive raw samples/budget/GT/equivalence/manifest/links",
+    "previous runtime archive verification",
+    "previous 5090 baseline verification",
+    "previous DETRScope verification"
+  ],
+  "gpu_evidence": "All 130 conditions completed with 500 CUDA timings each; both 548-image early-exit/observer gates and historical D3 metric replay passed; see raw identities/evaluations."
+}
