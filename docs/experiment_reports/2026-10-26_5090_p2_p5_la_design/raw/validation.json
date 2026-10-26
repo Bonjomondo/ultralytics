@@ -1,0 +1,89 @@
+{
+  "date_asia_shanghai": "2026-10-26",
+  "status": "passed",
+  "scope": "CPU engineering validation only; no 5090 training, formal VisDrone AP or CUDA timing",
+  "environment": {
+    "python": "3.12.14",
+    "torch": "2.14.1+cpu",
+    "torchvision": "0.29.1+cpu",
+    "cuda_available": false
+  },
+  "pytest": {
+    "command": "python -m pytest experiments/p2_p5_la_5090/test_experiment.py tests/test_rtdetr_r18_na.py tests/test_rtdetr_p2_sfi.py -q -o addopts=''",
+    "passed": 21,
+    "subtests_passed": 9,
+    "seconds": 23.09
+  },
+  "synthetic_training": {
+    "status": "completed",
+    "epochs": 1,
+    "variant": "c2-la",
+    "device": "cpu",
+    "imgsz": 128,
+    "train_images": 8,
+    "val_images": 2,
+    "batch": 8,
+    "role": "engineering_smoke",
+    "initialization": {
+      "amp": false,
+      "excluded_slots": [
+        "model.6: AIFI or NAIFI",
+        "model.14: P3 projection or P2 injection"
+      ],
+      "gradient_sampling": "first three training batches per epoch; scaled if AMP is enabled",
+      "model_config": "/workspace/scratch/5f77abb85d02/ultralytics/ultralytics/cfg/models/rt-detr/rtdetr-resnet18-p2-sfi-c2-p5-naifi.yaml",
+      "p2_seed": 1000,
+      "p2_slot_sha256": "8443da98fa5264178c631b7d5ffbf19dddcacae4d6852a822d096356b17de9eb",
+      "p5_la_seed": 2000,
+      "p5_slot_sha256": "a780826b2f9754548856393b7c1cf84652a7245d401b7c18604c057af9344cd1",
+      "r0_full_state_sha256": "e1c9a8c9f9bb55b33b22a6ddf20386256b675014c21ff419e263405324432d08",
+      "seed": 0,
+      "shared_state_sha256": "d24cca5b2a841afc7d333de4d5adf187df8cbc0e51ef1261d32157be3f40a0ed",
+      "shared_state_verified": true,
+      "source": "from scratch, independently seeded reference modules; no pretrained weights",
+      "variant": "c2-la"
+    },
+    "health": {
+      "epoch": 1,
+      "train_seconds": 1.9531550900001093,
+      "train_peak_allocated_mib": null,
+      "encoder_hidden_active_ratio": 0.4833186864852905,
+      "encoder_hidden_query_variance": 0.012270206585526466,
+      "encoder_delta_query_variance": 0.0,
+      "encoder_delta_abs": 0.0,
+      "encoder_delta_finite": 1.0,
+      "d1_hidden_active_ratio": 0.5342008471488953,
+      "d1_hidden_query_variance": 0.013907262124121189,
+      "d1_delta_query_variance": 0.0,
+      "d1_delta_abs": 0.0,
+      "d1_delta_finite": 1.0,
+      "d2_hidden_active_ratio": 0.5099918842315674,
+      "d2_hidden_query_variance": 0.012194112874567509,
+      "d2_delta_query_variance": 0.0,
+      "d2_delta_abs": 0.0,
+      "d2_delta_finite": 1.0,
+      "last_bbox_relu_active_ratio": 0.5019571185112,
+      "d3_hidden_active_ratio": 0.5031477808952332,
+      "d3_hidden_query_variance": 0.011054512113332748,
+      "last_bbox_delta_logit_abs": 0.0,
+      "d3_delta_query_variance": 0.0,
+      "d3_delta_abs": 0.0,
+      "d3_delta_finite": 1.0,
+      "last_bbox_step_abs": 0.0,
+      "p2_first_weight_grad_abs": 0.05298367887735367,
+      "p5_rpb_grad_abs": 0.00166932528372854,
+      "p5_qkv_grad_abs": 0.004347834270447493,
+      "gamma": null
+    },
+    "checkpoint_checks": {
+      "best_last_resume_present": true,
+      "resume_epoch_optimizer_ema_verified": true
+    }
+  },
+  "additional_checks": [
+    "shell syntax",
+    "Python compilation",
+    "CLI help",
+    "git diff --cached --check"
+  ]
+}

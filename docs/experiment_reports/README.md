@@ -1,5 +1,7 @@
 # 实验结果与报告
 
+- [2026-10-26：5090 P2＋P5局部注意力四组配对实验设计（未开始GPU实验）](2026-10-26_5090_p2_p5_la_design/README.md)
+
 - [2026-10-26：5090 四组从零150轮训练最终精度、同场TensorRT延迟与收敛分析](2026-10-26_5090_fresh_decoder_results/README.md)
 
 - [2026-10-25：5090 四组采样/Query/Decoder预算从零150轮训练启动](2026-10-25_5090_fresh_decoder_training/README.md)
