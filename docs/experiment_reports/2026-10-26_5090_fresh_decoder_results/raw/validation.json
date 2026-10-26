@@ -1,0 +1,12 @@
+{
+  "server_artifacts_hash_verified": 35,
+  "gpu_conditions": 15,
+  "gpu_paired_rounds": 20,
+  "cuda_samples": 15000,
+  "coco_replay_models": 5,
+  "coco_replay_metrics_per_model": 12,
+  "coco_replay_abs_tolerance": 1e-12,
+  "training_health_epochs_verified": 600,
+  "frozen_training_source_maps_identical": true,
+  "archive_collector_initial_attempt": "Before any evaluation: annotation metadata was dict rather than path. Corrected collector to use path; completed replay then passed. Training and benchmark results unaffected."
+}

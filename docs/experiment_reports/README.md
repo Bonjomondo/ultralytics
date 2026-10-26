@@ -1,5 +1,7 @@
 # 实验结果与报告
 
+- [2026-10-26：5090 四组从零150轮训练最终精度、同场TensorRT延迟与收敛分析](2026-10-26_5090_fresh_decoder_results/README.md)
+
 - [2026-10-25：5090 四组采样/Query/Decoder预算从零150轮训练启动](2026-10-25_5090_fresh_decoder_training/README.md)
 
 - [2026-10-25：5090 Sampling Points 纯性能筛选与 D1/D2/D3 正式评估](2026-10-25_5090_decoder_screen/README.md)

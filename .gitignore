@@ -239,3 +239,4 @@ results.csv
 /reports/5090/.report.lock
 /reports/5090/fresh_budgets/.lock
 !/reports/5090/plots/*.png
+!/docs/experiment_reports/2026-10-26_5090_fresh_decoder_results/comparison.svg

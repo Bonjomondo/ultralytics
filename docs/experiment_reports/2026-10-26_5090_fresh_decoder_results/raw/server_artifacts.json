@@ -1,0 +1,211 @@
+{
+  "server_only": [
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q200-p2-d3-150e-s0/results.csv",
+      "bytes": 16889,
+      "sha256": "c6b9cd3b631aed09f13cc8d397044480e0f7450002520bd9949f6ff1eb4dae83"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q200-p2-d3-150e-s0/health.jsonl",
+      "bytes": 181238,
+      "sha256": "a911a42eaee9c9b7ca985f5301c3bbbcb92332b468d9c33e6e7f1048e3caab39"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q200-p2-d3-150e-s0/experiment.json",
+      "bytes": 33932,
+      "sha256": "e20780291f0ace424e43df7d72649cfe9f3f4ec4ec0cf66c751e7e754673c569"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/logs/5090-rtdetr-r18-c2-q200-p2-d3-150e-s0.log",
+      "bytes": 18915677,
+      "sha256": "518e02abb46b42eb6428ccd1f641d9cac44659caf1f11bbdd6fdcf836b9211a8"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q200-p2-d3-150e-s0/weights/best.pt",
+      "bytes": 40458511,
+      "sha256": "33af8b76bcce1b37f5a639c6c9da0eae75477302d5d8deb4faf96ad605df59e6"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q200-p2-d3-150e-s0/weights/last.pt",
+      "bytes": 40458511,
+      "sha256": "33af8b76bcce1b37f5a639c6c9da0eae75477302d5d8deb4faf96ad605df59e6"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q200-p2-d3-150e-s0/weights/resume.pt",
+      "bytes": 120839532,
+      "sha256": "2b1ed84aa72592a60481556997ced9bdec7cd56c6f14c56ad6582608f1e5d50e"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p2-d3-150e-s0/results.csv",
+      "bytes": 16893,
+      "sha256": "2a1eac942b3834079c9d85ca50b2f25b8cbe06b49d46be9f7458bc156a6cfc66"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p2-d3-150e-s0/health.jsonl",
+      "bytes": 181517,
+      "sha256": "33cad42bc46cff8368f7af7cc4ac32eba540faac7f0eadcdd5ca261f6c94e06d"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p2-d3-150e-s0/experiment.json",
+      "bytes": 33944,
+      "sha256": "c719602f2db8f5d466929f76cb2e8074e082b340a0869b99953052471e753a4a"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/logs/5090-rtdetr-r18-c2-q300-p2-d3-150e-s0.log",
+      "bytes": 19032624,
+      "sha256": "d2e7e962fb538a2d5a3c51de42118314b9545c249cfaf0c6b32d1de0fd6ec349"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p2-d3-150e-s0/weights/best.pt",
+      "bytes": 40458511,
+      "sha256": "3e0bc00450640374f3afa10ff5f5dbe05cc68ba23fd169433ff86c4726c5a672"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p2-d3-150e-s0/weights/last.pt",
+      "bytes": 40458511,
+      "sha256": "3e0bc00450640374f3afa10ff5f5dbe05cc68ba23fd169433ff86c4726c5a672"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p2-d3-150e-s0/weights/resume.pt",
+      "bytes": 120839532,
+      "sha256": "f498a69b4807e86c94cdbbc8f2896ff7e1efa49a48268217f6631af33788c088"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p4-d1-150e-s0/results.csv",
+      "bytes": 16884,
+      "sha256": "0da396791cb0c459dc32f84aee266a7f27b4e0ec6f8b232923d85da1030c24b7"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p4-d1-150e-s0/health.jsonl",
+      "bytes": 104033,
+      "sha256": "92fb83f1cd47e07322d18eae44ce469302ea1df0a758b7b0a8879e81f39f75c5"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p4-d1-150e-s0/experiment.json",
+      "bytes": 33835,
+      "sha256": "c7ac53f3eaba23700c0f69b84fba8cfae3e729b025f3fc7a68db0d001f434b4f"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/logs/5090-rtdetr-r18-c2-q300-p4-d1-150e-s0.log",
+      "bytes": 18873482,
+      "sha256": "4185a830511df69c8aaa6a6c1294af7d1cafb281477bbbdfe4bc3c87d84f9465"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p4-d1-150e-s0/weights/best.pt",
+      "bytes": 36129543,
+      "sha256": "802854c24640c698e93002520cdb191ad6bf0fa29774ee5d37b472a08f47ed73"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p4-d1-150e-s0/weights/last.pt",
+      "bytes": 36129543,
+      "sha256": "141b77dc1608455d6ee9e7c35fbc3d1ee8cf3ca2a2c5b561a1fc5a25d7a3c732"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p4-d1-150e-s0/weights/resume.pt",
+      "bytes": 107854492,
+      "sha256": "0d75a8ffeb9ae3600a04f75958433a68e12c1a99803c3d8fda351d406f2186cc"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p4-d2-150e-s0/results.csv",
+      "bytes": 16907,
+      "sha256": "9ebf7601fc009885ade309aa194c97fe6e2d6f3c6bd522f94362419a5b44834d"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p4-d2-150e-s0/health.jsonl",
+      "bytes": 142870,
+      "sha256": "162579b1c05e10fc2bb97c994bca6fbb4e061e86712939941b979cb729987ff5"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p4-d2-150e-s0/experiment.json",
+      "bytes": 32492,
+      "sha256": "902e5a78e56d26ca76eb591260732934adcd3486d9576441377423361604fb26"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/logs/5090-rtdetr-r18-c2-q300-p4-d2-150e-s0.log",
+      "bytes": 18968660,
+      "sha256": "aeae20772254a94bc767063b4b4c839b25e0999e622f23be8d591d2a059a634a"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p4-d2-150e-s0/weights/best.pt",
+      "bytes": 38404491,
+      "sha256": "46667e3a1c20b77322b07292e4f46d36351c81c93197de3ad247865b2f86e17d"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p4-d2-150e-s0/weights/last.pt",
+      "bytes": 38404491,
+      "sha256": "46667e3a1c20b77322b07292e4f46d36351c81c93197de3ad247865b2f86e17d"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p4-d2-150e-s0/weights/resume.pt",
+      "bytes": 114679588,
+      "sha256": "3544284d117cc0a7acf4c75d4ff46bd7dabef03074668c769d3e9783705fd075"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-depth-eval-c2-20261025-final/d3-predictions.json",
+      "bytes": 33528919,
+      "sha256": "7ef9409c03a43d2e7c0b0928914884bb7f5f2bdc85ccbb481f639d7021eca219"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-depth-eval-c2-20261025-final/d3-coco.json",
+      "bytes": 9332593,
+      "sha256": "cfeab8dc4bb31846bfca882499a7abb0bf97387e22231712cd5239a86e24ee59"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q200-p2-d3-150e-s0-eval/predictions.json",
+      "bytes": 22334949,
+      "sha256": "6246122c659da5d3ad5dd95c5f5af276a969d82e83e48aa7ee03228cd27c27f8"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q200-p2-d3-150e-s0-eval/coco.json",
+      "bytes": 9345182,
+      "sha256": "45d18c1f6e95e8bd1ea36655a1ebadbe8453f05a4ff7e01c53eaf924148671ee"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p2-d3-150e-s0-eval/predictions.json",
+      "bytes": 33528623,
+      "sha256": "0cbcf255f64cd993d6309f798e789d89a254b720f84447dcd4a0657a42ce1cd2"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p2-d3-150e-s0-eval/coco.json",
+      "bytes": 9332089,
+      "sha256": "f46936d39455fe6bd8251c28337ebe89bb12329d5b649210060c78651cb36839"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p4-d1-150e-s0-eval/predictions.json",
+      "bytes": 33523752,
+      "sha256": "cc8aab55abb115670ef992d0165a83ff25445cfb4d048ab4e6f4922ec4a996f9"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p4-d1-150e-s0-eval/coco.json",
+      "bytes": 9345366,
+      "sha256": "3f0e2c077af9b0033fb45db797c8e5d6060ab19012187671091d4cc71845635c"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p4-d2-150e-s0-eval/predictions.json",
+      "bytes": 33526477,
+      "sha256": "331c12dacfd0fb0aba18a19d8b1e7ab5c4e82cbcfa60df3cdff0f9358e9b02af"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_retrain_5090/5090-c2-fresh-four-20261025-s0-r1/5090-rtdetr-r18-c2-q300-p4-d2-150e-s0-eval/coco.json",
+      "bytes": 9336668,
+      "sha256": "6372a20ceb6e0fa51c59f38900df58ae0bce15502928a3699ed731eee8dca3d9"
+    }
+  ],
+  "annotation": {
+    "path": "/home/ubuntu/文档/ZHJ_UAV/SO_DETR/datasets/VisDrone2019-DET-YOLO/annotations/VisDrone2019-DET_val_coco.json",
+    "bytes": 5380819,
+    "sha256": "6f8b8686864f1485ab172de9339f7049593f74766f6654c6e980a6c00d810371"
+  },
+  "live_snapshot": {
+    "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/reports/5090/fresh_budgets/experiments.json",
+    "bytes": 1284765,
+    "sha256": "0d3b65f85d5f1d3cd564e556f5fa30f8edf67beac5be949c8ba8ba15e5cb7201"
+  },
+  "baseline_summary": {
+    "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-depth-eval-c2-20261025-final/summary.json",
+    "bytes": 16440,
+    "sha256": "293932887911555572adc9420c133595035ae6103af7ea9e26b0fb100b52d90e"
+  },
+  "category_replay": "All 12 full-val metrics reproduced with absolute tolerance 1e-12 for all five models.",
+  "gt_scale_bins": "Disjoint original-image annotation area: small<32^2, medium<96^2, else large; all-area formal matches at maxDets100, not COCO area-specific matching."
+}
