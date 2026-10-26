@@ -1,5 +1,6 @@
 """Randomized four-arm native FP32 timing, before training or with four own checkpoints."""
 import argparse
+import hashlib
 import json
 import random
 from pathlib import Path
@@ -44,12 +45,19 @@ def benchmark(args):
         image = cv2.imread(str(args.image))
         if image is None:
             raise ValueError("Cannot decode benchmark image")
-        x = torch.from_numpy(cv2.resize(image, (640, 640))[..., ::-1].copy()).permute(2, 0, 1)[None].cuda().float() / 255
+        x = torch.from_numpy(cv2.resize(image, (640, 640))[..., ::-1].copy()).permute(2, 0, 1)[None].contiguous().cuda().float() / 255
         record["input"] = {"path": str(args.image.resolve()), "sha256": sha256_file(args.image)}
     else:
         torch.manual_seed(19)
         x = torch.rand(1, 3, 640, 640, device="cuda")
         record["input"] = {"kind": "synthetic_random", "seed": 19, "interpretation": "architecture timing only"}
+    # Match the native evaluator's NCHW input rather than implicitly using a
+    # different memory layout for --image and synthetic inputs.
+    if not x.is_contiguous():
+        raise RuntimeError("Benchmark requires native contiguous NCHW input")
+    record["input"].update(shape=list(x.shape), stride=list(x.stride()), contiguous=True,
+                           tensor_sha256=hashlib.sha256(x.cpu().numpy().tobytes()).hexdigest(),
+                           preprocess="scale_fill 640 square, RGB NCHW contiguous FP32 /255 before timing")
     models = {}
     for variant in MODELS:
         if variant in checkpoints:

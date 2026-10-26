@@ -25,6 +25,14 @@ def category_ids(gt, names):
     return [by_name[name] for name in names]
 
 
+def native_predictor(names):
+    predictor = RTDETRPredictor(overrides={"imgsz": 640, "conf": .001, "max_det": 300, "verbose": False})
+    # This evaluator bypasses setup_source(), which normally initializes imgsz.
+    predictor.imgsz = [640, 640]
+    predictor.model = SimpleNamespace(names=names)
+    return predictor
+
+
 def coco_metrics(gt, predictions, image_ids):
     if predictions:
         results = gt.loadRes(predictions)
@@ -89,8 +97,7 @@ def evaluate(args):
                            "preprocess": "native scale_fill RGB BCHW /255",
                            "postprocess": "native per-query argmax, sorted confidence, no NMS/no JSON rounding"}}
     write_atomic(args.output / "progress.json", record)
-    predictor = RTDETRPredictor(overrides={"imgsz": 640, "conf": .001, "max_det": 300, "verbose": False})
-    predictor.model = SimpleNamespace(names=model.names)
+    predictor = native_predictor(model.names)
     predictions = []
     for start in range(0, len(images), 2):
         selected = images[start:start + 2]

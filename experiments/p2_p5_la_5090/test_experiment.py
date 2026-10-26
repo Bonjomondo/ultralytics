@@ -92,6 +92,20 @@ def test_coco_semantic_mapping_and_exact_detection(tmp_path):
     assert empty["AP"] == 0
 
 
+def test_manual_evaluator_predictor_preprocesses_real_image_shapes():
+    """The manual evaluation path bypasses setup_source; pre_transform needs imgsz."""
+    import numpy as np
+    from experiments.p2_p5_la_5090.evaluate import native_predictor
+    from experiments.p2_p5_la_5090.train import NAMES
+    images = [np.full((1080, 1920, 3), (17, 83, 191), dtype=np.uint8),
+              np.full((720, 960, 3), (31, 97, 223), dtype=np.uint8)]
+    transformed = native_predictor(dict(enumerate(NAMES))).pre_transform(images)
+    assert [x.shape for x in transformed] == [(640, 640, 3), (640, 640, 3)]
+    # Native scale_fill stretches the image without padding or changing BGR values.
+    for before, after in zip(images, transformed):
+        np.testing.assert_array_equal(after[0, 0], before[0, 0])
+
+
 def test_report_rejects_unpaired_or_subset_results():
     evaluations = {arm: {"status": "completed", "variant": arm, "scope": "full_val", "training_role": "fixed_budget_screen",
                          "training_fraction": 1, "protocol": {}, "training_recipe": {}, "training_source_sha256": {},

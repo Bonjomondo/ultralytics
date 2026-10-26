@@ -1,0 +1,257 @@
+{
+  "source_design_commit": "ac73897a16d3eeb3ae0c46996985af962d7f6a8f",
+  "branch": "5090-detrscope-query-budget",
+  "pull_result": "git pull --ff-only: Already up to date",
+  "tests": {
+    "passed": 22,
+    "subtests_passed": 9,
+    "log": {
+      "path": "/tmp/5090-p2-p5-la-tests-20261026-fixed.log",
+      "bytes": 1213,
+      "sha256": "441d92baaac05c67f368eb484fdb66da0d17e9ba3b3da6e9c4be488c2b8b0e56"
+    },
+    "summary": "22 passed, 4 warnings, 9 subtests passed in 8.23s"
+  },
+  "post_benchmark_source_changes": {
+    "experiments/p2_p5_la_5090/evaluate.py": {
+      "benchmark_sha256": "a14b6fd1ad16016052809df379359abf1afe0d75d4d53d2b6150f19b1f522634",
+      "current_sha256": "803a6748d2a53dc1a99fa4cffb66610b075caf80cd923b17877bfef03c28cd60",
+      "reason": "Manual predictor imgsz initialized before accepted reload evaluation; regression test added after benchmark. Neither file is executed by architecture timing."
+    },
+    "experiments/p2_p5_la_5090/test_experiment.py": {
+      "benchmark_sha256": "1ec3ff99e929d5e8a64523158d7d36e6480d43005b8f294b8f9699d934110bc8",
+      "current_sha256": "c7340371d8546adf55dca9483d8c92c992919e610a02b20f015ec11cd3e83e3a",
+      "reason": "Manual predictor imgsz initialized before accepted reload evaluation; regression test added after benchmark. Neither file is executed by architecture timing."
+    }
+  },
+  "failed_reload_evaluation": {
+    "log": {
+      "path": "/tmp/5090-p2-p5-la-smoke-eval-20261026-r1.log",
+      "bytes": 1217,
+      "sha256": "dd8722071849c3f0ab1e7e8d1282a7c817e369adb271ecd092090d5310be5233"
+    },
+    "error": "TypeError: predictor.imgsz was None in native pre_transform; corrected before accepted re-run; no checkpoint changes"
+  },
+  "input_layout_fix": "Real-image input now contiguous NCHW, matching the native evaluator and historical 5090 input hash.",
+  "initial_layout_run": {
+    "artifact": {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-architecture-screen-20261026-s0-r1/benchmark.json",
+      "bytes": 866335,
+      "sha256": "81f87aa82a7455278bbb61ed1a32999ccdbe42efad100012a4bae941327fd55a"
+    },
+    "status": "superseded for acceptance; retained on server",
+    "summary": {
+      "c0": {
+        "bare": {
+          "whole": {
+            "mean_ms": 7.297357406139374,
+            "median_ms": 7.290751934051514,
+            "p95_ms": 7.3319438934326175,
+            "samples": 1000
+          }
+        },
+        "staged": {
+          "backbone": {
+            "mean_ms": 2.9319892165660857,
+            "median_ms": 2.932096004486084,
+            "p95_ms": 2.9428815245628357,
+            "samples": 1000
+          },
+          "head_decoder": {
+            "mean_ms": 1.8176436483860017,
+            "median_ms": 1.8124159574508667,
+            "p95_ms": 1.8607807636260987,
+            "samples": 1000
+          },
+          "neck_encoder": {
+            "mean_ms": 2.5728194658756256,
+            "median_ms": 2.5722880363464355,
+            "p95_ms": 2.5907199382781982,
+            "samples": 1000
+          },
+          "p5": {
+            "mean_ms": 0.29083772736787794,
+            "median_ms": 0.2908160090446472,
+            "p95_ms": 0.30003198981285095,
+            "samples": 1000
+          },
+          "whole": {
+            "mean_ms": 7.322452315807342,
+            "median_ms": 7.319279909133911,
+            "p95_ms": 7.374339032173157,
+            "samples": 1000
+          }
+        }
+      },
+      "c2": {
+        "bare": {
+          "whole": {
+            "mean_ms": 7.323772552490234,
+            "median_ms": 7.31987190246582,
+            "p95_ms": 7.369047808647156,
+            "samples": 1000
+          }
+        },
+        "staged": {
+          "backbone": {
+            "mean_ms": 2.927933786392212,
+            "median_ms": 2.928368091583252,
+            "p95_ms": 2.939455986022949,
+            "samples": 1000
+          },
+          "head_decoder": {
+            "mean_ms": 1.8154210246801377,
+            "median_ms": 1.813472032546997,
+            "p95_ms": 1.845254385471344,
+            "samples": 1000
+          },
+          "neck_encoder": {
+            "mean_ms": 2.603816899061203,
+            "median_ms": 2.604032039642334,
+            "p95_ms": 2.623487949371338,
+            "samples": 1000
+          },
+          "p5": {
+            "mean_ms": 0.29064463967084886,
+            "median_ms": 0.2908160090446472,
+            "p95_ms": 0.29905921071767805,
+            "samples": 1000
+          },
+          "whole": {
+            "mean_ms": 7.34717171049118,
+            "median_ms": 7.346992015838623,
+            "p95_ms": 7.385068821907043,
+            "samples": 1000
+          }
+        }
+      },
+      "c2-la": {
+        "bare": {
+          "whole": {
+            "mean_ms": 7.433043298244477,
+            "median_ms": 7.43176007270813,
+            "p95_ms": 7.466209578514099,
+            "samples": 1000
+          }
+        },
+        "staged": {
+          "backbone": {
+            "mean_ms": 2.934400028705597,
+            "median_ms": 2.934783935546875,
+            "p95_ms": 2.945251095294952,
+            "samples": 1000
+          },
+          "head_decoder": {
+            "mean_ms": 1.8137268475294113,
+            "median_ms": 1.8111200332641602,
+            "p95_ms": 1.8438224494457245,
+            "samples": 1000
+          },
+          "neck_encoder": {
+            "mean_ms": 2.6891943850517275,
+            "median_ms": 2.6900479793548584,
+            "p95_ms": 2.702336072921753,
+            "samples": 1000
+          },
+          "p5": {
+            "mean_ms": 0.40585481354594233,
+            "median_ms": 0.4055039882659912,
+            "p95_ms": 0.40761598944664,
+            "samples": 1000
+          },
+          "whole": {
+            "mean_ms": 7.437321276664734,
+            "median_ms": 7.435904026031494,
+            "p95_ms": 7.469502329826355,
+            "samples": 1000
+          }
+        }
+      },
+      "la": {
+        "bare": {
+          "whole": {
+            "mean_ms": 7.390342755317688,
+            "median_ms": 7.386800050735474,
+            "p95_ms": 7.425700759887695,
+            "samples": 1000
+          }
+        },
+        "staged": {
+          "backbone": {
+            "mean_ms": 2.931546396493912,
+            "median_ms": 2.9313440322875977,
+            "p95_ms": 2.9431072235107423,
+            "samples": 1000
+          },
+          "head_decoder": {
+            "mean_ms": 1.8093105298280716,
+            "median_ms": 1.806048035621643,
+            "p95_ms": 1.8407264173030853,
+            "samples": 1000
+          },
+          "neck_encoder": {
+            "mean_ms": 2.6520953979492186,
+            "median_ms": 2.6511359214782715,
+            "p95_ms": 2.663424015045166,
+            "samples": 1000
+          },
+          "p5": {
+            "mean_ms": 0.40583145344257354,
+            "median_ms": 0.4055039882659912,
+            "p95_ms": 0.40959998965263367,
+            "samples": 1000
+          },
+          "whole": {
+            "mean_ms": 7.392952344417572,
+            "median_ms": 7.390528202056885,
+            "p95_ms": 7.425828957557679,
+            "samples": 1000
+          }
+        }
+      }
+    }
+  },
+  "server_only": [
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-architecture-screen-20261026-s0-r2/benchmark.json",
+      "bytes": 866600,
+      "sha256": "4308ee514574429d09e52c2b532567fc21325f427a318e5a9f186501c0ce7b7e"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-preflight-20261026-s0-r1/5090-c2-la-1e-smoke-s0/experiment.json",
+      "bytes": 34908,
+      "sha256": "c6e99737c3f37fbc45633af8d5306e1598290a9e392f79f3778a4c41637a81f4"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-preflight-20261026-s0-r1/5090-c2-la-1e-smoke-s0/health.jsonl",
+      "bytes": 1256,
+      "sha256": "9812a9da9ce4f9615ae649f2e54ef245f8c50c3cefa2420655df5d311796bc12"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-preflight-20261026-s0-r1/5090-c2-la-1e-smoke-s0/results.csv",
+      "bytes": 282,
+      "sha256": "f9aa57cb2cbdff5c391d75a4594c2945d101fd48e44ce391193d6696b1c1b703"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-preflight-20261026-s0-r1/5090-c2-la-1e-smoke-s0-eval-r2/summary.json",
+      "bytes": 60700,
+      "sha256": "a78b797b52f2b0c0cc401415b906b3a9c89297d38a7938f8796bffe1deaff673"
+    },
+    {
+      "bytes": 40661709,
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-preflight-20261026-s0-r1/5090-c2-la-1e-smoke-s0/weights/best.pt",
+      "sha256": "bfe03d23628663416085bb2477938379182c91a165e052c9e6ea879df2cf1adc"
+    },
+    {
+      "bytes": 40661709,
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-preflight-20261026-s0-r1/5090-c2-la-1e-smoke-s0/weights/last.pt",
+      "sha256": "bfe03d23628663416085bb2477938379182c91a165e052c9e6ea879df2cf1adc"
+    },
+    {
+      "bytes": 121489832,
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-preflight-20261026-s0-r1/5090-c2-la-1e-smoke-s0/weights/resume.pt",
+      "sha256": "198a325d51f9b607eb704b191b7834d05bcf33dafaddd087ab0210b6904c1f0a"
+    }
+  ],
+  "full_matrix_status": "not_started: fails prespecified native FP32 speed gate; no claim about AP or TensorRT speed"
+}

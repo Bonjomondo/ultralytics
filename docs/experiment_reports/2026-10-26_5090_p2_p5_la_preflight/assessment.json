@@ -1,0 +1,43 @@
+{
+  "native_speed_gate_passed": false,
+  "requirements": {
+    "whole_reduction_percent_min": 1,
+    "neck_encoder_reduction_percent_min": 3,
+    "faster_round_fraction_min": 0.8
+  },
+  "observed": {
+    "whole": {
+      "before": "c2",
+      "after": "c2-la",
+      "scope": "whole",
+      "latency_reduction_percent": -1.746301215799595,
+      "ci95_low": -1.879951609502073,
+      "ci95_high": -1.652823941382242,
+      "faster_round_fraction": 0.0,
+      "paired_rounds": 10
+    },
+    "neck_encoder": {
+      "before": "c2",
+      "after": "c2-la",
+      "scope": "neck_encoder",
+      "latency_reduction_percent": -3.561621672014126,
+      "ci95_low": -3.6257350919570497,
+      "ci95_high": -3.492034925502674,
+      "faster_round_fraction": 0.0,
+      "paired_rounds": 10
+    },
+    "p5": {
+      "before": "c2",
+      "after": "c2-la",
+      "scope": "p5",
+      "latency_reduction_percent": -40.72189628353331,
+      "ci95_low": -41.307503565085966,
+      "ci95_high": -40.16511395285332,
+      "faster_round_fraction": 0.0,
+      "paired_rounds": 10
+    }
+  },
+  "next_action": "defer_full_matrix; diagnose implementation first",
+  "accuracy_gate": "not_evaluated: architecture timing and one-epoch smoke cannot establish AP",
+  "deployment": "TensorRT/Orin not evaluated; native FP32 failure does not establish deployment failure"
+}
