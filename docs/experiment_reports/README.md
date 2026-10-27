@@ -1,6 +1,8 @@
 # 实验结果与报告
 
-- [2026-10-27：5090无P2的LA-only 150轮从零补充对照（已启动）](2026-10-27_5090_la_only_150e_launch/README.md)
+- [2026-10-27：5090 LA-only 150轮与四模型正式精度、同场TensorRT对照](2026-10-27_5090_la_only_150e_results/README.md)
+
+- [2026-10-27：5090无P2的LA-only 150轮从零补充对照（启动记录）](2026-10-27_5090_la_only_150e_launch/README.md)
 
 - [2026-10-27：C2＋P5局部注意力从零150轮正式精度与TensorRT同场测速](2026-10-27_5090_c2_la_150e_results/README.md)
 

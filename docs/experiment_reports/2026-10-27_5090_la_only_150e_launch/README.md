@@ -1,5 +1,7 @@
 # 5090 LA-only：从零150轮补充对照
 
+**2026-10-27更新：LA-only 150轮及四组完整对照已完成，见[最终结果](../2026-10-27_5090_la_only_150e_results/README.md)。以下保留启动时的快照语义。**
+
 分支 `5090-detrscope-query-budget`；任务 `5090-la-only-150e-20261027-s0-r1`。已核对现有5090记录：C0、C2、C2＋LA均有完整150轮结果，**没有同配方、从零训练的LA-only完整结果**。本次只新训LA-only；本页是启动快照，不是最终精度报告。
 
 [实际训练计划与配对初值](raw/plan.json) · [启动队列](raw/status.json) · [真实训练状态](raw/training_status.json) · [首轮健康](raw/first_epoch_health.json) · [数据审计](raw/asset_audit.json) · [数据配置](raw/data.yaml)

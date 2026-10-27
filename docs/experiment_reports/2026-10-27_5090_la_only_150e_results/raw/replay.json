@@ -1,0 +1,98 @@
+{
+  "status": "completed",
+  "method": "Independent DETRScope full COCO replay of exact engine predictions; actual-arm alias mapped against benchmark checkpoint SHA",
+  "models": {
+    "c0": {
+      "checkpoint_sha256": "adeaec17109a3b3ac6b8a6e521fb6cc3c2bdb3cd124ad6eedecc930d35a03d2e",
+      "engine_sha256": "ebb977c7c0979e4a7444b95dc45ffaf0971d035ab712af2ce3613ea2bcdb6448",
+      "prediction_sha256": "a5cc1f829d76bebb3e8d1b0b79035d5461336607174c19f520331414e1a3d216",
+      "metrics": {
+        "AP": 0.18601061648975406,
+        "AP50": 0.3247622844978121,
+        "AP75": 0.17963243566727924,
+        "APs": 0.1210388351659499,
+        "APm": 0.25918737529218755,
+        "APl": 0.29418952369911533,
+        "AR1": 0.0743515676599607,
+        "AR10": 0.2033290127752991,
+        "AR100": 0.28134180230271666,
+        "ARs": 0.19960504674826726,
+        "ARm": 0.38987688697994144,
+        "ARl": 0.3921095787953264
+      },
+      "gt_count": 38759,
+      "max_absolute_error": 0.0,
+      "pair": "c0-la",
+      "alias": "c2"
+    },
+    "la": {
+      "checkpoint_sha256": "89b868f12221fe230542db16c03d9baa3f7dd02117ce785a2b98c290b0eb675d",
+      "engine_sha256": "2671adc7fd81a2c4de774c60a6e971af840e6059a3bbbc802231e625d0517d48",
+      "prediction_sha256": "32c27464455455dfb5a2118605adfbc8416d0e83c722e8e16ead006b432cbfb6",
+      "metrics": {
+        "AP": 0.18279896883689017,
+        "AP50": 0.3172301643753227,
+        "AP75": 0.17884248119759846,
+        "APs": 0.12038106737682062,
+        "APm": 0.2541335154495909,
+        "APl": 0.32707860154785645,
+        "AR1": 0.07520165237435089,
+        "AR10": 0.20538190849557014,
+        "AR100": 0.28172021646450657,
+        "ARs": 0.20343269048965204,
+        "ARm": 0.3808142966395296,
+        "ARl": 0.4103718324165902
+      },
+      "gt_count": 38759,
+      "max_absolute_error": 0.0,
+      "pair": "c0-la",
+      "alias": "c2-la"
+    },
+    "c2": {
+      "checkpoint_sha256": "ac2b02c45596bb816c4a42799d2b97ff02d62a4dc153bc5816502f02e936a5d6",
+      "engine_sha256": "0707e21f1742b528420d9786fad935f789452e8796c9eba5072d65626c96cede",
+      "prediction_sha256": "47ae6bae3654bd910b8470351a5ac39dfbc84a4512233d44017e226a7c85406c",
+      "metrics": {
+        "AP": 0.19493662969279418,
+        "AP50": 0.33504195923350105,
+        "AP75": 0.18990653774287514,
+        "APs": 0.12600070430158322,
+        "APm": 0.2672168817490009,
+        "APl": 0.347205551052815,
+        "AR1": 0.07931563892548257,
+        "AR10": 0.21623275506527753,
+        "AR100": 0.2960859350280242,
+        "ARs": 0.20994284049529915,
+        "ARm": 0.4039869513239451,
+        "ARl": 0.4092697651151502
+      },
+      "gt_count": 38759,
+      "max_absolute_error": 0.0,
+      "pair": "c2-joint",
+      "alias": "c2"
+    },
+    "c2-la": {
+      "checkpoint_sha256": "1a3866ebc5246748d8c359acb30129baa688566c41cfe3be5ce6a05baab4833f",
+      "engine_sha256": "ff807c50d34237ad79df9a47cfb725f3f2b95dad46b1a357a6eb8827eb170aa8",
+      "prediction_sha256": "9e47b91dc76af3d6a501de8140c5e14a4d18195b792dc61b8a8599b81dcddc56",
+      "metrics": {
+        "AP": 0.1894249642413184,
+        "AP50": 0.32712199425347716,
+        "AP75": 0.18323174701404965,
+        "APs": 0.12295467208051816,
+        "APm": 0.2658366432612081,
+        "APl": 0.3101282298617139,
+        "AR1": 0.07683562869678545,
+        "AR10": 0.2124764923059248,
+        "AR100": 0.2906085199143291,
+        "ARs": 0.21014541508171652,
+        "ARm": 0.3984886955391856,
+        "ARl": 0.39684128283029774
+      },
+      "gt_count": 38759,
+      "max_absolute_error": 0.0,
+      "pair": "c2-joint",
+      "alias": "c2-la"
+    }
+  }
+}

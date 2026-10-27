@@ -1,0 +1,161 @@
+{
+  "server_only": [
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-la-only-150e-20261027-s0-r1/status.json",
+      "bytes": 36602,
+      "sha256": "edf4e42abf68760952b42e51c8f24919a953f704952177a40d02a5008527bb17"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-la-only-150e-20261027-s0-r1/5090-la-only-150e-s0/experiment.json",
+      "bytes": 35326,
+      "sha256": "c4fa6d0500f56d30728cd0a77a461b8fcb1de6b7b6d8d1654e62a94cd4ad41bb"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-la-only-150e-20261027-s0-r1/5090-la-only-150e-s0/results.csv",
+      "bytes": 16858,
+      "sha256": "bdf4c680d0b5cd42e3dcfea977bff4d3d0c75cace2096f27b61b02956a3c78f3"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-la-only-150e-20261027-s0-r1/5090-la-only-150e-s0/health.jsonl",
+      "bytes": 178597,
+      "sha256": "58f8f6ac4d4d8d80ebc67844d6e1ded858af2b2651272e46e3793b1b6ff2a535"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-la-only-150e-20261027-s0-r1/evaluation/summary.json",
+      "bytes": 68284,
+      "sha256": "7f2edd1a51e9dc9489e2e6bd0f89fec432e1c10527c7d28c964ebe72002d7874"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-la-only-150e-20261027-s0-r1/evaluation/predictions.json",
+      "bytes": 33524354,
+      "sha256": "ebd0c185151dd7479a759174534ec924f001163507068446931d1b2514766514"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-la-only-150e-20261027-s0-r1/benchmark/assessment.json",
+      "bytes": 847875,
+      "sha256": "61497ba412f4ecffd0760d0d0c0c1ab92b352d2ca114ca3acc25fe5c26865240"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-la-only-150e-20261027-s0-r1/5090-la-only-150e-s0/weights/best.pt",
+      "bytes": 40600141,
+      "sha256": "89b868f12221fe230542db16c03d9baa3f7dd02117ce785a2b98c290b0eb675d"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-la-only-150e-20261027-s0-r1/5090-la-only-150e-s0/weights/last.pt",
+      "bytes": 40600141,
+      "sha256": "89b868f12221fe230542db16c03d9baa3f7dd02117ce785a2b98c290b0eb675d"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-la-only-150e-20261027-s0-r1/5090-la-only-150e-s0/weights/resume.pt",
+      "bytes": 121265128,
+      "sha256": "fd55569b73a54bd8daeab9481051db0ef37a70fe547d253867fae69d145d7246"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-la-only-150e-20261027-s0-r1/logs/data-audit.log",
+      "bytes": 837,
+      "sha256": "8cbb427616c4b13e34903bef8b36dd208e4ec38a623938c84a3494c7c1b35400"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-la-only-150e-20261027-s0-r1/logs/train-150e.log",
+      "bytes": 19090204,
+      "sha256": "6d51fada232b2bb66ae3eb127260e84386754818df3c9d1fe8a47c3f874c805e"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-la-only-150e-20261027-s0-r1/logs/evaluate-full548.log",
+      "bytes": 1616,
+      "sha256": "8897d5d668527bdf07c15688e0b6504540b40157a98dfd048b3165ddfdd4bed4"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-la-only-150e-20261027-s0-r1/logs/benchmark-four-trained.log",
+      "bytes": 5361,
+      "sha256": "0fe28fa86d2fcacb17c6e00d90c8648d0de0ecb9a316801d67d97e03feb877fe"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-la-only-150e-20261027-s0-r1/logs/fp16-coco-c0-la.log",
+      "bytes": 2619,
+      "sha256": "53c5284932332623ea44c6647f1627afe755f741a96e2e12f37d4586f0de2ebb"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-la-only-150e-20261027-s0-r1/logs/fp16-coco-c2-joint.log",
+      "bytes": 2618,
+      "sha256": "89649cbd96ee32d810f7d3471533a1323998dd38d78a763aed7b7ebf90eec619"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-la-only-150e-20261027-s0-r1/fp16-evaluation-c0-la/summary.json",
+      "bytes": 14452,
+      "sha256": "cd6b0cd8e8857d331baecc0d004e4360fb72dc834eb67b61d37e816beb413f6a"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-la-only-150e-20261027-s0-r1/fp16-benchmark-view-c0-la.json",
+      "bytes": 143289,
+      "sha256": "1b8bdcff443b345850189a3dcc7d71e3803bd8dc465aa6605a68508c7640b63b"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-la-only-150e-20261027-s0-r1/fp16-evaluation-c0-la/c2-predictions.json",
+      "bytes": 31875646,
+      "sha256": "a5cc1f829d76bebb3e8d1b0b79035d5461336607174c19f520331414e1a3d216"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-la-only-150e-20261027-s0-r1/fp16-evaluation-c0-la/c2-la-predictions.json",
+      "bytes": 31868973,
+      "sha256": "32c27464455455dfb5a2118605adfbc8416d0e83c722e8e16ead006b432cbfb6"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-la-only-150e-20261027-s0-r1/fp16-evaluation-c2-joint/summary.json",
+      "bytes": 14450,
+      "sha256": "7b12385961c6312ec6963fcb9a3a5dae65e6d6b77d2c387d976fabcf4703c3d4"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-la-only-150e-20261027-s0-r1/fp16-benchmark-view-c2-joint.json",
+      "bytes": 143202,
+      "sha256": "360d5ff10a07662c654c2bb2da6e9dde06d9dd865742199c5d5f4dc0171e5b96"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-la-only-150e-20261027-s0-r1/fp16-evaluation-c2-joint/c2-predictions.json",
+      "bytes": 31877576,
+      "sha256": "47ae6bae3654bd910b8470351a5ac39dfbc84a4512233d44017e226a7c85406c"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-la-only-150e-20261027-s0-r1/fp16-evaluation-c2-joint/c2-la-predictions.json",
+      "bytes": 31876162,
+      "sha256": "9e47b91dc76af3d6a501de8140c5e14a4d18195b792dc61b8a8599b81dcddc56"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-la-only-150e-20261027-s0-r1/independent-validation/replay.json",
+      "bytes": 3636,
+      "sha256": "3573e0baa7f0fa18da3265309af72350d49e84c0f1673efc17699ff50136aee1"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-la-only-150e-20261027-s0-r1/independent-validation/native-c0-categories.json",
+      "bytes": 2077,
+      "sha256": "7b7b1ab71533e36d99c2c5b7409a1ad01a21b1b9c9ab95ad183d02491f412993"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-depth-eval-c0-20261025-final/d3-predictions.json",
+      "bytes": 33529030,
+      "sha256": "3932bc5fc805d6e021b2c1dd81993a8fbc64f865c1d5f5dd8b23f84e0054c437"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/detrscope/src/detrscope/evaluation/coco.py",
+      "bytes": 5671,
+      "sha256": "e0a070d667893797d012d4e8e8f5f3080125460a897573ac14954a6b84c4ac32"
+    }
+  ],
+  "archive_timing_policy": "All CUDA samples retained; raw wall samples remain on server; block and pooled wall summaries retained.",
+  "fp16_engine_warning_counts": {
+    "clipped_half_constants": 24,
+    "fp16_layernorm": 2
+  },
+  "source_note": "LA-only and C2+LA have identical shared/P5 initial state; older C0/C2 are same seed/data/recipe historical checkpoints, not simultaneous reruns.",
+  "fp16_aliases": {
+    "c0-la": {
+      "c2": "c0",
+      "c2-la": "la"
+    },
+    "c2-joint": {
+      "c2": "c2",
+      "c2-la": "c2-la"
+    }
+  },
+  "fp16_replay": "Four exact saved predictions independently replayed with DETRScope COCOeval."
+}
