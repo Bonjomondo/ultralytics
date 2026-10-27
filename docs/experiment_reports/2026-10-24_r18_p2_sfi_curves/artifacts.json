@@ -1,5 +1,5 @@
 {
-  "queue_status": "running",
+  "queue_status": "completed",
   "runs": [
     {
       "run": "c0",
@@ -188,12 +188,94 @@
     {
       "run": "c2_continuation",
       "server_source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_p2_sfi_convergence_20261024/rtdetr-r18-c2-seed0-cont",
-      "epochs": 97,
-      "cumulative_epochs": 247,
+      "epochs": 350,
+      "cumulative_epochs": 500,
       "csv": "raw/c2_continuation/results.csv",
-      "csv_sha256": "b8d1d2c1735b17fc85d9a2085181c185444e916bcdf48e0bcc618c3bf7d0d0cd",
-      "snapshot": true,
-      "plots": []
+      "csv_sha256": "6db22d3f57ae239a0560827e0acb5024c61791d67bc21cb05a64eeb0a22f7951",
+      "snapshot": false,
+      "plots": [
+        {
+          "path": "figures/c2_continuation/BoxPR_curve.png",
+          "sha256": "07fbf11d25d80fe0c17036b1ee1b244c3acfa924eaf951a1669ed050f5698233",
+          "bytes": 366480
+        },
+        {
+          "path": "figures/c2_continuation/BoxP_curve.png",
+          "sha256": "ef3673f4b09108fe3d06a956216d0f01dc765398a8cbaf1261179d7e9c4f9e15",
+          "bytes": 365985
+        },
+        {
+          "path": "figures/c2_continuation/BoxR_curve.png",
+          "sha256": "bfe43b116361b85b5c5259530309b481544e212e90ba241f0490225527fbc7be",
+          "bytes": 290678
+        },
+        {
+          "path": "figures/c2_continuation/BoxF1_curve.png",
+          "sha256": "1d0b09c28c1ce2ca25cfb21a2acb549676c1042aef0049ab2f39462615d0a5c1",
+          "bytes": 347422
+        },
+        {
+          "path": "figures/c2_continuation/results.png",
+          "sha256": "6a98ad081dea2db334e13ce86638937615d843cb8fdf6c6c60127d8533536580",
+          "bytes": 344143
+        },
+        {
+          "path": "figures/c2_continuation/confusion_matrix.png",
+          "sha256": "10ec18dfd3e4a5ef9a6b84486769e3ccea7a8e45276b30a4a284188a73345b9f",
+          "bytes": 285262
+        },
+        {
+          "path": "figures/c2_continuation/confusion_matrix_normalized.png",
+          "sha256": "4e6b0b51fa6b640c1571e96d73ed0949cdfbd31343ec5a9c113a823aeb9c5e1e",
+          "bytes": 285104
+        }
+      ]
+    },
+    {
+      "run": "c0_continuation",
+      "server_source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/r18_p2_sfi_convergence_20261024/rtdetr-r18-c0-seed0-cont",
+      "epochs": 350,
+      "cumulative_epochs": 500,
+      "csv": "raw/c0_continuation/results.csv",
+      "csv_sha256": "8efbf7515e478d299b0397fb4bb9bcc8f363b173e437924040c2871289d58091",
+      "snapshot": false,
+      "plots": [
+        {
+          "path": "figures/c0_continuation/BoxPR_curve.png",
+          "sha256": "29fd138854b206873c0a08406c6f8c7b7061b805cc639dfeee6925d7750fd6c5",
+          "bytes": 365447
+        },
+        {
+          "path": "figures/c0_continuation/BoxP_curve.png",
+          "sha256": "9f0e7eaea7faf086369943d36656a187575c99d2d0b61a3114ff7bec2186fa5c",
+          "bytes": 372772
+        },
+        {
+          "path": "figures/c0_continuation/BoxR_curve.png",
+          "sha256": "7bee569e23ee9f610d9024e1214924c3fedf853db68b1e27238e4506c5677093",
+          "bytes": 289085
+        },
+        {
+          "path": "figures/c0_continuation/BoxF1_curve.png",
+          "sha256": "dc625a65837c14c6ba00ef5123f715279b3f9b01db5bb8447c8e351bec72c19f",
+          "bytes": 342781
+        },
+        {
+          "path": "figures/c0_continuation/results.png",
+          "sha256": "cd227235b7ff53b2e9d4acf013e08b68096807271dcf735b408064d1dae27e3f",
+          "bytes": 358171
+        },
+        {
+          "path": "figures/c0_continuation/confusion_matrix.png",
+          "sha256": "2e12afc6ee0e5420f157de22805ef66c8a9528c38424421da3ee94dca775fd3d",
+          "bytes": 286019
+        },
+        {
+          "path": "figures/c0_continuation/confusion_matrix_normalized.png",
+          "sha256": "77c035cff0b3be81bf7100c68011bc8d998391949d61b1e2a97907ae972c7727",
+          "bytes": 282759
+        }
+      ]
     }
   ]
 }

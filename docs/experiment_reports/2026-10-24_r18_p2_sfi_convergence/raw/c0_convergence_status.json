@@ -1,0 +1,12 @@
+{
+  "converged": false,
+  "epochs": 350,
+  "best_gain_last50": 0.0035900000000000376,
+  "mean_gain_last20_vs_previous20": 0.0007315000000000516,
+  "tolerance": 0.001,
+  "criterion": "after >=150 additional epochs; <=0.1pp best gain over 50 epochs and abs(mean20-previous20)<=0.1pp",
+  "cumulative_epochs": 500,
+  "additional_epochs": 350,
+  "maximum_additional_epochs": 350,
+  "reason": "budget cap reached; convergence not established"
+}

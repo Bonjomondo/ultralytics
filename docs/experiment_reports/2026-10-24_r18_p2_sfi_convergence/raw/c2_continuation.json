@@ -1,0 +1,14 @@
+{
+  "variant": "c2",
+  "seed": 0,
+  "source_checkpoint": "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/ultralytics/runs/detect/r18_p2_sfi_20261023/rtdetr-r18-c2-150e-s0/weights/last.pt",
+  "source_checkpoint_sha256": "bc2e85bcc183a6a094f4e345b4d4f8f4dfc965fc5c652f17b80cf9ad7f201504",
+  "source_completed_epochs": 150,
+  "mode": "warm start from stripped FP16 EMA; fresh AdamW and EMA counters; not exact resume",
+  "loaded_state_sha256": "0bffa2c9a31a07acc50f22f0eb8da31285365cf692274f2c72d8a7ddd60c4ad7",
+  "loaded_state_verified": true,
+  "maximum_additional_epochs": 350,
+  "minimum_additional_epochs": 150,
+  "postprocess": "sorted confidence mask fixed; conf=0.001",
+  "lr": "same constant 1e-4 with 3-epoch re-warmup because optimizer is fresh"
+}
