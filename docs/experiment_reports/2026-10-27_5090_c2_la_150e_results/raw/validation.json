@@ -1,0 +1,162 @@
+{
+  "original_benchmark": {
+    "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-c2-la-150e-20261026-s0-r1/benchmark/assessment.json",
+    "bytes": 140345,
+    "sha256": "634c8fc241bdcca324c4426496861cd045b004f8fc890ef2f3b311ff04b0c781"
+  },
+  "original_status": "partial_backends_failed",
+  "original_failed_conditions": {
+    "c2/trt_fp32": {
+      "status": "failed",
+      "error": "ModuleNotFoundError: No module named 'tensorrt'"
+    },
+    "c2/trt_fp16": {
+      "status": "failed",
+      "error": "ModuleNotFoundError: No module named 'tensorrt'"
+    },
+    "c2-la/trt_fp32": {
+      "status": "failed",
+      "error": "ModuleNotFoundError: No module named 'tensorrt'"
+    },
+    "c2-la/trt_fp16": {
+      "status": "failed",
+      "error": "ModuleNotFoundError: No module named 'tensorrt'"
+    }
+  },
+  "root_cause": "The controller resolves the deployment venv Python symlink before launch, selecting the base interpreter without TensorRT. The retry invokes the venv executable path directly.",
+  "original_command": [
+    "/home/ubuntu/miniconda3/envs/UAV_CV/bin/python3.11",
+    "-u",
+    "-m",
+    "experiments.p2_p5_la_5090.run_joint_150",
+    "--stage",
+    "benchmark",
+    "--root",
+    "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-c2-la-150e-20261026-s0-r1"
+  ],
+  "retry_executable": "/tmp/zhj-uav-profiler-20261025-venv/bin/python",
+  "retry_status": "completed",
+  "retry_log": {
+    "path": "/tmp/5090-c2-la-trained-timing-20261027-r1.log",
+    "bytes": 2679,
+    "sha256": "6465a6a92df24a72a2033b0ac1102b87f105ebc97c0b2362a193cddea0e3549c"
+  },
+  "retry_log_warning_counts": {
+    "fp16_clipped_constants": 12,
+    "fp16_layernorm": 1
+  },
+  "source_before_retry": {
+    "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-c2-la-150e-20261026-s0-r1/evaluation/summary.json",
+    "bytes": 67565,
+    "sha256": "47711fef972ab78930f843b72b68d0ac6bb62f9d12d79d469dc74e4e7288badb"
+  },
+  "scope": "Native FP32 and the specific TensorRT FP16 engine paths were each evaluated on the full validation set.",
+  "server_only": [
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-c2-la-150e-20261026-s0-r1/status.json",
+      "bytes": 32715,
+      "sha256": "04286127c8cfee1fad15031c52169dc37732d43948127c2db22c40db1edf9100"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-c2-la-150e-20261026-s0-r1/5090-c2-la-150e-s0/experiment.json",
+      "bytes": 34955,
+      "sha256": "94f74c3cf1d63143e70a14ab6f2445bdc1689bb99887fc83af3de3b8b190d9f6"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-c2-la-150e-20261026-s0-r1/5090-c2-la-150e-s0/results.csv",
+      "bytes": 16905,
+      "sha256": "7628fdc65db76287ab188ed2a73a09171a28c34c6af32e20fec92cfd13ad4927"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-c2-la-150e-20261026-s0-r1/5090-c2-la-150e-s0/health.jsonl",
+      "bytes": 186314,
+      "sha256": "706382c5af6c091fe50e5efa39852263ce0e64106e33455d9ed7f58998b438a0"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-c2-la-150e-20261026-s0-r1/logs/train-150e.log",
+      "bytes": 19102874,
+      "sha256": "32ceeaf10e7cc9145b9c2c5772c47e2d67aacbe05d0156a3e7ba55bdd50489e8"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-c2-la-150e-20261026-s0-r1/logs/evaluate-full548.log",
+      "bytes": 1621,
+      "sha256": "bd5b10d6537a9e61bc5047fa1b54d6121dc8e4246877e542e2c66dd36922f21a"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-c2-la-150e-20261026-s0-r1/logs/benchmark-trained.log",
+      "bytes": 289,
+      "sha256": "2108c76359bc6370611356212b5512d300837a1852f1afdbbd2fc41d3a62ba49"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-c2-la-150e-20261026-s0-r1/evaluation/summary.json",
+      "bytes": 67565,
+      "sha256": "47711fef972ab78930f843b72b68d0ac6bb62f9d12d79d469dc74e4e7288badb"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-c2-la-150e-20261026-s0-r1/evaluation/predictions.json",
+      "bytes": 33525496,
+      "sha256": "d9bd7d7657d65828dd4df5466b3ee9b821f5040aca9f38420b95053933ed9b93"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-c2-la-150e-20261026-s0-r1/benchmark/assessment.json",
+      "bytes": 140345,
+      "sha256": "634c8fc241bdcca324c4426496861cd045b004f8fc890ef2f3b311ff04b0c781"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-c2-la-trained-timing-20261027-r1/benchmark/assessment.json",
+      "bytes": 420804,
+      "sha256": "24b6478a9154f418b906586b43acdeb0d4b6faf4ed1c2f879d1d38f0ed993222"
+    },
+    {
+      "path": "/tmp/5090-c2-la-trained-timing-20261027-r1.log",
+      "bytes": 2679,
+      "sha256": "6465a6a92df24a72a2033b0ac1102b87f105ebc97c0b2362a193cddea0e3549c"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-c2-la-150e-20261026-s0-r1/5090-c2-la-150e-s0/weights/best.pt",
+      "bytes": 40680845,
+      "sha256": "1a3866ebc5246748d8c359acb30129baa688566c41cfe3be5ce6a05baab4833f"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-c2-la-150e-20261026-s0-r1/5090-c2-la-150e-s0/weights/last.pt",
+      "bytes": 40680845,
+      "sha256": "1a3866ebc5246748d8c359acb30129baa688566c41cfe3be5ce6a05baab4833f"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-c2-la-150e-20261026-s0-r1/5090-c2-la-150e-s0/weights/resume.pt",
+      "bytes": 121508648,
+      "sha256": "889e9582b17dc823c6d355c0ab377d7cccb7600eb46854a8be0903484d621880"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-c2-la-trt-fp16-coco-20261027-r1/summary.json",
+      "bytes": 14427,
+      "sha256": "1ef86c01efc1de0876ec75424c9f7820675a3d9eefbe5557a62aa921a49fbbbe"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-c2-la-trt-fp16-coco-20261027-r1/c2-predictions.json",
+      "bytes": 31879437,
+      "sha256": "19f3000bc5294071baaa3171f7328e58c13de11a3bc7b4d3bf41727866f4ec70"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-c2-la-trt-fp16-coco-20261027-r1/c2-la-predictions.json",
+      "bytes": 31877066,
+      "sha256": "757f7c807f91254bfb5221c4fbdac58c9d0e24e62419217d11c153588110bba5"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-c2-la-trt-fp16-coco-20261027-r1/independent-replay.json",
+      "bytes": 1586,
+      "sha256": "8b11a849896c60d0a2d69d1f925f125346a6729babb08d99c73e821225d2f3c7"
+    }
+  ],
+  "fp16_coco_summary": {
+    "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-c2-la-trt-fp16-coco-20261027-r1/summary.json",
+    "bytes": 14427,
+    "sha256": "1ef86c01efc1de0876ec75424c9f7820675a3d9eefbe5557a62aa921a49fbbbe"
+  },
+  "fp16_evaluation_script_sha256": "811cbede11cc30903c7309309ce89d5dcbb9e9fc5b77773edf5fb84fd74ab356",
+  "fp16_independent_replay": {
+    "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-c2-la-trt-fp16-coco-20261027-r1/independent-replay.json",
+    "bytes": 1586,
+    "sha256": "8b11a849896c60d0a2d69d1f925f125346a6729babb08d99c73e821225d2f3c7"
+  }
+}

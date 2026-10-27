@@ -1,0 +1,118 @@
+{
+  "annotation_sha256": "6f8b8686864f1485ab172de9339f7049593f74766f6654c6e980a6c00d810371",
+  "annotations": "/home/ubuntu/文档/ZHJ_UAV/SO_DETR/datasets/VisDrone2019-DET-YOLO/annotations/VisDrone2019-DET_val_coco.json",
+  "child_pid": null,
+  "completed_epochs": 150,
+  "completed_utc": "2026-10-26T20:29:11.925237+00:00",
+  "data_yaml_sha256": "b30909b6be1b3cdd4376c81abd74a60299080faba5d9368eb67813cc1e445911",
+  "epochs_requested": 150,
+  "images": "/home/ubuntu/文档/ZHJ_UAV/SO_DETR/datasets/VisDrone2019-DET-YOLO/images/val",
+  "latest_internal_map": 0.21051,
+  "new_training": [
+    "c2-la"
+  ],
+  "phase": "finished",
+  "phases": [
+    {
+      "command": [
+        "/tmp/zhj-uav-5090-venv/bin/python",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/docs/experiment_reports/2026-10-24_5090_baselines/audit_assets_5090.py",
+        "--output",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-c2-la-150e-20261026-s0-r1/asset_audit.json"
+      ],
+      "finished_utc": "2026-10-26T14:30:07.433496+00:00",
+      "log": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-c2-la-150e-20261026-s0-r1/logs/data-audit.log",
+      "name": "data-audit",
+      "returncode": 0,
+      "started_utc": "2026-10-26T14:30:06.465150+00:00",
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/tmp/zhj-uav-5090-venv/bin/python",
+        "-u",
+        "-m",
+        "experiments.p2_p5_la_5090.train",
+        "--variant",
+        "c2-la",
+        "--data",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-c2-la-150e-20261026-s0-r1/data.yaml",
+        "--project",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-c2-la-150e-20261026-s0-r1",
+        "--name",
+        "5090-c2-la-150e-s0",
+        "--epochs",
+        "150",
+        "--seed",
+        "0",
+        "--fraction",
+        "1"
+      ],
+      "finished_utc": "2026-10-26T20:28:28.707271+00:00",
+      "log": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-c2-la-150e-20261026-s0-r1/logs/train-150e.log",
+      "name": "train-150e",
+      "returncode": 0,
+      "started_utc": "2026-10-26T14:30:07.795724+00:00",
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/tmp/zhj-uav-5090-venv/bin/python",
+        "-u",
+        "-m",
+        "experiments.p2_p5_la_5090.evaluate",
+        "--variant",
+        "c2-la",
+        "--run",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-c2-la-150e-20261026-s0-r1/5090-c2-la-150e-s0",
+        "--annotations",
+        "/home/ubuntu/文档/ZHJ_UAV/SO_DETR/datasets/VisDrone2019-DET-YOLO/annotations/VisDrone2019-DET_val_coco.json",
+        "--images",
+        "/home/ubuntu/文档/ZHJ_UAV/SO_DETR/datasets/VisDrone2019-DET-YOLO/images/val",
+        "--output",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-c2-la-150e-20261026-s0-r1/evaluation"
+      ],
+      "finished_utc": "2026-10-26T20:28:48.119171+00:00",
+      "log": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-c2-la-150e-20261026-s0-r1/logs/evaluate-full548.log",
+      "name": "evaluate-full548",
+      "returncode": 0,
+      "started_utc": "2026-10-26T20:28:28.731266+00:00",
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/home/ubuntu/miniconda3/envs/UAV_CV/bin/python3.11",
+        "-u",
+        "-m",
+        "experiments.p2_p5_la_5090.run_joint_150",
+        "--stage",
+        "benchmark",
+        "--root",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-c2-la-150e-20261026-s0-r1"
+      ],
+      "finished_utc": "2026-10-26T20:29:11.899163+00:00",
+      "log": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-c2-la-150e-20261026-s0-r1/logs/benchmark-trained.log",
+      "name": "benchmark-trained",
+      "returncode": 0,
+      "started_utc": "2026-10-26T20:28:48.143565+00:00",
+      "status": "completed"
+    }
+  ],
+  "retrain_existing": false,
+  "reused_baseline": {
+    "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_budget_5090/5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c2-150e-s0/weights/best.pt",
+    "sha256": "ac2b02c45596bb816c4a42799d2b97ff02d62a4dc153bc5816502f02e936a5d6"
+  },
+  "root": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-c2-la-150e-20261026-s0-r1",
+  "schema": "5090.joint150.queue.v1",
+  "seed": 0,
+  "source_branch": "5090-detrscope-query-budget",
+  "source_commit": "3973fafce04a04d8d3bc2cd88d8eeff5ed6a00f8",
+  "speed_screen_blocks_training": false,
+  "started_utc": "2026-10-26T14:30:06.440359+00:00",
+  "status": "completed",
+  "train_run": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-c2-la-150e-20261026-s0-r1/5090-c2-la-150e-s0",
+  "training_status": "completed",
+  "updated_utc": "2026-10-26T20:29:11.925247+00:00",
+  "variant": "c2-la"
+}

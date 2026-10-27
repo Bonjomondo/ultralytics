@@ -1,5 +1,7 @@
 # C2＋局部注意力：仅补跑150轮从零训练
 
+**2026-10-27更新：150轮及完整评估已完成；TensorRT补测和结论见[最终结果](../2026-10-27_5090_c2_la_150e_results/README.md)。以下保留启动时快照。**
+
 分支 `5090-detrscope-query-budget`；实验 `5090-c2-la-150e-20261026-s0-r1`。按用户“先完成150轮、已有的不重跑”的明确要求，**仅新训练C2＋LA，已经进入后台150轮流程**。本页为启动快照，不是最终精度报告；此前FP32速度预检不再作为长训练启动条件。
 
 - [训练计划与初值身份](raw/plan.json)、[启动队列快照](raw/status.json)、[实际训练状态快照](raw/training_status.json)、[数据审计](raw/asset_audit.json)、[数据配置](raw/data.yaml)。
@@ -33,14 +35,17 @@
 同样流程的复现命令（需GPU、外部数据与历史基线；必须换全新root）：
 
 ```bash
+export UAV_TRT_PYTHON=/tmp/zhj-uav-profiler-20261025-venv/bin/python
 PYTHONPATH="$PWD:$PWD/../detrscope/src" /tmp/zhj-uav-5090-venv/bin/python -u \
   -m experiments.p2_p5_la_5090.run_joint_150 \
   --root runs/p2_p5_la_5090/5090-c2-la-150e-new \
   --data /绝对路径/本机数据.yaml \
   --annotations /绝对路径/VisDrone2019-DET_val_coco.json \
   --images /绝对路径/images/val \
-  --deployment-python /tmp/zhj-uav-profiler-20261025-venv/bin/python
+  --deployment-python "$PWD/experiments/p2_p5_la_5090/deployment_python.sh"
 ```
+
+`deployment_python.sh`是普通文件，通过 `UAV_TRT_PYTHON` 调用虚拟环境入口。原控制器会解析部署Python的符号链接；直接传虚拟环境的Python软链接可能落到基础解释器，导致找不到TensorRT。已有训练无需重跑，见最终报告的补测记录。
 
 云端校验只读取仓库文本：
 
