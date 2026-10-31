@@ -1,0 +1,70 @@
+{
+  "1": {
+    "c0": {
+      "excluded_slots": [
+        "model.6: AIFI or NAIFI",
+        "model.14: P3 projection or P2 injection"
+      ],
+      "p2_seed": 1001,
+      "p2_slot_sha256": "6ea8ce71effcbdd17f49f3cb15230c0d7f423d7b40ad33b2e7344885299ffbb3",
+      "p5_la_seed": 2001,
+      "p5_slot_sha256": "6091551a20d16cefe9f2ee90f2d5a94e06757d5f475746cee4cba5bb5ea4bf4f",
+      "r0_full_state_sha256": "2be0fe9efcad56d45c4ff7c8ea5a5bf637aae198a50197835cc3c87215eee493",
+      "seed": 1,
+      "shared_state_sha256": "1044d657cd2fa34f5dab6f42c3f5c61b226b1a6ab8457ed099ad631ae1c4a257",
+      "shared_state_verified": true,
+      "source": "from scratch, independently seeded reference modules; no pretrained weights",
+      "variant": "c0"
+    },
+    "c2": {
+      "excluded_slots": [
+        "model.6: AIFI or NAIFI",
+        "model.14: P3 projection or P2 injection"
+      ],
+      "p2_seed": 1001,
+      "p2_slot_sha256": "f15c9f8c929e2226b69dc16e5295ceeb91d811e413cbcc72c99b204002df602b",
+      "p5_la_seed": 2001,
+      "p5_slot_sha256": "6091551a20d16cefe9f2ee90f2d5a94e06757d5f475746cee4cba5bb5ea4bf4f",
+      "r0_full_state_sha256": "2be0fe9efcad56d45c4ff7c8ea5a5bf637aae198a50197835cc3c87215eee493",
+      "seed": 1,
+      "shared_state_sha256": "1044d657cd2fa34f5dab6f42c3f5c61b226b1a6ab8457ed099ad631ae1c4a257",
+      "shared_state_verified": true,
+      "source": "from scratch, independently seeded reference modules; no pretrained weights",
+      "variant": "c2"
+    }
+  },
+  "2": {
+    "c0": {
+      "excluded_slots": [
+        "model.6: AIFI or NAIFI",
+        "model.14: P3 projection or P2 injection"
+      ],
+      "p2_seed": 1002,
+      "p2_slot_sha256": "c988672c5821446221d2c9c60357d3cb9e02788f58cedab75fffedbe3d155bc3",
+      "p5_la_seed": 2002,
+      "p5_slot_sha256": "949794e215a971438b275c9c63b9f02b095dee5cdb1a1ab5884d4be1913ec846",
+      "r0_full_state_sha256": "76643c1f90efb21f864051bea7d0af753974d5b098e71fb7d5c901b2b2bd6596",
+      "seed": 2,
+      "shared_state_sha256": "fd50da99d3885193070f286e918a6e6f9ca9c9a622aa0f4ed7f341c287a42659",
+      "shared_state_verified": true,
+      "source": "from scratch, independently seeded reference modules; no pretrained weights",
+      "variant": "c0"
+    },
+    "c2": {
+      "excluded_slots": [
+        "model.6: AIFI or NAIFI",
+        "model.14: P3 projection or P2 injection"
+      ],
+      "p2_seed": 1002,
+      "p2_slot_sha256": "f3c36d01a59dc4048762401536a5a97f22f72fd0e61b049ea2943a092be128a1",
+      "p5_la_seed": 2002,
+      "p5_slot_sha256": "949794e215a971438b275c9c63b9f02b095dee5cdb1a1ab5884d4be1913ec846",
+      "r0_full_state_sha256": "76643c1f90efb21f864051bea7d0af753974d5b098e71fb7d5c901b2b2bd6596",
+      "seed": 2,
+      "shared_state_sha256": "fd50da99d3885193070f286e918a6e6f9ca9c9a622aa0f4ed7f341c287a42659",
+      "shared_state_verified": true,
+      "source": "from scratch, independently seeded reference modules; no pretrained weights",
+      "variant": "c2"
+    }
+  }
+}

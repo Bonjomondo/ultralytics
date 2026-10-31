@@ -1,0 +1,117 @@
+{
+  "status": "completed",
+  "input": {
+    "annotation_path": "/home/ubuntu/文档/ZHJ_UAV/SO_DETR/datasets/VisDrone2019-DET-YOLO/annotations/VisDrone2019-DET_val_coco.json",
+    "annotation_sha256": "6f8b8686864f1485ab172de9339f7049593f74766f6654c6e980a6c00d810371",
+    "image": {
+      "id": 1,
+      "file_name": "0000001_02999_d_0000005.jpg",
+      "width": 1920,
+      "height": 1080
+    },
+    "image_path": "/home/ubuntu/文档/ZHJ_UAV/SO_DETR/datasets/VisDrone2019-DET-YOLO/images/val/0000001_02999_d_0000005.jpg",
+    "image_sha256": "fc80a9305b38af026091cbe0a1d4cfe059964852253b93f01fee17b7443e5514",
+    "input_sha256": "883789210db2b7f51d7a34c75b61b504637c17d8200c616eef69478cb0ec7bed",
+    "preprocess": "OpenCV BGR -> scale_fill 640 square -> RGB BCHW contiguous FP32 /255; before timing"
+  },
+  "conditions": {
+    "c2/trt_fp16": {
+      "status": "completed",
+      "engine": {
+        "tensorrt": "10.14.1.48.post1",
+        "fp16_allowed": true,
+        "tf32": false,
+        "workspace_bytes": 2147483648,
+        "builder_optimization_level": 3,
+        "build_seconds": 18.29163594963029,
+        "input_names": [
+          "images"
+        ],
+        "input_shapes": [
+          [
+            1,
+            3,
+            640,
+            640
+          ]
+        ],
+        "engine_layers": 185,
+        "server_artifacts": [
+          {
+            "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-depth-perf-c2-20261025-final/d3-model/trt_fp16/model.onnx",
+            "bytes": 80061305,
+            "sha256": "76b70f3c11c500ec2659e7893a7d88900357713a15f16618f777f168406f965b"
+          },
+          {
+            "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-depth-perf-c2-20261025-final/d3-model/trt_fp16/model.engine",
+            "bytes": 42424580,
+            "sha256": "102f471f40199660026e528a7f6355a8b6a998772d26d2f22d0f0c91e933e63c"
+          },
+          {
+            "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-depth-perf-c2-20261025-final/d3-model/trt_fp16/layers.json",
+            "bytes": 165836,
+            "sha256": "6a458b90278ad9c6dfa1e17f67530ea75c3129bc04fafe1feb7030e70d200442"
+          }
+        ]
+      },
+      "checkpoint": {
+        "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_budget_5090/5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c2-150e-s0/weights/best.pt",
+        "bytes": 40679119,
+        "sha256": "ac2b02c45596bb816c4a42799d2b97ff02d62a4dc153bc5816502f02e936a5d6"
+      }
+    },
+    "c2-la/trt_fp16": {
+      "status": "completed",
+      "engine": {
+        "tensorrt": "10.14.1.48.post1",
+        "fp16_allowed": true,
+        "tf32": false,
+        "workspace_bytes": 2147483648,
+        "builder_optimization_level": 3,
+        "build_seconds": 17.84128058422357,
+        "input_names": [
+          "images"
+        ],
+        "input_shapes": [
+          [
+            1,
+            3,
+            640,
+            640
+          ]
+        ],
+        "engine_layers": 161,
+        "server_artifacts": [
+          {
+            "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-depth-perf-c2-20261025-final/d2-model/trt_fp16/model.onnx",
+            "bytes": 75495408,
+            "sha256": "634def9d9d18fcc279bca5956569a792160e1b40b38c60ad2baec5cebb89caa2"
+          },
+          {
+            "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-depth-perf-c2-20261025-final/d2-model/trt_fp16/model.engine",
+            "bytes": 39991940,
+            "sha256": "500bab56bd4897562e05cd6e6ebd198c95a1220e9bb868b874ccc02606ec1a8a"
+          },
+          {
+            "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-depth-perf-c2-20261025-final/d2-model/trt_fp16/layers.json",
+            "bytes": 138687,
+            "sha256": "f4f6723e609a94fb0defd66e3a8b79cbc9ac76fda993eea83f5feb968f28525c"
+          }
+        ]
+      },
+      "checkpoint": {
+        "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_budget_5090/5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c2-150e-s0/weights/best.pt",
+        "bytes": 40679119,
+        "sha256": "ac2b02c45596bb816c4a42799d2b97ff02d62a4dc153bc5816502f02e936a5d6"
+      }
+    }
+  },
+  "actual_depth_by_alias": {
+    "c2": "d3",
+    "c2-la": "d2"
+  },
+  "source_receipt": {
+    "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-depth-perf-c2-20261025-final/assessment.json",
+    "sha256": "37c8b08c5b4b3fa9c47f6dc5d38f52e4f139bf8f17a368a78deab51d94e9422d"
+  }
+}

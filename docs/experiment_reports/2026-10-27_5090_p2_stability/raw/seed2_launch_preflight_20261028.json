@@ -1,0 +1,36 @@
+{
+  "created_utc": "2026-10-28T04:36:23.978779+00:00",
+  "status": "passed",
+  "seed": 2,
+  "sequence": [
+    "train-c0-150e",
+    "formal-eval-c0",
+    "train-c2-150e",
+    "formal-eval-c2"
+  ],
+  "environment": {
+    "sys_executable": "/tmp/zhj-uav-5090-venv/bin/python",
+    "sys_prefix": "/tmp/zhj-uav-5090-venv",
+    "sys_base_prefix": "/home/ubuntu/miniconda3/envs/UAV_CV",
+    "python": "3.11.16 (main, Sep  2 2026, 23:39:52) [GCC 15.3.0]",
+    "torch": "2.14.0+cu130",
+    "torch_cuda": "13.0",
+    "gpu": "NVIDIA GeForce RTX 5090 D v2",
+    "packages": {
+      "torchvision": "0.29.0",
+      "numpy": "1.26.4",
+      "pycocotools": "2.0.11"
+    },
+    "ultralytics_file": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/ultralytics/__init__.py",
+    "detrscope_file": "/home/ubuntu/文档/ZHJ_UAV/detrscope/src/detrscope/__init__.py"
+  },
+  "source_files_verified": 254,
+  "data_audit_path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_stability_5090/5090-p2-stability-20261027-r1/asset_audit_seed2_20261028.json",
+  "data_audit_sha256": "4cb2c6c910829bd300cae459b82689712ae8cb01829b825528f77059d92ed2da",
+  "label_content_sha256": "0053d3cc406e9d3d833370024cf8110cfc7f87fdcd56eb207db1fe927c3489a3",
+  "image_inventory_sha256": "4db47e9eac5d5c87aba6617aec25a786015d9029a27c502009105ba26c1fa0d6",
+  "annotation_sha256": "6f8b8686864f1485ab172de9339f7049593f74766f6654c6e980a6c00d810371",
+  "image_inventory_limitation": "canonical JSON list of relative filename and byte size, train then val; NOT image pixel/content SHA; headers read only",
+  "initialization_shared_verified": true,
+  "tmux_session": "5090-p2-stability-s2-20261028"
+}

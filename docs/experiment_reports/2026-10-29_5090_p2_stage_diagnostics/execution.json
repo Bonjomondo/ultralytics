@@ -1,0 +1,308 @@
+{
+  "status": "completed",
+  "started_utc": "2026-10-29T04:19:22.026409+00:00",
+  "stages": [
+    {
+      "name": "smoke-s1-c0",
+      "started_utc": "2026-10-29T04:19:22.868935+00:00",
+      "command": [
+        "/tmp/zhj-uav-5090-venv/bin/python",
+        "-u",
+        "-m",
+        "experiments.p2_stage_diagnostics_5090.depth",
+        "--variant",
+        "c0",
+        "--seed",
+        "1",
+        "--checkpoint",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_stability_5090/5090-p2-stability-20261027-r1/training/5090-c0-150e-s1/weights/best.pt",
+        "--baseline-evaluation",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_stability_5090/5090-p2-stability-20261027-r1/evaluations/c0-s1/summary.json",
+        "--expected-commit",
+        "6d1d4d1badbecf47970243685a1d712ad3e31559",
+        "--output",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-p2-stage-diagnostics-20261029-r1/smoke-s1-c0",
+        "--batch",
+        "2",
+        "--limit",
+        "8"
+      ],
+      "status": "completed",
+      "returncode": 0,
+      "finished_utc": "2026-10-29T04:19:27.826439+00:00"
+    },
+    {
+      "name": "smoke-s1-c2",
+      "started_utc": "2026-10-29T04:19:27.827587+00:00",
+      "command": [
+        "/tmp/zhj-uav-5090-venv/bin/python",
+        "-u",
+        "-m",
+        "experiments.p2_stage_diagnostics_5090.depth",
+        "--variant",
+        "c2",
+        "--seed",
+        "1",
+        "--checkpoint",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_stability_5090/5090-p2-stability-20261027-r1/training/5090-c2-150e-s1/weights/best.pt",
+        "--baseline-evaluation",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_stability_5090/5090-p2-stability-20261027-r1/evaluations/c2-s1/summary.json",
+        "--expected-commit",
+        "6d1d4d1badbecf47970243685a1d712ad3e31559",
+        "--output",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-p2-stage-diagnostics-20261029-r1/smoke-s1-c2",
+        "--batch",
+        "2",
+        "--limit",
+        "8"
+      ],
+      "status": "completed",
+      "returncode": 0,
+      "finished_utc": "2026-10-29T04:19:32.745169+00:00"
+    },
+    {
+      "name": "smoke-s2-c0",
+      "started_utc": "2026-10-29T04:19:32.746395+00:00",
+      "command": [
+        "/tmp/zhj-uav-5090-venv/bin/python",
+        "-u",
+        "-m",
+        "experiments.p2_stage_diagnostics_5090.depth",
+        "--variant",
+        "c0",
+        "--seed",
+        "2",
+        "--checkpoint",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_stability_5090/5090-p2-stability-20261027-r1/training/5090-c0-150e-s2/weights/best.pt",
+        "--baseline-evaluation",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_stability_5090/5090-p2-stability-20261027-r1/evaluations/c0-s2/summary.json",
+        "--expected-commit",
+        "6d1d4d1badbecf47970243685a1d712ad3e31559",
+        "--output",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-p2-stage-diagnostics-20261029-r1/smoke-s2-c0",
+        "--batch",
+        "2",
+        "--limit",
+        "8"
+      ],
+      "status": "completed",
+      "returncode": 0,
+      "finished_utc": "2026-10-29T04:19:37.657643+00:00"
+    },
+    {
+      "name": "smoke-s2-c2",
+      "started_utc": "2026-10-29T04:19:37.658847+00:00",
+      "command": [
+        "/tmp/zhj-uav-5090-venv/bin/python",
+        "-u",
+        "-m",
+        "experiments.p2_stage_diagnostics_5090.depth",
+        "--variant",
+        "c2",
+        "--seed",
+        "2",
+        "--checkpoint",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_stability_5090/5090-p2-stability-20261027-r1/training/5090-c2-150e-s2/weights/best.pt",
+        "--baseline-evaluation",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_stability_5090/5090-p2-stability-20261027-r1/evaluations/c2-s2/summary.json",
+        "--expected-commit",
+        "6d1d4d1badbecf47970243685a1d712ad3e31559",
+        "--output",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-p2-stage-diagnostics-20261029-r1/smoke-s2-c2",
+        "--batch",
+        "2",
+        "--limit",
+        "8"
+      ],
+      "status": "completed",
+      "returncode": 0,
+      "finished_utc": "2026-10-29T04:19:42.537080+00:00"
+    },
+    {
+      "name": "full-s1-c0",
+      "started_utc": "2026-10-29T04:19:42.538259+00:00",
+      "command": [
+        "/tmp/zhj-uav-5090-venv/bin/python",
+        "-u",
+        "-m",
+        "experiments.p2_stage_diagnostics_5090.depth",
+        "--variant",
+        "c0",
+        "--seed",
+        "1",
+        "--checkpoint",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_stability_5090/5090-p2-stability-20261027-r1/training/5090-c0-150e-s1/weights/best.pt",
+        "--baseline-evaluation",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_stability_5090/5090-p2-stability-20261027-r1/evaluations/c0-s1/summary.json",
+        "--expected-commit",
+        "6d1d4d1badbecf47970243685a1d712ad3e31559",
+        "--output",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-p2-stage-diagnostics-20261029-r1/full-s1-c0",
+        "--batch",
+        "2"
+      ],
+      "status": "completed",
+      "returncode": 0,
+      "finished_utc": "2026-10-29T04:21:46.958651+00:00"
+    },
+    {
+      "name": "full-s1-c2",
+      "started_utc": "2026-10-29T04:21:46.959995+00:00",
+      "command": [
+        "/tmp/zhj-uav-5090-venv/bin/python",
+        "-u",
+        "-m",
+        "experiments.p2_stage_diagnostics_5090.depth",
+        "--variant",
+        "c2",
+        "--seed",
+        "1",
+        "--checkpoint",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_stability_5090/5090-p2-stability-20261027-r1/training/5090-c2-150e-s1/weights/best.pt",
+        "--baseline-evaluation",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_stability_5090/5090-p2-stability-20261027-r1/evaluations/c2-s1/summary.json",
+        "--expected-commit",
+        "6d1d4d1badbecf47970243685a1d712ad3e31559",
+        "--output",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-p2-stage-diagnostics-20261029-r1/full-s1-c2",
+        "--batch",
+        "2"
+      ],
+      "status": "completed",
+      "returncode": 0,
+      "finished_utc": "2026-10-29T04:23:49.997769+00:00"
+    },
+    {
+      "name": "full-s2-c0",
+      "started_utc": "2026-10-29T04:23:49.999074+00:00",
+      "command": [
+        "/tmp/zhj-uav-5090-venv/bin/python",
+        "-u",
+        "-m",
+        "experiments.p2_stage_diagnostics_5090.depth",
+        "--variant",
+        "c0",
+        "--seed",
+        "2",
+        "--checkpoint",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_stability_5090/5090-p2-stability-20261027-r1/training/5090-c0-150e-s2/weights/best.pt",
+        "--baseline-evaluation",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_stability_5090/5090-p2-stability-20261027-r1/evaluations/c0-s2/summary.json",
+        "--expected-commit",
+        "6d1d4d1badbecf47970243685a1d712ad3e31559",
+        "--output",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-p2-stage-diagnostics-20261029-r1/full-s2-c0",
+        "--batch",
+        "2"
+      ],
+      "status": "completed",
+      "returncode": 0,
+      "finished_utc": "2026-10-29T04:25:55.280655+00:00"
+    },
+    {
+      "name": "full-s2-c2",
+      "started_utc": "2026-10-29T04:25:55.282051+00:00",
+      "command": [
+        "/tmp/zhj-uav-5090-venv/bin/python",
+        "-u",
+        "-m",
+        "experiments.p2_stage_diagnostics_5090.depth",
+        "--variant",
+        "c2",
+        "--seed",
+        "2",
+        "--checkpoint",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_stability_5090/5090-p2-stability-20261027-r1/training/5090-c2-150e-s2/weights/best.pt",
+        "--baseline-evaluation",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_stability_5090/5090-p2-stability-20261027-r1/evaluations/c2-s2/summary.json",
+        "--expected-commit",
+        "6d1d4d1badbecf47970243685a1d712ad3e31559",
+        "--output",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-p2-stage-diagnostics-20261029-r1/full-s2-c2",
+        "--batch",
+        "2"
+      ],
+      "status": "completed",
+      "returncode": 0,
+      "finished_utc": "2026-10-29T04:27:59.832095+00:00"
+    },
+    {
+      "name": "analysis",
+      "started_utc": "2026-10-29T04:27:59.833563+00:00",
+      "command": [
+        "/tmp/zhj-uav-5090-venv/bin/python",
+        "-u",
+        "-m",
+        "experiments.p2_stage_diagnostics_5090.analyze",
+        "--root",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-p2-stage-diagnostics-20261029-r1",
+        "--output",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-p2-stage-diagnostics-20261029-r1/analysis"
+      ],
+      "status": "completed",
+      "returncode": 0,
+      "finished_utc": "2026-10-29T04:30:24.912067+00:00"
+    }
+  ],
+  "no_training": true,
+  "environment": {
+    "executable": "/tmp/zhj-uav-5090-venv/bin/python",
+    "prefix": "/tmp/zhj-uav-5090-venv",
+    "base_prefix": "/home/ubuntu/miniconda3/envs/UAV_CV",
+    "torch": "2.14.0+cu130",
+    "ultralytics": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/ultralytics/__init__.py",
+    "detrscope": "/home/ubuntu/文档/ZHJ_UAV/detrscope/src/detrscope/__init__.py",
+    "gpu": "NVIDIA GeForce RTX 5090 D v2"
+  },
+  "annotation_sha256": "6f8b8686864f1485ab172de9339f7049593f74766f6654c6e980a6c00d810371",
+  "assets": [
+    {
+      "seed": 1,
+      "arm": "c0",
+      "checkpoint": {
+        "bytes": 40598415,
+        "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_stability_5090/5090-p2-stability-20261027-r1/training/5090-c0-150e-s1/weights/best.pt",
+        "sha256": "71ab91c00ac8ee45150febeeb38b6f08d3c163e570e9b5a4d589f650e7509c68"
+      },
+      "evaluation_path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_stability_5090/5090-p2-stability-20261027-r1/evaluations/c0-s1/summary.json",
+      "evaluation_sha256": "9897a5c0dff3c20bc774f898ad7a41b1e4c0c289ddb1a166dab2aba4c5aeb663"
+    },
+    {
+      "seed": 1,
+      "arm": "c2",
+      "checkpoint": {
+        "bytes": 40679119,
+        "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_stability_5090/5090-p2-stability-20261027-r1/training/5090-c2-150e-s1/weights/best.pt",
+        "sha256": "486d88a0516992ab7a2a722e774b3fa3f3c89d6abf3d85f0a7ce76af6d8154fb"
+      },
+      "evaluation_path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_stability_5090/5090-p2-stability-20261027-r1/evaluations/c2-s1/summary.json",
+      "evaluation_sha256": "95b202bb2e1db792d33cb62a8e07936e0229f6ff0eb84d7290208d58e9e6814f"
+    },
+    {
+      "seed": 2,
+      "arm": "c0",
+      "checkpoint": {
+        "bytes": 40598415,
+        "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_stability_5090/5090-p2-stability-20261027-r1/training/5090-c0-150e-s2/weights/best.pt",
+        "sha256": "63c487634e5e5b6401ddb4ae4f6a73a0c4816e819ff5d80ff717372ee8d89a78"
+      },
+      "evaluation_path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_stability_5090/5090-p2-stability-20261027-r1/evaluations/c0-s2/summary.json",
+      "evaluation_sha256": "c0ef0bd7d547560ad570794f68feb407b6b273de5f37105c367c941e534c84df"
+    },
+    {
+      "seed": 2,
+      "arm": "c2",
+      "checkpoint": {
+        "bytes": 40679119,
+        "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_stability_5090/5090-p2-stability-20261027-r1/training/5090-c2-150e-s2/weights/best.pt",
+        "sha256": "52687c3f4c12d9954bc4f64b901b45198996856d84acf759f26ae0a4478587a7"
+      },
+      "evaluation_path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_stability_5090/5090-p2-stability-20261027-r1/evaluations/c2-s2/summary.json",
+      "evaluation_sha256": "2909ef0ec8a6df2b87eb546117cb6328a0da7efce690a63f8b20b0648c8218b8"
+    }
+  ],
+  "phase": "finished",
+  "finished_utc": "2026-10-29T04:30:24.957415+00:00",
+  "frozen_sources_unchanged": true,
+  "checkpoints_unchanged": true
+}

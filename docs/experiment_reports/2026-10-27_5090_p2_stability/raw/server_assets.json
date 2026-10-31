@@ -1,0 +1,16 @@
+{
+  "server_only_new_predictions": [
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_stability_5090/c2-d2d3-trt-fp16-20261027-r1/fp16/c2-la-predictions.json",
+      "bytes": 31868364,
+      "sha256": "39035b03c1a592ef6fba927d06de93981531025e6cb6ee653ec80ad5fc2deb10"
+    },
+    {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_stability_5090/c2-d2d3-trt-fp16-20261027-r1/fp16/c2-predictions.json",
+      "bytes": 31878782,
+      "sha256": "2ef58fdabfffc623655ec4eaa0a8901474825eed29cf9bac1767dad3a0461a53"
+    }
+  ],
+  "runtime_root": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_stability_5090/5090-p2-stability-20261027-r1",
+  "persistent_session": "5090-p2-stability-s1-20261027"
+}

@@ -1,0 +1,399 @@
+{
+  "status": "completed",
+  "images": 548,
+  "valid_gt": 38759,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "annotations": {
+    "path": "/home/ubuntu/文档/ZHJ_UAV/SO_DETR/datasets/VisDrone2019-DET-YOLO/annotations/VisDrone2019-DET_val_coco.json",
+    "bytes": 5380819,
+    "sha256": "6f8b8686864f1485ab172de9339f7049593f74766f6654c6e980a6c00d810371"
+  },
+  "input_gt_identity_sha256": "2449612e28fecccc89ff2f168775ddb6a75056f80c60e95e1b6d2b748e72356c",
+  "models": [
+    {
+      "seed": 0,
+      "model": "c0",
+      "reused": true,
+      "summary": {
+        "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-depth-eval-c0-20261025-final/summary.json",
+        "bytes": 16602,
+        "sha256": "20f98bff604a1eb74f4b14badd6157a4b29a1c51cdc27c21fd75f6076e7c51db"
+      },
+      "checkpoint": {
+        "bytes": 40598415,
+        "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_budget_5090/5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c0-150e-s0/weights/best.pt",
+        "sha256": "adeaec17109a3b3ac6b8a6e521fb6cc3c2bdb3cd124ad6eedecc930d35a03d2e"
+      },
+      "input_gt_identity_sha256": "2449612e28fecccc89ff2f168775ddb6a75056f80c60e95e1b6d2b748e72356c",
+      "source_pin": {
+        "bytes": 24137,
+        "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-depth-eval-c0-20261025-final/source_pin.json",
+        "sha256": "babfc1e7de0beecd764a115b77054796b8a231dc5e359b09ffeda85db663da7a"
+      },
+      "observation": {
+        "all_identity_and_restore_passed": true,
+        "batches": 274,
+        "images": 548,
+        "input_gt_identity_sha256": "2449612e28fecccc89ff2f168775ddb6a75056f80c60e95e1b6d2b748e72356c",
+        "manifest": {
+          "bytes": 163586,
+          "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-depth-eval-c0-20261025-final/observed-d3/manifest.json",
+          "sha256": "0264a473cefa24da62c70108141c93afde37be52431b12c302c04c134e50b536"
+        }
+      },
+      "early_exit_equivalence": {
+        "all_exact": true,
+        "executed_layers": {
+          "1": [
+            [
+              1
+            ]
+          ],
+          "2": [
+            [
+              1,
+              2
+            ]
+          ],
+          "3": [
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        },
+        "images": 548,
+        "max_abs": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0
+        }
+      },
+      "model_state_unchanged": true
+    },
+    {
+      "seed": 0,
+      "model": "c2",
+      "reused": true,
+      "summary": {
+        "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-depth-eval-c2-20261025-final/summary.json",
+        "bytes": 16440,
+        "sha256": "293932887911555572adc9420c133595035ae6103af7ea9e26b0fb100b52d90e"
+      },
+      "checkpoint": {
+        "bytes": 40679119,
+        "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_budget_5090/5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c2-150e-s0/weights/best.pt",
+        "sha256": "ac2b02c45596bb816c4a42799d2b97ff02d62a4dc153bc5816502f02e936a5d6"
+      },
+      "input_gt_identity_sha256": "2449612e28fecccc89ff2f168775ddb6a75056f80c60e95e1b6d2b748e72356c",
+      "source_pin": {
+        "bytes": 24137,
+        "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-depth-eval-c2-20261025-final/source_pin.json",
+        "sha256": "babfc1e7de0beecd764a115b77054796b8a231dc5e359b09ffeda85db663da7a"
+      },
+      "observation": {
+        "all_identity_and_restore_passed": true,
+        "batches": 274,
+        "images": 548,
+        "input_gt_identity_sha256": "2449612e28fecccc89ff2f168775ddb6a75056f80c60e95e1b6d2b748e72356c",
+        "manifest": {
+          "bytes": 163586,
+          "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-depth-eval-c2-20261025-final/observed-d3/manifest.json",
+          "sha256": "ba7ac0ab020e567d215bd2293705c802f6ded9e79a8e22300058121a77aaa09f"
+        }
+      },
+      "early_exit_equivalence": {
+        "all_exact": true,
+        "executed_layers": {
+          "1": [
+            [
+              1
+            ]
+          ],
+          "2": [
+            [
+              1,
+              2
+            ]
+          ],
+          "3": [
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        },
+        "images": 548,
+        "max_abs": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0
+        }
+      },
+      "model_state_unchanged": true
+    },
+    {
+      "seed": 1,
+      "model": "c0",
+      "reused": false,
+      "summary": {
+        "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-p2-stage-diagnostics-20261029-r1/full-s1-c0/summary.json",
+        "bytes": 16290,
+        "sha256": "5a1b47e3b18d81b95132fda3b81093dac82f00ce4c0f3860f40c79a3b963f3f8"
+      },
+      "checkpoint": {
+        "bytes": 40598415,
+        "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_stability_5090/5090-p2-stability-20261027-r1/training/5090-c0-150e-s1/weights/best.pt",
+        "sha256": "71ab91c00ac8ee45150febeeb38b6f08d3c163e570e9b5a4d589f650e7509c68"
+      },
+      "input_gt_identity_sha256": "2449612e28fecccc89ff2f168775ddb6a75056f80c60e95e1b6d2b748e72356c",
+      "source_pin": {
+        "bytes": 24137,
+        "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-p2-stage-diagnostics-20261029-r1/full-s1-c0/source_pin.json",
+        "sha256": "36582311ee240f5fa242f998967dba854ee39b82248e01f46751a691a08d8d4b"
+      },
+      "observation": {
+        "all_identity_and_restore_passed": true,
+        "batches": 274,
+        "images": 548,
+        "input_gt_identity_sha256": "2449612e28fecccc89ff2f168775ddb6a75056f80c60e95e1b6d2b748e72356c",
+        "manifest": {
+          "bytes": 163601,
+          "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-p2-stage-diagnostics-20261029-r1/full-s1-c0/observed-d3/manifest.json",
+          "sha256": "971c9b04db3cd0ae7b44c9796d9fac4d2eefe36ae352ac522e9face8b7490f6e"
+        }
+      },
+      "early_exit_equivalence": {
+        "all_exact": true,
+        "executed_layers": {
+          "1": [
+            [
+              1
+            ]
+          ],
+          "2": [
+            [
+              1,
+              2
+            ]
+          ],
+          "3": [
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        },
+        "images": 548,
+        "max_abs": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0
+        }
+      },
+      "model_state_unchanged": true
+    },
+    {
+      "seed": 1,
+      "model": "c2",
+      "reused": false,
+      "summary": {
+        "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-p2-stage-diagnostics-20261029-r1/full-s1-c2/summary.json",
+        "bytes": 16296,
+        "sha256": "6146f92c94ae04d6bb72a21ffb36bec6861e6be6bc21e5af0f2175dc36c3e424"
+      },
+      "checkpoint": {
+        "bytes": 40679119,
+        "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_stability_5090/5090-p2-stability-20261027-r1/training/5090-c2-150e-s1/weights/best.pt",
+        "sha256": "486d88a0516992ab7a2a722e774b3fa3f3c89d6abf3d85f0a7ce76af6d8154fb"
+      },
+      "input_gt_identity_sha256": "2449612e28fecccc89ff2f168775ddb6a75056f80c60e95e1b6d2b748e72356c",
+      "source_pin": {
+        "bytes": 24137,
+        "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-p2-stage-diagnostics-20261029-r1/full-s1-c2/source_pin.json",
+        "sha256": "36582311ee240f5fa242f998967dba854ee39b82248e01f46751a691a08d8d4b"
+      },
+      "observation": {
+        "all_identity_and_restore_passed": true,
+        "batches": 274,
+        "images": 548,
+        "input_gt_identity_sha256": "2449612e28fecccc89ff2f168775ddb6a75056f80c60e95e1b6d2b748e72356c",
+        "manifest": {
+          "bytes": 163601,
+          "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-p2-stage-diagnostics-20261029-r1/full-s1-c2/observed-d3/manifest.json",
+          "sha256": "92b80558fff2e9c205d84c31616666d044afb5f08cdd2eaffab55c93b00da541"
+        }
+      },
+      "early_exit_equivalence": {
+        "all_exact": true,
+        "executed_layers": {
+          "1": [
+            [
+              1
+            ]
+          ],
+          "2": [
+            [
+              1,
+              2
+            ]
+          ],
+          "3": [
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        },
+        "images": 548,
+        "max_abs": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0
+        }
+      },
+      "model_state_unchanged": true
+    },
+    {
+      "seed": 2,
+      "model": "c0",
+      "reused": false,
+      "summary": {
+        "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-p2-stage-diagnostics-20261029-r1/full-s2-c0/summary.json",
+        "bytes": 16290,
+        "sha256": "544507d160302ba644cb718e2121027f58a2f71bd15e481acfb07b359e1b3b25"
+      },
+      "checkpoint": {
+        "bytes": 40598415,
+        "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_stability_5090/5090-p2-stability-20261027-r1/training/5090-c0-150e-s2/weights/best.pt",
+        "sha256": "63c487634e5e5b6401ddb4ae4f6a73a0c4816e819ff5d80ff717372ee8d89a78"
+      },
+      "input_gt_identity_sha256": "2449612e28fecccc89ff2f168775ddb6a75056f80c60e95e1b6d2b748e72356c",
+      "source_pin": {
+        "bytes": 24137,
+        "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-p2-stage-diagnostics-20261029-r1/full-s2-c0/source_pin.json",
+        "sha256": "36582311ee240f5fa242f998967dba854ee39b82248e01f46751a691a08d8d4b"
+      },
+      "observation": {
+        "all_identity_and_restore_passed": true,
+        "batches": 274,
+        "images": 548,
+        "input_gt_identity_sha256": "2449612e28fecccc89ff2f168775ddb6a75056f80c60e95e1b6d2b748e72356c",
+        "manifest": {
+          "bytes": 163601,
+          "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-p2-stage-diagnostics-20261029-r1/full-s2-c0/observed-d3/manifest.json",
+          "sha256": "a658fb350cb46a84a341ad649c10c6afa99d761bf8132fc5dd93db517e6fe5ab"
+        }
+      },
+      "early_exit_equivalence": {
+        "all_exact": true,
+        "executed_layers": {
+          "1": [
+            [
+              1
+            ]
+          ],
+          "2": [
+            [
+              1,
+              2
+            ]
+          ],
+          "3": [
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        },
+        "images": 548,
+        "max_abs": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0
+        }
+      },
+      "model_state_unchanged": true
+    },
+    {
+      "seed": 2,
+      "model": "c2",
+      "reused": false,
+      "summary": {
+        "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-p2-stage-diagnostics-20261029-r1/full-s2-c2/summary.json",
+        "bytes": 16295,
+        "sha256": "b203bc8737fa176ad5229897c14d0d350a501cda5afee92784483df7389a9d57"
+      },
+      "checkpoint": {
+        "bytes": 40679119,
+        "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_stability_5090/5090-p2-stability-20261027-r1/training/5090-c2-150e-s2/weights/best.pt",
+        "sha256": "52687c3f4c12d9954bc4f64b901b45198996856d84acf759f26ae0a4478587a7"
+      },
+      "input_gt_identity_sha256": "2449612e28fecccc89ff2f168775ddb6a75056f80c60e95e1b6d2b748e72356c",
+      "source_pin": {
+        "bytes": 24137,
+        "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-p2-stage-diagnostics-20261029-r1/full-s2-c2/source_pin.json",
+        "sha256": "36582311ee240f5fa242f998967dba854ee39b82248e01f46751a691a08d8d4b"
+      },
+      "observation": {
+        "all_identity_and_restore_passed": true,
+        "batches": 274,
+        "images": 548,
+        "input_gt_identity_sha256": "2449612e28fecccc89ff2f168775ddb6a75056f80c60e95e1b6d2b748e72356c",
+        "manifest": {
+          "bytes": 163601,
+          "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-p2-stage-diagnostics-20261029-r1/full-s2-c2/observed-d3/manifest.json",
+          "sha256": "9b2152a2ec93e343944ff76e2e41d1264e21a3c86bf8969f29fc1186ebe21f3b"
+        }
+      },
+      "early_exit_equivalence": {
+        "all_exact": true,
+        "executed_layers": {
+          "1": [
+            [
+              1
+            ]
+          ],
+          "2": [
+            [
+              1,
+              2
+            ]
+          ],
+          "3": [
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        },
+        "images": 548,
+        "max_abs": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0
+        }
+      },
+      "model_state_unchanged": true
+    }
+  ],
+  "no_training": true,
+  "protocol": {
+    "precision": "native unfused FP32; autocast off",
+    "preprocess": "scale_fill640 RGB/255",
+    "formal": "COCO bbox maxDets [1,10,100]; per-query argmax; conf .001; max300; no NMS/rounding",
+    "coverage": "All300 selected queries; many-to-many, class-agnostic and argmax-class-correct; IoU .3/.5/.75; geometry/coverage not AP",
+    "comparison": "same GT id across arms; no cross-model query id association",
+    "scope": "observational stage localization; does not isolate P2 causal effect or compare independently trained shallow models"
+  }
+}

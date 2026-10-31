@@ -1,0 +1,95 @@
+{
+  "status": "passed",
+  "models": [
+    {
+      "seed": 0,
+      "model": "c0",
+      "checkpoint_sha_verified": true,
+      "baseline_evaluation": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_budget_5090/5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c0-150e-s0-query-full/q300/coco.json",
+      "baseline_sha256": "5d04c9b6aa9be65391c138fa2f80cf066944f40b10cc0008589c4f703d94e1ab",
+      "D3_canonical_predictions_exact": true,
+      "raw_predictions_canonical_sha256": "fb975fe58a32fb52cb626fed8c3b0af670b5fa1d7878d9693f79a01e85f647eb",
+      "prediction_hash_scope": "raw bbox/category/image/score list before COCO.loadRes adds area/id/segmentation/iscrowd",
+      "D3_metrics_exact": true,
+      "source_pin_verified": true,
+      "raw_manifest_sha256": "0264a473cefa24da62c70108141c93afde37be52431b12c302c04c134e50b536"
+    },
+    {
+      "seed": 0,
+      "model": "c2",
+      "checkpoint_sha_verified": true,
+      "baseline_evaluation": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_budget_5090/5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c2-150e-s0-query-full/q300/coco.json",
+      "baseline_sha256": "cfeab8dc4bb31846bfca882499a7abb0bf97387e22231712cd5239a86e24ee59",
+      "D3_canonical_predictions_exact": true,
+      "raw_predictions_canonical_sha256": "1c8fc06ce3ca91bfac50fd2843912b07a9c4d7dfa43376a47d965e0d89c658d7",
+      "prediction_hash_scope": "raw bbox/category/image/score list before COCO.loadRes adds area/id/segmentation/iscrowd",
+      "D3_metrics_exact": true,
+      "source_pin_verified": true,
+      "raw_manifest_sha256": "ba7ac0ab020e567d215bd2293705c802f6ded9e79a8e22300058121a77aaa09f"
+    },
+    {
+      "seed": 1,
+      "model": "c0",
+      "checkpoint_sha_verified": true,
+      "baseline_evaluation": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_stability_5090/5090-p2-stability-20261027-r1/evaluations/c0-s1/summary.json",
+      "baseline_sha256": "9897a5c0dff3c20bc774f898ad7a41b1e4c0c289ddb1a166dab2aba4c5aeb663",
+      "D3_canonical_predictions_exact": true,
+      "raw_predictions_canonical_sha256": "652f1660ff4b4dace8b7b0532795d8d7fbed02fc899e5190c4dc5e562f3c1ed0",
+      "prediction_hash_scope": "raw bbox/category/image/score list before COCO.loadRes adds area/id/segmentation/iscrowd",
+      "D3_metrics_exact": true,
+      "source_pin_verified": true,
+      "raw_manifest_sha256": "971c9b04db3cd0ae7b44c9796d9fac4d2eefe36ae352ac522e9face8b7490f6e"
+    },
+    {
+      "seed": 1,
+      "model": "c2",
+      "checkpoint_sha_verified": true,
+      "baseline_evaluation": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_stability_5090/5090-p2-stability-20261027-r1/evaluations/c2-s1/summary.json",
+      "baseline_sha256": "95b202bb2e1db792d33cb62a8e07936e0229f6ff0eb84d7290208d58e9e6814f",
+      "D3_canonical_predictions_exact": true,
+      "raw_predictions_canonical_sha256": "1f0c86d5ba83633db285a3e3ab2ad700fb2fb3b04e421fcfc101458b27d54925",
+      "prediction_hash_scope": "raw bbox/category/image/score list before COCO.loadRes adds area/id/segmentation/iscrowd",
+      "D3_metrics_exact": true,
+      "source_pin_verified": true,
+      "raw_manifest_sha256": "92b80558fff2e9c205d84c31616666d044afb5f08cdd2eaffab55c93b00da541"
+    },
+    {
+      "seed": 2,
+      "model": "c0",
+      "checkpoint_sha_verified": true,
+      "baseline_evaluation": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_stability_5090/5090-p2-stability-20261027-r1/evaluations/c0-s2/summary.json",
+      "baseline_sha256": "c0ef0bd7d547560ad570794f68feb407b6b273de5f37105c367c941e534c84df",
+      "D3_canonical_predictions_exact": true,
+      "raw_predictions_canonical_sha256": "57bbb09e6b1ecffcee2eb6f54614ce6cbf3c513f75a47753ca412da01ee54ade",
+      "prediction_hash_scope": "raw bbox/category/image/score list before COCO.loadRes adds area/id/segmentation/iscrowd",
+      "D3_metrics_exact": true,
+      "source_pin_verified": true,
+      "raw_manifest_sha256": "a658fb350cb46a84a341ad649c10c6afa99d761bf8132fc5dd93db517e6fe5ab"
+    },
+    {
+      "seed": 2,
+      "model": "c2",
+      "checkpoint_sha_verified": true,
+      "baseline_evaluation": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_stability_5090/5090-p2-stability-20261027-r1/evaluations/c2-s2/summary.json",
+      "baseline_sha256": "2909ef0ec8a6df2b87eb546117cb6328a0da7efce690a63f8b20b0648c8218b8",
+      "D3_canonical_predictions_exact": true,
+      "raw_predictions_canonical_sha256": "f8134b05232793ef76eb82b64b0619eafa772bdf95b1f7f3d5d8e72aac7ba308",
+      "prediction_hash_scope": "raw bbox/category/image/score list before COCO.loadRes adds area/id/segmentation/iscrowd",
+      "D3_metrics_exact": true,
+      "source_pin_verified": true,
+      "raw_manifest_sha256": "9b2152a2ec93e343944ff76e2e41d1264e21a3c86bf8969f29fc1186ebe21f3b"
+    }
+  ],
+  "all_six_input_gt_identities_exact": true,
+  "source_and_sdk_identical_across_six": true,
+  "source_files": {
+    "experiments/p2_stage_diagnostics_5090/metric_details.py": "b77329c3eba82d1111ac655253102329618f47b30c318e3016e8ec1d10d3d301",
+    "experiments/p2_stage_diagnostics_5090/queue.py": "91cd9158baf883e6a2359533330e59c0387cd70f73c752b17e9f30bc59620001",
+    "experiments/p2_stage_diagnostics_5090/depth.py": "0aa3dbcbf3b469cd919622c4c1ebe51b212283e84f8c619aa56edc9d7a3b5198",
+    "experiments/p2_stage_diagnostics_5090/cohort.py": "3b8636ef261e086ff48c7b473245f4552af47d85dbfb61c095d28abade341e21",
+    "experiments/p2_stage_diagnostics_5090/analyze.py": "53c06f57e7c982284aa05b847081dfb0e79dc46a34dbc7c29495e5c5529fe203",
+    "experiments/p2_stage_diagnostics_5090/package.py": "aaba5abce2761ca568374854ffc63b92fcefec3a99ffa6898123f06d3bfa1fd6",
+    "experiments/p2_stage_diagnostics_5090/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "no_training": true
+}

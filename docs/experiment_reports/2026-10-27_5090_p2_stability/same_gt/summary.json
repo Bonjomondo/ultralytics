@@ -1,0 +1,83 @@
+{
+  "status": "completed",
+  "images": 548,
+  "valid_gt": 38759,
+  "annotation_sha256": "6f8b8686864f1485ab172de9339f7049593f74766f6654c6e980a6c00d810371",
+  "inputs": {
+    "c0": {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_budget_5090/5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c0-150e-s0-query-full/q300/predictions.json",
+      "sha256": "3932bc5fc805d6e021b2c1dd81993a8fbc64f865c1d5f5dd8b23f84e0054c437",
+      "annotation_sha256": "6f8b8686864f1485ab172de9339f7049593f74766f6654c6e980a6c00d810371"
+    },
+    "c2": {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_budget_5090/5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c2-150e-s0-query-full/q300/predictions.json",
+      "sha256": "7ef9409c03a43d2e7c0b0928914884bb7f5f2bdc85ccbb481f639d7021eca219",
+      "annotation_sha256": "6f8b8686864f1485ab172de9339f7049593f74766f6654c6e980a6c00d810371"
+    },
+    "la": {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-la-only-150e-20261027-s0-r1/evaluation/predictions.json",
+      "sha256": "ebd0c185151dd7479a759174534ec924f001163507068446931d1b2514766514",
+      "annotation_sha256": "6f8b8686864f1485ab172de9339f7049593f74766f6654c6e980a6c00d810371"
+    },
+    "c2-la": {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_p5_la_5090/5090-c2-la-150e-20261026-s0-r1/evaluation/predictions.json",
+      "sha256": "d9bd7d7657d65828dd4df5466b3ee9b821f5040aca9f38420b95053933ed9b93",
+      "annotation_sha256": "6f8b8686864f1485ab172de9339f7049593f74766f6654c6e980a6c00d810371"
+    },
+    "c0-d1": {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-depth-eval-c0-20261025-final/d1-predictions.json",
+      "sha256": "89ab472ad1773da6780be4e67e77f3dc4691c81a54361f543821a94c0bbcbd48",
+      "annotation_sha256": "6f8b8686864f1485ab172de9339f7049593f74766f6654c6e980a6c00d810371"
+    },
+    "c0-d2": {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-depth-eval-c0-20261025-final/d2-predictions.json",
+      "sha256": "0af1a77fb4bf28f2edbce6c4c7a9f18540e72e62378609a54a852893084ffee1",
+      "annotation_sha256": "6f8b8686864f1485ab172de9339f7049593f74766f6654c6e980a6c00d810371"
+    },
+    "c2-d1": {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-depth-eval-c2-20261025-final/d1-predictions.json",
+      "sha256": "ea613b0fb014b4a2a81498aaafbe6568e3f3b891390a630b22595f548cd3bfa3",
+      "annotation_sha256": "6f8b8686864f1485ab172de9339f7049593f74766f6654c6e980a6c00d810371"
+    },
+    "c2-d2": {
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/diagnostics/5090-depth-eval-c2-20261025-final/d2-predictions.json",
+      "sha256": "deb36075fc385e18c5b174bc2ebfef8fba41f455c351df8ec3deb2fae0628091",
+      "annotation_sha256": "6f8b8686864f1485ab172de9339f7049593f74766f6654c6e980a6c00d810371"
+    }
+  },
+  "same_gt_recovery_overlap": [
+    {
+      "iou": 0.5,
+      "p2_aifi_recovered": 2326,
+      "p2_la_recovered": 2418,
+      "recovered_in_both": 438,
+      "union": 4306
+    },
+    {
+      "iou": 0.75,
+      "p2_aifi_recovered": 2552,
+      "p2_la_recovered": 2521,
+      "recovered_in_both": 483,
+      "union": 4590
+    }
+  ],
+  "protocol": {
+    "matching": "COCO greedy score-order matching within image and category; iscrowd/ignored GT excluded",
+    "budgets": [
+      100,
+      300
+    ],
+    "confidence": [
+      0.001,
+      0.05,
+      0.25
+    ],
+    "iou": [
+      0.5,
+      0.75
+    ],
+    "sizes": "original image coordinates; sqrt(area) bins; COCO group cutoffs 32 and 96",
+    "density": "valid annotated GT count per image, not local neighbor density",
+    "limitation": "Recall/state diagnostic, not AP or causal mechanism evidence. Budget300 is diagnostic only."
+  }
+}

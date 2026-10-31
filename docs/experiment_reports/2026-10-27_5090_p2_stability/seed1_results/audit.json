@@ -1,0 +1,429 @@
+{
+  "generated_local": "2026-10-28T12:31:22.322692+08:00",
+  "server_run": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/p2_stability_5090/5090-p2-stability-20261027-r1",
+  "audit": [
+    {
+      "variant": "c0",
+      "epochs": 150,
+      "health_epochs": 150,
+      "best_internal_epoch": 150,
+      "best_internal_map_percent": 20.937,
+      "checkpoint_hashes_verified": true,
+      "predictions_hash_verified": true,
+      "curve_and_sampled_health_finite": true,
+      "p2_sampled_gradient_min": null,
+      "peak_allocated_mib": 13168.5009765625
+    },
+    {
+      "variant": "c2",
+      "epochs": 150,
+      "health_epochs": 150,
+      "best_internal_epoch": 150,
+      "best_internal_map_percent": 20.721999999999998,
+      "checkpoint_hashes_verified": true,
+      "predictions_hash_verified": true,
+      "curve_and_sampled_health_finite": true,
+      "p2_sampled_gradient_min": 0.0002018411469180137,
+      "peak_allocated_mib": 13172.1298828125
+    }
+  ],
+  "frozen_source_files_verified": 254,
+  "analysis_environment": {
+    "executable": "/tmp/zhj-uav-5090-venv/bin/python",
+    "prefix": "/tmp/zhj-uav-5090-venv",
+    "base_prefix": "/home/ubuntu/miniconda3/envs/UAV_CV",
+    "python": "3.11.16 (main, Sep  2 2026, 23:39:52) [GCC 15.3.0]",
+    "torch": "2.14.0+cu130",
+    "matplotlib": "3.11.2",
+    "ultralytics_file": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/ultralytics/__init__.py",
+    "detrscope_file": "/home/ubuntu/文档/ZHJ_UAV/detrscope/src/detrscope/__init__.py"
+  },
+  "historical_environment": "training/evaluation receipts record the environments at execution time",
+  "seed0_sources": {
+    "c0": {
+      "source": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_budget_5090/5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c0-150e-s0-query-full/summary.json",
+      "sha256": "22cf978f6c18e02bd13a8a371a0f6f39fd12396a023bb43e61dcd16c9420f8b0",
+      "protocol": {
+        "annotation_sha256": "6f8b8686864f1485ab172de9339f7049593f74766f6654c6e980a6c00d810371",
+        "batch": 2,
+        "checkpoint_sha256": "adeaec17109a3b3ac6b8a6e521fb6cc3c2bdb3cd124ad6eedecc930d35a03d2e",
+        "conf": 0.001,
+        "dtype": "float32",
+        "environment": {
+          "autocast": false,
+          "capability": [
+            12,
+            0
+          ],
+          "cuda_available": true,
+          "cuda_device_index": 0,
+          "cudnn": 92400,
+          "cudnn_benchmark": false,
+          "cudnn_deterministic": false,
+          "cudnn_tf32": false,
+          "deterministic_algorithms": false,
+          "device_requested": "cuda:0",
+          "dtype": "float32",
+          "executable": "/tmp/zhj-uav-5090-venv/bin/python",
+          "gpu": "NVIDIA GeForce RTX 5090 D v2",
+          "matmul_tf32": false,
+          "nvidia_smi": {
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "0, NVIDIA GeForce RTX 5090 D v2, GPU-49e248ed-74af-bad5-bc6e-1c5095289883, 580.178.04"
+          },
+          "python": "3.11.16",
+          "torch": "2.14.0+cu130",
+          "torch_cuda": "13.0",
+          "total_memory_bytes": 25138495488
+        },
+        "experiment_sources": {
+          "coverage.py": "6c20acdbab632d15e495e3fbbcf391f962da3ddc43826efbbbd11d0e9ef3982b",
+          "queue_5090.py": "8e443b64462fb482909b755f3a075500a4c07a2c2c57a39672c78bc0fe6e4ded",
+          "run.py": "02c354aa158bd91f5d2ea360a7063fc7191bbc92266bf124e7af533e433d88c5",
+          "source_adapter.py": "c04b024b33f4675cb4aa702958075b88f8ab0db18f748210b08a1a3be80fe332",
+          "train_5090.py": "34ac3bd546f04672f8024099a7ee0a6e8a10aefed3d0ffc88aa2379ca2c3d056"
+        },
+        "formal_max_dets": [
+          1,
+          10,
+          100
+        ],
+        "fused": false,
+        "imgsz": 640,
+        "model_state_sha256": "6d0d21f6c123f44c286c9944fd284de616dc7b71cb045e7119303aff3d1d8199",
+        "postprocess": "native RTDETRPredictor; argmax class, conf threshold, max_det=300; no JSON rounding",
+        "preprocess": "native LetterBox scale_fill; BGR to RGB, CHW, /255",
+        "query_budget_semantics": "native Top-K then complete Decoder rerun",
+        "scope": "full_val",
+        "source_pin_sha256": "a11d34b8bc7794b9898f79e3d445f52859dfd137e0da25a39592c7444a11b8a3"
+      },
+      "condition_q300": {
+        "benchmark_median_ms": 7.329007863998413,
+        "coverage_all_gt": [
+          {
+            "budget": 300,
+            "class_correct_coverage": 0.7419696070590056,
+            "class_correct_covered": 28758,
+            "coverage": 0.9043576975670167,
+            "covered": 35052,
+            "denominator": 38759,
+            "group": "all",
+            "iou_threshold": 0.3,
+            "newly_class_correct_covered": 591,
+            "newly_covered": 605
+          },
+          {
+            "budget": 300,
+            "class_correct_coverage": 0.6538610387264894,
+            "class_correct_covered": 25343,
+            "coverage": 0.7867592043138368,
+            "covered": 30494,
+            "denominator": 38759,
+            "group": "all",
+            "iou_threshold": 0.5,
+            "newly_class_correct_covered": 439,
+            "newly_covered": 542
+          },
+          {
+            "budget": 300,
+            "class_correct_coverage": 0.3722232255734152,
+            "class_correct_covered": 14427,
+            "coverage": 0.4314094790887278,
+            "covered": 16721,
+            "denominator": 38759,
+            "group": "all",
+            "iou_threshold": 0.75,
+            "newly_class_correct_covered": 142,
+            "newly_covered": 195
+          }
+        ],
+        "coverage_summary_sha256": "7fd59fc1d1470e6faa986db06ecc74cc0d2f44a7552fe772c34045c045b31ef0",
+        "delta_pp": {
+          "AP": 0.0,
+          "AP50": 0.0,
+          "AP75": 0.0,
+          "APl": 0.0,
+          "APm": 0.0,
+          "APs": 0.0,
+          "AR1": 0.0,
+          "AR10": 0.0,
+          "AR100": 0.0,
+          "ARl": 0.0,
+          "ARm": 0.0,
+          "ARs": 0.0
+        },
+        "images": 548,
+        "input_gt_identity_sha256": "2449612e28fecccc89ff2f168775ddb6a75056f80c60e95e1b6d2b748e72356c",
+        "manifest_sha256": "22be79215999c439e72a9b3729971813577227dc70af683ed18830a2b209b4f2",
+        "metrics": {
+          "AP": 0.18661578295635495,
+          "AP50": 0.32500877078220913,
+          "AP75": 0.18066354109404237,
+          "APl": 0.29230753553593086,
+          "APm": 0.25960278106674906,
+          "APs": 0.1216636805411043,
+          "AR1": 0.07425625524825548,
+          "AR10": 0.20398600985904156,
+          "AR100": 0.28220042287822705,
+          "ARl": 0.38901947061954073,
+          "ARm": 0.390147166184806,
+          "ARs": 0.20060116829140287
+        },
+        "predictions_file_sha256": "3932bc5fc805d6e021b2c1dd81993a8fbc64f865c1d5f5dd8b23f84e0054c437",
+        "queries": 300
+      }
+    },
+    "c2": {
+      "source": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_budget_5090/5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c2-150e-s0-query-full/summary.json",
+      "sha256": "93e25e6acdfc1e1577334510a30e712adc325164e3b714a2fd0792f149a07173",
+      "protocol": {
+        "annotation_sha256": "6f8b8686864f1485ab172de9339f7049593f74766f6654c6e980a6c00d810371",
+        "batch": 2,
+        "checkpoint_sha256": "ac2b02c45596bb816c4a42799d2b97ff02d62a4dc153bc5816502f02e936a5d6",
+        "conf": 0.001,
+        "dtype": "float32",
+        "environment": {
+          "autocast": false,
+          "capability": [
+            12,
+            0
+          ],
+          "cuda_available": true,
+          "cuda_device_index": 0,
+          "cudnn": 92400,
+          "cudnn_benchmark": false,
+          "cudnn_deterministic": false,
+          "cudnn_tf32": false,
+          "deterministic_algorithms": false,
+          "device_requested": "cuda:0",
+          "dtype": "float32",
+          "executable": "/tmp/zhj-uav-5090-venv/bin/python",
+          "gpu": "NVIDIA GeForce RTX 5090 D v2",
+          "matmul_tf32": false,
+          "nvidia_smi": {
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "0, NVIDIA GeForce RTX 5090 D v2, GPU-49e248ed-74af-bad5-bc6e-1c5095289883, 580.178.04"
+          },
+          "python": "3.11.16",
+          "torch": "2.14.0+cu130",
+          "torch_cuda": "13.0",
+          "total_memory_bytes": 25138495488
+        },
+        "experiment_sources": {
+          "coverage.py": "6c20acdbab632d15e495e3fbbcf391f962da3ddc43826efbbbd11d0e9ef3982b",
+          "queue_5090.py": "8e443b64462fb482909b755f3a075500a4c07a2c2c57a39672c78bc0fe6e4ded",
+          "run.py": "02c354aa158bd91f5d2ea360a7063fc7191bbc92266bf124e7af533e433d88c5",
+          "source_adapter.py": "c04b024b33f4675cb4aa702958075b88f8ab0db18f748210b08a1a3be80fe332",
+          "train_5090.py": "34ac3bd546f04672f8024099a7ee0a6e8a10aefed3d0ffc88aa2379ca2c3d056"
+        },
+        "formal_max_dets": [
+          1,
+          10,
+          100
+        ],
+        "fused": false,
+        "imgsz": 640,
+        "model_state_sha256": "db13ade900598f006f2dcac6a374a53d87a53ddbd5c5a9d86af42ac363948075",
+        "postprocess": "native RTDETRPredictor; argmax class, conf threshold, max_det=300; no JSON rounding",
+        "preprocess": "native LetterBox scale_fill; BGR to RGB, CHW, /255",
+        "query_budget_semantics": "native Top-K then complete Decoder rerun",
+        "scope": "full_val",
+        "source_pin_sha256": "a11d34b8bc7794b9898f79e3d445f52859dfd137e0da25a39592c7444a11b8a3"
+      },
+      "condition_q300": {
+        "benchmark_median_ms": 7.362879991531372,
+        "coverage_all_gt": [
+          {
+            "budget": 300,
+            "class_correct_coverage": 0.7440594442581078,
+            "class_correct_covered": 28839,
+            "coverage": 0.9030160736861116,
+            "covered": 35000,
+            "denominator": 38759,
+            "group": "all",
+            "iou_threshold": 0.3,
+            "newly_class_correct_covered": 660,
+            "newly_covered": 724
+          },
+          {
+            "budget": 300,
+            "class_correct_coverage": 0.6597693438943213,
+            "class_correct_covered": 25572,
+            "coverage": 0.7912484842230192,
+            "covered": 30668,
+            "denominator": 38759,
+            "group": "all",
+            "iou_threshold": 0.5,
+            "newly_class_correct_covered": 468,
+            "newly_covered": 583
+          },
+          {
+            "budget": 300,
+            "class_correct_coverage": 0.37887974405944425,
+            "class_correct_covered": 14685,
+            "coverage": 0.43971722696664,
+            "covered": 17043,
+            "denominator": 38759,
+            "group": "all",
+            "iou_threshold": 0.75,
+            "newly_class_correct_covered": 168,
+            "newly_covered": 228
+          }
+        ],
+        "coverage_summary_sha256": "a6bba9d422592e682b2732f9b62908971076ad46a7c2c381c369b988e1d1c0ca",
+        "delta_pp": {
+          "AP": 0.0,
+          "AP50": 0.0,
+          "AP75": 0.0,
+          "APl": 0.0,
+          "APm": 0.0,
+          "APs": 0.0,
+          "AR1": 0.0,
+          "AR10": 0.0,
+          "AR100": 0.0,
+          "ARl": 0.0,
+          "ARm": 0.0,
+          "ARs": 0.0
+        },
+        "images": 548,
+        "input_gt_identity_sha256": "2449612e28fecccc89ff2f168775ddb6a75056f80c60e95e1b6d2b748e72356c",
+        "manifest_sha256": "79d726a4809da5e358e37a1a6ba5de84e0a0869967fa9197bc712faad13aca68",
+        "metrics": {
+          "AP": 0.19516708680487616,
+          "AP50": 0.3349480343850828,
+          "AP75": 0.1914756606301633,
+          "APl": 0.3466510306713381,
+          "APm": 0.2669844182132849,
+          "APs": 0.1265258180455838,
+          "AR1": 0.0792536246696044,
+          "AR10": 0.2162606739571383,
+          "AR100": 0.29639388035769476,
+          "ARl": 0.4095889819508914,
+          "ARm": 0.4043048795219356,
+          "ARs": 0.21030923601055945
+        },
+        "predictions_file_sha256": "7ef9409c03a43d2e7c0b0928914884bb7f5f2bdc85ccbb481f639d7021eca219",
+        "queries": 300
+      }
+    }
+  },
+  "seed0_categories_source": {
+    "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/docs/experiment_reports/2026-10-27_5090_la_only_150e_results/category_metrics.csv",
+    "sha256": "96c6a1afddeaabc036dfdc09c577837c51255dc55024e8bc576b3451435b732b"
+  },
+  "statistics": [
+    {
+      "metric": "AP",
+      "seed0_delta_pp": 0.8551303848521208,
+      "seed1_delta_pp": -0.05359731831249803,
+      "mean_delta_pp": 0.4007665332698114,
+      "sample_std_delta_pp": 0.642567521159778,
+      "min_delta_pp": -0.05359731831249803,
+      "max_delta_pp": 0.8551303848521208
+    },
+    {
+      "metric": "AP50",
+      "seed0_delta_pp": 0.993926360287368,
+      "seed1_delta_pp": 0.09663684050462251,
+      "mean_delta_pp": 0.5452816003959953,
+      "sample_std_delta_pp": 0.6344795041260002,
+      "min_delta_pp": 0.09663684050462251,
+      "max_delta_pp": 0.993926360287368
+    },
+    {
+      "metric": "AP75",
+      "seed0_delta_pp": 1.0812119536120939,
+      "seed1_delta_pp": 0.051182717998884186,
+      "mean_delta_pp": 0.566197335805489,
+      "sample_std_delta_pp": 0.7283406573224966,
+      "min_delta_pp": 0.051182717998884186,
+      "max_delta_pp": 1.0812119536120939
+    },
+    {
+      "metric": "APl",
+      "seed0_delta_pp": 5.434349513540727,
+      "seed1_delta_pp": 1.762138666894959,
+      "mean_delta_pp": 3.598244090217843,
+      "sample_std_delta_pp": 2.596645191610016,
+      "min_delta_pp": 1.762138666894959,
+      "max_delta_pp": 5.434349513540727
+    },
+    {
+      "metric": "APm",
+      "seed0_delta_pp": 0.7381637146535844,
+      "seed1_delta_pp": -0.10938026463768935,
+      "mean_delta_pp": 0.31439172500794754,
+      "sample_std_delta_pp": 0.5993040951106905,
+      "min_delta_pp": -0.10938026463768935,
+      "max_delta_pp": 0.7381637146535844
+    },
+    {
+      "metric": "APs",
+      "seed0_delta_pp": 0.48621375044795023,
+      "seed1_delta_pp": 0.2623349472740504,
+      "mean_delta_pp": 0.3742743488610003,
+      "sample_std_delta_pp": 0.15830621988819293,
+      "min_delta_pp": 0.2623349472740504,
+      "max_delta_pp": 0.48621375044795023
+    },
+    {
+      "metric": "AR1",
+      "seed0_delta_pp": 0.4997369421348923,
+      "seed1_delta_pp": -0.16156845971797829,
+      "mean_delta_pp": 0.169084241208457,
+      "sample_std_delta_pp": 0.46761353408545964,
+      "min_delta_pp": -0.16156845971797829,
+      "max_delta_pp": 0.4997369421348923
+    },
+    {
+      "metric": "AR10",
+      "seed0_delta_pp": 1.2274664098096721,
+      "seed1_delta_pp": -0.09116719090616243,
+      "mean_delta_pp": 0.5681496094517549,
+      "sample_std_delta_pp": 0.9324147609666009,
+      "min_delta_pp": -0.09116719090616243,
+      "max_delta_pp": 1.2274664098096721
+    },
+    {
+      "metric": "AR100",
+      "seed0_delta_pp": 1.419345747946771,
+      "seed1_delta_pp": -0.1266025521782801,
+      "mean_delta_pp": 0.6463715978842455,
+      "sample_std_delta_pp": 1.0931505263822396,
+      "min_delta_pp": -0.1266025521782801,
+      "max_delta_pp": 1.419345747946771
+    },
+    {
+      "metric": "ARl",
+      "seed0_delta_pp": 2.0569511331350654,
+      "seed1_delta_pp": 2.8102768960971503,
+      "mean_delta_pp": 2.433614014616108,
+      "sample_std_delta_pp": 0.5326817554330199,
+      "min_delta_pp": 2.0569511331350654,
+      "max_delta_pp": 2.8102768960971503
+    },
+    {
+      "metric": "ARm",
+      "seed0_delta_pp": 1.4157713337129607,
+      "seed1_delta_pp": -0.16076477083036167,
+      "mean_delta_pp": 0.6275032814412995,
+      "sample_std_delta_pp": 1.1147793703080071,
+      "min_delta_pp": -0.16076477083036167,
+      "max_delta_pp": 1.4157713337129607
+    },
+    {
+      "metric": "ARs",
+      "seed0_delta_pp": 0.9708067719156581,
+      "seed1_delta_pp": -0.011070581075767194,
+      "mean_delta_pp": 0.47986809541994546,
+      "sample_std_delta_pp": 0.6942921345937343,
+      "min_delta_pp": -0.011070581075767194,
+      "max_delta_pp": 0.9708067719156581
+    }
+  ],
+  "gate_passed": false,
+  "gate_reason": "seed2 pending; seed1 AP difference is negative, violating the predeclared all-three-positive criterion",
+  "health_scope": "bbox/gradient/activation probes sample the first three training batches of each epoch; curves cover all epochs"
+}

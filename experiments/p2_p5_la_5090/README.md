@@ -1,5 +1,7 @@
 # 5090：P2 小目标特征＋P5 局部注意力
 
+**2026-10-27最新进展：四组seed0已完成，结果见[LA-only与四组汇总](../../docs/experiment_reports/2026-10-27_5090_la_only_150e_results/README.md)。下一步已收窄为[P2多seed验证、同GT诊断和D2早退](../../docs/experiment_reports/2026-10-27_5090_p2_stability/README.md)。下方保留原始预检与设计记录。**
+
 **服务器执行更新：已完成5090结构测速和组合真实GPU短跑。当前NAIFI实现相对C2整网慢1.75%、Neck慢3.56%，未达到本设计预定的速度门槛，四组150轮暂未启动。修复了真实图像测速布局和评估Predictor尺寸初始化；见[GPU预检报告](../../docs/experiment_reports/2026-10-26_5090_p2_p5_la_preflight/README.md)。以下保留原始设计说明。**
 
 分支：`5090-detrscope-query-budget`。设计基于 `11c5346`，状态为**配置和执行工具已准备，尚未在5090训练或测速**。历史4090 R2b和5090 C2结果只用于提出假设，不填写为新组合的结果。

@@ -1,0 +1,42 @@
+{
+  "completed_pairs": 2,
+  "engineering_gate": "three positive paired AP differences and mean >=0.3pp; not a significance test",
+  "gate_passed": false,
+  "max_delta_AP_pp": 0.8551303848521208,
+  "mean_delta_AP_pp": 0.40076653326981126,
+  "min_delta_AP_pp": -0.053597318312498254,
+  "rows": [
+    {
+      "c0_AP": 18.661578295635493,
+      "c0_AP50": 32.50087707822091,
+      "c0_AP75": 18.066354109404237,
+      "c0_APs": 12.16636805411043,
+      "c2_AP": 19.516708680487614,
+      "c2_AP50": 33.49480343850828,
+      "c2_AP75": 19.14756606301633,
+      "c2_APs": 12.65258180455838,
+      "delta_AP50_pp": 0.9939263602873671,
+      "delta_AP75_pp": 1.0812119536120934,
+      "delta_AP_pp": 0.8551303848521208,
+      "delta_APs_pp": 0.48621375044795023,
+      "seed": 0
+    },
+    {
+      "c0_AP": 18.882105273414577,
+      "c0_AP50": 32.60155390825298,
+      "c0_AP75": 18.280337306917904,
+      "c0_APs": 11.894779413776044,
+      "c2_AP": 18.82850795510208,
+      "c2_AP50": 32.698190748757604,
+      "c2_AP75": 18.331520024916788,
+      "c2_APs": 12.157114361050095,
+      "delta_AP50_pp": 0.09663684050462695,
+      "delta_AP75_pp": 0.05118271799888496,
+      "delta_AP_pp": -0.053597318312498254,
+      "delta_APs_pp": 0.26233494727404966,
+      "seed": 1
+    }
+  ],
+  "sample_std_delta_AP_pp": 0.6425675211597782,
+  "small_target_claim": "inspect APs deltas separately; overall AP alone cannot establish a small-target benefit"
+}

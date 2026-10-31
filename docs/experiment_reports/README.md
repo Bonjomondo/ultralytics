@@ -1,5 +1,9 @@
 # 实验结果与报告
 
+- [2026-10-29：三个seed的P2 Encoder/D1/D2/D3完整诊断：seed1末层相对收益消失，seed2候选不稳并在D2覆盖转负](2026-10-29_5090_p2_stage_diagnostics/README.md)
+
+- [2026-10-28更新：P2配对seed1最终结果（AP差−0.054pp）、跨seed统计、同GT诊断与D2/D3 TensorRT FP16 AP](2026-10-27_5090_p2_stability/README.md)
+
 - [2026-10-27：5090 LA-only 150轮与四模型正式精度、同场TensorRT对照](2026-10-27_5090_la_only_150e_results/README.md)
 
 - [2026-10-27：5090无P2的LA-only 150轮从零补充对照（启动记录）](2026-10-27_5090_la_only_150e_launch/README.md)
