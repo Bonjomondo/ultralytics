@@ -1,0 +1,6 @@
+# Existing read-only server dataset; no data is copied or converted by this experiment.
+path: /home/ubuntu/文档/ZHJ_UAV/SO_DETR/datasets/VisDrone2019-DET-YOLO
+train: images/train
+val: images/val
+nc: 10
+names: [pedestrian, people, bicycle, car, van, truck, tricycle, awning-tricycle, bus, motor]

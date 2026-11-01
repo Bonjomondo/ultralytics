@@ -1,5 +1,7 @@
 # 实验结果与报告
 
+- [2026-10-31：C2 + O2M-C seed0 150轮结果，AP20.630（+1.113pp）](2026-10-31_5090_c2_o2mc/README.md)
+
 - [2026-10-29：三个seed的P2 Encoder/D1/D2/D3完整诊断：seed1末层相对收益消失，seed2候选不稳并在D2覆盖转负](2026-10-29_5090_p2_stage_diagnostics/README.md)
 
 - [2026-10-28更新：P2配对seed1最终结果（AP差−0.054pp）、跨seed统计、同GT诊断与D2/D3 TensorRT FP16 AP](2026-10-27_5090_p2_stability/README.md)

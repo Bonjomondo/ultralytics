@@ -1,0 +1,135 @@
+{
+  "architecture": {
+    "decoder_layers": 3,
+    "p2_injection": true,
+    "p5_na7_rpb": false,
+    "points_per_level": 4,
+    "queries": 300,
+    "variant": "c2"
+  },
+  "checkpoint": {
+    "path": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-20261031-s0-r2/training/5090-c2-o2mc-smoke-s0/weights/best.pt",
+    "sha256": "20c1f4f3f9504839207d6378a51d07ea8a0412a2dfaa03199f74f9d1b4c05a67"
+  },
+  "finished_utc": "2026-10-31T15:45:38.297610+00:00",
+  "metrics": {
+    "AP": 0.0,
+    "AP50": 0.0,
+    "AP75": 0.0,
+    "APl": 0.0,
+    "APm": 0.0,
+    "APs": 0.0,
+    "AR1": 0.0,
+    "AR10": 0.0,
+    "AR100": 0.0,
+    "ARl": 0.0,
+    "ARm": 0.0,
+    "ARs": 0.0
+  },
+  "model_state_unchanged": true,
+  "native_export_exact": true,
+  "per_class": {
+    "awning-tricycle": {
+      "AP": 0.0,
+      "APl": null,
+      "APm": 0.0,
+      "APs": 0.0
+    },
+    "bicycle": {
+      "AP": 0.0,
+      "APl": null,
+      "APm": 0.0,
+      "APs": 0.0
+    },
+    "bus": {
+      "AP": null,
+      "APl": null,
+      "APm": null,
+      "APs": null
+    },
+    "car": {
+      "AP": 0.0,
+      "APl": 0.0,
+      "APm": 0.0,
+      "APs": 0.0
+    },
+    "motor": {
+      "AP": 0.0,
+      "APl": null,
+      "APm": 0.0,
+      "APs": 0.0
+    },
+    "pedestrian": {
+      "AP": 0.0,
+      "APl": null,
+      "APm": 0.0,
+      "APs": 0.0
+    },
+    "people": {
+      "AP": 0.0,
+      "APl": null,
+      "APm": 0.0,
+      "APs": 0.0
+    },
+    "tricycle": {
+      "AP": 0.0,
+      "APl": null,
+      "APm": 0.0,
+      "APs": 0.0
+    },
+    "truck": {
+      "AP": 0.0,
+      "APl": null,
+      "APm": 0.0,
+      "APs": null
+    },
+    "van": {
+      "AP": 0.0,
+      "APl": 0.0,
+      "APm": 0.0,
+      "APs": null
+    }
+  },
+  "predictions_sha256": "fa4b11a1df89cc42b16b90ef0cbce67b6d48f527360471b1a6f30090fc7d5177",
+  "protocol": {
+    "annotations_sha256": "6f8b8686864f1485ab172de9339f7049593f74766f6654c6e980a6c00d810371",
+    "area": "COCO APs uses original annotation area; training diagnostic uses resized area",
+    "batch": 2,
+    "category_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "conf": 0.001,
+    "dtype": "float32",
+    "formal_max_dets": [
+      1,
+      10,
+      100
+    ],
+    "fused": false,
+    "image_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "imgsz": 640,
+    "nms": false,
+    "prediction_max_det": 300,
+    "preprocess": "native scale_fill, RGB BCHW /255"
+  },
+  "scope": "engineering_8_images",
+  "status": "completed"
+}
