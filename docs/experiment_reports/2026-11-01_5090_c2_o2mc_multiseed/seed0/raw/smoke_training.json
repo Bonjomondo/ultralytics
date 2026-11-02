@@ -1,0 +1,85 @@
+{
+  "status": "completed",
+  "started_utc": "2026-10-31T15:45:05.590605+00:00",
+  "finished_utc": "2026-10-31T15:45:35.404564+00:00",
+  "role": "engineering_smoke",
+  "recipe": {
+    "amp": false,
+    "batch": 8,
+    "cache": false,
+    "close_mosaic": 0,
+    "deterministic": false,
+    "epochs": 1,
+    "fraction": 0.01,
+    "imgsz": 640,
+    "lr0": 0.0001,
+    "lrf": 1.0,
+    "max_det": 300,
+    "mixup": 0.2,
+    "momentum": 0.9,
+    "nbs": 64,
+    "optimizer": "AdamW",
+    "patience": 0,
+    "plots": true,
+    "pretrained": false,
+    "resume": false,
+    "save_period": -1,
+    "seed": 0,
+    "val": true,
+    "warmup_bias_lr": 0.0,
+    "warmup_epochs": 3.0,
+    "warmup_momentum": 0.8,
+    "weight_decay": 0.0001,
+    "workers": 0
+  },
+  "initialization": {
+    "aux_seed": 4000,
+    "aux_state_sha256": "85357ce2c37d8553c53386acc998de3d31a86640bab2a3b229124ebcc59eeac0",
+    "c2_full_state_sha256": "7ea3429f4bb30bf725578108d287b4a8a82dbccff545cd022c0daad0ddd75737",
+    "excluded_slot": "model.14: baseline P3 projection versus candidate P2 downsampling",
+    "native_c2_state_verified": true,
+    "new_branch_seed": 1000,
+    "r0_full_state_sha256": "e1c9a8c9f9bb55b33b22a6ddf20386256b675014c21ff419e263405324432d08",
+    "seed": 0,
+    "shared_state_items": 527,
+    "shared_state_sha256": "1d9a8e81f45383d572f319a2039a24338a82f7847a9708e98ab4c0fed07b871e",
+    "shared_state_verified": true,
+    "source": "seeded R0 from scratch; no checkpoint or backbone pretrained weights",
+    "variant_only_state": [
+      "model.14.bn.bias",
+      "model.14.bn.num_batches_tracked",
+      "model.14.bn.running_mean",
+      "model.14.bn.running_var",
+      "model.14.bn.weight",
+      "model.14.conv.weight"
+    ]
+  },
+  "architecture": {
+    "auxiliary_parameters": 1330410,
+    "decoder_layers": 3,
+    "native_parameters": 20135032,
+    "p2_injection": true,
+    "p5_na7_rpb": false,
+    "points_per_level": 4,
+    "queries": 300,
+    "variant": "c2"
+  },
+  "checkpoints": {
+    "best": {
+      "bytes": 43355349,
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-20261031-s0-r2/training/5090-c2-o2mc-smoke-s0/weights/best.pt",
+      "sha256": "20c1f4f3f9504839207d6378a51d07ea8a0412a2dfaa03199f74f9d1b4c05a67"
+    },
+    "last": {
+      "bytes": 43355349,
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-20261031-s0-r2/training/5090-c2-o2mc-smoke-s0/weights/last.pt",
+      "sha256": "20c1f4f3f9504839207d6378a51d07ea8a0412a2dfaa03199f74f9d1b4c05a67"
+    },
+    "resume": {
+      "bytes": 129539569,
+      "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-20261031-s0-r2/training/5090-c2-o2mc-smoke-s0/weights/resume.pt",
+      "sha256": "dc441311711b5f99e4d272aac565a5690b5f188538c86b648a6ac59ee7fcd796"
+    }
+  },
+  "completed_epochs": 1
+}

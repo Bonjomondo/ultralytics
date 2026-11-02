@@ -1,0 +1,101 @@
+{
+  "phase": "full-train",
+  "pid": 563642,
+  "stages": [
+    {
+      "command": [
+        "/home/ubuntu/miniconda3/envs/UAV_CV/bin/python",
+        "-u",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/docs/experiment_reports/2026-10-24_5090_baselines/audit_assets_5090.py",
+        "--output",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-20261031-s0-r2/asset_audit.json"
+      ],
+      "finished_utc": "2026-10-31T15:45:00.634084+00:00",
+      "log": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-20261031-s0-r2/logs/dataset-audit.log",
+      "name": "dataset-audit",
+      "pid": 563735,
+      "returncode": 0,
+      "started_utc": "2026-10-31T15:44:59.714483+00:00",
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/home/ubuntu/miniconda3/envs/UAV_CV/bin/python",
+        "-u",
+        "-m",
+        "experiments.c2_o2mc_5090.test_o2mc"
+      ],
+      "finished_utc": "2026-10-31T15:45:04.483156+00:00",
+      "log": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-20261031-s0-r2/logs/cpu-gates.log",
+      "name": "cpu-gates",
+      "pid": 563736,
+      "returncode": 0,
+      "started_utc": "2026-10-31T15:45:00.647777+00:00",
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/home/ubuntu/miniconda3/envs/UAV_CV/bin/python",
+        "-u",
+        "-m",
+        "experiments.c2_o2mc_5090.run",
+        "train",
+        "--root",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-20261031-s0-r2",
+        "--name",
+        "5090-c2-o2mc-smoke-s0",
+        "--smoke"
+      ],
+      "finished_utc": "2026-10-31T15:45:35.948922+00:00",
+      "log": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-20261031-s0-r2/logs/smoke-train.log",
+      "name": "smoke-train",
+      "pid": 563804,
+      "returncode": 0,
+      "started_utc": "2026-10-31T15:45:04.493154+00:00",
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/home/ubuntu/miniconda3/envs/UAV_CV/bin/python",
+        "-u",
+        "-m",
+        "experiments.c2_o2mc_5090.run",
+        "evaluate",
+        "--root",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-20261031-s0-r2",
+        "--smoke",
+        "--checkpoint",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-20261031-s0-r2/training/5090-c2-o2mc-smoke-s0/weights/best.pt",
+        "--output",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-20261031-s0-r2/smoke-evaluation"
+      ],
+      "finished_utc": "2026-10-31T15:45:38.760434+00:00",
+      "log": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-20261031-s0-r2/logs/smoke-eval.log",
+      "name": "smoke-eval",
+      "pid": 564151,
+      "returncode": 0,
+      "started_utc": "2026-10-31T15:45:35.961556+00:00",
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/home/ubuntu/miniconda3/envs/UAV_CV/bin/python",
+        "-u",
+        "-m",
+        "experiments.c2_o2mc_5090.run",
+        "train",
+        "--root",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-20261031-s0-r2",
+        "--name",
+        "5090-c2-o2mc-150e-s0"
+      ],
+      "log": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-20261031-s0-r2/logs/full-train.log",
+      "name": "full-train",
+      "pid": 564166,
+      "started_utc": "2026-10-31T15:45:38.773808+00:00",
+      "status": "running"
+    }
+  ],
+  "started_utc": "2026-10-31T15:44:59.707437+00:00",
+  "status": "running"
+}

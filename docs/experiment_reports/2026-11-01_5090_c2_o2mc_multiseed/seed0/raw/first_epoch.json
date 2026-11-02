@@ -1,0 +1,97 @@
+{
+  "snapshot_utc": "2026-10-31T15:49:08.151819+00:00",
+  "status": "first_epoch_completed_training_continues",
+  "run": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-20261031-s0-r2/training/5090-c2-o2mc-150e-s0",
+  "training_pid": 564166,
+  "source_manifest_still_matches": true,
+  "csv_first_epoch": {
+    "epoch": "1",
+    "time": "164.418",
+    "train/giou_loss": "2.42849",
+    "train/cls_loss": "0.29765",
+    "train/l1_loss": "0.99213",
+    "train/aux_vfl": "1.0556",
+    "train/aux_giou": "0.67821",
+    "train/aux_dfl": "1.81116",
+    "metrics/precision(B)": "0.60672",
+    "metrics/recall(B)": "0.00833",
+    "metrics/mAP50(B)": "0.00265",
+    "metrics/mAP50-95(B)": "0.00071",
+    "val/giou_loss": "2.24543",
+    "val/cls_loss": "0.15932",
+    "val/l1_loss": "0.66398",
+    "val/aux_vfl": "0",
+    "val/aux_giou": "0",
+    "val/aux_dfl": "0",
+    "lr/pg0": "3.32921e-05",
+    "lr/pg1": "3.32921e-05",
+    "lr/pg2": "3.32921e-05"
+  },
+  "health_first_epoch": {
+    "epoch": 1,
+    "train_seconds": 160.44513142399956,
+    "train_peak_allocated_mib": 9087.25244140625,
+    "last_bbox_relu_active_ratio": 0.507968544960022,
+    "last_bbox_delta_logit_abs": 1.6006703162929625e-07,
+    "last_bbox_step_abs": 2.3894177303418473e-08,
+    "gamma": null
+  },
+  "aux_diagnostic_first_epoch": {
+    "epoch": 1,
+    "batch_index_zero_based": 2,
+    "assigner": "ATSS",
+    "gt": 537,
+    "positives": 1455,
+    "unassigned_gt": 138,
+    "positives_per_gt": 2.7094972133636475,
+    "target_score_sum": 73.41142272949219,
+    "positives_by_level": [
+      1286,
+      161,
+      8
+    ],
+    "gt_by_resized_area": {
+      "small": 453,
+      "medium": 79,
+      "large": 5
+    },
+    "positives_by_resized_area": {
+      "small": 994,
+      "medium": 438,
+      "large": 23
+    },
+    "main_loss": 29.687641143798828,
+    "auxiliary_loss": 4.138472080230713,
+    "weighted_aux_main_ratio": 0.06970024853944778,
+    "gradients": {
+      "p2_downsample": {
+        "main_norm": 3.288431167602539,
+        "weighted_aux_norm": 7.821766303095501e-06,
+        "cosine": -0.05951552093029022
+      },
+      "p3_repc3": {
+        "main_norm": 6.137317180633545,
+        "weighted_aux_norm": 1.4727940651937388e-05,
+        "cosine": -0.004912750795483589
+      },
+      "fused_p3": {
+        "main_norm": 0.11827824264764786,
+        "weighted_aux_norm": 7.902122689529278e-08,
+        "cosine": -0.0002960152633022517
+      }
+    }
+  },
+  "checkpoints": {
+    "best": {
+      "server_path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-20261031-s0-r2/training/5090-c2-o2mc-150e-s0/weights/best.pt",
+      "bytes": 129539569,
+      "sha256_at_first_epoch": "9f1a48a2261e6a075d455045f841547541aa6a4c863ba7f072b37e54b3f6ae1b"
+    },
+    "last": {
+      "server_path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-20261031-s0-r2/training/5090-c2-o2mc-150e-s0/weights/last.pt",
+      "bytes": 129539569,
+      "sha256_at_first_epoch": "9f1a48a2261e6a075d455045f841547541aa6a4c863ba7f072b37e54b3f6ae1b"
+    }
+  },
+  "note": "Current best/last are mutable as training continues; hashes identify this snapshot only."
+}

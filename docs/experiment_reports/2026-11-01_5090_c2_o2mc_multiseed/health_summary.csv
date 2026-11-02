@@ -1,0 +1,4 @@
+seed,epochs,best_epoch,converged,gain_last50_internal_pp,peak_allocated_mib,export_exact
+0,150,150,False,2.7799999999999994,14341.34814453125,True
+1,150,150,False,2.6240000000000014,13763.7998046875,True
+2,150,150,False,2.3909999999999987,14706.45068359375,True

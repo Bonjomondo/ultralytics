@@ -1,0 +1,101 @@
+{
+  "experiment": "C2 + O2M-C",
+  "created_utc": "2026-10-31T15:44:59.261523+00:00",
+  "branch": "5090-c2-o2mc-20261031",
+  "commit": "f7038be175fab17d9f82ca021500a9b6a6fbd0d7",
+  "dirty_paths": [
+    "M docs/experiment_reports/README.md",
+    "?? docs/experiment_reports/2026-10-31_5090_c2_o2mc/",
+    "?? experiments/c2_o2mc_5090/"
+  ],
+  "environment": {
+    "PYTHONPATH": "/home/ubuntu/文档/ZHJ_UAV/ultralytics:/home/ubuntu/文档/ZHJ_UAV/ultralytics/../detrscope/src",
+    "amp": false,
+    "capability": [
+      12,
+      0
+    ],
+    "cuda_available": true,
+    "cuda_visible_devices": null,
+    "cudnn": 92400,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": false,
+    "cudnn_tf32": false,
+    "cwd": "/home/ubuntu/文档/ZHJ_UAV/ultralytics",
+    "deterministic_algorithms": false,
+    "detrscope_file": "/home/ubuntu/文档/ZHJ_UAV/detrscope/src/detrscope/__init__.py",
+    "dtype": "float32",
+    "gpu": "NVIDIA GeForce RTX 5090 D v2",
+    "matmul_tf32": false,
+    "nvidia_smi": {
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "0, NVIDIA GeForce RTX 5090 D v2, 580.178.04"
+    },
+    "packages": {
+      "numpy": "1.26.4",
+      "opencv-python": "4.11.0.86",
+      "polars": "1.34.0",
+      "pycocotools": "2.0.11",
+      "scipy": "1.17.1",
+      "torchvision": "0.29.0",
+      "ultralytics-thop": null
+    },
+    "pid": 563642,
+    "python": "3.11.16",
+    "python_executable": "/home/ubuntu/miniconda3/envs/UAV_CV/bin/python",
+    "sys_base_prefix": "/home/ubuntu/miniconda3/envs/UAV_CV",
+    "sys_prefix": "/home/ubuntu/miniconda3/envs/UAV_CV",
+    "torch": "2.14.0+cu130",
+    "torch_cuda": "13.0",
+    "total_memory_bytes": 25138495488,
+    "ultralytics_file": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/ultralytics/__init__.py"
+  },
+  "data_yaml_sha256": "ad4d62cbb819fd5427e241c35a134f7345b6bb34061ac48cfb5eb3a01845d422",
+  "annotations_path": "/home/ubuntu/文档/ZHJ_UAV/SO_DETR/datasets/VisDrone2019-DET-YOLO/annotations/VisDrone2019-DET_val_coco.json",
+  "annotations_sha256": "6f8b8686864f1485ab172de9339f7049593f74766f6654c6e980a6c00d810371",
+  "baseline_checkpoint": {
+    "path": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/decoder_budget_5090/5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c2-150e-s0/weights/best.pt",
+    "sha256": "ac2b02c45596bb816c4a42799d2b97ff02d62a4dc153bc5816502f02e936a5d6"
+  },
+  "recipe": {
+    "auxiliary": {
+      "feature_layers": [
+        16,
+        23,
+        22
+      ],
+      "loss": {
+        "dfl": 0.5,
+        "giou": 2.5,
+        "vfl": 1.0
+      },
+      "reg_max": 16,
+      "seed_offset": 4000,
+      "static_topk_per_level": 9,
+      "strides": [
+        8,
+        16,
+        32
+      ],
+      "switch_epoch_zero_based": 30,
+      "task_aligned_alpha": 1.0,
+      "task_aligned_beta": 6.0,
+      "task_aligned_topk": 13,
+      "weight": 0.5
+    },
+    "convergence": {
+      "best_patience_epochs": 50,
+      "minimum_epochs": 150,
+      "stop_at_budget": true,
+      "tolerance_internal_map": 0.001,
+      "window_epochs": 20
+    },
+    "epochs": 150,
+    "experiment": "C2 + O2M-C, single-seed fixed-budget screen",
+    "model": "ultralytics/cfg/models/rt-detr/rtdetr-resnet18-p2-sfi-c2.yaml",
+    "seed": 0
+  },
+  "tmux": "/tmp/tmux-1000/default,563638,0",
+  "launch": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-20261031-s0-r2/launch.sh"
+}

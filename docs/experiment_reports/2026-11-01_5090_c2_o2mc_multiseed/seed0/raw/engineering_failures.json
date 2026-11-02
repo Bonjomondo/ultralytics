@@ -1,0 +1,64 @@
+[
+  {
+    "server_root": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-engineering-20261031-r1",
+    "status": "failed",
+    "phase": "smoke-train",
+    "error": "Traceback (most recent call last):\n  File \"/home/ubuntu/文档/ZHJ_UAV/ultralytics/experiments/c2_o2mc_5090/run.py\", line 309, in pipeline\n    stage(\"smoke-train\", [*prefix, \"train\", \"--root\", str(root), \"--name\", \"5090-c2-o2mc-smoke-s0\", \"--smoke\"])\n  File \"/home/ubuntu/文档/ZHJ_UAV/ultralytics/experiments/c2_o2mc_5090/run.py\", line 298, in stage\n    raise RuntimeError(f\"{name} failed ({code}): {log_path}\")\nRuntimeError: smoke-train failed (1): /home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-engineering-20261031-r1/logs/smoke-train.log\n",
+    "stages": [
+      {
+        "name": "dataset-audit",
+        "status": "completed",
+        "returncode": 0,
+        "log": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-engineering-20261031-r1/logs/dataset-audit.log"
+      },
+      {
+        "name": "cpu-gates",
+        "status": "completed",
+        "returncode": 0,
+        "log": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-engineering-20261031-r1/logs/cpu-gates.log"
+      },
+      {
+        "name": "smoke-train",
+        "status": "failed",
+        "returncode": 1,
+        "log": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-engineering-20261031-r1/logs/smoke-train.log"
+      }
+    ],
+    "source_manifest_sha256": "3e25408305b9e3817f8eb93e848b2bc64ca9ae32b68f315a8ab87e38d551c0ee",
+    "plan_sha256": "c7ce7c61d96ebd0d37c0e2b666c2a8f5d9d0d15e7699129ad85b9c92134f3b6b"
+  },
+  {
+    "server_root": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-20261031-s0-r1",
+    "status": "failed",
+    "phase": "smoke-eval",
+    "error": "Traceback (most recent call last):\n  File \"/home/ubuntu/文档/ZHJ_UAV/ultralytics/experiments/c2_o2mc_5090/run.py\", line 313, in pipeline\n    stage(\"smoke-eval\", [*prefix, \"evaluate\", \"--root\", str(root), \"--smoke\",\n  File \"/home/ubuntu/文档/ZHJ_UAV/ultralytics/experiments/c2_o2mc_5090/run.py\", line 301, in stage\n    raise RuntimeError(f\"{name} failed ({code}): {log_path}\")\nRuntimeError: smoke-eval failed (1): /home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-20261031-s0-r1/logs/smoke-eval.log\n",
+    "stages": [
+      {
+        "name": "dataset-audit",
+        "status": "completed",
+        "returncode": 0,
+        "log": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-20261031-s0-r1/logs/dataset-audit.log"
+      },
+      {
+        "name": "cpu-gates",
+        "status": "completed",
+        "returncode": 0,
+        "log": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-20261031-s0-r1/logs/cpu-gates.log"
+      },
+      {
+        "name": "smoke-train",
+        "status": "completed",
+        "returncode": 0,
+        "log": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-20261031-s0-r1/logs/smoke-train.log"
+      },
+      {
+        "name": "smoke-eval",
+        "status": "failed",
+        "returncode": 1,
+        "log": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-20261031-s0-r1/logs/smoke-eval.log"
+      }
+    ],
+    "source_manifest_sha256": "ef62b086a8560710f0784ea73e6a8222cace0f246b9c24859e3000cdef6df457",
+    "plan_sha256": "17b75ee764d8cb44ab7ee166116687d6da13ae27bcebc0e1eb368a4e73a58c91"
+  }
+]

@@ -1,0 +1,59 @@
+{
+  "active_seed": null,
+  "children": [
+    {
+      "command": [
+        "/home/ubuntu/miniconda3/envs/UAV_CV/bin/python",
+        "-u",
+        "-m",
+        "experiments.c2_o2mc_5090.multiseed_run",
+        "pipeline",
+        "--seed",
+        "1",
+        "--root",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-multiseed-20261101-r1/seed1",
+        "--output",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/docs/experiment_reports/2026-11-01_5090_c2_o2mc_multiseed/seed1"
+      ],
+      "finished_utc": "2026-11-01T12:19:33.112163+00:00",
+      "log": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-multiseed-20261101-r1/seed1/controller.log",
+      "pid": 598904,
+      "returncode": 0,
+      "seed": 1,
+      "started_utc": "2026-11-01T05:57:30.817243+00:00"
+    },
+    {
+      "command": [
+        "/home/ubuntu/miniconda3/envs/UAV_CV/bin/python",
+        "-u",
+        "-m",
+        "experiments.c2_o2mc_5090.multiseed_run",
+        "pipeline",
+        "--seed",
+        "2",
+        "--root",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-multiseed-20261101-r1/seed2",
+        "--output",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/docs/experiment_reports/2026-11-01_5090_c2_o2mc_multiseed/seed2"
+      ],
+      "finished_utc": "2026-11-01T18:39:43.371788+00:00",
+      "log": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-multiseed-20261101-r1/seed2/controller.log",
+      "pid": 608924,
+      "returncode": 0,
+      "seed": 2,
+      "started_utc": "2026-11-01T12:19:33.122381+00:00"
+    }
+  ],
+  "completed_seeds": [
+    1,
+    2
+  ],
+  "finished_utc": "2026-11-01T18:39:43.378675+00:00",
+  "pid": 598868,
+  "seeds": [
+    1,
+    2
+  ],
+  "started_utc": "2026-11-01T05:57:30.811588+00:00",
+  "status": "completed"
+}

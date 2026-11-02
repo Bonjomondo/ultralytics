@@ -1,0 +1,38 @@
+{
+  "delta_AP50_pp": {
+    "mean": 1.6449911741944285,
+    "n": 3,
+    "positive_pairs": 3,
+    "sample_std": 0.15590186310415524
+  },
+  "delta_AP75_pp": {
+    "mean": 1.4013212478088262,
+    "n": 3,
+    "positive_pairs": 3,
+    "sample_std": 0.257909076947972
+  },
+  "delta_AP_pp": {
+    "mean": 1.2350982427062238,
+    "n": 3,
+    "positive_pairs": 3,
+    "sample_std": 0.11400203504099535
+  },
+  "delta_APl_pp": {
+    "mean": 0.7967558910620344,
+    "n": 3,
+    "positive_pairs": 2,
+    "sample_std": 4.216014722191437
+  },
+  "delta_APm_pp": {
+    "mean": 2.18956926987676,
+    "n": 3,
+    "positive_pairs": 3,
+    "sample_std": 0.4258279052058457
+  },
+  "delta_APs_pp": {
+    "mean": 0.758682362674872,
+    "n": 3,
+    "positive_pairs": 3,
+    "sample_std": 0.113395821551203
+  }
+}

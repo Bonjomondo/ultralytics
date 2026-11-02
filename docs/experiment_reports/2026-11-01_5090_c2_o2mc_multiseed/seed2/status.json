@@ -1,0 +1,212 @@
+{
+  "comparison": {
+    "baseline": {
+      "AP": 0.18866413612935543,
+      "AP50": 0.32612501662663984,
+      "AP75": 0.18334964044131785,
+      "APl": 0.31894519569089963,
+      "APm": 0.26184465266166923,
+      "APs": 0.12317996082781538,
+      "AR1": 0.07494090749672971,
+      "AR10": 0.208280295678266,
+      "AR100": 0.2873385721014299,
+      "ARl": 0.39432447827411254,
+      "ARm": 0.39255685458245565,
+      "ARs": 0.20638774992027586
+    },
+    "boundary": "Single seed, fixed 150e budget. No multi-seed stability or C0/Aux synergy conclusion.",
+    "candidate": {
+      "AP": 0.2011868005434898,
+      "AP50": 0.3433359133488971,
+      "AP75": 0.1974067273585735,
+      "APl": 0.35540288168303574,
+      "APm": 0.28601406324335227,
+      "APs": 0.12952880610591494,
+      "AR1": 0.07965248410943389,
+      "AR10": 0.21711818768451457,
+      "AR100": 0.2972101248907528,
+      "ARl": 0.4653494484247424,
+      "ARm": 0.40603805803603943,
+      "ARs": 0.21307719487310928
+    },
+    "delta_pp": {
+      "AP": 1.2522664414134383,
+      "AP50": 1.7210896722257285,
+      "AP75": 1.4057086917255657,
+      "APl": 3.6457685992136115,
+      "APm": 2.4169410581683035,
+      "APs": 0.6348845278099563,
+      "AR1": 0.4711576612704174,
+      "AR10": 0.8837892006248571,
+      "AR100": 0.9871552789322946,
+      "ARl": 7.102497015062986,
+      "ARm": 1.3481203453583779,
+      "ARs": 0.6689444952833412
+    }
+  },
+  "finished_utc": "2026-11-01T18:39:43.004657+00:00",
+  "phase": "archive-final",
+  "pid": 608924,
+  "stages": [
+    {
+      "command": [
+        "/home/ubuntu/miniconda3/envs/UAV_CV/bin/python",
+        "-u",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/docs/experiment_reports/2026-10-24_5090_baselines/audit_assets_5090.py",
+        "--output",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-multiseed-20261101-r1/seed2/asset_audit.json"
+      ],
+      "finished_utc": "2026-11-01T12:19:36.112290+00:00",
+      "log": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-multiseed-20261101-r1/seed2/logs/dataset-audit.log",
+      "name": "dataset-audit",
+      "pid": 608961,
+      "returncode": 0,
+      "started_utc": "2026-11-01T12:19:35.200119+00:00",
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/home/ubuntu/miniconda3/envs/UAV_CV/bin/python",
+        "-u",
+        "-m",
+        "experiments.c2_o2mc_5090.test_o2mc"
+      ],
+      "finished_utc": "2026-11-01T12:19:39.972251+00:00",
+      "log": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-multiseed-20261101-r1/seed2/logs/cpu-gates.log",
+      "name": "cpu-gates",
+      "pid": 608962,
+      "returncode": 0,
+      "started_utc": "2026-11-01T12:19:36.121192+00:00",
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/home/ubuntu/miniconda3/envs/UAV_CV/bin/python",
+        "-u",
+        "-m",
+        "experiments.c2_o2mc_5090.multiseed_run",
+        "train",
+        "--root",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-multiseed-20261101-r1/seed2",
+        "--name",
+        "5090-c2-o2mc-smoke-s2",
+        "--smoke"
+      ],
+      "finished_utc": "2026-11-01T12:20:05.769718+00:00",
+      "log": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-multiseed-20261101-r1/seed2/logs/smoke-train.log",
+      "name": "smoke-train",
+      "pid": 608990,
+      "returncode": 0,
+      "started_utc": "2026-11-01T12:19:39.981881+00:00",
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/home/ubuntu/miniconda3/envs/UAV_CV/bin/python",
+        "-u",
+        "-m",
+        "experiments.c2_o2mc_5090.multiseed_run",
+        "evaluate",
+        "--root",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-multiseed-20261101-r1/seed2",
+        "--smoke",
+        "--checkpoint",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-multiseed-20261101-r1/seed2/training/5090-c2-o2mc-smoke-s2/weights/best.pt",
+        "--output",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-multiseed-20261101-r1/seed2/smoke-evaluation"
+      ],
+      "finished_utc": "2026-11-01T12:20:08.499772+00:00",
+      "log": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-multiseed-20261101-r1/seed2/logs/smoke-eval.log",
+      "name": "smoke-eval",
+      "pid": 609147,
+      "returncode": 0,
+      "started_utc": "2026-11-01T12:20:05.782912+00:00",
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/home/ubuntu/miniconda3/envs/UAV_CV/bin/python",
+        "-u",
+        "-m",
+        "experiments.c2_o2mc_5090.multiseed_run",
+        "train",
+        "--root",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-multiseed-20261101-r1/seed2",
+        "--name",
+        "5090-c2-o2mc-150e-s2"
+      ],
+      "finished_utc": "2026-11-01T18:39:03.116909+00:00",
+      "log": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-multiseed-20261101-r1/seed2/logs/full-train.log",
+      "name": "full-train",
+      "pid": 609162,
+      "returncode": 0,
+      "started_utc": "2026-11-01T12:20:08.512474+00:00",
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/home/ubuntu/miniconda3/envs/UAV_CV/bin/python",
+        "-u",
+        "-m",
+        "experiments.c2_o2mc_5090.multiseed_run",
+        "evaluate",
+        "--root",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-multiseed-20261101-r1/seed2",
+        "--checkpoint",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-multiseed-20261101-r1/seed2/training/5090-c2-o2mc-150e-s2/weights/best.pt",
+        "--output",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-multiseed-20261101-r1/seed2/evaluation"
+      ],
+      "finished_utc": "2026-11-01T18:39:23.071675+00:00",
+      "log": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-multiseed-20261101-r1/seed2/logs/full-eval.log",
+      "name": "full-eval",
+      "pid": 619989,
+      "returncode": 0,
+      "started_utc": "2026-11-01T18:39:03.130332+00:00",
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/home/ubuntu/miniconda3/envs/UAV_CV/bin/python",
+        "-u",
+        "-m",
+        "experiments.c2_o2mc_5090.multiseed_run",
+        "evaluate",
+        "--root",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-multiseed-20261101-r1/seed2",
+        "--checkpoint",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/p2_stability_5090/5090-p2-stability-20261027-r1/training/5090-c2-150e-s2/weights/best.pt",
+        "--output",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-multiseed-20261101-r1/seed2/baseline-evaluation"
+      ],
+      "finished_utc": "2026-11-01T18:39:42.961284+00:00",
+      "log": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-multiseed-20261101-r1/seed2/logs/baseline-eval.log",
+      "name": "baseline-eval",
+      "pid": 620057,
+      "returncode": 0,
+      "started_utc": "2026-11-01T18:39:23.084898+00:00",
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/home/ubuntu/miniconda3/envs/UAV_CV/bin/python",
+        "-u",
+        "-m",
+        "experiments.c2_o2mc_5090.multiseed_archive",
+        "--root",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-multiseed-20261101-r1/seed2",
+        "--output",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/docs/experiment_reports/2026-11-01_5090_c2_o2mc_multiseed/seed2"
+      ],
+      "finished_utc": "2026-11-01T18:39:43.003183+00:00",
+      "log": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c2_o2mc_5090/5090-c2-o2mc-multiseed-20261101-r1/seed2/logs/archive-final.log",
+      "name": "archive-final",
+      "pid": 620125,
+      "returncode": 0,
+      "started_utc": "2026-11-01T18:39:42.975773+00:00",
+      "status": "completed"
+    }
+  ],
+  "started_utc": "2026-11-01T12:19:35.194372+00:00",
+  "status": "completed"
+}
