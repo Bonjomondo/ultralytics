@@ -1,0 +1,8 @@
+{
+  "branch": "feat/r18-c2-gated-fusion",
+  "commit": "282d8dd24932b982baffc35145caba408af0f2bb",
+  "frozen_source": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/c2_gated_20261103/source",
+  "source_files": 416,
+  "manifest": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/c2_gated_20261103/source_manifest.json",
+  "manifest_sha256": "6e933b1ad98e43fb9b0785f68fa5bd002854eb3026df55d55693c3764124098f"
+}

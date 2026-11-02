@@ -36,6 +36,7 @@
 在服务器仓库根目录，以 `/home/zjnu/anaconda3/envs/UAV_CV/bin/python` 运行，必须使用本仓库PYTHONPATH：
 
 ```bash
+PYTHONPATH=. /home/zjnu/anaconda3/envs/UAV_CV/bin/python experiments/c2_gated_20261103/prepare_smoke.py
 PYTHONPATH=. /home/zjnu/anaconda3/envs/UAV_CV/bin/python experiments/c2_gated_20261103/preflight.py
 PYTHONPATH=. /home/zjnu/anaconda3/envs/UAV_CV/bin/python experiments/c2_gated_20261103/train.py --arm spatial --smoke
 # 完成四组短跑、完整评估链验证、审查并提交源码后再启动唯一队列：
@@ -55,6 +56,8 @@ PYTHONPATH=. /home/zjnu/anaconda3/envs/UAV_CV/bin/python experiments/c2_gated_20
 当前入口拒绝隐式续训或覆盖既有权重；检查点保留了恢复所需状态，若中断需先核查并实现明确的raw-state恢复，不能把EMA warm start称为无缝恢复。
 
 逐组完成后将完整CSV、诊断、实际配置、正式指标、框架原生曲线归档到本目录 `raw/`、`figures/`；逐图预测、权重、完整日志与源码副本只留服务器。每完成一组，控制器仅提交本报告目录并推送本任务分支；如分支改变或有其他暂存工作则停止自动提交并保留本地产物。
+
+启动记录：[正式队列](raw/launch.json) · [冻结源码身份](raw/source_identity.json) · [首次字体初始化修复](raw/startup_font_receipt.json)。
 
 阅读：[预检证据](raw/preflight.json) · [实验配方](raw/experiment_spec.json)。完整结果将写入本目录RESULTS.md和comparison.csv，未完成前不把短跑结果当收益。
 

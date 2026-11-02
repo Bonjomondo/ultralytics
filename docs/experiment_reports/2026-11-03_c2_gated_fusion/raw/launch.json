@@ -1,0 +1,29 @@
+{
+  "launched_utc": "2026-11-02T16:28:41.675443+00:00",
+  "branch": "feat/r18-c2-gated-fusion",
+  "source_commit": "282d8dd24932b982baffc35145caba408af0f2bb",
+  "tmux": "c2-gated-20261103",
+  "arms": [
+    "c2",
+    "scalar",
+    "spatial",
+    "fusion"
+  ],
+  "epochs_each": 150,
+  "source_snapshot": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/c2_gated_20261103/source",
+  "queue_status": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/c2_gated_20261103/queue_status.json",
+  "controller_log": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/c2_gated_20261103/controller.log",
+  "environment": {
+    "PYTHONPATH": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/c2_gated_20261103/source",
+    "C2_GATED_REPO_ROOT": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics",
+    "YOLO_AUTOINSTALL": "false",
+    "YOLO_CONFIG_DIR": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/c2_gated_20261103/yolo_config",
+    "OMP_NUM_THREADS": "4",
+    "MKL_NUM_THREADS": "4",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MPLBACKEND": "Agg",
+    "WANDB_MODE": "disabled",
+    "COMET_MODE": "DISABLED",
+    "PYTHONFAULTHANDLER": "1"
+  }
+}
