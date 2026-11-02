@@ -1,0 +1,100 @@
+{
+  "arm": "smoke_spatial",
+  "checkpoint": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/c2_gated_20261103/smoke_spatial/weights/best.pt",
+  "checkpoint_sha256": "69a932e4b8f4c1624e7307727ac175d9f5d09ca92dc3701228a4a45587f0bac4",
+  "best_epoch": 1,
+  "gt_sha256": "6f57aa4b42d64ee7b99b8a6a5b159ad19cba2eacf00bd86f23314966614bf4d8",
+  "prediction_sha256": "f6951d566acc0978da0282d9a581288297a564e9ed5df15384486994047b909f",
+  "images": 548,
+  "detections": 164400,
+  "native_metrics": {
+    "metrics/precision(B)": 2.4330900243309e-06,
+    "metrics/recall(B)": 4.522840343735866e-05,
+    "metrics/mAP50(B)": 1.319603429253986e-06,
+    "metrics/mAP50-95(B)": 2.452416159119761e-07,
+    "fitness": 2.452416159119761e-07
+  },
+  "protocol": "FP32 fused, conf0, 300 argmax queries/image, no NMS, converted VisDrone val548",
+  "evaluated_utc": "2026-11-02T16:23:39.154745+00:00",
+  "maxDets": [
+    1,
+    10,
+    100
+  ],
+  "coco_percent": {
+    "AP": 7.3268303643388525e-06,
+    "AP50": 2.4422767881129505e-05,
+    "AP75": 0.0,
+    "APs": 0.0,
+    "APm": 7.3268303643388525e-06,
+    "APl": 0.0,
+    "AR1": 0.0,
+    "AR10": 0.0,
+    "AR100": 0.0004522840343735866,
+    "ARs": 0.0,
+    "ARm": 0.0037209302325581393,
+    "ARl": 0.0
+  },
+  "per_class_percent": {
+    "pedestrian": {
+      "AP": 7.326830364338851e-05,
+      "APs": 0.0,
+      "APm": 7.326830364338851e-05,
+      "APl": 0.0
+    },
+    "people": {
+      "AP": 0.0,
+      "APs": 0.0,
+      "APm": 0.0,
+      "APl": 0.0
+    },
+    "bicycle": {
+      "AP": 0.0,
+      "APs": 0.0,
+      "APm": 0.0,
+      "APl": 0.0
+    },
+    "car": {
+      "AP": 0.0,
+      "APs": 0.0,
+      "APm": 0.0,
+      "APl": 0.0
+    },
+    "van": {
+      "AP": 0.0,
+      "APs": 0.0,
+      "APm": 0.0,
+      "APl": 0.0
+    },
+    "truck": {
+      "AP": 0.0,
+      "APs": 0.0,
+      "APm": 0.0,
+      "APl": 0.0
+    },
+    "tricycle": {
+      "AP": 0.0,
+      "APs": 0.0,
+      "APm": 0.0,
+      "APl": 0.0
+    },
+    "awning-tricycle": {
+      "AP": 0.0,
+      "APs": 0.0,
+      "APm": 0.0,
+      "APl": 0.0
+    },
+    "bus": {
+      "AP": 0.0,
+      "APs": 0.0,
+      "APm": 0.0,
+      "APl": 0.0
+    },
+    "motor": {
+      "AP": 0.0,
+      "APs": 0.0,
+      "APm": 0.0,
+      "APl": 0.0
+    }
+  }
+}

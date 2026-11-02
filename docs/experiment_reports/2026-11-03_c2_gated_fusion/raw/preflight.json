@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "arms": {
+    "c2": {
+      "parameters": 20135032,
+      "full_640_output_max_abs_error_vs_c2": 0.0,
+      "shared_state_sha256": "7ea3429f4bb30bf725578108d287b4a8a82dbccff545cd022c0daad0ddd75737",
+      "gate_and_p2_gradients_pass": true
+    },
+    "scalar": {
+      "parameters": 20135033,
+      "full_640_output_max_abs_error_vs_c2": 0.0,
+      "shared_state_sha256": "7ea3429f4bb30bf725578108d287b4a8a82dbccff545cd022c0daad0ddd75737",
+      "gate_and_p2_gradients_pass": true
+    },
+    "spatial": {
+      "parameters": 20135161,
+      "full_640_output_max_abs_error_vs_c2": 0.0,
+      "shared_state_sha256": "7ea3429f4bb30bf725578108d287b4a8a82dbccff545cd022c0daad0ddd75737",
+      "gate_and_p2_gradients_pass": true
+    },
+    "fusion": {
+      "parameters": 20135035,
+      "full_640_output_max_abs_error_vs_c2": 0.0,
+      "shared_state_sha256": "7ea3429f4bb30bf725578108d287b4a8a82dbccff545cd022c0daad0ddd75737",
+      "gate_and_p2_gradients_pass": true
+    }
+  },
+  "serialization_roundtrip_pass": true,
+  "roundtrip_sha256": "9f4dc6421f6d9a1030c778b2ea1a3eb7919794489f7d32b094e714fbd1c3c620"
+}

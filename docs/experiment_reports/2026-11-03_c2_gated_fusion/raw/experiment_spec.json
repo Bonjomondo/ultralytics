@@ -1,0 +1,57 @@
+{
+  "created_utc": "2026-11-02T16:24:59.800680+00:00",
+  "branch": "feat/r18-c2-gated-fusion",
+  "parent_commit": "fdd86da7",
+  "arms": [
+    "c2",
+    "scalar",
+    "spatial",
+    "fusion"
+  ],
+  "recipe": {
+    "epochs": 150,
+    "patience": 0,
+    "batch": 8,
+    "imgsz": 640,
+    "optimizer": "AdamW",
+    "lr0": 0.0001,
+    "lrf": 1.0,
+    "weight_decay": 0.0001,
+    "warmup_epochs": 3.0,
+    "warmup_momentum": 0.8,
+    "nbs": 64,
+    "mixup": 0.2,
+    "close_mosaic": 0,
+    "amp": false,
+    "deterministic": false,
+    "seed": 0,
+    "max_det": 300,
+    "val": true,
+    "plots": true,
+    "warmup_bias_lr": 0.0,
+    "momentum": 0.9,
+    "cache": false,
+    "workers": 0
+  },
+  "dataset_counts": {
+    "train": 6471,
+    "val": 548
+  },
+  "dataset_yaml_sha256": "3ef15306f90400e575e6154d9d0e5af5df9db2624f213030ecfa0dc0bb428883",
+  "environment": {
+    "python": "3.11.17 (main, Oct  1 2026, 20:17:42) [GCC 14.3.0]",
+    "torch": "2.1.2+cu121",
+    "ultralytics": "8.4.30",
+    "cuda": "12.1",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "platform": "Linux-5.15.0-136-generic-x86_64-with-glibc2.31"
+  },
+  "short_runs_verified": true,
+  "formal_results_available": false,
+  "criterion": {
+    "delta_AP_pp_min": 0.3,
+    "delta_APs_pp_min": 0.3,
+    "AP75_APm_APl_min_pp": -0.5,
+    "latency_change_max_percent": 10
+  }
+}

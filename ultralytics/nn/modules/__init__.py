@@ -108,7 +108,10 @@ from .transformer import (
     TransformerLayer,
 )
 
+from .gated_fusion import C2GatedConcat
+
 __all__ = (
+    "C2GatedConcat",
     "AIFI",
     "C1",
     "C2",

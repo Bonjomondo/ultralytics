@@ -234,3 +234,7 @@ results.csv
 # Deliberate experiment curve archives; keep run directories ignored.
 !/docs/experiment_reports/**/figures/**/*.png
 !/docs/experiment_reports/**/raw/**/results.csv
+
+# Controlled C2 fusion screening: compact evidence is tracked under docs only.
+/experiments/c2_gated_20261103/data-smoke.yaml
+!/docs/experiment_reports/2026-11-03_c2_gated_fusion/raw/**/args.yaml

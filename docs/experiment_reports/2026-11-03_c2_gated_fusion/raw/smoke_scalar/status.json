@@ -1,0 +1,43 @@
+{
+  "status": "training_complete_pending_evaluation",
+  "arm": "scalar",
+  "pid": 1941185,
+  "started_utc": "2026-11-02T16:22:48.964475+00:00",
+  "completed_epochs": 1,
+  "recipe": {
+    "epochs": 1,
+    "patience": 0,
+    "batch": 8,
+    "imgsz": 640,
+    "optimizer": "AdamW",
+    "lr0": 0.0001,
+    "lrf": 1.0,
+    "weight_decay": 0.0001,
+    "warmup_epochs": 3.0,
+    "warmup_momentum": 0.8,
+    "nbs": 64,
+    "mixup": 0.2,
+    "close_mosaic": 0,
+    "amp": false,
+    "deterministic": false,
+    "seed": 0,
+    "max_det": 300,
+    "val": true,
+    "plots": false,
+    "warmup_bias_lr": 0.0,
+    "momentum": 0.9,
+    "cache": false
+  },
+  "current_epoch": 1,
+  "observed_batches": 4,
+  "updated_utc": "2026-11-02T16:23:05.384154+00:00",
+  "metrics": {
+    "metrics/precision(B)": 0.0,
+    "metrics/recall(B)": 0.0,
+    "metrics/mAP50(B)": 0.0,
+    "metrics/mAP50-95(B)": 0.0,
+    "val/giou_loss": 3.33089,
+    "val/cls_loss": 0.99763,
+    "val/l1_loss": 1.70608
+  }
+}
