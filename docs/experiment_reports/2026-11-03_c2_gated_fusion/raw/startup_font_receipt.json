@@ -1,0 +1,10 @@
+{
+  "status": "pretraining_initialization_interrupted",
+  "cause": "check_det_dataset -> check_font -> curl blocked downloading Arial.ttf",
+  "completed_batches": 0,
+  "completed_epochs": 0,
+  "checkpoint_created": false,
+  "preserved_at": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/detect/c2_gated_20261103/startup_attempt1",
+  "fix": "Pre-create isolated YOLO_CONFIG_DIR and copy preinstalled Arial.ttf before child imports",
+  "source_change": "launch.py only; model/loss/recipe unchanged"
+}

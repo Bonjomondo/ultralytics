@@ -36,6 +36,14 @@ def main():
     write(REPORT / "raw/source_identity.json", {"branch": branch, "commit": commit,
           "frozen_source": str(frozen), "source_files": len(manifest),
           "manifest": str(RUNS / "source_manifest.json"), "manifest_sha256": sha(RUNS / "source_manifest.json")})
+    # A nonexistent YOLO_CONFIG_DIR silently falls back to /tmp/Ultralytics.
+    # Pre-create the private directory and seed the existing font to avoid a network download.
+    config = RUNS / "yolo_config"
+    config.mkdir(parents=True, exist_ok=True)
+    font = Path.home() / ".config/Ultralytics/Arial.ttf"
+    if not font.exists():
+        raise RuntimeError("Expected preinstalled Arial.ttf; resolve fonts before starting GPU jobs")
+    shutil.copyfile(font, config / "Arial.ttf")
     environment = {
         "PYTHONPATH": str(frozen), "C2_GATED_REPO_ROOT": str(REPO),
         "YOLO_AUTOINSTALL": "false", "YOLO_CONFIG_DIR": str(RUNS / "yolo_config"),
