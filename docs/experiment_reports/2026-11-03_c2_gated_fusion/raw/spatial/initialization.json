@@ -1,0 +1,17 @@
+{
+  "method": "fresh seeded C2; exact copy of ALL C2 tensors including P2 branch; no pretrained checkpoint",
+  "seed": 0,
+  "shared_state_sha256": "7ea3429f4bb30bf725578108d287b4a8a82dbccff545cd022c0daad0ddd75737",
+  "shared_state_items": 533,
+  "shared_state_verified": true,
+  "new_gate_state": [
+    "model.15.gate.0.bias",
+    "model.15.gate.0.weight",
+    "model.15.gate.2.bias",
+    "model.15.gate.2.weight"
+  ],
+  "identity_gate_initialization": true,
+  "model_config": "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/ultralytics/runs/detect/c2_gated_20261103/source/ultralytics/cfg/models/rt-detr/rtdetr-resnet18-c2-spatial.yaml",
+  "amp": false,
+  "gradient_sampling": "first three training batches per epoch; scaled if AMP is enabled"
+}
