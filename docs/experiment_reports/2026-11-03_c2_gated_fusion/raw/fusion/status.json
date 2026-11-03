@@ -1,0 +1,43 @@
+{
+  "status": "complete",
+  "arm": "fusion",
+  "pid": 2099558,
+  "started_utc": "2026-11-03T11:59:42.275220+00:00",
+  "completed_epochs": 150,
+  "recipe": {
+    "epochs": 150,
+    "patience": 0,
+    "batch": 8,
+    "imgsz": 640,
+    "optimizer": "AdamW",
+    "lr0": 0.0001,
+    "lrf": 1.0,
+    "weight_decay": 0.0001,
+    "warmup_epochs": 3.0,
+    "warmup_momentum": 0.8,
+    "nbs": 64,
+    "mixup": 0.2,
+    "close_mosaic": 0,
+    "amp": false,
+    "deterministic": false,
+    "seed": 0,
+    "max_det": 300,
+    "val": true,
+    "plots": true,
+    "warmup_bias_lr": 0.0,
+    "momentum": 0.9,
+    "cache": false
+  },
+  "current_epoch": 150,
+  "observed_batches": 121350,
+  "updated_utc": "2026-11-03T18:27:18.833096+00:00",
+  "metrics": {
+    "metrics/precision(B)": 0.49864,
+    "metrics/recall(B)": 0.36608,
+    "metrics/mAP50(B)": 0.36064,
+    "metrics/mAP50-95(B)": 0.21313,
+    "val/giou_loss": 0.74047,
+    "val/cls_loss": 0.51533,
+    "val/l1_loss": 0.07858
+  }
+}
