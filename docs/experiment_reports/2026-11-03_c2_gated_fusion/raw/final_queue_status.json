@@ -1,0 +1,116 @@
+{
+  "status": "complete",
+  "pid": 1943206,
+  "started_utc": "2026-11-02T16:28:42.248459+00:00",
+  "stages": [
+    {
+      "arm": "c2",
+      "phase": "train",
+      "status": "complete",
+      "started_utc": "2026-11-02T16:28:42.254614+00:00",
+      "returncode": 0,
+      "finished_utc": "2026-11-02T22:54:36.552657+00:00"
+    },
+    {
+      "arm": "c2",
+      "phase": "predict",
+      "status": "complete",
+      "started_utc": "2026-11-02T22:54:36.559085+00:00",
+      "returncode": 0,
+      "finished_utc": "2026-11-02T23:00:46.924568+00:00"
+    },
+    {
+      "arm": "c2",
+      "phase": "coco",
+      "status": "complete",
+      "started_utc": "2026-11-02T23:00:46.930736+00:00",
+      "returncode": 0,
+      "finished_utc": "2026-11-02T23:01:01.686382+00:00"
+    },
+    {
+      "arm": "scalar",
+      "phase": "train",
+      "status": "complete",
+      "started_utc": "2026-11-02T23:02:01.821686+00:00",
+      "returncode": 0,
+      "finished_utc": "2026-11-03T05:27:36.252938+00:00"
+    },
+    {
+      "arm": "scalar",
+      "phase": "predict",
+      "status": "complete",
+      "started_utc": "2026-11-03T05:27:36.259096+00:00",
+      "returncode": 0,
+      "finished_utc": "2026-11-03T05:27:48.267628+00:00"
+    },
+    {
+      "arm": "scalar",
+      "phase": "coco",
+      "status": "complete",
+      "started_utc": "2026-11-03T05:27:48.273795+00:00",
+      "returncode": 0,
+      "finished_utc": "2026-11-03T05:28:03.267066+00:00"
+    },
+    {
+      "arm": "spatial",
+      "phase": "train",
+      "status": "complete",
+      "started_utc": "2026-11-03T05:29:03.405114+00:00",
+      "returncode": 0,
+      "finished_utc": "2026-11-03T11:58:14.174612+00:00"
+    },
+    {
+      "arm": "spatial",
+      "phase": "predict",
+      "status": "complete",
+      "started_utc": "2026-11-03T11:58:14.180647+00:00",
+      "returncode": 0,
+      "finished_utc": "2026-11-03T11:58:26.209093+00:00"
+    },
+    {
+      "arm": "spatial",
+      "phase": "coco",
+      "status": "complete",
+      "started_utc": "2026-11-03T11:58:26.215010+00:00",
+      "returncode": 0,
+      "finished_utc": "2026-11-03T11:58:41.067286+00:00"
+    },
+    {
+      "arm": "fusion",
+      "phase": "train",
+      "status": "complete",
+      "started_utc": "2026-11-03T11:59:41.213535+00:00",
+      "returncode": 0,
+      "finished_utc": "2026-11-03T18:26:52.250647+00:00"
+    },
+    {
+      "arm": "fusion",
+      "phase": "predict",
+      "status": "complete",
+      "started_utc": "2026-11-03T18:26:52.256800+00:00",
+      "returncode": 0,
+      "finished_utc": "2026-11-03T18:27:04.083589+00:00"
+    },
+    {
+      "arm": "fusion",
+      "phase": "coco",
+      "status": "complete",
+      "started_utc": "2026-11-03T18:27:04.091581+00:00",
+      "returncode": 0,
+      "finished_utc": "2026-11-03T18:27:18.832789+00:00"
+    },
+    {
+      "arm": "all",
+      "phase": "benchmark",
+      "status": "complete",
+      "started_utc": "2026-11-03T18:28:19.001718+00:00",
+      "returncode": 0,
+      "finished_utc": "2026-11-03T18:28:39.244277+00:00"
+    }
+  ],
+  "updated_utc": "2026-11-03T18:28:39.245168+00:00",
+  "arm": "all",
+  "phase": "benchmark",
+  "child_pid": null,
+  "finished_utc": "2026-11-03T18:28:39.245162+00:00"
+}
