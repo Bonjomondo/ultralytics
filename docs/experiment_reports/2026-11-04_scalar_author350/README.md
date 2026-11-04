@@ -47,3 +47,7 @@ PYTHONPATH=. /home/zjnu/anaconda3/envs/UAV_CV/bin/python train_scalar.py --smoke
 证据：[迁移与初始化检查](preflight.json)、[真实数据短跑](smoke_verification.json)、[配方](experiment_spec.json)、[启动信息](launch.json)。短跑只验证运行链路，不提供精度结论。最终比较写入RESULTS.md、comparison.csv，分别报告scalar−B0和scalar−C2。
 
 完整权重、日志、逐图预测与作者源码副本仅保存在服务器；Git归档必要源码补丁、配置、指标、曲线与紧凑证据。最终报告由控制器自动保存，Git同步可能需要本机认证。
+
+## 第130轮后的恢复记录
+
+第131轮训练时DataLoader worker SIGSEGV，保留完整130轮FP32检查点。已验证raw模型、EMA及优化器逐张量恢复，scaler/stopper/RNG恢复；训练workers8改0后继续第131轮至原350轮上限/patience40。随机增强与加载顺序会随worker变化，不能称逐位等价连续训练。恢复检查点、旧状态与原日志均保留。详见recovery_receipt.json和recovery_verification.json；恢复源码recover_worker0.py独立于原冻结源码。

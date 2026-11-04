@@ -1,0 +1,10 @@
+{
+  "checkpoint_epoch": 130,
+  "last_sha256": "dbaba53fbee9d6472c20730364d8bc6f91ea1def434f10bc6e70d2241ce318d6",
+  "best_sha256": "63649480ce0487d2c6516926b58dd6502a3a96d7db74cb92daffc56462c84b8d",
+  "cause": "DataLoader worker killed by SIGSEGV at epoch131; 130 complete epochs preserved",
+  "change": "training workers8 -> workers0; raw model, EMA, optimizer, scaler, stopper and RNG restored",
+  "limits": "worker concurrency and DataLoader order/augmentation RNG streams differ; not bitwise equivalent continuation",
+  "original_sources_unchanged": true,
+  "recovery_script_sha256": "abd30a0c1b94f41b9b55f2bf66b1a5263502739f2bd5ba697ce0cf0574a65a82"
+}

@@ -1,0 +1,17 @@
+{
+  "verified_utc": "2026-11-04T14:53:09.918995+00:00",
+  "resume_epoch_one_based": 131,
+  "raw_model_exact": true,
+  "optimizer_exact": true,
+  "ema_exact": true,
+  "scaler_restored": true,
+  "stopper": {
+    "best_fitness": 0.29405,
+    "best_epoch": 127,
+    "patience": 40,
+    "possible_stop": false
+  },
+  "checkpoint_sha256": "dbaba53fbee9d6472c20730364d8bc6f91ea1def434f10bc6e70d2241ce318d6",
+  "workers": 0,
+  "limits": "RNG states restored, but DataLoader worker streams/order differ after workers8->0"
+}
