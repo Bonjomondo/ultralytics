@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "common_initialization_matches_B1_receipt": true,
+  "whole_model_640_max_abs_error_vs_C2": 0.0,
+  "gate_and_detail_gradient_pass": true,
+  "parameters": 20135289,
+  "initial_multiplier": 1.0
+}

@@ -1,0 +1,14 @@
+{
+  "root": "/home/zjnu/文档/ZHJ_WorkSpace/reproductions/c2-scalar-author-20261104",
+  "author_engine_source": "/home/zjnu/文档/ZHJ_WorkSpace/reproductions/rtdetr-r18-c2-author-recipe-20261028",
+  "patched_files": [
+    "ultralytics/nn/tasks.py",
+    "ultralytics/nn/modules/scalar_gate.py"
+  ],
+  "baseline_AP": 27.773305535527815,
+  "C2_AP": 28.72234319624046,
+  "new_parameters": 1,
+  "training": "fresh seed0, batch4/nbs4,640,FP32,AdamW1e-4,author warmup2000 batches,workers8,350 epoch cap/patience40",
+  "checkpoint_change": "CPU FP32 raw/EMA/optimizer/RNG with stdlib pickle and atomic replacement; math unchanged",
+  "limits": "Historical B0/B1 initial full checkpoints were not archived; seed constructor replay is verified against B1 common tensor receipt, not original archived full initial state."
+}

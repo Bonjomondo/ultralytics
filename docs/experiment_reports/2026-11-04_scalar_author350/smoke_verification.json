@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "train32_val16": true,
+  "nonzero_gate_gradient": 5.170406075194478e-05,
+  "accumulate": 1,
+  "fp32_raw_ema_optimizer_rng_checkpoint": true,
+  "prediction_and_independent_cpu_cocoeval": true,
+  "B0_C2_scalar_benchmark": true,
+  "smoke_only": true
+}

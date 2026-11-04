@@ -1,0 +1,15 @@
+{
+  "tmux": "c2-scalar-author-20261104",
+  "root": "/home/zjnu/文档/ZHJ_WorkSpace/reproductions/c2-scalar-author-20261104",
+  "status": "/home/zjnu/文档/ZHJ_WorkSpace/reproductions/c2-scalar-author-20261104/controller_status.json",
+  "run": "/home/zjnu/文档/ZHJ_WorkSpace/reproductions/c2-scalar-author-20261104/runs/c2-scalar-author-350e-s0",
+  "phases": [
+    "train",
+    "predict",
+    "coco",
+    "benchmark",
+    "final_compare"
+  ],
+  "training": "350 cap, patience40, fresh seed0; historical B0 and C2 as controls",
+  "source_manifest_sha256": "813a9c34457f37babe2e9f40d7f5f7ce31d7b2d1bf9b036c425ad0ac6bbb8334"
+}

@@ -1,0 +1,7 @@
+--- a/ultralytics/nn/tasks.py
++++ b/ultralytics/nn/tasks.py
+@@ -12,0 +13 @@
++from ultralytics.nn.modules.scalar_gate import ScalarP2Concat
+@@ -970 +971 @@
+-        elif m is Concat:
++        elif m in {Concat, ScalarP2Concat}:
