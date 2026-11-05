@@ -1,0 +1,61 @@
+{
+  "checkpoint": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/rtdetrv3_dense_supervision_5090/author-stageA-s0-20261105-r1/smoke/a3_c2_o2mc/weights/best.pt",
+  "checkpoint_sha256": "dc7dd766493c9bec7d80647e2797bdbc98e10a86d89184a24ce0acb6b4a65b19",
+  "checkpoint_epoch": 1,
+  "deployment_checkpoint": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/rtdetrv3_dense_supervision_5090/author-stageA-s0-20261105-r1/smoke-evaluations/a3_c2_o2mc/native.pt",
+  "deployment_sha256": "4654376b98a2a1d0e02d02a7325f5472af95f8868c719f807af3fe38caa58e8a",
+  "exact_aux_removal_verified": true,
+  "gt_path": "/home/ubuntu/文档/ZHJ_UAV/reproductions/rtdetrv3_dense_supervision_5090/data/annotations/VisDrone2019-DET_val_coco.json",
+  "gt_sha256": "6f57aa4b42d64ee7b99b8a6a5b159ad19cba2eacf00bd86f23314966614bf4d8",
+  "prediction_sha256": "8597339a2e8b18704c7e3450e26c5df1b99ef943d03755f933679318583a6de8",
+  "images": 16,
+  "detections": 4800,
+  "native_metrics": {
+    "metrics/precision(B)": 0.0,
+    "metrics/recall(B)": 0.0,
+    "metrics/mAP50(B)": 0.0,
+    "metrics/mAP50-95(B)": 0.0,
+    "fitness": 0.0
+  },
+  "protocol": {
+    "engine": "4090 author vendored source",
+    "precision": "FP32 reloaded from FP16 EMA",
+    "preprocess": "640x640 stretch RGB /255",
+    "batch": 4,
+    "model_fusion": "author AutoBackend default fusion",
+    "queries": 300,
+    "confidence_filter": false,
+    "nms": false,
+    "coordinates": "original image xywh; unrounded float",
+    "category_mapping": "0..9 to COCO1..10",
+    "maxDets": [
+      1,
+      10,
+      100
+    ],
+    "gt_sha256": "6f57aa4b42d64ee7b99b8a6a5b159ad19cba2eacf00bd86f23314966614bf4d8"
+  },
+  "environment": {
+    "executable": "/home/ubuntu/miniconda3/envs/UAV_CV/bin/python",
+    "prefix": "/home/ubuntu/miniconda3/envs/UAV_CV",
+    "base_prefix": "/home/ubuntu/miniconda3/envs/UAV_CV",
+    "python": "3.11.16",
+    "torch": "2.14.0+cu130",
+    "cuda": "13.0",
+    "cudnn": 92400,
+    "ultralytics": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/experiments/rtdetrv3_dense_supervision_5090/author_engine/ultralytics/__init__.py",
+    "gpu": "NVIDIA GeForce RTX 5090 D v2",
+    "matmul_tf32": false,
+    "cudnn_tf32": true,
+    "git_commit": "935927414fe3fb619cbe955031649d4269be027a"
+  },
+  "gpu_forward_fp32_batch1": {
+    "warmup": 20,
+    "iterations": 100,
+    "mean_ms": 4.807345285415649,
+    "p50_ms": 4.801391839981079,
+    "p95_ms": 4.864340662956238,
+    "parameters": 19925432,
+    "scope": "5090 pure forward; excludes transfer/preprocess/postprocess; not deployment FP16"
+  }
+}

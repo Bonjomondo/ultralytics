@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "tests": [
+    "assignment/static/dynamic/empty",
+    "C0/C2 exact main init",
+    "alpha0 main loss equality",
+    "ATSS/TAL encoder gradients",
+    "no inference auxiliary",
+    "exact native strip and serialization"
+  ]
+}

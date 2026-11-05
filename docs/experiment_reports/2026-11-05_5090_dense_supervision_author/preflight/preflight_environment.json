@@ -1,0 +1,14 @@
+{
+  "executable": "/home/ubuntu/miniconda3/envs/UAV_CV/bin/python",
+  "prefix": "/home/ubuntu/miniconda3/envs/UAV_CV",
+  "base_prefix": "/home/ubuntu/miniconda3/envs/UAV_CV",
+  "python": "3.11.16",
+  "torch": "2.14.0+cu130",
+  "cuda": "13.0",
+  "cudnn": 92400,
+  "ultralytics": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/experiments/rtdetrv3_dense_supervision_5090/author_engine/ultralytics/__init__.py",
+  "gpu": "NVIDIA GeForce RTX 5090 D v2",
+  "matmul_tf32": false,
+  "cudnn_tf32": true,
+  "git_commit": "935927414fe3fb619cbe955031649d4269be027a"
+}

@@ -1,0 +1,181 @@
+{
+  "status": "running",
+  "pid": 34333,
+  "started_utc": "2026-11-05T01:26:01.254453+00:00",
+  "seeds": [
+    0
+  ],
+  "deferred_seeds": [
+    1,
+    2
+  ],
+  "stages": [
+    {
+      "name": "engineering-gates",
+      "command": [
+        "/home/ubuntu/miniconda3/envs/UAV_CV/bin/python",
+        "-u",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/experiments/rtdetrv3_dense_supervision_5090/gates.py"
+      ],
+      "log": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/rtdetrv3_dense_supervision_5090/author-stageA-s0-20261105-r1/logs/engineering-gates.log",
+      "started_utc": "2026-11-05T01:26:01.258483+00:00",
+      "status": "completed",
+      "pid": 34350,
+      "exitcode": 0,
+      "finished_utc": "2026-11-05T01:26:12.149814+00:00"
+    },
+    {
+      "name": "a2_c0_o2mc-smoke-train",
+      "command": [
+        "/home/ubuntu/miniconda3/envs/UAV_CV/bin/python",
+        "-u",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/experiments/rtdetrv3_dense_supervision_5090/train.py",
+        "--arm",
+        "a2_c0_o2mc",
+        "--smoke"
+      ],
+      "log": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/rtdetrv3_dense_supervision_5090/author-stageA-s0-20261105-r1/logs/a2_c0_o2mc-smoke-train.log",
+      "started_utc": "2026-11-05T01:26:12.159732+00:00",
+      "status": "completed",
+      "pid": 34430,
+      "exitcode": 0,
+      "finished_utc": "2026-11-05T01:26:32.885437+00:00"
+    },
+    {
+      "name": "a2_c0_o2mc-export-smoke",
+      "command": [
+        "/home/ubuntu/miniconda3/envs/UAV_CV/bin/python",
+        "-u",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/experiments/rtdetrv3_dense_supervision_5090/export.py",
+        "--checkpoint",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/rtdetrv3_dense_supervision_5090/author-stageA-s0-20261105-r1/smoke/a2_c0_o2mc/weights/best.pt",
+        "--output",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/rtdetrv3_dense_supervision_5090/author-stageA-s0-20261105-r1/smoke-evaluations/a2_c0_o2mc",
+        "--smoke"
+      ],
+      "log": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/rtdetrv3_dense_supervision_5090/author-stageA-s0-20261105-r1/logs/a2_c0_o2mc-export-smoke.log",
+      "started_utc": "2026-11-05T01:26:32.895134+00:00",
+      "status": "completed",
+      "pid": 34615,
+      "exitcode": 0,
+      "finished_utc": "2026-11-05T01:26:43.366098+00:00"
+    },
+    {
+      "name": "a2_c0_o2mc-coco-smoke",
+      "command": [
+        "/home/ubuntu/miniconda3/envs/UAV_CV/bin/python",
+        "-u",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/experiments/rtdetrv3_dense_supervision_5090/evaluate.py",
+        "--output",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/rtdetrv3_dense_supervision_5090/author-stageA-s0-20261105-r1/smoke-evaluations/a2_c0_o2mc"
+      ],
+      "log": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/rtdetrv3_dense_supervision_5090/author-stageA-s0-20261105-r1/logs/a2_c0_o2mc-coco-smoke.log",
+      "started_utc": "2026-11-05T01:26:43.375997+00:00",
+      "status": "completed",
+      "pid": 34660,
+      "exitcode": 0,
+      "finished_utc": "2026-11-05T01:26:43.557374+00:00"
+    },
+    {
+      "name": "a3_c2_o2mc-smoke-train",
+      "command": [
+        "/home/ubuntu/miniconda3/envs/UAV_CV/bin/python",
+        "-u",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/experiments/rtdetrv3_dense_supervision_5090/train.py",
+        "--arm",
+        "a3_c2_o2mc",
+        "--smoke"
+      ],
+      "log": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/rtdetrv3_dense_supervision_5090/author-stageA-s0-20261105-r1/logs/a3_c2_o2mc-smoke-train.log",
+      "started_utc": "2026-11-05T01:26:43.567504+00:00",
+      "status": "completed",
+      "pid": 34661,
+      "exitcode": 0,
+      "finished_utc": "2026-11-05T01:26:54.870925+00:00"
+    },
+    {
+      "name": "a3_c2_o2mc-export-smoke",
+      "command": [
+        "/home/ubuntu/miniconda3/envs/UAV_CV/bin/python",
+        "-u",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/experiments/rtdetrv3_dense_supervision_5090/export.py",
+        "--checkpoint",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/rtdetrv3_dense_supervision_5090/author-stageA-s0-20261105-r1/smoke/a3_c2_o2mc/weights/best.pt",
+        "--output",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/rtdetrv3_dense_supervision_5090/author-stageA-s0-20261105-r1/smoke-evaluations/a3_c2_o2mc",
+        "--smoke"
+      ],
+      "log": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/rtdetrv3_dense_supervision_5090/author-stageA-s0-20261105-r1/logs/a3_c2_o2mc-export-smoke.log",
+      "started_utc": "2026-11-05T01:26:54.880989+00:00",
+      "status": "completed",
+      "pid": 34755,
+      "exitcode": 0,
+      "finished_utc": "2026-11-05T01:27:05.382566+00:00"
+    },
+    {
+      "name": "a3_c2_o2mc-coco-smoke",
+      "command": [
+        "/home/ubuntu/miniconda3/envs/UAV_CV/bin/python",
+        "-u",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/experiments/rtdetrv3_dense_supervision_5090/evaluate.py",
+        "--output",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/rtdetrv3_dense_supervision_5090/author-stageA-s0-20261105-r1/smoke-evaluations/a3_c2_o2mc"
+      ],
+      "log": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/rtdetrv3_dense_supervision_5090/author-stageA-s0-20261105-r1/logs/a3_c2_o2mc-coco-smoke.log",
+      "started_utc": "2026-11-05T01:27:05.391458+00:00",
+      "status": "completed",
+      "pid": 34896,
+      "exitcode": 0,
+      "finished_utc": "2026-11-05T01:27:05.576067+00:00"
+    },
+    {
+      "name": "a1_c2_reused-export",
+      "command": [
+        "/home/ubuntu/miniconda3/envs/UAV_CV/bin/python",
+        "-u",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/experiments/rtdetrv3_dense_supervision_5090/export.py",
+        "--checkpoint",
+        "/home/ubuntu/文档/ZHJ_UAV/reproductions/rtdetrv3_dense_supervision_5090/5090-ds01-c2-author-epoch150-best-native.pt",
+        "--output",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/rtdetrv3_dense_supervision_5090/author-stageA-s0-20261105-r1/evaluations/a1_c2_reused"
+      ],
+      "log": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/rtdetrv3_dense_supervision_5090/author-stageA-s0-20261105-r1/logs/a1_c2_reused-export.log",
+      "started_utc": "2026-11-05T01:27:05.585287+00:00",
+      "status": "completed",
+      "pid": 34897,
+      "exitcode": 0,
+      "finished_utc": "2026-11-05T01:27:18.956345+00:00"
+    },
+    {
+      "name": "a1_c2_reused-coco",
+      "command": [
+        "/home/ubuntu/miniconda3/envs/UAV_CV/bin/python",
+        "-u",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/experiments/rtdetrv3_dense_supervision_5090/evaluate.py",
+        "--output",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/rtdetrv3_dense_supervision_5090/author-stageA-s0-20261105-r1/evaluations/a1_c2_reused"
+      ],
+      "log": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/rtdetrv3_dense_supervision_5090/author-stageA-s0-20261105-r1/logs/a1_c2_reused-coco.log",
+      "started_utc": "2026-11-05T01:27:18.966360+00:00",
+      "status": "completed",
+      "pid": 35005,
+      "exitcode": 0,
+      "finished_utc": "2026-11-05T01:27:42.696541+00:00"
+    },
+    {
+      "name": "a0_c0-train150",
+      "command": [
+        "/home/ubuntu/miniconda3/envs/UAV_CV/bin/python",
+        "-u",
+        "/home/ubuntu/文档/ZHJ_UAV/ultralytics/experiments/rtdetrv3_dense_supervision_5090/train.py",
+        "--arm",
+        "a0_c0"
+      ],
+      "log": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/runs/rtdetrv3_dense_supervision_5090/author-stageA-s0-20261105-r1/logs/a0_c0-train150.log",
+      "started_utc": "2026-11-05T01:27:42.708082+00:00",
+      "status": "running",
+      "pid": 35007
+    }
+  ],
+  "active_stage": "a0_c0-train150"
+}

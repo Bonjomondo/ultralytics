@@ -1,0 +1,13 @@
+/home/ubuntu/miniconda3/envs/UAV_CV/lib/python3.11/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+assignment/static/dynamic/empty/diagnostics: passed
+WARNING ⚠️ no model scale passed. Assuming scale='l'.
+WARNING ⚠️ no model scale passed. Assuming scale='l'.
+/home/ubuntu/文档/ZHJ_UAV/ultralytics/experiments/rtdetrv3_dense_supervision_5090/author_engine/ultralytics/utils/loss.py:150: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=False):
+WARNING ⚠️ no model scale passed. Assuming scale='l'.
+c0: identity, alpha0, encoder gradients, inference removal, reload: passed
+WARNING ⚠️ no model scale passed. Assuming scale='l'.
+WARNING ⚠️ no model scale passed. Assuming scale='l'.
+WARNING ⚠️ no model scale passed. Assuming scale='l'.
+c2: identity, alpha0, encoder gradients, inference removal, reload: passed

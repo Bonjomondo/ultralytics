@@ -1,0 +1,9 @@
+{
+  "seed": 0,
+  "aux_seed": 4000,
+  "main_state_sha256": "071c106f4a03695a88a6ee9b6f9da499dc46cbe1f2e99e46af2b643ab34f3be2",
+  "common_sha256": "3e4b8d05d6fe9702b008e6b6335f7dcf6057c1ed6c49a681d1b3b88d74d4241b",
+  "common_tensors": 533,
+  "trained_checkpoint_loaded": false,
+  "method": "Author C0 seed0 constructor; C2 copies 527 common tensors excluding changed layer17; auxiliary initialized inside isolated RNG fork."
+}

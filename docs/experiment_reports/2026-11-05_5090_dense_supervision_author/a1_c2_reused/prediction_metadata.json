@@ -1,0 +1,61 @@
+{
+  "checkpoint": "/home/ubuntu/文档/ZHJ_UAV/reproductions/rtdetrv3_dense_supervision_5090/5090-ds01-c2-author-epoch150-best-native.pt",
+  "checkpoint_sha256": "25202afdc29f17b6f13f6c73d36d3eae56111526ae0444aacab6634b4f889bd9",
+  "checkpoint_epoch": 145,
+  "deployment_checkpoint": "/home/ubuntu/文档/ZHJ_UAV/reproductions/rtdetrv3_dense_supervision_5090/5090-ds01-c2-author-epoch150-best-native.pt",
+  "deployment_sha256": "25202afdc29f17b6f13f6c73d36d3eae56111526ae0444aacab6634b4f889bd9",
+  "exact_aux_removal_verified": false,
+  "gt_path": "/home/ubuntu/文档/ZHJ_UAV/reproductions/rtdetrv3_dense_supervision_5090/data/annotations/VisDrone2019-DET_val_coco.json",
+  "gt_sha256": "6f57aa4b42d64ee7b99b8a6a5b159ad19cba2eacf00bd86f23314966614bf4d8",
+  "prediction_sha256": "a67ba83ff9b1d51d9099531fbdb9e7c13028b29c23e009cc4e7c6db02b7d5504",
+  "images": 548,
+  "detections": 164400,
+  "native_metrics": {
+    "metrics/precision(B)": 0.6011076609457391,
+    "metrics/recall(B)": 0.45331369157068196,
+    "metrics/mAP50(B)": 0.4668202512230245,
+    "metrics/mAP50-95(B)": 0.28653331795574116,
+    "fitness": 0.3045620112824695
+  },
+  "protocol": {
+    "engine": "4090 author vendored source",
+    "precision": "FP32 reloaded from FP16 EMA",
+    "preprocess": "640x640 stretch RGB /255",
+    "batch": 4,
+    "model_fusion": "author AutoBackend default fusion",
+    "queries": 300,
+    "confidence_filter": false,
+    "nms": false,
+    "coordinates": "original image xywh; unrounded float",
+    "category_mapping": "0..9 to COCO1..10",
+    "maxDets": [
+      1,
+      10,
+      100
+    ],
+    "gt_sha256": "6f57aa4b42d64ee7b99b8a6a5b159ad19cba2eacf00bd86f23314966614bf4d8"
+  },
+  "environment": {
+    "executable": "/home/ubuntu/miniconda3/envs/UAV_CV/bin/python",
+    "prefix": "/home/ubuntu/miniconda3/envs/UAV_CV",
+    "base_prefix": "/home/ubuntu/miniconda3/envs/UAV_CV",
+    "python": "3.11.16",
+    "torch": "2.14.0+cu130",
+    "cuda": "13.0",
+    "cudnn": 92400,
+    "ultralytics": "/home/ubuntu/文档/ZHJ_UAV/ultralytics/experiments/rtdetrv3_dense_supervision_5090/author_engine/ultralytics/__init__.py",
+    "gpu": "NVIDIA GeForce RTX 5090 D v2",
+    "matmul_tf32": false,
+    "cudnn_tf32": true,
+    "git_commit": "935927414fe3fb619cbe955031649d4269be027a"
+  },
+  "gpu_forward_fp32_batch1": {
+    "warmup": 20,
+    "iterations": 100,
+    "mean_ms": 4.9091849565505985,
+    "p50_ms": 4.913023948669434,
+    "p95_ms": 4.955194973945618,
+    "parameters": 19925432,
+    "scope": "5090 pure forward; excludes transfer/preprocess/postprocess; not deployment FP16"
+  }
+}
