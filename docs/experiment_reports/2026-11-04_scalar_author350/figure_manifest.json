@@ -1,0 +1,30 @@
+{
+  "figures/results.png": {
+    "sha256": "8d5b53591b41720f2af1910db4cce7d61a2aa2fad926034a45aac501ece81782",
+    "protocol": "framework native validation curves/confusion; not independent COCO metrics"
+  },
+  "figures/F1_curve.png": {
+    "sha256": "c25dd97f49005b0b78a8855e8006ed7c78b4611b779be5870e393bdc0de44a01",
+    "protocol": "framework native validation curves/confusion; not independent COCO metrics"
+  },
+  "figures/confusion_matrix_normalized.png": {
+    "sha256": "027c7582ef2869a653e5e6e7f512beff31e3b1d74d0ad19cf60000979b4d3379",
+    "protocol": "framework native validation curves/confusion; not independent COCO metrics"
+  },
+  "figures/confusion_matrix.png": {
+    "sha256": "0f2c9c2fa3922aee18e5e71d46ee7735748c987163de6513a30c5e5a03395c8f",
+    "protocol": "framework native validation curves/confusion; not independent COCO metrics"
+  },
+  "figures/P_curve.png": {
+    "sha256": "20f75a4ed96ef456a8cb130563280cf36b7fabf4cd739227a4430d5c1e3d9b5a",
+    "protocol": "framework native validation curves/confusion; not independent COCO metrics"
+  },
+  "figures/R_curve.png": {
+    "sha256": "b482fc3132e764f97f391d2488e80dff9f95280163a9b52ddaff8a58e809bff1",
+    "protocol": "framework native validation curves/confusion; not independent COCO metrics"
+  },
+  "figures/PR_curve.png": {
+    "sha256": "55b620f6982d221f3d280169c1e785b87c394d61b4fcf96afc2fa4930e1430cc",
+    "protocol": "framework native validation curves/confusion; not independent COCO metrics"
+  }
+}

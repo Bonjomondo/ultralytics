@@ -1,0 +1,45 @@
+{
+  "status": "complete",
+  "recovery": true,
+  "started_utc": "2026-11-04T14:56:23.238374+00:00",
+  "stages": [
+    {
+      "phase": "train",
+      "status": "complete",
+      "returncode": 0,
+      "finished_utc": "2026-11-05T03:05:21.595684+00:00"
+    },
+    {
+      "phase": "predict",
+      "status": "complete",
+      "returncode": 0,
+      "finished_utc": "2026-11-05T03:05:34.215682+00:00"
+    },
+    {
+      "phase": "coco",
+      "status": "failed",
+      "returncode": -11,
+      "finished_utc": "2026-11-05T03:05:38.092719+00:00"
+    },
+    {
+      "phase": "coco_retry1",
+      "status": "complete",
+      "returncode": 0,
+      "log": "/home/zjnu/文档/ZHJ_WorkSpace/reproductions/c2-scalar-author-20261104/coco_retry1.log"
+    },
+    {
+      "phase": "benchmark_retry1",
+      "status": "complete",
+      "returncode": 0,
+      "log": "/home/zjnu/文档/ZHJ_WorkSpace/reproductions/c2-scalar-author-20261104/benchmark_retry1.log"
+    },
+    {
+      "phase": "finalize_verified",
+      "status": "complete",
+      "returncode": 0
+    }
+  ],
+  "child_pid": null,
+  "error": "Traceback (most recent call last):\n  File \"/home/zjnu/文档/ZHJ_WorkSpace/reproductions/c2-scalar-author-20261104/recover_worker0.py\", line 104, in controller\n    if code:raise RuntimeError(f'recovery {phase} failed: {code}')\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: recovery coco failed: -11\n",
+  "finished_utc": "2026-11-05T03:12:57.701915+00:00"
+}

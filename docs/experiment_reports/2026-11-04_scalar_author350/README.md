@@ -51,3 +51,11 @@ PYTHONPATH=. /home/zjnu/anaconda3/envs/UAV_CV/bin/python train_scalar.py --smoke
 ## 第130轮后的恢复记录
 
 第131轮训练时DataLoader worker SIGSEGV，保留完整130轮FP32检查点。已验证raw模型、EMA及优化器逐张量恢复，scaler/stopper/RNG恢复；训练workers8改0后继续第131轮至原350轮上限/patience40。随机增强与加载顺序会随worker变化，不能称逐位等价连续训练。恢复检查点、旧状态与原日志均保留。详见recovery_receipt.json和recovery_verification.json；恢复源码recover_worker0.py独立于原冻结源码。
+
+## 最终结果
+
+350轮训练和548图预测完成；独立COCO评估第一次SIGSEGV后以同一GT/预测重跑成功，三组同场测速完成。完整结果见[RESULTS.md](RESULTS.md)与[comparison.csv](comparison.csv)。
+
+Scalar AP=28.038、APs=19.840；对B0 AP+0.265pp、APs+0.359pp；对C2 AP−0.684pp、APs−0.135pp。本次没有体现新增门控相对C2的精度收益。单seed、worker恢复和checkpoint精度差异限制见final_result.json。训练预算完成，不能直接宣称充分收敛。
+
+完整350轮原始曲线见raw/scalar/results.csv；figures/为框架原生曲线，不能替代正式COCO AP。CPU评估故障栈见coco_failure_trace.txt，重跑日志见coco_retry_evidence.txt；没有重新训练或重生成预测。

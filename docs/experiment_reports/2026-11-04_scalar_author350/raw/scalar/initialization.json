@@ -1,0 +1,23 @@
+{
+  "seed": 0,
+  "method": "replayed B0 seed-zero untrained constructor and copied same-name same-shape common tensors; changed P2 branch retains independently initialized candidate tensors",
+  "baseline_initial_state_was_archived": false,
+  "trained_checkpoint_loaded": false,
+  "baseline_config_sha256": "046bd7c10ee9ff6e5a8f603d3c25759c4814b8460fadc32f4f826faa1323cc1b",
+  "candidate_config_sha256": "a5d5317ac655168d27b82a07cd877c8bd3fd1f3942530d32b0f0f148f7fd607c",
+  "common_tensors": 527,
+  "naturally_equal_before_copy": 444,
+  "common_state_sha256": "cd1cf17318a869866d8bdf80e67e76a16828c783e8361c23b82c1e579ce3a7c0",
+  "baseline_replay_common_state_sha256": "cd1cf17318a869866d8bdf80e67e76a16828c783e8361c23b82c1e579ce3a7c0",
+  "changed_layer_keys": [
+    "model.17.bn.bias",
+    "model.17.bn.num_batches_tracked",
+    "model.17.bn.running_mean",
+    "model.17.bn.running_var",
+    "model.17.bn.weight",
+    "model.17.conv.weight"
+  ],
+  "gate_initial_multiplier": 1.0,
+  "candidate_parameters": 20135289,
+  "baseline_parameters": 20094584
+}

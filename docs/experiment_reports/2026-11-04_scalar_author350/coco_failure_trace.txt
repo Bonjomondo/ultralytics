@@ -1,0 +1,21 @@
+loading annotations into memory...
+Done (t=0.06s)
+creating index...
+index created!
+Loading and preparing results...
+DONE (t=0.41s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+Fatal Python error: Segmentation fault
+
+Current thread 0x00007fb7b36fe4c0 (most recent call first):
+  File "/home/zjnu/anaconda3/envs/UAV_CV/lib/python3.11/site-packages/pycocotools/cocoeval.py", line 259 in <listcomp>
+  File "/home/zjnu/anaconda3/envs/UAV_CV/lib/python3.11/site-packages/pycocotools/cocoeval.py", line 259 in evaluateImg
+  File "/home/zjnu/anaconda3/envs/UAV_CV/lib/python3.11/site-packages/pycocotools/cocoeval.py", line 154 in <listcomp>
+  File "/home/zjnu/anaconda3/envs/UAV_CV/lib/python3.11/site-packages/pycocotools/cocoeval.py", line 154 in evaluate
+  File "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/reproductions/c2-scalar-author-20261104/coco_eval.py", line 42 in main
+  File "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/reproductions/c2-scalar-author-20261104/coco_eval.py", line 71 in <module>
+
+Extension modules: numpy.core._multiarray_umath, numpy.core._multiarray_tests, numpy.linalg._umath_linalg, numpy.fft._pocketfft_internal, numpy.random._common, numpy.random.bit_generator, numpy.random._bounded_integers, numpy.random._mt19937, numpy.random.mtrand, numpy.random._philox, numpy.random._pcg64, numpy.random._sfc64, numpy.random._generator, pycocotools._mask (total: 14)
