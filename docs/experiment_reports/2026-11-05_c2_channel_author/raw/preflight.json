@@ -1,0 +1,71 @@
+{
+  "status": "passed",
+  "tests": {
+    "c2_s0": {
+      "parameters": 20135288,
+      "max_abs_error_vs_c2_640": 0.0,
+      "shared_sha256": "d8864d395c17e727f4c3a62e1d112bb8512759e96dc02896ce4b311eb07ac54d",
+      "gradient_test_pass": true
+    },
+    "scalar_s0": {
+      "parameters": 20135289,
+      "max_abs_error_vs_c2_640": 0.0,
+      "shared_sha256": "d8864d395c17e727f4c3a62e1d112bb8512759e96dc02896ce4b311eb07ac54d",
+      "gradient_test_pass": true
+    },
+    "channel_s0": {
+      "parameters": 20135416,
+      "max_abs_error_vs_c2_640": 0.0,
+      "shared_sha256": "d8864d395c17e727f4c3a62e1d112bb8512759e96dc02896ce4b311eb07ac54d",
+      "gradient_test_pass": true
+    },
+    "initialization_s0": {
+      "path": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/initialization_s0.pt",
+      "sha256": "fdd7d32f2d72598301dd11977982399003b48384cc308f4b274c79c2bdd652a4"
+    },
+    "c2_s1": {
+      "parameters": 20135288,
+      "max_abs_error_vs_c2_640": 0.0,
+      "shared_sha256": "be81985543cd6babee54b83c659c9651981dbbcae5ed249b4a53875cbabe710b",
+      "gradient_test_pass": true
+    },
+    "scalar_s1": {
+      "parameters": 20135289,
+      "max_abs_error_vs_c2_640": 0.0,
+      "shared_sha256": "be81985543cd6babee54b83c659c9651981dbbcae5ed249b4a53875cbabe710b",
+      "gradient_test_pass": true
+    },
+    "channel_s1": {
+      "parameters": 20135416,
+      "max_abs_error_vs_c2_640": 0.0,
+      "shared_sha256": "be81985543cd6babee54b83c659c9651981dbbcae5ed249b4a53875cbabe710b",
+      "gradient_test_pass": true
+    },
+    "initialization_s1": {
+      "path": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/initialization_s1.pt",
+      "sha256": "a7074d8435c430bae659703c9f6cc24bcab46a74000eab5757b9f06aefa6d0d3"
+    },
+    "c2_s2": {
+      "parameters": 20135288,
+      "max_abs_error_vs_c2_640": 0.0,
+      "shared_sha256": "938c214b53ac9e8b2a9f46df33d0452e253feab6cc4444e47890c4ed1afdc842",
+      "gradient_test_pass": true
+    },
+    "scalar_s2": {
+      "parameters": 20135289,
+      "max_abs_error_vs_c2_640": 0.0,
+      "shared_sha256": "938c214b53ac9e8b2a9f46df33d0452e253feab6cc4444e47890c4ed1afdc842",
+      "gradient_test_pass": true
+    },
+    "channel_s2": {
+      "parameters": 20135416,
+      "max_abs_error_vs_c2_640": 0.0,
+      "shared_sha256": "938c214b53ac9e8b2a9f46df33d0452e253feab6cc4444e47890c4ed1afdc842",
+      "gradient_test_pass": true
+    },
+    "initialization_s2": {
+      "path": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/initialization_s2.pt",
+      "sha256": "542dc90f5d73e0ee5491b920be9d75d53e53b791d9df93ee081bdd7a5667c9dd"
+    }
+  }
+}

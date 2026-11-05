@@ -1,0 +1,2 @@
+epoch,mean,std,min,max,below_0_9,above_1_1,low_saturation,high_saturation,epoch_seconds,peak_gpu_gib,p2_rms_before,p2_rms_after,p2_gradient_norm,gate_gradient_norm
+1,1.0,0.0,1.0,1.0,0,0,0,0,2.2967383577488363,3.62197208404541,0.6263328591982523,0.6263328591982523,3.620403011639913,0.0

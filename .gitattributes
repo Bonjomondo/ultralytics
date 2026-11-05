@@ -1,2 +1,4 @@
 # Preserve CSV evidence bytes; accept standard CRLF while checking real whitespace errors.
 *.csv whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+# Preserve exact upstream author-engine formatting.
+experiments/c2_channel_author_20261105/backend/** -whitespace

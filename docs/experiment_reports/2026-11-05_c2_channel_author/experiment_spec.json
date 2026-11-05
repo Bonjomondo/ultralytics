@@ -1,0 +1,59 @@
+{
+  "arms": [
+    "c2",
+    "scalar",
+    "channel"
+  ],
+  "screen_recipe": {
+    "epochs": 150,
+    "patience": 0,
+    "batch": 4,
+    "imgsz": 640,
+    "optimizer": "AdamW",
+    "lr0": 0.0001,
+    "lrf": 1.0,
+    "momentum": 0.9,
+    "weight_decay": 0.0001,
+    "warmup_epochs": 2000,
+    "warmup_bias_lr": 0.1,
+    "warmup_momentum": 0.8,
+    "nbs": 4,
+    "mixup": 0.2,
+    "mosaic": 1.0,
+    "close_mosaic": 0,
+    "amp": false,
+    "deterministic": true,
+    "seed": 0,
+    "pretrained": false,
+    "max_det": 300,
+    "cache": false,
+    "device": "0",
+    "workers": 0,
+    "val": true,
+    "plots": true
+  },
+  "confirmation": "fresh C2/channel, full350 epochs, paired seeds0/1/2, patience0; only on gate pass",
+  "thresholds": {
+    "AP_pp_min": 0.3,
+    "APs_pp_min": 0.3,
+    "AP75_APm_APl_pp_min": -0.5,
+    "latency_percent_max": 10
+  },
+  "backend_version": "8.0.201",
+  "backend_import_path": "experiments/c2_channel_author_20261105/backend/ultralytics/__init__.py",
+  "python": "3.11.17 (main, Oct  1 2026, 20:17:42) [GCC 14.3.0]",
+  "torch": "2.1.2+cu121",
+  "cuda": "12.1",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "init_archives": {
+    "runs/c2_channel_author_20261105/initialization_s1.pt": "a7074d8435c430bae659703c9f6cc24bcab46a74000eab5757b9f06aefa6d0d3",
+    "runs/c2_channel_author_20261105/initialization_s2.pt": "542dc90f5d73e0ee5491b920be9d75d53e53b791d9df93ee081bdd7a5667c9dd",
+    "runs/c2_channel_author_20261105/initialization_s0.pt": "fdd7d32f2d72598301dd11977982399003b48384cc308f4b274c79c2bdd652a4"
+  },
+  "limits": [
+    "static gates, not input-dependent attention",
+    "may be absorbed by downstream convolution; optimization hypothesis",
+    "all groups workers0; historical workers8 and old AP values context only",
+    "single-seed screen is not significance evidence"
+  ]
+}

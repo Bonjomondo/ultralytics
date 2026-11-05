@@ -1,0 +1,7 @@
+{
+  "run": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/smoke_scalar_150e_s0",
+  "full_diagnostics_sha256": "5c82336e990b9d358f5b48e98e291be94fe42dc9c7c6ea50b9fc8df74a95d7fb",
+  "sampling": "features/gradients first 3 batches per epoch; alpha at epoch end; scalar/C2 broadcast only in alpha.csv",
+  "figure_hashes": {},
+  "native_figure_protocol": "framework internal validation; not independent COCO AP"
+}

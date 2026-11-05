@@ -1,0 +1,19 @@
+{
+  "checkpoint": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/smoke_channel_150e_s0/weights/best.pt",
+  "checkpoint_sha256": "2659cfbf90e58c9ba76c05ab6444547b137c5572be7c4bbfa7e7e9a179301cf4",
+  "checkpoint_epoch": 1,
+  "gt_sha256": "6f57aa4b42d64ee7b99b8a6a5b159ad19cba2eacf00bd86f23314966614bf4d8",
+  "predictions_sha256": "e20940988fc0ebebb771d7d7b7127c4c9c7e59e015a0cc5785aa38ebd8bdfe9f",
+  "images": 16,
+  "detections": 4800,
+  "native_metrics": {
+    "metrics/precision(B)": 0.0,
+    "metrics/recall(B)": 0.0,
+    "metrics/mAP50(B)": 0.0,
+    "metrics/mAP50-95(B)": 0.0,
+    "fitness": 0.0
+  },
+  "smoke": true,
+  "finished_utc": "2026-11-05T15:39:41.773337+00:00",
+  "protocol": "author RTDETRValidator FP32, 300 argmax queries/image, no NMS, unrounded; asserted full query coverage"
+}

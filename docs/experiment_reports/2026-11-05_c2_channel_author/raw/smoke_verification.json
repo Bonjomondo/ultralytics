@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "three_arms_train32_val16": true,
+  "first_batch_images_targets_and_losses_identical": true,
+  "first_batch": {
+    "images": [
+      "/home/zjnu/文档/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-train/images/0000010_05291_d_0000058.jpg",
+      "/home/zjnu/文档/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-train/images/0000031_02000_d_0000041.jpg",
+      "/home/zjnu/文档/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-train/images/0000016_01352_d_0000069.jpg",
+      "/home/zjnu/文档/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-train/images/0000037_01494_d_0000052.jpg"
+    ],
+    "image_sha256": "2a197b40400b25000f23ae8b84d781b2de8a1fb039a9c7975444533007ca9951",
+    "targets_sha256": "34c7daf9f744d0854a2b89d2eb3b87e4c4c62d49ee07cba90e83e148e8d3bc81",
+    "loss_items": [
+      2.2356956005096436,
+      2.635969400405884,
+      0.8176571726799011
+    ],
+    "accumulate": 1
+  },
+  "predict_coco_benchmark_pass": true,
+  "warning": "Short runs verify execution only; no accuracy evidence"
+}

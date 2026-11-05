@@ -1,0 +1,14 @@
+{
+  "gt_sha256": "6f57aa4b42d64ee7b99b8a6a5b159ad19cba2eacf00bd86f23314966614bf4d8",
+  "data_yaml_sha256": "ebe768029d0246daf38d04233019304ababfbfd8f2c922e9fac65ce050daf02c",
+  "train": {
+    "images": 6471,
+    "labels_sha256": "9c40a6c71c79248abde44c84185e62280d3b54528bb249680bdac1e49a105b99",
+    "image_names_sizes_sha256": "be36aa89f47f0f17007a9229e0d4a74f7977ef79eac65a790e9bff737f5adde6"
+  },
+  "val": {
+    "images": 548,
+    "labels_sha256": "f96c11863a6e6108bbc08c6238ff8ed2ea1155f207f524618cbbf74cd43ddc41",
+    "image_names_sizes_sha256": "3e1fe6a41fcab11a85efd4c32eef5d83933db28acf057a5ec9b9c476bc55744b"
+  }
+}

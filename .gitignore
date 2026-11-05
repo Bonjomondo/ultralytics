@@ -241,3 +241,7 @@ results.csv
 
 # Actual author scalar training configuration for reproducible evidence.
 !/docs/experiment_reports/2026-11-04_scalar_author350/raw/**/args.yaml
+
+!/docs/experiment_reports/2026-11-05_c2_channel_author/raw/**/args.yaml
+
+!/docs/experiment_reports/2026-11-05_c2_channel_author/figures/**/*.svg

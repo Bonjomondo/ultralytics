@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "raw_model_exact": true,
+  "optimizer_exact": true,
+  "ema_exact": true,
+  "scaler_stopper_restored": true,
+  "next_epoch": 2,
+  "smoke_checkpoint_epoch": 1,
+  "limits": "epoch-boundary restart may change loader sampling order; such resumes are recorded"
+}

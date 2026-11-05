@@ -1,0 +1,101 @@
+{
+  "checkpoint": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/smoke_scalar_150e_s0/weights/best.pt",
+  "checkpoint_sha256": "a1e86c0c6e00628962a7de61562185547aee7574b2e4a31056b2fed984153f11",
+  "checkpoint_epoch": 1,
+  "gt_sha256": "6f57aa4b42d64ee7b99b8a6a5b159ad19cba2eacf00bd86f23314966614bf4d8",
+  "predictions_sha256": "aabb450ede4740e50892e6665612378c260ed12e74341d4836f9fe739ee8e454",
+  "images": 16,
+  "detections": 4800,
+  "native_metrics": {
+    "metrics/precision(B)": 0.0,
+    "metrics/recall(B)": 0.0,
+    "metrics/mAP50(B)": 0.0,
+    "metrics/mAP50-95(B)": 0.0,
+    "fitness": 0.0
+  },
+  "smoke": true,
+  "finished_utc": "2026-11-05T15:39:38.605209+00:00",
+  "protocol": "author RTDETRValidator FP32, 300 argmax queries/image, no NMS, unrounded; asserted full query coverage",
+  "evaluated_utc": "2026-11-05T15:39:39.185680+00:00",
+  "maxDets": [
+    1,
+    10,
+    100
+  ],
+  "coco_percent": {
+    "AP": 0.0,
+    "AP50": 0.0,
+    "AP75": 0.0,
+    "APs": 0.0,
+    "APm": 0.0,
+    "APl": 0.0,
+    "AR1": 0.0,
+    "AR10": 0.0,
+    "AR100": 0.0,
+    "ARs": 0.0,
+    "ARm": 0.0,
+    "ARl": 0.0
+  },
+  "per_class_percent": {
+    "pedestrian": {
+      "AP": 0.0,
+      "APs": 0.0,
+      "APm": 0.0,
+      "APl": null
+    },
+    "people": {
+      "AP": 0.0,
+      "APs": 0.0,
+      "APm": 0.0,
+      "APl": null
+    },
+    "bicycle": {
+      "AP": 0.0,
+      "APs": 0.0,
+      "APm": 0.0,
+      "APl": null
+    },
+    "car": {
+      "AP": 0.0,
+      "APs": 0.0,
+      "APm": 0.0,
+      "APl": 0.0
+    },
+    "van": {
+      "AP": 0.0,
+      "APs": null,
+      "APm": 0.0,
+      "APl": 0.0
+    },
+    "truck": {
+      "AP": 0.0,
+      "APs": null,
+      "APm": 0.0,
+      "APl": null
+    },
+    "tricycle": {
+      "AP": 0.0,
+      "APs": 0.0,
+      "APm": 0.0,
+      "APl": null
+    },
+    "awning-tricycle": {
+      "AP": 0.0,
+      "APs": 0.0,
+      "APm": 0.0,
+      "APl": null
+    },
+    "bus": {
+      "AP": null,
+      "APs": null,
+      "APm": null,
+      "APl": null
+    },
+    "motor": {
+      "AP": 0.0,
+      "APs": 0.0,
+      "APm": 0.0,
+      "APl": null
+    }
+  }
+}

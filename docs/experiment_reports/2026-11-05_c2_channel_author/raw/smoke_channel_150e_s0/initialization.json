@@ -1,0 +1,11 @@
+{
+  "seed": 0,
+  "shared_sha256": "d8864d395c17e727f4c3a62e1d112bb8512759e96dc02896ce4b311eb07ac54d",
+  "shared_items": 533,
+  "shared_verified": true,
+  "no_trained_checkpoint": true,
+  "extra_keys": [
+    "model.18.logits"
+  ],
+  "identity_gate": true
+}
