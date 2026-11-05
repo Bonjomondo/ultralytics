@@ -1,0 +1,40 @@
+{
+  "queue": {
+    "started_utc": "2026-11-05T15:49:50.364126+00:00",
+    "events": [
+      {
+        "label": "screen_c2_150e_s0/train",
+        "attempt": 1,
+        "started_utc": "2026-11-05T15:49:50.464469+00:00",
+        "status": "running"
+      }
+    ],
+    "done": [],
+    "status": "running",
+    "pid": 2567467,
+    "updated_utc": "2026-11-05T15:49:50.464481+00:00",
+    "current": "screen_c2_150e_s0/train",
+    "child_pid": 2567470
+  },
+  "run": {
+    "status": "training",
+    "pid": 2567470,
+    "current_epoch": 1,
+    "completed_epochs": 0,
+    "batch_in_epoch": 900,
+    "updated_utc": "2026-11-05T15:51:40.700645+00:00",
+    "workers": 0,
+    "alpha_mean": 1.0,
+    "native_metrics": {
+      "metrics/precision(B)": 0,
+      "metrics/recall(B)": 0,
+      "metrics/mAP50(B)": 0,
+      "metrics/mAP50-95(B)": 0,
+      "val/giou_loss": 0,
+      "val/cls_loss": 0,
+      "val/l1_loss": 0
+    },
+    "accumulate": 1
+  },
+  "note": "live snapshot; native values at incomplete first epoch are not final accuracy"
+}

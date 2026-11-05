@@ -1,0 +1,21 @@
+{
+  "started_utc": "2026-11-05T15:49:50.252168+00:00",
+  "session": "c2-channel-author-20261105",
+  "run_root": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105",
+  "screen": "C2/Scalar/Channel 150 epochs seed0, fresh paired init",
+  "confirmation": "Only on preregistered pass: C2/Channel 350 epochs seeds0,1,2, all fresh paired init",
+  "environment": {
+    "PYTHONPATH": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/source/backend:/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/source",
+    "AUTHOR_GATE_REPO": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics",
+    "AUTHOR_GATE_MANIFEST_SHA": "42109ff39f4c0ecde54b978cb1190fb33f90686a4ee5a7bc9ea1ded818e116a8",
+    "PYTHONFAULTHANDLER": "1",
+    "YOLO_CONFIG_DIR": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/yolo_config",
+    "YOLO_AUTOINSTALL": "false",
+    "OMP_NUM_THREADS": "8",
+    "MKL_NUM_THREADS": "8",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MPLBACKEND": "Agg",
+    "WANDB_MODE": "disabled",
+    "COMET_MODE": "DISABLED"
+  }
+}
