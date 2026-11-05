@@ -84,3 +84,7 @@ python experiments/c2_channel_author_20261105/report.py --report docs/experiment
 ```
 
 证据入口：[结构与初始化预检](raw/preflight.json)、[三组真实短跑](raw/smoke_verification.json)、[raw-state恢复验证](raw/resume_verification.json)、[实验规格](experiment_spec.json)。用户原始方案保存在raw/user_design.txt，属于设计输入，不作为实际结果。
+
+## 运行中恢复记录：C2第51轮
+
+C2在第51轮反向传播遇到PyTorch CUDA内部断言（CUDAGuardImpl.h:25），控制器自动从完整第50轮检查点恢复。原始模型、EMA和优化器逐张量验证通过，训练配方及workers0未更改。采样顺序可能随恢复改变，因此后续只能视为同初始化、同预算的恢复对照，不称逐位等价的完整配对轨迹。筛选结论及晋级解释须保留这个限制；若晋级，350轮各组仍从头配对训练。详见[恢复审计](raw/screen_c2_150e_s0/recovery_audit.json)。

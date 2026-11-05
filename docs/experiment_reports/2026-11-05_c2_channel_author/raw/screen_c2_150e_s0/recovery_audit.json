@@ -1,0 +1,22 @@
+{
+  "run": "screen_c2_150e_s0",
+  "failure": {
+    "error": "RuntimeError('t == DeviceType::CUDA INTERNAL ASSERT FAILED at \"../c10/cuda/impl/CUDAGuardImpl.h\":25, please report a bug to PyTorch. ')",
+    "updated_utc": "2026-11-05T18:28:04.629772+00:00",
+    "checkpoint_exists": true
+  },
+  "restores": {
+    "restore_epoch50.json": {
+      "raw_exact": true,
+      "ema_exact": true,
+      "optimizer_exact": true,
+      "checkpoint_sha256": "7f4d41db96bb990277832b41e116ca17d77088b0d9dcfaedabdebe52e46305cf",
+      "completed_epochs": 50,
+      "limits": "epoch-boundary replay; loader order may differ, not bitwise identical continuation"
+    }
+  },
+  "current_status": "healthy continuation; no recipe or backend change",
+  "limitations": "C2 control recovered from completed epoch50; raw/EMA/optimizer verified exact. Loader sampling may differ after replay. Full trajectories are not bitwise paired, despite identical initial shared state/first batch. Disclose in screen and promotion interpretation.",
+  "original_logs": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/logs/screen_c2_150e_s0-train-attempt1.log",
+  "preserved_checkpoints": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/recovery_snapshots/screen_c2_150e_s0"
+}
