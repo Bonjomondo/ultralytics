@@ -1,0 +1,18 @@
+{
+  "checkpoint": "/home/zjnu/文档/ZHJ_WorkSpace/reproductions/c2-scalar-author-20261104/runs/c2-scalar-author-350e-s0/weights/best.pt",
+  "checkpoint_sha256": "f6b321f616860ade940eecf7d67fa66eb33ea41c88be49644a474fd2aa67f9e3",
+  "checkpoint_epoch": 333,
+  "gt_path": "/home/zjnu/文档/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/annotations/VisDrone2019-DET_val_coco.json",
+  "gt_sha256": "6f57aa4b42d64ee7b99b8a6a5b159ad19cba2eacf00bd86f23314966614bf4d8",
+  "prediction_sha256": "9a6d31e49a7ee4fa5be17c8978516eb3aa9fdb9d879e52cdee984d70c61b86c6",
+  "images": 548,
+  "detections": 164400,
+  "native_metrics": {
+    "metrics/precision(B)": 0.6235696783393495,
+    "metrics/recall(B)": 0.48473124329836964,
+    "metrics/mAP50(B)": 0.49397907770403426,
+    "metrics/mAP50-95(B)": 0.30446350248463294,
+    "fitness": 0.3234150600065731
+  },
+  "protocol": "author RTDETRValidator, FP32, all 300 argmax queries/image, no NMS or confidence threshold, unrounded; same as B0"
+}
