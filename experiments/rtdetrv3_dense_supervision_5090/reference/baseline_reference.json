@@ -1,0 +1,160 @@
+{
+  "finished_utc": "2026-10-27T07:45:02.747502+00:00",
+  "gt": "/home/zjnu/文档/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/annotations/VisDrone2019-DET_val_coco.json",
+  "predictions": "runs/rtdetr-r18-author-recipe-350e-s0/evaluation/predictions.json",
+  "gt_sha256": "6f57aa4b42d64ee7b99b8a6a5b159ad19cba2eacf00bd86f23314966614bf4d8",
+  "predictions_sha256": "409fc9f0fa8c1c06735645ca71ed83a4f629d1a48839033ad908a0b7ac17028e",
+  "images": 548,
+  "annotations": 38759,
+  "detections": 164400,
+  "evaluator": "pycocotools.COCOeval (compiled IoU)",
+  "inference": "saved author RTDETRValidator FP32 predictions, all 300 queries, no confidence filtering or NMS, full float precision",
+  "unit": "percent",
+  "coco_maxdet100": {
+    "AP": 27.773305535527815,
+    "AP50": 45.88808562251555,
+    "AP75": 28.145446604733955,
+    "APs": 19.48123462984351,
+    "APm": 38.12774724941233,
+    "APl": 40.15228966010711,
+    "AR100": 37.36049769869347
+  },
+  "per_class_maxdet100": [
+    {
+      "category_id": 1,
+      "name": "pedestrian",
+      "AP": 26.18874766061866,
+      "AP50": 54.82988165963041,
+      "APs": 22.991642087803772,
+      "APm": 46.08485145703066,
+      "APl": 59.75416707255494
+    },
+    {
+      "category_id": 2,
+      "name": "people",
+      "AP": 19.657090686152202,
+      "AP50": 47.35150899926958,
+      "APs": 18.961720100829723,
+      "APm": 26.9654350425096,
+      "APl": 3.9396880864557047
+    },
+    {
+      "category_id": 3,
+      "name": "bicycle",
+      "AP": 10.286379267874706,
+      "AP50": 21.433399214166368,
+      "APs": 7.441941148856307,
+      "APm": 22.377944512348876,
+      "APl": 3.7547600913937544
+    },
+    {
+      "category_id": 4,
+      "name": "car",
+      "AP": 60.387260379753194,
+      "AP50": 84.46473863621465,
+      "APs": 44.60655608322059,
+      "APm": 72.57659305826482,
+      "APl": 83.8954862833156
+    },
+    {
+      "category_id": 5,
+      "name": "van",
+      "AP": 31.985589566577733,
+      "AP50": 43.61781251342168,
+      "APs": 16.677909929371022,
+      "APm": 46.372867883990146,
+      "APl": 45.09098711926949
+    },
+    {
+      "category_id": 6,
+      "name": "truck",
+      "AP": 27.886333577526727,
+      "AP50": 40.451884513589675,
+      "APs": 11.422660159843268,
+      "APm": 33.885770702059844,
+      "APl": 55.83763194405942
+    },
+    {
+      "category_id": 7,
+      "name": "tricycle",
+      "AP": 18.397348682312234,
+      "AP50": 32.08216895290984,
+      "APs": 14.953057661536121,
+      "APm": 23.962311671149703,
+      "APl": 30.34891684657187
+    },
+    {
+      "category_id": 8,
+      "name": "awning-tricycle",
+      "AP": 9.925911415005812,
+      "AP50": 15.731375892651311,
+      "APs": 7.933996992017294,
+      "APm": 13.421307211024697,
+      "APl": 14.42244224422442
+    },
+    {
+      "category_id": 9,
+      "name": "bus",
+      "AP": 44.57125720574787,
+      "AP50": 60.170919272931414,
+      "APs": 24.01076834282508,
+      "APm": 56.61925196461933,
+      "APl": 77.44471350288478
+    },
+    {
+      "category_id": 10,
+      "name": "motor",
+      "AP": 28.447136913708963,
+      "AP50": 58.74716657037051,
+      "APs": 25.81209379213192,
+      "APm": 39.01113899112562,
+      "APl": 27.034103410341032
+    }
+  ],
+  "coco_maxdet300": {
+    "AP": 27.80278533500343,
+    "AP50": 45.9369260224228,
+    "AP75": 28.163330548854265,
+    "APs": 19.51524977122534,
+    "APm": 38.180319771351904,
+    "APl": 40.258811242287436,
+    "AR300": 37.462889268991866
+  },
+  "checkpoint": "/home/zjnu/文档/ZHJ_WorkSpace/reproductions/rtdetr-r18-sodetr-paper-20261027/runs/rtdetr-r18-author-recipe-350e-s0/weights/best.pt",
+  "checkpoint_sha256": "931cdcc17818cd498c3b76e7d8a89757c075df42464c5c26f25c2ab17d31a820",
+  "checkpoint_epoch": 339,
+  "native_internal_metrics": {
+    "metrics/precision(B)": 0.62343,
+    "metrics/recall(B)": 0.47828,
+    "metrics/mAP50(B)": 0.48985,
+    "metrics/mAP50-95(B)": 0.30247,
+    "val/giou_loss": 0.63349,
+    "val/cls_loss": 0.55306,
+    "val/l1_loss": 0.0619,
+    "fitness": 0.32121
+  },
+  "coco_maxdet100_percent": {
+    "AP": 27.773305535527815,
+    "AP50": 45.88808562251555,
+    "AP75": 28.145446604733955,
+    "APs": 19.48123462984351,
+    "APm": 38.12774724941233,
+    "APl": 40.15228966010711,
+    "AR100": 37.36049769869347
+  },
+  "coco_maxdet300_percent": {
+    "AP": 27.80278533500343,
+    "AP50": 45.9369260224228,
+    "AP75": 28.163330548854265,
+    "APs": 19.51524977122534,
+    "APm": 38.180319771351904,
+    "APl": 40.258811242287436,
+    "AR300": 37.462889268991866
+  },
+  "evaluation_recovery": {
+    "initial_evaluation": "segmentation fault during COCOeval after saved predictions",
+    "recovery": "recomputed the same predictions with unmodified compiled pycocotools.COCOeval in an independent CPU process, no torch/model import, OMP_NUM_THREADS=1 and OPENBLAS_NUM_THREADS=1",
+    "root_cause": "not isolated",
+    "recovery_script_sha256": "99935f022243f115cc80263d6a56217c3e7d2bbee48a9972047fb3f16bd564dc"
+  }
+}

@@ -1,0 +1,5 @@
+path: /home/ubuntu/文档/ZHJ_UAV/reproductions/rtdetrv3_dense_supervision_5090/data
+nc: 10
+names: ["pedestrian", "people", "bicycle", "car", "van", "truck", "tricycle", "awning-tricycle", "bus", "motor"]
+train: images/train
+val: images/val

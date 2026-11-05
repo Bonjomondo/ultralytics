@@ -1,0 +1,7 @@
+{
+  "trainer_replay_common_sha256": "cd1cf17318a869866d8bdf80e67e76a16828c783e8361c23b82c1e579ce3a7c0",
+  "candidate_paired_common_sha256": "cd1cf17318a869866d8bdf80e67e76a16828c783e8361c23b82c1e579ce3a7c0",
+  "matches": true,
+  "common_tensors": 527,
+  "note": "Confirms replay against the same B0 trainer initialization path; B0 original initial checkpoint was not archived."
+}

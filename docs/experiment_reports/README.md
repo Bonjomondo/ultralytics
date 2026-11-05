@@ -45,3 +45,5 @@ Git 归档原则见 [项目 AGENTS.md](../../AGENTS.md)：保留网页端分析�
 - [2026-11-01 C2 + O2M-C 三seed配对实验](2026-11-01_5090_c2_o2mc_multiseed/README.md)：三组均完成；AP平均+1.235pp、标准差0.114pp，含逐类分析和完整证据。
 
 - [2026-11-04 原150轮C0+O2M-C三seed补齐及后续密集监督计划](2026-11-04_5090_c0_o2mc_completion/README.md)
+
+- [2026-11-05：5090作者配方密集监督阶段A（seed0）](2026-11-05_5090_dense_supervision_author/README.md)

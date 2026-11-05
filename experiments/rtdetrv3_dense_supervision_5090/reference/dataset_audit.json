@@ -1,0 +1,83 @@
+{
+  "train": {
+    "images": 6471,
+    "label_objects": 343205,
+    "valid_raw_objects": 343205,
+    "invalid_labels": 0,
+    "missing_labels": [],
+    "duplicate_label_rows": 4,
+    "raw_yolo_mismatch_files": [],
+    "max_raw_yolo_error_pixels": 0.0014280000000326254,
+    "labels_and_filenames_sha256": "9c40a6c71c79248abde44c84185e62280d3b54528bb249680bdac1e49a105b99"
+  },
+  "val": {
+    "images": 548,
+    "label_objects": 38759,
+    "valid_raw_objects": 38759,
+    "invalid_labels": 0,
+    "missing_labels": [],
+    "duplicate_label_rows": 0,
+    "raw_yolo_mismatch_files": [],
+    "max_raw_yolo_error_pixels": 0.0012800000001789158,
+    "labels_and_filenames_sha256": "f96c11863a6e6108bbc08c6238ff8ed2ea1155f207f524618cbbf74cd43ddc41"
+  },
+  "coco_gt": {
+    "path": "/home/zjnu/文档/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/annotations/VisDrone2019-DET_val_coco.json",
+    "sha256": "6f57aa4b42d64ee7b99b8a6a5b159ad19cba2eacf00bd86f23314966614bf4d8",
+    "images": 548,
+    "annotations": 38759,
+    "categories": [
+      {
+        "id": 1,
+        "name": "pedestrian",
+        "supercategory": "none"
+      },
+      {
+        "id": 2,
+        "name": "people",
+        "supercategory": "none"
+      },
+      {
+        "id": 3,
+        "name": "bicycle",
+        "supercategory": "none"
+      },
+      {
+        "id": 4,
+        "name": "car",
+        "supercategory": "none"
+      },
+      {
+        "id": 5,
+        "name": "van",
+        "supercategory": "none"
+      },
+      {
+        "id": 6,
+        "name": "truck",
+        "supercategory": "none"
+      },
+      {
+        "id": 7,
+        "name": "tricycle",
+        "supercategory": "none"
+      },
+      {
+        "id": 8,
+        "name": "awning-tricycle",
+        "supercategory": "none"
+      },
+      {
+        "id": 9,
+        "name": "bus",
+        "supercategory": "none"
+      },
+      {
+        "id": 10,
+        "name": "motor",
+        "supercategory": "none"
+      }
+    ],
+    "ignore_policy": "existing converted GT; excludes ignored regions and invalid/other categories; not VisDrone challenge evaluation"
+  }
+}

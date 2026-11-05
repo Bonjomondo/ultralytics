@@ -1,0 +1,22 @@
+{
+  "train": {
+    "images": 6471,
+    "image_bytes": 1547923454,
+    "image_content_sha256": "bd93912e072a2b64d37edaa4c2303180caf9a00d37f8aaf92d33cc557426bab2",
+    "labels_sha256": "ef7bb3c771caee8be1855b34fdbd581bd054861caf8bb5751693855cd2fc2c0f",
+    "label_objects_before_loader_deduplication": 343205,
+    "exact_current_4090_images_and_labels": true
+  },
+  "val": {
+    "images": 548,
+    "image_bytes": 81210672,
+    "image_content_sha256": "2e1b17986cbc9cf537d5cf47ae2106ac4593485efbdefb36eef533ec2490a591",
+    "labels_sha256": "91deaa9f3b53aa434a2a7a64761d918633a30f8d010be0573bddac8a3f6e8f88",
+    "label_objects_before_loader_deduplication": 38759,
+    "exact_current_4090_images_and_labels": true
+  },
+  "gt_sha256": "6f57aa4b42d64ee7b99b8a6a5b159ad19cba2eacf00bd86f23314966614bf4d8",
+  "source_file_manifest_sha256": "92eac821fde264edc832729dc717a08b63791724e72b891b5c2eef02d24d159a",
+  "images": "Read-only use of original 5090 image paths by symlink; byte-equal to current4090. Labels and caches isolated in this new directory.",
+  "historical_boundary": "4090 original training receipts did not pin image pixel bytes; this verifies current data against the matching historical filename/label audit, not a nonexistent historical image-byte manifest."
+}
