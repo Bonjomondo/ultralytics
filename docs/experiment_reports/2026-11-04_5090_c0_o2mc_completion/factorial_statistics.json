@@ -1,0 +1,107 @@
+{
+  "delta_C0_AP50_pp": {
+    "mean": 1.5338867550471813,
+    "n": 1,
+    "sample_std": null
+  },
+  "delta_C0_AP75_pp": {
+    "mean": 1.6190892281913087,
+    "n": 1,
+    "sample_std": null
+  },
+  "delta_C0_AP_pp": {
+    "mean": 1.212980030569566,
+    "n": 1,
+    "sample_std": null
+  },
+  "delta_C0_APl_pp": {
+    "mean": 4.097441111640804,
+    "n": 1,
+    "sample_std": null
+  },
+  "delta_C0_APm_pp": {
+    "mean": 1.9066935982984756,
+    "n": 1,
+    "sample_std": null
+  },
+  "delta_C0_APs_pp": {
+    "mean": 0.5887256932997437,
+    "n": 1,
+    "sample_std": null
+  },
+  "delta_C0_AR100_pp": {
+    "mean": 1.2778860800331915,
+    "n": 1,
+    "sample_std": null
+  },
+  "delta_C2_AP50_pp": {
+    "mean": 1.465654435048258,
+    "n": 1,
+    "sample_std": null
+  },
+  "delta_C2_AP75_pp": {
+    "mean": 1.1412464394480932,
+    "n": 1,
+    "sample_std": null
+  },
+  "delta_C2_AP_pp": {
+    "mean": 1.1134858119115547,
+    "n": 1,
+    "sample_std": null
+  },
+  "delta_C2_APl_pp": {
+    "mean": -4.0463942115386065,
+    "n": 1,
+    "sample_std": null
+  },
+  "delta_C2_APm_pp": {
+    "mean": 2.453449207432995,
+    "n": 1,
+    "sample_std": null
+  },
+  "delta_C2_APs_pp": {
+    "mean": 0.85751614720255,
+    "n": 1,
+    "sample_std": null
+  },
+  "delta_C2_AR100_pp": {
+    "mean": 0.605861709767247,
+    "n": 1,
+    "sample_std": null
+  },
+  "interaction_AP50_pp": {
+    "mean": -0.06823231999892321,
+    "n": 1,
+    "sample_std": null
+  },
+  "interaction_AP75_pp": {
+    "mean": -0.4778427887432155,
+    "n": 1,
+    "sample_std": null
+  },
+  "interaction_AP_pp": {
+    "mean": -0.09949421865801122,
+    "n": 1,
+    "sample_std": null
+  },
+  "interaction_APl_pp": {
+    "mean": -8.14383532317941,
+    "n": 1,
+    "sample_std": null
+  },
+  "interaction_APm_pp": {
+    "mean": 0.5467556091345196,
+    "n": 1,
+    "sample_std": null
+  },
+  "interaction_APs_pp": {
+    "mean": 0.2687904539028063,
+    "n": 1,
+    "sample_std": null
+  },
+  "interaction_AR100_pp": {
+    "mean": -0.6720243702659445,
+    "n": 1,
+    "sample_std": null
+  }
+}

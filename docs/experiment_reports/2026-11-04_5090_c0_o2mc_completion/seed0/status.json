@@ -1,0 +1,212 @@
+{
+  "comparison": {
+    "baseline": {
+      "AP": 0.18661578295635495,
+      "AP50": 0.32500877078220913,
+      "AP75": 0.18066354109404237,
+      "APl": 0.29230753553593086,
+      "APm": 0.25960278106674906,
+      "APs": 0.1216636805411043,
+      "AR1": 0.07425625524825548,
+      "AR10": 0.20398600985904156,
+      "AR100": 0.28220042287822705,
+      "ARl": 0.38901947061954073,
+      "ARm": 0.390147166184806,
+      "ARs": 0.20060116829140287
+    },
+    "boundary": "Fixed150e C0 auxiliary completion; evaluate interaction only with same-seed C2 archived protocol.",
+    "candidate": {
+      "AP": 0.1987455832620506,
+      "AP50": 0.34034763833268095,
+      "AP75": 0.19685443337595546,
+      "APl": 0.3332819466523389,
+      "APm": 0.2786697170497338,
+      "APs": 0.12755093747410173,
+      "AR1": 0.07787406774512477,
+      "AR10": 0.21511898679237748,
+      "AR100": 0.29497928367855897,
+      "ARl": 0.4130135360581675,
+      "ARm": 0.4019776349338287,
+      "ARs": 0.2108759779620396
+    },
+    "delta_pp": {
+      "AP": 1.212980030569566,
+      "AP50": 1.5338867550471813,
+      "AP75": 1.6190892281913087,
+      "APl": 4.097441111640804,
+      "APm": 1.9066935982984756,
+      "APs": 0.5887256932997437,
+      "AR1": 0.3617812496869294,
+      "AR10": 1.1132976933335925,
+      "AR100": 1.2778860800331915,
+      "ARl": 2.3994065438626757,
+      "ARm": 1.1830468749022716,
+      "ARs": 1.0274809670636738
+    }
+  },
+  "finished_utc": "2026-11-04T20:29:27.709290+00:00",
+  "phase": "archive-final",
+  "pid": 24644,
+  "stages": [
+    {
+      "command": [
+        "/home/ubuntu/miniconda3/envs/UAV_CV/bin/python",
+        "-u",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/docs/experiment_reports/2026-10-24_5090_baselines/audit_assets_5090.py",
+        "--output",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c0_o2mc_5090/5090-c0-o2mc-seeds012-20261104-r1/seed0/asset_audit.json"
+      ],
+      "finished_utc": "2026-11-04T14:06:00.344241+00:00",
+      "log": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c0_o2mc_5090/5090-c0-o2mc-seeds012-20261104-r1/seed0/logs/dataset-audit.log",
+      "name": "dataset-audit",
+      "pid": 24666,
+      "returncode": 0,
+      "started_utc": "2026-11-04T14:05:59.226954+00:00",
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/home/ubuntu/miniconda3/envs/UAV_CV/bin/python",
+        "-u",
+        "-m",
+        "experiments.c0_o2mc_5090.test_c0"
+      ],
+      "finished_utc": "2026-11-04T14:06:04.262369+00:00",
+      "log": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c0_o2mc_5090/5090-c0-o2mc-seeds012-20261104-r1/seed0/logs/cpu-gates.log",
+      "name": "cpu-gates",
+      "pid": 24667,
+      "returncode": 0,
+      "started_utc": "2026-11-04T14:06:00.359046+00:00",
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/home/ubuntu/miniconda3/envs/UAV_CV/bin/python",
+        "-u",
+        "-m",
+        "experiments.c0_o2mc_5090.run",
+        "train",
+        "--root",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c0_o2mc_5090/5090-c0-o2mc-seeds012-20261104-r1/seed0",
+        "--name",
+        "5090-c0-o2mc-smoke-s0",
+        "--smoke"
+      ],
+      "finished_utc": "2026-11-04T14:08:12.960606+00:00",
+      "log": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c0_o2mc_5090/5090-c0-o2mc-seeds012-20261104-r1/seed0/logs/smoke-train.log",
+      "name": "smoke-train",
+      "pid": 24678,
+      "returncode": 0,
+      "started_utc": "2026-11-04T14:06:04.276530+00:00",
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/home/ubuntu/miniconda3/envs/UAV_CV/bin/python",
+        "-u",
+        "-m",
+        "experiments.c0_o2mc_5090.run",
+        "evaluate",
+        "--root",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c0_o2mc_5090/5090-c0-o2mc-seeds012-20261104-r1/seed0",
+        "--smoke",
+        "--checkpoint",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c0_o2mc_5090/5090-c0-o2mc-seeds012-20261104-r1/seed0/training/5090-c0-o2mc-smoke-s0/weights/best.pt",
+        "--output",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c0_o2mc_5090/5090-c0-o2mc-seeds012-20261104-r1/seed0/smoke-evaluation"
+      ],
+      "finished_utc": "2026-11-04T14:08:15.791643+00:00",
+      "log": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c0_o2mc_5090/5090-c0-o2mc-seeds012-20261104-r1/seed0/logs/smoke-eval.log",
+      "name": "smoke-eval",
+      "pid": 24926,
+      "returncode": 0,
+      "started_utc": "2026-11-04T14:08:12.973795+00:00",
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/home/ubuntu/miniconda3/envs/UAV_CV/bin/python",
+        "-u",
+        "-m",
+        "experiments.c0_o2mc_5090.run",
+        "train",
+        "--root",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c0_o2mc_5090/5090-c0-o2mc-seeds012-20261104-r1/seed0",
+        "--name",
+        "5090-c0-o2mc-150e-s0"
+      ],
+      "finished_utc": "2026-11-04T20:28:47.581607+00:00",
+      "log": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c0_o2mc_5090/5090-c0-o2mc-seeds012-20261104-r1/seed0/logs/full-train.log",
+      "name": "full-train",
+      "pid": 24943,
+      "returncode": 0,
+      "started_utc": "2026-11-04T14:08:15.806847+00:00",
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/home/ubuntu/miniconda3/envs/UAV_CV/bin/python",
+        "-u",
+        "-m",
+        "experiments.c0_o2mc_5090.run",
+        "evaluate",
+        "--root",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c0_o2mc_5090/5090-c0-o2mc-seeds012-20261104-r1/seed0",
+        "--checkpoint",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c0_o2mc_5090/5090-c0-o2mc-seeds012-20261104-r1/seed0/training/5090-c0-o2mc-150e-s0/weights/best.pt",
+        "--output",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c0_o2mc_5090/5090-c0-o2mc-seeds012-20261104-r1/seed0/evaluation"
+      ],
+      "finished_utc": "2026-11-04T20:29:07.713684+00:00",
+      "log": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c0_o2mc_5090/5090-c0-o2mc-seeds012-20261104-r1/seed0/logs/full-eval.log",
+      "name": "full-eval",
+      "pid": 27628,
+      "returncode": 0,
+      "started_utc": "2026-11-04T20:28:47.594919+00:00",
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/home/ubuntu/miniconda3/envs/UAV_CV/bin/python",
+        "-u",
+        "-m",
+        "experiments.c0_o2mc_5090.run",
+        "evaluate",
+        "--root",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c0_o2mc_5090/5090-c0-o2mc-seeds012-20261104-r1/seed0",
+        "--checkpoint",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/decoder_budget_5090/5090-c0c2-baselines-20261024-s0-r1/5090-rtdetr-r18-c0-150e-s0/weights/best.pt",
+        "--output",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c0_o2mc_5090/5090-c0-o2mc-seeds012-20261104-r1/seed0/baseline-evaluation"
+      ],
+      "finished_utc": "2026-11-04T20:29:27.664259+00:00",
+      "log": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c0_o2mc_5090/5090-c0-o2mc-seeds012-20261104-r1/seed0/logs/baseline-eval.log",
+      "name": "baseline-eval",
+      "pid": 27645,
+      "returncode": 0,
+      "started_utc": "2026-11-04T20:29:07.726871+00:00",
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/home/ubuntu/miniconda3/envs/UAV_CV/bin/python",
+        "-u",
+        "-m",
+        "experiments.c0_o2mc_5090.archive",
+        "--root",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c0_o2mc_5090/5090-c0-o2mc-seeds012-20261104-r1/seed0",
+        "--output",
+        "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/docs/experiment_reports/2026-11-04_5090_c0_o2mc_completion/seed0"
+      ],
+      "finished_utc": "2026-11-04T20:29:27.707610+00:00",
+      "log": "/home/ubuntu/\u6587\u6863/ZHJ_UAV/ultralytics/runs/c0_o2mc_5090/5090-c0-o2mc-seeds012-20261104-r1/seed0/logs/archive-final.log",
+      "name": "archive-final",
+      "pid": 27660,
+      "returncode": 0,
+      "started_utc": "2026-11-04T20:29:27.677946+00:00",
+      "status": "completed"
+    }
+  ],
+  "started_utc": "2026-11-04T14:05:59.221160+00:00",
+  "status": "completed"
+}

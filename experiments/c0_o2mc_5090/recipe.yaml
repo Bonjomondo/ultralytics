@@ -1,0 +1,24 @@
+experiment: C2 + O2M-C, single-seed fixed-budget screen
+model: ultralytics/cfg/models/rt-detr/rtdetr-resnet18-p2-sfi-c2.yaml
+epochs: 150
+seed: 0
+auxiliary:
+  weight: 0.5
+  switch_epoch_zero_based: 30
+  reg_max: 16
+  static_topk_per_level: 9
+  task_aligned_topk: 13
+  task_aligned_alpha: 1.0
+  task_aligned_beta: 6.0
+  loss: {vfl: 1.0, giou: 2.5, dfl: 0.5}
+  feature_layers: [16, 23, 22]
+  strides: [8, 16, 32]
+  seed_offset: 4000
+# Other settings come from experiments.r18_p2_sfi.train.RECIPE and are
+# recorded in full in each run's experiment.json / args.yaml.
+convergence:
+  minimum_epochs: 150
+  best_patience_epochs: 50
+  window_epochs: 20
+  tolerance_internal_map: 0.001
+  stop_at_budget: true
