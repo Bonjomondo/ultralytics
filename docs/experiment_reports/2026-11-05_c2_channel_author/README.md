@@ -1,5 +1,7 @@
 # C2可学习通道门控：作者引擎配对实验
 
+**2026-11-06最新状态：C2恢复后在第99轮再次SIGSEGV，已完成98/150轮，队列已失败退出；Scalar/Channel正式训练未开始。暂不盲目续训，先做稳定性诊断。详见[故障诊断](../2026-11-06_4090_stability/README.md)。旧status.json的training为崩溃前残留状态。**
+
 状态以 `launch.json`、服务器 `queue_status.json` 和本目录RESULTS.md为准。短跑只验证代码链路，不是检测性能证据。
 
 Git分支：`feat/r18-c2-channelgate-author`。实验源码及完整作者后端位于 `experiments/c2_channel_author_20261105/`；不再依赖服务器未入Git的源码副本。作者后端约1.3 MB，由原27.77/28.72 AP实验使用的Ultralytics 8.0.201适配实现复制；来源、原始逐文件哈希及修改范围见backend/PROVENANCE.md、author_backend_original_manifest.json。原始作者仓库提交为148d5972bbaec298b3975ca00c00d91abbc6657c。

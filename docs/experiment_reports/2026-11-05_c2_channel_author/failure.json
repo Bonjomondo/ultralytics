@@ -1,0 +1,30 @@
+{
+  "started_utc": "2026-11-05T15:49:50.364126+00:00",
+  "events": [
+    {
+      "label": "screen_c2_150e_s0/train",
+      "attempt": 1,
+      "started_utc": "2026-11-05T15:49:50.464469+00:00",
+      "status": "failed",
+      "returncode": 1,
+      "finished_utc": "2026-11-05T18:28:05.593624+00:00",
+      "log": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/logs/screen_c2_150e_s0-train-attempt1.log"
+    },
+    {
+      "label": "screen_c2_150e_s0/train",
+      "attempt": 2,
+      "started_utc": "2026-11-05T18:28:05.967116+00:00",
+      "status": "failed",
+      "returncode": -11,
+      "finished_utc": "2026-11-05T20:59:06.092026+00:00",
+      "log": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/logs/screen_c2_150e_s0-train-attempt2.log"
+    }
+  ],
+  "done": [],
+  "status": "failed",
+  "pid": 2567467,
+  "updated_utc": "2026-11-05T20:59:06.093812+00:00",
+  "current": "screen_c2_150e_s0/train",
+  "child_pid": null,
+  "error": "Traceback (most recent call last):\n  File \"/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/source/controller.py\", line 120, in main\n    for arm in ARMS:run_one(arm, 150, 0)\n                    ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/source/controller.py\", line 105, in run_one\n    event(f\"{name}/train\", [str(EXP / \"train.py\"), \"--arm\", arm, \"--epochs\", str(epochs), \"--seed\", str(seed)], True)\n  File \"/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/source/controller.py\", line 83, in event\n    raise RuntimeError(f\"{label} failed after {budget} attempts; no further automatic retry\")\nRuntimeError: screen_c2_150e_s0/train failed after 2 attempts; no further automatic retry\n"
+}

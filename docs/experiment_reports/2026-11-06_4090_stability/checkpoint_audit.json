@@ -1,0 +1,38 @@
+{
+  "checkpoint_epoch_zero_based": 97,
+  "completed_epochs": 98,
+  "checks": {
+    "model": {
+      "state_items": 533,
+      "all_finite": true
+    },
+    "ema": {
+      "state_items": 533,
+      "all_finite": true
+    },
+    "optimizer_present": true
+  },
+  "keys": [
+    "best_fitness",
+    "date",
+    "ema",
+    "epoch",
+    "model",
+    "optimizer",
+    "rng",
+    "scaler",
+    "scheduler",
+    "source_manifest_sha256",
+    "stopper",
+    "train_args",
+    "train_metrics",
+    "train_results",
+    "updates",
+    "version"
+  ],
+  "source_commit": "49f46e9bb5364d0463cd057b2fc0fbc9dd118016",
+  "source_files_verified": 151,
+  "source_mismatches": [],
+  "gpu_visibility": "",
+  "scope": "CPU load/finite checks only, not proof of hardware or long-run stability"
+}

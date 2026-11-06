@@ -1,0 +1,268 @@
+{
+  "captured_utc": "2026-11-06T01:37:42.649955+00:00",
+  "repo": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics",
+  "git": {
+    "returncode": 0,
+    "stdout": "7a13a2256b0d2cad575156b9e1eec7157847d38a\n",
+    "stderr": ""
+  },
+  "queue": {
+    "started_utc": "2026-11-05T15:49:50.364126+00:00",
+    "events": [
+      {
+        "label": "screen_c2_150e_s0/train",
+        "attempt": 1,
+        "started_utc": "2026-11-05T15:49:50.464469+00:00",
+        "status": "failed",
+        "returncode": 1,
+        "finished_utc": "2026-11-05T18:28:05.593624+00:00",
+        "log": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/logs/screen_c2_150e_s0-train-attempt1.log"
+      },
+      {
+        "label": "screen_c2_150e_s0/train",
+        "attempt": 2,
+        "started_utc": "2026-11-05T18:28:05.967116+00:00",
+        "status": "failed",
+        "returncode": -11,
+        "finished_utc": "2026-11-05T20:59:06.092026+00:00",
+        "log": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/logs/screen_c2_150e_s0-train-attempt2.log"
+      }
+    ],
+    "done": [],
+    "status": "failed",
+    "pid": 2567467,
+    "updated_utc": "2026-11-05T20:59:06.093812+00:00",
+    "current": "screen_c2_150e_s0/train",
+    "child_pid": null,
+    "error": "Traceback (most recent call last):\n  File \"/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/source/controller.py\", line 120, in main\n    for arm in ARMS:run_one(arm, 150, 0)\n                    ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/source/controller.py\", line 105, in run_one\n    event(f\"{name}/train\", [str(EXP / \"train.py\"), \"--arm\", arm, \"--epochs\", str(epochs), \"--seed\", str(seed)], True)\n  File \"/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/source/controller.py\", line 83, in event\n    raise RuntimeError(f\"{label} failed after {budget} attempts; no further automatic retry\")\nRuntimeError: screen_c2_150e_s0/train failed after 2 attempts; no further automatic retry\n"
+  },
+  "status": {
+    "status": "training",
+    "pid": 2578259,
+    "current_epoch": 99,
+    "completed_epochs": 98,
+    "batch_in_epoch": 1400,
+    "updated_utc": "2026-11-05T20:58:52.983126+00:00",
+    "workers": 0,
+    "alpha_mean": 1.0,
+    "native_metrics": {
+      "metrics/precision(B)": 0.57428,
+      "metrics/recall(B)": 0.42539,
+      "metrics/mAP50(B)": 0.43463,
+      "metrics/mAP50-95(B)": 0.26288,
+      "val/giou_loss": 0.67299,
+      "val/cls_loss": 0.55511,
+      "val/l1_loss": 0.06875
+    },
+    "accumulate": 1
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "path": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/logs/screen_c2_150e_s0-train-attempt1.log",
+      "bytes": 22155927,
+      "sha256": "6bbdd9f511ee34a594bc8e220b7695e08fac13ace52cf1d3a374649f49964184",
+      "last_progress": [
+        "     51/150      10.9G      1.076     0.4747     0.1695        416        640:  84%|████████▎ | 1355/1618 [02:31<00:27,  9.52it/s]",
+        "     51/150      10.9G      1.076     0.4747     0.1695        416        640:  84%|████████▍ | 1356/1618 [02:31<00:28,  9.35it/s]",
+        "     51/150      10.9G      1.076     0.4747     0.1695        416        640:  84%|████████▍ | 1356/1618 [02:31<00:29,  8.96it/s]"
+      ],
+      "traceback": "Traceback (most recent call last):\n  File \"/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/source/train.py\", line 293, in <module>\n    main()\n  File \"/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/source/train.py\", line 284, in main\n    t.train()\n  File \"/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/source/backend/ultralytics/engine/trainer.py\", line 192, in train\n    self._do_train(world_size)\n  File \"/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/source/backend/ultralytics/engine/trainer.py\", line 352, in _do_train\n    self.scaler.scale(self.loss).backward()\n  File \"/home/zjnu/anaconda3/envs/UAV_CV/lib/python3.11/site-packages/torch/_tensor.py\", line 492, in backward\n    torch.autograd.backward(\n  File \"/home/zjnu/anaconda3/envs/UAV_CV/lib/python3.11/site-packages/torch/autograd/__init__.py\", line 251, in backward\n    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\nRuntimeError: t == DeviceType::CUDA INTERNAL ASSERT FAILED at \"../c10/cuda/impl/CUDAGuardImpl.h\":25, please report a bug to PyTorch. \n"
+    },
+    {
+      "attempt": 2,
+      "path": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/logs/screen_c2_150e_s0-train-attempt2.log",
+      "bytes": 21135568,
+      "sha256": "45e9c45bfadae57b572a2363277c0ad87a9a8381ed1c5588ee8b85ac882375fa",
+      "last_progress": [
+        "     99/150      8.29G      1.006     0.4728     0.1528        228        640:  87%|████████▋ | 1405/1618 [02:36<00:23,  8.98it/s]",
+        "     99/150      8.29G      1.006     0.4727      0.153        575        640:  87%|████████▋ | 1405/1618 [02:36<00:23,  8.98it/s]",
+        "     99/150      8.29G      1.006     0.4727      0.153        575        640:  87%|████████▋ | 1406/1618 [02:36<00:24,  8.60it/s]Fatal Python error: Segmentation fault"
+      ],
+      "traceback": "Fatal Python error: Segmentation fault\n\nThread 0x00007faa970ac700 (most recent call first):\n  <no Python frame>\n\nThread 0x00007fab13aea700 (most recent call first):\n  File \"/home/zjnu/anaconda3/envs/UAV_CV/lib/python3.11/threading.py\", line 331 in wait\n  File \"/home/zjnu/anaconda3/envs/UAV_CV/lib/python3.11/threading.py\", line 629 in wait\n  File \"/home/zjnu/anaconda3/envs/UAV_CV/lib/python3.11/site-packages/tqdm/_monitor.py\", line 69 in run\n  File \"/home/zjnu/anaconda3/envs/UAV_CV/lib/python3.11/threading.py\", line 1045 in _bootstrap_inner\n  File \"/home/zjnu/anaconda3/envs/UAV_CV/lib/python3.11/threading.py\", line 1002 in _bootstrap\n\nCurrent thread 0x00007fabc7291280 (most recent call first):\n  File \"/home/zjnu/\\u6587\\u6863/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/source/backend/ultralytics/data/augment.py\", line 70 in __call__\n  File \"/home/zjnu/\\u6587\\u6863/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/source/backend/ultralytics/data/base.py\", line 248 in __getitem__\n  File \"/home/zjnu/anaconda3/envs/UAV_CV/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py\", line 51 in <listcomp>\n  File \"/home/zjnu/anaconda3/envs/UAV_CV/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py\", line 51 in fetch\n  File \"/home/zjnu/anaconda3/envs/UAV_CV/lib/python3.11/site-packages/torch/utils/data/dataloader.py\", line 674 in _next_data\n  File \"/home/zjnu/anaconda3/envs/UAV_CV/lib/python3.11/site-packages/torch/utils/data/dataloader.py\", line 630 in __next__\n  File \"/home/zjnu/\\u6587\\u6863/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/source/backend/ultralytics/data/build.py\", line 42 in __iter__\n  File \"/home/zjnu/anaconda3/envs/UAV_CV/lib/python3.11/site-packages/tqdm/std.py\", line 1186 in __iter__\n  File \"/home/zjnu/\\u6587\\u6863/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/source/backend/ultralytics/engine/trainer.py\", line 328 in _do_train\n  File \"/home/zjnu/\\u6587\\u6863/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/source/backend/ultralytics/engine/trainer.py\", line 192 in train\n  File \"/home/zjnu/\\u6587\\u6863/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/source/train.py\", line 284 in main\n  File \"/home/zjnu/\\u6587\\u6863/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/source/train.py\", line 293 in <module>\n\n"
+    }
+  ],
+  "system": {
+    "uname": {
+      "returncode": 0,
+      "stdout": "Linux zjnu-Precision-3660 5.15.0-136-generic #147~20.04.1-Ubuntu SMP Wed Mar 19 16:13:14 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux\n",
+      "stderr": ""
+    },
+    "uptime": {
+      "returncode": 0,
+      "stdout": " 09:37:42 up 26 days, 17:43,  1 user,  load average: 0.14, 0.19, 0.14\n",
+      "stderr": ""
+    },
+    "memory_now": {
+      "returncode": 0,
+      "stdout": "              总计         已用        空闲      共享    缓冲/缓存    可用\n内存：       125Gi       7.5Gi        25Gi        14Mi        92Gi       116Gi\n交换：       8.0Gi       2.0Gi       6.0Gi\n",
+      "stderr": ""
+    },
+    "gpu_now": {
+      "returncode": 0,
+      "stdout": "name, driver_version, utilization.gpu [%], memory.used [MiB], memory.total [MiB], temperature.gpu\nNVIDIA GeForce RTX 4090, 535.183.01, 0 %, 332 MiB, 24564 MiB, 27\n",
+      "stderr": ""
+    },
+    "gpu_compute_processes": {
+      "returncode": 0,
+      "stdout": "pid, process_name, used_gpu_memory [MiB]\n",
+      "stderr": ""
+    },
+    "cpu": {
+      "returncode": 0,
+      "stdout": "架构：                                x86_64\nCPU 运行模式：                        32-bit, 64-bit\n字节序：                              Little Endian\nAddress sizes:                        46 bits physical, 48 bits virtual\nCPU:                                  32\n在线 CPU 列表：                       0-31\n每个核的线程数：                      1\n每个座的核数：                        24\n座：                                  1\nNUMA 节点：                           1\n厂商 ID：                             GenuineIntel\nCPU 系列：                            6\n型号：                                183\n型号名称：                            13th Gen Intel(R) Core(TM) i9-13900K\n步进：                                1\nCPU MHz：                             1386.339\nCPU 最大 MHz：                        5800.0000\nCPU 最小 MHz：                        800.0000\nBogoMIPS：                            5990.40\n虚拟化：                              VT-x\nL1d 缓存：                            576 KiB\nL1i 缓存：                            384 KiB\nL2 缓存：                             24 MiB\nNUMA 节点0 CPU：                      0-31\nVulnerability Gather data sampling:   Not affected\nVulnerability Itlb multihit:          Not affected\nVulnerability L1tf:                   Not affected\nVulnerability Mds:                    Not affected\nVulnerability Meltdown:               Not affected\nVulnerability Mmio stale data:        Not affected\nVulnerability Reg file data sampling: Mitigation; Clear Register File\nVulnerability Retbleed:               Not affected\nVulnerability Spec rstack overflow:   Not affected\nVulnerability Spec store bypass:      Mitigation; Speculative Store Bypass disabled via prctl and seccomp\nVulnerability Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:             Mitigation; Enhanced / Automatic IBRS; IBPB conditional; RSB filling; PBRSB-eIBRS SW sequence; BHI BHI_DIS_S\nVulnerability Srbds:                  Not affected\nVulnerability Tsx async abort:        Not affected\n标记：                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr flush_l1d arch_capabilities\n",
+      "stderr": ""
+    },
+    "kernel_warning_journal": {
+      "returncode": 0,
+      "stdout": "-- Logs begin at Sun 2025-04-13 19:00:02 CST, end at Fri 2026-11-06 09:37:42 CST. --\n-- No entries --\n",
+      "stderr": ""
+    },
+    "bios_version": "2.38.0",
+    "bios_date": "06/02/2026",
+    "product_name": "Precision 3660",
+    "core_pattern": "|/usr/share/apport/apport -p%p -s%s -c%c -d%d -P%P -u%u -g%g -F%F -- %E",
+    "microcode": "microcode\t: 0x133",
+    "kernel_filtered": {
+      "returncode": 0,
+      "stderr": "",
+      "retained_match_count": 384,
+      "last_matches": [
+        "[Tue Oct 27 18:16:31 2026] pcl_render_node[669095]: segfault at 8 ip 00007fef74d1464e sp 00007fffcc37f5d0 error 4 in libpcl_kdtree.so.1.10.0[7fef74caa000+96000]",
+        "[Tue Oct 27 18:17:36 2026] pcl_render_node[669328]: segfault at 8 ip 00007f73cde6d64e sp 00007ffdbf0fa440 error 4 in libpcl_kdtree.so.1.10.0[7f73cde03000+96000]",
+        "[Tue Oct 27 18:17:36 2026] pcl_render_node[669348]: segfault at 8 ip 00007fec54fac64e sp 00007ffdbf2d71a0 error 4 in libpcl_kdtree.so.1.10.0[7fec54f42000+96000]",
+        "[Tue Oct 27 18:17:36 2026] pcl_render_node[669382]: segfault at 8 ip 00007f68fd3af64e sp 00007fff877cfd20 error 4 in libpcl_kdtree.so.1.10.0[7f68fd345000+96000]",
+        "[Tue Oct 27 18:17:37 2026] pcl_render_node[669409]: segfault at 8 ip 00007f1ebb08964e sp 00007ffc99296270 error 4 in libpcl_kdtree.so.1.10.0[7f1ebb01f000+96000]",
+        "[Tue Oct 27 18:17:37 2026] pcl_render_node[669430]: segfault at 8 ip 00007f98cf76264e sp 00007ffeb7e45a50 error 4 in libpcl_kdtree.so.1.10.0[7f98cf6f8000+96000]",
+        "[Tue Oct 27 18:17:37 2026] pcl_render_node[669455]: segfault at 8 ip 00007ffa507b764e sp 00007ffe36610bc0 error 4 in libpcl_kdtree.so.1.10.0[7ffa5074d000+96000]",
+        "[Tue Oct 27 18:17:37 2026] pcl_render_node[669479]: segfault at 8 ip 00007fb0089bd64e sp 00007ffe0bf5ffe0 error 4 in libpcl_kdtree.so.1.10.0[7fb008953000+96000]",
+        "[Tue Oct 27 18:18:54 2026] pcl_render_node[669723]: segfault at 8 ip 00007f1659afc64e sp 00007ffd812eb4c0 error 4 in libpcl_kdtree.so.1.10.0[7f1659a92000+96000]",
+        "[Tue Oct 27 18:18:54 2026] pcl_render_node[669744]: segfault at 8 ip 00007f979ae2364e sp 00007ffcabffbd00 error 4 in libpcl_kdtree.so.1.10.0[7f979adb9000+96000]",
+        "[Tue Oct 27 18:18:54 2026] pcl_render_node[669765]: segfault at 8 ip 00007f160976664e sp 00007ffc761af500 error 4 in libpcl_kdtree.so.1.10.0[7f16096fc000+96000]",
+        "[Tue Oct 27 18:18:54 2026] pcl_render_node[669794]: segfault at 8 ip 00007f0bd0aa664e sp 00007ffdfae36c20 error 4 in libpcl_kdtree.so.1.10.0[7f0bd0a3c000+96000]",
+        "[Tue Oct 27 18:18:55 2026] pcl_render_node[669818]: segfault at 8 ip 00007f7b1a4a764e sp 00007ffe9e36d4f0 error 4 in libpcl_kdtree.so.1.10.0[7f7b1a43d000+96000]",
+        "[Tue Oct 27 18:18:55 2026] pcl_render_node[669850]: segfault at 8 ip 00007f7141d5764e sp 00007ffe9ce785e0 error 4 in libpcl_kdtree.so.1.10.0[7f7141ced000+96000]",
+        "[Tue Oct 27 18:18:55 2026] pcl_render_node[669869]: segfault at 8 ip 00007f49eabab64e sp 00007ffda1d2dfa0 error 4 in libpcl_kdtree.so.1.10.0[7f49eab41000+96000]",
+        "[Tue Oct 27 18:20:06 2026] pcl_render_node[670129]: segfault at 8 ip 00007fc80933a64e sp 00007ffce1301380 error 4 in libpcl_kdtree.so.1.10.0[7fc8092d0000+96000]",
+        "[Tue Oct 27 18:20:06 2026] pcl_render_node[670106]: segfault at 8 ip 00007f07cb4a864e sp 00007ffcdb500820 error 4 in libpcl_kdtree.so.1.10.0[7f07cb43e000+96000]",
+        "[Tue Oct 27 18:20:06 2026] pcl_render_node[670205]: segfault at 8 ip 00007fa656f4b64e sp 00007fffb82be730 error 4 in libpcl_kdtree.so.1.10.0[7fa656ee1000+96000]",
+        "[Tue Oct 27 18:20:06 2026] pcl_render_node[670229]: segfault at 8 ip 00007fea8b45464e sp 00007fff4f672160 error 4 in libpcl_kdtree.so.1.10.0[7fea8b3ea000+96000]",
+        "[Tue Oct 27 18:20:06 2026] pcl_render_node[670157]: segfault at 8 ip 00007f025b7c064e sp 00007ffc2dd0e0b0 error 4 in libpcl_kdtree.so.1.10.0[7f025b756000+96000]",
+        "[Tue Oct 27 18:20:06 2026] pcl_render_node[670187]: segfault at 8 ip 00007f995229664e sp 00007fff59a32580 error 4 in libpcl_kdtree.so.1.10.0[7f995222c000+96000]",
+        "[Tue Oct 27 18:20:07 2026] pcl_render_node[670266]: segfault at 8 ip 00007f9f31a4564e sp 00007fff91207da0 error 4 in libpcl_kdtree.so.1.10.0[7f9f319db000+96000]",
+        "[Tue Oct 27 18:21:16 2026] pcl_render_node[670496]: segfault at 8 ip 00007f8815c9064e sp 00007ffe4ed1c0b0 error 4 in libpcl_kdtree.so.1.10.0[7f8815c26000+96000]",
+        "[Tue Oct 27 18:21:16 2026] pcl_render_node[670517]: segfault at 8 ip 00007efd5be8864e sp 00007fff719fdb70 error 4 in libpcl_kdtree.so.1.10.0[7efd5be1e000+96000]",
+        "[Tue Oct 27 18:21:16 2026] pcl_render_node[670544]: segfault at 8 ip 00007f46b13cf64e sp 00007fffd872eac0 error 4 in libpcl_kdtree.so.1.10.0[7f46b1365000+96000]",
+        "[Tue Oct 27 18:21:16 2026] pcl_render_node[670614]: segfault at 8 ip 00007f106b08f64e sp 00007fff28e66410 error 4 in libpcl_kdtree.so.1.10.0[7f106b025000+96000]",
+        "[Tue Oct 27 18:21:16 2026] pcl_render_node[670574]: segfault at 8 ip 00007f68c805c64e sp 00007ffee3adff30 error 4 in libpcl_kdtree.so.1.10.0[7f68c7ff2000+96000]",
+        "[Tue Oct 27 18:21:16 2026] pcl_render_node[670596]: segfault at 8 ip 00007f10ebdc764e sp 00007ffe6f0500d0 error 4 in libpcl_kdtree.so.1.10.0[7f10ebd5d000+96000]",
+        "[Tue Oct 27 18:21:17 2026] pcl_render_node[670643]: segfault at 8 ip 00007f44e0c9464e sp 00007fff5529df90 error 4 in libpcl_kdtree.so.1.10.0[7f44e0c2a000+96000]",
+        "[Tue Oct 27 18:48:16 2026] pcl_render_node[671151]: segfault at 8 ip 00007fac3afe864e sp 00007fff399dc910 error 4 in libpcl_kdtree.so.1.10.0[7fac3af7e000+96000]",
+        "[Tue Oct 27 18:48:16 2026] pcl_render_node[671178]: segfault at 8 ip 00007f97e8b7264e sp 00007fffe341c0d0 error 4 in libpcl_kdtree.so.1.10.0[7f97e8b08000+96000]",
+        "[Tue Oct 27 18:48:16 2026] pcl_render_node[671205]: segfault at 8 ip 00007fa7aa0dc64e sp 00007ffff8c977d0 error 4 in libpcl_kdtree.so.1.10.0[7fa7aa072000+96000]",
+        "[Tue Oct 27 18:48:16 2026] pcl_render_node[671230]: segfault at 8 ip 00007fb24c09c64e sp 00007ffc76a0b4d0 error 4 in libpcl_kdtree.so.1.10.0[7fb24c032000+96000]",
+        "[Tue Oct 27 18:48:16 2026] pcl_render_node[671260]: segfault at 8 ip 00007fca9bbee64e sp 00007ffe7eb144a0 error 4 in libpcl_kdtree.so.1.10.0[7fca9bb84000+96000]",
+        "[Tue Oct 27 18:48:16 2026] pcl_render_node[671288]: segfault at 8 ip 00007f45ad62d64e sp 00007ffebd9842f0 error 4 in libpcl_kdtree.so.1.10.0[7f45ad5c3000+96000]",
+        "[Tue Oct 27 18:48:16 2026] pcl_render_node[671122]: segfault at 8 ip 00007f6c75cfa64e sp 00007fff693d6600 error 4 in libpcl_kdtree.so.1.10.0[7f6c75c90000+96000]",
+        "[Tue Oct 27 18:49:08 2026] pcl_render_node[671553]: segfault at 8 ip 00007f2d4e62664e sp 00007ffc1fb94010 error 4 in libpcl_kdtree.so.1.10.0[7f2d4e5bc000+96000]",
+        "[Tue Oct 27 18:49:08 2026] pcl_render_node[671530]: segfault at 8 ip 00007f06ca26a64e sp 00007ffdbd8884f0 error 4 in libpcl_kdtree.so.1.10.0[7f06ca200000+96000]",
+        "[Tue Oct 27 18:49:09 2026] pcl_render_node[671509]: segfault at 8 ip 00007fe83400a64e sp 00007ffe000995b0 error 4 in libpcl_kdtree.so.1.10.0[7fe833fa0000+96000]",
+        "[Tue Oct 27 18:49:09 2026] pcl_render_node[671588]: segfault at 8 ip 00007f07fd23364e sp 00007ffe253e39a0 error 4 in libpcl_kdtree.so.1.10.0[7f07fd1c9000+96000]",
+        "[Tue Oct 27 18:49:09 2026] pcl_render_node[671613]: segfault at 8 ip 00007f8a3943564e sp 00007fff713a8530 error 4 in libpcl_kdtree.so.1.10.0[7f8a393cb000+96000]",
+        "[Tue Oct 27 18:49:10 2026] pcl_render_node[671643]: segfault at 8 ip 00007f52cc21a64e sp 00007fff03eda1d0 error 4 in libpcl_kdtree.so.1.10.0[7f52cc1b0000+96000]",
+        "[Tue Oct 27 18:49:10 2026] pcl_render_node[671671]: segfault at 8 ip 00007ffb8825064e sp 00007fff46b397a0 error 4 in libpcl_kdtree.so.1.10.0[7ffb881e6000+96000]",
+        "[Tue Oct 27 18:50:23 2026] pcl_render_node[671897]: segfault at 8 ip 00007f56c727f64e sp 00007fff5dcb9f50 error 4 in libpcl_kdtree.so.1.10.0[7f56c7215000+96000]",
+        "[Tue Oct 27 18:50:23 2026] pcl_render_node[671917]: segfault at 8 ip 00007f64c09a564e sp 00007fffc6b10770 error 4 in libpcl_kdtree.so.1.10.0[7f64c093b000+96000]",
+        "[Tue Oct 27 18:50:23 2026] pcl_render_node[671971]: segfault at 8 ip 00007f67efb1664e sp 00007fff9d6474d0 error 4 in libpcl_kdtree.so.1.10.0[7f67efaac000+96000]",
+        "[Tue Oct 27 18:50:23 2026] pcl_render_node[671993]: segfault at 8 ip 00007f142173b64e sp 00007ffd829a3d80 error 4 in libpcl_kdtree.so.1.10.0[7f14216d1000+96000]",
+        "[Tue Oct 27 18:50:23 2026] pcl_render_node[671949]: segfault at 8 ip 00007f04be72e64e sp 00007ffd17873340 error 4 in libpcl_kdtree.so.1.10.0[7f04be6c4000+96000]",
+        "[Tue Oct 27 18:50:24 2026] pcl_render_node[672023]: segfault at 8 ip 00007f469081b64e sp 00007ffed40eeaf0 error 4 in libpcl_kdtree.so.1.10.0[7f46907b1000+96000]",
+        "[Tue Oct 27 18:50:24 2026] pcl_render_node[672046]: segfault at 8 ip 00007f956386f64e sp 00007fffad3c5010 error 4 in libpcl_kdtree.so.1.10.0[7f9563805000+96000]",
+        "[Wed Oct 28 00:00:05 2026] pcl_render_node[682452]: segfault at 8 ip 00007f44eb02b64e sp 00007ffd52943b90 error 4 in libpcl_kdtree.so.1.10.0[7f44eafc1000+96000]",
+        "[Wed Oct 28 00:00:05 2026] pcl_render_node[682471]: segfault at 8 ip 00007fed8f4ef64e sp 00007ffd54626190 error 4 in libpcl_kdtree.so.1.10.0[7fed8f485000+96000]",
+        "[Wed Oct 28 00:00:05 2026] pcl_render_node[682503]: segfault at 8 ip 00007f1004f3d64e sp 00007ffcf3c6aea0 error 4 in libpcl_kdtree.so.1.10.0[7f1004ed3000+96000]",
+        "[Wed Oct 28 00:00:05 2026] pcl_render_node[682537]: segfault at 8 ip 00007fbcd267b64e sp 00007ffe22380dc0 error 4 in libpcl_kdtree.so.1.10.0[7fbcd2611000+96000]",
+        "[Wed Oct 28 00:00:05 2026] pcl_render_node[682560]: segfault at 8 ip 00007f113cc9e64e sp 00007ffffc5b6bb0 error 4 in libpcl_kdtree.so.1.10.0[7f113cc34000+96000]",
+        "[Wed Oct 28 00:00:06 2026] pcl_render_node[682586]: segfault at 8 ip 00007f81938d964e sp 00007fff4a985c50 error 4 in libpcl_kdtree.so.1.10.0[7f819386f000+96000]",
+        "[Wed Oct 28 00:00:06 2026] pcl_render_node[682608]: segfault at 8 ip 00007f5c59d4864e sp 00007ffc6e70f980 error 4 in libpcl_kdtree.so.1.10.0[7f5c59cde000+96000]",
+        "[Wed Oct 28 00:01:24 2026] pcl_render_node[682850]: segfault at 8 ip 00007f39f31fa64e sp 00007ffddef96120 error 4 in libpcl_kdtree.so.1.10.0[7f39f3190000+96000]",
+        "[Wed Oct 28 00:01:24 2026] pcl_render_node[682826]: segfault at 8 ip 00007f616b5f764e sp 00007fff3c759020 error 4 in libpcl_kdtree.so.1.10.0[7f616b58d000+96000]",
+        "[Wed Oct 28 00:01:24 2026] pcl_render_node[682869]: segfault at 8 ip 00007f532149464e sp 00007ffe84ecd890 error 4 in libpcl_kdtree.so.1.10.0[7f532142a000+96000]",
+        "[Wed Oct 28 00:01:24 2026] pcl_render_node[682899]: segfault at 8 ip 00007f3316b9964e sp 00007ffcf6193420 error 4 in libpcl_kdtree.so.1.10.0[7f3316b2f000+96000]",
+        "[Wed Oct 28 00:01:25 2026] pcl_render_node[682926]: segfault at 8 ip 00007f8e0fdde64e sp 00007ffd0917c910 error 4 in libpcl_kdtree.so.1.10.0[7f8e0fd74000+96000]",
+        "[Wed Oct 28 00:01:25 2026] pcl_render_node[682963]: segfault at 8 ip 00007fdac8b0764e sp 00007ffc3337e660 error 4 in libpcl_kdtree.so.1.10.0[7fdac8a9d000+96000]",
+        "[Wed Oct 28 00:01:25 2026] pcl_render_node[682984]: segfault at 8 ip 00007efe4f0cd64e sp 00007fffbb75eaa0 error 4 in libpcl_kdtree.so.1.10.0[7efe4f063000+96000]",
+        "[Wed Oct 28 00:03:22 2026] pcl_render_node[683393]: segfault at 8 ip 00007efe8217964e sp 00007fff051004e0 error 4 in libpcl_kdtree.so.1.10.0[7efe8210f000+96000]",
+        "[Wed Oct 28 00:03:22 2026] pcl_render_node[683507]: segfault at 8 ip 00007ff2b1dae64e sp 00007ffee590fab0 error 4 in libpcl_kdtree.so.1.10.0[7ff2b1d44000+96000]",
+        "[Wed Oct 28 00:03:22 2026] pcl_render_node[683366]: segfault at 8 ip 00007ffb4a5cf64e sp 00007ffeca8fa6b0 error 4 in libpcl_kdtree.so.1.10.0[7ffb4a565000+96000]",
+        "[Wed Oct 28 00:03:22 2026] pcl_render_node[683345]: segfault at 8 ip 00007fc9c8e9164e sp 00007fff6f1ef5d0 error 4 in libpcl_kdtree.so.1.10.0[7fc9c8e27000+96000]",
+        "[Wed Oct 28 00:03:22 2026] pcl_render_node[683422]: segfault at 8 ip 00007fb323f1e64e sp 00007ffd0c5ad730 error 4 in libpcl_kdtree.so.1.10.0[7fb323eb4000+96000]",
+        "[Wed Oct 28 00:03:22 2026] pcl_render_node[683454]: segfault at 8 ip 00007f28a83ca64e sp 00007ffc8e251730 error 4 in libpcl_kdtree.so.1.10.0[7f28a8360000+96000]",
+        "[Wed Oct 28 00:03:22 2026] pcl_render_node[683482]: segfault at 8 ip 00007fbc0a51264e sp 00007ffc146d2fd0 error 4 in libpcl_kdtree.so.1.10.0[7fbc0a4a8000+96000]",
+        "[Wed Oct 28 00:04:24 2026] pcl_render_node[683803]: segfault at 8 ip 00007f989df3064e sp 00007ffd122cbc30 error 4 in libpcl_kdtree.so.1.10.0[7f989dec6000+96000]",
+        "[Wed Oct 28 00:04:24 2026] pcl_render_node[683784]: segfault at 8 ip 00007f7f8abed64e sp 00007ffd8ad8f750 error 4 in libpcl_kdtree.so.1.10.0[7f7f8ab83000+96000]",
+        "[Wed Oct 28 00:04:24 2026] pcl_render_node[683855]: segfault at 8 ip 00007f5e8666f64e sp 00007ffca0727cd0 error 4 in libpcl_kdtree.so.1.10.0[7f5e86605000+96000]",
+        "[Wed Oct 28 00:04:25 2026] pcl_render_node[683882]: segfault at 8 ip 00007ff37138d64e sp 00007ffe8abcaf40 error 4 in libpcl_kdtree.so.1.10.0[7ff371323000+96000]",
+        "[Wed Oct 28 00:04:25 2026] pcl_render_node[683906]: segfault at 8 ip 00007fa40464f64e sp 00007ffd88ab5990 error 4 in libpcl_kdtree.so.1.10.0[7fa4045e5000+96000]",
+        "[Wed Oct 28 00:04:25 2026] pcl_render_node[683830]: segfault at 8 ip 00007fac360b464e sp 00007ffcacab0940 error 4 in libpcl_kdtree.so.1.10.0[7fac3604a000+96000]",
+        "[Wed Oct 28 00:04:25 2026] pcl_render_node[683942]: segfault at 8 ip 00007f1370c2f64e sp 00007ffc69971c20 error 4 in libpcl_kdtree.so.1.10.0[7f1370bc5000+96000]",
+        "[Wed Oct 28 04:17:13 2026] pcl_render_node[691981]: segfault at 8 ip 00007ff9fe93864e sp 00007ffcf98a83f0 error 4 in libpcl_kdtree.so.1.10.0[7ff9fe8ce000+96000]",
+        "[Wed Oct 28 04:17:13 2026] pcl_render_node[692006]: segfault at 8 ip 00007f885be1664e sp 00007fffc9343290 error 4 in libpcl_kdtree.so.1.10.0[7f885bdac000+96000]",
+        "[Wed Oct 28 04:17:13 2026] pcl_render_node[691925]: segfault at 8 ip 00007f3e06a3664e sp 00007fff4460c370 error 4 in libpcl_kdtree.so.1.10.0[7f3e069cc000+96000]",
+        "[Wed Oct 28 04:17:13 2026] pcl_render_node[692039]: segfault at 8 ip 00007feddb28064e sp 00007ffe9c091980 error 4 in libpcl_kdtree.so.1.10.0[7feddb216000+96000]",
+        "[Wed Oct 28 04:17:13 2026] pcl_render_node[692060]: segfault at 8 ip 00007ffae2ceb64e sp 00007fff40ef3d40 error 4 in libpcl_kdtree.so.1.10.0[7ffae2c81000+96000]",
+        "[Wed Oct 28 04:17:13 2026] pcl_render_node[692087]: segfault at 8 ip 00007f86c868264e sp 00007ffd21ad7800 error 4 in libpcl_kdtree.so.1.10.0[7f86c8618000+96000]",
+        "[Wed Oct 28 04:17:13 2026] pcl_render_node[691945]: segfault at 8 ip 00007f2ce055b64e sp 00007ffc53e33b90 error 4 in libpcl_kdtree.so.1.10.0[7f2ce04f1000+96000]",
+        "[Thu Oct 29 23:58:06 2026] rviz invoked oom-killer: gfp_mask=0x1100dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO), order=0, oom_score_adj=0",
+        "[Thu Oct 29 23:58:06 2026] Out of memory: Killed process 696201 (rviz) total-vm:40086320kB, anon-rss:34685192kB, file-rss:767068kB, shmem-rss:6072kB, UID:1000 pgtables:71544kB oom_score_adj:0",
+        "[Fri Oct 30 06:13:59 2026] python[985612]: segfault at 90 ip 000055a3ca351a25 sp 00007fffb48aaca0 error 4 in python3.11[55a3ca266000+23c000]",
+        "[Sat Oct 31 03:55:24 2026] python[1261001]: segfault at ab ip 000056227aa84e56 sp 00007fff64953ab0 error 4 in python3.11[56227a955000+23c000]",
+        "[Tue Nov  3 03:26:20 2026] ego_planner_nod[1966348]: segfault at 5 ip 00007f6f7f2b4c60 sp 00007ffe6a3ca890 error 4 in libgcc_s.so.1[7f6f7f2a8000+12000]",
+        "[Tue Nov  3 03:26:20 2026] ego_planner_nod[1965934]: segfault at 5 ip 00007f55dd8e6c60 sp 00007ffcc071c9d0 error 4 in libgcc_s.so.1[7f55dd8da000+12000]",
+        "[Tue Nov  3 03:26:20 2026] ego_planner_nod[1966270]: segfault at 6 ip 00007f30755fac60 sp 00007ffeb7e4c150 error 4 in libgcc_s.so.1[7f30755ee000+12000]",
+        "[Tue Nov  3 03:26:20 2026] ego_planner_nod[1966163]: segfault at 6 ip 00007f86e1397c60 sp 00007ffe2804ca80 error 4 in libgcc_s.so.1[7f86e138b000+12000]",
+        "[Tue Nov  3 03:26:20 2026] ego_planner_nod[1965958]: segfault at 6 ip 00007f8b1362fc60 sp 00007ffc1268b7f0 error 4",
+        "[Tue Nov  3 03:26:20 2026] ego_planner_nod[1966201]: segfault at 6 ip 00007f020d1a1c60 sp 00007ffe7f24a3a0 error 4",
+        "[Tue Nov  3 03:26:20 2026] ego_planner_nod[1966329]: segfault at 5 ip 00007f992e65ec60 sp 00007fff07cacfc0 error 4 in libgcc_s.so.1[7f992e652000+12000]",
+        "[Tue Nov  3 03:26:20 2026] ego_planner_nod[1966239]: segfault at 6 ip 00007f410e13dc60 sp 00007ffe8b9bc4a0 error 4 in libgcc_s.so.1[7f410e131000+12000]",
+        "[Tue Nov  3 03:26:20 2026] ego_planner_nod[1966063]: segfault at 6 ip 00007f53369a2c60 sp 00007fffccc7c890 error 4 in libgcc_s.so.1[7f5336996000+12000]",
+        "[Tue Nov  3 03:26:20 2026] ego_planner_nod[1966084]: segfault at 5 ip 00007fc1eb4b2c60 sp 00007ffdf36c6950 error 4 in libgcc_s.so.1[7fc1eb4a6000+12000]",
+        "[Tue Nov  3 03:27:09 2026] ego_planner_nod[1966976]: segfault at 5 ip 00007f9a2f630c60 sp 00007ffe0e7b8ed0 error 4 in libgcc_s.so.1[7f9a2f624000+12000]"
+      ],
+      "scope": "Retained dmesg ring, not a complete historical event log; no matches does not exclude a fault."
+    }
+  },
+  "environment_metadata": {
+    "returncode": 0,
+    "stdout": "{\n  \"torch\": \"2.1.2+cu121\",\n  \"torchvision\": \"0.16.2+cu121\",\n  \"numpy\": \"1.26.4\",\n  \"opencv-python\": \"4.11.0.86\",\n  \"pycocotools\": \"2.0.11\",\n  \"dill\": \"0.4.1\",\n  \"scipy\": \"1.17.1\"\n}\n",
+    "stderr": ""
+  },
+  "pip_check": {
+    "returncode": 0,
+    "stdout": "No broken requirements found.\n",
+    "stderr": ""
+  },
+  "native_import_probe": {
+    "returncode": 0,
+    "stdout": "{\"torch\": \"2.1.2+cu121\", \"cuda\": \"12.1\", \"numpy\": \"1.26.4\", \"cv2\": \"4.11.0\", \"PIL\": \"12.3.0\"}\nATen/Parallel:\n\tat::get_num_threads() : 24\n\tat::get_num_interop_threads() : 16\nOpenMP 201511 (a.k.a. OpenMP 4.5)\n\tomp_get_max_threads() : 24\nIntel(R) oneAPI Math Kernel Library Version 2022.2-Product Build 20220804 for Intel(R) 64 architecture applications\n\tmkl_get_max_threads() : 24\nIntel(R) MKL-DNN v3.1.1 (Git Hash 64f6bcbcbab628e96f33a62c3e975f8535a7bde4)\nstd::thread::hardware_concurrency() : 32\nEnvironment variables:\n\tOMP_NUM_THREADS : [not set]\n\tMKL_NUM_THREADS : [not set]\nATen parallel backend: OpenMP\n\n",
+    "stderr": ""
+  },
+  "augment_source_60_77": "60: class Compose:\n61:     \"\"\"Class for composing multiple image transformations.\"\"\"\n62: \n63:     def __init__(self, transforms):\n64:         \"\"\"Initializes the Compose object with a list of transforms.\"\"\"\n65:         self.transforms = transforms\n66: \n67:     def __call__(self, data):\n68:         \"\"\"Applies a series of transformations to input data.\"\"\"\n69:         for t in self.transforms:\n70:             data = t(data)\n71:         return data\n72: \n73:     def append(self, transform):\n74:         \"\"\"Appends a new transform to the existing list of transforms.\"\"\"\n75:         self.transforms.append(transform)\n76: \n77:     def tolist(self):",
+  "checkpoint_files": [
+    {
+      "path": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/screen_c2_150e_s0/weights/best.pt",
+      "bytes": 323167626,
+      "sha256": "3ce7f883929a5effbffdf09f2605c1fe1a7dfe9033fdc65227d16a6b3caf8e80"
+    },
+    {
+      "path": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/screen_c2_150e_s0/weights/last.pt",
+      "bytes": 323167626,
+      "sha256": "3ce7f883929a5effbffdf09f2605c1fe1a7dfe9033fdc65227d16a6b3caf8e80"
+    }
+  ],
+  "results_csv": {
+    "path": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/screen_c2_150e_s0/results.csv",
+    "sha256": "af746ceecf83be61ae308b13c9d80c395c19dd904a9c35f5ca3079d618052942",
+    "line_count": 99
+  }
+}
