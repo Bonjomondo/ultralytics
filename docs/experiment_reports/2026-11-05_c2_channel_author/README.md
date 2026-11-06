@@ -1,6 +1,6 @@
 # C2可学习通道门控：作者引擎配对实验
 
-**2026-11-06最新状态：C2已完成150轮及正式COCO评估，AP25.606、APs17.322。归档因Matplotlib SVG行尾空格触发Git检查而中断，已添加仅限本实验生成SVG的格式例外，原始证据不改写；接续Scalar/Channel队列，不重跑C2。此前训练崩溃的根因仍未解决。见[归档修复记录](archive_repair_20261106.json)。**
+**2026-11-07全部完成：三组各150轮、正式COCO评估和同场测速完成。AP为C2 25.606、Scalar 26.224、Channel 25.954。Channel未通过预设晋级条件，实验按方案结束。见[最终报告](FINAL_SUMMARY.md)和[最终审计](final_audit.json)。**
 
 状态以 `launch.json`、服务器 `queue_status.json` 和本目录RESULTS.md为准。短跑只验证代码链路，不是检测性能证据。
 
