@@ -2,3 +2,5 @@
 *.csv whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 # Preserve exact upstream author-engine formatting.
 experiments/c2_channel_author_20261105/backend/** -whitespace
+# Preserve Matplotlib-generated SVG path whitespace in experiment artifacts.
+docs/experiment_reports/2026-11-05_c2_channel_author/figures/*/alpha_history.svg -whitespace
