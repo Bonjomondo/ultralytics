@@ -1,0 +1,19 @@
+{
+  "checkpoint": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/screen_channel_150e_s0/weights/best.pt",
+  "checkpoint_sha256": "04eaf42d8faccde24bbcd5d07bc58f127e62b361c8b71250e43a8d32a516143e",
+  "checkpoint_epoch": 150,
+  "gt_sha256": "6f57aa4b42d64ee7b99b8a6a5b159ad19cba2eacf00bd86f23314966614bf4d8",
+  "predictions_sha256": "3cc0b98d01e232d83dc9d1f4db9052fdce49a79031a9508e189e5bc131cd2315",
+  "images": 548,
+  "detections": 164400,
+  "native_metrics": {
+    "metrics/precision(B)": 0.5996434291569697,
+    "metrics/recall(B)": 0.45023959273434144,
+    "metrics/mAP50(B)": 0.4624187342172421,
+    "metrics/mAP50-95(B)": 0.28567919748478127,
+    "fitness": 0.30335315115802736
+  },
+  "smoke": false,
+  "finished_utc": "2026-11-06T21:02:39.678438+00:00",
+  "protocol": "author RTDETRValidator FP32, 300 argmax queries/image, no NMS, unrounded; asserted full query coverage"
+}

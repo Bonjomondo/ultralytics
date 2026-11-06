@@ -1,0 +1,16 @@
+{
+  "images": [
+    "/home/zjnu/文档/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-train/images/9999965_00000_d_0000056.jpg",
+    "/home/zjnu/文档/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-train/images/9999942_00000_d_0000118.jpg",
+    "/home/zjnu/文档/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-train/images/9999998_00238_d_0000192.jpg",
+    "/home/zjnu/文档/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-train/images/0000270_03801_d_0000372.jpg"
+  ],
+  "image_sha256": "fddd2e581c615c992721794a0fe52917f90a23b6f9ec438dfe4d05dd675bd152",
+  "targets_sha256": "dade5f7130be80c8fa6b043893bdec6ad34a7385be5d1a88c35f83f931a4db0d",
+  "loss_items": [
+    1.908814549446106,
+    6.042185306549072,
+    0.598153293132782
+  ],
+  "accumulate": 1
+}
