@@ -1,0 +1,136 @@
+{
+  "started_utc": "2026-11-05T15:49:50.364126+00:00",
+  "events": [
+    {
+      "label": "screen_c2_150e_s0/train",
+      "attempt": 1,
+      "started_utc": "2026-11-05T15:49:50.464469+00:00",
+      "status": "failed",
+      "returncode": 1,
+      "finished_utc": "2026-11-05T18:28:05.593624+00:00",
+      "log": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/logs/screen_c2_150e_s0-train-attempt1.log"
+    },
+    {
+      "label": "screen_c2_150e_s0/train",
+      "attempt": 2,
+      "started_utc": "2026-11-05T18:28:05.967116+00:00",
+      "status": "failed",
+      "returncode": -11,
+      "finished_utc": "2026-11-05T20:59:06.092026+00:00",
+      "log": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/logs/screen_c2_150e_s0-train-attempt2.log"
+    },
+    {
+      "label": "screen_c2_150e_s0/train",
+      "attempt": 1,
+      "started_utc": "2026-11-06T01:47:15.431416+00:00",
+      "status": "complete",
+      "returncode": 0,
+      "finished_utc": "2026-11-06T04:28:30.558317+00:00",
+      "log": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/logs/screen_c2_150e_s0-train-attempt3.log"
+    },
+    {
+      "label": "screen_c2_150e_s0/predict",
+      "attempt": 1,
+      "started_utc": "2026-11-06T04:28:30.570697+00:00",
+      "status": "complete",
+      "returncode": 0,
+      "finished_utc": "2026-11-06T04:28:45.572472+00:00",
+      "log": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/logs/screen_c2_150e_s0-predict-attempt4.log"
+    },
+    {
+      "label": "screen_c2_150e_s0/coco",
+      "attempt": 1,
+      "started_utc": "2026-11-06T04:28:45.583100+00:00",
+      "status": "complete",
+      "returncode": 0,
+      "finished_utc": "2026-11-06T04:29:00.584692+00:00",
+      "log": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/logs/screen_c2_150e_s0-coco-attempt5.log"
+    },
+    {
+      "label": "screen_scalar_150e_s0/train",
+      "attempt": 1,
+      "started_utc": "2026-11-06T05:32:55.770188+00:00",
+      "status": "complete",
+      "returncode": 0,
+      "finished_utc": "2026-11-06T13:17:26.132151+00:00",
+      "log": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/logs/screen_scalar_150e_s0-train-attempt6.log"
+    },
+    {
+      "label": "screen_scalar_150e_s0/predict",
+      "attempt": 1,
+      "started_utc": "2026-11-06T13:17:26.151334+00:00",
+      "status": "complete",
+      "returncode": 0,
+      "finished_utc": "2026-11-06T13:17:41.152834+00:00",
+      "log": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/logs/screen_scalar_150e_s0-predict-attempt7.log"
+    },
+    {
+      "label": "screen_scalar_150e_s0/coco",
+      "attempt": 1,
+      "started_utc": "2026-11-06T13:17:41.163137+00:00",
+      "status": "complete",
+      "returncode": 0,
+      "finished_utc": "2026-11-06T13:17:56.164692+00:00",
+      "log": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/logs/screen_scalar_150e_s0-coco-attempt8.log"
+    },
+    {
+      "label": "screen_channel_150e_s0/train",
+      "attempt": 1,
+      "started_utc": "2026-11-06T13:17:57.252954+00:00",
+      "status": "complete",
+      "returncode": 0,
+      "finished_utc": "2026-11-06T21:02:27.624336+00:00",
+      "log": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/logs/screen_channel_150e_s0-train-attempt9.log"
+    },
+    {
+      "label": "screen_channel_150e_s0/predict",
+      "attempt": 1,
+      "started_utc": "2026-11-06T21:02:27.635675+00:00",
+      "status": "complete",
+      "returncode": 0,
+      "finished_utc": "2026-11-06T21:02:42.637225+00:00",
+      "log": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/logs/screen_channel_150e_s0-predict-attempt10.log"
+    },
+    {
+      "label": "screen_channel_150e_s0/coco",
+      "attempt": 1,
+      "started_utc": "2026-11-06T21:02:42.647756+00:00",
+      "status": "complete",
+      "returncode": 0,
+      "finished_utc": "2026-11-06T21:02:57.649210+00:00",
+      "log": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/logs/screen_channel_150e_s0-coco-attempt11.log"
+    },
+    {
+      "label": "screen/benchmark",
+      "attempt": 1,
+      "started_utc": "2026-11-06T21:02:58.686245+00:00",
+      "status": "complete",
+      "returncode": 0,
+      "finished_utc": "2026-11-06T21:03:28.687032+00:00",
+      "log": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/logs/screen-benchmark-attempt12.log"
+    }
+  ],
+  "done": [
+    "screen_c2_150e_s0/train",
+    "screen_c2_150e_s0/predict",
+    "screen_c2_150e_s0/coco",
+    "screen_c2_150e_s0/archived",
+    "screen_scalar_150e_s0/train",
+    "screen_scalar_150e_s0/predict",
+    "screen_scalar_150e_s0/coco",
+    "screen_scalar_150e_s0/archived",
+    "screen_channel_150e_s0/train",
+    "screen_channel_150e_s0/predict",
+    "screen_channel_150e_s0/coco",
+    "screen_channel_150e_s0/archived",
+    "screen/benchmark"
+  ],
+  "status": "complete",
+  "pid": 2656982,
+  "updated_utc": "2026-11-06T21:03:28.687082+00:00",
+  "current": "screen/benchmark",
+  "child_pid": null,
+  "error": "Traceback (most recent call last):\n  File \"/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/source/controller.py\", line 120, in main\n    for arm in ARMS:run_one(arm, 150, 0)\n                    ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/source/controller.py\", line 117, in run_one\n    analyze();publish(f\"Archive author-engine paired gate run: {name}\")\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/source/controller.py\", line 95, in publish\n    subprocess.run([\"git\", \"diff\", \"--cached\", \"--check\"], cwd=REPO, check=True)\n  File \"/home/zjnu/anaconda3/envs/UAV_CV/lib/python3.11/subprocess.py\", line 571, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['git', 'diff', '--cached', '--check']' returned non-zero exit status 2.\n",
+  "finished_utc": "2026-11-06T21:03:30.225863+00:00",
+  "confirmation_triggered": false
+}
