@@ -1,0 +1,15 @@
+{
+  "run": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/screen_scalar_150e_s0",
+  "full_diagnostics_sha256": "a7404163c555ab904d60e658957e8e931abae755a3b5691d2dd8fa6c4eae3077",
+  "sampling": "features/gradients first 3 batches per epoch; alpha at epoch end; scalar/C2 broadcast only in alpha.csv",
+  "figure_hashes": {
+    "figures/screen_scalar_150e_s0/results.png": "f5e604bff5354bc895e0b781a3ce3018aad8145c7ed72e80e807b1b2254a7eda",
+    "figures/screen_scalar_150e_s0/F1_curve.png": "bfd1335da7bd96199aa699f6ea2c93c9c3dfe985af78498c86114217fd039bd0",
+    "figures/screen_scalar_150e_s0/confusion_matrix_normalized.png": "c6d7f46a91e2a50b4651fba7ffd1ec3486f32bc3159f0579c753c501e3f47a94",
+    "figures/screen_scalar_150e_s0/confusion_matrix.png": "8876babd59b59ef566349dd512c6d64aed2d7dd42b081d3e09b9c707e40d034c",
+    "figures/screen_scalar_150e_s0/P_curve.png": "dfd9052cf1d212571448269ad9fd437c9f04f75353e0d1f9ebe35a0b1b5fc24b",
+    "figures/screen_scalar_150e_s0/R_curve.png": "46db99e62e02bd189fdb6e2758ffa7fe885d01d6ee67c44b43b691850ddadbcc",
+    "figures/screen_scalar_150e_s0/PR_curve.png": "1a71d87fb0749ee30284d9abadeac22266cd415db4e8f3a8b988feba523a7a8a"
+  },
+  "native_figure_protocol": "framework internal validation; not independent COCO AP"
+}
