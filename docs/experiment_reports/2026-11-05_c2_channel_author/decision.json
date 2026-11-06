@@ -1,0 +1,18 @@
+{
+  "passed": false,
+  "checks": {
+    "AP_gain_at_least_0_3pp": true,
+    "APs_gain_at_least_0_3pp": false,
+    "AP75_APm_APl_no_drop_beyond_0_5pp": false,
+    "latency_increase_at_most_10percent": true
+  },
+  "channel_minus_scalar_pp": {
+    "AP": -0.2696077029895392,
+    "APs": -0.28889872220781854,
+    "AP75": -0.04526762358449332,
+    "APm": 0.009133688716580934,
+    "APl": -2.616356015551645
+  },
+  "next": "screen complete; preserve negative results; no automatic 350e",
+  "caveat": "Engineering screening, not statistical significance. Historical C2 AP28.722 is context only."
+}
