@@ -1,0 +1,8 @@
+{
+  "raw_exact": true,
+  "ema_exact": true,
+  "optimizer_exact": true,
+  "checkpoint_sha256": "3ce7f883929a5effbffdf09f2605c1fe1a7dfe9033fdc65227d16a6b3caf8e80",
+  "completed_epochs": 98,
+  "limits": "epoch-boundary replay; loader order may differ, not bitwise identical continuation"
+}

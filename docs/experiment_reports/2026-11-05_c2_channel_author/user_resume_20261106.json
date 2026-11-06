@@ -1,0 +1,38 @@
+{
+  "authorized_utc": "2026-11-06T01:47:14.920209+00:00",
+  "user_instruction": "继续训练",
+  "action": "Resume existing controller and raw-state checkpoint; original per-invocation retry limits retained",
+  "completed_epochs": 98,
+  "next_epoch": 99,
+  "target_epochs": 150,
+  "checkpoint_sha256": "3ce7f883929a5effbffdf09f2605c1fe1a7dfe9033fdc65227d16a6b3caf8e80",
+  "source_commit": "49f46e9bb5364d0463cd057b2fc0fbc9dd118016",
+  "source_files_verified": 151,
+  "training_recipe_changed": false,
+  "stability_fix_verified": false,
+  "limits": "Fault cause unresolved; resumed sampling order may differ. Not bitwise equivalent uninterrupted training.",
+  "prior_evidence_backup": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/c2_channel_author_20261105/recovery_snapshots/user_resume_20261106T014714Z",
+  "observed_utc": "2026-11-06T01:49:52.447837+00:00",
+  "observed_status": {
+    "status": "training",
+    "pid": 2623760,
+    "current_epoch": 99,
+    "completed_epochs": 98,
+    "batch_in_epoch": 1300,
+    "updated_utc": "2026-11-06T01:49:45.306411+00:00",
+    "workers": 0,
+    "alpha_mean": 1.0,
+    "native_metrics": {
+      "metrics/precision(B)": 0,
+      "metrics/recall(B)": 0,
+      "metrics/mAP50(B)": 0,
+      "metrics/mAP50-95(B)": 0,
+      "val/giou_loss": 0,
+      "val/cls_loss": 0,
+      "val/l1_loss": 0
+    },
+    "accumulate": 1
+  },
+  "queue_status": "running",
+  "historical_queue_error_note": "The retained error field describes the previous failed invocation, not current state."
+}
