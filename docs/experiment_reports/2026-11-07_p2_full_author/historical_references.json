@@ -1,0 +1,35 @@
+{
+  "models": {
+    "historical_b0": {
+      "AP": 27.773305535527815,
+      "AP50": 45.88808562251555,
+      "AP75": 28.145446604733955,
+      "APs": 19.48123462984351,
+      "APm": 38.12774724941233,
+      "APl": 40.15228966010711,
+      "checkpoint": "/home/zjnu/文档/ZHJ_WorkSpace/reproductions/rtdetr-r18-sodetr-paper-20261027/runs/rtdetr-r18-author-recipe-350e-s0/weights/best.pt",
+      "checkpoint_sha256": "931cdcc17818cd498c3b76e7d8a89757c075df42464c5c26f25c2ab17d31a820",
+      "budget": 350,
+      "seed": 0,
+      "training_workers": 8
+    },
+    "historical_c2": {
+      "AP": 28.72234319624046,
+      "AP50": 47.1760035568535,
+      "AP75": 29.429514053761903,
+      "APs": 19.97525972483235,
+      "APm": 39.45012574080792,
+      "APl": 42.7409232232554,
+      "checkpoint": "/home/zjnu/文档/ZHJ_WorkSpace/reproductions/rtdetr-r18-c2-author-recipe-20261028/runs/rtdetr-r18-c2-matched-b0-350e-s0/weights/best.pt",
+      "checkpoint_sha256": "1c96cccf2dbb81c60b99dcd8e5357f9c8fb996f171620f0c9168fbc63db60b5c",
+      "budget": 350,
+      "seed": 0,
+      "training_workers": 8
+    }
+  },
+  "source_csv": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/docs/experiment_reports/2026-11-04_scalar_author350/comparison.csv",
+  "source_csv_sha256": "db2a1df20a670b03475540a77eb5fe707f91367b4c753e730423b678cdec651c",
+  "current_full_seed": 1,
+  "current_full_workers": 0,
+  "limits": "Historical controls differ in seed, initialization, workers and checkpoint storage precision; exploratory reference, not a fresh paired ablation."
+}

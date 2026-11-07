@@ -8,7 +8,7 @@ import sys
 import time
 import traceback
 
-from common import ARMS, BRANCH, EXP, MILESTONES, REPO, REPORT, RUNS, dataset_identity, now, run_name, sha, write
+from common import RUN_ARMS as ARMS, REFERENCE_MODELS, BRANCH, EXP, MILESTONES, REPO, REPORT, RUNS, dataset_identity, now, run_name, sha, write
 from report import analyze, archive, manifest, final_audit
 
 
@@ -120,12 +120,12 @@ def main():
                 archive(name);analyze();publish(f'Archive complete P2 experiment {name}')
                 state['done'].append(f'{name}/archived');write(path,state)
             event('final/benchmark',[str(EXP/'evaluate.py'),'benchmark','--models',
-                  *[run_name(arm) for arm in ARMS],'--output','benchmark_final.json'])
+                  *[run_name(arm) for arm in ARMS],*REFERENCE_MODELS,'--output','benchmark_final.json'])
             shutil.copyfile(RUNS/'benchmark_final.json',REPORT/'benchmark_final.json')
             final_audit()
             state.update(status='complete',finished_utc=now(),child_pid=None)
             write(path,state);write(REPORT/'final_queue_status.json',state)
-            analyze();publish('Finalize three-arm full-P2 author experiment')
+            analyze();publish('Finalize full-P2 experiment against historical references')
         except BaseException:
             state.update(status='failed',error=traceback.format_exc(),updated_utc=now())
             write(path,state);write(REPORT/'failure.json',state)

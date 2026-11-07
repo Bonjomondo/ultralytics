@@ -16,9 +16,9 @@
     "fitness": 0.0
   },
   "smoke": true,
-  "finished_utc": "2026-11-07T07:47:48.315914+00:00",
+  "finished_utc": "2026-11-07T08:04:07.500048+00:00",
   "protocol": "author RTDETRValidator FP32, 300 argmax queries/image, no NMS, unrounded; asserted full query coverage",
-  "evaluated_utc": "2026-11-07T07:47:49.439705+00:00",
+  "evaluated_utc": "2026-11-07T08:04:08.518846+00:00",
   "maxDets": [
     1,
     10,

@@ -1,0 +1,86 @@
+{
+  "models": {
+    "smoke_full_350e_s1": {
+      "checkpoint_sha256": "cebea99bf3faf234937a61bcf10acb917fb5b410cb206bd2f18429ad98d3ba4a",
+      "parameters": 22182552,
+      "thop_gflops_unfused": 125.9718,
+      "feature_strides": [
+        4,
+        8,
+        16,
+        32
+      ],
+      "samples_ms": [
+        8.804448127746582,
+        8.809375762939453,
+        8.808287620544434,
+        8.7838716506958,
+        8.790847778320312,
+        8.8023042678833,
+        8.79206371307373,
+        8.794112205505371
+      ],
+      "mean_ms": 8.798163890838623,
+      "median_ms": 8.798208236694336,
+      "p95_ms": 8.808994913101197
+    },
+    "historical_b0": {
+      "checkpoint_sha256": "931cdcc17818cd498c3b76e7d8a89757c075df42464c5c26f25c2ab17d31a820",
+      "parameters": 20094584,
+      "thop_gflops_unfused": 59.460952,
+      "feature_strides": [
+        8,
+        16,
+        32
+      ],
+      "samples_ms": [
+        7.403840065002441,
+        7.38918399810791,
+        7.374080181121826,
+        7.365664005279541,
+        7.371744155883789,
+        7.385087966918945,
+        7.3758721351623535,
+        7.365632057189941
+      ],
+      "mean_ms": 7.3788880705833435,
+      "median_ms": 7.37497615814209,
+      "p95_ms": 7.398710441589356
+    },
+    "historical_c2": {
+      "checkpoint_sha256": "1c96cccf2dbb81c60b99dcd8e5357f9c8fb996f171620f0c9168fbc63db60b5c",
+      "parameters": 20135288,
+      "thop_gflops_unfused": 59.9786864,
+      "feature_strides": [
+        8,
+        16,
+        32
+      ],
+      "samples_ms": [
+        7.411456108093262,
+        7.360832214355469,
+        7.411359786987305,
+        7.365600109100342,
+        7.38431978225708,
+        7.391232013702393,
+        7.380095958709717,
+        7.365503787994385
+      ],
+      "mean_ms": 7.383799970149994,
+      "median_ms": 7.382207870483398,
+      "p95_ms": 7.411422395706177
+    }
+  },
+  "orders": [
+    [
+      "historical_b0",
+      "historical_c2",
+      "smoke_full_350e_s1"
+    ]
+  ],
+  "smoke": true,
+  "finished_utc": "2026-11-07T08:04:15.548164+00:00",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "torch": "2.1.2+cu121",
+  "protocol": "batch1 640 fused FP32 resident GPU input, CUDA event synchronized, randomized interleaved rounds; excludes pre/postprocess and transfers"
+}

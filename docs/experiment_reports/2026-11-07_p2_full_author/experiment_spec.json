@@ -57,5 +57,10 @@
   "initial_b0_archive": {
     "path": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/p2_full_author_20261107/initialization_b0_s1.pt",
     "sha256": "69ea83c9b113b9115ed694fd2c7f09fab9e09c4a7daca2b37d63373eb457793b"
-  }
+  },
+  "active_training_arms": [
+    "full"
+  ],
+  "reference_design": "historical B0/C2, no fresh baseline training",
+  "scope_change": "scope_change_full_only.json"
 }

@@ -6,7 +6,7 @@ from pathlib import Path
 
 import numpy as np
 
-from common import DATA, GT, GT_SHA, RUNS, now, sha, write
+from common import DATA, GT, GT_SHA, RUNS, REFERENCE_MODELS, now, sha, write
 
 
 def predict(name, budget=350, kind="best", smoke=False):
@@ -144,10 +144,10 @@ def benchmark(names, output, smoke=False):
     x = torch.rand(1, 3, 640, 640, device="cuda")
     models, records = {}, {}
     for name in names:
-        weight = RUNS / name / "weights/best.pt"
+        weight = REFERENCE_MODELS.get(name, RUNS / name / "weights/best.pt")
         model = RTDETR(str(weight)).model.float().cuda().eval()
         records[name] = {"checkpoint_sha256": sha(weight), "parameters": sum(p.numel() for p in model.parameters()),
-            "thop_gflops_unfused": get_flops(model, 640), "feature_strides": model.model[-1].feature_strides, "samples_ms": []}
+            "thop_gflops_unfused": get_flops(model, 640), "feature_strides": getattr(model.model[-1], "feature_strides", [8,16,32]), "samples_ms": []}
         models[name] = model.fuse().eval()
     orders = []; rng = random.Random(20261105)
     with torch.inference_mode():

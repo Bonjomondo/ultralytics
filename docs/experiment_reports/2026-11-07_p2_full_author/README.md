@@ -1,6 +1,10 @@
 # RT-DETR-R18完整P2四尺度实验
 
-本轮在4090上运行B0、C2和P2-Full三组各350轮seed1实验。当前状态见[启动信息](launch.json)、服务器queue_status.json与[结果表](RESULTS.md)。短跑数据用于验证代码链路。
+**当前执行范围已按用户选择调整为仅训练P2-Full 350轮seed1，B0/C2复用历史350轮seed0结果。新B0在第3轮中断，完整2轮检查点与日志保留，新C2未启动。**
+
+[范围调整记录](scope_change_full_only.json)、[历史对照及比较限制](historical_references.json)。
+
+下文三组结构表保留设计说明，实际队列只执行P2-Full。当前状态见[启动信息](launch.json)、服务器queue_status.json与[结果表](RESULTS.md)。短跑数据用于验证代码链路。
 
 Git分支为 `feat/r18-p2-full-author`，源码位于 `experiments/p2_full_author_20261107`。作者后端复用仓库中 `experiments/c2_channel_author_20261105/backend`，来源为SO_DETR作者提交148d5972bbaec298b3975ca00c00d91abbc6657c的重建RT-DETR-R18实现。启动时将依赖后端与本轮代码一起冻结并逐文件校验。
 
@@ -38,7 +42,7 @@ P2-Full在640输入下有160/80/40/20四个输出。P2 projection输出128通道
 
 三组预算从开始就设350轮。150、250、350轮分别保存当轮last和截至该预算原生fitness选出的best，连同完整raw模型、EMA、优化器、scheduler、scaler、stopper和RNG。训练连续完成350轮后评估这些节点，因此150/250轮正式评估结果会在对应结构350轮训练结束后产生。
 
-本队列先完成这三组单seed实验，后续独立消融、其他seed以及Orin部署测试依据结果另行安排。历史seed0的27.77/28.72 AP作为背景，主结构差值使用本轮同条件对照。
+本队列先完成P2-Full单seed实验，后续独立消融、其他seed以及Orin部署测试依据结果另行安排。历史seed0的27.77/28.72 AP作为背景，主结构差值使用本轮同条件对照。
 
 ## 正式评估与诊断
 
@@ -52,7 +56,7 @@ Tiny recall按作者验证实际使用的640×640方形缩放，取缩放后目�
 
 训练每轮记录前三批次的query来源计数、P2投影裁剪前梯度范数、原生指标、耗时和峰值显存。云端保留逐轮摘要CSV，完整JSONL留服务器并归档SHA。
 
-最终同进程随机交错5轮，每模型500个计时样本，640/batch1、fused FP32、GPU常驻输入、CUDA event同步。matmul TF32关闭，cuDNN TF32允许。计时范围为网络前向，Orin性能需另行实测。
+最终加载本轮P2-Full和两份历史B0/C2权重，同进程随机交错5轮，每模型500个计时样本，640/batch1、fused FP32、GPU常驻输入、CUDA event同步。matmul TF32关闭，cuDNN TF32允许。计时范围为网络前向，Orin性能需另行实测。
 
 ## 验证与恢复
 
@@ -66,8 +70,12 @@ Tiny recall按作者验证实际使用的640×640方形缩放，取缩放后目�
 
 Full的密集样本测试选取训练集中标注最多的四张图，原图目标数902/511/462/431，增强后共4206个目标。前向反向通过，峰值分配显存约10.92GiB。这是单批容量验证。
 
-启动器检查源码已提交、GPU空闲、无重复tmux后冻结脚本与已追踪后端。运行目录为 `/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/p2_full_author_20261107`，tmux为 `p2-full-author-20261107`。各阶段核验冻结manifest，完成阶段通过done列表去重。
+启动器检查源码已提交、GPU空闲、无重复tmux后冻结脚本与已追踪后端。运行目录为 `/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/p2_full_author_20261107`，tmux为 `p2-full-author-20261107`，本次冻结源码目录为source_full_only，原source完整保留。各阶段核验冻结manifest，完成阶段通过done列表去重。
 
 训练每阶段累计最多两次尝试，失败后先备份last/best与状态，再从完整raw检查点恢复。恢复时核对raw、EMA和优化器张量，并恢复scheduler/scaler/stopper/RNG。采样器重建可能改变数据流，任何恢复须在结果解释中披露。评估和测速最多三次尝试。超过30分钟无日志/心跳推进视为故障，按同一有界策略处理。此前服务器随机原生崩溃原因仍待确认，恢复验证仅证明状态恢复链路。
 
 控制器每25轮保存运行中完整CSV快照，逐组训练和评估完成后归档曲线、PR/P/R/F1和混淆矩阵。服务器保留权重、完整预测、完整日志、源码冻结副本。Git保存脚本、配置、完整训练CSV、诊断摘要、指标、图表和SHA清单。服务器无GitHub认证，提交通过本机认证同步推送。
+
+## 历史对照解释范围
+
+本轮P2-Full使用seed1、workers0，历史B0/C2使用seed0、workers8且没有完整初始模型存档。精度差值作为探索性参考，不能单独归因于P2。相同数据和COCO口径、权重/预测SHA继续核验。后续若有值得保留的收益，再决定是否补同条件对照。原三组队列和source_identity已备份，新的单组队列使用新源码manifest。

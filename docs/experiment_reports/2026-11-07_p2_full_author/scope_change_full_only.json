@@ -1,0 +1,11 @@
+{
+  "user_instruction": "先只跑P2-Full，复用历史B0/C2作参考",
+  "stopped_utc": "2026-11-07T07:59:39.196072+00:00",
+  "old_queue_backup": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/p2_full_author_20261107/recovery_snapshots/user_full_only_1794038377993429017",
+  "b0_completed_epochs": 2,
+  "b0_interrupted_epoch": 3,
+  "c2_started": false,
+  "full_started": false,
+  "retained_b0_checkpoint": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/p2_full_author_20261107/main_b0_350e_s1/weights/last.pt",
+  "next": "fresh P2-Full seed1, total350, historical B0/C2 reference"
+}

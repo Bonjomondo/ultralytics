@@ -4,7 +4,7 @@ import json
 import shutil
 from pathlib import Path
 
-from common import ARMS, REPORT, RUNS, now, sha, write
+from common import RUN_ARMS as ARMS, REPORT, RUNS, now, sha, write
 
 PLOTS = {'results.png','F1_curve.png','PR_curve.png','P_curve.png','R_curve.png',
          'confusion_matrix.png','confusion_matrix_normalized.png'}
@@ -68,7 +68,13 @@ def analyze():
         if performance:
             rows[-1].update({key:performance[key] for key in ['parameters','thop_gflops_unfused','median_ms','p95_ms']})
             rows[-1]['forward_fps'] = 1000/performance['median_ms']
+    history_path = REPORT/'historical_references.json'
+    history = json.loads(history_path.read_text())['models'] if history_path.exists() else {}
     for row in rows:
+        if row['arm']=='full' and row['budget']==350 and row['kind']=='best':
+            for name, reference in history.items():
+                row[f'delta_AP_vs_{name}_pp'] = row['AP']-reference['AP']
+                row[f'delta_APs_vs_{name}_pp'] = row['APs']-reference['APs']
         baseline = next((x for x in rows if x['arm']=='b0' and x['budget']==row['budget'] and x['kind']==row['kind']),None)
         if baseline:
             row['delta_AP_vs_b0_pp']=row['AP']-baseline['AP']
@@ -81,10 +87,15 @@ def analyze():
            '','| arm | budget | checkpoint | AP | APs | AP75 | ΔAP vs B0 |',
            '|---|---:|---|---:|---:|---:|---:|']
     for row in rows:
-        lines.append(f"| {row['arm']} | {row['budget']} | {row['kind']}@{row['checkpoint_epoch']} | {row['AP']:.3f} | {row['APs']:.3f} | {row['AP75']:.3f} | {row.get('delta_AP_vs_b0_pp',0):+.3f} |")
-    lines+=['','本队列为seed1单seed实验。三种架构共有骨干及语义兼容层配对，四尺度decoder形状变更层有单独初始化记录。',
+        lines.append(f"| {row['arm']} | {row['budget']} | {row['kind']}@{row['checkpoint_epoch']} | {row['AP']:.3f} | {row['APs']:.3f} | {row['AP75']:.3f} | {format(row['delta_AP_vs_b0_pp'], '+.3f') if 'delta_AP_vs_b0_pp' in row else '—'} |")
+    lines+=['','本队列为seed1单seed实验。本轮只训练P2-Full，B0/C2采用历史seed0结果作参考；初始化和workers差异限制因果解释。',
             '当轮last和截至该预算原生fitness选出的best分开评估，原生mAP不代替正式COCO AP。',
             'Tiny recall采用640方形缩放后短边分桶，COCO按类别匹配、忽略GT排除，query来源层属于初始化来源诊断。']
+    if history:
+        lines += ['', '| historical model | AP | APs |', '|---|---:|---:|']
+        for name, reference in history.items():
+            lines.append(f"| {name} | {reference['AP']:.3f} | {reference['APs']:.3f} |")
+        lines += ['', '历史对照完整配方、checkpoint SHA和比较限制见historical_references.json。']
     if benchmark:
         lines += ['', '| arm | parameters | THOP GFLOPs | median ms | p95 ms |',
                   '|---|---:|---:|---:|---:|']
@@ -149,9 +160,12 @@ def final_audit():
         records[arm] = {'completed_epochs':350,'curve_sha256':sha(run/'results.csv'),
                         'evaluations':evaluations,
                         'resumes':[str(p) for p in run.glob('restore_epoch*.json')]}
+    from common import REFERENCE_MODELS
+    for name, path in REFERENCE_MODELS.items():
+        assert sha(path) == benchmark['models'][name]['checkpoint_sha256']
     assert len(set(backbones)) == 1
-    assert first_batches[0] == first_batches[1] == first_batches[2]
+    assert all(item == first_batches[0] for item in first_batches)
     write(REPORT/'final_audit.json',{'status':'passed','audited_utc':now(),
           'gt_sha256':gt_sha,'benchmark_sha256':sha(REPORT/'benchmark_final.json'),
-          'shared_backbone_sha256':backbones[0],'first_batch_images_targets_match':True,
-          'arms':records,'limits':'seed1 only; any raw-state resumes listed per arm; no multi-seed conclusion'})
+          'shared_backbone_sha256':backbones[0],'fresh_control_training':False,'reference_design':'historical B0/C2, seed0; new Full seed1',
+          'arms':records,'limits':'Full seed1 only, historical controls seed0; resumes listed, no strict paired or multi-seed conclusion'})

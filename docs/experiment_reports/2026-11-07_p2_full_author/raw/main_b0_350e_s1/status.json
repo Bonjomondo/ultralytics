@@ -1,20 +1,20 @@
 {
-  "status": "training",
+  "status": "stopped_by_user_scope_change",
   "pid": 2860050,
   "arm": "b0",
-  "current_epoch": 1,
-  "completed_epochs": 0,
-  "batch_in_epoch": 500,
-  "updated_utc": "2026-11-07T07:52:06.497166+00:00",
+  "current_epoch": 3,
+  "completed_epochs": 2,
+  "batch_in_epoch": 1100,
+  "updated_utc": "2026-11-07T07:59:39.196072+00:00",
   "workers": 0,
   "native_metrics": {
-    "metrics/precision(B)": 0,
-    "metrics/recall(B)": 0,
-    "metrics/mAP50(B)": 0,
-    "metrics/mAP50-95(B)": 0,
-    "val/giou_loss": 0,
-    "val/cls_loss": 0,
-    "val/l1_loss": 0
+    "metrics/precision(B)": 0.35016,
+    "metrics/recall(B)": 0.10154,
+    "metrics/mAP50(B)": 0.07532,
+    "metrics/mAP50-95(B)": 0.03323,
+    "val/giou_loss": 1.3454,
+    "val/cls_loss": 0.50003,
+    "val/l1_loss": 0.23779
   },
   "accumulate": 1
 }

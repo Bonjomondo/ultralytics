@@ -14,6 +14,10 @@ RUNS = REPO / 'runs/p2_full_author_20261107'
 REPORT = REPO / 'docs/experiment_reports/2026-11-07_p2_full_author'
 BRANCH = 'feat/r18-p2-full-author'
 ARMS = ('b0', 'c2', 'full')
+RUN_ARMS = ('full',)
+REFERENCE_MODELS = {
+    'historical_b0': REPO.parent/'reproductions/rtdetr-r18-sodetr-paper-20261027/runs/rtdetr-r18-author-recipe-350e-s0/weights/best.pt',
+    'historical_c2': REPO.parent/'reproductions/rtdetr-r18-c2-author-recipe-20261028/runs/rtdetr-r18-c2-matched-b0-350e-s0/weights/best.pt'}
 SEED = 1
 MILESTONES = (150, 250, 350)
 CONFIGS = {arm: EXP / 'configs' / f'{arm}.yaml' for arm in ARMS}

@@ -18,7 +18,7 @@ def main():
     assert not subprocess.check_output(['nvidia-smi','--query-compute-apps=pid','--format=csv,noheader'],text=True).strip(),'GPU busy'
     assert subprocess.run([tmux,'has-session','-t',session],capture_output=True).returncode!=0,'queue alive'
     RUNS.mkdir(exist_ok=True)
-    frozen=RUNS/'source'
+    frozen=RUNS/'source_full_only'
     if not args.resume_controller:
         assert not (RUNS/'queue_status.json').exists(),'queue already started'
         assert not frozen.exists()
@@ -58,7 +58,7 @@ def main():
         ' > '+shlex.quote(str(log))+' 2>&1\n')
     subprocess.run([tmux,'new-session','-d','-s',session,'bash',str(launcher)],check=True)
     write(REPORT/'launch.json',{'started_utc':now(),'session':session,'controller_log':str(log),
-          'environment':env,'budget':'three arms, each fresh350 seed1; no automatic extra experiments'})
+          'environment':env,'budget':'P2-Full only, fresh350 seed1; historical B0/C2 references; new B0 stopped, new C2 canceled'})
     print('STARTED',session)
 
 
