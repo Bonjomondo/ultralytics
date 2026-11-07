@@ -1,0 +1,61 @@
+{
+  "arms": [
+    "b0",
+    "c2",
+    "full"
+  ],
+  "recipe": {
+    "epochs": 350,
+    "patience": 0,
+    "batch": 4,
+    "imgsz": 640,
+    "optimizer": "AdamW",
+    "lr0": 0.0001,
+    "lrf": 1.0,
+    "momentum": 0.9,
+    "weight_decay": 0.0001,
+    "warmup_epochs": 2000,
+    "warmup_bias_lr": 0.1,
+    "warmup_momentum": 0.8,
+    "nbs": 4,
+    "mixup": 0.2,
+    "mosaic": 1.0,
+    "close_mosaic": 0,
+    "amp": false,
+    "deterministic": true,
+    "seed": 1,
+    "pretrained": false,
+    "max_det": 300,
+    "cache": false,
+    "device": "0",
+    "workers": 0,
+    "val": true,
+    "plots": true
+  },
+  "seed": 1,
+  "milestones": [
+    150,
+    250,
+    350
+  ],
+  "checkpoints_per_milestone": [
+    "last",
+    "best"
+  ],
+  "fresh_initialization": true,
+  "backbone_sha256": "ef58d7942589c82aeb1f1d7e669740e91cdbfde0e2dc8733615c4d2a686e269b",
+  "backend": "tracked SO-DETR-derived Ultralytics8.0.201 from c2_channel_author_20261105",
+  "anchor_wh_normalized": {
+    "P2": 0.025,
+    "P3": 0.05,
+    "P4": 0.1,
+    "P5": 0.2
+  },
+  "formal_evaluation": "converted VisDrone val548 COCOeval maxDets100, maxDets300 supplement",
+  "tiny_bins": "short side in square-resized640: [0,8),[8,16),[16,32),[32,inf)",
+  "confirmation": "No automatic extra seeds or extra architecture ablations in this queue.",
+  "initial_b0_archive": {
+    "path": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/p2_full_author_20261107/initialization_b0_s1.pt",
+    "sha256": "69ea83c9b113b9115ed694fd2c7f09fab9e09c4a7daca2b37d63373eb457793b"
+  }
+}

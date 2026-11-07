@@ -1,0 +1,196 @@
+{
+  "checkpoint": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/p2_full_author_20261107/smoke_b0_350e_s1/weights/best.pt",
+  "budget": 350,
+  "kind": "best",
+  "checkpoint_sha256": "b44604b0f4d471cceccc65590504d58327b9a5a58d43e587c9d0c129c4ce53bc",
+  "checkpoint_epoch": 1,
+  "gt_sha256": "6f57aa4b42d64ee7b99b8a6a5b159ad19cba2eacf00bd86f23314966614bf4d8",
+  "predictions_sha256": "a1caacf35bfa7c238b7c814d6c2cb2df15e7a998d74d2e9263fce8cddd31f4bb",
+  "images": 16,
+  "detections": 4800,
+  "native_metrics": {
+    "metrics/precision(B)": 0.0,
+    "metrics/recall(B)": 0.0,
+    "metrics/mAP50(B)": 0.0,
+    "metrics/mAP50-95(B)": 0.0,
+    "fitness": 0.0
+  },
+  "smoke": true,
+  "finished_utc": "2026-11-07T07:47:40.544310+00:00",
+  "protocol": "author RTDETRValidator FP32, 300 argmax queries/image, no NMS, unrounded; asserted full query coverage",
+  "evaluated_utc": "2026-11-07T07:47:41.569849+00:00",
+  "maxDets": [
+    1,
+    10,
+    100
+  ],
+  "coco_percent": {
+    "AP": 0.0,
+    "AP50": 0.0,
+    "AP75": 0.0,
+    "APs": 0.0,
+    "APm": 0.0,
+    "APl": 0.0,
+    "AR1": 0.0,
+    "AR10": 0.0,
+    "AR100": 0.0,
+    "ARs": 0.0,
+    "ARm": 0.0,
+    "ARl": 0.0
+  },
+  "supplement_maxdet300": {
+    "metrics": {
+      "AP": 0.0,
+      "AP50": 0.0,
+      "AP75": 0.0,
+      "APs": 0.0,
+      "APm": 0.0,
+      "APl": 0.0,
+      "AR1": 0.0,
+      "AR10": 0.0,
+      "AR300": 0.0,
+      "ARs": 0.0,
+      "ARm": 0.0,
+      "ARl": 0.0
+    },
+    "tiny_recall": [
+      {
+        "short_side_640": "[0,8)",
+        "gt": 541,
+        "matched_iou50": 0,
+        "matched_iou75": 0,
+        "matched_query_strides_iou50": {},
+        "recall_iou50_percent": 0.0,
+        "recall_iou75_percent": 0.0
+      },
+      {
+        "short_side_640": "[8,16)",
+        "gt": 329,
+        "matched_iou50": 0,
+        "matched_iou75": 0,
+        "matched_query_strides_iou50": {},
+        "recall_iou50_percent": 0.0,
+        "recall_iou75_percent": 0.0
+      },
+      {
+        "short_side_640": "[16,32)",
+        "gt": 254,
+        "matched_iou50": 0,
+        "matched_iou75": 0,
+        "matched_query_strides_iou50": {},
+        "recall_iou50_percent": 0.0,
+        "recall_iou75_percent": 0.0
+      },
+      {
+        "short_side_640": "[32,inf)",
+        "gt": 67,
+        "matched_iou50": 0,
+        "matched_iou75": 0,
+        "matched_query_strides_iou50": {},
+        "recall_iou50_percent": 0.0,
+        "recall_iou75_percent": 0.0
+      }
+    ]
+  },
+  "tiny_recall_maxdet100": [
+    {
+      "short_side_640": "[0,8)",
+      "gt": 541,
+      "matched_iou50": 0,
+      "matched_iou75": 0,
+      "matched_query_strides_iou50": {},
+      "recall_iou50_percent": 0.0,
+      "recall_iou75_percent": 0.0
+    },
+    {
+      "short_side_640": "[8,16)",
+      "gt": 329,
+      "matched_iou50": 0,
+      "matched_iou75": 0,
+      "matched_query_strides_iou50": {},
+      "recall_iou50_percent": 0.0,
+      "recall_iou75_percent": 0.0
+    },
+    {
+      "short_side_640": "[16,32)",
+      "gt": 254,
+      "matched_iou50": 0,
+      "matched_iou75": 0,
+      "matched_query_strides_iou50": {},
+      "recall_iou50_percent": 0.0,
+      "recall_iou75_percent": 0.0
+    },
+    {
+      "short_side_640": "[32,inf)",
+      "gt": 67,
+      "matched_iou50": 0,
+      "matched_iou75": 0,
+      "matched_query_strides_iou50": {},
+      "recall_iou50_percent": 0.0,
+      "recall_iou75_percent": 0.0
+    }
+  ],
+  "per_class_percent": {
+    "pedestrian": {
+      "AP": 0.0,
+      "APs": 0.0,
+      "APm": 0.0,
+      "APl": null
+    },
+    "people": {
+      "AP": 0.0,
+      "APs": 0.0,
+      "APm": 0.0,
+      "APl": null
+    },
+    "bicycle": {
+      "AP": 0.0,
+      "APs": 0.0,
+      "APm": 0.0,
+      "APl": null
+    },
+    "car": {
+      "AP": 0.0,
+      "APs": 0.0,
+      "APm": 0.0,
+      "APl": 0.0
+    },
+    "van": {
+      "AP": 0.0,
+      "APs": null,
+      "APm": 0.0,
+      "APl": 0.0
+    },
+    "truck": {
+      "AP": 0.0,
+      "APs": null,
+      "APm": 0.0,
+      "APl": null
+    },
+    "tricycle": {
+      "AP": 0.0,
+      "APs": 0.0,
+      "APm": 0.0,
+      "APl": null
+    },
+    "awning-tricycle": {
+      "AP": 0.0,
+      "APs": 0.0,
+      "APm": 0.0,
+      "APl": null
+    },
+    "bus": {
+      "AP": null,
+      "APs": null,
+      "APm": null,
+      "APl": null
+    },
+    "motor": {
+      "AP": 0.0,
+      "APs": 0.0,
+      "APm": 0.0,
+      "APl": null
+    }
+  },
+  "tiny_protocol": "640 square resize, class-wise COCO matching, ignored GT excluded; query stride denotes initialization origin, not exclusive causal attribution"
+}

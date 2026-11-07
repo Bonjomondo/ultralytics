@@ -1,0 +1,2 @@
+epoch,epoch_seconds,peak_gpu_gib,p2_grad_mean,query_stride4_fraction,query_stride8_fraction,query_stride16_fraction,query_stride32_fraction
+1,2.826982269063592,5.902121067047119,1.734110231200854,0.7122222222222222,0.16583333333333333,0.08,0.041944444444444444

@@ -1,0 +1,52 @@
+{
+  "status": "passed",
+  "checked_utc": "2026-11-07T07:44:52.586182+00:00",
+  "perfect_match_bins": [
+    {
+      "short_side_640": "[0,8)",
+      "gt": 1,
+      "matched_iou50": 1,
+      "matched_iou75": 1,
+      "matched_query_strides_iou50": {
+        "4": 1
+      },
+      "recall_iou50_percent": 100.0,
+      "recall_iou75_percent": 100.0
+    },
+    {
+      "short_side_640": "[8,16)",
+      "gt": 1,
+      "matched_iou50": 1,
+      "matched_iou75": 1,
+      "matched_query_strides_iou50": {
+        "4": 1
+      },
+      "recall_iou50_percent": 100.0,
+      "recall_iou75_percent": 100.0
+    },
+    {
+      "short_side_640": "[16,32)",
+      "gt": 1,
+      "matched_iou50": 1,
+      "matched_iou75": 1,
+      "matched_query_strides_iou50": {
+        "4": 1
+      },
+      "recall_iou50_percent": 100.0,
+      "recall_iou75_percent": 100.0
+    },
+    {
+      "short_side_640": "[32,inf)",
+      "gt": 1,
+      "matched_iou50": 1,
+      "matched_iou75": 1,
+      "matched_query_strides_iou50": {
+        "4": 1
+      },
+      "recall_iou50_percent": 100.0,
+      "recall_iou75_percent": 100.0
+    }
+  ],
+  "maxDet300_AP_percent": 100.0,
+  "scope": "Synthetic matching test only, no experimental accuracy conclusion"
+}

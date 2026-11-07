@@ -19,3 +19,5 @@ Git 归档原则见 [项目 AGENTS.md](../../AGENTS.md)：保留网页端分析�
 - [作者引擎C2/Scalar/ChannelGate严格配对150轮及条件多seed350轮](2026-11-05_c2_channel_author/README.md)
 
 - [2026-11-06：4090反复中断诊断、98轮检查点核验与恢复条件](2026-11-06_4090_stability/README.md)
+
+- [完整P2四尺度：B0/C2/P2-Full各350轮seed1及150/250/350轮评估](2026-11-07_p2_full_author/README.md)

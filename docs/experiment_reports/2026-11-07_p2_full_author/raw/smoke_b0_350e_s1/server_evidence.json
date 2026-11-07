@@ -1,0 +1,6 @@
+{
+  "run": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/p2_full_author_20261107/smoke_b0_350e_s1",
+  "full_diagnostics_sha256": "4d2a6e891e5023fe3a219ccbf57cf99b6d7746989dd954c303a017e96fc03f93",
+  "sampling": "query origins and pre-clipping P2 gradient, first three batches/epoch",
+  "native_figure_protocol": "author internal validation; independent COCO metrics in evaluation JSON"
+}

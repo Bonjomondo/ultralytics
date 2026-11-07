@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "checked_utc": "2026-11-07T07:43:51.617840+00:00",
+  "batch": 4,
+  "input": [
+    4,
+    3,
+    640,
+    640
+  ],
+  "source_images": [
+    "/home/zjnu/文档/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-train/images/0000059_01886_d_0000114.jpg",
+    "/home/zjnu/文档/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-train/images/0000137_02220_d_0000163.jpg",
+    "/home/zjnu/文档/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-train/images/0000143_01681_d_0000056.jpg",
+    "/home/zjnu/文档/ZHJ_WorkSpace/datasets/VisDrone2019-DET-YOLO/VisDrone2019-DET-train/images/0000126_11844_d_0000130.jpg"
+  ],
+  "source_label_counts": [
+    902,
+    511,
+    462,
+    431
+  ],
+  "augmented_instances": 4206,
+  "peak_allocated_gib": 10.918650150299072,
+  "loss_items": [
+    2.626641035079956,
+    0.6428881287574768,
+    0.6652122735977173
+  ],
+  "scope": "One augmented dense batch forward/backward, no optimizer update; not an exhaustive OOM or hardware stress guarantee."
+}

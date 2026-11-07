@@ -1,0 +1,21 @@
+{
+  "checkpoint": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/p2_full_author_20261107/smoke_b0_350e_s1/weights/best.pt",
+  "budget": 350,
+  "kind": "best",
+  "checkpoint_sha256": "b44604b0f4d471cceccc65590504d58327b9a5a58d43e587c9d0c129c4ce53bc",
+  "checkpoint_epoch": 1,
+  "gt_sha256": "6f57aa4b42d64ee7b99b8a6a5b159ad19cba2eacf00bd86f23314966614bf4d8",
+  "predictions_sha256": "a1caacf35bfa7c238b7c814d6c2cb2df15e7a998d74d2e9263fce8cddd31f4bb",
+  "images": 16,
+  "detections": 4800,
+  "native_metrics": {
+    "metrics/precision(B)": 0.0,
+    "metrics/recall(B)": 0.0,
+    "metrics/mAP50(B)": 0.0,
+    "metrics/mAP50-95(B)": 0.0,
+    "fitness": 0.0
+  },
+  "smoke": true,
+  "finished_utc": "2026-11-07T07:47:40.544310+00:00",
+  "protocol": "author RTDETRValidator FP32, 300 argmax queries/image, no NMS, unrounded; asserted full query coverage"
+}

@@ -245,3 +245,6 @@ results.csv
 !/docs/experiment_reports/2026-11-05_c2_channel_author/raw/**/args.yaml
 
 !/docs/experiment_reports/2026-11-05_c2_channel_author/figures/**/*.svg
+
+# Actual configuration for the full-P2 author-engine experiment.
+!/docs/experiment_reports/2026-11-07_p2_full_author/raw/**/args.yaml

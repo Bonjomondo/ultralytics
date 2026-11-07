@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "checked_utc": "2026-11-07T07:50:12.457847+00:00",
+  "receipt": {
+    "budget": 2,
+    "last_sha256": "ed8be95fd42901040b5039b2cb844762425e2ca6f2096e65c6bcdd932a126da5",
+    "best_sha256": "ed8be95fd42901040b5039b2cb844762425e2ca6f2096e65c6bcdd932a126da5",
+    "saved_utc": "2026-11-07T07:50:11.992194+00:00"
+  },
+  "scope": "Existing two-epoch smoke raw state re-saved through actual checkpoint writer; milestone trigger temporarily set to epoch2 in isolated probe process. Formal milestones remain150/250/350."
+}

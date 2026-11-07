@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "completed_epochs": 2,
+  "receipt": {
+    "raw_exact": true,
+    "ema_exact": true,
+    "optimizer_exact": true,
+    "checkpoint_sha256": "85a6c0615fc2eb703fd05fab93b68b76cd767aba17be98ea3fdb2430f2d18378",
+    "completed_epochs": 1,
+    "limits": "epoch-boundary replay; loader order may differ, not bitwise identical continuation"
+  },
+  "final_checkpoint_sha256": "f2f2f26bd49e69875bac672fd3b491aeeb608103fda165ee01a7d60efdb912c4",
+  "scope": "Actual two-epoch smoke training, stopped at epoch1 and raw-resumed to epoch2."
+}
