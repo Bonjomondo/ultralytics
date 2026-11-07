@@ -90,3 +90,5 @@ python experiments/c2_channel_author_20261105/report.py --report docs/experiment
 ## 运行中恢复记录：C2第51轮
 
 C2在第51轮反向传播遇到PyTorch CUDA内部断言（CUDAGuardImpl.h:25），控制器自动从完整第50轮检查点恢复。原始模型、EMA和优化器逐张量验证通过，训练配方及workers0未更改。采样顺序可能随恢复改变，因此后续只能视为同初始化、同预算的恢复对照，不称逐位等价的完整配对轨迹。筛选结论及晋级解释须保留这个限制；若晋级，350轮各组仍从头配对训练。详见[恢复审计](raw/screen_c2_150e_s0/recovery_audit.json)。
+
+补充核查：[新旧实验代码、超参数与初始化差异](code_protocol_audit.md)。已验证新旧527项共有初态中83项不同。
