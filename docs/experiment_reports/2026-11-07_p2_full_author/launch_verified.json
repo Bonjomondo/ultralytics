@@ -1,0 +1,44 @@
+{
+  "verified_utc": "2026-11-07T07:52:08.024925+00:00",
+  "source_commit": "796f1088f15f9a2152795d384043caba33881087",
+  "source_files_verified": 153,
+  "queue_snapshot": {
+    "started_utc": "2026-11-07T07:51:02.985435+00:00",
+    "events": [
+      {
+        "label": "main_b0_350e_s1/train",
+        "attempt": 1,
+        "started_utc": "2026-11-07T07:51:03.115383+00:00",
+        "status": "running",
+        "log": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/p2_full_author_20261107/logs/main_b0_350e_s1-train-attempt1.log"
+      }
+    ],
+    "done": [],
+    "status": "running",
+    "pid": 2860049,
+    "child_pid": 2860050,
+    "updated_utc": "2026-11-07T07:51:03.115788+00:00",
+    "current": "main_b0_350e_s1/train"
+  },
+  "training_snapshot": {
+    "status": "training",
+    "pid": 2860050,
+    "arm": "b0",
+    "current_epoch": 1,
+    "completed_epochs": 0,
+    "batch_in_epoch": 500,
+    "updated_utc": "2026-11-07T07:52:06.497166+00:00",
+    "workers": 0,
+    "native_metrics": {
+      "metrics/precision(B)": 0,
+      "metrics/recall(B)": 0,
+      "metrics/mAP50(B)": 0,
+      "metrics/mAP50-95(B)": 0,
+      "val/giou_loss": 0,
+      "val/cls_loss": 0,
+      "val/l1_loss": 0
+    },
+    "accumulate": 1
+  },
+  "gpu": "pid, used_gpu_memory [MiB]\n2860050, 7198 MiB\n"
+}

@@ -1,0 +1,20 @@
+{
+  "started_utc": "2026-11-07T07:51:02.913646+00:00",
+  "session": "p2-full-author-20261107",
+  "controller_log": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/p2_full_author_20261107/controller-1794037862887768104.log",
+  "environment": {
+    "PYTHONPATH": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/p2_full_author_20261107/source/backend:/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/p2_full_author_20261107/source",
+    "AUTHOR_P2_REPO": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics",
+    "AUTHOR_P2_MANIFEST_SHA": "8c6f0ae978b9865a4ee9f3f4027ed89b1608a92f1e81b41506d81f90efec4e13",
+    "PYTHONFAULTHANDLER": "1",
+    "YOLO_CONFIG_DIR": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/p2_full_author_20261107/yolo_config",
+    "YOLO_AUTOINSTALL": "false",
+    "OMP_NUM_THREADS": "8",
+    "MKL_NUM_THREADS": "8",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MPLBACKEND": "Agg",
+    "WANDB_MODE": "disabled",
+    "COMET_MODE": "DISABLED"
+  },
+  "budget": "three arms, each fresh350 seed1; no automatic extra experiments"
+}
