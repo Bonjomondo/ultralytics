@@ -1,0 +1,20 @@
+{
+  "status": "training",
+  "pid": 2870531,
+  "arm": "full",
+  "current_epoch": 1,
+  "completed_epochs": 0,
+  "batch_in_epoch": 200,
+  "updated_utc": "2026-11-07T08:05:48.137209+00:00",
+  "workers": 0,
+  "native_metrics": {
+    "metrics/precision(B)": 0,
+    "metrics/recall(B)": 0,
+    "metrics/mAP50(B)": 0,
+    "metrics/mAP50-95(B)": 0,
+    "val/giou_loss": 0,
+    "val/cls_loss": 0,
+    "val/l1_loss": 0
+  },
+  "accumulate": 1
+}

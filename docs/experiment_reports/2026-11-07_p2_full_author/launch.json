@@ -1,11 +1,11 @@
 {
-  "started_utc": "2026-11-07T07:51:02.913646+00:00",
+  "started_utc": "2026-11-07T08:05:09.548367+00:00",
   "session": "p2-full-author-20261107",
-  "controller_log": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/p2_full_author_20261107/controller-1794037862887768104.log",
+  "controller_log": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/p2_full_author_20261107/controller-1794038709522729809.log",
   "environment": {
-    "PYTHONPATH": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/p2_full_author_20261107/source/backend:/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/p2_full_author_20261107/source",
+    "PYTHONPATH": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/p2_full_author_20261107/source_full_only/backend:/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/p2_full_author_20261107/source_full_only",
     "AUTHOR_P2_REPO": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics",
-    "AUTHOR_P2_MANIFEST_SHA": "8c6f0ae978b9865a4ee9f3f4027ed89b1608a92f1e81b41506d81f90efec4e13",
+    "AUTHOR_P2_MANIFEST_SHA": "d5039edd73224614e5e343a86fa39f9d861aa4a0594b536094e61a995a742205",
     "PYTHONFAULTHANDLER": "1",
     "YOLO_CONFIG_DIR": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/p2_full_author_20261107/yolo_config",
     "YOLO_AUTOINSTALL": "false",
@@ -16,5 +16,5 @@
     "WANDB_MODE": "disabled",
     "COMET_MODE": "DISABLED"
   },
-  "budget": "three arms, each fresh350 seed1; no automatic extra experiments"
+  "budget": "P2-Full only, fresh350 seed1; historical B0/C2 references; new B0 stopped, new C2 canceled"
 }

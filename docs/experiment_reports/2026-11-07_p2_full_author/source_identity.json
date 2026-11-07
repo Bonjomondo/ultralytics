@@ -1,6 +1,6 @@
 {
-  "commit": "796f1088f15f9a2152795d384043caba33881087",
-  "snapshot": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/p2_full_author_20261107/source",
-  "manifest_sha256": "8c6f0ae978b9865a4ee9f3f4027ed89b1608a92f1e81b41506d81f90efec4e13",
+  "commit": "321cb6e8cb6328e4ce2b4e0ed99dd7ca1eff8fb4",
+  "snapshot": "/home/zjnu/文档/ZHJ_WorkSpace/ultralytics/runs/p2_full_author_20261107/source_full_only",
+  "manifest_sha256": "d5039edd73224614e5e343a86fa39f9d861aa4a0594b536094e61a995a742205",
   "files": 153
 }
